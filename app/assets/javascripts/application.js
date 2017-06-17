@@ -13,5 +13,4 @@
 //= require jquery
 //= require rails-ujs
 //= require chosen-jquery
-//= require welcome
 //= require_tree .
