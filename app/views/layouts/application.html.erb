@@ -6,9 +6,13 @@
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+
+    <!-- google font Open Sans -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
   </head>
 
   <body>
     <%= yield %>
+    <%= render 'layouts/footer.html.erb' %>
   </body>
 </html>
