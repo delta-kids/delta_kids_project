@@ -1,7 +1,6 @@
 class OrganizationsController < ApplicationController
 
-
-  def index
+  def create
   end
 
 end
