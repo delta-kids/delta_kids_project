@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
+ActiveRecord::Schema.define(version: 20170617192421) do
+
 ActiveRecord::Schema.define(version: 20170617222323) do
+
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,11 +25,14 @@ ActiveRecord::Schema.define(version: 20170617222323) do
     t.datetime "updated_at", null: false
   end
 
+
+
   create_table "categories", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
 
   create_table "organizations", force: :cascade do |t|
     t.bigint "age_group_id"
@@ -59,6 +66,8 @@ ActiveRecord::Schema.define(version: 20170617222323) do
     t.index ["program_type_id"], name: "index_programs_on_program_type_id"
   end
 
+
+
   create_table "service_types", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
@@ -77,11 +86,15 @@ ActiveRecord::Schema.define(version: 20170617222323) do
     t.index ["service_type_id"], name: "index_services_on_service_type_id"
   end
 
+
   add_foreign_key "organizations", "age_groups"
   add_foreign_key "programs", "age_groups"
   add_foreign_key "programs", "organizations"
   add_foreign_key "programs", "program_types"
+
+
   add_foreign_key "services", "categories"
   add_foreign_key "services", "organizations"
   add_foreign_key "services", "service_types"
+
 end
