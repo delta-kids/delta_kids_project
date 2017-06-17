@@ -1,0 +1,2 @@
+class ProgramType < ApplicationRecord
+end
