@@ -1,0 +1,154 @@
+<div class="container">
+  <h2>Create New Organization</h2>
+
+  <%= form_for "" do |f| %>
+    <div class="form-group">
+      <%= f.label :name %>
+      <%= f.text_field :name, class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :address %>
+      <%= f.text_field :address, class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :website %>
+      <%= f.text_field :website, class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :phone_number %>
+      <%= telephone_field :phone_number, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :age_group %>
+      <%= radio_button_tag(:age_group, "0-5") %>
+      <%= label_tag(:age, "0-5") %>
+      <%= radio_button_tag(:age_group, "6-12") %>
+      <%= label_tag(:age, "6-12") %>
+      <%= radio_button_tag(:age_group, "adult") %>
+      <%= label_tag(:age, "adult") %>
+      <%= radio_button_tag(:age_group, "all") %>
+      <%= label_tag(:age, "all") %>
+    </div>
+
+    <div>
+      <%= f.label :service %>
+      <%= check_box_tag(:art_and_culture) %>
+      <%= label_tag(:art_and_culture, "Art & Culture") %>
+      <%= check_box_tag(:education) %>
+      <%= label_tag(:education, "Education") %>
+      <%= check_box_tag(:entertainment) %>
+      <%= label_tag(:entertainment, "Entertainment") %>
+      <%= check_box_tag(:health) %>
+      <%= label_tag(:health, "Health") %>
+      <%= check_box_tag(:sports) %>
+      <%= label_tag(:sports, "Sports") %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :tags %>
+      <%= f.text_field :tags, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :description %>
+      <%= f.text_area :description, class: "form-control" %>
+    </div>
+
+    <div>
+      <%= select_tag(:target_clientele, options_for_select(
+        [
+          ['Pregnancy & Babies', 1],
+          ['something goes here', 2],
+          ['random thing', 3],
+          ['more stuff', 4]
+        ]))
+      %>
+    </div>
+
+    <br>
+    <div>
+      <%= select_tag(:services, options_for_select(
+        [
+          ['Help in Crisis', 1],
+          ['another service', 2],
+          ['hello world', 3],
+          ['random service', 4]
+        ]))
+      %>
+    </div>
+
+    <br>
+    <div class="form-group">
+      <%= f.submit class: 'btn btn-primary form-control' %>
+    </div>
+
+  <% end %>
+
+
+  <!-- <form>
+    <div class="form-group">
+      <label for="">Name</label>
+      <input type="text" class="form-control" id="" placeholder="organization name">
+
+      <label for="">Address</label>
+      <input type="text" class="form-control" id="" placeholder="address">
+
+      <label for="">Website</label>
+      <input type="text" class="form-control" id="" placeholder="website">
+
+      <label for="">Phone Number</label>
+      <input type="text" class="form-control" id="" placeholder="xxx-xxx-xxxx">
+
+      <br>
+      <label for="">Age Group: </label>
+      <input type="radio" name="age-group" value="0-5" checked> 0-5
+      <input type="radio" name="age-group" value="6-12"> 6-12
+      <input type="radio" name="age-group" value="adult"> Adult
+      <input type="radio" name="age-group" value="all"> All
+      <br>
+
+      <br>
+      <label for="">Activity Type: </label>
+      <input type="checkbox" name="activity-type" value="art-and-culture"> Art & Culture
+      <input type="checkbox" name="activity-type" value="education"> Education
+      <input type="checkbox" name="activity-type" value="entertainment"> Entertainment
+      <input type="checkbox" name="activity-type" value="health"> Health
+      <input type="checkbox" name="activity-type" value="sports"> Sports
+      <br>
+
+      <br>
+      <label for="">Keyword/Tags</label>
+      <input type="text" class="form-control" id="" placeholder="up to three tags">
+      <br>
+
+      <label for="">Description</label>
+      <textarea rows="10" class="form-control" id="" placeholder="address"></textarea>
+
+      <br>
+      <div>
+        <label for="">Target Clientele</label>
+        <select>
+          <option value="1">Pregnancy & Babies</option>
+          <option value="2">Dogs</option>
+          <option value="3">Cats</option>
+          <option value="4">Martians</option>
+        </select>
+      </div>
+
+      <br>
+      <div>
+        <label for="">Service</label>
+        <select>
+          <option value="1">Help in Crisis</option>
+          <option value="2">Plumbing</option>
+          <option value="3">Dog Grooming</option>
+          <option value="4">Martians</option>
+        </select>
+      </div>
+
+      <br>
+      <input type="submit" class="btn btn-primary form-control"/>
+    </div>
+  </form> -->
+</div>
