@@ -56,6 +56,7 @@
     </div>
 
     <div>
+      <%= f.label :target_clientele %>
       <%= select_tag(:target_clientele, options_for_select(
         [
           ['Pregnancy & Babies', 1],
@@ -68,6 +69,7 @@
 
     <br>
     <div>
+      <%= f.label :service %>
       <%= select_tag(:services, options_for_select(
         [
           ['Help in Crisis', 1],
