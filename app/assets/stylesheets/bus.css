@@ -1,0 +1,25 @@
+.background-color {
+ background-color: #D1F0F4;
+}
+.bus {
+  z-index: 1;
+  margin-left: 10%;
+}
+.cloud-text {
+  float: right;
+  position: relative;
+  max-width: 350px;
+  max-height: 0px;
+  bottom: 290px;
+  right: 25%;
+}
+.cloud-text-header {
+  font-size: 2.2em;
+  color: #00A3DA;
+  font-family: 'Bree Serif';
+}
+.cloud-text-body {
+  font-size: 1em;
+  color: black;
+  font-family: 'Open Sans';
+}
