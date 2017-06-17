@@ -1,0 +1,38 @@
+* {
+  font-family: 'Open Sans';
+}
+footer div {
+  text-align: center;
+}
+footer ul li {
+  list-style-type: none;
+  display: inline-block;
+}
+.unordered-container {
+  position: relative;
+  top: 30px;
+  right: 15px;
+}
+.footer {
+  min-height: 130px;
+  width: 100%;
+  background-color: #004C81;
+}
+.footer-icon-container {
+  text-align: center;
+  background-color: #FFFFFF;
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+.footer-icon {
+  position: relative;
+  top: 5px;
+  color: #004C81;
+  font-size: 20px;
+}
+.footer-text {
+  color: #FFFFFF;
+  padding-left: 2em;
+}
