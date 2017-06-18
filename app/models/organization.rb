@@ -8,6 +8,8 @@ class Organization < ApplicationRecord
   has_many :OrganizationTaggings, dependent: :destroy
   has_many :tags, through: :OrganizationTaggings
 
+  has_many :OrganizationAgeGroups, dependent: :destroy
+  has_many :age_groups, through: :OrganizationAgeGroups
 
 
 

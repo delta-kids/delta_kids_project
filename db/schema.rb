@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170618054501) do
+ActiveRecord::Schema.define(version: 20170618080152) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,6 +25,24 @@ ActiveRecord::Schema.define(version: 20170618054501) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "event_age_groups", force: :cascade do |t|
+    t.bigint "event_id"
+    t.bigint "age_group_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["age_group_id"], name: "index_event_age_groups_on_age_group_id"
+    t.index ["event_id"], name: "index_event_age_groups_on_event_id"
+  end
+
+  create_table "event_program_types", force: :cascade do |t|
+    t.bigint "event_id"
+    t.bigint "program_type_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["event_id"], name: "index_event_program_types_on_event_id"
+    t.index ["program_type_id"], name: "index_event_program_types_on_program_type_id"
   end
 
   create_table "event_taggings", force: :cascade do |t|
@@ -58,6 +76,15 @@ ActiveRecord::Schema.define(version: 20170618054501) do
     t.index ["organization_id"], name: "index_events_on_organization_id"
   end
 
+  create_table "organization_age_groups", force: :cascade do |t|
+    t.bigint "organization_id"
+    t.bigint "age_group_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["age_group_id"], name: "index_organization_age_groups_on_age_group_id"
+    t.index ["organization_id"], name: "index_organization_age_groups_on_organization_id"
+  end
+
   create_table "organization_taggings", force: :cascade do |t|
     t.bigint "organization_id"
     t.bigint "tag_id"
@@ -77,6 +104,15 @@ ActiveRecord::Schema.define(version: 20170618054501) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "program_age_groups", force: :cascade do |t|
+    t.bigint "program_id"
+    t.bigint "age_group_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["age_group_id"], name: "index_program_age_groups_on_age_group_id"
+    t.index ["program_id"], name: "index_program_age_groups_on_program_id"
+  end
+
   create_table "program_types", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
@@ -93,6 +129,15 @@ ActiveRecord::Schema.define(version: 20170618054501) do
     t.datetime "updated_at", null: false
     t.index ["organization_id"], name: "index_programs_on_organization_id"
     t.index ["program_type_id"], name: "index_programs_on_program_type_id"
+  end
+
+  create_table "resource_age_groups", force: :cascade do |t|
+    t.bigint "resource_id"
+    t.bigint "age_group_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["age_group_id"], name: "index_resource_age_groups_on_age_group_id"
+    t.index ["resource_id"], name: "index_resource_age_groups_on_resource_id"
   end
 
   create_table "resource_taggings", force: :cascade do |t|
@@ -161,13 +206,23 @@ ActiveRecord::Schema.define(version: 20170618054501) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "event_age_groups", "age_groups"
+  add_foreign_key "event_age_groups", "events"
+  add_foreign_key "event_program_types", "events"
+  add_foreign_key "event_program_types", "program_types"
   add_foreign_key "event_taggings", "events"
   add_foreign_key "event_taggings", "tags"
   add_foreign_key "events", "organizations"
+  add_foreign_key "organization_age_groups", "age_groups"
+  add_foreign_key "organization_age_groups", "organizations"
   add_foreign_key "organization_taggings", "organizations"
   add_foreign_key "organization_taggings", "tags"
+  add_foreign_key "program_age_groups", "age_groups"
+  add_foreign_key "program_age_groups", "programs"
   add_foreign_key "programs", "organizations"
   add_foreign_key "programs", "program_types"
+  add_foreign_key "resource_age_groups", "age_groups"
+  add_foreign_key "resource_age_groups", "resources"
   add_foreign_key "resource_taggings", "resources"
   add_foreign_key "resource_taggings", "tags"
   add_foreign_key "resource_topics", "resources"
