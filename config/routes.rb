@@ -6,6 +6,8 @@ Rails.application.routes.draw do
 
   get '/contact', to: 'home#contact', as: 'contact'
 
+  get '/survey', to: 'home#survey', as: 'survey'
+
   resources :programs
 
   resources :resources

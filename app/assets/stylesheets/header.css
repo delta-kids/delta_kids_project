@@ -44,13 +44,16 @@ h4 {
   display: inline;
 }
 
-li a {
+ ul.dropdown-menu a {
   color: white !important;
 }
 
- hr {
-  border-color:yellow;
+
+
+ ul.dropdown-menu hr {
+  border-color:#FFF200 !important;
 }
+
 
 .dropdown-category {
   color:yellow;
