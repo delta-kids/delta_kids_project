@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-md-10 col-md-offset-1 login-container">
       <h1 class="login-header">User Sign In</h1>
-      <%= form_for sessions_path do %>
+      <%= form_tag sessions_path do %>
         <div class="form-field">
           <%= label_tag :email, nil, class: 'login-header' %>:
           <%= email_field_tag :email, "", class: 'form-control' %>

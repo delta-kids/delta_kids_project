@@ -19,20 +19,7 @@
   </head>
   <body>
 
-
-
-
        <%= render 'layouts/header.html.erb' %>
-
-       <!-- this is only a link to test users please deal with it in header later -->
-       <% if user_signed_in? %>
-        Hello <%= current_user.first_name %>
-        <%= link_to 'Sign Out', sessions_path, method: :delete  %>
-      <% else %>
-        <%= link_to 'Sign up', new_user_path %>
-        |
-        <%= link_to 'Log In', new_session_path %>
-      <% end %>
 
       <% if flash[:notice] %>
         <div class='alert alert-success'><%= flash[:notice] %></div>
