@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170618033557) do
+ActiveRecord::Schema.define(version: 20170618052400) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,6 +25,15 @@ ActiveRecord::Schema.define(version: 20170618033557) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "event_taggings", force: :cascade do |t|
+    t.bigint "event_id"
+    t.bigint "tag_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["event_id"], name: "index_event_taggings_on_event_id"
+    t.index ["tag_id"], name: "index_event_taggings_on_tag_id"
   end
 
   create_table "events", force: :cascade do |t|
@@ -47,6 +56,15 @@ ActiveRecord::Schema.define(version: 20170618033557) do
     t.boolean "approved"
     t.bigint "organization_id"
     t.index ["organization_id"], name: "index_events_on_organization_id"
+  end
+
+  create_table "organization_taggings", force: :cascade do |t|
+    t.bigint "organization_id"
+    t.bigint "tag_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["organization_id"], name: "index_organization_taggings_on_organization_id"
+    t.index ["tag_id"], name: "index_organization_taggings_on_tag_id"
   end
 
   create_table "organizations", force: :cascade do |t|
@@ -75,6 +93,15 @@ ActiveRecord::Schema.define(version: 20170618033557) do
     t.datetime "updated_at", null: false
     t.index ["organization_id"], name: "index_programs_on_organization_id"
     t.index ["program_type_id"], name: "index_programs_on_program_type_id"
+  end
+
+  create_table "resource_taggings", force: :cascade do |t|
+    t.bigint "resource_id"
+    t.bigint "tag_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["resource_id"], name: "index_resource_taggings_on_resource_id"
+    t.index ["tag_id"], name: "index_resource_taggings_on_tag_id"
   end
 
   create_table "resources", force: :cascade do |t|
@@ -125,9 +152,15 @@ ActiveRecord::Schema.define(version: 20170618033557) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "event_taggings", "events"
+  add_foreign_key "event_taggings", "tags"
   add_foreign_key "events", "organizations"
+  add_foreign_key "organization_taggings", "organizations"
+  add_foreign_key "organization_taggings", "tags"
   add_foreign_key "programs", "organizations"
   add_foreign_key "programs", "program_types"
+  add_foreign_key "resource_taggings", "resources"
+  add_foreign_key "resource_taggings", "tags"
   add_foreign_key "resources", "organizations"
   add_foreign_key "services", "categories"
   add_foreign_key "services", "organizations"
