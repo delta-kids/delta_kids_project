@@ -53,3 +53,42 @@
   padding-top:15px;
   padding-bottom:10px;
 }
+
+
+/*...............................................................*/
+
+#feature-box {
+  width:100%;
+  background-color: white;
+  padding: 0px;
+}
+
+.learn-more-link {
+  float: right;
+}
+.see-more-button {
+  padding-top: 30px;
+}
+
+.learn-more-image {
+  width: 100%;
+}
+
+.info-tag {
+  background-color: white;
+}
+
+.similar-events-box {
+  display: inline;
+  /*background-color: white;*/
+}
+
+.similar-events-image {
+  display: block;
+  width: 100%;
+  height: 160px;
+}
+
+.share-section {
+  padding-bottom: 50px;
+}
