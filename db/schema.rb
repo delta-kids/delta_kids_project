@@ -10,7 +10,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170618005022) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,30 +20,6 @@ ActiveRecord::Schema.define(version: 20170618005022) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "categories", force: :cascade do |t|
-    t.string "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "events", force: :cascade do |t|
-    t.string "title"
-    t.date "start_date"
-    t.date "end_date"
-    t.time "start_time"
-    t.time "end_time"
-    t.string "event_repeat"
-    t.string "event_location"
-    t.text "address"
-    t.string "cost"
-    t.string "registration"
-    t.text "description"
-    t.string "more_info"
-    t.string "contact_name"
-    t.string "contact_email"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
 
   create_table "organizations", force: :cascade do |t|
     t.bigint "age_group_id"
@@ -78,56 +53,8 @@ ActiveRecord::Schema.define(version: 20170618005022) do
     t.index ["program_type_id"], name: "index_programs_on_program_type_id"
   end
 
-  create_table "resources", force: :cascade do |t|
-    t.string "name"
-    t.boolean "feature"
-    t.date "feature_start_date"
-    t.date "feature_end_date"
-    t.time "feature_start_time"
-    t.time "feature_end_time"
-    t.string "resource_location"
-    t.text "description"
-    t.string "contact_name"
-    t.string "contact_email"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "service_types", force: :cascade do |t|
-    t.string "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "services", force: :cascade do |t|
-    t.bigint "service_type_id"
-    t.text "description"
-    t.bigint "organization_id"
-    t.bigint "category_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["category_id"], name: "index_services_on_category_id"
-    t.index ["organization_id"], name: "index_services_on_organization_id"
-    t.index ["service_type_id"], name: "index_services_on_service_type_id"
-  end
-
-  create_table "tags", force: :cascade do |t|
-    t.string "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "topics", force: :cascade do |t|
-    t.string "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   add_foreign_key "organizations", "age_groups"
   add_foreign_key "programs", "age_groups"
   add_foreign_key "programs", "organizations"
   add_foreign_key "programs", "program_types"
-  add_foreign_key "services", "categories"
-  add_foreign_key "services", "organizations"
-  add_foreign_key "services", "service_types"
 end
