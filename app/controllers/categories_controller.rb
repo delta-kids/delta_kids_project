@@ -1,7 +1,4 @@
-class ResourcesController < ApplicationController
-
-  # ALL USERS, including ADMIN
-  
+class CategoriesController < ApplicationController
   def index
   end
 

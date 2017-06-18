@@ -1,7 +1,7 @@
-class ResourcesController < ApplicationController
+class TopicsController < ApplicationController
 
-  # ALL USERS, including ADMIN
-  
+  # ONLY ADMIN
+
   def index
   end
 
