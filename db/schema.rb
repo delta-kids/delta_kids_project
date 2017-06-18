@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170618075358) do
+ActiveRecord::Schema.define(version: 20170618080152) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,6 +34,15 @@ ActiveRecord::Schema.define(version: 20170618075358) do
     t.datetime "updated_at", null: false
     t.index ["age_group_id"], name: "index_event_age_groups_on_age_group_id"
     t.index ["event_id"], name: "index_event_age_groups_on_event_id"
+  end
+
+  create_table "event_program_types", force: :cascade do |t|
+    t.bigint "event_id"
+    t.bigint "program_type_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["event_id"], name: "index_event_program_types_on_event_id"
+    t.index ["program_type_id"], name: "index_event_program_types_on_program_type_id"
   end
 
   create_table "event_taggings", force: :cascade do |t|
@@ -199,6 +208,8 @@ ActiveRecord::Schema.define(version: 20170618075358) do
 
   add_foreign_key "event_age_groups", "age_groups"
   add_foreign_key "event_age_groups", "events"
+  add_foreign_key "event_program_types", "events"
+  add_foreign_key "event_program_types", "program_types"
   add_foreign_key "event_taggings", "events"
   add_foreign_key "event_taggings", "tags"
   add_foreign_key "events", "organizations"

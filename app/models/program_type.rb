@@ -4,4 +4,7 @@ class ProgramType < ApplicationRecord
 
   has_many :programs, dependent: :destroy
 
+  has_many :EventProgramTypes, dependent: :destroy
+  has_many :events, through: :EventProgramTypes
+
 end

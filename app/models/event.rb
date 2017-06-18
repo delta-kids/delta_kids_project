@@ -6,4 +6,7 @@ class Event < ApplicationRecord
 
   has_many :EventAgeGroups, dependent: :destroy
   has_many :ageGroups, through: :EventAgeGroups
+
+  has_many :EventProgramTypes, dependent: :destroy
+  has_many :programTypes, through: :EventProgramTypes
 end
