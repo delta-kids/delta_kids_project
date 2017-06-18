@@ -1,3 +1,4 @@
+
 /* ------------- Section1 elements ------------- */
 /* Welcome to Delta Kid: */
 
@@ -60,6 +61,7 @@
 .clouds-background {
     background-image: url('clouds.png');
     background-size: 100% auto;
+    background-repeat: no-repeat;
     height: 365px;
     display: block;
     margin: auto;
@@ -128,6 +130,12 @@
 }
 
 /* ------------- Section4 elements ------------- */
+
+
+.whats-new {
+  width: 100%;
+}
+
 #whats-new {
   color: #00A3DA;
   font-family: BreeSerif-Regular;
@@ -169,4 +177,13 @@
   width: 7px;
   margin-left: 10px;
   float: right;
+}
+
+/* secion elements */
+
+.background-color {
+ background-color: #D1F0F4;
+}
+.bus {
+  margin-left: 10%;
 }
