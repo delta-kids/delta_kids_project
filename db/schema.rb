@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170618025517) do
+ActiveRecord::Schema.define(version: 20170618005022) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -44,12 +44,10 @@ ActiveRecord::Schema.define(version: 20170618025517) do
     t.string "contact_email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.boolean "approved"
-    t.bigint "organization_id"
-    t.index ["organization_id"], name: "index_events_on_organization_id"
   end
 
   create_table "organizations", force: :cascade do |t|
+    t.bigint "age_group_id"
     t.string "description"
     t.string "name"
     t.string "address"
@@ -57,6 +55,7 @@ ActiveRecord::Schema.define(version: 20170618025517) do
     t.string "website"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["age_group_id"], name: "index_organizations_on_age_group_id"
   end
 
   create_table "program_types", force: :cascade do |t|
@@ -69,10 +68,12 @@ ActiveRecord::Schema.define(version: 20170618025517) do
     t.text "description"
     t.string "registration"
     t.string "cost"
+    t.bigint "age_group_id"
     t.bigint "program_type_id"
     t.bigint "organization_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["age_group_id"], name: "index_programs_on_age_group_id"
     t.index ["organization_id"], name: "index_programs_on_organization_id"
     t.index ["program_type_id"], name: "index_programs_on_program_type_id"
   end
@@ -90,9 +91,6 @@ ActiveRecord::Schema.define(version: 20170618025517) do
     t.string "contact_email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.boolean "approved"
-    t.bigint "organization_id"
-    t.index ["organization_id"], name: "index_resources_on_organization_id"
   end
 
   create_table "service_types", force: :cascade do |t|
@@ -125,10 +123,10 @@ ActiveRecord::Schema.define(version: 20170618025517) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "events", "organizations"
+  add_foreign_key "organizations", "age_groups"
+  add_foreign_key "programs", "age_groups"
   add_foreign_key "programs", "organizations"
   add_foreign_key "programs", "program_types"
-  add_foreign_key "resources", "organizations"
   add_foreign_key "services", "categories"
   add_foreign_key "services", "organizations"
   add_foreign_key "services", "service_types"
