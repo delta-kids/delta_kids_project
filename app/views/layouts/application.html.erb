@@ -13,15 +13,12 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
     <!-- google font Open Sans -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
     <!-- google font Bree Serif -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bree+Serif">
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Open+Sans:300,400,600" rel="stylesheet">
   </head>
   <body>
-    <div class="container-fluid">
        <%= render 'layouts/header.html.erb' %>
       <%= yield %>
       <%= render 'layouts/footer.html.erb' %>
-    </div>
   </body>
 </html>
