@@ -1,5 +1,6 @@
 class EventsController < ApplicationController
 
+
   # ALL USERS, including ADMIN
 
   def index
@@ -22,4 +23,5 @@ class EventsController < ApplicationController
 
   def destroy
   end
+  
 end

@@ -1,2 +1,34 @@
-<h1>Home#contact</h1>
-<p>Find me in app/views/home/contact.html.erb</p>
+
+
+<div class="container-fluid contact-us-body">
+
+  <div class="container">
+      <%= image_tag  "butterfly.png", id: "butterfly" %>
+      <h1 id="contact-us-text">CONTACT US</h1>
+  </div>
+
+
+    <div class="container"id="contact-box">
+      <p>Do you have any questions or what to learn more about a specific subject? Drop us a line.</p>
+    <div class="flex form-group">
+      <%= text_field_tag :name, "Name",class: "form-control contact-form" %>
+      &nbsp&nbsp&nbsp
+      <%= text_field_tag :email, "Email" ,class: "form-control contact-form" %>
+    </div>
+    <div class="contact-form">
+      <%= text_area_tag :message, "Message", class: "form-control contact-form", rows: 10 %>
+    </div>
+      <%= submit_tag 'Send Message', class:"btn-primary pull-right" %>
+    </div>
+
+    <div class="pull-right flex container"id="about-us-box">
+      <h4>About us</h4>
+      <%= image_tag  "jumbotron-about-us.svg", id: "jumbo-about-us" %>
+      <p>DeltaKids is a coalition of community partners. We work together to build Delta's capacity as a child-friendly community where all children thrive.</p>
+      <a href="#" class="pull-right">Learn More</a>
+    </div>
+
+
+
+
+</div>
