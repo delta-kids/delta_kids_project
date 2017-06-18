@@ -6,8 +6,8 @@ class Program < ApplicationRecord
 
 
   validates :description, { presence: {message: "must be provided"}}
-  validates :registration, inclusion: { in: ['registered', 'drop in'] }
-  validates :cost, inclusion: { in: ['free', 'paid'] }
-  
+  validates :registration, inclusion: { in: ['Registered', 'Drop In'] }
+  validates :cost, inclusion: { in: ['Free', 'Paid'] }
+
 
 end
