@@ -11,6 +11,8 @@
 // about supported directives.
 //
 //= require jquery
+//= require moment
+//= require daterangepicker
 //= require rails-ujs
 //= require bootstrap-sprockets
 //= require chosen-jquery
