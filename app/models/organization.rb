@@ -1,7 +1,10 @@
 class Organization < ApplicationRecord
-  belongs_to :age_group, optional: true
 
   has_many :programs,  dependent: :destroy
+  has_many :services, dependent: :destroy
+  has_many :events, dependent: :destroy
+  has_many :resources, dependent: :destroy
+
 
 
 

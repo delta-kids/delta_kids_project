@@ -8,6 +8,9 @@ Rails.application.routes.draw do
 
   resources :programs
 
-  resources :organizations
+  # resources :organizations
+  get '/organizations/new', to: 'organizations#new', as: 'organizations'
+
+  
 
 end
