@@ -136,9 +136,26 @@
   width: 100%;
 }
 
+
+
+#whats-new-board {
+  // background-color: red;
+  background-color: white;
+
+}
+
 #whats-new {
   color: #00A3DA;
   font-family: BreeSerif-Regular;
+}
+
+.whats-new {
+  // background-color: green;
+  background-color: #D1F0F4;
+}
+
+#shit {
+
 }
 
 #view-all {
@@ -151,6 +168,12 @@
   border-radius: 10px;
   width: 150px;
   height: 40px;
+}
+
+.outer-blue-container {
+  // background-color: green;
+  background-color: #D1F0F4;
+  padding-top: 30px;
 }
 
 .new-events {

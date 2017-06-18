@@ -1,0 +1,60 @@
+
+
+.dropdown-menu {
+  background-color: #004C81;
+  width:600px;
+}
+
+.about-us {
+  padding: 30px;
+}
+
+.dropdown-col {
+  display: flex;
+}
+
+
+.flex-spacebtwn {
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.deltakids-logo {
+  padding: 50px 0 0 50px;
+}
+
+.btn.dropdown-toggle {
+  border:none;
+}
+
+ul {
+  list-style: none;
+}
+
+
+h4 {
+  display: inline;
+}
+
+li a {
+  color: white;
+}
+
+ hr {
+  border-color:yellow;
+}
+
+.dropdown-category {
+  color:yellow;
+}
+
+.dropdown-category {
+  color:yellow;
+}
+
+
+.dropdown-menu {
+
+}
