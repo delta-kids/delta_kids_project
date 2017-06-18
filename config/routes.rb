@@ -1,5 +1,14 @@
 Rails.application.routes.draw do
 
+  # User routes
+  namespace :admin do
+    resources :users, only: :index
+  end
+  resources :sessions, only: [:new, :create] do
+    delete :destroy, on: :collection
+  end
+  resources :users, only: [:new, :create]
+
   get 'topics/index'
 
   get 'topics/new'
@@ -125,6 +134,7 @@ Rails.application.routes.draw do
   get 'category/update'
 
   get 'category/destroy'
+
 
   get '/', to: 'home#index', as: 'home'
 
