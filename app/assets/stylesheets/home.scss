@@ -132,30 +132,27 @@
 /* ------------- Section4 elements ------------- */
 
 
-.whats-new {
-  width: 100%;
+
+.col-md-12 {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 
 
-
 #whats-new-board {
-  background-color: red;
-
+  background-color: white;
 }
 
 #whats-new {
   color: #00A3DA;
   font-family: BreeSerif-Regular;
+  margin-left: 8px;
 }
 
 .whats-new {
-  background-color: green;
-  // background-color: #D1F0F4;
-}
-
-#shit {
-
-}
+  background-color: #D1F0F4;
+  width: 100%;
+  }
 
 #view-all {
   float:right;
@@ -167,11 +164,12 @@
   border-radius: 10px;
   width: 150px;
   height: 40px;
+  margin-right: 8px;
 }
 
 .outer-blue-container {
-  background-color: green;
-  // background-color: #D1F0F4;
+  // background-color: green;
+  background-color: #D1F0F4;
   padding-top: 30px;
 }
 
@@ -201,9 +199,10 @@
   float: right;
 }
 
-/* secion elements */
+/* ------------- Section 5 elements ------------- */
 
 .background-color {
+  padding-top: 10px;
  background-color: #D1F0F4;
 }
 .bus {
