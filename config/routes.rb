@@ -8,9 +8,13 @@ Rails.application.routes.draw do
 
   resources :programs
 
+  resources :resources
+
+  resources :events
+
   # resources :organizations
   get '/organizations/new', to: 'organizations#new', as: 'organizations'
 
-  
+
 
 end
