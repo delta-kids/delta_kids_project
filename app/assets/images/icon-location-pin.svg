@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="71px" viewBox="0 0 48 71" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-location-pin</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M24.229,0.946 C37.204,0.946 47.761,11.31 47.761,24.054 C47.761,36.313 26.367,68.268 25.455,69.62 C25.182,70.022 24.723,70.27 24.229,70.27 C23.735,70.27 23.273,70.022 23.002,69.62 C22.087,68.268 0.697,36.313 0.697,24.054 C0.697,11.31 11.254,0.946 24.229,0.946 Z M24.229,34.164 C29.906,34.164 34.524,29.629 34.524,24.054 C34.524,18.479 29.906,13.944 24.229,13.944 C18.552,13.944 13.933,18.479 13.933,24.054 C13.933,29.629 18.552,34.164 24.229,34.164 Z" id="path-1"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon-location-pin">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <g id="Clip-8"></g>
+            <polygon id="Fill-7" fill="#00A5DB" mask="url(#mask-2)" points="0.64 70.36 47.8 70.36 47.8 0.88 0.64 0.88"></polygon>
+        </g>
+    </g>
+</svg>
