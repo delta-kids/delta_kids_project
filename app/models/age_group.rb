@@ -9,4 +9,7 @@ class AgeGroup < ApplicationRecord
 
   has_many :OrganizationAgeGroups, dependent: :destroy
   has_many :organizations, through: :OrganizationAgeGroups
+
+  has_many :ResourceAgeGroups, dependent: :destroy
+  has_many :resources, through: :ResourceAgeGroups
 end

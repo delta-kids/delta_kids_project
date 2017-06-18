@@ -6,4 +6,7 @@ class Resource < ApplicationRecord
 
   has_many :ResourceTopics, dependent: :destroy
   has_many :topics, through: :ResourceTopics
+
+  has_many :ResourceAgeGroups, dependent: :destroy
+  has_many :age_groups, through: :ResourceAgeGroups
 end
