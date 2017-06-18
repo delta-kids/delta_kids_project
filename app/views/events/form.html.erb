@@ -1,0 +1,136 @@
+<div class="container">
+
+  <h2>Create New Event</h2>
+
+  <%= form_for("")do |f|  %>
+  <!-- TITILE -->
+  <div class="form-group">
+    <%= f.label :title %>
+    <%= f.text_field :title, class: 'form-control' %>
+  </div>
+
+
+<!-- PLACEHOLDER, NEED TO COME BACK AND DO -->
+<!-- ================== -->
+  <h1>Dates</h1>
+    <div class="form-group">
+      <input type="text" name="startdate" value="01/01/2017" class="form-control" />
+    </div>
+    <script type="text/javascript">
+      $(function() {
+        $('input[name="startdate"]').daterangepicker({
+          showDropdowns: true,
+        });
+      });
+    </script>
+  <h1> Times </h1>
+  <div class="form-group">
+    <%= f.label :"Start Time" %>
+    <%= f.text_field :startTime, class: 'form-control' %>
+    <%= f.label :"End Time" %>
+    <%= f.text_field :endTime, class: 'form-control' %>
+  </div>
+<!-- ================== -->
+
+<!-- EVENT REPEAT -->
+  <div class="form-group">
+    <%= f.label :event_repeat %>
+    <%= radio_button_tag(:event_repeat, "Weekly") %>
+    <%= label_tag(:repeat, "true") %>
+    <%= radio_button_tag(:event_repeat, "Never") %>
+    <%= label_tag(:repeat, "false") %>
+  </div>
+
+<!-- EVENT LOCATION -->
+  <div class="form-group">
+    <%= f.label :location %>
+    <%= radio_button_tag(:location, "Ladner") %>
+    <%= label_tag(:loc, "Ladner") %>
+    <%= radio_button_tag(:location, "North Delta") %>
+    <%= label_tag(:loc, "North Delta") %>
+  </div>
+
+<!-- ADDRESS -->
+  <div class="form-group">
+      <%= f.label :address %>
+      <%= f.text_field :address, class: 'form-control' %>
+    </div>
+
+<!-- AGE GROUP -->
+  <div class="form-group">
+    <%= f.label :age_group %>
+    <%= radio_button_tag(:age_group, "0-5") %>
+    <%= label_tag(:age, "0-5") %>
+    <%= radio_button_tag(:age_group, "6-12") %>
+    <%= label_tag(:age, "6-12") %>
+    <%= radio_button_tag(:age_group, "adult") %>
+    <%= label_tag(:age, "adult") %>
+    <%= radio_button_tag(:age_group, "all") %>
+    <%= label_tag(:age, "all") %>
+  </div>
+
+<!-- COST -->
+  <div class="form-group">
+    <%= f.label :event_cost %>
+    <%= radio_button_tag(:event_cost, "Free") %>
+    <%= label_tag(:cost, "Free") %>
+    <%= radio_button_tag(:event_cost, "Paid") %>
+    <%= label_tag(:cost, "Paid") %>
+  </div>
+
+<!-- ACTIVITY TYPE -->
+  <div>
+    <%= f.label :service %>
+    <%= check_box_tag(:art_and_culture) %>
+    <%= label_tag(:art_and_culture, "Art & Culture") %>
+    <%= check_box_tag(:education) %>
+    <%= label_tag(:education, "Education") %>
+    <%= check_box_tag(:entertainment) %>
+    <%= label_tag(:entertainment, "Entertainment") %>
+    <%= check_box_tag(:health) %>
+    <%= label_tag(:health, "Health") %>
+    <%= check_box_tag(:sports) %>
+    <%= label_tag(:sports, "Sports") %>
+  </div>`
+
+<!-- TAGS -->
+<!-- PLACEHOLDER, NEED TO COME BACK AND DO -->
+<!-- ================== -->
+  <h1>TAGS</h1>
+<!-- ================== -->
+
+<!-- REGISTRATION -->
+  <div class="form-group">
+    <%= f.label :event_cost %>
+    <%= radio_button_tag(:event_cost, "Free") %>
+    <%= label_tag(:cost, "Free") %>
+    <%= radio_button_tag(:event_cost, "Paid") %>
+    <%= label_tag(:cost, "Paid") %>
+  </div>
+
+<!-- EVENT DESCRIPTION -->
+  <div class="form-group">
+    <%= f.label :description %>
+    <%= f.text_area :description, class: 'form-control' %>
+  </div>
+
+<!-- MORE INFO , LINKS  -->
+<!-- PLACEHOLDER, NEED TO COME BACK AND DO -->
+<!-- ================== -->
+  <h1>MORE INFO, LINKS</h1>
+<!-- ================== -->
+
+  <div class="form-group">
+    <%= f.label :"Contact name" %>
+    <%= f.text_field :contactName, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :"Contact email" %>
+    <%= f.email_field :email, class: 'form-control' %>
+  </div>
+
+  <%= f.submit class: 'btn btn-primary form-control' %>
+
+  <% end %>
+</div>
