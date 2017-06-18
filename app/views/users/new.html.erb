@@ -23,7 +23,7 @@
         </div>
         <div class="form-field">
           <%= f.label :phone_number, nil, class: 'login-header' %>:
-          <%= f.email_field :phone, class: 'form-control' %>
+          <%= f.text_field :phone, class: 'form-control' %>
         </div>
         <div class="form-field">
           <%= f.label :email, nil, class: 'login-header' %>:
@@ -38,10 +38,9 @@
           <%= f.password_field :password_confirmation, class: 'form-control' %>
         </div>
         <div class="form-field">
-          <%= f.submit "Log In", class: 'btn btn-primary' %>
+          <%= f.submit "Sign Up", class: 'btn btn-primary' %>
         </div>
       <% end %>
     </div>
   </div>
 </div>
-
