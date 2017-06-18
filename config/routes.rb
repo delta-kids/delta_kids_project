@@ -1,5 +1,14 @@
 Rails.application.routes.draw do
 
+  # User routes
+  namespace :admin do
+    resources :users, only: :index
+  end
+  resources :sessions, only: [:new, :create] do
+    delete :destroy, on: :collection
+  end
+  resources :users, only: [:new, :create]
+
   get '/', to: 'home#index', as: 'home'
 
   get '/about', to: 'home#about', as: 'about'
@@ -11,6 +20,6 @@ Rails.application.routes.draw do
   # resources :organizations
   get '/organizations/new', to: 'organizations#new', as: 'organizations'
 
-  
+
 
 end
