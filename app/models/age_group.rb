@@ -3,4 +3,7 @@ class AgeGroup < ApplicationRecord
 
   has_many :EventAgeGroups, dependent: :destroy
   has_many :events, through: :EventAgeGroups
+
+  has_many :ProgramAgeGroups, dependent: :destroy
+  has_many :programs, through: :ProgramAgeGroups
 end
