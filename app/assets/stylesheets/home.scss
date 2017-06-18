@@ -132,27 +132,31 @@
 /* ------------- Section4 elements ------------- */
 
 
-
-.col-md-12 {
-  padding-left: 0 !important;
-  padding-right: 0 !important;
+.whats-new {
+  width: 100%;
 }
 
 
+
 #whats-new-board {
+  // background-color: red;
   background-color: white;
+
 }
 
 #whats-new {
   color: #00A3DA;
   font-family: BreeSerif-Regular;
-  margin-left: 8px;
 }
 
 .whats-new {
+  // background-color: green;
   background-color: #D1F0F4;
-  width: 100%;
-  }
+}
+
+#shit {
+
+}
 
 #view-all {
   float:right;
@@ -164,7 +168,6 @@
   border-radius: 10px;
   width: 150px;
   height: 40px;
-  margin-right: 8px;
 }
 
 .outer-blue-container {
@@ -199,12 +202,15 @@
   float: right;
 }
 
-/* ------------- Section 5 elements ------------- */
+/* secion elements */
 
 .background-color {
-  padding-top: 10px;
  background-color: #D1F0F4;
 }
 .bus {
   margin-left: 10%;
 }
+
+
+
+/* ============================================================ */

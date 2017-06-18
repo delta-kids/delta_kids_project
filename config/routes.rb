@@ -135,7 +135,6 @@ Rails.application.routes.draw do
 
   get 'category/destroy'
 
-
   get '/', to: 'home#index', as: 'home'
 
   get '/about', to: 'home#about', as: 'about'
@@ -148,9 +147,6 @@ Rails.application.routes.draw do
 
   resources :events
 
-  # resources :organizations
-  get '/organizations/new', to: 'organizations#new', as: 'organizations'
-
-
+  resources :organizations
 
 end
