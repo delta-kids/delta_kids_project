@@ -12,9 +12,13 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require bootstrap-sprockets
+//= require chosen-jquery
 //= require moment
 //= require daterangepicker
 //= require rails-ujs
-//= require bootstrap-sprockets
-//= require chosen-jquery
 //= require_tree .
+
+$(document).ready(function() {
+  $(".dropdown-toggle").dropdown();
+});

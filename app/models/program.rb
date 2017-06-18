@@ -2,6 +2,9 @@ class Program < ApplicationRecord
   belongs_to :program_type
   belongs_to :organization
 
+  has_many :ProgramAgeGroups, dependent: :destroy
+  has_many :age_groups, through: :ProgramAgeGroups
+
 
 
   validates :description, { presence: {message: "must be provided"}}
