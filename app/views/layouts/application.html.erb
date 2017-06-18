@@ -18,8 +18,12 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bree+Serif">
   </head>
   <body>
-    <div class="container-fluid">
+
+
+
+
        <%= render 'layouts/header.html.erb' %>
+
        <!-- this is only a link to test users please deal with it in header later -->
        <% if user_signed_in? %>
         Hello <%= current_user.first_name %>
@@ -37,6 +41,6 @@
       <% end %>
       <%= yield %>
       <%= render 'layouts/footer.html.erb' %>
-    </div>
+
   </body>
 </html>
