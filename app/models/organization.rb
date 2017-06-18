@@ -5,6 +5,10 @@ class Organization < ApplicationRecord
   has_many :events, dependent: :destroy
   has_many :resources, dependent: :destroy
 
+  has_many :OrganizationTaggings, dependent: :destroy
+  has_many :tags, through: :OrganizationTaggings
+
+
 
 
 
