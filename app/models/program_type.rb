@@ -7,4 +7,7 @@ class ProgramType < ApplicationRecord
   has_many :EventProgramTypes, dependent: :destroy
   has_many :events, through: :EventProgramTypes
 
+  has_many :OrganizationProgramTypes, dependent: :destroy
+  has_many :organizations, through: :OrganizationProgramTypes
+
 end
