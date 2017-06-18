@@ -1,0 +1,28 @@
+.login-container {
+  text-align: center;
+  padding-bottom: 15px;
+  margin-bottom: 30px;
+}
+.login-header {
+  font-family: 'Bree Serif', sans-serif;
+}
+.login-image {
+  background-image: url('kids-green-background.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  position: relative;
+  bottom: -2px;
+}
+.signup-image {
+  background-image: url('clouds.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 50%;
+  background-color: #D1F0F4;
+  position: relative;
+  bottom: -2px;
+}
+.form-field {
+  padding-top: 20px;
+}

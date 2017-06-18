@@ -1,3 +1,95 @@
-// Place all the styles related to the programs controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.sidebar {
+  height: 100% !important;
+  background-color: #004C81;
+}
+
+body {
+  background-color: #D1F0F4 !important;
+}
+
+h3{
+  color: #004C81 !important;
+}
+
+.content {
+  padding: 30px !important;
+}
+
+.organization-logo {
+  border: 1px solid black;
+  height: 150px;
+  width: 150px;
+}
+
+.organization-info {
+  display: flex;
+  padding-left: 0 !important;
+}
+
+.organization-details {
+  padding-bottom: 20px;
+}
+
+.organization-content {
+  background-color: #FFFFFF;
+}
+.divider {
+  border-width: 1px;
+  border-color: #004C81;
+}
+
+ul hr {
+  border-color: #00A3DA;
+  margin: 10px;
+}
+
+ul a{
+  color: #FFFFFF;
+}
+
+ul h2 {
+  color: #FFFFFF;
+  text-align: center;
+  margin: 30px;
+}
+
+ul p{
+  padding: 10px 15px;
+}
+
+.program-details-link{
+  margin-top: 40px !important;
+  margin-bottom: 40px !important;
+  height: 150px;
+  background-color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+h4 {
+  color: #00A3DA !important;
+  font-size: 30px !important;
+  text-align: center;
+}
+
+#organization-button{
+    background: #00A3DA;
+    border-radius: 10px;
+    height: 50px;
+    width: 300px;
+    font-family: OpenSans-Semibold;
+    font-size: 16px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    line-height: 50px;
+    margin-left: 70px;
+    display: block;
+    text-align: center;
+}
+
+.happy-rainbow {
+  background-color: #D1F0F4;
+
+}

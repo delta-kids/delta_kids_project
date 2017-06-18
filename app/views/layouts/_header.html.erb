@@ -2,9 +2,15 @@
 <nav class="navbar">
 
   <div class="pull-right about-us">
-    <a href="#" class="about-us">Login In</a>
-    <a href="#" class="about-us">Sign Up</a>
+    <% if user_signed_in? %>
+      Hello <%= current_user.first_name %>
+      <%= link_to 'Sign Out', sessions_path, method: :delete, class: 'about-us'  %>
+    <% else %>
+      <%= link_to 'Sign up', new_user_path, class: 'about-us' %>
+     |<%= link_to 'Log In', new_session_path, class: 'about-us' %>
+   <% end %>
     <a href="#" class="about-us">About Us</a>
+    <a href="#" class="about-us">Live 5-2-1-0</a>
     <a href="#" class="about-us">Contact Us</a>
   </div>
 
@@ -21,6 +27,7 @@
           <h4>LEARNING</h4>
           <span class="caret"></span>
         </button>
+
           <ul class="dropdown-menu header-menu">
             <li><a href="#">Child Surveys</a></li>
             <hr>

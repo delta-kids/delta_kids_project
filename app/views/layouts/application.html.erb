@@ -17,8 +17,22 @@
     <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Open+Sans:300,400,600" rel="stylesheet">
   </head>
   <body>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/integration
        <%= render 'layouts/header.html.erb' %>
+
+      <% if flash[:notice] %>
+        <div class='alert alert-success'><%= flash[:notice] %></div>
+      <% elsif flash[:alert] %>
+        <div class='alert alert-danger'><%= flash[:alert] %></div>
+      <% end %>
       <%= yield %>
       <%= render 'layouts/footer.html.erb' %>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/integration
   </body>
 </html>

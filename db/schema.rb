@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170618080152) do
+ActiveRecord::Schema.define(version: 20170618221423) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -83,6 +83,15 @@ ActiveRecord::Schema.define(version: 20170618080152) do
     t.datetime "updated_at", null: false
     t.index ["age_group_id"], name: "index_organization_age_groups_on_age_group_id"
     t.index ["organization_id"], name: "index_organization_age_groups_on_organization_id"
+  end
+
+  create_table "organization_program_types", force: :cascade do |t|
+    t.bigint "organization_id"
+    t.bigint "program_type_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["organization_id"], name: "index_organization_program_types_on_organization_id"
+    t.index ["program_type_id"], name: "index_organization_program_types_on_program_type_id"
   end
 
   create_table "organization_taggings", force: :cascade do |t|
@@ -206,6 +215,17 @@ ActiveRecord::Schema.define(version: 20170618080152) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "users", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.string "email"
+    t.string "phone"
+    t.string "password_digest"
+    t.boolean "is_admin"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   add_foreign_key "event_age_groups", "age_groups"
   add_foreign_key "event_age_groups", "events"
   add_foreign_key "event_program_types", "events"
@@ -215,6 +235,8 @@ ActiveRecord::Schema.define(version: 20170618080152) do
   add_foreign_key "events", "organizations"
   add_foreign_key "organization_age_groups", "age_groups"
   add_foreign_key "organization_age_groups", "organizations"
+  add_foreign_key "organization_program_types", "organizations"
+  add_foreign_key "organization_program_types", "program_types"
   add_foreign_key "organization_taggings", "organizations"
   add_foreign_key "organization_taggings", "tags"
   add_foreign_key "program_age_groups", "age_groups"
