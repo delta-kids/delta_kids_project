@@ -1,0 +1,89 @@
+<div class="container">
+  <h2>Create New Organization</h2>
+
+  <%= form_for "" do |f| %>
+    <div class="form-group">
+      <%= f.label :name %>
+      <%= f.text_field :name, class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :address %>
+      <%= f.text_field :address, class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :website %>
+      <%= f.text_field :website, class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :phone_number %>
+      <%= telephone_field :phone_number, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :age_group %>
+      <%= radio_button_tag(:age, "0-5") %>
+      <%= label_tag(:age, "0-5") %>
+      <%= radio_button_tag(:age, "6-12") %>
+      <%= label_tag(:age, "6-12") %>
+      <%= radio_button_tag(:age, "adult") %>
+      <%= label_tag(:age, "adult") %>
+      <%= radio_button_tag(:age, "all") %>
+      <%= label_tag(:age, "all") %>
+    </div>
+
+    <div>
+      <%= f.label :service %>
+      <%= check_box_tag(:art_and_culture) %>
+      <%= label_tag(:art_and_culture, "Art & Culture") %>
+      <%= check_box_tag(:education) %>
+      <%= label_tag(:education, "Education") %>
+      <%= check_box_tag(:entertainment) %>
+      <%= label_tag(:entertainment, "Entertainment") %>
+      <%= check_box_tag(:health) %>
+      <%= label_tag(:health, "Health") %>
+      <%= check_box_tag(:sports) %>
+      <%= label_tag(:sports, "Sports") %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :tags %>
+      <%= f.text_field :tags, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :description %>
+      <%= f.text_area :description, class: "form-control", rows: 10%>
+    </div>
+
+    <div>
+      <%= f.label :target_clientele %>
+      <%= select_tag(:target_clientele, options_for_select(
+        [
+          ['Pregnancy & Babies', 1],
+          ['something goes here', 2],
+          ['random thing', 3],
+          ['more stuff', 4]
+        ]))
+      %>
+    </div>
+
+    <br>
+    <div>
+      <%= f.label :service %>
+      <%= select_tag(:services, options_for_select(
+        [
+          ['Help in Crisis', 1],
+          ['another service', 2],
+          ['hello world', 3],
+          ['random service', 4]
+        ]))
+      %>
+    </div>
+
+    <br>
+    <div class="form-group">
+      <%= f.submit class: 'btn btn-primary form-control' %>
+    </div>
+
+  <% end %>
+</div>

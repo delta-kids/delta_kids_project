@@ -1,3 +1,4 @@
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -11,8 +12,12 @@
  * It is generally better to create a new file per style scope.
  *
  *= require bootstrap_and_overrides
+ *= require daterangepicker-bs3
  *= require chosen
  *= require font-awesome
  *= require_tree .
  *= require_self
  */
+ 
+ @import "bootstrap-sprockets";
+ @import "bootstrap";

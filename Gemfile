@@ -8,6 +8,7 @@ end
 ruby '2.4.1'
 
 gem 'faker', github: 'stympy/faker'
+gem 'cowsay'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.1'
 # Use postgresql as the database for Active Record
@@ -33,8 +34,9 @@ gem 'cancancan'
 gem 'bcrypt', '~> 3.1.7'
 gem 'font-awesome-rails'
 gem 'jquery-rails'
+gem 'momentjs-rails'
+gem 'bootstrap-daterangepicker-rails'
 gem 'chosen-rails'
-
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
