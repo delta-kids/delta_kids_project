@@ -1,9 +1,15 @@
-
-
-.dropdown-menu {
-  background-color: #004C81;
-  width:600px;
+.btn-group.open {
+  position: static;
 }
+
+.header-menu {
+  min-width: auto !important;
+  background-color: #004C81 !important;
+  width: 96vw !important;
+  position: absolute;
+  left:0;
+}
+
 
 .about-us {
   padding: 30px;
@@ -39,7 +45,7 @@ h4 {
 }
 
 li a {
-  color: white;
+  color: white !important;
 }
 
  hr {
@@ -48,13 +54,4 @@ li a {
 
 .dropdown-category {
   color:yellow;
-}
-
-.dropdown-category {
-  color:yellow;
-}
-
-
-.dropdown-menu {
-
 }
