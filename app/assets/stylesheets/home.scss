@@ -1,3 +1,172 @@
-// Place all the styles related to the home controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+/* ------------- Section1 elements ------------- */
+/* Welcome to Delta Kid: */
+
+#welcome-line1 {
+    font-family: BreeSerif-Regular;
+    font-size: 55px;
+    color: #004C81;
+    letter-spacing: 0.5px;
+    line-height: 90px;
+    text-shadow: 4px 4px 0 #FFFFFF;
+    text-align: center;
+}
+#welcome-line2 {
+    font-family: BreeSerif-Regular;
+    font-size: 80px;
+    color: #004C81;
+    letter-spacing: 0.5px;
+    line-height: 90px;
+    text-shadow: 4px 4px 0 #FFFFFF;
+    text-align: center;
+}
+#welcome-line3 {
+    /* We are your One-Stop: */
+
+    padding-top: 20px;
+    font-family: OpenSans-Semibold;
+    font-size: 24px;
+    color: #00A3DA;
+    letter-spacing: 0;
+    line-height: 40px;
+    text-align: center;
+}
+#welcome-line4 {
+    /* We are your One-Stop: */
+
+    font-family: OpenSans-Semibold;
+    font-size: 24px;
+    color: #00A3DA;
+    letter-spacing: 0;
+    line-height: 40px;
+    text-align: center;
+}
+#button-learnmore {
+    background: #FFF200;
+    border-radius: 10px;
+    box-shadow: 0px 4px #00A3DB;
+    width: 200px;
+    height: 50px;
+    display: block;
+    margin: 0 auto;
+    text-decoration: none;
+    text-transform: capitalize;
+    text-align: center;
+    font-family: OpenSans-Semibold;
+    font-size: 20px;
+    color: #00A3DA;
+    letter-spacing: 0;
+    line-height: 50px;
+}
+.clouds-background {
+    background-image: url('clouds.png');
+    background-size: 100% auto;
+    height: 365px;
+    display: block;
+    margin: auto;
+    width: 100%;
+    align-self: center;
+}
+.section1-container {
+    padding: 55px;
+}
+.section1 {
+    height: auto;
+    background-color: #D1F0F4;
+}
+.section1-text {
+    padding-top: 60px;
+    padding-bottom: 80px;
+}
+
+/* ------------- Section2 elements ------------- */
+.section2-container {
+    background-image: url('kids-green-background.png');
+    background-size: 100% 100%;
+
+}
+.section2 {
+//     height: 528px;
+    background-color: #D1F0F4;
+}
+.kids-image{
+    width: 100%;
+    height: auto;
+    padding: 50px 50px 120px 50px;
+}
+
+
+/* ------------- Section3 elements ------------- */
+#section3-line1,
+#section3-line2,
+#section3-line3 {
+    font-family: BreeSerif-Regular;
+    font-size: 36px;
+    color: #004C81;
+    letter-spacing: 0.3px;
+    line-height: 44px;
+    text-align: center;
+}
+
+#button-activities-cal {
+    background: #00A3DA;
+    border-radius: 10px;
+    height: 50px;
+    width: 300px;
+    font-family: OpenSans-Semibold;
+    font-size: 16px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    line-height: 50px;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+
+}
+.section3 {
+//     height: 528px;
+    background-color: #FFF;
+}
+
+/* ------------- Section4 elements ------------- */
+#whats-new {
+  color: #00A3DA;
+  font-family: BreeSerif-Regular;
+}
+
+#view-all {
+  float:right;
+  margin-top: -54px;
+  background-color: #00A3DA;
+  font-family: OpenSans-Semibold;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  width: 150px;
+  height: 40px;
+}
+
+.new-events {
+  font-family: OpenSans-Semibold;
+  font-size: 16px;
+  color: #00A3DA;
+}
+
+.posted-on {
+  font-family: OpenSans-Semibold;
+  font-size: 12px;
+  color: #00A3DA;
+}
+
+.learn-more {
+  font-family: OpenSans-Semibold;
+  font-size: 14px;
+  color: #00A3DA;
+  float: right;
+  margin-top: -3px;
+}
+
+.cursor {
+  width: 7px;
+  margin-left: 10px;
+  float: right;
+}
