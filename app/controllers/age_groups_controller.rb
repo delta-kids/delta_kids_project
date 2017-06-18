@@ -1,4 +1,4 @@
-class OrganizationsController < ApplicationController
+class AgeGroupsController < ApplicationController
 
 # ONLY ADMIN
 
@@ -22,5 +22,4 @@ class OrganizationsController < ApplicationController
 
   def destroy
   end
-
 end

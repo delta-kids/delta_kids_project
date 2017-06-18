@@ -1,7 +1,7 @@
-class OrganizationsController < ApplicationController
+class ResourcesController < ApplicationController
 
-# ONLY ADMIN
-
+  # ALL USERS, including ADMIN
+  
   def index
   end
 
@@ -22,5 +22,4 @@ class OrganizationsController < ApplicationController
 
   def destroy
   end
-
 end

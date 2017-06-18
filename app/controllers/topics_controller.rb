@@ -1,6 +1,6 @@
-class OrganizationsController < ApplicationController
+class TopicsController < ApplicationController
 
-# ONLY ADMIN
+  # ONLY ADMIN
 
   def index
   end
@@ -22,5 +22,4 @@ class OrganizationsController < ApplicationController
 
   def destroy
   end
-
 end
