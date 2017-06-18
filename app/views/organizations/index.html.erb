@@ -21,13 +21,13 @@
 
     <div class="form-group">
       <%= f.label :age_group %>
-      <%= radio_button_tag(:age_group, "0-5") %>
+      <%= radio_button_tag(:age, "0-5") %>
       <%= label_tag(:age, "0-5") %>
-      <%= radio_button_tag(:age_group, "6-12") %>
+      <%= radio_button_tag(:age, "6-12") %>
       <%= label_tag(:age, "6-12") %>
-      <%= radio_button_tag(:age_group, "adult") %>
+      <%= radio_button_tag(:age, "adult") %>
       <%= label_tag(:age, "adult") %>
-      <%= radio_button_tag(:age_group, "all") %>
+      <%= radio_button_tag(:age, "all") %>
       <%= label_tag(:age, "all") %>
     </div>
 
@@ -52,7 +52,7 @@
 
     <div class="form-group">
       <%= f.label :description %>
-      <%= f.text_area :description, class: "form-control" %>
+      <%= f.text_area :description, class: "form-control", rows: 10%>
     </div>
 
     <div>
