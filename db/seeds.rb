@@ -1,14 +1,27 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
 AgeGroup.destroy_all
 ProgramType.destroy_all
+ServiceType.destroy_all
+Category.destroy_all
 Organization.destroy_all
 Program.destroy_all
+
+ServiceType.create([
+{name: 'Child Advocacy'},
+{name: 'Arts & Culture'},
+{name: 'Health & Development'},
+{name: 'Help in a Crisis'},
+{name: 'Supports for Children'},
+{name: 'Assistance with fees'},
+{name: 'Childcare & Preschool'},
+{name: 'Supports for families'},
+{name: 'Health & Development'}
+])
+
+Category.create([
+{name: 'Children'},
+{name: 'Families'},
+{name: 'Pregnancy & Babies'}
+])
 
 ProgramType.create([
 {name: 'Arts & Culture'},
@@ -19,7 +32,7 @@ ProgramType.create([
 {name: 'Community Clubs'},
 {name: 'Education'}
 ])
-#
+
 AgeGroup.create([
 {age: '0-5'},
 {age: '6-12'},
@@ -120,11 +133,96 @@ address: '',
 phone: '',
 website: 'http://www.navyleague.ca/eng/',
  )
- Program.create(
- age_group: AgeGroup.find_by(age: '6-12'),
- program_type: ProgramType.find_by(name: 'Community Clubs'),
- organization: Organization.find_by(name: 'Navy League'),
- description: 'Leadership, sailing, camping, first aid, drilling',
- registration: 'Registered',
- cost: 'Paid'
- )
+Program.create(
+age_group: AgeGroup.find_by(age: '6-12'),
+program_type: ProgramType.find_by(name: 'Community Clubs'),
+organization: Organization.find_by(name: 'Navy League'),
+description: 'Leadership, sailing, camping, first aid, drilling',
+registration: 'Registered',
+cost: 'Paid'
+)
+#
+# Service 2 from Excel
+Organization.create(
+name: 'Reporting child abuse',
+phone: '1-800-663-9122',
+address: '',
+website: 'http://www2.gov.bc.ca/gov/content/safety/public-safety/protecting-children/keeping-kids-safe',
+description: ''
+)
+Service.create(
+service_type: ServiceType.find_by(name: 'Child Advocacy'),
+organization: Organization.find_by(name: 'Reporting child abuse'),
+category: Category.find_by(name: 'Children'),
+description: 'If you think a child or youth under 19 years of age is being abused or neglected, you have the legal duty to report your concern'
+)
+# Service 29 from Excel
+Organization.create(
+name: 'Child Care Resource & Referral Program (CCRR)',
+phone: '604-572-8032',
+address: '#100-6846 King George Boulevard, Surrey, BC',
+website: 'http://www.childcareoptions.ca/',
+description: ''
+)
+Service.create(
+service_type: ServiceType.find_by(name: 'Assistance with fees'),
+organization: Organization.find_by(name: 'Child Care Resource & Referral Program (CCRR)'),
+category: Category.find_by(name: 'Families'),
+description: 'Information about eligibility and rates for child care subsidies.'
+)
+# Service 48 from Excel
+Organization.create(
+name: 'Fraser Health',
+phone: '604-507-5400',
+address: '11245 84 Avenue Delta, B.C. V4C 2L9',
+website: 'http://www.fraserhealth.ca/health-info/pregnancy-and-babies/',
+description: ''
+)
+Service.create(
+service_type: ServiceType.find_by(name: 'Health & Development'),
+organization: Organization.find_by(name: 'Fraser Health'),
+category: Category.find_by(name: 'Pregnancy & Babies'),
+description: 'Health program and information for pregnant moms and infants.'
+)
+# Service 45 from Excel
+Organization.create(
+name: 'Family Support Institute',
+phone: '1-800-441-5403',
+address: '227 6th Street New Westminster, BC V3L 3A5',
+website: 'https://familysupportbc.com/',
+description: ''
+)
+Service.create(
+service_type: ServiceType.find_by(name: 'Supports for families'),
+organization: Organization.find_by(name: 'Family Support Institute'),
+category: Category.find_by(name: 'Families'),
+description: 'Peer support network for parents who have children with physical and mental extra support needs.'
+)
+# Service 27 from Excel
+Organization.create(
+name: 'Boys and Girls Club South Coast BC',
+phone: '604-591-9262',
+address: '3rd Floor, 11861 88th Avenue, Delta, BC, V4C 3C6',
+website: 'https://www.bgcbc.ca/',
+description: ''
+)
+Service.create(
+service_type: ServiceType.find_by(name: 'Assistance with fees'),
+organization: Organization.find_by(name: 'Boys and Girls Club South Coast BC'),
+category: Category.find_by(name: 'Families'),
+description: 'Financial subsidies for summer camp and after school programs.'
+)
+# Service 15 from Excel
+Organization.create(
+name: 'Autism Community Training (ACT)',
+phone: '604-205-5467',
+address: '2250 Boundary Rd, Burnaby, BC V5M 3Z3',
+website: 'www.actcommunity.ca',
+description: ''
+)
+Service.create(
+service_type: ServiceType.find_by(name: 'Supports for Children'),
+organization: Organization.find_by(name: 'Autism Community Training (ACT)'),
+category: Category.find_by(name: 'Children'),
+description: 'Information and referrals for families whose children have Autism; registry of Autism service providers'
+)
