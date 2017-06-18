@@ -6,4 +6,7 @@ class AgeGroup < ApplicationRecord
 
   has_many :ProgramAgeGroups, dependent: :destroy
   has_many :programs, through: :ProgramAgeGroups
+
+  has_many :OrganizationAgeGroups, dependent: :destroy
+  has_many :organizations, through: :OrganizationAgeGroups
 end

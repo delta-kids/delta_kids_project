@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170618072849) do
+ActiveRecord::Schema.define(version: 20170618074649) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -65,6 +65,15 @@ ActiveRecord::Schema.define(version: 20170618072849) do
     t.boolean "approved"
     t.bigint "organization_id"
     t.index ["organization_id"], name: "index_events_on_organization_id"
+  end
+
+  create_table "organization_age_groups", force: :cascade do |t|
+    t.bigint "organization_id"
+    t.bigint "age_group_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["age_group_id"], name: "index_organization_age_groups_on_age_group_id"
+    t.index ["organization_id"], name: "index_organization_age_groups_on_organization_id"
   end
 
   create_table "organization_taggings", force: :cascade do |t|
@@ -184,6 +193,8 @@ ActiveRecord::Schema.define(version: 20170618072849) do
   add_foreign_key "event_taggings", "events"
   add_foreign_key "event_taggings", "tags"
   add_foreign_key "events", "organizations"
+  add_foreign_key "organization_age_groups", "age_groups"
+  add_foreign_key "organization_age_groups", "organizations"
   add_foreign_key "organization_taggings", "organizations"
   add_foreign_key "organization_taggings", "tags"
   add_foreign_key "program_age_groups", "age_groups"
