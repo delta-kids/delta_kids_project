@@ -1,3 +1,11 @@
+nav {
+  z-index: 1;
+  background-image: url("cloud1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position:bottom;
+  top: 80px;
+}
 
 .nav-font {
   font-family: 'Open Sans', sans-serif;
