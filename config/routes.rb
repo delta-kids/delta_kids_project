@@ -13,15 +13,13 @@ Rails.application.routes.draw do
   end
   resources :users, only: [:new, :create]
 
+  # HOME CONTROLLER ROUTER
   get '/', to: 'home#index', as: 'home'
-
   get '/about', to: 'home#about', as: 'about'
-
   get '/contact', to: 'home#contact', as: 'contact'
-
   get '/programs/:id', to: 'programs#index'
-
   get '/live', to: 'home#live', as: 'live'
+  get '/dashboard', to: 'home#dashboard', as: 'dashboard'
 
 
   post '/contact_submit', to: 'home#submit', as: 'contacted'
