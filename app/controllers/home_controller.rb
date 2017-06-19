@@ -25,4 +25,12 @@ class HomeController < ApplicationController
 
   end
 
+  def search
+
+  end
+
+  def whatsnew
+    
+  end
+
 end
