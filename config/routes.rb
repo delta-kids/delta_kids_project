@@ -135,24 +135,20 @@ Rails.application.routes.draw do
 
   get 'category/destroy'
 
-
   get '/', to: 'home#index', as: 'home'
 
   get '/about', to: 'home#about', as: 'about'
 
   get '/contact', to: 'home#contact', as: 'contact'
 
-  get '/programs', to: 'programs#index'
-
   get '/programs/:id', to: 'programs#index'
+
+  get '/live', to: 'home#live', as: 'live'
 
   resources :resources
 
   resources :events
 
-  # resources :organizations
-  get '/organizations/new', to: 'organizations#new', as: 'organizations'
-
-
+  resources :organizations
 
 end

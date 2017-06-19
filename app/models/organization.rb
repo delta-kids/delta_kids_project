@@ -11,6 +11,9 @@ class Organization < ApplicationRecord
   has_many :OrganizationAgeGroups, dependent: :destroy
   has_many :age_groups, through: :OrganizationAgeGroups
 
+  has_many :OrganizationProgramTypes, dependent: :destroy
+  has_many :program_types, through: :OrganizationProgramTypes
+
 
 
   # validates :description, {presence: {message: "must be provided"}}

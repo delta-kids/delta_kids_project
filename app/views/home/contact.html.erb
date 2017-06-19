@@ -12,23 +12,36 @@
       <p>Do you have any questions or what to learn more about a specific subject? Drop us a line.</p>
     <div class="flex form-group">
       <%= text_field_tag :name, "Name",class: "form-control contact-form" %>
-      &nbsp&nbsp&nbsp
+      &nbsp;&nbsp;&nbsp;
       <%= text_field_tag :email, "Email" ,class: "form-control contact-form" %>
     </div>
     <div class="contact-form">
       <%= text_area_tag :message, "Message", class: "form-control contact-form", rows: 10 %>
     </div>
+    <br>
       <%= submit_tag 'Send Message', class:"btn-primary pull-right" %>
+
     </div>
 
     <div class="pull-right flex container"id="about-us-box">
       <h4>About us</h4>
       <%= image_tag  "jumbotron-about-us.svg", id: "jumbo-about-us" %>
       <p>DeltaKids is a coalition of community partners. We work together to build Delta's capacity as a child-friendly community where all children thrive.</p>
-      <a href="#" class="pull-right">Learn More</a>
+      <a href="#" class="pull-right">Learn More<span class="caret caret-rght"></span></a>
     </div>
 
+</div>
 
+<!-- Rainbow Footer-->
 
+<div class="relative-enabler">
+ <div class="container-fluid happy-rainbow">
+  <div class="row">
+    <div class="col-md-12">
 
+      <%= image_tag("rainbow-footer-group.svg", class:"center-block") %>
+
+    </div>
+  </div>
+ </div>
 </div>

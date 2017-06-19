@@ -1,32 +1,78 @@
+
+nav {
+  z-index: 1;
+  background-image: url("cloud1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position:bottom;
+}
 .btn-group.open {
   position: static;
 }
 
 .header-menu {
+  left:15px !important;
+  top: 80% !important;
   min-width: auto !important;
   background-color: #004C81 !important;
   width: 96vw !important;
   position: absolute;
-  left:0;
 }
+
+.nav-font {
+  font-family: ‘Open Sans’, sans-serif;
+  font-size: 16px;
+  display: inline;
+}
+
 
 
 .about-us {
-  padding: 30px;
+  padding: 10px;
 }
 
 .dropdown-col {
+  font-size: 20px;
+  font-family: ‘Open Sans’, sans-serif;
   display: flex;
+  justify-content: space-around;
 }
+
+.programs-ul {
+width: 50%;
+}
+
+.services-ul {
+width: 33%;
+}
+
+.programs-li {
+width: 45%;
+display: inline-block;
+}
+
 
 
 .flex-spacebtwn {
   padding-top: 10px;
+  padding-bottom: 75px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+.head-btn {
+    background-color: white !important;
+}
 
+.head-btn:focus {
+  color:#D1F0F4 !important;
+}
+
+.head-btn:focus,.head-btn:active {
+   outline: none !important;
+}
+
+.head-
 .deltakids-logo {
   padding: 50px 0 0 50px;
 }
@@ -39,19 +85,19 @@ ul {
   list-style: none;
 }
 
-
-h4 {
-  display: inline;
-}
-
 li a {
+  text-decoration: none;
   color: white !important;
 }
 
- hr {
-  border-color:yellow;
+.nav-hr {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  margin-left: 0px;
+  border-color:#FFF200;
 }
 
 .dropdown-category {
-  color:yellow;
+  color:#FFF200;
 }
