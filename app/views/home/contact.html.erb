@@ -11,20 +11,21 @@
     <div class="container"id="contact-box">
       <p>Do you have any questions or what to learn more about a specific subject? Drop us a line.</p>
     <div class="flex form-group">
-      <%= text_field_tag :name, "Name",class: "form-control contact-form" %>
+      <%= text_field_tag :name, nil, {placeholder: "Name",class: "form-control contact-form"} %>
       &nbsp;&nbsp;&nbsp;
-      <%= text_field_tag :email, "Email" ,class: "form-control contact-form" %>
+      <%= text_field_tag :email, nil, {placeholder: "Email" ,class: "form-control contact-form"} %>
     </div>
     <div class="contact-form">
-      <%= text_area_tag :message, "Message", class: "form-control contact-form", rows: 10 %>
+      <%= text_area_tag :message, nil, {placeholder: "Message", class: "form-control contact-form", rows: 10} %>
     </div>
-      <%= submit_tag 'Send Message', class:"btn-primary pull-right" %>
+      <%= submit_tag 'Send Message', class:"btn-primary pull-right btn-lg", id:"btn-padding" %>
     </div>
+
 
     <div class="pull-right flex container"id="about-us-box">
       <h4>About us</h4>
       <%= image_tag  "jumbotron-about-us.svg", id: "jumbo-about-us" %>
       <p>DeltaKids is a coalition of community partners. We work together to build Delta's capacity as a child-friendly community where all children thrive.</p>
-      <a href="<%= about_path %>" class="pull-right">Learn More<span class="caret caret-rght"></span></a>
+      <a href="<%= about_path %>" class="pull-right">Learn More<span class="caret" id="caret-right"></span></a>
     </div>
 </div>
