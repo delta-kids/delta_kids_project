@@ -6,35 +6,15 @@
         <%= image_tag('paperclip.png', class: 'clippy') %>
         <h2 class='age-group'><%= @age_group %> YEAR OLDS</h2>
         <p><a style="color:#00A3DA" href="#">Who to contact <br> for more information about...</a></p>
-        <% if @age_group === "0-5" %>
-        <li><a href="/programs/0_5_arts_culture">Arts & Culture</a></li>
-        <% else %>
-        <li><a href="/programs/6_12_arts_culture">Arts & Culture</a></li>
-        <% end %>
+        <li><a href="#">Arts & Culture</a></li>
         <hr>
-        <% if @age_group === "0-5" %>
-        <li><a href="/programs/0_5_sports">Sports</a></li>
-        <% else %>
-        <li><a href="/programs/6_12_sports">Sports</a></li>
-        <% end %>
+        <li><a href="#">Sports</a></li>
         <hr>
-        <% if @age_group === "0-5" %>
-        <li><a href="/programs/0_5_education">Education</a></li>
-        <% else %>
-        <li><a href="/programs/6_12_education">Education</a></li>
-        <% end %>
+        <li><a href="#">Education</a></li>
         <hr>
-        <% if @age_group === "0-5" %>
-        <li><a href="/programs/0_5_parent_child">Parent & Child</a></li>
-        <% else %>
-        <li><a href="/programs/6_12_community">Community Clubs</a></li>
-        <% end %>
+        <li><a href="#">Community Clubs</a></li>
         <hr>
-        <% if @age_group === "0-5" %>
-        <li><a href="/programs/0_5_childcare">Childcare & Preschools</a></li>
-        <% else %>
-        <li><a href="/programs/6_12_childcare">Childcare & Preschools</a></li>
-        <% end %>
+        <li><a href="#">Childcare & Preschools</a></li>
         <hr>
       </ul>
     </div>
@@ -47,7 +27,7 @@
         <h3>PROGRAMS OFFERED</h3>
       </div>
 
-      <% @programs.each do |p| %>
+      <% @programs&.each do |p| %>
       <div class="col-md-12">
         <hr class="divider">
       </div>
