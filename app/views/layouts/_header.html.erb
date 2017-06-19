@@ -1,16 +1,31 @@
 
 <nav class="navbar">
-
   <div class="container deltakids-logo">
-    <div class="pull-right about-us">
-      <a href="#" class="about-us">Login In</a>
-      <a href="#" class="about-us">Sign Up</a>
-      <a href="#" class="about-us">About Us</a>
-      <a href="#" class="about-us">Live 5-2-1-0</a>
-      <a href="#" class="about-us">Contact Us</a>
-    </div>
-      <%= image_tag ("Delta-logo.png") %>
-    </div>
+
+  <div class="pull-right about-us">
+    <% if user_signed_in? %>
+      Hello <%= current_user.first_name %>
+      <%= link_to 'Sign Out', sessions_path, method: :delete, class: 'about-us'  %>
+    <% else %>
+      <%= link_to 'Sign up', new_user_path, class: 'about-us' %>
+     |<%= link_to 'Log In', new_session_path, class: 'about-us' %>
+   <% end %>
+    <a href="#" class="about-us">About Us</a>
+    <a href="#" class="about-us">Live 5-2-1-0</a>
+    <a href="#" class="about-us">Contact Us</a>
+  </div>
+
+
+
+   // <div class="pull-right about-us">
+   //   <a href="#" class="about-us">Login In</a>
+   //   <a href="#" class="about-us">Sign Up</a>
+   //   <a href="#" class="about-us">About Us</a>
+   //   <a href="#" class="about-us">Live 5-2-1-0</a>
+   //   <a href="#" class="about-us">Contact Us</a>
+   // </div>
+      <%# image_tag ("Delta-logo.png") %>
+   // </div>
 
 
   <div class="container-fluid flex-spacebtwn">

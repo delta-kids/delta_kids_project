@@ -13,26 +13,13 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
     <!-- google font Open Sans -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
     <!-- google font Bree Serif -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bree+Serif">
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Open+Sans:300,400,600" rel="stylesheet">
   </head>
   <body>
 
 
-
-
        <%= render 'layouts/header.html.erb' %>
-
-       <!-- this is only a link to test users please deal with it in header later -->
-       <% if user_signed_in? %>
-        Hello <%= current_user.first_name %>
-        <%= link_to 'Sign Out', sessions_path, method: :delete  %>
-      <% else %>
-        <%= link_to 'Sign up', new_user_path %>
-        |
-        <%= link_to 'Log In', new_session_path %>
-      <% end %>
 
       <% if flash[:notice] %>
         <div class='alert alert-success'><%= flash[:notice] %></div>
@@ -41,6 +28,7 @@
       <% end %>
       <%= yield %>
       <%= render 'layouts/footer.html.erb' %>
+
 
   </body>
 </html>
