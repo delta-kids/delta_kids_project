@@ -1,2 +1,106 @@
-<h1>Resources#new</h1>
-<p>Find me in app/views/resources/new.html.erb</p>
+<div class="container">
+  <h2>Create New Resource</h2>
+
+  <%= form_for "" do |f| %>
+    <div class="form-group">
+      <%= f.label :name %>
+      <%= f.text_field :name, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label "Feature Resource?" %>
+      <%= radio_button_tag(:is_featured, true) %>
+      <%= label_tag(:is_featured, "Yes") %>
+      <%= radio_button_tag(:is_featured, false) %>
+      <%= label_tag(:is_featured, "No") %>
+    </div>
+
+    <!--  FEATURE UNTIL add calender -->
+
+    <!--  REMOVE FEATURE FROM SITE is this even necessary? -->
+
+    <div class="form-group">
+      <%= f.label "Resource is about the situation in: " %>
+      <br>
+      <%= radio_button_tag(:location, "Delta") %>
+      <%= label_tag(:location, "Delta") %>
+      <%= radio_button_tag(:location, "BC") %>
+      <%= label_tag(:location, "BC") %>
+      <%= radio_button_tag(:location, "Canada") %>
+      <%= label_tag(:location, "Canada") %>
+      <%= radio_button_tag(:location, "Not Relevent") %>
+      <%= label_tag(:location, "Not Relevent") %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :Age_group %>
+      <%= f.collection_select :age_group_ids,
+        AgeGroup.all,
+        :id,
+        :age,
+        {},
+        { multiple: true, class: 'chosen-select'}
+        %>
+    </div>
+
+    <div class="form-group">
+      <%#= f.label :age_group %>
+      <%#= radio_button_tag(:age, "0-5") %>
+      <%#= label_tag(:age, "0-5") %>
+      <%#= radio_button_tag(:age, "6-12") %>
+      <%#= label_tag(:age, "6-12") %>
+      <%#= radio_button_tag(:age, "adult") %>
+      <%#= label_tag(:age, "adult") %>
+      <%#= radio_button_tag(:age, "all") %>
+      <%#= label_tag(:age, "all") %>
+    </div>
+
+    <div>
+      <%= f.label :topic %>
+      <%= check_box_tag(:physical_health) %>
+      <%= label_tag(:physical_health, "Physical Health") %>
+      <%= check_box_tag(:mental_health) %>
+      <%= label_tag(:mental_health, "Mental Health") %>
+      <%= check_box_tag(:child_development) %>
+      <%= label_tag(:child_development, "Child Development") %>
+      <%= check_box_tag(:policy) %>
+      <%= label_tag(:policy, "Policy") %>
+      <%= check_box_tag(:child_safety) %>
+      <%= label_tag(:child_safety, "Child Safety") %>
+      <%= check_box_tag(:other) %>
+      <%= label_tag(:other, "Other (specify in tags)") %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :tags %>
+      <%= f.text_field :tags, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :description %>
+      <%= f.text_area :description, class: "form-control", rows: 10 %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :contact_name %>
+      <%= f.text_field :name, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :contact_email %>
+      <%= email_field(:user, :address, class: "form-control") %>
+    </div>
+
+    <br>
+    <div class="form-group">
+      <%= f.submit class: 'btn btn-primary form-control' %>
+    </div>
+
+  <% end %>
+</div>
+
+<script>
+ $(function(){
+ $(".chosen-select").chosen({width: "200px"});
+ });
+ </script>

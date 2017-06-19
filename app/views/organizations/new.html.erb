@@ -1,10 +1,14 @@
-<div class="container" id="new-admin-form">
+<div class="container new-admin-form">
   <h2>Create New Organization</h2>
 
-  <%= form_for "" do |f| %>
+  <%= form_for @organization do |f| %>
     <div class="form-group">
       <%= f.label :name %>
       <%= f.text_field :name, class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :description %>
+      <%= f.text_field :description, class: "form-control" %>
     </div>
     <div class="form-group">
       <%= f.label :address %>
@@ -16,10 +20,31 @@
     </div>
     <div class="form-group">
       <%= f.label :phone_number %>
-      <%= telephone_field :phone_number, class: "form-control" %>
+      <%= telephone_field :phone, class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :activity_types %>
+      <%= f.collection_select :program_type_ids,
+         ProgramType.all,
+        :id,
+        :name,
+        {},
+        { multiple: true, class: 'chosen-select' }
+        %>
+    </div>
+    <div class="form-group">
+      <%= f.label :Age_group %>
+      <%= f.collection_select :age_group_ids,
+        AgeGroup.all,
+        :id,
+        :age,
+        {},
+        { multiple: true, class: 'chosen-select'}
+        %>
     </div>
 
-    <div class="form-group">
+    <!-- I'll work on the rest later -->
+    <!-- <div class="form-group">
       <%= f.label :age_group %>
       <%= radio_button_tag(:age, "0-5") %>
       <%= label_tag(:age, "0-5") %>
@@ -78,7 +103,7 @@
           ['random service', 4]
         ]))
       %>
-    </div>
+    </div> -->
 
     <br>
     <div class="form-group">

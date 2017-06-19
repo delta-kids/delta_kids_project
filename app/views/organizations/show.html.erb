@@ -1,6 +1,5 @@
-<div class="container">
-  <div class="jumbotron">
-    <h1>Organization show</h1>
+
+<div class="container new-admin-form2">
     <h4><%= @organization.name %></h4>
     <p><strong>description: </strong><%= @organization.description %></p>
     <p><strong>Address: </strong><%= @organization.address %></p>
@@ -9,5 +8,4 @@
     <% @organization.program_types.each do |activityType|  %>
     <p><strong>Activity type: </strong><%= activityType.name %></p>
     <% end %>
-  </div>
 </div>

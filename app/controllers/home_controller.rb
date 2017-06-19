@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
-  before_action :authenticate_user!, only: [:dashboard]
+  # before_action :authenticate_user!, only: [:dashboard]
 
   def index
   end
@@ -23,7 +23,7 @@ class HomeController < ApplicationController
 
   def surveys
   end
-  
+
 
   def map
 
