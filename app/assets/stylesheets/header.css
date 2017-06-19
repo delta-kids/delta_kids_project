@@ -1,12 +1,12 @@
 
-nav {
-  z-index: 1;
-  background-image: url("cloud1.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position:bottom;
-  top: 80px;
+.nav-font {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  display: inline;
+  color: #004C81;
 }
+
 .btn-group.open {
   position: static;
 }
