@@ -2,9 +2,8 @@
 
 <nav class="navbar">
 
-    <div class="container deltakids-logo">
+    <div class="container-fluid deltakids-logo">
       <div class="pull-right top-right-panel">
-
         <% if user_signed_in? %>
         Hello <%= current_user.first_name %>&nbsp
         <%= link_to 'Sign Out', signout_path, method: :delete, class: 'top-right-panel'  %>&nbsp
@@ -17,7 +16,9 @@
         <a href="<%= live_path %>" class="top-right-panel">Live 5-2-1-0</a>&nbsp
         <a href="<%= contact_path %>" class="top-right-panel">Contact Us</a>&nbsp
       </div>
-      <%= link_to image_tag("Delta-logo.png"), home_path %>
+      <div id="delta-image">
+        <%= link_to image_tag("Delta-logo.png"), home_path %>
+      </div>
     </div>
 
     <div class="container-fluid flex-spacebtwn">

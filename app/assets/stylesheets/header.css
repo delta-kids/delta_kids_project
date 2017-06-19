@@ -83,7 +83,7 @@ nav {
   display: inline;
 }
 .top-right-panel {
-
+  padding-right: 20px;
 }
 
 .dropdown-col {
@@ -109,6 +109,10 @@ display: inline-block;
 .deltakids-logo {
   position: relative;
   bottom: 60px;
+}
+
+#delta-image {
+  padding-left: 45px;
 }
 
 .flex-spacebtwn {
