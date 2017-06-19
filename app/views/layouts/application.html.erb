@@ -17,8 +17,7 @@
     <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Open+Sans:300,400,600" rel="stylesheet">
   </head>
   <body>
-
-
+    <div>
        <%= render 'layouts/header.html.erb' %>
 
       <% if flash[:notice] %>
@@ -28,7 +27,7 @@
       <% end %>
       <%= yield %>
       <%= render 'layouts/footer.html.erb' %>
-
+    </div>
 
   </body>
 </html>
