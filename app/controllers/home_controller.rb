@@ -15,4 +15,8 @@ class HomeController < ApplicationController
     @name = params(:name)
   end
 
+  def dashboard
+    render :layout => false   
+  end
+
 end
