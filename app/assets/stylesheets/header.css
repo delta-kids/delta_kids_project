@@ -130,12 +130,9 @@ display: inline-block;
 }
 
 .head-btn:focus {
-  color:#00A3DA !important;
+  background-color:#00A3DA !important;
 }
 
-.head-btn:focus,.head-btn:active {
-   outline: none !important;
-}
 
 .btn.dropdown-toggle {
   border:none;
