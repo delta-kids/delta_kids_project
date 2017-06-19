@@ -1,0 +1,47 @@
+.survey-background {
+  background-color: #D1F0F4;
+  padding-bottom:200px;
+}
+
+#grey-me {
+  color: grey;
+}
+
+#survey-results {
+  font-family: ‘Open Sans’, sans-serif;
+  margin: 10px;
+  padding:10px;
+  background-color: white;
+  color:#00A3DA;
+  width: 60%;
+  border-radius: 10px;
+}
+
+#survey-results  > a {
+
+}
+
+#latest-news {
+  font-family: ‘Open Sans’, sans-serif;
+  margin: 10px;
+  background-color: white;
+  border-radius: 10px;
+  padding:10px;
+  width:40%;
+}
+
+#fatherandkids {
+  display: block;
+  position: relative;
+  margin: auto;
+  width: 100%;
+  background-color: #D1F0F4;
+  padding-top:100px;
+  padding-bottom:25px;
+  margin-top: 100px;
+}
+
+.bree-font {
+  font-family: BreeSerif-Regular;
+  color:#004C81;
+}
