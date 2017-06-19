@@ -16,7 +16,6 @@ class Organization < ApplicationRecord
 
 
 
-
   # validates :description, {presence: {message: "must be provided"}}
   validates :name, presence: { message: 'must be provided'}, uniqueness: true
   #
