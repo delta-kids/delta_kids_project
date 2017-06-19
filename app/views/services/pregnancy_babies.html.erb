@@ -3,37 +3,13 @@
 
     <div class="col-md-3 hidden-xs hidden-sm sidebar">
       <ul class="nav nav-sidebar ">
-        <h2 class='age-group'><%= @age_group %> YEAR OLDS</h2>
+        <h2 class='age-group'>PREGNANCY & BABIES</h2>
         <p><a style="color:#00A3DA" href="#">Who to contact <br> for more information about...</a></p>
-        <% if @age_group === "0-5" %>
-        <li><a href="/programs/0_5_arts_culture">Arts & Culture</a></li>
-        <% else %>
-        <li><a href="/programs/6_12_arts_culture">Arts & Culture</a></li>
-        <% end %>
+        <li><a href="/services/pregnancy_babies/help">Help In a Crisis</a></li>
         <hr>
-        <% if @age_group === "0-5" %>
-        <li><a href="/programs/0_5_sports">Sports</a></li>
-        <% else %>
-        <li><a href="/programs/6_12_sports">Sports</a></li>
-        <% end %>
+        <li><a href="/services/pregnancy_babies/baby">Baby Healthy & Development</a></li>
         <hr>
-        <% if @age_group === "0-5" %>
-        <li><a href="/programs/0_5_education">Education</a></li>
-        <% else %>
-        <li><a href="/programs/6_12_education">Education</a></li>
-        <% end %>
-        <hr>
-        <% if @age_group === "0-5" %>
-        <li><a href="/programs/0_5_parent_child">Parent & Child</a></li>
-        <% else %>
-        <li><a href="/programs/6_12_community">Community Clubs</a></li>
-        <% end %>
-        <hr>
-        <% if @age_group === "0-5" %>
-        <li><a href="/programs/0_5_childcare">Childcare & Preschools</a></li>
-        <% else %>
-        <li><a href="/programs/6_12_childcare">Childcare & Preschools</a></li>
-        <% end %>
+        <li><a href="/services/pregnancy_babies/support">Support for Families</a></li>
         <hr>
       </ul>
     </div>
@@ -43,10 +19,11 @@
         <h3>ORGANIZATIONS</h3>
       </div>
       <div class="col-md-5">
-        <h3>PROGRAMS OFFERRED</h3>
+        <h3>SERVICES OFFERED</h3>
       </div>
 
-      <% @programs.each do |p| %>
+
+      <% @services&.each do |s| %>
       <div class="col-md-12">
         <hr class="divider">
       </div>
@@ -61,17 +38,18 @@
             </div>
 
             <div class="col-md-8 col-sm-7">
-              <p><%= p.organization.name %></p>
+              <p><%= s.organization.name %></p>
               <a href="#">Learn More</a>
             </div>
           </div>
 
           <div class="col-md-5">
-            <p><%= p.description %></p>
+            <p><%= s.description %></p>
           </div>
         </div>
       </div>
       <% end %>
+
 
     </div>
   </div>

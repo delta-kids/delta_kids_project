@@ -23,20 +23,6 @@ Rails.application.routes.draw do
 
   get 'topics/destroy'
 
-  get 'services/index'
-
-  get 'services/new'
-
-  get 'services/create'
-
-  get 'services/show'
-
-  get 'services/edit'
-
-  get 'services/update'
-
-  get 'services/destroy'
-
   get 'tags/index'
 
   get 'tags/new'
@@ -142,6 +128,14 @@ Rails.application.routes.draw do
   get '/contact', to: 'home#contact', as: 'contact'
 
   get '/programs/:id', to: 'programs#index'
+
+  get '/services/pregnancy_babies/:id', to: 'services#pregnancy_babies'
+
+  get '/services/children/:id', to: 'services#children'
+
+  get '/services', to: 'services#index'
+
+  get '/services/families/:id', to: 'services#families'
 
   get '/live', to: 'home#live', as: 'live'
 
