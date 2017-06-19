@@ -1,8 +1,9 @@
 class OrganizationsController < ApplicationController
-before_action :authenticate_user!
+# before_action :authenticate_user!
 # ONLY ADMIN
 
   def index
+    @organizations = Organization.all
   end
 
   def new
@@ -12,6 +13,7 @@ before_action :authenticate_user!
   end
 
   def show
+    @organization = Organization.find(params[:id])
   end
 
   def edit
