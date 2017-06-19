@@ -23,7 +23,7 @@ class HomeController < ApplicationController
 
   def surveys
   end
-  
+
 
   def map
 
