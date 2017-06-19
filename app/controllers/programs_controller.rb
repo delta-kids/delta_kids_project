@@ -61,5 +61,8 @@ class ProgramsController < ApplicationController
     def destroy
     end
 
+    def learn_more
+    end
+
 
 end

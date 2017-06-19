@@ -13,11 +13,18 @@ Rails.application.routes.draw do
   end
   resources :users, only: [:new, :create]
 
-  # HOME CONTROLLER ROUTER
+
   get '/', to: 'home#index', as: 'home'
   get '/about', to: 'home#about', as: 'about'
   get '/contact', to: 'home#contact', as: 'contact'
   get '/programs/:id', to: 'programs#index'
+
+
+  get '/services/pregnancy_babies/:id', to: 'services#pregnancy_babies'
+  get '/services/children/:id', to: 'services#children'
+  get '/services', to: 'services#index'
+  get '/services/families/:id', to: 'services#families'
+
   get '/live', to: 'home#live', as: 'live'
   get '/dashboard', to: 'home#dashboard', as: 'dashboard'
 
