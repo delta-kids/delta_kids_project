@@ -3,7 +3,7 @@
 /* Welcome to Delta Kid: */
 
 #welcome-line1 {
-    font-family: BreeSerif-Regular;
+    font-family: 'Bree Serif', serif;
     font-size: 55px;
     color: #004C81;
     letter-spacing: 0.5px;
@@ -12,7 +12,7 @@
     text-align: center;
 }
 #welcome-line2 {
-    font-family: BreeSerif-Regular;
+    font-family: 'Bree Serif', serif;
     font-size: 80px;
     color: #004C81;
     letter-spacing: 0.5px;
@@ -24,7 +24,7 @@
     /* We are your One-Stop: */
 
     padding-top: 20px;
-    font-family: OpenSans-Semibold;
+    font-family: 'Open Sans', sans-serif;
     font-size: 24px;
     color: #00A3DA;
     letter-spacing: 0;
@@ -34,7 +34,7 @@
 #welcome-line4 {
     /* We are your One-Stop: */
 
-    font-family: OpenSans-Semibold;
+    font-family: 'Open Sans', sans-serif;
     font-size: 24px;
     color: #00A3DA;
     letter-spacing: 0;
@@ -52,7 +52,7 @@
     text-decoration: none;
     text-transform: capitalize;
     text-align: center;
-    font-family: OpenSans-Semibold;
+    font-family: 'Open Sans', sans-serif;
     font-size: 20px;
     color: #00A3DA;
     letter-spacing: 0;
@@ -101,7 +101,7 @@
 #section3-line1,
 #section3-line2,
 #section3-line3 {
-    font-family: BreeSerif-Regular;
+    font-family: 'Bree Serif', serif;
     font-size: 36px;
     color: #004C81;
     letter-spacing: 0.3px;
@@ -114,7 +114,7 @@
     border-radius: 10px;
     height: 50px;
     width: 300px;
-    font-family: OpenSans-Semibold;
+    font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     color: #FFFFFF;
     letter-spacing: 0;
@@ -131,9 +131,15 @@
 
 /* ------------- Section4 elements ------------- */
 
+<<<<<<< HEAD
+.col-md-12 {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+=======
 
 .whats-new {
   width: 100%;
+>>>>>>> origin/integration
 }
 
 
@@ -146,7 +152,8 @@
 
 #whats-new {
   color: #00A3DA;
-  font-family: BreeSerif-Regular;
+  font-family: 'Bree Serif', serif;
+  margin-left: 8px;
 }
 
 .whats-new {
@@ -162,7 +169,7 @@
   float:right;
   margin-top: -54px;
   background-color: #00A3DA;
-  font-family: OpenSans-Semibold;
+  font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   border: none;
   border-radius: 10px;
@@ -177,19 +184,19 @@
 }
 
 .new-events {
-  font-family: OpenSans-Semibold;
+  font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   color: #00A3DA;
 }
 
 .posted-on {
-  font-family: OpenSans-Semibold;
+  font-family: 'Open Sans', sans-serif;
   font-size: 12px;
   color: #00A3DA;
 }
 
 .learn-more {
-  font-family: OpenSans-Semibold;
+  font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   color: #00A3DA;
   float: right;
@@ -202,7 +209,7 @@
   float: right;
 }
 
-/* secion elements */
+/* fifth section elements */
 
 .background-color {
  background-color: #D1F0F4;
