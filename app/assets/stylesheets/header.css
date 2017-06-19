@@ -150,7 +150,9 @@ li a {
 }
 
 .page-padding {
-  height: 150px;
+  position: relative;
+  top:5px;
+  height: 75px;
   width: 100%;
   background-color: #D1F0F4
 }
