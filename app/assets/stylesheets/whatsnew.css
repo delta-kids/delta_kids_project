@@ -1,3 +1,7 @@
+.filler {
+  height: 50px;
+  background: #D1F0F4;
+}
 
 .whats-new-container {
   margin-bottom: 25px;
@@ -11,6 +15,7 @@
   color: #004c81;
   font-family: 'Bree Serif', sans-serif;
   padding-left: 5px;
+  padding-top: 5px;
 }
 .whats-new-posted-text {
   color: #00A3DA;
@@ -62,7 +67,7 @@
 }
 .paper-clip-image {
   position: relative;
-  left: 420px;
+  left: 400px;
   bottom: 35px;
   z-index: 1;
 }
