@@ -1,25 +1,37 @@
+.filler {
+  height: 50px;
+  background: #D1F0F4;
+}
+
 .whats-new-container {
   margin-bottom: 25px;
   padding-bottom: 15px;
+}
+
+.whats-new-calendar {
+  padding-bottom: 30px;
 }
 .whats-new-text {
   color: #004c81;
   font-family: 'Bree Serif', sans-serif;
   padding-left: 5px;
+  padding-top: 5px;
 }
 .whats-new-posted-text {
   color: #00A3DA;
   padding-left: 5px;
+  padding-top: 15px;
 }
 .whats-new-learn {
   color: #00A3DA;
-  padding-top: 15px;
+  padding-top: 6px;
   padding-right: 5px;
   float: right;
 }
 .whats-new-button {
   background: #00A3DA;
   border-radius: 10px;
+  border-style: none;
   height: 50px;
   width: 200px;
   font-family: 'Open Sans';
@@ -37,6 +49,7 @@
   font-family: 'Open Sans';
   text-align: left;
   font-weight: bold;
+  margin-top: -40px;
 }
 .whats-new-featured-image {
   position: absolute;
@@ -54,7 +67,7 @@
 }
 .paper-clip-image {
   position: relative;
-  left: 420px;
+  left: 400px;
   bottom: 35px;
   z-index: 1;
 }

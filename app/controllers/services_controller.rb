@@ -2,16 +2,17 @@ class ServicesController < ApplicationController
 
   # ONLY ADMIN
 
-  def index
+
+  def pregnancy_babies
+    @services = Service.all
   end
 
-  def new
+  def children
+    @services = Service.all
   end
 
-  def create
-  end
-
-  def show
+  def families
+    @services = Service.all
   end
 
   def edit

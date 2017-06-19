@@ -14,8 +14,8 @@ footer ul li {
   right: 15px;
 }
 .footer {
+  min-width: 100%;
   min-height: 130px;
-  width: 100%;
   background-color: #004C81;
 }
 .footer-icon-container {

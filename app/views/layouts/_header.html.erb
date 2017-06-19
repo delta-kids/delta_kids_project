@@ -2,25 +2,26 @@
 <nav class="navbar">
 
   <div class="container deltakids-logo">
-    <div class="pull-right about-us">
+    <div class="pull-right top-right-panel">
 
       <% if user_signed_in? %>
-      Hello <%= current_user.first_name %>
-      <%= link_to 'Sign Out', signout_path, method: :delete, class: 'about-us'  %>
+      Hello <%= current_user.first_name %>&nbsp
+      <%= link_to 'Sign Out', signout_path, method: :delete, class: 'top-right-panel'  %>&nbsp
+      <%= link_to 'Dashboard', dashboard_path %>&nbsp
       <% else %>
-      <%= link_to 'Sign up', signup_path, class: 'about-us' %>
-      <%= link_to 'Log In', login_path, class: 'about-us' %>
+      <%= link_to 'Sign up', signup_path, class: 'top-right-panel' %>&nbsp
+      <%= link_to 'Log In', login_path, class: 'top-right-panel' %>&nbsp
       <% end %>
-      <a href="<%= about_path %>" class="about-us">About Us</a>
-      <a href="<%= live_path %>" class="about-us">Live 5-2-1-0</a>
-      <a href="<%= contact_path %>" class="about-us">Contact Us</a>
+      <a href="<%= about_path %>" class="top-right-panel">About Us</a>&nbsp
+      <a href="<%= live_path %>" class="top-right-panel">Live 5-2-1-0</a>&nbsp
+      <a href="<%= contact_path %>" class="top-right-panel">Contact Us</a>&nbsp
     </div>
     <%= link_to image_tag("Delta-logo.png"), home_path %>
   </div>
 
   <div class="container-fluid flex-spacebtwn">
 
-    <a href="#" class="header-titles"><p class="nav-font">ACTIVITIES CALENDAR</p></a>
+    <a href="/events" class="header-titles"><p class="nav-font">ACTIVITIES CALENDAR</p></a>
 
     <div class="btn-group" role="group">
       <button type="button" class="head-btn btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -29,11 +30,11 @@
       </button>
       <ul class="dropdown-menu header-menu bullet">
         <div class="dropdown-col learn-li">
-          <li><a href="#">Child Surveys</a></li>
+          <li><a href="/surveys">Child Surveys</a></li>
           <hr class="nav-hr">
-          <li><a href="#">Live 5-2-1-0</a></li>
+          <li><a href="/live">Live 5-2-1-0</a></li>
           <hr class="nav-hr">
-          <li><a href="#">Resources</a></li>
+          <li><a href="/resources">Resources</a></li>
         </div>
       </ul>
     </div>
@@ -46,7 +47,7 @@
       <ul class="dropdown-menu dropdown header-menu">
         <div class="dropdown-col">
           <ul class="programs-ul">
-            <li><a href="#"><strong class="dropdown-category">0-5 years</strong></a></li>
+            <li><a href="/programs/0_5"><strong class="dropdown-category">0-5 years</strong></a></li>
             <hr class="nav-hr">
             <div class="programs-li">
               <li><a href="#">Arts & Culture</a></li>
@@ -67,7 +68,7 @@
           </ul>
 
           <ul class="programs-ul">
-            <li><a href="#"><strong class="dropdown-category">6-12 years</strong></a></li>
+            <li><a href="/programs/6_12"><strong class="dropdown-category">6-12 years</strong></a></li>
             <hr class="nav-hr">
             <div class="programs-li">
               <li><a href="#">Arts & Culture</a></li>
@@ -84,7 +85,7 @@
               <hr class="nav-hr">
               <li><a href="#">Childcare</a></li>
               <hr class="nav-hr">
-            </div>
+          </div>
           </ul>
         </div>
       </ul>
@@ -95,10 +96,10 @@
         <p class="nav-font">SERVICES</p>
         <span class="caret"></span>
       </button>
-      <ul class="dropdown-menu bullet pull-right header-menu">
+      <ul class="dropdown-menu bullet pull-right header-menu ">
         <div class="dropdown-col">
           <ul class="services-ul">
-            <li><a href="#"><strong class="dropdown-category">Pregnancy & Babies</strong></a></li>
+            <li><a href="/services/pregnancy_babies"><strong class="dropdown-category">Pregnancy & Babies</strong></a></li>
             <li><a href="#">Help in a Crisis</a></li>
             <hr class="nav-hr">
             <li><a href="#">Baby Health & Development</a></li>
@@ -107,7 +108,7 @@
           </ul>
 
           <ul class="services-ul">
-            <li><a href="#"><strong class="dropdown-category">Children</strong></a></li>
+            <li><a href="/services/children"><strong class="dropdown-category">Children</strong></a></li>
             <hr class="nav-hr">
             <li><a href="#">Help in a Crisis</a></li>
             <hr class="nav-hr">
@@ -119,7 +120,7 @@
           </ul>
 
           <ul class="services-ul">
-            <li><a href="#"><strong class="dropdown-category">Families</strong></a></li>
+            <li><a href="/services/families"><strong class="dropdown-category">Families</strong></a></li>
             <hr class="nav-hr">
             <li><a href="#">Help in a Crisis</a></li>
             <hr class="nav-hr">
@@ -133,8 +134,9 @@
       </ul>
     </div>
 
-    <a href="#" class="header-titles"><p class="nav-font">WHAT'S NEW?</p></a>
-    <a href="#"><p class ="glyphicon glyphicon-search nav-font"></p></a>
+    <a href="<%= whatsnew_path %>" class="header-titles"><p class="nav-font">WHAT'S NEW?</p></a>
+    <a href="<%= map_path %>"><p class ="nav-font">MAP</p></a>
+    <a href="<%= search_path %>"><p class ="glyphicon glyphicon-search nav-font"></p></a>
 
   </div>
 </nav>
