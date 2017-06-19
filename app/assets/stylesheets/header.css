@@ -148,3 +148,9 @@ li a {
 .dropdown-category {
   color:#FFF200;
 }
+
+.page-padding {
+  height: 150px;
+  width: 100%;
+  background-color: #D1F0F4
+}
