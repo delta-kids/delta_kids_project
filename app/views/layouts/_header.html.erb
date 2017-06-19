@@ -1,52 +1,56 @@
 
 <nav class="navbar">
-  <div class="container deltakids-logo">
 
-  <div class="pull-right about-us">
-    <% if user_signed_in? %>
+  <div class="container deltakids-logo">
+    <div class="pull-right about-us">
+      <% if user_signed_in? %>
       Hello <%= current_user.first_name %>
       <%= link_to 'Sign Out', sessions_path, method: :delete, class: 'about-us'  %>
-    <% else %>
+      <% else %>
       <%= link_to 'Sign up', new_user_path, class: 'about-us' %>
-     |<%= link_to 'Log In', new_session_path, class: 'about-us' %>
-   <% end %>
-    <a href="#" class="about-us">About Us</a>
-    <a href="#" class="about-us">Live 5-2-1-0</a>
-    <a href="#" class="about-us">Contact Us</a>
+      <%= link_to 'Log In', new_session_path, class: 'about-us' %>
+      <% end %>
+      <a href="#" class="about-us">About Us</a>
+      <a href="#" class="about-us">Live 5-2-1-0</a>
+      <a href="#" class="about-us">Contact Us</a>
+    </div>
+    <%= image_tag ("Delta-logo.png") %>
   </div>
-
-
-
-   // <div class="pull-right about-us">
-   //   <a href="#" class="about-us">Login In</a>
-   //   <a href="#" class="about-us">Sign Up</a>
-   //   <a href="#" class="about-us">About Us</a>
-   //   <a href="#" class="about-us">Live 5-2-1-0</a>
-   //   <a href="#" class="about-us">Contact Us</a>
-   // </div>
-      <%# image_tag ("Delta-logo.png") %>
-   // </div>
-
 
   <div class="container-fluid flex-spacebtwn">
 
-      <a href="#"><p class="nav-font">ACTIVITIES CALENDAR</p></a>
+    <a href="#" class="header-titles"><p class="nav-font">ACTIVITIES CALENDAR</p></a>
 
-      <div class="btn-group" role="group">
-        <button type="button" class="head-btn btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <p class="nav-font">LEARNING</p>
-          <span class="caret"></span>
-        </button>
-          <ul class="dropdown-menu header-menu bullet">
-            <div class="dropdown-col">
-            <li><a href="#">Child Surveys</a></li>
+    <div class="btn-group" role="group">
+      <button type="button" class="head-btn btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <p class="nav-font">LEARNING</p>
+        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu header-menu bullet">
+        <div class="dropdown-col learn-li">
+          <li><a href="#">Child Surveys</a></li>
+          <hr class="nav-hr">
+          <li><a href="#">Live 5-2-1-0</a></li>
+          <hr class="nav-hr">
+          <li><a href="#">Resources</a></li>
+        </div>
+      </ul>
+    </div>
+
+    <div class="btn-group" role="group">
+      <button type="button" class="head-btn btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <p class="nav-font">PROGRAMS</p>
+        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu dropdown header-menu">
+        <div class="dropdown-col">
+          <ul class="programs-ul">
+            <li><a href="#"><strong class="dropdown-category">0-5 years</strong></a></li>
             <hr class="nav-hr">
-            <li><a href="#">Live 5-2-1-0</a></li>
-            <hr class="nav-hr">
+            <div class="programs-li">
             <li><a href="#">Resources</a></li>
           </div>
           </ul>
-
       </div>
 
 
@@ -88,6 +92,7 @@
               <li><a href="#"><strong class="dropdown-category">0-5 years</strong></a></li>
               <hr class="nav-hr">
               <div class="programs-li">
+
               <li><a href="#">Arts & Culture</a></li>
               <hr class="nav-hr">
               <li><a href="#">Sports</a></li>
@@ -103,12 +108,12 @@
               <li><a href="#">Childcare & Preschools</a></li>
               <hr class="nav-hr">
             </div>
-            </ul>
+          </ul>
 
-            <ul class="programs-ul">
-              <li><a href="#"><strong class="dropdown-category">6-12 years</strong></a></li>
-              <hr class="nav-hr">
-              <div class="programs-li">
+          <ul class="programs-ul">
+            <li><a href="#"><strong class="dropdown-category">6-12 years</strong></a></li>
+            <hr class="nav-hr">
+            <div class="programs-li">
               <li><a href="#">Arts & Culture</a></li>
               <hr class="nav-hr">
               <li><a href="#">Sports</a></li>
@@ -124,61 +129,56 @@
               <li><a href="#">Childcare</a></li>
               <hr class="nav-hr">
             </div>
-            </ul>
-          </div>
-        </ul>
-      </div>
-
-
-
-      <div class="btn-group" role="group">
-        <button type="button" class="head-btn btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <p class="nav-font">SERVICES</p>
-          <span class="caret"></span>
-        </button>
-        <ul class="dropdown-menu bullet pull-right header-menu">
-          <div class="dropdown-col">
-            <ul class="services-ul">
-              <li><a href="#"><strong class="dropdown-category">Pregnancy & Babies</strong></a></li>
-              <li><a href="#">Help in a Crisis</a></li>
-              <hr class="nav-hr">
-              <li><a href="#">Baby Health & Development</a></li>
-              <hr class="nav-hr">
-              <li><a href="#">Supports for Families</a></li>
-            </ul>
-
-            <ul class="services-ul">
-              <li><a href="#"><strong class="dropdown-category">Children</strong></a></li>
-              <hr class="nav-hr">
-              <li><a href="#">Help in a Crisis</a></li>
-              <hr class="nav-hr">
-              <li><a href="#">Child Advocacy</a></li>
-              <hr class="nav-hr">
-              <li><a href="#">Child Health & Development</a></li>
-              <hr class="nav-hr">
-              <li><a href="#">Supports for Children</a></li>
-            </ul>
-
-            <ul class="services-ul">
-              <li><a href="#"><strong class="dropdown-category">Families</strong></a></li>
-              <hr class="nav-hr">
-              <li><a href="#">Help in a Crisis</a></li>
-              <hr class="nav-hr">
-              <li><a href="#">Childcare & Preschool</a></li>
-              <hr class="nav-hr">
-              <li><a href="#">Assistance with fees</a></li>
-              <hr class="nav-hr">
-              <li><a href="#">Supports for Families</a></li>
-            </ul>
-          </div>
           </ul>
         </div>
+      </ul>
+    </div>
 
+    <div class="btn-group" role="group">
+      <button type="button" class="head-btn btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <p class="nav-font">SERVICES</p>
+        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu bullet pull-right header-menu">
+        <div class="dropdown-col">
+          <ul class="services-ul">
+            <li><a href="#"><strong class="dropdown-category">Pregnancy & Babies</strong></a></li>
+            <li><a href="#">Help in a Crisis</a></li>
+            <hr class="nav-hr">
+            <li><a href="#">Baby Health & Development</a></li>
+            <hr class="nav-hr">
+            <li><a href="#">Supports for Families</a></li>
+          </ul>
 
+          <ul class="services-ul">
+            <li><a href="#"><strong class="dropdown-category">Children</strong></a></li>
+            <hr class="nav-hr">
+            <li><a href="#">Help in a Crisis</a></li>
+            <hr class="nav-hr">
+            <li><a href="#">Child Advocacy</a></li>
+            <hr class="nav-hr">
+            <li><a href="#">Child Health & Development</a></li>
+            <hr class="nav-hr">
+            <li><a href="#">Supports for Children</a></li>
+          </ul>
 
-        <a href="#"><p class="nav-font">WHAT'S NEW?</p></a>
-        <a href="#"><p class ="glyphicon glyphicon-search nav-font"></p></a>
+          <ul class="services-ul">
+            <li><a href="#"><strong class="dropdown-category">Families</strong></a></li>
+            <hr class="nav-hr">
+            <li><a href="#">Help in a Crisis</a></li>
+            <hr class="nav-hr">
+            <li><a href="#">Childcare & Preschool</a></li>
+            <hr class="nav-hr">
+            <li><a href="#">Assistance with fees</a></li>
+            <hr class="nav-hr">
+            <li><a href="#">Supports for Families</a></li>
+          </ul>
+        </div>
+      </ul>
+    </div>
 
+    <a href="#" class="header-titles"><p class="nav-font">WHAT'S NEW?</p></a>
+    <a href="#"><p class ="glyphicon glyphicon-search nav-font"></p></a>
 
   </div>
 </nav>
