@@ -35,7 +35,10 @@ Rails.application.routes.draw do
   get '/live', to: 'home#live', as: 'live'
   get '/dashboard', to: 'home#dashboard', as: 'dashboard'
   get '/map', to: 'home#map', as: 'map'
+  
   get '/search', to: 'home#search', as: 'search'
+  post '/search', to: 'home#search'
+
   get '/whatsnew', to: 'home#whatsnew', as: 'whatsnew'
   get '/surveys', to: 'home#surveys', as: 'surveys'
 
