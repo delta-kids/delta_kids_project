@@ -6,8 +6,8 @@
 
       <% if user_signed_in? %>
       Hello <%= current_user.first_name %>
-      <%= link_to 'dashboard', dashboard_path %>
       <%= link_to 'Sign Out', signout_path, method: :delete, class: 'about-us'  %>
+      <%= link_to 'Dashboard', dashboard_path %>
       <% else %>
       <%= link_to 'Sign up', signup_path, class: 'about-us' %>
       <%= link_to 'Log In', login_path, class: 'about-us' %>
@@ -47,7 +47,7 @@
       <ul class="dropdown-menu dropdown header-menu">
         <div class="dropdown-col">
           <ul class="programs-ul">
-            <li><a href="#"><strong class="dropdown-category">0-5 years</strong></a></li>
+            <li><a href="/programs/0_5"><strong class="dropdown-category">0-5 years</strong></a></li>
             <hr class="nav-hr">
             <div class="programs-li">
               <li><a href="#">Arts & Culture</a></li>
@@ -68,7 +68,7 @@
           </ul>
 
           <ul class="programs-ul">
-            <li><a href="#"><strong class="dropdown-category">6-12 years</strong></a></li>
+            <li><a href="/programs/6_12"><strong class="dropdown-category">6-12 years</strong></a></li>
             <hr class="nav-hr">
             <div class="programs-li">
               <li><a href="#">Arts & Culture</a></li>
@@ -96,10 +96,10 @@
         <p class="nav-font">SERVICES</p>
         <span class="caret"></span>
       </button>
-      <ul class="dropdown-menu bullet pull-right header-menu">
+      <ul class="dropdown-menu bullet pull-right header-menu ">
         <div class="dropdown-col">
           <ul class="services-ul">
-            <li><a href="#"><strong class="dropdown-category">Pregnancy & Babies</strong></a></li>
+            <li><a href="/services/pregnancy_babies"><strong class="dropdown-category">Pregnancy & Babies</strong></a></li>
             <li><a href="#">Help in a Crisis</a></li>
             <hr class="nav-hr">
             <li><a href="#">Baby Health & Development</a></li>
@@ -108,7 +108,7 @@
           </ul>
 
           <ul class="services-ul">
-            <li><a href="#"><strong class="dropdown-category">Children</strong></a></li>
+            <li><a href="/services/children"><strong class="dropdown-category">Children</strong></a></li>
             <hr class="nav-hr">
             <li><a href="#">Help in a Crisis</a></li>
             <hr class="nav-hr">
@@ -120,7 +120,7 @@
           </ul>
 
           <ul class="services-ul">
-            <li><a href="#"><strong class="dropdown-category">Families</strong></a></li>
+            <li><a href="/services/families"><strong class="dropdown-category">Families</strong></a></li>
             <hr class="nav-hr">
             <li><a href="#">Help in a Crisis</a></li>
             <hr class="nav-hr">
@@ -133,8 +133,8 @@
         </div>
       </ul>
     </div>
-
     <a href="#" class="header-titles"><p class="nav-font">WHAT'S NEW?</p></a>
+    <a href="#" class="header-titles"><p class ="nav-font">MAP</p></a>
     <a href="#"><p class ="glyphicon glyphicon-search nav-font"></p></a>
 
   </div>

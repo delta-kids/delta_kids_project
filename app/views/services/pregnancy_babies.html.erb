@@ -3,13 +3,14 @@
 
     <div class="col-md-3 hidden-xs hidden-sm sidebar">
       <ul class="nav nav-sidebar ">
-        <h2 class='age-group'>PREGNANCY & BABIES</h2>
+        <%= image_tag('paperclip.png', class: 'clippy') %>
+        <h2 class='age-group'>Pregnancy & Babies</h2>
         <p><a style="color:#00A3DA" href="#">Who to contact <br> for more information about...</a></p>
-        <li><a href="/services/pregnancy_babies/help">Help In a Crisis</a></li>
+        <li><a href="#">Help in a Crisis</a></li>
         <hr>
-        <li><a href="/services/pregnancy_babies/baby">Baby Healthy & Development</a></li>
+        <li><a href="#">Baby Health & Development</a></li>
         <hr>
-        <li><a href="/services/pregnancy_babies/support">Support for Families</a></li>
+        <li><a href="#">Support for Families</a></li>
         <hr>
       </ul>
     </div>
@@ -19,9 +20,8 @@
         <h3>ORGANIZATIONS</h3>
       </div>
       <div class="col-md-5">
-        <h3>SERVICES OFFERED</h3>
+        <h3>PROGRAMS OFFERED</h3>
       </div>
-
 
       <% @services&.each do |s| %>
       <div class="col-md-12">
@@ -50,23 +50,24 @@
       </div>
       <% end %>
 
-
     </div>
   </div>
 
 </div>
 
-<div class="col-md-12 program-details-link">
-  <h4>LOOKING FOR PROGRAM DETAILS?</h4>
-  <div id="organization-button">
-    Delta Parks & Rec Website
+<div class="row">
+
+  <div class="col-md-12 program-details-link">
+    <h4>LOOKING FOR SERVICE DETAILS?</h4>
+    <div id="organization-button">
+      Delta Parks & Rec Website
+    </div>
   </div>
+
 </div>
 
-
 <!-- Fourth section div -->
-
-<div class="col-md-12 outer-blue-container">
+<div class="outer-blue-container">
 <div id="whats-new-board" class="container">
 
   <div class="row">
@@ -121,18 +122,16 @@
   </div>
 </div>
 
-
 <!-- Rainbow Footer-->
 
-  <div class="col-md-12 relative-enabler">
-    <div class="container-fluid happy-rainbow">
-      <div class="row">
-        <div class="col-md-12">
+<div class="relative-enabler">
+  <div class="container-fluid happy-rainbow">
+    <div class="row">
+      <div class="col-md-12">
 
-          <%= image_tag("rainbow-footer-group.svg", class:"center-block") %>
+        <%= image_tag("rainbow-footer-group.svg", class:"center-block") %>
 
-        </div>
       </div>
-
-    </div>
-  </div>
+     </div>
+   </div>
+</div>

@@ -17,16 +17,20 @@ Rails.application.routes.draw do
   get '/', to: 'home#index', as: 'home'
   get '/about', to: 'home#about', as: 'about'
   get '/contact', to: 'home#contact', as: 'contact'
-  get '/programs/:id', to: 'programs#index'
 
+  get '/programs/0_5', to: 'programs#index0_5'
 
-  get '/services/pregnancy_babies/:id', to: 'services#pregnancy_babies'
-  get '/services/children/:id', to: 'services#children'
-  get '/services', to: 'services#index'
-  get '/services/families/:id', to: 'services#families'
+  get '/programs/6_12', to: 'programs#index6_12'
+
+  get '/services/pregnancy_babies', to: 'services#pregnancy_babies'
+
+  get '/services/families', to: 'services#families'
+
+  get '/services/children', to: 'services#children'
 
   get '/live', to: 'home#live', as: 'live'
   get '/dashboard', to: 'home#dashboard', as: 'dashboard'
+  get '/map', to: 'home#map', as: 'map'
 
 
   post '/contact_submit', to: 'home#submit', as: 'contacted'

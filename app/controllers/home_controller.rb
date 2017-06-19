@@ -1,4 +1,6 @@
 class HomeController < ApplicationController
+  before_action :authenticate_user!, only: [:dashboard]
+
   def index
   end
 
@@ -16,7 +18,11 @@ class HomeController < ApplicationController
   end
 
   def dashboard
-    # render :layout => false   
+    # render :layout => false
+  end
+
+  def map
+
   end
 
 end
