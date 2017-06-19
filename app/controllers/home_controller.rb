@@ -21,6 +21,10 @@ class HomeController < ApplicationController
     # render :layout => false
   end
 
+  def surveys
+  end
+  
+
   def map
 
   end
@@ -30,7 +34,7 @@ class HomeController < ApplicationController
   end
 
   def whatsnew
-    
+
   end
 
 end
