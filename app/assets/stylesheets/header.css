@@ -25,6 +25,7 @@ nav {
 
 .header-titles {
   text-decoration: none !important;
+
 }
 
 .learn-li > li > a {
@@ -69,13 +70,12 @@ nav {
 }
 
 .nav-font {
-
   font-family: ‘Open Sans’, sans-serif;
-  font-size: 16px;
+  font-size: 20px;
   display: inline;
 }
-.about-us {
-  padding: 10px;
+.top-right-panel {
+
 }
 
 .dropdown-col {
@@ -99,6 +99,8 @@ display: inline-block;
 }
 
 .deltakids-logo {
+  padding-left: 40px !important;
+  padding-right: 35px !important;
   position: relative;
   bottom: 60px;
 }
