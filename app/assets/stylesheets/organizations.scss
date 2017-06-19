@@ -1,8 +1,16 @@
 // Place all the styles related to the organizations controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-#new-admin-form{
+.new-admin-form{
   padding:20px;
-  width: 100%;
+  width: 100vw !important;
   background-color: #D1F0F4;
+  text-align: center;
+}
+
+.new-admin-form2 {
+  padding:20px;
+  width: 100vw !important;
+  background-color: #D1F0F4;
+  text-align: center;
 }

@@ -1,144 +1,146 @@
 
+
 <nav class="navbar">
 
-  <div class="container deltakids-logo">
-    <div class="pull-right top-right-panel">
+    <div class="container deltakids-logo">
+      <div class="pull-right top-right-panel">
 
-      <% if user_signed_in? %>
-      Hello <%= current_user.first_name %>&nbsp
-      <%= link_to 'Sign Out', signout_path, method: :delete, class: 'top-right-panel'  %>&nbsp
-      <%= link_to 'Dashboard', dashboard_path %>&nbsp
-      <% else %>
-      <%= link_to 'Sign up', signup_path, class: 'top-right-panel' %>&nbsp
-      <%= link_to 'Log In', login_path, class: 'top-right-panel' %>&nbsp
-      <% end %>
-      <a href="<%= about_path %>" class="top-right-panel">About Us</a>&nbsp
-      <a href="<%= live_path %>" class="top-right-panel">Live 5-2-1-0</a>&nbsp
-      <a href="<%= contact_path %>" class="top-right-panel">Contact Us</a>&nbsp
-    </div>
-    <%= link_to image_tag("Delta-logo.png"), home_path %>
-  </div>
-
-  <div class="container-fluid flex-spacebtwn">
-
-    <a href="/events" class="header-titles"><p class="nav-font">ACTIVITIES CALENDAR</p></a>
-
-    <div class="btn-group" role="group">
-      <button type="button" class="head-btn btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <p class="nav-font">LEARNING</p>
-        <span class="caret"></span>
-      </button>
-      <ul class="dropdown-menu header-menu bullet">
-        <div class="dropdown-col learn-li">
-          <li><a href="/surveys">Child Surveys</a></li>
-          <hr class="nav-hr">
-          <li><a href="/live">Live 5-2-1-0</a></li>
-          <hr class="nav-hr">
-          <li><a href="/resources">Resources</a></li>
-        </div>
-      </ul>
+        <% if user_signed_in? %>
+        Hello <%= current_user.first_name %>&nbsp
+        <%= link_to 'Sign Out', signout_path, method: :delete, class: 'top-right-panel'  %>&nbsp
+        <%= link_to 'Dashboard', dashboard_path %>&nbsp
+        <% else %>
+        <%= link_to 'Sign up', signup_path, class: 'top-right-panel' %>&nbsp
+        <%= link_to 'Log In', login_path, class: 'top-right-panel' %>&nbsp
+        <% end %>
+        <a href="<%= about_path %>" class="top-right-panel">About Us</a>&nbsp
+        <a href="<%= live_path %>" class="top-right-panel">Live 5-2-1-0</a>&nbsp
+        <a href="<%= contact_path %>" class="top-right-panel">Contact Us</a>&nbsp
+      </div>
+      <%= link_to image_tag("Delta-logo.png"), home_path %>
     </div>
 
-    <div class="btn-group" role="group">
-      <button type="button" class="head-btn btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <p class="nav-font">PROGRAMS</p>
-        <span class="caret"></span>
-      </button>
-      <ul class="dropdown-menu dropdown header-menu">
-        <div class="dropdown-col">
-          <ul class="programs-ul">
-            <li><a href="/programs/0_5"><strong class="dropdown-category">0-5 years</strong></a></li>
-            <hr class="nav-hr">
-            <div class="programs-li">
-              <li><a href="#">Arts & Culture</a></li>
-              <hr class="nav-hr">
-              <li><a href="#">Sports</a></li>
-              <hr class="nav-hr">
-              <li><a href="#">Education</a></li>
-              <hr class="nav-hr">
-            </div>
-            <div class="programs-li">
-              <li><a href="#">Education</a></li>
-              <hr class="nav-hr">
-              <li><a href="#">Parent & Child</a></li>
-              <hr class="nav-hr">
-              <li><a href="#">Childcare & Preschools</a></li>
-              <hr class="nav-hr">
-            </div>
-          </ul>
+    <div class="container-fluid flex-spacebtwn">
 
-          <ul class="programs-ul">
-            <li><a href="/programs/6_12"><strong class="dropdown-category">6-12 years</strong></a></li>
+      <a href="/events" class="header-titles"><p class="nav-font">ACTIVITIES CALENDAR</p></a>
+
+      <div class="btn-group" role="group">
+        <button type="button" class="head-btn btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <p class="nav-font">LEARNING</p>
+          <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu header-menu bullet">
+          <div class="dropdown-col learn-li">
+            <li><a href="#">Child Surveys</a></li>
             <hr class="nav-hr">
-            <div class="programs-li">
-              <li><a href="#">Arts & Culture</a></li>
-              <hr class="nav-hr">
-              <li><a href="#">Sports</a></li>
-              <hr class="nav-hr">
-              <li><a href="#">Education</a></li>
-              <hr class="nav-hr">
-            </div>
-            <div class="programs-li">
-              <li><a href="#">Education</a></li>
-              <hr class="nav-hr">
-              <li><a href="#">Community Clubs</a></li>
-              <hr class="nav-hr">
-              <li><a href="#">Childcare</a></li>
-              <hr class="nav-hr">
+            <li><a href="#">Live 5-2-1-0</a></li>
+            <hr class="nav-hr">
+            <li><a href="#">Resources</a></li>
           </div>
-          </ul>
-        </div>
-      </ul>
+        </ul>
+      </div>
+
+      <div class="btn-group" role="group">
+        <button type="button" class="head-btn btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <p class="nav-font">PROGRAMS</p>
+          <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu dropdown header-menu">
+          <div class="dropdown-col">
+            <ul class="programs-ul">
+              <li><a href="/programs/0_5"><strong class="dropdown-category">0-5 years</strong></a></li>
+              <hr class="nav-hr">
+              <div class="programs-li">
+                <li><a href="#">Arts & Culture</a></li>
+                <hr class="nav-hr">
+                <li><a href="#">Sports</a></li>
+                <hr class="nav-hr">
+                <li><a href="#">Education</a></li>
+                <hr class="nav-hr">
+              </div>
+              <div class="programs-li">
+                <li><a href="#">Education</a></li>
+                <hr class="nav-hr">
+                <li><a href="#">Parent & Child</a></li>
+                <hr class="nav-hr">
+                <li><a href="#">Childcare & Preschools</a></li>
+                <hr class="nav-hr">
+              </div>
+            </ul>
+
+            <ul class="programs-ul">
+              <li><a href="/programs/6_12"><strong class="dropdown-category">6-12 years</strong></a></li>
+              <hr class="nav-hr">
+              <div class="programs-li">
+                <li><a href="#">Arts & Culture</a></li>
+                <hr class="nav-hr">
+                <li><a href="#">Sports</a></li>
+                <hr class="nav-hr">
+                <li><a href="#">Education</a></li>
+                <hr class="nav-hr">
+              </div>
+              <div class="programs-li">
+                <li><a href="#">Education</a></li>
+                <hr class="nav-hr">
+                <li><a href="#">Community Clubs</a></li>
+                <hr class="nav-hr">
+                <li><a href="#">Childcare</a></li>
+                <hr class="nav-hr">
+              </div>
+            </ul>
+          </div>
+        </ul>
+      </div>
+
+      <div class="btn-group" role="group">
+        <button type="button" class="head-btn btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <p class="nav-font">SERVICES</p>
+          <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu bullet pull-right header-menu ">
+          <div class="dropdown-col">
+            <ul class="services-ul">
+              <li><a href="/services/pregnancy_babies"><strong class="dropdown-category">Pregnancy & Babies</strong></a></li>
+              <li><a href="#">Help in a Crisis</a></li>
+              <hr class="nav-hr">
+              <li><a href="#">Baby Health & Development</a></li>
+              <hr class="nav-hr">
+              <li><a href="#">Supports for Families</a></li>
+            </ul>
+
+            <ul class="services-ul">
+              <li><a href="/services/children"><strong class="dropdown-category">Children</strong></a></li>
+              <hr class="nav-hr">
+              <li><a href="#">Help in a Crisis</a></li>
+              <hr class="nav-hr">
+              <li><a href="#">Child Advocacy</a></li>
+              <hr class="nav-hr">
+              <li><a href="#">Child Health & Development</a></li>
+              <hr class="nav-hr">
+              <li><a href="#">Supports for Children</a></li>
+            </ul>
+
+            <ul class="services-ul">
+              <li><a href="/services/families"><strong class="dropdown-category">Families</strong></a></li>
+              <hr class="nav-hr">
+              <li><a href="#">Help in a Crisis</a></li>
+              <hr class="nav-hr">
+              <li><a href="#">Childcare & Preschool</a></li>
+              <hr class="nav-hr">
+              <li><a href="#">Assistance with fees</a></li>
+              <hr class="nav-hr">
+              <li><a href="#">Supports for Families</a></li>
+            </ul>
+          </div>
+        </ul>
+      </div>
+
+      <a href="<%= whatsnew_path %>" class="header-titles"><p class="nav-font">WHAT'S NEW?</p></a>
+      <a href="<%= map_path %>"><p class ="nav-font">MAP</p></a>
+      <a href="<%= search_path %>"><p class ="glyphicon glyphicon-search nav-font"></p></a>
+
     </div>
-
-    <div class="btn-group" role="group">
-      <button type="button" class="head-btn btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <p class="nav-font">SERVICES</p>
-        <span class="caret"></span>
-      </button>
-      <ul class="dropdown-menu bullet pull-right header-menu ">
-        <div class="dropdown-col">
-          <ul class="services-ul">
-            <li><a href="/services/pregnancy_babies"><strong class="dropdown-category">Pregnancy & Babies</strong></a></li>
-            <li><a href="#">Help in a Crisis</a></li>
-            <hr class="nav-hr">
-            <li><a href="#">Baby Health & Development</a></li>
-            <hr class="nav-hr">
-            <li><a href="#">Supports for Families</a></li>
-          </ul>
-
-          <ul class="services-ul">
-            <li><a href="/services/children"><strong class="dropdown-category">Children</strong></a></li>
-            <hr class="nav-hr">
-            <li><a href="#">Help in a Crisis</a></li>
-            <hr class="nav-hr">
-            <li><a href="#">Child Advocacy</a></li>
-            <hr class="nav-hr">
-            <li><a href="#">Child Health & Development</a></li>
-            <hr class="nav-hr">
-            <li><a href="#">Supports for Children</a></li>
-          </ul>
-
-          <ul class="services-ul">
-            <li><a href="/services/families"><strong class="dropdown-category">Families</strong></a></li>
-            <hr class="nav-hr">
-            <li><a href="#">Help in a Crisis</a></li>
-            <hr class="nav-hr">
-            <li><a href="#">Childcare & Preschool</a></li>
-            <hr class="nav-hr">
-            <li><a href="#">Assistance with fees</a></li>
-            <hr class="nav-hr">
-            <li><a href="#">Supports for Families</a></li>
-          </ul>
-        </div>
-      </ul>
-    </div>
-
-    <a href="<%= whatsnew_path %>" class="header-titles"><p class="nav-font">WHAT'S NEW?</p></a>
-    <a href="<%= map_path %>"><p class ="nav-font">MAP</p></a>
-    <a href="<%= search_path %>"><p class ="glyphicon glyphicon-search nav-font"></p></a>
-
-  </div>
-</nav>
+  </nav>
+</div>
 
 <div class="page-padding"></div>
