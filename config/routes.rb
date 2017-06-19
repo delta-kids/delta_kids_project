@@ -27,6 +27,7 @@ Rails.application.routes.draw do
 
   get '/live', to: 'home#live', as: 'live'
   get '/dashboard', to: 'home#dashboard', as: 'dashboard'
+  get '/map', to: 'home#map', as: 'map'
 
 
   post '/contact_submit', to: 'home#submit', as: 'contacted'
