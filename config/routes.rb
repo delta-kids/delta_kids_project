@@ -24,6 +24,11 @@ Rails.application.routes.draw do
 
   get '/services/pregnancy_babies', to: 'services#pregnancy_babies'
 
+  get '/services/families', to: 'services#families'
+
+  get '/services/children', to: 'services#children'
+
+
   get '/services/children', to: 'services#children'
 
   get '/services/families', to: 'services#families'
