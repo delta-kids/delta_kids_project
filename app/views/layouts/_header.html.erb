@@ -6,6 +6,7 @@
 
       <% if user_signed_in? %>
       Hello <%= current_user.first_name %>
+      <%= link_to 'dashboard', dashboard_path %>
       <%= link_to 'Sign Out', signout_path, method: :delete, class: 'about-us'  %>
       <% else %>
       <%= link_to 'Sign up', signup_path, class: 'about-us' %>
@@ -20,7 +21,7 @@
 
   <div class="container-fluid flex-spacebtwn">
 
-    <a href="#" class="header-titles"><p class="nav-font">ACTIVITIES CALENDAR</p></a>
+    <a href="/events" class="header-titles"><p class="nav-font">ACTIVITIES CALENDAR</p></a>
 
     <div class="btn-group" role="group">
       <button type="button" class="head-btn btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -84,6 +85,7 @@
               <hr class="nav-hr">
               <li><a href="#">Childcare</a></li>
               <hr class="nav-hr">
+
             </div>
             </ul>
           </div>
@@ -131,6 +133,7 @@
               <hr class="nav-hr">
               <li><a href="#">Supports for Families</a></li>
             </ul>
+
           </div>
           </ul>
         </div>
