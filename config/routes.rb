@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'signup', to: 'users#new', as: 'signup'
+  get 'login', to: 'sessions#new', as: 'login'
+  delete 'signout', to: 'sessions#destroy', as: 'signout'
+
   # User routes
   namespace :admin do
     resources :users, only: :index
@@ -8,6 +12,7 @@ Rails.application.routes.draw do
     delete :destroy, on: :collection
   end
   resources :users, only: [:new, :create]
+
 
   get 'topics/index'
 
@@ -121,6 +126,7 @@ Rails.application.routes.draw do
 
   get 'category/destroy'
 
+
   get '/', to: 'home#index', as: 'home'
 
   get '/about', to: 'home#about', as: 'about'
@@ -138,6 +144,10 @@ Rails.application.routes.draw do
   get '/services/families/:id', to: 'services#families'
 
   get '/live', to: 'home#live', as: 'live'
+
+
+  post '/contact_submit', to: 'home#submit', as: 'contacted'
+
 
   resources :resources
 

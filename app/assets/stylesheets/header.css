@@ -5,7 +5,56 @@ nav {
   background-size: cover;
   background-repeat: no-repeat;
   background-position:bottom;
+  top: 80px;
 }
+.btn-group.open {
+  position: static;
+}
+
+.flex-spacebtwn > p > a {
+  text-decoration: none;
+}
+
+.programs-ul > li > a {
+  text-decoration: none;
+}
+
+.programs-ul > li > a {
+  text-decoration: none;
+}
+
+.header-titles {
+  text-decoration: none !important;
+}
+
+.learn-li > li > a {
+  text-decoration: none;
+}
+
+.learn-li > li > a:hover {
+  color:#00A3DA !important;
+}
+
+.services-ul > li > a {
+  text-decoration: none;
+}
+
+.programs-li > li > a {
+  text-decoration: none;
+}
+
+.programs-li > li > a {
+  text-decoration: none;
+}
+
+.programs-li > li > a:hover {
+ color:#00A3DA !important;
+}
+
+.services-ul > li > a:hover {
+ color:#00A3DA !important;
+}
+
 .btn-group.open {
   position: static;
 }
@@ -24,9 +73,6 @@ nav {
   font-size: 16px;
   display: inline;
 }
-
-
-
 .about-us {
   padding: 10px;
 }
@@ -51,30 +97,31 @@ width: 45%;
 display: inline-block;
 }
 
-
+.deltakids-logo {
+  position: relative;
+  bottom: 60px;
+}
 
 .flex-spacebtwn {
+  position: relative;
+  bottom: 50px;
   padding-top: 10px;
-  padding-bottom: 75px;
+  padding-bottom: 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 .head-btn {
     background-color: white !important;
 }
 
 .head-btn:focus {
-  color:#D1F0F4 !important;
+  color:#00A3DA !important;
 }
 
 .head-btn:focus,.head-btn:active {
    outline: none !important;
-}
-
-.head-
-.deltakids-logo {
-  padding: 50px 0 0 50px;
 }
 
 .btn.dropdown-toggle {
@@ -100,4 +147,12 @@ li a {
 
 .dropdown-category {
   color:#FFF200;
+}
+
+.page-padding {
+  position: relative;
+  top:5px;
+  height: 75px;
+  width: 100%;
+  background-color: #D1F0F4
 }

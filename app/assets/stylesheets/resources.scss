@@ -1,3 +1,262 @@
 // Place all the styles related to the resources controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.wholePage{
+  background-color: #d1f0f4;
+}
+.event-row{
+  padding: 80px;
+}
+#event-subsection1{
+  background-color: #fff;
+  border-radius: 10px;
+}
+#event-subsection1 img {
+margin: 0;
+}
+.icon-img{
+  height: 35px;
+  width: 35px;
+}
+#filter-header{
+  display: flex;
+  flex-direction: row;
+  padding-top: 10px;
+  justify-content: space-between;
+}
+#filterText {
+  font-family: BreeSerif-Regular;
+  font-size: 30px;
+  color: #004C81;
+
+}
+.filter-header-img{
+  width: 100%;
+  margin: 0;
+  height: auto;
+  padding-top: 15px;
+}
+.filter-header-chevron{
+  width: 18px;
+  height: 9px;
+  display: inline;
+}
+.filter-header2{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.filterCard-header1{
+  /* For: */
+  font-family: OpenSans-Semibold;
+  font-size: 14px;
+  color: #00A3DA;
+
+}
+.filterCard-header2{
+  /* All locations: */
+  font-family: OpenSans-Bold;
+  font-size: 16px;
+  color: #000000;
+
+}
+.filter-header-chevron{
+}
+.filterCard-list {
+  font-family: OpenSans;
+  font-size: 16px;
+  color: #000000;
+
+}
+.event-subsection2-image{
+  width: 100%;
+  height: auto;
+}
+.event-subsection2-card-resource{
+    margin-right: 0px;
+/* 	    	margin-left: 20px;	 */
+}
+
+.event-row .event-subsection2{
+  padding-left: 40px;
+}
+.event-subsection2-details{
+  padding: 10px;
+  // background-color: #fff;
+}
+.event-subsection2-text{
+  // background-color: #fff;
+}
+.event-subsection2-text-resource{
+  background: #fff;
+  border-radius: 10px;
+  margin-bottom: 35px;
+}
+.event-subsection2-header{
+  font-family: BreeSerif-Regular;
+  font-size: 36px;
+  color: #00A3DA;
+  letter-spacing: 0.5px;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.event-header{
+  /* Featured: */
+  font-family: BreeSerif-Regular;
+  font-size: 30px;
+  color: #004C81;
+
+  padding-top: 10px;
+}
+.event-subsection2-header2{
+    /* Family Empowerment P: */
+  font-family: OpenSans-Bold;
+  font-size: 20px;
+  color: #004C81;
+
+}
+
+.event-subsection2-card{
+  background-color: #fff;
+}
+.event-info-txt-bold{
+  /* Event - 04/01/17: */
+  font-family: OpenSans-Extrabold;
+  font-size: 14px;
+  color: #00A3DA;
+
+  float: left;
+  padding-left: 5px;
+}
+.resource-info-txt{
+  font-family: OpenSans-Semibold;
+  font-size: 16px;
+  color: #00A3DA;
+
+
+  float: left;
+  padding-left: 5px;
+}
+.event-info-icon{
+  width: 20px;
+  height: 20px;
+  float: left;
+}
+.event-info-icon2{
+  display: inline;
+  width: 20px;
+  height: 20px;
+  float: left;
+}
+.event-info1{
+  padding-left: 10px;
+  margin-left: 20px;
+}
+.event-info2{
+  display: flex;
+  flex-direction: row;
+}
+.filterCard-line{
+  justify-content: flex-end;
+}
+.event-info{
+  display: flex;
+  justify-content: space-between;
+}
+.event-paragraph-resource{
+  font-family: OpenSans;
+  font-size: 16px;
+  color: #000000;
+  padding-bottom: 10px;
+}
+.event-info-bold2{
+  font-family: OpenSans-Bold;
+  font-size: 16px;
+  color: #00A3DA;
+}
+
+.tags-txt{
+/* Tags:: */
+font-family: OpenSans-Bold;
+font-size: 14px;
+color: #6B6B6B;
+
+}
+
+.report-button {
+/* Rectangle 4: */
+background: #FFFFFF;
+border: 1px solid #6B6B6B;
+border-radius: 100px;
+width: 70px;
+height: 30px;
+line-height: 30px;
+margin-left: 10px;
+
+text-align: center;
+}
+.div-tags{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items:center;
+  // padding-bottom:5px;
+}
+
+.phealth-button{
+  background: #FFFFFF;
+  border: 1px solid #6B6B6B;
+  border-radius: 100px;
+  width: 140px;
+  height: 30px;
+  line-height: 30px;
+  margin-left: 10px;
+  text-align: center;
+}
+
+.tags-txt{
+    align-self: center;
+}
+.event-subsection2-line{
+  background-color: #63c9e9; height: 1px; border: 0;
+
+}
+.share-view{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items:center;
+}
+#button-seemore{
+  background: #00A3DA;
+  border-radius: 10px;
+  height: 50px;
+  width: 150px;
+  font-family: OpenSans-Semibold;
+  font-size: 16px;
+  color: #FFFFFF;
+  letter-spacing: 0;
+  line-height: 50px;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 30px;
+}
+
+#button-add-resource{
+  background: #00A3DA;
+  border-radius: 10px;
+  height: 50px;
+  width: 90%;
+  font-family: OpenSans-Semibold;
+  font-size: 16px;
+  color: #FFFFFF;
+  letter-spacing: 0;
+  line-height: 50px;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 0px;
+  padding-bottom: 10px;
+}
