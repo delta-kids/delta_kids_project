@@ -1,55 +1,73 @@
-<!-- First section div -->
-<div class="section1 section1-container">
-    <div class="container-fluid clouds-background">
-        <div class="row section1-text">
-            <div class="col-md-1"></div>
-            <div class="col-md-5">
-                <p id='welcome-line1'>Welcome to<p>
-                <p id='welcome-line2'>Delta Kids<p>
-            </div>
-            <div class="col-md-5 subsection">
-                <p id='welcome-line3'>We are your One-Stop-Info-Shop</p>
-                <p id='welcome-line4'> for children 0-12 years in Delta, BC.<p>
-                <div id='button-learnmore'>
-                <a href="<%= about_path %>" class="about-us">LEARN MORE</a></div>
-            </div>
+<div class="row">
+  <div class="col-md-12 content">
 
-            <div class="col-md-1"></div>
-        </div>
+    <div class="col-md-3 hidden-xs hidden-sm sidebar">
+      <ul class="nav nav-sidebar ">
+        <%= image_tag('paperclip.png', class: 'clippy') %>
+        <h2 class='age-group'><%= @age_group %> YEAR OLDS</h2>
+        <p><a style="color:#00A3DA" href="#">Who to contact <br> for more information about...</a></p>
+        <li><a href="#">Arts & Culture</a></li>
+        <hr>
+        <li><a href="#">Sports</a></li>
+        <hr>
+        <li><a href="#">Education</a></li>
+        <hr>
+        <li><a href="#">Community Clubs</a></li>
+        <hr>
+        <li><a href="#">Childcare & Preschools</a></li>
+        <hr>
+      </ul>
     </div>
-</div>
 
+    <div class="col-md-9 organization-content">
+      <div class="col-md-6">
+        <h3>ORGANIZATIONS</h3>
+      </div>
+      <div class="col-md-5">
+        <h3>PROGRAMS OFFERED</h3>
+      </div>
 
-<!-- Second section div -->
-<div class="section2">
-  <div class="container-fluid section2-container">
-    <div class="row">
+      <% @programs&.each do |p| %>
       <div class="col-md-12">
-          <%= image_tag  "kids.png", class: "kids-image" %>
+        <hr class="divider">
+      </div>
+
+      <div class="col-md-12 ">
+        <div class="organization-details">
+
+
+          <div class="organization-info col-md-6">
+            <div class="organization-logo">
+              <%= image_tag "program-logo#{rand(1..2)}.png"  %>
+            </div>
+
+            <div class="col-md-8 col-sm-7">
+              <p><%= p.organization.name %></p>
+              <a href="#">Learn More</a>
+            </div>
+          </div>
+
+          <div class="col-md-5">
+            <p><%= p.description %></p>
+          </div>
+        </div>
+      </div>
+      <% end %>
+
     </div>
   </div>
+
 </div>
-</div>
 
+<div class="row">
 
-
-<!-- Third section div -->
-<div class="section3 section1-container">
-    <div class="container-fluid section3-background">
-        <div class="row section1-text">
-            <div class="col-md-1"></div>
-            <div class="col-md-5">
-                <%= image_tag "calendar.svg", class: "calendar-image" %>
-            </div>
-            <div class="col-md-5 subsection">
-                <p id='section3-line1'>Be "in the know" </p>
-                <p id='section3-line2'> for events and activities <p>
-                <p id='section3-line3'> in your community. <p>
-                <div id='button-activities-cal'><a href="<%= events_path %>" class="about-us">GO TO ACTIVITIES CALENDAR</a></div>
-            </div>
-            <div class="col-md-1"></div>
-        </div>
+  <div class="col-md-12 program-details-link">
+    <h4>LOOKING FOR PROGRAM DETAILS?</h4>
+    <div id="organization-button">
+      Delta Parks & Rec Website
     </div>
+  </div>
+
 </div>
 
 <!-- Fourth section div -->
@@ -108,13 +126,16 @@
   </div>
 </div>
 
-  <!-- Fifth section div -->
+<!-- Rainbow Footer-->
 
-  <div classs="row">
-  <div class="col-xs-12 background-color">
-    <div>
-      <br>
-      <%= image_tag('bus.png', class: 'bus center-block') %>
-    </div>
-  </div>
+<div class="relative-enabler">
+  <div class="container-fluid happy-rainbow">
+    <div class="row">
+      <div class="col-md-12">
+
+        <%= image_tag("rainbow-footer-group.svg", class:"center-block") %>
+
+      </div>
+     </div>
+   </div>
 </div>
