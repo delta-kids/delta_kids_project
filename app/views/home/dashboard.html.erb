@@ -1,17 +1,242 @@
-<nav class="navbar">
+<!-- <%#= stylesheet_link_tag    'application', media: 'all' %> -->
+<!-- <nav class="navbar">
 
   <div class="container deltakids-logo">
-    <div class="pull-right about-us">
-
-      <a href="<%= new_organization_path %>" class="about-us">Organizations</a>
-      |
-      <a href="<%= new_event_path %>" class="about-us">Events</a>
-      |
-      <a href="<%= new_resource_path %>" class="about-us">Resources</a>
-    </div>
     <%= image_tag ("Delta-logo.png") %>
+  </div> -->
+
+<!-- </nav> -->
+
+<!-- WOOOOOOOOO -->
+
+<div class="wholePage">
+<!-- First section div -->
+<div class="calendar-section1 calendar-section1-container" id="calendar-section1">
+    <div class="container-fluid">
+        <div class="row calendar-row">
+            <div class="col-md-2">
+
+            </div>
+            <div class="col-md-8 calendar-subsection2">
+	            <div class="calendar-subsection2-card">
+		            <%= image_tag "https://user-images.githubusercontent.com/19618674/27262697-1aaca1ee-5411-11e7-9bfb-4f51346fc603.png", class: "calendar-subsection2-image" %>
+		            <div class="calendar-subsection2-text">
+			            <p class="calendar-subsection2-header">Welcome to the Dashboard</p>
+		            </div>
+	            </div>
+
+              <!-- <a href="<%= new_organization_path %>" class="about-us">Organizations</a>
+              |
+              <a href="<%= new_event_path %>" class="about-us">Events</a>
+              |
+              <a href="<%= new_resource_path %>" class="about-us">Resources</a> -->
+              <div class="button-cluster">
+
+                <a href="<%= new_organization_path %>" class="about-us"><button type="button" href="<%= new_resource_path %>" class="button-seemore">Add an Agency</button></a>
+
+                <a href="<%= new_event_path %>" class="about-us"><button type="button" href="<%= new_resource_path %>" class="button-seemore">Add an Event</button></a>
+
+                <a href="<%= new_resource_path %>" class="about-us"><button type="button" href="<%= new_resource_path %>" class="button-seemore">Add a Resource</button></a>
+
+              </div>
+            </div>
+            <div class="col-md-2">
+
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+</div>
+
+<div class="background-wrap">
+<div class="container container-background">
+
+<div class="row">
+  <div class="col-md-12">
+
+    <h1 class="queue-header">Pending Events</h1>
+
+    <div class="table-responsive">
+
+      <table class="table table-bordered table-hover" style="text-align:center;">
+        <thead>
+          <tr>
+            <th>Event</th>
+            <th>Location</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Drop in Soccer</td>
+            <td>Delta</td>
+            <td><button class="btn btn-default">Approve</button>
+            <button class="btn btn-default">Decline</button></td>
+          </tr>
+          <tr>
+            <td>Drop in Soccer</td>
+            <td>Delta</td>
+            <td><button class="btn btn-default">Approve</button>
+            <button class="btn btn-default">Decline</button></td>
+          </tr>
+          <tr>
+            <td>Drop in Soccer</td>
+            <td>Delta</td>
+            <td><button class="btn btn-default">Approve</button>
+            <button class="btn btn-default">Decline</button></td>
+          </tr>
+          <tr>
+            <td>Drop in Soccer</td>
+            <td>Delta</td>
+            <td><button class="btn btn-default">Approve</button>
+            <button class="btn btn-default">Decline</button></td>
+          </tr>
+          <tr>
+            <td>Drop in Soccer</td>
+            <td>Delta</td>
+            <td><button class="btn btn-default">Approve</button>
+            <button class="btn btn-default">Decline</button></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h1 class="queue-header">Approved Events</h1>
+
+      <table class="table table-bordered table-hover" style="text-align:center;">
+        <thead>
+          <tr>
+            <th>Event</th>
+            <th>Location</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Drop in Soccer</td>
+            <td>Delta</td>
+            <td><button class="btn btn-default">Delete</button>
+          </tr>
+          <tr>
+            <td>Drop in Soccer</td>
+            <td>Delta</td>
+            <td><button class="btn btn-default">Delete</button>
+          </tr>
+          <tr>
+            <td>Drop in Soccer</td>
+            <td>Delta</td>
+            <td><button class="btn btn-default">Delete</button>
+          </tr>
+          <tr>
+            <td>Drop in Soccer</td>
+            <td>Delta</td>
+            <td><button class="btn btn-default">Delete</button>
+          </tr>
+          <tr>
+            <td>Drop in Soccer</td>
+            <td>Delta</td>
+            <td><button class="btn btn-default">Delete</button>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
   </div>
+</div>
 
-</nav>
+<div class="row">
+  <div class="col-xs-12">
 
-<div class="page-padding"></div>
+    <h1>Pending Resources</h1>
+
+    <div class="table-responsive">
+
+      <table class="table table-bordered table-hover" style="text-align:center;">
+        <thead>
+          <tr>
+            <th>Resoucer</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Resource ABC</td>
+            <td><button class="btn btn-default">Approve</button>
+            <button class="btn btn-default">Decline</button></td>
+          </tr>
+          <tr>
+            <td>Resource ABC</td>
+            <td><button class="btn btn-default">Approve</button>
+            <button class="btn btn-default">Decline</button></td>
+          </tr>
+          <tr>
+            <td>Resource ABC</td>
+            <td><button class="btn btn-default">Approve</button>
+            <button class="btn btn-default">Decline</button></td>
+          </tr>
+          <tr>
+            <td>Resource ABC</td>
+            <td><button class="btn btn-default">Approve</button>
+            <button class="btn btn-default">Decline</button></td>
+          </tr>
+          <tr>
+            <td>Resource ABC</td>
+            <td><button class="btn btn-default">Approve</button>
+            <button class="btn btn-default">Decline</button></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h1>Approved Resources</h1>
+
+      <table class="table table-bordered table-hover" style="text-align:center;">
+        <thead>
+          <tr>
+            <th>Resource</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Resource XYZ</td>
+            <td><button class="btn btn-default">Delete</button>
+          </tr>
+          <tr>
+            <td>Resource XYZ</td>
+            <td><button class="btn btn-default">Delete</button>
+          </tr>
+          <tr>
+            <td>Resource XYZ</td>
+            <td><button class="btn btn-default">Delete</button>
+          </tr>
+          <tr>
+            <td>Resource XYZ</td>
+            <td><button class="btn btn-default">Delete</button>
+          </tr>
+          <tr>
+            <td>Resource XYZ</td>
+            <td><button class="btn btn-default">Delete</button>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+</div>
+
+</div>
+</div>
+
+<!-- Rainbow Footer-->
+
+<div class="container-fluid happy-rainbow">
+  <div class="row">
+    <div class="col-md-12">
+
+      <%= image_tag("rainbow-footer-group.svg", class:"center-block") %>
+
+    </div>
+  </div>
+</div>
