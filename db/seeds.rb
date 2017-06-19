@@ -85,6 +85,9 @@ ServiceType.create([
 {name: 'Health & Development'}
 ])
 
+cost = ['Paid', 'Free']
+registration = ['Registered', 'Drop In']
+
 Category.create([
 {name: 'Children'},
 {name: 'Families'},
@@ -110,7 +113,6 @@ AgeGroup.create([
 
 # Program 2 from Excel
 Organization.create(
-age_group: AgeGroup.find_by(age: '0-5'),
 description: '',
 name: 'Clarion Highland Dance Studio',
 address: '',
@@ -221,7 +223,6 @@ website: 'http://www.navyleague.ca/eng/',
  )
 
 Program.create(
-age_group: AgeGroup.find_by(age: '0-5'),
 program_type: ProgramType.find_by(name: 'Arts & Culture'),
 organization: Organization.find_by(name: 'Clarion Highland Dance Studio'),
 description: 'Highland Dancing',
@@ -229,8 +230,20 @@ registration: 'Registered',
 cost: 'Paid'
 )
 
+ProgramAgeGroup.create(
+program: Program.find_by(description: 'Highland Dancing'),
+age_group: AgeGroup.find_by(age: '0-5')
+)
+# Program 10 from Excel
+Organization.create(
+ description: '',
+ name: 'Ladner Pioneer Library',
+ address: '4683 - 51st Street Delta, BC V4K 2V8',
+ phone: '(604) 946-6215',
+ website: 'https://fvrl.bibliocommons.com/locations/LD',
+)
+
 Program.create(
-age_group: AgeGroup.find_by(age: '0-5'),
 program_type: ProgramType.find_by(name: 'Education'),
 organization: Organization.find_by(name: 'Ladner Pioneer Library'),
 description: 'Babytime, Storytime, Parent Child Mother Goose',
@@ -238,8 +251,20 @@ registration: 'Drop In',
 cost: 'Free'
 )
 
+ProgramAgeGroup.create(
+program: Program.find_by(description: 'Babytime, Storytime, Parent Child Mother Goose'),
+age_group: AgeGroup.find_by(age: '0-5')
+)
+# Program 18 from Excel
+Organization.create(
+ description: '',
+ name: 'Reach Child & Youth Development Society',
+ address: '3-3800 72nd Street, Ladner',
+ phone: '604-946-6622 ext 308',
+ website: 'http://reachdevelopment.org/reach-developmental-preschool-south-delta.html',
+)
+
 Program.create(
-age_group: AgeGroup.find_by(age: '0-5'),
 program_type: ProgramType.find_by(name: 'Childcare & Preschools'),
 organization: Organization.find_by(name: 'Reach Child & Youth Development Society'),
 description: 'Reach Developmental Preschool South Delta',
@@ -247,8 +272,20 @@ registration: 'Registered',
 cost: 'Paid'
 )
 
+ProgramAgeGroup.create(
+program: Program.find_by(description: 'Reach Developmental Preschool South Delta',),
+age_group: AgeGroup.find_by(age: '0-5')
+)
+# Program 36 from Excel
+Organization.create(
+ description: '',
+ name: 'Childcare Resource Referral',
+ address: '',
+ phone: '',
+ website: 'http://www.options.bc.ca/',
+  )
+
 Program.create(
-age_group: AgeGroup.find_by(age: '6-12'),
 program_type: ProgramType.find_by(name: 'Child Care'),
 organization: Organization.find_by(name: 'Childcare Resource Referral'),
 description: 'Listing of before and after school care providers',
@@ -256,8 +293,20 @@ registration: 'Registered',
 cost: 'Paid'
 )
 
+ProgramAgeGroup.create(
+program: Program.find_by(description: 'Listing of before and after school care providers'),
+age_group: AgeGroup.find_by(age: '6-12'),
+)
+# Program 22 from Excel
+Organization.create(
+description: '',
+name: 'Tsawwassen First Nation',
+address: '1926 Tsawwassen Dr N, Delta, BC',
+phone: '604-943-1322 ext 224',
+website: 'http://tsawwassenfirstnation.com/programs-and-services/smuyuqwa-lelum-ecd-centre/',
+ )
+
 Program.create(
-age_group: AgeGroup.find_by(age: '0-5'),
 program_type: ProgramType.find_by(name: 'Childcare & Preschools'),
 organization: Organization.find_by(name: 'Tsawwassen First Nation'),
 description: 'Smuyuq’wa’ Lelum Early Childhood Development Centre is a fully licensed, state of the art, childcare facility, providing quality care for children aged 6 months to 6 years.',
@@ -265,15 +314,58 @@ registration: 'Registered',
 cost: 'Paid'
 )
 
+ProgramAgeGroup.create(
+program: Program.find_by(description: 'Smuyuq’wa’ Lelum Early Childhood Development Centre is a fully licensed, state of the art, childcare facility, providing quality care for children aged 6 months to 6 years.'),
+age_group: AgeGroup.find_by(age: '0-5'),
+)
+# Program 47 from Excel
+Organization.create(
+description: '',
+name: 'Navy League',
+address: '',
+phone: '',
+website: 'http://www.navyleague.ca/eng/',
+ )
+
 Program.create(
-age_group: AgeGroup.find_by(age: '6-12'),
 program_type: ProgramType.find_by(name: 'Community Clubs'),
 organization: Organization.find_by(name: 'Navy League'),
 description: 'Leadership, sailing, camping, first aid, drilling',
 registration: 'Registered',
 cost: 'Paid'
 )
-#
+
+ProgramAgeGroup.create(
+program: Program.find_by(description: 'Leadership, sailing, camping, first aid, drilling'),
+age_group: AgeGroup.find_by(age: '6-12'),
+)
+# Program 103 from Excel
+Organization.create(
+name: 'Special Olympics',
+phone: '',
+address: '',
+website: 'www.socdelta.org',
+description: ''
+)
+Program.create(
+program_type: ProgramType.find_by(name: 'Sports'),
+organization: Organization.find_by(name: 'Special Olympics'),
+description: 'Basketball, Bowling, Curling, Floor Hockey, Rhythmic Gymnastics, Alpine Skiing, Swimming, Soccer, Softball, Track and Field, Golf',
+registration: 'Registered',
+cost: 'Paid'
+)
+ProgramAgeGroup.create(
+program: Program.find_by(description: 'Basketball, Bowling, Curling, Floor Hockey, Rhythmic Gymnastics, Alpine Skiing, Swimming, Soccer, Softball, Track and Field, Golf'),
+age_group: AgeGroup.find_by(age: '6-12'),
+)
+# Service 2 from Excel
+Organization.create(
+name: 'Reporting child abuse',
+phone: '1-800-663-9122',
+address: '',
+website: 'http://www2.gov.bc.ca/gov/content/safety/public-safety/protecting-children/keeping-kids-safe',
+description: ''
+)
 
 Service.create(
 service_type: ServiceType.find_by(name: 'Child Advocacy'),
