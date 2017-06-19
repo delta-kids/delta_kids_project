@@ -28,11 +28,6 @@ Rails.application.routes.draw do
 
   get '/services/children', to: 'services#children'
 
-
-  get '/services/children', to: 'services#children'
-
-  get '/services/families', to: 'services#families'
-
   get '/live', to: 'home#live', as: 'live'
   get '/dashboard', to: 'home#dashboard', as: 'dashboard'
   get '/map', to: 'home#map', as: 'map'
