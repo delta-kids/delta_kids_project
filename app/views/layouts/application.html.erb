@@ -18,17 +18,17 @@
   </head>
   <body>
 
-
-       <%= render 'layouts/header.html.erb' %>
+    <div>
 
       <% if flash[:notice] %>
         <div class='alert alert-success'><%= flash[:notice] %></div>
       <% elsif flash[:alert] %>
         <div class='alert alert-danger'><%= flash[:alert] %></div>
       <% end %>
+      <%= render 'layouts/header.html.erb' %>
       <%= yield %>
       <%= render 'layouts/footer.html.erb' %>
-
+    </div>
 
   </body>
 </html>

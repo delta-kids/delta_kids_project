@@ -1,2 +1,257 @@
-<h1>Resources#index</h1>
-<p>Find me in app/views/resources/index.html.erb</p>
+<div class="wholePage">
+<!-- First section div -->
+<div class="event-section1 event-section1-container" id="event-section1">
+    <div class="container-fluid ">
+        <div class="row event-row">
+
+            <div class="col-md-4" id="event-subsection1">
+
+		            <%= image_tag "filter-header.svg", class: " filter-header-img"  %>
+<!--
+		            <div id="filter-header">
+		            <p id="#filterText">Filter</p>
+		            <%#= image_tag "icon-filter.svg", class: " filter-header-chevron" %>
+		            </div>
+-->             <hr>
+		            <div class="filterCard">
+
+			            <div class="filter-header2">
+				            <p class="filterCard-header2">Topic</p>
+				            <%#= image_tag "icon-chevron-up.svg", class: " filter-header-chevron"  %>
+			            </div>
+                    <div class="filter-header-resources">
+                      <%= check_box_tag("Physical Health") %>
+                      <p class="filterCard-list-resources">Physical Health</p>
+                    </div>
+                    <div class="filter-header-resources">
+                      <%= check_box_tag("Mental Health") %>
+                      <p class="filterCard-list-resources">Mental Health</p>
+                    </div>
+                    <div class="filter-header-resources">
+                      <%= check_box_tag("Child Development") %>
+                      <p class="filterCard-list-resources">Child Development</p>
+                    </div>
+                    <div class="filter-header-resources">
+                      <%= check_box_tag("Policy") %>
+                      <p class="filterCard-list-resources">Policy</p>
+                    </div>
+                    <div class="filter-header-resources">
+                      <%= check_box_tag("Child Safety") %>
+                      <p class="filterCard-list-resources">Child Safety</p>
+                    </div>
+
+			            <hr/ class="filterCard-line">
+		            </div>
+
+                <div class="filterCard">
+
+			            <div class="filter-header2">
+				            <p class="filterCard-header2">Resource covers:</p>
+				            <%#= image_tag "icon-chevron-up.svg", class: " filter-header-chevron"  %>
+			            </div>
+                    <div class="filter-header-resources">
+                      <%= check_box_tag("Delta") %>
+                      <p class="filterCard-list-resources">Delta</p>
+                    </div>
+                    <div class="filter-header-resources">
+                      <%= check_box_tag("BC") %>
+                      <p class="filterCard-list-resources">BC</p>
+                    </div>
+                    <div class="filter-header-resources">
+                      <%= check_box_tag("Canada") %>
+                      <p class="filterCard-list-resources">Canada</p>
+                    </div>
+			            <hr/ class="filterCard-line">
+		            </div>
+
+
+                <div class="filterCard">
+
+			            <div class="filter-header2">
+				            <p class="filterCard-header2">Children aged:</p>
+				            <%#= image_tag "icon-chevron-up.svg", class: " filter-header-chevron"  %>
+			            </div>
+                    <div class="filter-header-resources">
+                      <%= check_box_tag("0-5 years") %>
+                      <p class="filterCard-list-resources">0-5 years</p>
+                    </div>
+                    <div class="filter-header-resources">
+                      <%= check_box_tag("6-12 years") %>
+                      <p class="filterCard-list-resources">6-12 years</p>
+                    </div>
+			            <hr/ class="filterCard-line">
+		            </div>
+
+                <div class="filterCard">
+
+			            <div class="filter-header2">
+				            <p class="filterCard-header2">Type of resource</p>
+				            <%#= image_tag "icon-chevron-up.svg", class: " filter-header-chevron"  %>
+			            </div>
+                    <div class="filter-header-resources">
+                      <%= check_box_tag("Tips & Guidelines") %>
+                      <p class="filterCard-list-resources">Tips & Guidelines</p>
+                    </div>
+                    <div class="filter-header-resources">
+                      <%= check_box_tag("Research") %>
+                      <p class="filterCard-list-resources">Report</p>
+                    </div>
+                    <div class="filter-header-resources">
+                      <%= check_box_tag("Canada") %>
+                      <p class="filterCard-list-resources">Canada</p>
+                    </div>
+			            <hr/ class="filterCard-line">
+		            </div>
+
+
+		            <div class="filterCard">
+			            <p class="filterCard-header1">When</p>
+			            <p class="filterCard-list">From</p>
+			            <hr/ class="filterCard-line">
+			            <p class="filterCard-list">To</p>
+			            <hr/ class="filterCard-line">
+		            </div>
+
+		            <div class="filterCard">
+			            <p class="filterCard-header1">Cost</p>
+			            <div class="filter-header2">
+				            <p class="filterCard-header2">Free and paid</p>
+				            <%= image_tag "icon-chevron-up.svg", class: " filter-header-chevron"  %>
+			            </div>
+			            <p class="filterCard-list">Free</p>
+			            <p class="filterCard-list">Paid</p>
+
+			            <hr/ class="filterCard-line">
+		            </div>
+
+		            <div class="filterCard">
+			            <p class="filterCard-header1">Recurrence</p>
+			            <div class="filter-header2">
+				            <p class="filterCard-header2">Ongoing and Events</p>
+				            <%= image_tag "icon-chevron-up.svg", class: " filter-header-chevron"  %>
+			            </div>
+			            <p class="filterCard-list">Ongoing</p>
+			            <p class="filterCard-list">Events</p>
+
+			            <hr/ class="filterCard-line">
+		            </div>
+            </div>
+
+            <div class="col-md-8 event-subsection2">
+	            <div class="event-subsection2-card">
+		            <%= image_tag "https://user-images.githubusercontent.com/19618674/27264549-ada2ad26-5435-11e7-8a69-bf291986d6ea.png", class: "event-subsection2-image" %>
+		            <div class="event-subsection2-text">
+			            <p class="event-subsection2-header">ARTICLES</p>
+		            </div>
+	            </div>
+
+	            <p class="event-header">Featured</p>
+
+
+		            <div class="event-subsection2-text-resource">
+			            <div class="event-subsection2-details">
+				            <p class="event-subsection2-header2">BC Smart Family Policy 2010 Report Card</p>
+				            <div class="event-info">
+					            <div>
+						            <%= image_tag "icon-calendar.svg", class: "event-info-icon" %>
+						            <p class="event-info-txt">Published in 2010</p>
+					            </div>
+				            </div>
+				            <p class="event-paragraph-resource">HELP report card describing British Columbia’s progress with implementing the family policy investments described in the 15 by 15 report.</p>
+                    <div class="div-tags">
+                    <p class="tags-txt">Tags:</p>
+                    <div class="report-button">Report</div>
+                  </div>
+                  <hr/ class="event-subsection2-line">
+                  <div class="share-view">
+                  <div class="event-info1">
+                    <%= image_tag "icon-share.svg", class: "event-info-icon" %>
+                    <p class="resource-info-txt">Share PDF</p>
+                  </div>
+                  <div class="event-info1">
+                    <%= image_tag "icon-acrobat.svg", class: "event-info-icon" %>
+                    <p class="resource-info-txt">View</p>
+                  </div>
+                </div>
+			            </div>
+		            </div>
+
+                <div class="event-subsection2-text-resource">
+                  <div class="event-subsection2-details">
+                    <p class="event-subsection2-header2">Crisis in Kindergarten – Why Children Need to Play in School</p>
+                    <div class="event-info">
+                      <div>
+                        <%= image_tag "icon-calendar.svg", class: "event-info-icon" %>
+                        <p class="event-info-txt">Published in 2009</p>
+                      </div>
+                    </div>
+                    <p class="event-paragraph-resource">A report based on 9 recent studies and written by the Alliance for Childhood in the U.S. , with specific recommendations of change needed in Kindergarten education.</p>
+                    <div class="div-tags">
+                    <p class="tags-txt">Tags:</p>
+                    <div class="report-button">Report</div>
+                  </div>
+                  <hr/ class="event-subsection2-line">
+                  <div class="share-view">
+                  <div class="event-info1">
+                    <%= image_tag "icon-share.svg", class: "event-info-icon" %>
+                    <p class="resource-info-txt">Share PDF</p>
+                  </div>
+                  <div class="event-info1">
+                    <%= image_tag "icon-acrobat.svg", class: "event-info-icon" %>
+                    <p class="resource-info-txt">View</p>
+                  </div>
+                </div>
+                  </div>
+                </div>
+
+
+                <div class="event-subsection2-text-resource">
+                  <div class="event-subsection2-details">
+                    <p class="event-subsection2-header2">International Perspectives on Early Childhood Development</p>
+                    <div class="event-info">
+                      <div>
+                        <%= image_tag "icon-calendar.svg", class: "event-info-icon" %>
+                        <p class="event-info-txt">Published in 2009</p>
+                      </div>
+                    </div>
+                    <p class="event-paragraph-resource">Knowledge Network for Early Childhood Development paper looking at ECD and what can be done toward a successful approach where early childhood development is seen as a determinant of health.</p>
+                    <div class="div-tags">
+                    <p class="tags-txt">Tags:</p>
+                    <div class="phealth-button">Physical Health</div>
+                  </div>
+                  <hr/ class="event-subsection2-line">
+                  <div class="share-view">
+                  <div class="event-info1">
+                    <%= image_tag "icon-share.svg", class: "event-info-icon" %>
+                    <p class="resource-info-txt">Share PDF</p>
+                  </div>
+                  <div class="event-info1">
+                    <%= image_tag "icon-acrobat.svg", class: "event-info-icon" %>
+                    <p class="resource-info-txt">View</p>
+                  </div>
+                </div>
+                  </div>
+                </div>
+            <div id='button-seemore'>SEE MORE</div>
+
+
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+<!-- Rainbow Footer-->
+
+<div class="container-fluid happy-rainbow">
+  <div class="row">
+    <div class="col-md-12">
+
+      <%= image_tag("https://user-images.githubusercontent.com/19618674/27264073-b9f5bbcc-542b-11e7-8c6a-97ef39c5c06f.png", class:"center-block") %>
+
+    </div>
+  </div>
+</div>
+
+</div>

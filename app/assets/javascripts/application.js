@@ -13,9 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap-sprockets
+//= require bootstrap-datepicker
 //= require chosen-jquery
-//= require moment
-//= require daterangepicker
 //= require rails-ujs
 //= require_tree .
 

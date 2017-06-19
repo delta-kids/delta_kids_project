@@ -3,26 +3,32 @@
   <h2>Create New Event</h2>
 
   <%= form_for("")do |f|  %>
-  <!-- TITILE -->
+
   <div class="form-group">
     <%= f.label :title %>
     <%= f.text_field :title, class: 'form-control' %>
   </div>
 
-
-<!-- PLACEHOLDER, NEED TO COME BACK AND DO -->
-<!-- ================== -->
   <h1>Dates</h1>
-    <div class="form-group">
-      <input type="text" name="startdate" value="01/01/2017" class="form-control" />
-    </div>
+
+    <label for='start_date'>Start Date</label>
+    <input type="text" class='datepicker form-control' placeholder="MM/DD/YYYY" >
+
     <script type="text/javascript">
-      $(function() {
-        $('input[name="startdate"]').daterangepicker({
-          showDropdowns: true,
-        });
+      $(document).ready(function(){
+        $('.datepicker').datepicker();
       });
     </script>
+
+    <label for='end_date'>End Date</label>
+    <input type="text" class='datepicker form-control' placeholder="MM/DD/YYYY" >
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('.datepicker').datepicker();
+      });
+    </script>
+
   <h1> Times </h1>
   <div class="form-group">
     <%= f.label :"Start Time" %>
@@ -130,7 +136,7 @@
     <%= f.email_field :email, class: 'form-control' %>
   </div>
 
-  <%= f.submit class: 'btn btn-primary form-control' %>
+  <%= f.submit class: 'btn btn-primary form-control', style: 'margin-bottom: 30px;' %>
 
   <% end %>
 </div>
