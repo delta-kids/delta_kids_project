@@ -33,8 +33,10 @@ Rails.application.routes.draw do
   get '/map', to: 'home#map', as: 'map'
   get '/search', to: 'home#search', as: 'search'
   get '/whatsnew', to: 'home#whatsnew', as: 'whatsnew'
+  get '/surveys', to: 'home#surveys', as: 'surveys'
 
   post '/contact_submit', to: 'home#submit', as: 'contacted'
+
 
 
   resources :resources
