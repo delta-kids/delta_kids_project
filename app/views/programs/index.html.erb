@@ -1,11 +1,159 @@
-<!-- Rainbow Footer-->
+<div class="row">
+  <div class="col-md-12 content">
 
-<div class="container-fluid happy-rainbow">
-  <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-3 hidden-xs hidden-sm sidebar">
+      <ul class="nav nav-sidebar ">
+        <h2 class='age-group'><%= @age_group %> YEAR OLDS</h2>
+        <p><a style="color:#00A3DA" href="#">Who to contact <br> for more infromation about...</a></p>
+        <% if @age_group === "0-5" %>
+        <li><a href="/programs/0_5_arts_culture">Arts & Culture</a></li>
+        <% else %>
+        <li><a href="/programs/6_12_arts_culture">Arts & Culture</a></li>
+        <% end %>
+        <hr>
+        <% if @age_group === "0-5" %>
+        <li><a href="/programs/0_5_sports">Sports</a></li>
+        <% else %>
+        <li><a href="/programs/6_12_sports">Sports</a></li>
+        <% end %>
+        <hr>
+        <% if @age_group === "0-5" %>
+        <li><a href="/programs/0_5_education">Education</a></li>
+        <% else %>
+        <li><a href="/programs/6_12_education">Education</a></li>
+        <% end %>
+        <hr>
+        <% if @age_group === "0-5" %>
+        <li><a href="/programs/0_5_parent_child">Parent & Child</a></li>
+        <% else %>
+        <li><a href="/programs/6_12_community">Community Clubs</a></li>
+        <% end %>
+        <hr>
+        <% if @age_group === "0-5" %>
+        <li><a href="/programs/0_5_childcare">Childcare & Preschools</a></li>
+        <% else %>
+        <li><a href="/programs/6_12_childcare">Childcare & Preschools</a></li>
+        <% end %>
+        <hr>
+      </ul>
+    </div>
 
-      <%= image_tag("https://user-images.githubusercontent.com/19618674/27264073-b9f5bbcc-542b-11e7-8c6a-97ef39c5c06f.png", class:"center-block") %>
+    <div class="col-md-9 organization-content">
+      <div class="col-md-6">
+        <h3>ORGANIZATIONS</h3>
+      </div>
+      <div class="col-md-5">
+        <h3>PROGRAMS OFFERRED</h3>
+      </div>
+
+      <% @programs.each do |p| %>
+      <div class="col-md-12">
+        <hr class="divider">
+      </div>
+
+      <div class="col-md-12 ">
+        <div class="organization-details">
+
+
+          <div class="organization-info col-md-6">
+            <div class="organization-logo">
+              <%= image_tag "program-logo#{rand(1..2)}.png"  %>
+            </div>
+
+            <div class="col-md-8 col-sm-7">
+              <p><%= p.organization.name %></p>
+              <a href="#">Learn More</a>
+            </div>
+          </div>
+
+          <div class="col-md-5">
+            <p><%= p.description %></p>
+          </div>
+        </div>
+      </div>
+      <% end %>
 
     </div>
   </div>
+
 </div>
+
+<div class="col-md-12 program-details-link">
+  <h4>LOOKING FOR PROGRAM DETAILS?</h4>
+  <div id="organization-button">
+    Delta Parks & Rec Website
+  </div>
+</div>
+
+
+<!-- Fourth section div -->
+
+<div class="col-md-12 outer-blue-container">
+<div id="whats-new-board" class="container">
+
+  <div class="row">
+    <div class="col-md-12">
+      <%= image_tag("whats-new-top.svg", class:"img-responsive center-block whats-new") %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <h1 id="whats-new">What's New</h1>
+
+      <%= image_tag("https://user-images.githubusercontent.com/19618674/27264073-b9f5bbcc-542b-11e7-8c6a-97ef39c5c06f.png", class:"center-block") %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4">
+      <%= image_tag("DeltaKids1.jpg", class:"img-responsive") %>
+      <h2 class="new-events">FOOD SKILLS FOR FAMILIES!</h2>
+      <h5 class="posted-on">Posted on: 2017-01-01</h5>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <i><%= image_tag("cursor.svg", class:"img-responsive cursor") %></i>
+      <p class="learn-more">Learn More</p>
+
+    </div>
+    <div class="col-md-4">
+      <%= image_tag("DeltaKids4.jpg", class:"img-responsive") %>
+      <h2 class="new-events">PARENT CHILD LEARNING TOGETHER IS BACK!</h2>
+      <h5 class="posted-on">Posted on: 2017-01-01</h5>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <i><%= image_tag("cursor.svg", class:"img-responsive cursor") %></i>
+      <p class="learn-more">Learn More</p>
+
+    </div>
+    <div class="col-md-4">
+      <%= image_tag("DeltaKids2.jpg", class:"img-responsive") %>
+      <h2 class="new-events">NEW CHILD DEVELOPMENT RESOURCES</h2>
+      <h5 class="posted-on">Posted on: 2017-01-01</h5>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <i><%= image_tag("cursor.svg", class:"img-responsive cursor") %></i>
+      <p class="learn-more">Learn More</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <%= image_tag("whats-new-bottom.svg", class:"img-responsive center-block whats-new") %>
+    </div>
+  </div>
+
+  </div>
+</div>
+
+
+<!-- Rainbow Footer-->
+
+  <div class="col-md-12 relative-enabler">
+    <div class="container-fluid happy-rainbow">
+      <div class="row">
+        <div class="col-md-12">
+
+          <%= image_tag("rainbow-footer-group.svg", class:"center-block") %>
+
+        </div>
+      </div>
+
+    </div>
+  </div>

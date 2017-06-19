@@ -1,34 +1,127 @@
+
+nav {
+  z-index: 1;
+  background-image: url("cloud1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position:bottom;
+  top: 80px;
+}
+.btn-group.open {
+  position: static;
+}
+
+.flex-spacebtwn > p > a {
+  text-decoration: none;
+}
+
+.programs-ul > li > a {
+  text-decoration: none;
+}
+
+.programs-ul > li > a {
+  text-decoration: none;
+}
+
+.header-titles {
+  text-decoration: none !important;
+}
+
+.learn-li > li > a {
+  text-decoration: none;
+}
+
+.learn-li > li > a:hover {
+  color:#00A3DA !important;
+}
+
+.services-ul > li > a {
+  text-decoration: none;
+}
+
+.programs-li > li > a {
+  text-decoration: none;
+}
+
+.programs-li > li > a {
+  text-decoration: none;
+}
+
+.programs-li > li > a:hover {
+ color:#00A3DA !important;
+}
+
+.services-ul > li > a:hover {
+ color:#00A3DA !important;
+}
+
 .btn-group.open {
   position: static;
 }
 
 .header-menu {
+  left:15px !important;
+  top: 80% !important;
   min-width: auto !important;
   background-color: #004C81 !important;
   width: 96vw !important;
   position: absolute;
-  left:0;
 }
 
-
+.nav-font {
+  font-family: ‘Open Sans’, sans-serif;
+  font-size: 16px;
+  display: inline;
+}
 .about-us {
-  padding: 30px;
+  padding: 10px;
 }
 
 .dropdown-col {
+  font-size: 20px;
+  font-family: ‘Open Sans’, sans-serif;
   display: flex;
+  justify-content: space-around;
 }
 
+.programs-ul {
+width: 50%;
+}
+
+.services-ul {
+width: 33%;
+}
+
+.programs-li {
+width: 45%;
+display: inline-block;
+}
+
+.deltakids-logo {
+  position: relative;
+  bottom: 60px;
+}
 
 .flex-spacebtwn {
+  position: relative;
+  bottom: 50px;
   padding-top: 10px;
+  padding-bottom: 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.deltakids-logo {
-  padding: 50px 0 0 50px;
+.head-btn {
+    background-color: white !important;
+}
+
+.head-btn:focus {
+  color:#00A3DA !important;
+}
+
+.head-btn:focus,.head-btn:active {
+   outline: none !important;
 }
 
 .btn.dropdown-toggle {
@@ -39,19 +132,19 @@ ul {
   list-style: none;
 }
 
-
-h4 {
-  display: inline;
-}
-
 li a {
+  text-decoration: none;
   color: white !important;
 }
 
- hr {
-  border-color:yellow;
+.nav-hr {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  margin-left: 0px;
+  border-color:#FFF200;
 }
 
 .dropdown-category {
-  color:yellow;
+  color:#FFF200;
 }
