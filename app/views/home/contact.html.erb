@@ -1,6 +1,7 @@
 
-<!--
+
 <div class="container-fluid contact-us-body">
+
   <div class="container">
       <%= image_tag  "butterfly.png", id: "butterfly" %>
       <h1 id="contact-us-text">CONTACT US</h1>
@@ -11,12 +12,13 @@
       <p>Do you have any questions or what to learn more about a specific subject? Drop us a line.</p>
     <div class="flex form-group">
       <%= text_field_tag :name, "Name",class: "form-control contact-form" %>
-      &nbsp&nbsp&nbsp
+      &nbsp;&nbsp;&nbsp;
       <%= text_field_tag :email, "Email" ,class: "form-control contact-form" %>
     </div>
     <div class="contact-form">
       <%= text_area_tag :message, "Message", class: "form-control contact-form", rows: 10 %>
     </div>
+    <br>
       <%= submit_tag 'Send Message', class:"btn-primary pull-right" %>
     </div>
 
@@ -26,135 +28,19 @@
       <p>DeltaKids is a coalition of community partners. We work together to build Delta's capacity as a child-friendly community where all children thrive.</p>
       <a href="#" class="pull-right">Learn More</a>
     </div>
-</div> -->
 
+</div>
 
+<!-- Rainbow Footer-->
 
-
-
-
-
-
-<div class="container">
+<div class="relative-enabler">
+ <div class="container-fluid happy-rainbow">
   <div class="row">
-    <div class="col-md-8">
-<!--  left column -->
-<div class="container-fluid" id="feature-box">
-  <!-- set the image to be displayed -->
-  <%= image_tag "DeltaKids1.jpg", class: "learn-more-image" %>
+    <div class="col-md-12">
 
-  <!-- text body below image -->
-  <div class="container-fluid">
-    <h1> Random Text </h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-  </div>
+      <%= image_tag("rainbow-footer-group.svg", class:"center-block") %>
 
-  <!-- contact information -->
-  <div class="container-fluid">
-    <hr>
-    <div class="row">
-      <div class="col-md-6">
-        <p> place information here </p>
-        <p>1234, fake street, Delta, BC, V5I 7U8</p>
-      </div>
-      <div class="col-md-6">
-        <p> phone </p>
-        <p> website </p>
-        <p> email </p>
-      </div>
     </div>
   </div>
-
-  <!-- Share Links -->
-  <div class="container-fluid share-section">
-    <hr>
-    <h2>Share</h2>
-    <br>
-
-    <!-- share buttons -->
-    <a href="#" target="_blank"><img src="https://cache.addthiscdn.com/icons/v3/thumbs/32x32/email.png" border="0" alt="Email"/></a>
-    <a href="#" target="_blank"><img src="https://cache.addthiscdn.com/icons/v3/thumbs/32x32/facebook.png" border="0" alt="Facebook"/></a>
-    <a href="#" target="_blank"><img src="https://cache.addthiscdn.com/icons/v3/thumbs/32x32/google_plusone_share.png" border="0" alt="Google+"/></a>
-    <a href="#" target="_blank"><img src="https://cache.addthiscdn.com/icons/v3/thumbs/32x32/twitter.png" border="0" alt="Twitter"/></a>
-
-    <!-- share buttons -->
-  </div>
+ </div>
 </div>
-</div> <!-- col -->
-<!-- left column -->
-
-<!--  right column -->
-<div class="col-md-4">
-<div>
-  <h2>Similar Events</h2>
-</div>
-
-  <div class="similar-events-box">
-    <%= image_tag "DeltaKids2.jpg", class: "similar-events-image" %>
-    <div class="info-tag">
-      <p>DeltaKids is a coalition of community partners. We work together to build Delta's capacity as a child-friendly community where all children thrive.</p>
-      <br>
-      <a href="#" class="learn-more-link">Learn More</a>
-    </div>
-  </div>
-
-  <div class="similar-events-box">
-    <%= image_tag "DeltaKids2.jpg", class: "similar-events-image" %>
-    <div class="info-tag">
-      <p>DeltaKids is a coalition of community partners. We work together to build Delta's capacity as a child-friendly community where all children thrive.</p>
-      <br>
-      <a href="#" class="learn-more-link">Learn More</a>
-    </div>
-  </div>
-
-  <div class="similar-events-box">
-    <%= image_tag "DeltaKids2.jpg", class: "similar-events-image" %>
-    <div class="info-tag">
-      <p>DeltaKids is a coalition of community partners. We work together to build Delta's capacity as a child-friendly community where all children thrive.</p>
-      <br>
-      <a href="#" class="learn-more-link">Learn More</a>
-    </div>
-  </div>
-
-  <div class="see-more-button">
-    <input type="submit" class="btn btn-primary" value="SEE MORE"></input>
-  </div>
-
-</div> <!-- col -->
-<!--  right column -->
-
-<!-- ..............................-->
-</div> <!-- row -->
-</div>
-
-
-<!-- right column -->
-<!--
-<div>
-  <h2>Similar Events</h2>
-</div>
-
-<div class="pull-right flex container" id="similar-events-box">
-  <%= image_tag  "DeltaKids2.jpg", class: "similar-events-image" %>
-  <p>DeltaKids is a coalition of community partners. We work together to build Delta's capacity as a child-friendly community where all children thrive.</p>
-  <a href="#" class="pull-right">Learn More</a>
-</div>
-
-<div class="pull-right flex container" id="similar-events-box">
-  <%= image_tag  "DeltaKids2.jpg", class: "similar-events-image img-responsive" %>
-  <p>DeltaKids is a coalition of community partners. We work together to build Delta's capacity as a child-friendly community where all children thrive.</p>
-  <a href="#" class="pull-right">Learn More</a>
-</div>
-
-<div class="pull-right flex container" id="similar-events-box">
-  <%= image_tag  "DeltaKids2.jpg", class: "similar-events-image img-responsive" %>
-  <p>DeltaKids is a coalition of community partners. We work together to build Delta's capacity as a child-friendly community where all children thrive.</p>
-  <a href="#" class="pull-right">Learn More</a>
-</div>
-
-
--->
-<!-- <div class="">
-  <input type="submit" class="btn btn-primary" value="SEE MORE"></input>
-</div> -->
-<!--  right column -->

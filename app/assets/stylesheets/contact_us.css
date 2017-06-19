@@ -63,9 +63,6 @@
   padding: 0px;
 }
 
-.learn-more-link {
-  float: right;
-}
 .see-more-button {
   padding-top: 30px;
 }
@@ -80,7 +77,8 @@
 
 .similar-events-box {
   display: inline;
-  /*background-color: white;*/
+  background-color: white;
+  paddin
 }
 
 .similar-events-image {
