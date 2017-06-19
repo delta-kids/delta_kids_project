@@ -10,4 +10,9 @@ class HomeController < ApplicationController
 
   def live
   end
+
+  def submit
+    @name = params(:name)
+  end
+
 end
