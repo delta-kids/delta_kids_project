@@ -32,7 +32,7 @@
 		font-family: BreeSerif-Regular;
 		font-size: 30px;
 		color: #004C81;
-		letter-spacing: 0;
+
 	}
 	.filter-header-img{
 		width: 100%;
@@ -55,14 +55,14 @@
 		font-family: OpenSans-Semibold;
 		font-size: 14px;
 		color: #00A3DA;
-		letter-spacing: 0;
+
 	}
 	.filterCard-header2{
 		/* All locations: */
 		font-family: OpenSans-Bold;
 		font-size: 16px;
 		color: #000000;
-		letter-spacing: 0;
+
 	}
 	.filter-header-chevron{
 	}
@@ -70,10 +70,10 @@
 		font-family: OpenSans;
 		font-size: 16px;
 		color: #000000;
-		letter-spacing: 0;
+
 	}
 	// .filterCard-line{
-	// 	padding: 5px;
+
 	// 	background: #1c1a1a;
 	// 	line-height: 1px;
 	// 	border-top: 1px solid #aeaeae !important;
@@ -86,8 +86,8 @@
 	    margin-right: 0px;
 /* 	    	margin-left: 20px;	 */
 	}
-	.calendar-subsection2{
-		padding-left: 30px;
+	.calendar-row .calendar-subsection2{
+		padding-left: 40px;
 	}
 	.calendar-subsection2-text{
 		background: #fff;
@@ -107,7 +107,7 @@
 		font-family: BreeSerif-Regular;
 		font-size: 30px;
 		color: #004C81;
-		letter-spacing: 0;
+
 		padding-top: 10px;
 	}
 	.calendar-subsection2-header2{
@@ -115,7 +115,7 @@
 		font-family: OpenSans-Bold;
 		font-size: 20px;
 		color: #004C81;
-		letter-spacing: 0;
+
 	}
 	.calendar-subsection2-details{
 		padding: 8px;
@@ -132,7 +132,7 @@
 		font-family: OpenSans-Extrabold;
 		font-size: 14px;
 		color: #00A3DA;
-		letter-spacing: 0;
+
 		float: left;
 		padding-left: 5px;
 	}
@@ -141,7 +141,7 @@
 		font-family: OpenSans;
 		font-size: 14px;
 		color: #00A3DA;
-		letter-spacing: 0;
+
 		float: left;
 		padding-left: 5px;
 	}
@@ -174,12 +174,27 @@
 		font-family: OpenSans;
 		font-size: 16px;
 		color: #000000;
-		letter-spacing: 0;
+
 	}
 	.event-info-bold2{
 	/* Learn More: */
 		font-family: OpenSans-Bold;
 		font-size: 16px;
 		color: #00A3DA;
-		letter-spacing: 0;
+
+	}
+	#button-seemore{
+	  background: #00A3DA;
+	  border-radius: 10px;
+	  height: 50px;
+	  width: 150px;
+	  font-family: OpenSans-Semibold;
+	  font-size: 16px;
+	  color: #FFFFFF;
+	  letter-spacing: 0;
+	  line-height: 50px;
+	  display: block;
+	  margin: 0 auto;
+	  text-align: center;
+	  margin-top: 30px;
 	}

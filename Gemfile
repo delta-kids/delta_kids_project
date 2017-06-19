@@ -35,8 +35,7 @@ gem 'cancancan'
 gem 'bcrypt', '~> 3.1.7'
 gem 'font-awesome-rails'
 gem 'jquery-rails'
-gem 'momentjs-rails'
-gem 'bootstrap-daterangepicker-rails'
+gem 'bootstrap-datepicker-rails'
 gem 'chosen-rails'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

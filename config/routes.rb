@@ -141,7 +141,9 @@ Rails.application.routes.draw do
 
   get '/contact', to: 'home#contact', as: 'contact'
 
-  resources :programs
+  get '/programs/:id', to: 'programs#index'
+
+  get '/live', to: 'home#live', as: 'live'
 
   resources :resources
 
