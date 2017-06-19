@@ -1,0 +1,10 @@
+<h1>New Activity Type</h1>
+<%= @activityType.errors.full_messages.join(', ') %>
+
+<%= form_for @activityType do |f| %>
+  <div>
+    <%= f.label :Activity_name %>
+    <%= f.text_field :name %>
+  </div>
+  <%= f.submit %>
+<% end %>

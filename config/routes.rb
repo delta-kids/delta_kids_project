@@ -12,6 +12,10 @@ Rails.application.routes.draw do
     delete :destroy, on: :collection
   end
   resources :users, only: [:new, :create]
+  resources :program_types, only:[:new, :create] do
+    resources :organization_program_types, only: [:create, :destroy]
+  end
+  # get '/program_types/new', to: 'program_types#new', as: ''
 
 
   get '/', to: 'home#index', as: 'home'
