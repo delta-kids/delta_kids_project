@@ -3,6 +3,7 @@
 
   <div class="container deltakids-logo">
     <div class="pull-right about-us">
+
       <% if user_signed_in? %>
       Hello <%= current_user.first_name %>
       <%= link_to 'Sign Out', sessions_path, method: :delete, class: 'about-us'  %>
@@ -10,9 +11,9 @@
       <%= link_to 'Sign up', new_user_path, class: 'about-us' %>
       <%= link_to 'Log In', new_session_path, class: 'about-us' %>
       <% end %>
-      <a href="#" class="about-us">About Us</a>
-      <a href="#" class="about-us">Live 5-2-1-0</a>
-      <a href="#" class="about-us">Contact Us</a>
+      <a href="<%= about_paht %>" class="about-us">About Us</a>
+      <a href="<%= live_path %>" class="about-us">Live 5-2-1-0</a>
+      <a href="<%= contact_path %>" class="about-us">Contact Us</a>
     </div>
     <%= image_tag ("Delta-logo.png") %>
   </div>
