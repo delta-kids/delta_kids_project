@@ -18,7 +18,7 @@ class HomeController < ApplicationController
   end
 
   def dashboard
-    # render :layout => false
+    render :layout => false
   end
 
   def map
