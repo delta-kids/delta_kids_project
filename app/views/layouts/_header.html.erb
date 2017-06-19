@@ -2,19 +2,19 @@
 <nav class="navbar" style="margin-top: 80px;">
 
   <div class="container deltakids-logo">
-    <div class="pull-right about-us">
+    <div class="pull-right top-right-panel">
 
       <% if user_signed_in? %>
-      Hello <%= current_user.first_name %>
-      <%= link_to 'Sign Out', signout_path, method: :delete, class: 'about-us'  %>
-      <%= link_to 'Dashboard', dashboard_path %>
+      Hello <%= current_user.first_name %>&nbsp
+      <%= link_to 'Sign Out', signout_path, method: :delete, class: 'top-right-panel'  %>&nbsp
+      <%= link_to 'Dashboard', dashboard_path %>&nbsp
       <% else %>
-      <%= link_to 'Sign up', signup_path, class: 'about-us' %>
-      <%= link_to 'Log In', login_path, class: 'about-us' %>
+      <%= link_to 'Sign up', signup_path, class: 'top-right-panel' %>&nbsp
+      <%= link_to 'Log In', login_path, class: 'top-right-panel' %>&nbsp
       <% end %>
-      <a href="<%= about_path %>" class="about-us">About Us</a>
-      <a href="<%= live_path %>" class="about-us">Live 5-2-1-0</a>
-      <a href="<%= contact_path %>" class="about-us">Contact Us</a>
+      <a href="<%= about_path %>" class="top-right-panel">About Us</a>&nbsp
+      <a href="<%= live_path %>" class="top-right-panel">Live 5-2-1-0</a>&nbsp
+      <a href="<%= contact_path %>" class="top-right-panel">Contact Us</a>&nbsp
     </div>
     <%= link_to image_tag("Delta-logo.png"), home_path %>
   </div>
