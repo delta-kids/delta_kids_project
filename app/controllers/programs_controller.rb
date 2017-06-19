@@ -12,9 +12,6 @@ class ProgramsController < ApplicationController
         @programs = Program.all
     end
 
-    def new
-    end
-
     def create
     end
 
