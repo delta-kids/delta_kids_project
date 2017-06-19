@@ -1,0 +1,141 @@
+<style>
+
+.search-field{
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		padding: 15px;
+	}
+.search-textfield{
+    width: 85%;
+    height: auto;
+    margin-right: 15px;
+    border: none;
+    border-bottom: 1px solid #004C81;
+    display: block;
+    /* Search: */
+    font-family: OpenSans;
+    font-size: 64px;
+    color: #004e83;
+    margin-right: 15px;
+    width: 85%;
+    background: 0 0;
+    text-align: left;
+    color: inherit;
+}
+.form-control1{
+
+}
+.happy-rainbow {
+  background-color: #D1F0F4;
+  display: relative;
+  margin-bottom: -100px;
+}
+.search{
+  background-color: #D1F0F4;
+}
+
+.search-field input::placeholder {
+color: #62bff9;
+font-family: OpenSans-Italic;
+}
+.search-result{
+  background: #D1F0F4;
+	padding-top:50px;
+	padding-bottom: 100px;
+  /*border-radius: 10px;
+  width: 90%;
+  height: auto;*/
+
+}
+.search-result-details{
+	background: #fff;
+  width: 92%;
+  height: auto;
+	display: block;
+	margin: 0 auto;
+	padding: 15px;
+
+	border-bottom: 1px solid #004C81;
+}
+.search-result-view-all{
+	background: #fff;
+  width: 92%;
+  height: auto;
+	display: block;
+	margin: 0 auto;
+	padding: 15px;
+	border-top: 1px solid #004C81;
+	border-bottom: 1px solid #004C81;
+
+}
+.search-result-header{
+    font-family: OpenSans;
+    font-size: 24px;
+    color: #000000;
+    letter-spacing: 0;
+
+}
+.search-result-header-view-all{
+	/* View all results: */
+	font-family: OpenSans;
+	font-size: 24px;
+	color: #00A3DA;
+	letter-spacing: 0;
+
+}
+.search-result-category{
+	/* View all results: */
+font-family: OpenSans;
+font-size: 24px;
+color: #00A3DA;
+letter-spacing: 0;
+}
+</style>
+
+<div class="container-fluid search">
+  <br/><br/>
+  <div class="row">
+    <div class="col-md-12">
+      <%= form_for("")do |f|  %>
+        <div class="search-field">
+          <%= f.text_field :search, class: ' search-textfield', placeholder: "Search" %>
+          <%= image_tag "icon-search.svg", class: "icon-search" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid search-result">
+  <div class="search-result-details ">
+    <p class="search-result-header">Working with Young Children who are Learning English as a New Language<p>
+    <p class="search-result-category">Learn</p>
+  </div>
+	<div class="search-result-details ">
+		<p class="search-result-header">Parent child learning together is back!</p>
+		<p class="search-result-category">What's new</p>
+	</div>
+	<div class="search-result-details ">
+		<p class="search-result-header">Tennis lessons for Children</p>
+		<p class="search-result-category">Programs</p>
+	</div>
+  
+	<div class="search-result-view-all ">
+		<p class="search-result-category">View all results</p>
+	</div>
+</div>
+
+
+
+<div class="relative-enabler">
+<div class="container-fluid happy-rainbow">
+  <div class="row">
+    <div class="col-md-12">
+
+      <%= image_tag("rainbow-footer-group.svg", class:"center-block") %>
+
+    </div>
+  </div>
+</div>
+</div>
