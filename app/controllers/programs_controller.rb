@@ -12,6 +12,11 @@ class ProgramsController < ApplicationController
         @programs = Program.all
     end
 
+    def index6_12
+        @age_group = "6-12"
+        @programs = Program.all
+    end
+
     def create
     end
 

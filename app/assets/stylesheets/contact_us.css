@@ -59,7 +59,7 @@
   margin-top: 15px;
 }
 
-#caret-right {
+.caret-right {
    border-left: 4px solid;
    border-bottom: 4px solid transparent;
    border-top: 4px solid transparent;

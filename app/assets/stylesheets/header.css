@@ -69,6 +69,7 @@
 }
 
 .nav-font {
+
   font-family: ‘Open Sans’, sans-serif;
   font-size: 16px;
   display: inline;
@@ -155,4 +156,8 @@ li a {
   height: 75px;
   width: 100%;
   background-color: #D1F0F4
+}
+
+.glyphicon-search {
+
 }
