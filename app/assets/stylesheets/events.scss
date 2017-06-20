@@ -222,3 +222,17 @@
 		width: 100vw !important;
 	  background-color: #D1F0F4;
 	}
+
+	.table-hover {
+		color:white;
+		border-radius: 10px;
+	 	background-color:#00A3DA !important;
+	}
+
+	.table-hover tbody > tr:hover {
+		background-color:#004C81 !important;
+	}
+
+	.table-hover button:hover {
+		background-color: yellow !important;
+	}
