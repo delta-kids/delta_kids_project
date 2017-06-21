@@ -7,6 +7,10 @@
   color: #004C81;
 }
 
+body {
+  (margin-top: 50px;)
+}
+
 .btn-group.open {
   position: static;
 }
