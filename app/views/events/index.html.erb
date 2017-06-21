@@ -1,4 +1,10 @@
+<!-- Please put the events in where they should be -->
+<% @events.each do |event| %>
+  <p><strong>Name: </strong></p><%= link_to event.title, event_path(event) %>
+  <hr>
+<% end %>
 <div class="wholePage">
+
 <!-- First section div -->
 <div class="calendar-section1 calendar-section1-container" id="calendar-section1">
     <div class="container-fluid">
