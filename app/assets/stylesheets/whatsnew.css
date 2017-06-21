@@ -6,6 +6,7 @@
 .whats-new-container {
   margin-bottom: 25px;
   padding-bottom: 15px;
+
 }
 
 .whats-new-calendar {
@@ -69,7 +70,6 @@
   position: relative;
   left: 470px;
   bottom: 35px;
-  z-index: 1;
 }
 .paper-clip-container {
   position: relative;

@@ -1,11 +1,16 @@
 class OrganizationsController < ApplicationController
-# before_action :authenticate_user!
+before_action :authenticate_user!
+
 # ONLY ADMIN
   before_action :find_organization, only: [:show, :edit, :update, :destroy]
 
 
   def new
-    @organization = Organization.new
+    if is_admin?
+      @organization = Organization.new
+    else
+      redirect_to login_path, notice: 'You are not authorized'
+    end
   end
 
 

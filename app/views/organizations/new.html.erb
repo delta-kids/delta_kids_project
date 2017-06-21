@@ -1,4 +1,9 @@
-<div class="container new-admin-form">
+
+<div class="container-fluid new-admin-form">
+  <div class="row">
+    <div class="col-md-2"></div>
+
+    <div class="col-md-8">
   <h2>Create New Organization</h2>
 
   <%= form_for @organization do |f| %>
@@ -20,8 +25,9 @@
     </div>
     <div class="form-group">
       <%= f.label :phone_number %>
-      <%= telephone_field :phone, class: "form-control" %>
+      <%= f.telephone_field :phone, class: "form-control" %>
     </div>
+    
     <div class="form-group">
       <%= f.label :activity_types %>
       <%= f.collection_select :program_type_ids,
@@ -111,4 +117,7 @@
     </div>
 
   <% end %>
+  <div class="col-md-2">
+</div>
+</div>
 </div>

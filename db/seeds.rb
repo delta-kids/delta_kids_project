@@ -49,7 +49,7 @@ User.create([
    is_admin: false,
    phone: '4u'},
   {first_name: 'Carlo',
-   last_name: 'Hung',
+   last_name: 'C.',
    email: 'ca@nowayjose.com',
    password: PASSWORD,
    is_admin: false,
@@ -58,7 +58,7 @@ User.create([
    last_name: 'G.',
    email: 'jg@nowayjose.com',
    password: PASSWORD,
-   is_admin: false,
+   is_admin: true,
    phone: '4u'}
   ])
 

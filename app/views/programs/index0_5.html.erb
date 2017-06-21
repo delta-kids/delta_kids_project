@@ -6,15 +6,15 @@
         <%= image_tag('paperclip.png', class: 'clippy') %>
         <h2 class='age-group'><%= @age_group %> YEAR OLDS</h2>
         <p><a style="color:#00A3DA" href="#">Who to contact <br> for more information about...</a></p>
-        <li><a href="#">Arts & Culture</a></li>
+        <li><a href="/programs/0_5/arts_culture">Arts & Culture</a></li>
         <hr>
-        <li><a href="#">Sports</a></li>
+        <li><a href="/programs/0_5/sports">Sports</a></li>
         <hr>
-        <li><a href="#">Education</a></li>
+        <li><a href="/programs/0_5/education">Education</a></li>
         <hr>
-        <li><a href="#">Community Clubs</a></li>
+        <li><a href="/programs/0_5/parent_child">Parent & Child</a></li>
         <hr>
-        <li><a href="#">Childcare & Preschools</a></li>
+        <li><a href="/programs/0_5/childcare">Childcare & Preschools</a></li>
         <hr>
       </ul>
     </div>
@@ -43,7 +43,8 @@
 
             <div class="col-md-8 col-sm-7">
               <p><%= p.organization.name %></p>
-              <a href="#">Learn More</a>
+              <!-- <a href="#">Learn More</a> -->
+              <%= link_to 'Learn More', learn_more_path %>
             </div>
           </div>
 

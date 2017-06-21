@@ -34,7 +34,7 @@
           <div class="dropdown-col learn-li">
             <li><a href="/surveys">Child Surveys</a></li>
             <hr class="nav-hr">
-            <li><a href="live">Live 5-2-1-0</a></li>
+            <li><a href="/live">Live 5-2-1-0</a></li>
             <hr class="nav-hr">
             <li><a href="/resources">Resources</a></li>
           </div>
@@ -52,19 +52,17 @@
               <li><a href="/programs/0_5"><strong class="dropdown-category">0-5 years</strong></a></li>
               <hr class="nav-hr">
               <div class="programs-li">
-                <li><a href="/programs/0_5">Arts & Culture</a></li>
+                <li><a href="/programs/0_5/arts_culture">Arts & Culture</a></li>
                 <hr class="nav-hr">
-                <li><a href="/programs/0_5">Sports</a></li>
-                <hr class="nav-hr">
-                <li><a href="/programs/0_5">Education</a></li>
+                <li><a href="/programs/0_5/sports">Sports</a></li>
                 <hr class="nav-hr">
               </div>
               <div class="programs-li">
-                <li><a href="/programs/0_5">Education</a></li>
+                <li><a href="/programs/0_5/education">Education</a></li>
                 <hr class="nav-hr">
-                <li><a href="/programs/0_5">Parent & Child</a></li>
+                <li><a href="/programs/0_5/parent_child">Parent & Child</a></li>
                 <hr class="nav-hr">
-                <li><a href="/programs/0_5">Childcare & Preschools</a></li>
+                <li><a href="/programs/0_5/childcare">Childcare & Preschools</a></li>
                 <hr class="nav-hr">
               </div>
             </ul>
@@ -73,19 +71,17 @@
               <li><a href="/programs/6_12"><strong class="dropdown-category">6-12 years</strong></a></li>
               <hr class="nav-hr">
               <div class="programs-li">
-                <li><a href="/programs/6_12">Arts & Culture</a></li>
+                <li><a href="/programs/6_12/arts_culture">Arts & Culture</a></li>
                 <hr class="nav-hr">
-                <li><a href="/programs/6_12">Sports</a></li>
-                <hr class="nav-hr">
-                <li><a href="/programs/6_12">Education</a></li>
+                <li><a href="/programs/6_12/sports">Sports</a></li>
                 <hr class="nav-hr">
               </div>
               <div class="programs-li">
-                <li><a href="/programs/6_12">Education</a></li>
+                <li><a href="/programs/6_12/education">Education</a></li>
                 <hr class="nav-hr">
-                <li><a href="/programs/6_12">Community Clubs</a></li>
+                <li><a href="/programs/6_12/community">Community Clubs</a></li>
                 <hr class="nav-hr">
-                <li><a href="/programs/6_12">Childcare</a></li>
+                <li><a href="/programs/6_12/childcare">Childcare</a></li>
                 <hr class="nav-hr">
               </div>
             </ul>
@@ -102,35 +98,42 @@
           <div class="dropdown-col">
             <ul class="services-ul">
               <li><a href="/services/pregnancy_babies"><strong class="dropdown-category">Pregnancy & Babies</strong></a></li>
-              <li><a href="#">Help in a Crisis</a></li>
+              <!-- <li><a href="#">Help in a Crisis</a></li> -->
+              <li><%= link_to 'Help in a Crisis', '/services/pregnancy_babies/help_crisis' %><li>
               <hr class="nav-hr">
-              <li><a href="#">Baby Health & Development</a></li>
+              <!-- <li><a href="#">Baby Health & Development</a></li> -->
+              <li><%= link_to 'Baby Health & Development', '/services/pregnancy_babies/health' %><li>
               <hr class="nav-hr">
-              <li><a href="#">Supports for Families</a></li>
+              <!-- <li><a href="#">Supports for Families</a></li> -->
+              <li><%= link_to 'Supports for Families', '/services/pregnancy_babies/support' %><li>
             </ul>
 
             <ul class="services-ul">
               <li><a href="/services/children"><strong class="dropdown-category">Children</strong></a></li>
               <hr class="nav-hr">
-              <li><a href="#">Help in a Crisis</a></li>
+              <!-- <li><a href="#">Help in a Crisis</a></li> -->
+              <li><%= link_to 'Help in a Crisis', '/services/children/help_crisis' %><li>
               <hr class="nav-hr">
-              <li><a href="#">Child Advocacy</a></li>
+              <!-- <li><a href="#">Child Advocacy</a></li> -->
+              <li><%= link_to 'Child Advocacy', '/services/children/child_advocacy' %><li>
               <hr class="nav-hr">
-              <li><a href="#">Child Health & Development</a></li>
+              <!-- <li><a href="#">Child Health & Development</a></li> -->
+              <li><%= link_to 'Child Health & Development', '/services/children/health' %><li>
               <hr class="nav-hr">
-              <li><a href="#">Supports for Children</a></li>
+              <!-- <li><a href="#">Supports for Children</a></li> -->
+              <li><%= link_to 'Supports for Children', '/services/children/support' %><li>
             </ul>
 
             <ul class="services-ul">
               <li><a href="/services/families"><strong class="dropdown-category">Families</strong></a></li>
               <hr class="nav-hr">
-              <li><a href="#">Help in a Crisis</a></li>
+              <li><a href="/services/families/help_crisis">Help in a Crisis</a></li>
               <hr class="nav-hr">
-              <li><a href="#">Childcare & Preschool</a></li>
+              <li><a href="/services/families/childcare">Childcare & Preschool</a></li>
               <hr class="nav-hr">
-              <li><a href="#">Assistance with fees</a></li>
+              <li><a href="/services/families/assistance">Assistance with fees</a></li>
               <hr class="nav-hr">
-              <li><a href="#">Supports for Families</a></li>
+              <li><a href="/services/families/support">Supports for Families</a></li>
             </ul>
           </div>
         </ul>
