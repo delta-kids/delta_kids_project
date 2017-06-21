@@ -1,11 +1,11 @@
 class EventsController < ApplicationController
   before_action :find_event, only: [:show, :edit, :update, :destroy]
 
+  # ALL USERS, including ADMIN
 
-  def new
-    @event = Event.new
+  def index
+    @events = Event.all
   end
-
 
   def create
     @event = Event.new event_params
