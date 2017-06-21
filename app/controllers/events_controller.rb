@@ -39,7 +39,7 @@ class EventsController < ApplicationController
 
   private
   def event_params
-    params.require(:event).permit([:title, :start_date, :end_date, :start_time, :event_repeat, :event_location, :address, :cost, :registration, :more_info, :contact_name, :contact_email, :approved])
+    params.require(:event).permit([:title, :start_date, :end_date, :start_time, :event_repeat, :event_location, :address, :cost, :registration, :more_info, :contact_name, :contact_email, :approved, { age_group_ids: [] } ])
   end
   def find_event
     @event = Event.find params[:id]
