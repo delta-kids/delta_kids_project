@@ -1,0 +1,14 @@
+<div class="container new-admin-form">
+  <h1>Add New Activity Type</h1>
+  <%= @activityType.errors.full_messages.join(', ') %>
+
+  <%= form_for @activityType do |f| %>
+  <div class="form-group">
+    <%= f.label :Activity_name %>
+    <%= f.text_field :name, class: "form-control"  %>
+  </div>
+  <div class="form-group">
+    <%= f.submit class: 'btn btn-primary form-control' %>
+  </div>
+  <% end %>
+</div>

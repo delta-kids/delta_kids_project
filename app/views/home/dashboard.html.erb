@@ -1,14 +1,3 @@
-<!-- <%#= stylesheet_link_tag    'application', media: 'all' %> -->
-<!-- <nav class="navbar">
-
-  <div class="container deltakids-logo">
-    <%= image_tag ("Delta-logo.png") %>
-  </div> -->
-
-<!-- </nav> -->
-
-<!-- WOOOOOOOOO -->
-
 <div class="wholePage">
 <!-- First section div -->
 <div class="calendar-section1 calendar-section1-container" id="calendar-section1">
@@ -25,18 +14,15 @@
 		            </div>
 	            </div>
 
-              <!-- <a href="<%= new_organization_path %>" class="about-us">Organizations</a>
-              |
-              <a href="<%= new_event_path %>" class="about-us">Events</a>
-              |
-              <a href="<%= new_resource_path %>" class="about-us">Resources</a> -->
               <div class="button-cluster">
 
-                <a href="<%= new_organization_path %>" class="about-us"><button type="button" href="<%= new_resource_path %>" class="button-seemore">Add an Agency</button></a>
+                <a href="<%= new_organization_path %>" class="about-us"><button type="button" href="<%= new_resource_path %>" class="button-seemore">Add Organization</button></a>
 
                 <a href="<%= new_event_path %>" class="about-us"><button type="button" href="<%= new_resource_path %>" class="button-seemore">Add an Event</button></a>
 
                 <a href="<%= new_resource_path %>" class="about-us"><button type="button" href="<%= new_resource_path %>" class="button-seemore">Add a Resource</button></a>
+
+                <a href="<%= new_program_type_path %>" class="about-us"><button type="button" href="<%= new_resource_path %>" class="button-seemore">New Activity Type</button></a>
 
               </div>
             </div>
