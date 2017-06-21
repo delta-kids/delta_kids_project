@@ -4,6 +4,21 @@
     <div class="col-md-8">
       <h2>Create New Resource</h2>
 
+<<<<<<< HEAD
+  <%= form_for @resource do |f| %>
+    <div class="form-group">
+      <%= f.label :name %>
+      <%= f.text_field :name, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label "Feature Resource?" %>
+      <%= radio_button_tag(:feature, true) %>
+      <%= label_tag(:feature, "Yes") %>
+      <%= radio_button_tag(:feature, false) %>
+      <%= label_tag(:feature, "No") %>
+    </div>
+=======
       <%= form_for "" do |f| %>
         <div class="form-group">
           <%= f.label :name %>
@@ -17,11 +32,37 @@
           <%= radio_button_tag(:is_featured, false) %>
           <%= label_tag(:is_featured, "No") %>
         </div>
+>>>>>>> integration
 
         <!--  FEATURE UNTIL add calender -->
 
         <!--  REMOVE FEATURE FROM SITE is this even necessary? -->
 
+<<<<<<< HEAD
+    <div class="form-group">
+      <%= f.label "Resource is about the situation in: " %>
+      <br>
+      <%= radio_button_tag(:feature_location, "Delta") %>
+      <%= label_tag(:feature_location, "Delta") %>
+      <%= radio_button_tag(:feature_location, "BC") %>
+      <%= label_tag(:feature_location, "BC") %>
+      <%= radio_button_tag(:feature_location, "Canada") %>
+      <%= label_tag(:feature_location, "Canada") %>
+      <%= radio_button_tag(:feature_location, "Not Relevent") %>
+      <%= label_tag(:feature_location, "Not Relevent") %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :Topic %>
+      <%= f.collection_select :topic_ids,
+        Topic.all,
+        :id,
+        :name,
+        {},
+        { multiple: true, class: 'chosen-select'}
+        %>
+    </div>
+=======
         <div class="form-group">
           <%= f.label "Resource is about the situation in: " %>
           <br>
@@ -45,6 +86,7 @@
             { multiple: true, class: 'chosen-select'}
             %>
         </div>
+>>>>>>> integration
 
         <div class="form-group">
           <%#= f.label :age_group %>
@@ -58,6 +100,13 @@
           <%#= label_tag(:age, "all") %>
         </div>
 
+<<<<<<< HEAD
+
+    <!-- <div class="form-group">
+      <%= f.label :tags %>
+      <%= f.text_field :tags, class: "form-control" %>
+    </div> -->
+=======
         <div>
           <%= f.label :topic %>
           <%= check_box_tag(:physical_health) %>
@@ -78,6 +127,7 @@
           <%= f.label :tags %>
           <%= f.text_field :tags, class: "form-control" %>
         </div>
+>>>>>>> integration
 
         <div class="form-group">
           <%= f.label :description %>
@@ -94,10 +144,45 @@
           <%= email_field(:user, :address, class: "form-control") %>
         </div>
 
+<<<<<<< HEAD
+    <h1>Dates</h1>
+
+      <label for='start_date'>Start Date</label>
+      <input type="text" class='datepicker form-control' placeholder="MM/DD/YYYY" >
+
+      <script type="text/javascript">
+        $(document).ready(function(){
+          $('.datepicker').datepicker();
+        });
+      </script>
+
+      <label for='end_date'>End Date</label>
+      <input type="text" class='datepicker form-control' placeholder="MM/DD/YYYY" >
+
+      <script type="text/javascript">
+        $(document).ready(function(){
+          $('.datepicker').datepicker();
+        });
+      </script>
+
+    <h1> Times </h1>
+    <div class="form-group">
+      <%= f.label :"Start Time" %>
+      <%= f.text_field :feature_start_time, class: 'form-control' %>
+      <%= f.label :"End Time" %>
+      <%= f.text_field :feature_end_time, class: 'form-control' %>
+    </div>
+
+    <br>
+    <div class="form-group">
+      <%= f.submit class: 'btn btn-primary form-control' %>
+    </div>
+=======
         <br>
         <div class="form-group">
           <%= f.submit class: 'btn btn-primary form-control' %>
         </div>
+>>>>>>> integration
 
       <% end %>
     </div>
