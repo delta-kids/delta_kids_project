@@ -84,37 +84,47 @@
 	            </div>
 
 
-	            <p class="calendar-header">Featured</p>
+              <% @events.each do |event| %>
+
 	            <div class="calendar-subsection2-card">
-		            <%= image_tag "https://user-images.githubusercontent.com/19618674/27262706-51744010-5411-11e7-92cf-83fcbf748a10.png", class: "calendar-subsection2-image" %>
+                <% num = rand(1..3) %>
+		            <%= image_tag "event#{num}.png", class: "calendar-subsection2-image" %>
 
 		            <div class="calendar-subsection2-text" style="background-color: #fff">
 			            <div class="calendar-subsection2-details">
-				            <p class="calendar-subsection2-header2">Family Empowerment Program</p>
+				            <p class="calendar-subsection2-header2"><%= event.title %></p>
 				            <div class="event-info">
 					            <div>
 						            <%= image_tag "icon-calendar.svg", class: "event-info-icon" %>
-						            <p class="event-info-txt-bold">Event</p>
-						            <p class="event-info-txt"> - 04/01/17</p>
+						            <p class="event-info-txt-bold">Date:</p>
+						            <p class="event-info-txt"><%= event.start_date %></p>
+                        <p class="event-info-txt"> - <%= event.end_date %></p>
 					            </div>
 					            <div class="event-info1">
 						            <%= image_tag "icon-clock.svg", class: "event-info-icon" %>
-						            <p class="event-info-txt">4:30pm</p>
+                        <% if event.start_time %>
+						            <p class="event-info-txt"><%= event.start_time.strftime("%H:%M:%S") %></p>
+                        <% end %>
+                        <% if event.end_time %>
+                        <p class="event-info-txt"> - <%= event.end_time.strftime("%H:%M:%S") %></p>
+                        <% end %>
 					            </div>
 					            <div class="event-info1">
 						            <%= image_tag "icon-baby.svg", class: "event-info-icon" %>
-						            <p class="event-info-txt">0-6 year olds</p>
+                        <% event.age_groups.each do |age| %>
+						            <p class="event-info-txt"><%= age.age %></p>
+                        <% end %>
 					            </div>
 					            <div class="event-info1">
 						            <%= image_tag "icon-tag.svg", class: "event-info-icon" %>
-						            <p class="event-info-txt">Free</p>
+						            <p class="event-info-txt"><%= event.cost %></p>
 					            </div>
 					            <div class="event-info1">
 						            <%= image_tag "icon-location-pin.svg", class: "event-info-icon" %>
-						            <p class="event-info-txt">Tsawwassen</p>
+						            <p class="event-info-txt"><%= event.event_location %></p>
 					            </div>
 				            </div>
-				            <p class="event-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas lobortis sit amet orci sit amet laoreet. Praesent aliquam sem at tincidunt bibendum. Mauris dignissim scelerisque enim, quis porttitor orci</p>
+				            <p class="event-paragraph"><%= event.description %></p>
 				            <div class="event-info2">
 					            <!-- <p  class="event-info-bold2">Learn More</p> -->
                       <p><%= link_to 'Learn More', learn_more_path, class: "event-info-bold2" %></p>
@@ -124,91 +134,13 @@
 		            </div>
 
 	            </div>
+              <br>
+              <br>
+              <br>
+
+              <% end %>
 
 
-
-	            <p class="calendar-header">Upcoming</p>
-	            <div class="calendar-subsection2-card">
-		            <%= image_tag "https://user-images.githubusercontent.com/19618674/27262711-7785f0c8-5411-11e7-91be-1e22ccdece76.png", class: "calendar-subsection2-image" %>
-
-		            <div class="calendar-subsection2-text" style="background-color: #fff">
-			            <div class="calendar-subsection2-details">
-				            <p class="calendar-subsection2-header2">Strong Start</p>
-				            <div class="event-info">
-					            <div>
-						            <%= image_tag "icon-calendar.svg", class: "event-info-icon" %>
-						            <p class="event-info-txt-bold">Event</p>
-						            <p class="event-info-txt"> - 04/01/17</p>
-					            </div>
-					            <div class="event-info1">
-						            <%= image_tag "icon-clock.svg", class: "event-info-icon" %>
-						            <p class="event-info-txt">2:30pm</p>
-					            </div>
-					            <div class="event-info1">
-						            <%= image_tag "icon-baby.svg", class: "event-info-icon" %>
-						            <p class="event-info-txt">0-6 year olds</p>
-					            </div>
-					            <div class="event-info1">
-						            <%= image_tag "icon-tag.svg", class: "event-info-icon" %>
-						            <p class="event-info-txt">Free</p>
-					            </div>
-					            <div class="event-info1">
-						            <%= image_tag "icon-location-pin.svg", class: "event-info-icon" %>
-						            <p class="event-info-txt">Ladner</p>
-					            </div>
-				            </div>
-				            <p class="event-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas lobortis sit amet orci sit amet laoreet. Praesent aliquam sem at tincidunt bibendum. Mauris dignissim scelerisque enim, quis porttitor orci</p>
-				            <div class="event-info2">
-					            <!-- <p  class="event-info-bold2">Learn More</p> -->
-                      <p><%= link_to 'Learn More', learn_more_path, class: "event-info-bold2" %></p>
-					            <%= image_tag "cursor.svg", class: "event-info-icon2" %>
-				            </div>
-			            </div>
-		            </div>
-
-	            </div>
-
-
-	            <br/><br/>
-	            <div class="calendar-subsection2-card">
-		            <%= image_tag "https://user-images.githubusercontent.com/19618674/27262719-967b5fb8-5411-11e7-8b6d-04ce3ac6b024.png", class: "calendar-subsection2-image" %>
-
-		            <div class="calendar-subsection2-text" style="background-color: #fff">
-			            <div class="calendar-subsection2-details">
-				            <p class="calendar-subsection2-header2">Strong Start</p>
-				            <div class="event-info">
-					            <div>
-						            <%= image_tag "icon-calendar.svg", class: "event-info-icon" %>
-						            <p class="event-info-txt-bold">Event</p>
-						            <p class="event-info-txt"> - 04/05/17</p>
-					            </div>
-					            <div class="event-info1">
-						            <%= image_tag "icon-clock.svg", class: "event-info-icon" %>
-						            <p class="event-info-txt">2:30pm</p>
-					            </div>
-					            <div class="event-info1">
-						            <%= image_tag "icon-baby.svg", class: "event-info-icon" %>
-						            <p class="event-info-txt">0-6 year olds</p>
-					            </div>
-					            <div class="event-info1">
-						            <%= image_tag "icon-tag.svg", class: "event-info-icon" %>
-						            <p class="event-info-txt">Free</p>
-					            </div>
-					            <div class="event-info1">
-						            <%= image_tag "icon-location-pin.svg", class: "event-info-icon" %>
-						            <p class="event-info-txt">North Delta</p>
-					            </div>
-				            </div>
-				            <p class="event-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas lobortis sit amet orci sit amet laoreet. Praesent aliquam sem at tincidunt bibendum. Mauris dignissim scelerisque enim, quis porttitor orci</p>
-				            <div class="event-info2">
-					            <!-- <p  class="event-info-bold2">Learn More</p> -->
-                      <p><%= link_to 'Learn More', learn_more_path, class: "event-info-bold2" %></p>
-					            <%= image_tag "cursor.svg", class: "event-info-icon2" %>
-				            </div>
-			            </div>
-		            </div>
-
-	            </div>
 
               <div id='button-seemore'>SEE MORE</div>
 

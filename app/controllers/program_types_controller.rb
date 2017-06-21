@@ -1,6 +1,10 @@
 class ProgramTypesController < ApplicationController
   def new
-    @activityType = ProgramType.new
+    if is_admin?
+      @activityType = ProgramType.new
+    else
+      redirect_to login_path, notice: 'You are not authorized'
+    end
   end
 
   def create

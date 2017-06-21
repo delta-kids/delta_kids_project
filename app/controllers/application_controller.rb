@@ -20,4 +20,9 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def is_admin?
+    current_user.is_admin
+  end
+  helper_method :is_admin?
+
 end
