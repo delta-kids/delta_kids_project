@@ -4,6 +4,7 @@ class EventsController < ApplicationController
   # ALL USERS, including ADMIN
 
   def index
+    @events = Event.all
   end
 
   def new
