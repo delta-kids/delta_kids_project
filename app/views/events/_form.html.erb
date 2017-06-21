@@ -2,7 +2,7 @@
 
   <h2>Create New Event</h2>
 
-  <%= form_for("")do |f|  %>
+  <%= form_for @event do |f|  %>
 
   <div class="form-group">
     <%= f.label :title %>
@@ -32,9 +32,9 @@
   <h1> Times </h1>
   <div class="form-group">
     <%= f.label :"Start Time" %>
-    <%= f.text_field :startTime, class: 'form-control' %>
+    <%= f.text_field :start_time, class: 'form-control' %>
     <%= f.label :"End Time" %>
-    <%= f.text_field :endTime, class: 'form-control' %>
+    <%= f.text_field :end_time, class: 'form-control' %>
   </div>
 <!-- ================== -->
 
@@ -73,6 +73,7 @@
     { multiple: true, class: 'chosen-select'}
     %>
 </div>
+
 
   <div class="form-group">
     <%#= f.label :age_group %>
@@ -139,12 +140,12 @@
 
   <div class="form-group">
     <%= f.label :"Contact name" %>
-    <%= f.text_field :contactName, class: 'form-control' %>
+    <%= f.text_field :contact_name, class: 'form-control' %>
   </div>
 
   <div class="form-group">
     <%= f.label :"Contact email" %>
-    <%= f.email_field :email, class: 'form-control' %>
+    <%= f.email_field :contact_email, class: 'form-control' %>
   </div>
 
   <%= f.submit class: 'btn btn-primary form-control', style: 'margin-bottom: 30px;' %>
