@@ -87,7 +87,8 @@
               <% @events.each do |event| %>
 
 	            <div class="calendar-subsection2-card">
-		            <%= image_tag "https://user-images.githubusercontent.com/19618674/27262706-51744010-5411-11e7-92cf-83fcbf748a10.png", class: "calendar-subsection2-image" %>
+                <% num = rand(1..3) %>
+		            <%= image_tag "event#{num}.png", class: "calendar-subsection2-image" %>
 
 		            <div class="calendar-subsection2-text" style="background-color: #fff">
 			            <div class="calendar-subsection2-details">
