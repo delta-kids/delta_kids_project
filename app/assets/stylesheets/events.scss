@@ -236,3 +236,9 @@
 	.table-hover button:hover {
 		background-color: yellow !important;
 	}
+
+	#add-event-btn-ac {
+		display: flex;
+		justify-content: center;
+		margin-bottom: 25px;
+	}
