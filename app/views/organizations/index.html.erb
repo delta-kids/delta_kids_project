@@ -1,0 +1,8 @@
+<div class="new-admin-form">
+  <h1>Organizations</h1>
+  <br>
+  <% @organizations.each do |organization| %>
+  <p><strong>Name: </strong></p><%= link_to organization.name, organization_path(organization) %>
+  <hr>
+  <% end %>
+</div>
