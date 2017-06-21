@@ -1,5 +1,5 @@
 class Event < ApplicationRecord
-  belongs_to :organization
+  # belongs_to :organization, :class, optional: true
 
   has_many :EventTaggings, dependent: :destroy
   has_many :tags, through: :EventTaggings

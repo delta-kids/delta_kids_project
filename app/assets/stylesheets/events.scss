@@ -79,6 +79,8 @@
 	// 	border-top: 1px solid #aeaeae !important;
 	// }
 	.calendar-subsection2-image{
+		padding-top:45px;
+		background-color:#D1F0F4;
 		width: 100%;
 		height: auto;
 	}
@@ -107,8 +109,7 @@
 		font-family: BreeSerif-Regular;
 		font-size: 30px;
 		color: #004C81;
-
-		padding-top: 10px;
+		padding-bottom:30px;
 	}
 	.calendar-subsection2-header2{
 			/* Family Empowerment P: */
@@ -125,6 +126,7 @@
 		background-color: #fff;
 	}
 	.calendar-subsection2-card{
+		margin-bottom: 30px;
 		background-color: #fff;
 	}
 	.event-info-txt-bold{
@@ -219,4 +221,18 @@
 	  padding:20px;
 		width: 100vw !important;
 	  background-color: #D1F0F4;
+	}
+
+	.table-hover {
+		color:white;
+		border-radius: 10px;
+	 	background-color:#00A3DA !important;
+	}
+
+	.table-hover tbody > tr:hover {
+		background-color:#004C81 !important;
+	}
+
+	.table-hover button:hover {
+		background-color: yellow !important;
 	}

@@ -77,7 +77,8 @@
       <h5 class="posted-on">Posted on: 2017-01-01</h5>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
       <i><%= image_tag("cursor.svg", class:"img-responsive cursor") %></i>
-      <p class="learn-more">Learn More</p>
+      <!-- <p class="learn-more">Learn More</p> -->
+      <p><%= link_to 'Learn More', learn_more_path, class: "learn-more" %></p>
 
     </div>
     <div class="col-md-4">
@@ -86,7 +87,8 @@
       <h5 class="posted-on">Posted on: 2017-01-01</h5>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
       <i><%= image_tag("cursor.svg", class:"img-responsive cursor") %></i>
-      <p class="learn-more">Learn More</p>
+      <!-- <p class="learn-more">Learn More</p> -->
+      <p><%= link_to 'Learn More', learn_more_path, class: "learn-more" %></p>
 
     </div>
     <div class="col-md-4">
@@ -95,7 +97,8 @@
       <h5 class="posted-on">Posted on: 2017-01-01</h5>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
       <i><%= image_tag("cursor.svg", class:"img-responsive cursor") %></i>
-      <p class="learn-more">Learn More</p>
+      <!-- <p class="learn-more">Learn More</p> -->
+      <p><%= link_to 'Learn More', learn_more_path, class: "learn-more" %></p>
     </div>
   </div>
 
@@ -113,6 +116,6 @@
   <div classs="row">
   <div class="col-xs-12 background-color">
       <br>
-      <%= image_tag('bus.png', class: 'bus center-block') %>
+      <a href="<%= map_path %>"><%= image_tag('bus.png', class: 'bus center-block') %></a>
   </div>
 </div>

@@ -6,14 +6,14 @@
       <div class="pull-right top-right-panel">
         <% if user_signed_in? %>
         Hello <%= current_user.first_name %>&nbsp
-        <%= link_to 'Sign Out', signout_path, method: :delete, class: 'top-right-panel'  %>&nbsp
-        <%= link_to 'Dashboard', dashboard_path %>&nbsp
+        <%= link_to 'Sign Out', signout_path, method: :delete, class: 'top-right-panel'  %>
+        <%= link_to 'Dashboard', dashboard_path %>&nbsp&nbsp&nbsp&nbsp&nbsp
         <% else %>
         <%= link_to 'Sign up', signup_path, class: 'top-right-panel' %>&nbsp
         <%= link_to 'Log In', login_path, class: 'top-right-panel' %>&nbsp
         <% end %>
         <a href="<%= about_path %>" class="top-right-panel">About Us</a>&nbsp
-        <a href="<%= live_path %>" class="top-right-panel">Live 5-2-1-0</a>&nbsp
+        <a href="<%= live_path %>" class="top-right-panel">Live 5-2-1-0</a>
         <a href="<%= contact_path %>" class="top-right-panel">Contact Us</a>&nbsp
       </div>
       <div id="delta-image">
@@ -27,14 +27,14 @@
 
       <div class="btn-group" role="group">
         <button type="button" class="head-btn btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <p class="nav-font">LEARNING</p>
+          <p class="nav-font ">LEARNING</p>
           <span class="caret"></span>
         </button>
         <ul class="dropdown-menu header-menu bullet">
           <div class="dropdown-col learn-li">
             <li><a href="/surveys">Child Surveys</a></li>
             <hr class="nav-hr">
-            <li><a href="live">Live 5-2-1-0</a></li>
+            <li><a href="/live">Live 5-2-1-0</a></li>
             <hr class="nav-hr">
             <li><a href="/resources">Resources</a></li>
           </div>
@@ -52,19 +52,19 @@
               <li><a href="/programs/0_5"><strong class="dropdown-category">0-5 years</strong></a></li>
               <hr class="nav-hr">
               <div class="programs-li">
-                <li><a href="#">Arts & Culture</a></li>
+                <li><a href="/programs/0_5">Arts & Culture</a></li>
                 <hr class="nav-hr">
-                <li><a href="#">Sports</a></li>
+                <li><a href="/programs/0_5">Sports</a></li>
                 <hr class="nav-hr">
-                <li><a href="#">Education</a></li>
+                <li><a href="/programs/0_5">Education</a></li>
                 <hr class="nav-hr">
               </div>
               <div class="programs-li">
-                <li><a href="#">Education</a></li>
+                <li><a href="/programs/0_5">Education</a></li>
                 <hr class="nav-hr">
-                <li><a href="#">Parent & Child</a></li>
+                <li><a href="/programs/0_5">Parent & Child</a></li>
                 <hr class="nav-hr">
-                <li><a href="#">Childcare & Preschools</a></li>
+                <li><a href="/programs/0_5">Childcare & Preschools</a></li>
                 <hr class="nav-hr">
               </div>
             </ul>
@@ -73,19 +73,19 @@
               <li><a href="/programs/6_12"><strong class="dropdown-category">6-12 years</strong></a></li>
               <hr class="nav-hr">
               <div class="programs-li">
-                <li><a href="#">Arts & Culture</a></li>
+                <li><a href="/programs/6_12">Arts & Culture</a></li>
                 <hr class="nav-hr">
-                <li><a href="#">Sports</a></li>
+                <li><a href="/programs/6_12">Sports</a></li>
                 <hr class="nav-hr">
-                <li><a href="#">Education</a></li>
+                <li><a href="/programs/6_12">Education</a></li>
                 <hr class="nav-hr">
               </div>
               <div class="programs-li">
-                <li><a href="#">Education</a></li>
+                <li><a href="/programs/6_12">Education</a></li>
                 <hr class="nav-hr">
-                <li><a href="#">Community Clubs</a></li>
+                <li><a href="/programs/6_12">Community Clubs</a></li>
                 <hr class="nav-hr">
-                <li><a href="#">Childcare</a></li>
+                <li><a href="/programs/6_12">Childcare</a></li>
                 <hr class="nav-hr">
               </div>
             </ul>
@@ -102,23 +102,30 @@
           <div class="dropdown-col">
             <ul class="services-ul">
               <li><a href="/services/pregnancy_babies"><strong class="dropdown-category">Pregnancy & Babies</strong></a></li>
-              <li><a href="#">Help in a Crisis</a></li>
+              <!-- <li><a href="#">Help in a Crisis</a></li> -->
+              <li><%= link_to 'Help in a Crisis', learn_more_path %><li>
               <hr class="nav-hr">
-              <li><a href="#">Baby Health & Development</a></li>
+              <!-- <li><a href="#">Baby Health & Development</a></li> -->
+              <li><%= link_to 'Baby Health & Development', learn_more_path %><li>
               <hr class="nav-hr">
-              <li><a href="#">Supports for Families</a></li>
+              <!-- <li><a href="#">Supports for Families</a></li> -->
+              <li><%= link_to 'Supports for Families', learn_more_path %><li>
             </ul>
 
             <ul class="services-ul">
               <li><a href="/services/children"><strong class="dropdown-category">Children</strong></a></li>
               <hr class="nav-hr">
-              <li><a href="#">Help in a Crisis</a></li>
+              <!-- <li><a href="#">Help in a Crisis</a></li> -->
+              <li><%= link_to 'Help in a Crisis', learn_more_path %><li>
               <hr class="nav-hr">
-              <li><a href="#">Child Advocacy</a></li>
+              <!-- <li><a href="#">Child Advocacy</a></li> -->
+              <li><%= link_to 'Child Advocacy', learn_more_path %><li>
               <hr class="nav-hr">
-              <li><a href="#">Child Health & Development</a></li>
+              <!-- <li><a href="#">Child Health & Development</a></li> -->
+              <li><%= link_to 'Child Health & Development', learn_more_path %><li>
               <hr class="nav-hr">
-              <li><a href="#">Supports for Children</a></li>
+              <!-- <li><a href="#">Supports for Children</a></li> -->
+              <li><%= link_to 'Supports for Children', learn_more_path %><li>
             </ul>
 
             <ul class="services-ul">
@@ -137,7 +144,7 @@
       </div>
 
       <a href="<%= whatsnew_path %>" class="header-titles"><p class="nav-font">WHAT'S NEW?</p></a>
-      <a href="<%= map_path %>"><p class ="nav-font">MAP</p></a>
+      <a href="<%= map_path %>" class="header-titles"><p class ="nav-font">MAP</p></a>
       <a href="<%= search_path %>"><p class ="glyphicon glyphicon-search nav-font"></p></a>
 
     </div>

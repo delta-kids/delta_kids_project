@@ -26,6 +26,8 @@ Rails.application.routes.draw do
 
   get '/programs/6_12', to: 'programs#index6_12'
 
+  get '/learn_more', to: 'programs#learn_more', as: 'learn_more'
+
   get '/services/pregnancy_babies', to: 'services#pregnancy_babies'
 
   get '/services/families', to: 'services#families'
@@ -35,13 +37,14 @@ Rails.application.routes.draw do
   get '/live', to: 'home#live', as: 'live'
   get '/dashboard', to: 'home#dashboard', as: 'dashboard'
   get '/map', to: 'home#map', as: 'map'
+
   get '/search', to: 'home#search', as: 'search'
+  post '/search', to: 'home#search'
+
   get '/whatsnew', to: 'home#whatsnew', as: 'whatsnew'
   get '/surveys', to: 'home#surveys', as: 'surveys'
 
   post '/contact_submit', to: 'home#submit', as: 'contacted'
-
-
 
   resources :resources
 

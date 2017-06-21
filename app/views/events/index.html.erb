@@ -1,4 +1,5 @@
 <div class="wholePage">
+
 <!-- First section div -->
 <div class="calendar-section1 calendar-section1-container" id="calendar-section1">
     <div class="container-fluid">
@@ -82,7 +83,6 @@
 		            </div>
 	            </div>
 
-	            <p class="calendar-header">All Events</p>
 
               <% @events.each do |event| %>
 
@@ -125,7 +125,8 @@
 				            </div>
 				            <p class="event-paragraph"><%= event.description %></p>
 				            <div class="event-info2">
-					            <p  class="event-info-bold2">Learn More</p>
+					            <!-- <p  class="event-info-bold2">Learn More</p> -->
+                      <p><%= link_to 'Learn More', learn_more_path, class: "event-info-bold2" %></p>
 					            <%= image_tag "cursor.svg", class: "event-info-icon2" %>
 				            </div>
 			            </div>
@@ -137,6 +138,7 @@
               <br>
 
               <% end %>
+
 
 
               <div id='button-seemore'>SEE MORE</div>
