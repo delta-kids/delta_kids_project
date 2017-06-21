@@ -15,12 +15,13 @@
   color:#00A3DA;
   width: 60%;
   border-radius: 10px;
+  text-align: center;
 }
 
-#survey-results  > a {
+.pdf-links {
 
+  color: black;
 }
-
 #latest-news {
   font-family: ‘Open Sans’, sans-serif;
   margin: 10px;
