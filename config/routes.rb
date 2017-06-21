@@ -35,7 +35,7 @@ Rails.application.routes.draw do
   get '/live', to: 'home#live', as: 'live'
   get '/dashboard', to: 'home#dashboard', as: 'dashboard'
   get '/map', to: 'home#map', as: 'map'
-  
+
   get '/search', to: 'home#search', as: 'search'
   post '/search', to: 'home#search'
 
@@ -43,8 +43,6 @@ Rails.application.routes.draw do
   get '/surveys', to: 'home#surveys', as: 'surveys'
 
   post '/contact_submit', to: 'home#submit', as: 'contacted'
-
-
 
   resources :resources
 
