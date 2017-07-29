@@ -1,24 +1,9 @@
-# README
+# Delta Kids Website
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## What it is
 
-Things you may want to cover:
+A website created for Delta Kids, a non-profit organization. Created over a three day period, the Delta Kids resource provides information for new parents, and children aged 0-12 in Delta, BC.
 
-* Ruby version
+## Technologies
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Delta Kids was built collaboratively with an eight person team using Ruby on Rails and Bootstrap, and a PostgreSQL database.

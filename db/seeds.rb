@@ -59,7 +59,13 @@ User.create([
    email: 'jg@nowayjose.com',
    password: PASSWORD,
    is_admin: true,
-   phone: '4u'}
+   phone: '4u'},
+   {first_name: 'Tam',
+    last_name: 'K',
+    email: 'tam@codecore.com',
+    password: PASSWORD,
+    is_admin: true,
+    phone: '4u'}
   ])
 
 
