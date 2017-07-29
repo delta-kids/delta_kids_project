@@ -9,13 +9,11 @@
         <%= link_to 'Sign Out', signout_path, method: :delete, class: 'top-right-panel'  %>
         <%= link_to 'Dashboard', dashboard_path %>&nbsp&nbsp&nbsp&nbsp&nbsp
         <% else %>
-        <!-- change sign up to New User -->
-        <%= link_to 'New User', signup_path, class: 'top-right-panel' %>&nbsp
+        <%= link_to 'Sign up', signup_path, class: 'top-right-panel' %>&nbsp
         <%= link_to 'Log In', login_path, class: 'top-right-panel' %>&nbsp
         <% end %>
         <a href="<%= about_path %>" class="top-right-panel">About Us</a>&nbsp
-        <!-- Client asked to remove Live, I'll just comment it out for reference -->
-        <!-- <a href="<#%= live_path %>" class="top-right-panel">Live 5-2-1-0</a> -->
+        <a href="<%= live_path %>" class="top-right-panel">Live 5-2-1-0</a>
         <a href="<%= contact_path %>" class="top-right-panel">Contact Us</a>&nbsp
       </div>
       <div id="delta-image">
