@@ -77,6 +77,26 @@ nav {
   position: absolute;
 }
 
+/* STYLES TO STACK LEARNING DROPDOWN */
+.learning-dropdown-menu {
+  background-color: #004C81 !important;
+  min-width: 200px !important;
+  color: white !important;
+}
+.learning-dropdown-div {
+  font-size: 20px;
+  font-family: ‘Open Sans’, sans-serif;
+  padding: 10px !important;
+}
+.learning-dropdown-div  > li > a {
+  text-decoration: none;
+}
+
+.learning-dropdown-div  > li > a:hover {
+  color:#00A3DA !important;
+}
+/* END OF LEARNING DROPDOWN BUTTON */
+
 .nav-font {
   font-family: ‘Open Sans’, sans-serif;
   font-size: 20px;
@@ -90,6 +110,7 @@ nav {
   font-size: 20px;
   font-family: ‘Open Sans’, sans-serif;
   display: flex;
+
   justify-content: space-around;
 }
 
