@@ -1,9 +1,13 @@
-#grey-me {
+.row {
+  margin: 0px !important;
+}
+
+#grey-font-color {
   color: grey;
 }
 
 #survey-results {
-  font-family: ‘Open Sans’, sans-serif;
+  font-family: 'Open Sans', sans-serif;
   margin: 10px;
   padding:10px;
   background-color: white;
@@ -18,12 +22,17 @@
   color: black;
 }
 #latest-news {
-  font-family: ‘Open Sans’, sans-serif;
+  font-family: 'Open Sans', sans-serif;
   margin: 10px;
   background-color: white;
   border-radius: 10px;
   padding:10px;
   width:40%;
+}
+
+#latest-news ul {
+  padding-right: 20px;
+  padding-left: 20px;
 }
 
 #fatherandkids {
@@ -41,6 +50,6 @@
 }
 
 .bree-font {
-  font-family: BreeSerif-Regular;
+  font-family: 'Bree Serif', serif;
   color:#004C81;
 }
