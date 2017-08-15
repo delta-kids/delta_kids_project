@@ -7,28 +7,30 @@
 }
 
 .new-resources-heading {
-  padding: 50px 0 50px 0;
+  padding: 40px 0 40px 0;
 }
 
 .plan-for-living-heading {
-  padding: 50px 0 50px 0;
+  padding: 25px 0 25px 0;
 }
 
 .resources-text-body {
+  font-family: 'Open Sans', sans-serif;
   font-size: 20px;
 }
 .section1-text {
   font-size: 20px;
   font-family: 'Open Sans', sans-serif;
-  padding-bottom:40px;
-  padding-top:80px;
+  padding-bottom:20px;
+  padding-top:60px;
 }
 
 .live5210-background {
-  height: 275px;
+  height: 300px;
   display: flex;
   justify-content: center;
   width: 100%;
+  margin-bottom: 1%;
 }
 
 #live5210-img {
@@ -36,12 +38,24 @@
   width:100%;
 }
 
+#carrot-image {
+  position: relative;
+  left: -5%;
+  height: 100%;
+  width: 100%;
+}
+
+#lets-go-image {
+  position: relative;
+  left: -5%;
+  height: 100%;
+  width: 100%;
+}
 
 .live52102-background {
   height: 365px;
   margin: auto;
   width: 100%;
-  align-self: center;
 }
 
 

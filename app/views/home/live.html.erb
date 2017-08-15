@@ -1,8 +1,8 @@
-<div class="live-page-container">
-  <div class="container-fluid live5210-background">
+<div class="live-page-container container-fluid">
+  <div class="container live5210-background">
     <%= image_tag("live.png", id: "live5210-img") %>
   </div>
-  <div class="container" style="border-radius: 5px; background-color: white; padding: 10px 0 20px 0">
+  <div class="container" style="border-radius: 5px; background-color: white; padding: 10px 50px 40px 50px">
     <div id="section1-heading">
       <h3 class="live5210">What is "live 5210"?</h3>
     </div>
@@ -25,7 +25,7 @@
 
         <!--  YOUTUBE EMBED  -->
 
-        <div class="container-fluid">
+        <div class="container">
           <iframe width="560" height="315" src="https://www.youtube.com/embed/D9K0LSgGjwY" frameborder="0" allowfullscreen></iframe>
         </div>
 
@@ -42,17 +42,17 @@
         </div>
 
 
-        <div class="container-fluid plan-for-living-heading">
+        <div class="container plan-for-living-heading">
           <h3>Plan For Fun Living 5210!</h3>
         </div>
 
         <div class="container-fluid">
           <div class="row">
-            <div class="col-md-4">
-              <%= image_tag "carrot.png", class: "carrot-image img-responsive"%>
+            <div class="col-sm-4 col-md-4">
+              <%= image_tag "carrot.png", id: "carrot-image", class: "img-responsive"%>
             </div>
 
-            <div class="col-md-7 resources-text-body">
+            <div class="col-sm-8 col-md-8 resources-text-body">
               <p>Get Rewards for Healthy Choices!
                 Screen Shot 2016-03-14 at 1.13.32 PMBC’s
                 Ministry of Health & the Public Health Agency of
@@ -68,17 +68,17 @@
               </div>
             </div>
 
-            <div class="container-fluid new-resources-heading">
+            <div class="container new-resources-heading">
               <h3>New Resources to Live 5-2-1-0</h3>
             </div>
 
             <div class="container-fluid">
               <div class="row">
-                <div class="col-md-4">
-                  <%= image_tag "5210-lets-go@2x.png", class: "lets-go-image img-responsive" %>
+                <div class="col-sm-4 col-md-4">
+                  <%= image_tag "5210-lets-go@2x.png", id: "lets-go-image", class: "img-responsive" %>
                 </div>
 
-                <div class="col-md-7 resources-text-body">
+                <div class="col-sm-8 col-md-8 resources-text-body">
                   <p>See below for some more information and ideas to
                     Live 5210 with your children!</p>
                     <p>Screen Time to Live 5210 – learn more about healthy
@@ -91,7 +91,6 @@
                   </div>
                 </div>
               </div>
-            </div>
 
             <!-- Rainbow Footer-->
 
