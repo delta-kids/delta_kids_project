@@ -5,11 +5,12 @@
 }
 
 #main-body {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding:5%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
+
 
 .main {
   padding-top: 30px;
@@ -60,10 +61,6 @@
   font-family: 'Open Sans Semi-Bold', sans-serif;
 }
 
-#filler {
-  height: 317px;
-}
-
 #goal {
   font-family: 'Open Sans', sans-serif;
   color: #00A3DA;
@@ -93,11 +90,24 @@
   margin-right: 0px;
 }
 
+#handshake {
+
+}
+
 .cursor2 {
   width: 7px;
   margin-left: 5px;
   margin-top: 3px;
 }
+
+.sponsors-padding {
+  margin: 2%;
+}
+
+#filler {
+  height: 80%;
+}
+
 
 .website {
   font-family: 'Open Sans', sans-serif;
@@ -106,7 +116,7 @@
 }
 
 .partner-logo {
-  margin-top: 8px;
+  margin:auto;
 }
 
 .sponsors-img {
