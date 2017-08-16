@@ -8,7 +8,7 @@
 	}
 
 	.calendar-row{
-		padding: 10px 3% 10px 3%;
+		padding: 10px 3% 5% 3%;
 	}
 
 	#calendar-subsection1{
@@ -79,7 +79,6 @@
 	// }
 
 	.calendar-subsection2-image {
-		padding-top:40px;
 		background-color:#D1F0F4;
 		width: 100%;
 		height: auto;
@@ -118,17 +117,21 @@
 		color: #004C81;
 
 	}
+
 	.calendar-subsection2-details{
 		padding: 8px;
 		background-color: #fff;
 	}
+
 	.calendar-subsection2-text{
 		background-color: #fff;
 	}
+
 	.calendar-subsection2-card{
 		margin-bottom: 30px;
 		background-color: #fff;
 	}
+
 	.event-info-txt-bold{
 		/* Event - 04/01/17: */
 		font-family: OpenSans-Extrabold;
@@ -138,6 +141,7 @@
 		float: left;
 		padding-left: 5px;
 	}
+
 	.event-info-txt{
 		/* 4:30pm: */
 		font-family: OpenSans;
@@ -147,30 +151,36 @@
 		float: left;
 		padding-left: 5px;
 	}
+
 	.event-info-icon{
 		width: 20px;
 		height: 20px;
 		float: left;
 	}
+
 	.event-info-icon2{
 		display: inline;
 		width: 20px;
 		height: 20px;
 		float: left;
 	}
+
 	.event-info1{
 		padding-left: 10px;
 		margin-left: 20px;
 	}
+
 	.event-info2{
 		display: flex;
 		flex-direction: row;
 		justify-content: flex-end;
 	}
+
 	.event-info{
 		display: flex;
 		justify-content: space-between;
 	}
+
 	.event-paragraph{
 		/* Lorem ipsum dolor si: */
 		font-family: OpenSans;
@@ -195,8 +205,8 @@
 	  color: #FFFFFF;
 	  letter-spacing: 0;
 	  line-height: 50px;
-	  display: block;
-	  margin: 0 auto;
+
+	  margin: auto;
 	  text-align: center;
 	  margin-top: 30px;
 	}
