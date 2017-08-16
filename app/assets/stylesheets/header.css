@@ -104,6 +104,7 @@ nav {
 }
 .top-right-panel {
   margin-right: 20px;
+  margin-top: 10px;
 }
 
 .dropdown-col {
@@ -134,6 +135,7 @@ display: inline-block;
 
 #delta-image {
   padding-left: 45px;
+  margin-top: 5px;
 }
 
 #delta-image > img {
