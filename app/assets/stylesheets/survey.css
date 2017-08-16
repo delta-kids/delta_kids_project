@@ -19,9 +19,9 @@
 }
 
 .pdf-links {
-
   color: black;
 }
+
 #latest-news {
   font-family: 'Open Sans', sans-serif;
   margin: 10px;
@@ -41,7 +41,7 @@
   display: block;
   position: relative;
   margin: auto;
-  width: 65%;
+  width: 60%;
   height: 400px;
   background-color: #D1F0F4;
   margin-bottom:2%;

@@ -6,9 +6,11 @@
 	.wholePage{
 		background-color: #d1f0f4;
 	}
+
 	.calendar-row{
-		padding: 80px;
+		padding: 10px 3% 10px 3%;
 	}
+
 	#calendar-subsection1{
 		background-color: #fff;
 		border-radius: 10px;
@@ -55,22 +57,19 @@
 		font-family: OpenSans-Semibold;
 		font-size: 14px;
 		color: #00A3DA;
-
 	}
-	.filterCard-header2{
+
+	.filterCard-header2 {
 		/* All locations: */
 		font-family: OpenSans-Bold;
 		font-size: 16px;
 		color: #000000;
+	}
 
-	}
-	.filter-header-chevron{
-	}
 	.filterCard-list {
 		font-family: OpenSans;
 		font-size: 16px;
 		color: #000000;
-
 	}
 	// .filterCard-line{
 
@@ -78,23 +77,24 @@
 	// 	line-height: 1px;
 	// 	border-top: 1px solid #aeaeae !important;
 	// }
-	.calendar-subsection2-image{
-		padding-top:45px;
+
+	.calendar-subsection2-image {
+		padding-top:40px;
 		background-color:#D1F0F4;
 		width: 100%;
 		height: auto;
 	}
-	.calendar-subsection2-card{
+	.calendar-subsection2-card {
 	    margin-right: 0px;
 /* 	    	margin-left: 20px;	 */
 	}
-	.calendar-row .calendar-subsection2{
+	.calendar-row .calendar-subsection2 {
 		padding-left: 40px;
 	}
-	.calendar-subsection2-text{
+	.calendar-subsection2-text {
 		background: #fff;
 	}
-	.calendar-subsection2-header{
+	.calendar-subsection2-header {
 		/* ACTIVITIES CALENDAR: */
 		font-family: BreeSerif-Regular;
 		font-size: 36px;
@@ -104,7 +104,7 @@
 		padding-top: 5px;
 		padding-bottom: 5px;
 	}
-	.calendar-header{
+	.calendar-header {
 		/* Featured: */
 		font-family: BreeSerif-Regular;
 		font-size: 30px;
