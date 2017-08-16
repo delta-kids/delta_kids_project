@@ -136,6 +136,10 @@ display: inline-block;
   padding-left: 45px;
 }
 
+#delta-image > img {
+  height: 100px;
+}
+
 .flex-spacebtwn {
   position: relative;
   bottom: 80px;
