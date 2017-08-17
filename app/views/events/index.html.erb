@@ -1,155 +1,153 @@
 <div class="wholePage">
 
-<!-- First section div -->
-<div class="calendar-section1 calendar-section1-container" id="calendar-section1">
+  <!-- First section div -->
+  <div class="calendar-section1 calendar-section1-container" id="calendar-section1">
     <div class="container-fluid">
-        <div class="row calendar-row">
+      <div class="row calendar-row">
 
-            <div class="col-md-4" id="calendar-subsection1">
+        <div class="col-md-4" id="calendar-subsection1">
 
-		            <%= image_tag "filter-header.svg", class: " filter-header-img"  %>
-<!--
-		            <div id="filter-header">
-		            <p id="#filterText">Filter</p>
-		            <%#= image_tag "icon-filter.svg", class: " filter-header-chevron" %>
-		            </div>
--->
-		            <div class="filterCard">
-			            <p class="filterCard-header1">For</p>
-			            <div class="filter-header2">
-				            <p class="filterCard-header2">Everybody</p>
-				            <%= image_tag "icon-chevron-up.svg", class: " filter-header-chevron"  %>
-			            </div>
-			            <p class="filterCard-list">0-6 year olds</p>
-			            <p class="filterCard-list">6-12 year olds</p>
-			            <p class="filterCard-list">Parents</p>
-			            <p class="filterCard-list">Child care workers or service providers</p>
-			            <hr/ class="filterCard-line">
-		            </div>
-
-		            <div class="filterCard">
-			            <p class="filterCard-header1">Where</p>
-			            <div class="filter-header2">
-				            <p class="filterCard-header2">All locations</p>
-				            <%= image_tag "icon-chevron-up.svg", class: "filter-header-chevron pull-right"  %>
-			            </div>
-			            <p class="filterCard-list">Ladner</p>
-			            <p class="filterCard-list">North Delta</p>
-			            <p class="filterCard-list">Tsawwassen</p>
-
-			            <hr/ class="filterCard-line">
-		            </div>
-
-		            <div class="filterCard">
-			            <p class="filterCard-header1">When</p>
-			            <p class="filterCard-list">From</p>
-			            <hr/ class="filterCard-line">
-			            <p class="filterCard-list">To</p>
-			            <hr/ class="filterCard-line">
-		            </div>
-
-		            <div class="filterCard">
-			            <p class="filterCard-header1">Cost</p>
-			            <div class="filter-header2">
-				            <p class="filterCard-header2">Free and paid</p>
-				            <%= image_tag "icon-chevron-up.svg", class: " filter-header-chevron"  %>
-			            </div>
-			            <p class="filterCard-list">Free</p>
-			            <p class="filterCard-list">Paid</p>
-
-			            <hr/ class="filterCard-line">
-		            </div>
-
-		            <div class="filterCard">
-			            <p class="filterCard-header1">Recurrence</p>
-			            <div class="filter-header2">
-				            <p class="filterCard-header2">Ongoing and Events</p>
-				            <%= image_tag "icon-chevron-up.svg", class: " filter-header-chevron"  %>
-			            </div>
-			            <p class="filterCard-list">Ongoing</p>
-			            <p class="filterCard-list">Events</p>
-
-			            <hr/ class="filterCard-line">
-		            </div>
-                <!-- NEW EVENT BUTTON -->
-                <a href="/events/new"><button type="button" class="button-seemore">Add an Event</button></a>
-            </div>
-
-            <div class="col-md-8 calendar-subsection2">
-	            <div class="calendar-subsection2-card">
-		            <%= image_tag "june2017.jpg", class: "calendar-subsection2-image" %>
-		            <div class="calendar-subsection2-text">
-			            <p class="calendar-subsection2-header">ACTIVITIES CALENDAR</p>
-		            </div>
-	            </div>
-
-
-              <% @events.each do |event| %>
-
-	            <div class="calendar-subsection2-card">
-                <% num = rand(1..3) %>
-		            <%= image_tag "event#{num}.png", class: "calendar-subsection2-image" %>
-
-		            <div class="calendar-subsection2-text" style="background-color: #fff">
-			            <div class="calendar-subsection2-details">
-				            <p class="calendar-subsection2-header2"><%= event.title %></p>
-				            <div class="event-info">
-					            <div>
-						            <%= image_tag "icon-calendar.svg", class: "event-info-icon" %>
-						            <p class="event-info-txt-bold">Date:</p>
-						            <p class="event-info-txt"><%= event.start_date %></p>
-                        <p class="event-info-txt"> - <%= event.end_date %></p>
-					            </div>
-					            <div class="event-info1">
-						            <%= image_tag "icon-clock.svg", class: "event-info-icon" %>
-                        <% if event.start_time %>
-						            <p class="event-info-txt"><%= event.start_time.strftime("%H:%M:%S") %></p>
-                        <% end %>
-                        <% if event.end_time %>
-                        <p class="event-info-txt"> - <%= event.end_time.strftime("%H:%M:%S") %></p>
-                        <% end %>
-					            </div>
-					            <div class="event-info1">
-						            <%= image_tag "icon-baby.svg", class: "event-info-icon" %>
-                        <% event.age_groups.each do |age| %>
-						            <p class="event-info-txt"><%= age.age %></p>
-                        <% end %>
-					            </div>
-					            <div class="event-info1">
-						            <%= image_tag "icon-tag.svg", class: "event-info-icon" %>
-						            <p class="event-info-txt"><%= event.cost %></p>
-					            </div>
-					            <div class="event-info1">
-						            <%= image_tag "icon-location-pin.svg", class: "event-info-icon" %>
-						            <p class="event-info-txt"><%= event.event_location %></p>
-					            </div>
-				            </div>
-				            <p class="event-paragraph"><%= event.description %></p>
-				            <div class="event-info2">
-					            <!-- <p  class="event-info-bold2">Learn More</p> -->
-                      <p><%= link_to 'Learn More', learn_more_path, class: "event-info-bold2" %></p>
-					            <%= image_tag "cursor.svg", class: "event-info-icon2" %>
-				            </div>
-			            </div>
-		            </div>
-
-	            </div>
-              <br>
-              <br>
-              <br>
-
-              <% end %>
-
-
-
-              <div id='button-seemore'>SEE MORE</div>
-
-
-            </div>
-
-
+          <%= image_tag "filter-header.svg", class: " filter-header-img"  %>
+          <!--
+          <div id="filter-header">
+          <p id="#filterText">Filter</p>
+          <%#= image_tag "icon-filter.svg", class: " filter-header-chevron" %>
         </div>
+      -->
+      <div class="filterCard">
+        <p class="filterCard-header1">For</p>
+        <div class="filter-header2">
+          <p class="filterCard-header2">Everybody</p>
+          <%= image_tag "icon-chevron-up.svg", class: " filter-header-chevron"  %>
+        </div>
+        <p class="filterCard-list">0-6 year olds</p>
+        <p class="filterCard-list">6-12 year olds</p>
+        <p class="filterCard-list">Parents</p>
+        <p class="filterCard-list">Child care workers or service providers</p>
+        <hr/ class="filterCard-line">
+      </div>
+
+      <div class="filterCard">
+        <p class="filterCard-header1">Where</p>
+        <div class="filter-header2">
+          <p class="filterCard-header2">All locations</p>
+          <%= image_tag "icon-chevron-up.svg", class: "filter-header-chevron pull-right"  %>
+        </div>
+        <p class="filterCard-list">Ladner</p>
+        <p class="filterCard-list">North Delta</p>
+        <p class="filterCard-list">Tsawwassen</p>
+
+        <hr/ class="filterCard-line">
+      </div>
+
+      <div class="filterCard">
+        <p class="filterCard-header1">When</p>
+        <p class="filterCard-list">From</p>
+        <hr/ class="filterCard-line">
+        <p class="filterCard-list">To</p>
+        <hr/ class="filterCard-line">
+      </div>
+
+      <div class="filterCard">
+        <p class="filterCard-header1">Cost</p>
+        <div class="filter-header2">
+          <p class="filterCard-header2">Free and paid</p>
+          <%= image_tag "icon-chevron-up.svg", class: " filter-header-chevron"  %>
+        </div>
+        <p class="filterCard-list">Free</p>
+        <p class="filterCard-list">Paid</p>
+
+        <hr/ class="filterCard-line">
+      </div>
+
+      <div class="filterCard">
+        <p class="filterCard-header1">Recurrence</p>
+        <div class="filter-header2">
+          <p class="filterCard-header2">Ongoing and Events</p>
+          <%= image_tag "icon-chevron-up.svg", class: " filter-header-chevron"  %>
+        </div>
+        <p class="filterCard-list">Ongoing</p>
+        <p class="filterCard-list">Events</p>
+
+        <hr/ class="filterCard-line">
+      </div>
+      <!-- CLIENT REQUESTS NEW EVENT BUTTON TO BE REMOVED -->
+      <!-- NEW EVENT BUTTON -->
+      <!-- <a href="/events/new"><button type="button" class="button-seemore">Add an Event</button></a> -->
     </div>
+
+    <div class="col-md-8 calendar-subsection2">
+      <div class="calendar-subsection2-card">
+        <%= image_tag "june2017.jpg", class: "calendar-subsection2-image" %>
+        <div class="calendar-subsection2-text">
+          <p class="calendar-subsection2-header">ACTIVITIES CALENDAR</p>
+        </div>
+      </div>
+
+
+      <% @events.each do |event| %>
+
+      <div class="calendar-subsection2-card">
+        <% num = rand(1..3) %>
+        <%= image_tag "event#{num}.png", class: "calendar-subsection2-image" %>
+
+        <div class="calendar-subsection2-text" style="background-color: #fff">
+          <div class="calendar-subsection2-details">
+            <p class="calendar-subsection2-header2"><%= event.title %></p>
+            <div class="event-info">
+              <div>
+                <%= image_tag "icon-calendar.svg", class: "event-info-icon" %>
+                <p class="event-info-txt-bold">Date:</p>
+                <p class="event-info-txt"><%= event.start_date %></p>
+                <p class="event-info-txt"> - <%= event.end_date %></p>
+              </div>
+              <div class="event-info1">
+                <%= image_tag "icon-clock.svg", class: "event-info-icon" %>
+                <% if event.start_time %>
+                <p class="event-info-txt"><%= event.start_time.strftime("%H:%M:%S") %></p>
+                <% end %>
+                <% if event.end_time %>
+                <p class="event-info-txt"> - <%= event.end_time.strftime("%H:%M:%S") %></p>
+                <% end %>
+              </div>
+              <div class="event-info1">
+                <%= image_tag "icon-baby.svg", class: "event-info-icon" %>
+                <% event.age_groups.each do |age| %>
+                <p class="event-info-txt"><%= age.age %></p>
+                <% end %>
+              </div>
+              <div class="event-info1">
+                <%= image_tag "icon-tag.svg", class: "event-info-icon" %>
+                <p class="event-info-txt"><%= event.cost %></p>
+              </div>
+              <div class="event-info1">
+                <%= image_tag "icon-location-pin.svg", class: "event-info-icon" %>
+                <p class="event-info-txt"><%= event.event_location %></p>
+              </div>
+            </div>
+            <p class="event-paragraph"><%= event.description %></p>
+            <div class="event-info2">
+              <!-- <p  class="event-info-bold2">Learn More</p> -->
+              <p><%= link_to 'Learn More', learn_more_path, class: "event-info-bold2" %></p>
+              <%= image_tag "cursor.svg", class: "event-info-icon2" %>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <% end %>
+
+
+
+      <div id='button-seemore'>SEE MORE</div>
+
+
+    </div>
+
+
+  </div>
+</div>
 </div>
 
 <!-- Rainbow Footer-->

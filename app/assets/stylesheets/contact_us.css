@@ -1,8 +1,8 @@
 .contact-us-body {
   background-color: #D1F0F4;
-  padding-bottom:200px;
+  padding-bottom:5%;
+  padding-top:2%;
 }
-
 
 #boyrunning {
   display: block;
@@ -11,8 +11,12 @@
   width: 100%;
   padding-bottom: 100px;
   background-color: white;
-  margin-top: 50px;
 }
+
+#boyrunning-container {
+  height: auto;
+}
+
 #contact-us-text {
   color:#00A3DA;
   position: relative;
@@ -89,7 +93,6 @@
 .similar-events-box {
   display: inline;
   background-color: white;
-  paddin
 }
 
 .similar-events-image {

@@ -5,11 +5,12 @@
 }
 
 #main-body {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding:5%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
+
 
 .main {
   padding-top: 30px;
@@ -43,7 +44,6 @@
   background-color: #D1F0F4;
   width: 100%;
   height: auto;
-
 }
 
 .sub-headers {
@@ -53,15 +53,15 @@
 }
 
 #sponsors-header {
+  color: #0DA3DA;
   margin-top: 5px;
+  margin-bottom:30px;
+  font-family: 'Bree Serif', serif;
+  font-size: 30px;
 }
 
 .blurb {
   font-family: 'Open Sans Semi-Bold', sans-serif;
-}
-
-#filler {
-  height: 317px;
 }
 
 #goal {
@@ -99,6 +99,26 @@
   margin-top: 3px;
 }
 
+.sponsors-padding {
+  margin: 2%;
+}
+
+#filler {
+  height: 80%;
+}
+
+.page-font {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+}
+
+.page-font2 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+}
+
+
+
 .website {
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
@@ -106,7 +126,7 @@
 }
 
 .partner-logo {
-  margin-top: 8px;
+  margin:auto;
 }
 
 .sponsors-img {
