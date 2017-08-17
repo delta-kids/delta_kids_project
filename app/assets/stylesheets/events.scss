@@ -227,6 +227,58 @@
 	  margin-top: 30px;
 	}
 
+	.caps {
+		 text-transform: capitalize;
+	}
+
+	#create-new-event-container {
+		width:60%;
+		display:flex;
+		flex-direction:column;
+		align-items:center;
+	}
+
+.label-radio-space {
+	margin-right: 10%;
+	font-size: 16px;
+}
+
+#create-new-event-container .form-group {
+	display:flex;
+	align-items:baseline
+}
+
+.label-baseline {
+	margin-right: auto;
+}
+
+.form-padding {
+	margin-left: 10px;
+}
+
+.center-flex-content {
+	justify-content: center;
+	font-size: 16px;
+}
+
+.radio-spacing {
+	margin: 0px 25px 0px 10px;
+}
+
+#age-group-db-container {
+	display: flex;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+.event-form-width {
+	width:400px !important;
+}
+
+.date-time-width {
+	width: 110px;
+}
+
 	.new-admin-form{
 	  padding:20px;
 		width: 100vw !important;
