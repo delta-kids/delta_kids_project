@@ -1,154 +1,164 @@
-<div class="container new-admin-form">
+<div class="container-fluid new-admin-form">
+  <div class="container" id="create-new-event-container">
 
-  <h2>Create New Event</h2>
+    <h1 class="bree-font" style="margin-top:0;margin-bottom:40px;margin-left:auto;margin-right: auto;">Create New Event</h1>
 
-  <%= form_for @event do |f|  %>
+    <%= form_for @event do |f|  %>
 
-  <div class="form-group">
-    <%= f.label :title %>
-    <%= f.text_field :title, class: 'form-control' %>
-  </div>
-
-  <h1>Dates</h1>
-
-    <label for='start_date'>Start Date</label>
-    <input type="text" class='datepicker form-control' placeholder="MM/DD/YYYY" >
-
-    <script type="text/javascript">
-      $(document).ready(function(){
-        $('.datepicker').datepicker();
-      });
-    </script>
-
-    <label for='end_date'>End Date</label>
-    <input type="text" class='datepicker form-control' placeholder="MM/DD/YYYY" >
-
-    <script type="text/javascript">
-      $(document).ready(function(){
-        $('.datepicker').datepicker();
-      });
-    </script>
-
-  <h1> Times </h1>
-  <div class="form-group">
-    <%= f.label :"Start Time" %>
-    <%= f.text_field :start_time, class: 'form-control' %>
-    <%= f.label :"End Time" %>
-    <%= f.text_field :end_time, class: 'form-control' %>
-  </div>
-<!-- ================== -->
-
-<!-- EVENT REPEAT -->
-  <div class="form-group">
-    <%= f.label :event_repeat %>
-    <%= radio_button_tag(:event_repeat, "Weekly") %>
-    <%= label_tag(:repeat, "true") %>
-    <%= radio_button_tag(:event_repeat, "Never") %>
-    <%= label_tag(:repeat, "false") %>
-  </div>
-
-<!-- EVENT LOCATION -->
-  <div class="form-group">
-    <%= f.label :location %>
-    <%= radio_button_tag(:location, "Ladner") %>
-    <%= label_tag(:loc, "Ladner") %>
-    <%= radio_button_tag(:location, "North Delta") %>
-    <%= label_tag(:loc, "North Delta") %>
-  </div>
-
-<!-- ADDRESS -->
-  <div class="form-group">
-      <%= f.label :address %>
-      <%= f.text_field :address, class: 'form-control' %>
+    <div class="form-group center-flex-content">
+      <%= f.label :title, class: "label-baseline" %>
+      <%= f.text_field :title, class: 'form form-control form-padding event-form-width' %>
     </div>
 
-<!-- AGE GROUP -->
-<div class="form-group">
-  <%= f.label :Age_group %>
-  <%= f.collection_select :age_group_ids,
-    AgeGroup.all,
-    :id,
-    :age,
-    {},
-    { multiple: true, class: 'chosen-select'}
-    %>
-</div>
+    <div class="form-group center-flex-content">
+      <label for='start_date' class="label-baseline">Start Date</label>
+      <input type="text" class='datepicker form date-time-width' placeholder="MM/DD/YYYY" >
+      <script type="text/javascript">
+      $(document).ready(function(){
+        $('.datepicker').datepicker();
+      });
+      </script>
+      <%= f.label :"Start Time", class: 'form-padding caps', style:'margin:auto;' %>
+      <%= f.text_field :start_time, class: 'form date-time-width' %>
+    </div>
 
+    <div>
+      <script type="text/javascript">
+      $(document).ready(function(){
+        $('.datepicker').datepicker();
+      });
+      </script>
 
-  <div class="form-group">
-    <%#= f.label :age_group %>
-    <%#= radio_button_tag(:age_group, "0-5") %>
-    <%#= label_tag(:age, "0-5") %>
-    <%#= radio_button_tag(:age_group, "6-12") %>
-    <%#= label_tag(:age, "6-12") %>
-    <%#= radio_button_tag(:age_group, "adult") %>
-    <%#= label_tag(:age, "adult") %>
-    <%#= radio_button_tag(:age_group, "all") %>
-    <%#= label_tag(:age, "all") %>
+      <div class="form-group center-flex-content">
+        <label for='end_date' class="label-baseline">End Date</label>
+        <input type="text" class='datepicker form form-padding date-time-width' placeholder="MM/DD/YYYY">
+        <%= f.label :"End Time", class: 'form-padding caps', style:'margin:auto;' %>
+        <%= f.text_field :end_time, class: 'form form-padding date-time-width' %>
+      </div>
+    </div>
+    <!-- ================== -->
+
+    <!-- EVENT REPEAT -->
+    <div class="form-group center-flex-content">
+      <%= f.label :event_repeat , class:'label-baseline caps' %>
+      <div class="label-baseline">
+        <%= radio_button_tag(:event_repeat, "Weekly") %>
+        <%= label_tag(:repeat, "Weekly", class:'radio-spacing') %>
+        <%= radio_button_tag(:event_repeat, "Never") %>
+        <%= label_tag(:repeat, "None", class:'radio-spacing') %>
+      </div>
+    </div>
+
+    <!-- EVENT LOCATION -->
+    <div class="form-group center-flex-content">
+      <%= f.label :location , class:'label-baseline' %>
+      <div class="">
+        <%= radio_button_tag(:location, "Ladner") %>
+        <%= label_tag(:loc, "Ladner", class:'radio-spacing') %>
+        <%= radio_button_tag(:location, "North Delta") %>
+        <%= label_tag(:loc, "North Delta", class:'radio-spacing') %>
+        <%= radio_button_tag(:location, "Tsawwassen") %>
+        <%= label_tag(:loc, "Tsawwassen") %>
+      </div>
+    </div>
+
+    <!-- ADDRESS -->
+    <div class="form-group center-flex-content">
+      <%= f.label :address, class:'label-baseline' %>
+      <%= f.text_field :address, class: 'form form-control form-padding event-form-width' %>
+    </div>
+
+    <!-- AGE GROUP -->
+    <div class="form-group center-flex-content">
+      <%= f.label :Age_group, class:'label-baseline caps' %>
+      <div class="form-group event-form-width" id="age-group-db-container">
+        <%= f.collection_select :age_group_ids,
+        AgeGroup.all,
+        :id,
+        :age,
+        {},
+        { multiple: true, class: 'chosen-select form-control form-padding'}
+        %>
+      </div>
+    </div>
+    
+    <!-- <div class="form-group center-flex-content"> -->
+      <%#= f.label :age_group %>
+      <%#= radio_button_tag(:age_group, "0-5") %>
+      <%#= label_tag(:age, "0-5") %>
+      <%#= radio_button_tag(:age_group, "6-12") %>
+      <%#= label_tag(:age, "6-12") %>
+      <%#= radio_button_tag(:age_group, "adult") %>
+      <%#= label_tag(:age, "adult") %>
+      <%#= radio_button_tag(:age_group, "all") %>
+      <%#= label_tag(:age, "all") %>
+    <!-- </div> -->
+
+    <!-- COST -->
+    <div class="form-group center-flex-content">
+      <%= f.label :event_cost, class:'label-baseline caps' %>
+      <div class="label-baseline">
+        <%= radio_button_tag(:event_cost, "Free") %>
+        <%= label_tag(:cost, "Free", class:'radio-spacing') %>
+        <%= radio_button_tag(:event_cost, "Paid") %>
+        <%= label_tag(:cost, "Paid", class:'radio-spacing') %>
+      </div>
+    </div>
+
+    <!-- ACTIVITY TYPE -->
+    <div class="form-group center-flex-content">
+      <%= f.label :service , "Activity Type", class:'label-baseline', style:'align-self: center; padding-right: 5%' %>
+      <div class="label-baseline">
+        <%= check_box_tag(:art_and_culture) %>
+        <%= label_tag(:art_and_culture, "Art & Culture", class:'radio-spacing') %>
+        <%= check_box_tag(:education) %>
+        <%= label_tag(:education, "Education", class:'radio-spacing') %>
+        <div class="label-baseline">
+          <%= check_box_tag(:entertainment) %>
+          <%= label_tag(:entertainment, "Entertainment", class:'radio-spacing') %>
+          <%= check_box_tag(:health) %>
+          <%= label_tag(:health, "Health", class:'radio-spacing') %>
+          <%= check_box_tag(:sports) %>
+          <%= label_tag(:sports, "Sports", class:'radio-spacing') %>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAGS -->
+    <!-- PLACEHOLDER, NEED TO COME BACK AND DO -->
+    <h3>Tags Placeholder</h3>
+    <!-- REGISTRATION -->
+    <div class="form-group center-flex-content">
+      <%= f.label :location, "Registration", class:'label-baseline' %>
+      <div class="label-baseline">
+      <%= radio_button_tag(:location, "Drop-in") %>
+      <%= label_tag(:loc, "Drop-in", class:'radio-spacing') %>
+      <%= radio_button_tag(:location, "Registration Required") %>
+      <%= label_tag(:loc, "Registration Required", class:'radio-spacing') %>
+    </div>
   </div>
+    <!-- EVENT DESCRIPTION -->
+    <div class="form-group">
+      <%= f.label :description, class:'label-baseline' %>
+      <%= f.text_area :description, class: 'form form-control form-padding event-form-width' %>
+    </div>
+    
+    <!-- MORE INFO , LINKS  -->
+    <!-- PLACEHOLDER, NEED TO COME BACK AND DO -->
+    <h3>UPLOAD PHOTO PLACEHOLDER</h3>
+    <h3>MORE INFO, LINKS PLACEHOLDER</h3>
+    <div class="form-group">
+      <%= f.label :"Contact name", class:'label-baseline' %>
+      <%= f.text_field :contact_name, class: 'form form-control form-padding event-form-width' %>
+    </div>
 
-<!-- COST -->
-  <div class="form-group">
-    <%= f.label :event_cost %>
-    <%= radio_button_tag(:event_cost, "Free") %>
-    <%= label_tag(:cost, "Free") %>
-    <%= radio_button_tag(:event_cost, "Paid") %>
-    <%= label_tag(:cost, "Paid") %>
+    <div class="form-group">
+      <%= f.label :"Contact email", class:'label-baseline' %>
+      <%= f.email_field :contact_email, class: 'form form-control form-padding event-form-width' %>
+    </div>
+
+    <%= f.submit class: 'btn btn-primary form', style: 'margin-bottom: 30px;' %>
+
+    <% end %>
   </div>
-
-<!-- ACTIVITY TYPE -->
-  <div>
-    <%= f.label :service %>
-    <%= check_box_tag(:art_and_culture) %>
-    <%= label_tag(:art_and_culture, "Art & Culture") %>
-    <%= check_box_tag(:education) %>
-    <%= label_tag(:education, "Education") %>
-    <%= check_box_tag(:entertainment) %>
-    <%= label_tag(:entertainment, "Entertainment") %>
-    <%= check_box_tag(:health) %>
-    <%= label_tag(:health, "Health") %>
-    <%= check_box_tag(:sports) %>
-    <%= label_tag(:sports, "Sports") %>
-  </div>`
-
-<!-- TAGS -->
-<!-- PLACEHOLDER, NEED TO COME BACK AND DO -->
-<!-- ================== -->
-  <h1>TAGS</h1>
-<!-- ================== -->
-
-<!-- REGISTRATION -->
-  <div class="form-group">
-    <%= f.label :event_cost %>
-    <%= radio_button_tag(:event_cost, "Free") %>
-    <%= label_tag(:cost, "Free") %>
-    <%= radio_button_tag(:event_cost, "Paid") %>
-    <%= label_tag(:cost, "Paid") %>
-  </div>
-
-<!-- EVENT DESCRIPTION -->
-  <div class="form-group">
-    <%= f.label :description %>
-    <%= f.text_area :description, class: 'form-control' %>
-  </div>
-
-<!-- MORE INFO , LINKS  -->
-<!-- PLACEHOLDER, NEED TO COME BACK AND DO -->
-<!-- ================== -->
-  <h1>MORE INFO, LINKS</h1>
-<!-- ================== -->
-
-  <div class="form-group">
-    <%= f.label :"Contact name" %>
-    <%= f.text_field :contact_name, class: 'form-control' %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :"Contact email" %>
-    <%= f.email_field :contact_email, class: 'form-control' %>
-  </div>
-
-  <%= f.submit class: 'btn btn-primary form-control', style: 'margin-bottom: 30px;' %>
-
-  <% end %>
 </div>

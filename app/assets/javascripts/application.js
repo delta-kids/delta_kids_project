@@ -21,3 +21,12 @@
 $(document).ready(function() {
   $(".dropdown-toggle").dropdown();
 });
+
+
+$(document).ready(function() {
+$("[href]").each(function() {
+    if (this.href == window.location.href) {
+        $(this).addClass("nav-guide-color");
+    }
+});
+});
