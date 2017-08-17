@@ -11,6 +11,7 @@ class ApplicationController < ActionController::Base
 
   def current_user
     @current_user ||= User.find(session[:user_id]) if session[:user_id]
+    # debugger
   end
   helper_method :current_user
 
@@ -21,7 +22,11 @@ class ApplicationController < ActionController::Base
   end
 
   def is_admin?
-    current_user.is_admin
+    if user_signed_in?
+      current_user.is_admin
+    else
+      false
+    end
   end
   helper_method :is_admin?
 

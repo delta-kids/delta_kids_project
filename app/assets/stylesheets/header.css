@@ -104,6 +104,7 @@ nav {
 }
 .top-right-panel {
   margin-right: 20px;
+  margin-top: 10px;
 }
 
 .dropdown-col {
@@ -129,18 +130,23 @@ display: inline-block;
 
 .deltakids-logo {
   position: relative;
-  bottom: 60px;
+  bottom: 80px;
 }
 
 #delta-image {
   padding-left: 45px;
+  margin-top: 5px;
+}
+
+#delta-image > img {
+  height: 100px;
 }
 
 .flex-spacebtwn {
   position: relative;
-  bottom: 50px;
+  bottom: 80px;
   padding-top: 10px;
-  padding-bottom: 50px;
+  /*padding-bottom: 50px;*/
   display: flex;
   justify-content: space-between;
   align-items: center;
