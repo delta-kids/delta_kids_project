@@ -1,0 +1,28 @@
+.day {
+  width:100px;
+  height:100px;
+  border: thin lightgrey solid;
+}
+
+.table-striped {
+  border: thin lightgrey solid;
+}
+
+.table-striped th {
+  border: thin lightgrey solid;
+}
+
+.simple-calendar {
+  padding: 0 10px 5px 10px;
+}
+
+.calendar-heading {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.calendar-title {
+  font-size: 25px;
+}

@@ -36,6 +36,7 @@ gem 'font-awesome-rails'
 gem 'jquery-rails'
 gem 'bootstrap-datepicker-rails'
 gem 'chosen-rails'
+gem "simple_calendar", "~> 2.0"
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

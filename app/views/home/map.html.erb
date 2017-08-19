@@ -4,69 +4,143 @@
     <div class="container-fluid ">
         <div class="row calendar-row">
 
-            <div class="col-md-4" id="calendar-subsection1">
+          <div class="col-md-4" id="calendar-subsection1">
 
-		            <%= image_tag "filter-header.svg", class: "filter-header-img"  %>
-		            <div class="filterCard">
-			            <p class="filterCard-header1">For</p>
-			            <div class="filter-header2">
-				            <p class="filterCard-header2">Everybody</p>
-				            <%= image_tag "icon-chevron-up.svg", class: " filter-header-chevron"  %>
-			            </div>
-			            <p class="filterCard-list">0-6 year olds</p>
-			            <p class="filterCard-list">6-12 year olds</p>
-			            <p class="filterCard-list">Parents</p>
-			            <p class="filterCard-list">Child care workers or service providers</p>
-			            <hr/ class="filterCard-line">
-		            </div>
+            <%= image_tag "filter-header.svg", class: " filter-header-img"  %>
+            <!--
+            <div id="filter-header">
+            <p id="#filterText">Filter</p>
+            <%#= image_tag "icon-filter.svg", class: " filter-header-chevron" %>
+          </div>
+        -->
+        <div class="">
+          <%= form_tag() do %>
+          <%= text_field_tag :term %>
+          <%= submit_tag 'Search', class:'btn-primary' %>
+          <% end %>
+          <br>
 
-		            <div class="filterCard">
-			            <p class="filterCard-header1">Where</p>
-			            <div class="filter-header2">
-				            <p class="filterCard-header2">All locations</p>
-				            <%= image_tag "icon-chevron-up.svg", class: "filter-header-chevron pull-right"  %>
-			            </div>
-			            <p class="filterCard-list">Ladner</p>
-			            <p class="filterCard-list">North Delta</p>
-			            <p class="filterCard-list">Tsawwassen</p>
+          <div class="form-group">
+            <label for='start_date' class="">Start Date</label>
+            <input type="text" class='datepicker form date-time-width form-padding' placeholder="MM/DD/YYYY" >
+            <br>
+            <label for='end_date' class="">End Date &nbsp</label>
+            <input type="text" class='datepicker form form-padding date-time-width' placeholder="MM/DD/YYYY">
 
-			            <hr/ class="filterCard-line">
-		            </div>
+            <script type="text/javascript">
+            $(document).ready(function(){
+              $('.datepicker').datepicker();
+            });
+            </script>
 
-		            <div class="filterCard">
-			            <p class="filterCard-header1">When</p>
-			            <p class="filterCard-list">From</p>
-			            <hr/ class="filterCard-line">
-			            <p class="filterCard-list">To</p>
-			            <hr/ class="filterCard-line">
-		            </div>
+          </div>
+        </div>
+        <br>
+        <div class="filterCard">
+          <div class="filter-header-container">
+          <p class="filterCard-header1">For</p>
+          <a data-toggle="collapse" data-target=".collapse-for"><%= image_tag "icon-chevron-up.svg", class: "filter-header-chevron a-chevron"  %></a>
+        </div>
+          <div class="collapse-for collapse in">
+          <%= check_box_tag(:art_and_culture) %>
+          <%= label_tag(:art_and_culture, "0-5 year olds", class:'radio-spacing font-16') %>
+          <br>
+          <%= check_box_tag(:art_and_culture) %>
+          <%= label_tag(:art_and_culture, "6-12 year olds", class:'radio-spacing font-16') %>
+          <br>
+          <%= check_box_tag(:art_and_culture) %>
+          <%= label_tag(:art_and_culture, "Parents", class:'radio-spacing font-16') %>
+          <br>
+          <%= check_box_tag(:art_and_culture) %>
+          <%= label_tag(:art_and_culture, "Child care workers or service providers", class:'radio-spacing font-16') %>
+          <br>
+          <hr/ class="filterCard-line">
+        </div>
+        </div>
 
-		            <div class="filterCard">
-			            <p class="filterCard-header1">Cost</p>
-			            <div class="filter-header2">
-				            <p class="filterCard-header2">Free and paid</p>
-				            <%= image_tag "icon-chevron-up.svg", class: " filter-header-chevron"  %>
-			            </div>
-			            <p class="filterCard-list">Free</p>
-			            <p class="filterCard-list">Paid</p>
+        <div class="filterCard">
+          <div class="filter-header-container">
+          <p class="filterCard-header1">Where</p>
+          <a data-toggle="collapse" data-target=".collapse-where"><%= image_tag "icon-chevron-up.svg", class: "filter-header-chevron a-chevron" %></a>
+        </div>
+          <div class="collapse-where collapse in">
+          <%= check_box_tag(:art_and_culture) %>
+          <%= label_tag(:art_and_culture, "Ladner", class:'radio-spacing font-16') %>
+          <br>
+          <%= check_box_tag(:art_and_culture) %>
+          <%= label_tag(:art_and_culture, "North Delta", class:'radio-spacing font-16') %>
+          <br>
+          <%= check_box_tag(:art_and_culture) %>
+          <%= label_tag(:art_and_culture, "Tsawwassen", class:'radio-spacing font-16') %>
+          <br>
+          <hr/ class="filterCard-line">
+        </div>
+        </div>
 
-			            <hr/ class="filterCard-line">
-		            </div>
+        <div class="filterCard">
+          <div class="filter-header-container">
+          <p class="filterCard-header1">Registration</p>
+          <a data-toggle="collapse" data-target=".collapse-registration" class="a-chevron"><%= image_tag "icon-chevron-up.svg", class: "filter-header-chevron"  %></a>
 
-		            <div class="filterCard">
-			            <p class="filterCard-header1">Recurrence</p>
-			            <div class="filter-header2">
-				            <p class="filterCard-header2">Ongoing and Events</p>
-				            <%= image_tag "icon-chevron-up.svg", class: " filter-header-chevron"  %>
-			            </div>
-			            <p class="filterCard-list">Ongoing</p>
-			            <p class="filterCard-list">Events</p>
+        </div>
+          <div class="collapse-registration collapse in">
+          <%= check_box_tag(:art_and_culture) %>
+          <%= label_tag(:art_and_culture, "Drop in Program", class:'radio-spacing font-16') %>
+          <br>
+          <%= check_box_tag(:art_and_culture) %>
+          <%= label_tag(:art_and_culture, "Pre-registration", class:'radio-spacing font-16') %>
+          <br>
+          <hr/ class="filterCard-line">
+        </div>
+        </div>
 
-			            <hr/ class="filterCard-line">
-		            </div>
-            </div>
+        <div class="filterCard">
+          <div class="filter-header-container">
+          <p class="filterCard-header1">Cost</p>
+          <a data-toggle="collapse" data-target=".collapse-cost"><%= image_tag "icon-chevron-up.svg", class: "filter-header-chevron a-chevron"  %></a>
+        </div>
+          <div class="collapse-cost collapse in">
+          <%= check_box_tag(:art_and_culture) %>
+          <%= label_tag(:art_and_culture, "Free", class:'radio-spacing font-16') %>
+          <br>
+          <%= check_box_tag(:art_and_culture) %>
+          <%= label_tag(:art_and_culture, "Paid", class:'radio-spacing font-16') %>
+          <br>
+          <hr/ class="filterCard-line">
+        </div>
+        </div>
 
-            <div class="col-md-8 calendar-subsection2">
+        <div class="filterCard">
+          <div class="filter-header-container">
+          <p class="filterCard-header1">Type of Event/Activity/Service</p>
+          <a data-toggle="collapse" data-target=".collapse-typeof"><%= image_tag "icon-chevron-up.svg", class: " filter-header-chevron a-chevron" %></a>
+        </div>
+          <div class="collapse-typeof collapse in">
+          <%= check_box_tag(:art_and_culture) %>
+          <%= label_tag(:art_and_culture, "Art & Culture", class:'radio-spacing font-16') %>
+          <br>
+          <%= check_box_tag(:education) %>
+          <%= label_tag(:education, "Education", class:'radio-spacing font-16') %>
+          <br>
+            <%= check_box_tag(:entertainment) %>
+            <%= label_tag(:entertainment, "Entertainment", class:'radio-spacing font-16') %>
+            <br>
+            <%= check_box_tag(:health) %>
+            <%= label_tag(:health, "Health", class:'radio-spacing font-16') %>
+            <br>
+            <%= check_box_tag(:sports) %>
+            <%= label_tag(:sports, "Sports", class:'radio-spacing font-16') %>
+            <br>
+            <hr/ class="filterCard-line">
+          </div>
+        </div>
+        <br>
+        <div class="center-flex-content">
+          <%= submit_tag 'Filter', class:"btn-primary btn-lg filter-btn" %>
+        </div>
+      </div>
+
+            <div class="col-md-8 calendar-subsection2" style='padding-top:40px'>
 	            <div class="calendar-subsection2-card">
 
 								<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d83595.7217138828!2d-123.11159588831279!3d49.09868126439793!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5485fce1db8802b7%3A0xe7af052ac3c8ad9b!2sDelta%2C+BC%2C+Canada!5e0!3m2!1sen!2sus!4v1497812376694" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
