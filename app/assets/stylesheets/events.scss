@@ -9,8 +9,18 @@
 .calendar-row{
 	padding: 10px 3% 5% 3%;
 }
+
+.font-16 {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+}
+
+.collapse-menu {
+	margin-top: 10px;
+}
+
 #calendar-subsection1{
-	background-color: #fff;
+	background-color: #F0FFFF !important;
 	border-radius: 10px;
 }
 #calendar-subsection1 img {
@@ -30,29 +40,50 @@
 	font-family: BreeSerif-Regular;
 	font-size: 30px;
 	color: #004C81;
-
 }
+
+.filter-btn {
+	width: 200px;
+	height: 50px;
+	margin-bottom: 50px;
+}
+
 .filter-header-img{
 	width: 100%;
 	margin: 0;
 	height: auto;
 	padding-top: 15px;
 }
-.filter-header-chevron{
-	width: 18px;
-	height: 9px;
-	display: inline;
+
+.filter-header-chevron {
+	width: 100%;
+	height: 100%;
 }
+
+.rotate-chevron {
+	transform: rotate(180deg);
+}
+
 .filter-header2{
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 }
+
 .filterCard-header1{
 	/* For: */
-	font-family: OpenSans-Semibold;
-	font-size: 14px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: bolder;
+	font-size: 20px;
 	color: #00A3DA;
+	margin: 0px;
+}
+
+.filter-header-container {
+	margin-bottom: 5px;
+	display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .filterCard-header2 {
@@ -71,11 +102,15 @@
 	width: 100%;
 	height: auto;
 }
+
+
+
 .calendar-subsection2-card {
     margin-right: 0px;
 }
 .calendar-row .calendar-subsection2 {
 	padding-left: 40px;
+	top:0;
 }
 .calendar-subsection2-text {
 	background: #fff;
@@ -220,6 +255,7 @@
 }
 
 .center-flex-content {
+	display: flex;
 	justify-content: center;
 	font-size: 16px;
 }

@@ -81,7 +81,7 @@
         %>
       </div>
     </div>
-    
+
     <!-- <div class="form-group center-flex-content"> -->
       <%#= f.label :age_group %>
       <%#= radio_button_tag(:age_group, "0-5") %>
@@ -125,8 +125,18 @@
     </div>
 
     <!-- TAGS -->
-    <!-- PLACEHOLDER, NEED TO COME BACK AND DO -->
-    <h3>Tags Placeholder</h3>
+    <div class="form-group center-flex-content">
+      <%= f.label :tags, class:'label-baseline caps' %>
+      <div class="form-group event-form-width" id="age-group-db-container">
+        <%= f.collection_select :age_group_ids,
+        Tag.all,
+        :id,
+        :name,
+        {},
+        { multiple: true, class: 'chosen-select form-control form-padding'}
+        %>
+      </div>
+    </div>
     <!-- REGISTRATION -->
     <div class="form-group center-flex-content">
       <%= f.label :location, "Registration", class:'label-baseline' %>
@@ -142,18 +152,18 @@
       <%= f.label :description, class:'label-baseline' %>
       <%= f.text_area :description, class: 'form form-control form-padding event-form-width' %>
     </div>
-    
+
     <!-- MORE INFO , LINKS  -->
     <!-- PLACEHOLDER, NEED TO COME BACK AND DO -->
     <h3>UPLOAD PHOTO PLACEHOLDER</h3>
     <h3>MORE INFO, LINKS PLACEHOLDER</h3>
     <div class="form-group">
-      <%= f.label :"Contact name", class:'label-baseline' %>
+      <%= f.label :"Contact name", class:'label-baseline caps' %>
       <%= f.text_field :contact_name, class: 'form form-control form-padding event-form-width' %>
     </div>
 
     <div class="form-group">
-      <%= f.label :"Contact email", class:'label-baseline' %>
+      <%= f.label :"Contact email", class:'label-baseline caps' %>
       <%= f.email_field :contact_email, class: 'form form-control form-padding event-form-width' %>
     </div>
 
