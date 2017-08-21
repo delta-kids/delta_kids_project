@@ -1,14 +1,85 @@
-<div class="container new-admin-form">
-  <h1>Add New Activity Type</h1>
-  <%= @activityType.errors.full_messages.join(', ') %>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-3 dash-sidebar">
+      <ul class="nav nav-sidebar ">
+        <%= image_tag('paperclip.png', class: 'clippy') %>
+        <h2 class="dashboard-headers2">Dashboard</h2>
+        <% if user_signed_in? %>
+        <li>
+          <h4 style="color:yellow">Hello <%= current_user.first_name %>, what would you like to do today?
+          </h4>
+        </li>
+        <li>
+          <a href="<%= new_event_path %>" class="dashboard-text">Add an Event</a>
+        </li>
+        <hr>
+        <li>
+          <a href="<%= new_resource_path %>" class="dashboard-text">Add a Resource</a>
+        </li>
+        <hr>
+        <li><%= link_to 'Sign Out', signout_path, method: :delete, class:"dashboard-text" %></li>
+        <hr>
+        <% if is_admin? %>
+        <h4 style="color:yellow;">Admin</h4>
+        <li>
+          <a href="<%= new_organization_path %>" class="dashboard-text">Add Organization</a>
+        </li>
+        <hr>
+        <li>
+          <a href="<%= new_program_type_path %>" class="dashboard-text">New Activity Type</a>
+        </li>
+        <hr>
+        <li>
+          <a href="<%= dashboard_pending_and_approved_events_path %>" class="dashboard-text">Pending/Approved Events</a>
+        </li>
+        <hr>
+        <li>
+          <a href="<%= dashboard_pending_and_approved_resources_path %>" class="dashboard-text">Pending/Approved Resources</a>
+        </li>
+        <hr>
+        <% end %>
+        <% else %>
+        <li>
+          <a href="<%= signup_path %>" class="top-right-panel">New User</a>
+        </li>
+        <li>
+          <a href="<%= login_path %>" class="top-right-panel">Log In</a>
+        </li>
+        <% end %>
+      </ul>
+    </div>
 
-  <%= form_for @activityType do |f| %>
-  <div class="form-group">
-    <%= f.label :Activity_name %>
-    <%= f.text_field :name, class: "form-control"  %>
-  </div>
-  <div class="form-group">
-    <%= f.submit class: 'btn btn-primary form-control' %>
+    <div class="col-md-9" style="background-color:white;">
+      <div class="container-fluid">
+        <p class="dashboard-headers">Add New Activity Type</p>
+      </div>
+      <% if user_signed_in? %>
+        <%= @activityType.errors.full_messages.join(', ') %>
+
+        <%= form_for @activityType do |f| %>
+        <div class="form-group">
+          <%= f.label :Activity_name %>
+          <%= f.text_field :name, class: "form-control"  %>
+        </div>
+        <div class="form-group">
+          <%= f.submit class: 'btn btn-primary form-control' %>
+        </div>
+        <% end %>
+      </div>
+    </div>
   </div>
   <% end %>
+
+</div>
+</div>
+
+
+<div class="container-fluid happy-rainbow">
+  <div class="row">
+    <div class="col-md-12">
+
+      <%= image_tag("rainbow-footer-group.svg", class:"center-block") %>
+
+    </div>
+  </div>
 </div>

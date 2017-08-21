@@ -123,7 +123,7 @@
 }
 
 .calendar-subsection2-header {
-	font-family: BreeSerif-Regular;
+	font-family: 'Bree Serif', serif;
 	font-size: 36px;
 	color: #00A3DA;
 	letter-spacing: 0.5px;
@@ -267,6 +267,8 @@
 .create-new-container .form-group {
 	display:flex;
 	align-items:center;
+	font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
 }
 
 .label-baseline {

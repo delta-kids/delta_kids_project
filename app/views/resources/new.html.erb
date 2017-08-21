@@ -6,35 +6,38 @@
       <div class="col-md-3 dash-sidebar">
         <ul class="nav nav-sidebar ">
           <%= image_tag('paperclip.png', class: 'clippy') %>
-          <h2>Dashboard</h2>
+          <h2 class="dashboard-headers2">Dashboard</h2>
           <% if user_signed_in? %>
-          <li>Hello <%= current_user.first_name %>&nbsp
-            <%= link_to 'Sign Out', signout_path, method: :delete %>
-          </li>
           <li>
-            <a href="<%= new_event_path %>" class="about-us">Add an Event</a>
+            <h4 style="color:yellow">Hello <%= current_user.first_name %>, what would you like to do today?
+          </h4>
           </li>
-          <hr>
-          <li>
-            <a href="<%= new_resource_path %>" class="about-us">Add a Resource</a>
-          </li>
-          <hr>
-          <% if is_admin? %>
+            <li>
+              <a href="<%= new_event_path %>" class="dashboard-text">Add an Event</a>
+            </li>
+            <hr>
+            <li>
+              <a href="<%= new_resource_path %>" class="dashboard-text">Add a Resource</a>
+            </li>
+            <hr>
+            <li><%= link_to 'Sign Out', signout_path, method: :delete, class:"dashboard-text" %></li>
+            <hr>
+            <% if is_admin? %>
           <h4 style="color:yellow;">Admin</h4>
           <li>
-            <a href="<%= new_organization_path %>" class="about-us">Add Organization</a>
+            <a href="<%= new_organization_path %>" class="dashboard-text">Add Organization</a>
           </li>
           <hr>
           <li>
-            <a href="<%= new_program_type_path %>" class="about-us">New Activity Type</a>
+            <a href="<%= new_program_type_path %>" class="dashboard-text">New Activity Type</a>
           </li>
           <hr>
           <li>
-            <a href="<%= dashboard_pending_and_approved_events_path %>" class="about-us">Pending/Approved Events</a>
+            <a href="<%= dashboard_pending_and_approved_events_path %>" class="dashboard-text">Pending/Approved Events</a>
           </li>
           <hr>
           <li>
-            <a href="<%= dashboard_pending_and_approved_resources_path %>" class="about-us">Pending/Approved Resources</a>
+            <a href="<%= dashboard_pending_and_approved_resources_path %>" class="dashboard-text">Pending/Approved Resources</a>
           </li>
           <hr>
           <% end %>
@@ -45,7 +48,7 @@
           <li>
             <a href="<%= login_path %>" class="top-right-panel">Log In</a>
           </li>
-          <% end %>
+            <% end %>
         </ul>
       </div>
 
@@ -74,8 +77,8 @@
             </div>
 
             <!--  FEATURE UNTIL add calender -->
-
-            <h3>Feature Until</h3>
+            <div class="">
+            <p>Feature Until</p>
 
             <label for='start_date'>Start Date</label>
             <input type="text" class='datepicker form form-control form-padding event-form-width' placeholder="MM/DD/YYYY" >
@@ -88,14 +91,17 @@
 
             <label for='end_date'>End Date</label>
             <input type="text" class='datepicker form form-control form-padding event-form-width' placeholder="MM/DD/YYYY" >
-
+            </div>
             <script type="text/javascript">
             $(document).ready(function(){
               $('.datepicker').datepicker();
             });
             </script>
 
-            <h4>When should the resource be take off the website?</h4>
+
+            <div>
+
+            <p>When should the resource be take off the website </p>
 
             <div class="form-group">
               <%= f.label :"Start Time" %>
@@ -105,6 +111,7 @@
               <%= f.label :"End Time" %>
               <%= f.text_field :feature_end_time, class: 'form form-control form-padding event-form-width' %>
             </div>
+          </div>
             <!--  REMOVE FEATURE FROM SITE is this even necessary? -->
 
             <div class="form-group center-flex-content">
