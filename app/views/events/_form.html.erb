@@ -125,7 +125,7 @@
             <!-- AGE GROUP -->
             <div class="form-group center-flex-content">
               <%= f.label :Age_group, class:'label-baseline caps' %>
-              <div class="form-group event-form-width" id="age-group-db-container">
+              <div class="form-group event-form-width dropbox-container">
                 <%= f.collection_select :age_group_ids,
                 AgeGroup.all,
                 :id,

@@ -266,7 +266,7 @@
 
 .create-new-container .form-group {
 	display:flex;
-	align-items:baseline
+	align-items:center;
 }
 
 .label-baseline {
@@ -286,7 +286,7 @@
 	margin: 0px 25px 0px 10px;
 }
 
-#age-group-db-container {
+.dropbox-container {
 	display: flex;
 	margin-top: auto;
 	margin-bottom: auto;
