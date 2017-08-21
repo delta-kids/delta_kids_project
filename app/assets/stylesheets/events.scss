@@ -6,6 +6,7 @@
 .wholePage{
 	background-color: #d1f0f4;
 }
+
 .calendar-row{
 	padding: 10px 3% 5% 3%;
 }
@@ -26,16 +27,19 @@
 #calendar-subsection1 img {
 	margin: 0;
 }
-.icon-img{
+
+.icon-img {
 	height: 35px;
 	width: 35px;
 }
+
 #filter-header{
 	display: flex;
 	flex-direction: row;
 	padding-top: 10px;
 	justify-content: space-between;
 }
+
 #filterText {
 	font-family: BreeSerif-Regular;
 	font-size: 30px;
@@ -48,7 +52,7 @@
 	margin-bottom: 50px;
 }
 
-.filter-header-img{
+.filter-header-img {
 	width: 100%;
 	margin: 0;
 	height: auto;
@@ -64,13 +68,13 @@
 	transform: rotate(180deg);
 }
 
-.filter-header2{
+.filter-header2 {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 }
 
-.filterCard-header1{
+.filterCard-header1 {
 	/* For: */
 	font-family: 'Open Sans', sans-serif;
 	font-weight: bolder;
@@ -92,29 +96,32 @@
 	font-size: 16px;
 	color: #000000;
 }
+
 .filterCard-list {
 	font-family: OpenSans;
 	font-size: 16px;
 	color: #000000;
 }
+
 .calendar-subsection2-image {
 	background-color:#D1F0F4;
 	width: 100%;
 	height: auto;
 }
 
-
-
 .calendar-subsection2-card {
     margin-right: 0px;
 }
+
 .calendar-row .calendar-subsection2 {
 	padding-left: 40px;
 	top:0;
 }
+
 .calendar-subsection2-text {
 	background: #fff;
 }
+
 .calendar-subsection2-header {
 	font-family: BreeSerif-Regular;
 	font-size: 36px;
@@ -124,28 +131,34 @@
 	padding-top: 5px;
 	padding-bottom: 5px;
 }
+
 .calendar-header {
 	font-family: BreeSerif-Regular;
 	font-size: 30px;
 	color: #004C81;
 	padding-bottom:30px;
 }
+
 .calendar-subsection2-header2{
 	font-family: OpenSans-Bold;
 	font-size: 20px;
 	color: #004C81;
 }
+
 .calendar-subsection2-details{
 	padding: 8px;
 	background-color: #fff;
 }
+
 .calendar-subsection2-text{
 	background-color: #fff;
 }
+
 .calendar-subsection2-card{
 	margin-bottom: 30px;
 	background-color: #fff;
 }
+
 .event-info-txt-bold{
 	/* Event - 04/01/17: */
 	font-family: OpenSans-Extrabold;
@@ -154,6 +167,7 @@
 	float: left;
 	padding-left: 5px;
 }
+
 .event-info-txt{
 	/* 4:30pm: */
 	font-family: OpenSans;
@@ -162,21 +176,25 @@
 	float: left;
 	padding-left: 5px;
 }
+
 .event-info-icon{
 	width: 20px;
 	height: 20px;
 	float: left;
 }
+
 .event-info-icon2{
 	display: inline;
 	width: 20px;
 	height: 20px;
 	float: left;
 }
+
 .event-info1{
 	padding-left: 10px;
 	margin-left: 20px;
 }
+
 .event-info2{
 	display: flex;
 	flex-direction: row;
@@ -187,11 +205,13 @@
 	display: flex;
 	justify-content: space-between;
 }
+
 .event-paragraph{
 	font-family: OpenSans;
 	font-size: 16px;
 	color: #000000;
 }
+
 .event-info-bold2{
 	font-family: OpenSans-Bold;
 	font-size: 16px;
@@ -226,14 +246,17 @@
   	text-align: center;
   	margin-top: 30px;
 }
+
 .caps {
 	 text-transform: capitalize;
 }
-#create-new-event-container {
+
+.create-new-container {
 	width:60%;
 	display:flex;
 	flex-direction:column;
 	align-items:center;
+	justify-content: center;
 }
 
 .label-radio-space {
@@ -241,7 +264,7 @@
 	font-size: 16px;
 }
 
-#create-new-event-container .form-group {
+.create-new-container .form-group {
 	display:flex;
 	align-items:baseline
 }
@@ -257,7 +280,6 @@
 .center-flex-content {
 	display: flex;
 	justify-content: center;
-	font-size: 16px;
 }
 
 .radio-spacing {
@@ -277,19 +299,27 @@
 .date-time-width {
 	width: 110px;
 }
+
 .new-admin-form{
   padding:20px;
 	width: 100vw !important;
   background-color: #D1F0F4;
 }
+
 .table-hover {
 	color:white;
 	border-radius: 10px;
  	background-color:#00A3DA !important;
 }
+
 .table-hover tbody > tr:hover {
 	background-color:#004C81 !important;
 }
+
+.table-hover button {
+	background-color: #F0FFFF !important;
+}
+
 .table-hover button:hover {
 	background-color: yellow !important;
 }

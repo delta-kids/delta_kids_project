@@ -6,6 +6,22 @@
 .background-wrap {
   background-color: #d1f0f4;
 }
+.dashboard-row {
+  display: flex;
+
+  flex-direction: column !important;
+}
+
+.dashboard-headers {
+  display: flex;
+  justify-content: center;
+  background-color: #D1F0F4 ;
+  font-size: 36px;
+  color: #004C81 ;
+  margin-top: 25px;
+  margin-bottom:30px;
+  font-family: 'Bree Serif', serif;
+}
 
 .container-background {
   background-color: #d1f0f4;
@@ -13,6 +29,13 @@
 
 .calendar-subsection2-card {
   margin-top: -40px;
+}
+
+.user-sign-in-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
 }
 
 .filterCard-header2{
@@ -30,6 +53,22 @@
 
 }
 
+#dashboard-btns-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.dashboard-btns {
+  display: block;
+}
+
+.dashboard-btns a button {
+  margin-top: 5px;
+}
+
+
 .button-seemore{
   background: #00A3DA;
   border-radius: 10px;
@@ -44,6 +83,11 @@
   margin: 0 auto;
   text-align: center;
   margin-top: 30px;
+}
+
+.dash-sidebar {
+  height: auto;
+  background-color: #004C81;
 }
 
 .button-cluster {
