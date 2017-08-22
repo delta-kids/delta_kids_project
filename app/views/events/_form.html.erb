@@ -58,7 +58,7 @@
         <div class="container-fluid center-flex-content">
           <div class="create-new-container">
             <br>
-            <h1 class="bree-font" style="margin-top:0;margin-bottom:40px;margin-left:auto;margin-right: auto;">Create New Event</h1>
+            <p class="dashboard-headers">Create New Event</p>
 
             <%= form_for @event do |f|  %>
 
@@ -185,7 +185,7 @@
             <!-- TAGS -->
             <div class="form-group center-flex-content">
               <%= f.label :tags, class:'label-baseline caps' %>
-              <div class="form-group event-form-width" id="age-group-db-container">
+              <div class="form-group event-form-width dropbox-container">
                 <%= f.collection_select :age_group_ids,
                 Tag.all,
                 :id,

@@ -1,7 +1,8 @@
 <div class="wholePage">
         <div class="container-fluid">
         <div class="row">
-        <div class="col-md-3 hidden-xs hidden-sm dash-sidebar">
+        <div class="col-md-1"></div>
+        <div class="col-md-3 dash-sidebar">
           <ul class="nav nav-sidebar ">
             <%= image_tag('paperclip.png', class: 'clippy') %>
             <h2>Dashboard</h2>
@@ -47,7 +48,7 @@
           </ul>
         </div>
 
-            <div class="col-md-9" style="background-color:white;">
+            <div class="col-md-7" style="background-color:white;">
               <% if user_signed_in? %>
               <% if is_admin? %>
               <div class="row">
@@ -159,7 +160,7 @@
             </div>
             </div>
             <% end %>
-
+            <div class="col-md-1"></div>
           </div>
         </div>
       </div>

@@ -1,5 +1,7 @@
+<div class="wholePage">
 <div class="container-fluid">
   <div class="row">
+    <div class="col-md-1"></div>
     <div class="col-md-3 dash-sidebar">
       <ul class="nav nav-sidebar ">
         <%= image_tag('paperclip.png', class: 'clippy') %>
@@ -49,30 +51,33 @@
       </ul>
     </div>
 
-    <div class="col-md-9" style="background-color:white;">
-      <div class="container-fluid">
-        <p class="dashboard-headers">Add New Activity Type</p>
-      </div>
+    <div class="col-md-7" style="background-color:white;">
+      <div class="container-fluid center-flex-content">
+        <div class="">
+        <p class="bree-font center-flex-content" style="margin-top:50px;">Add New Activity Type</p>
       <% if user_signed_in? %>
         <%= @activityType.errors.full_messages.join(', ') %>
 
         <%= form_for @activityType do |f| %>
         <div class="form-group">
-          <%= f.label :Activity_name %>
-          <%= f.text_field :name, class: "form-control"  %>
+          <%= f.label :Activity_name, class:'caps form-padding' %>
+          </div>
+          <div class="form-group">
+          <%= f.text_field :name, class: "form form-control form-padding event-form-width", style:"display:block;" %>
         </div>
         <div class="form-group">
-          <%= f.submit class: 'btn btn-primary form-control' %>
+          <%= f.submit class: 'btn btn-primary form form-padding form-control  event-form-width' %>
         </div>
         <% end %>
+      </div>
       </div>
     </div>
   </div>
   <% end %>
-
+<div class="col-md-1"></div>
 </div>
 </div>
-
+</div>
 
 <div class="container-fluid happy-rainbow">
   <div class="row">
