@@ -68,7 +68,7 @@
             </div>
 
             <div class="form-group center-flex-content">
-              <label for='start_date' class="label-baseline">Start Date</label>
+              <label for='start_date' style="margin-right:47px;">Start Date</label>
               <input type="text" class='datepicker form date-time-width' placeholder="MM/DD/YYYY" >
               <script type="text/javascript">
               $(document).ready(function(){
@@ -87,7 +87,7 @@
               </script>
 
               <div class="form-group center-flex-content">
-                <label for='end_date' class="label-baseline">End Date</label>
+                <label for='end_date' style="margin-right:46px">End Date</label>
                 <input type="text" class='datepicker form form-padding date-time-width' placeholder="MM/DD/YYYY">
                 <%= f.label :"End Time", class: 'form-padding caps', style:'margin:auto;' %>
                 <%= f.text_field :end_time, class: 'form form-padding date-time-width' %>
@@ -98,7 +98,7 @@
             <!-- EVENT REPEAT -->
             <div class="form-group center-flex-content">
               <%= f.label :event_repeat , class:'label-baseline caps' %>
-              <div class="label-baseline">
+              <div class="margin-right">
                 <%= radio_button_tag(:event_repeat, "Weekly") %>
                 <%= label_tag(:repeat, "Weekly", class:'radio-spacing') %>
                 <%= radio_button_tag(:event_repeat, "Never") %>
@@ -134,7 +134,7 @@
                 :id,
                 :age,
                 {},
-                { multiple: true, class: 'chosen-select form-control form-padding'}
+                { multiple: true, class: 'chosen-select form-control form-padding' }
                 %>
               </div>
             </div>
@@ -154,7 +154,7 @@
             <!-- COST -->
             <div class="form-group center-flex-content">
               <%= f.label :event_cost, class:'label-baseline caps' %>
-              <div class="label-baseline">
+              <div class="margin-right">
                 <%= radio_button_tag(:event_cost, "Free") %>
                 <%= label_tag(:cost, "Free", class:'radio-spacing') %>
                 <%= radio_button_tag(:event_cost, "Paid") %>
@@ -165,19 +165,18 @@
             <!-- ACTIVITY TYPE -->
             <div class="form-group center-flex-content">
               <%= f.label :service , "Activity Type", class:'label-baseline', style:'align-self: center; padding-right: 5%' %>
-              <div class="label-baseline">
-                <%= check_box_tag(:art_and_culture) %>
-                <%= label_tag(:art_and_culture, "Art & Culture", class:'radio-spacing') %>
+              <div class="">
                 <%= check_box_tag(:education) %>
                 <%= label_tag(:education, "Education", class:'radio-spacing') %>
-                <div class="label-baseline">
+                <%= check_box_tag(:sports) %>
+                <%= label_tag(:sports, "Sports", class:'radio-spacing') %>
+                <%= check_box_tag(:health) %>
+                <%= label_tag(:health, "Health", class:'radio-spacing') %>
+                  <div class="">
+                    <%= check_box_tag(:art_and_culture) %>
+                    <%= label_tag(:art_and_culture, "Art & Culture", class:'radio-spacing') %>
                   <%= check_box_tag(:entertainment) %>
                   <%= label_tag(:entertainment, "Entertainment", class:'radio-spacing') %>
-                  <%= check_box_tag(:health) %>
-                  <%= label_tag(:health, "Health", class:'radio-spacing') %>
-                  <br>
-                  <%= check_box_tag(:sports) %>
-                  <%= label_tag(:sports, "Sports", class:'radio-spacing') %>
                 </div>
               </div>
             </div>
@@ -198,7 +197,7 @@
             <!-- REGISTRATION -->
             <div class="form-group center-flex-content">
               <%= f.label :location, "Registration", class:'label-baseline' %>
-              <div class="label-baseline">
+              <div class="">
                 <%= radio_button_tag(:location, "Drop-in") %>
                 <%= label_tag(:loc, "Drop-in", class:'radio-spacing') %>
                 <%= radio_button_tag(:location, "Registration Required") %>
@@ -259,11 +258,11 @@
 
 <!-- Rainbow Footer-->
 
-<div class="container-fluid happy-rainbow">
   <div class="row">
     <div class="col-md-12">
+      <div class="container-fluid happy-rainbow center-flex-content">
 
-      <%= image_tag("rainbow-footer-group.svg", class:"center-block") %>
+      <%= image_tag("rainbow-footer-group.svg",style:"width:100%") %>
 
     </div>
   </div>

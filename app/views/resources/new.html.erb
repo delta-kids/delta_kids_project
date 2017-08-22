@@ -10,19 +10,19 @@
           <% if user_signed_in? %>
           <li>
             <h4 style="color:yellow">Hello <%= current_user.first_name %>, what would you like to do today?
-          </h4>
+            </h4>
           </li>
-            <li>
-              <a href="<%= new_event_path %>" class="dashboard-text">Add an Event</a>
-            </li>
-            <hr>
-            <li>
-              <a href="<%= new_resource_path %>" class="dashboard-text">Add a Resource</a>
-            </li>
-            <hr>
-            <li><%= link_to 'Sign Out', signout_path, method: :delete, class:"dashboard-text" %></li>
-            <hr>
-            <% if is_admin? %>
+          <li>
+            <a href="<%= new_event_path %>" class="dashboard-text">Add an Event</a>
+          </li>
+          <hr>
+          <li>
+            <a href="<%= new_resource_path %>" class="dashboard-text">Add a Resource</a>
+          </li>
+          <hr>
+          <li><%= link_to 'Sign Out', signout_path, method: :delete, class:"dashboard-text" %></li>
+          <hr>
+          <% if is_admin? %>
           <h4 style="color:yellow;">Admin</h4>
           <li>
             <a href="<%= new_organization_path %>" class="dashboard-text">Add Organization</a>
@@ -48,7 +48,7 @@
           <li>
             <a href="<%= login_path %>" class="top-right-panel">Log In</a>
           </li>
-            <% end %>
+          <% end %>
         </ul>
       </div>
 
@@ -61,90 +61,79 @@
 
             <%= form_for @resource do |f| %>
 
-            <div class="form-group">
-              <%= f.label :name %>
+            <div class="form-group center-flex-content">
+              <%= f.label :name, class: "label-baseline" %>
               <%= f.text_field :name, class: "form form-control form-padding event-form-width" %>
             </div>
-
+            <hr>
             <div class="form-group center-flex-content">
               <%= f.label "Feature Resource?", class:'label-baseline caps' %>
-              <div class="label-baseline">
-              <%= radio_button_tag(:feature, true) %>
-              <%= label_tag(:feature, "Yes", class:'radio-spacing') %>
-              <%= radio_button_tag(:feature, false) %>
-              <%= label_tag(:feature, "No", class:'radio-spacing') %>
+              <div class="margin-right">
+                <%= radio_button_tag(:feature, true) %>
+                <%= label_tag(:feature, "Yes", class:'radio-spacing') %>
+                <%= radio_button_tag(:feature, false) %>
+                <%= label_tag(:feature, "No", class:'radio-spacing') %>
+              </div>
             </div>
-            </div>
-
             <!--  FEATURE UNTIL add calender -->
-            <div class="">
-            <p>Feature Until</p>
-
-            <label for='start_date'>Start Date</label>
-            <input type="text" class='datepicker form form-control form-padding event-form-width' placeholder="MM/DD/YYYY" >
-
-            <script type="text/javascript">
-            $(document).ready(function(){
-              $('.datepicker').datepicker();
-            });
-            </script>
-
-            <label for='end_date'>End Date</label>
-            <input type="text" class='datepicker form form-control form-padding event-form-width' placeholder="MM/DD/YYYY" >
-            </div>
-            <script type="text/javascript">
-            $(document).ready(function(){
-              $('.datepicker').datepicker();
-            });
-            </script>
-
-
             <div>
-
-            <p>When should the resource be take off the website </p>
-
-            <div class="form-group">
-              <%= f.label :"Start Time" %>
-              <%= f.text_field :feature_start_time, class: 'form form-control form-padding event-form-width' %>
-            </div>
-            <div class="form-group">
-              <%= f.label :"End Time" %>
-              <%= f.text_field :feature_end_time, class: 'form form-control form-padding event-form-width' %>
-            </div>
-          </div>
-            <!--  REMOVE FEATURE FROM SITE is this even necessary? -->
-
-            <div class="form-group center-flex-content">
-              <%= f.label "Resource is about the situation in: ", class:'label-baseline', style:'align-self: center;padding-right: 5%' %>
-              <div class="label-baseline">
-              <%= radio_button_tag(:feature_location, "Delta") %>
-              <%= label_tag(:feature_location, "Delta", class:'radio-spacing') %>
-              <%= radio_button_tag(:feature_location, "BC") %>
-              <%= label_tag(:feature_location, "BC", class:'radio-spacing') %>
+              <p class="bree-font" style="font-size:20px;">Feature Until</p>
               <br>
-              <%= radio_button_tag(:feature_location, "Canada") %>
-              <%= label_tag(:feature_location, "Canada", class:'radio-spacing') %>
-              <%= radio_button_tag(:feature_location, "Not Relevent") %>
-              <%= label_tag(:feature_location, "Not Relevent", class:'radio-spacing') %>
+              <div class="form-group center-flex-content">
+                <label for='start_date' style="margin-right:47px;">Start Date</label>
+                <input type="text" class='datepicker form date-time-width' placeholder="MM/DD/YYYY" >
+                <script type="text/javascript">
+                $(document).ready(function(){
+                  $('.datepicker').datepicker();
+                });
+                </script>
+                <%= f.label :"Start Time", class: 'form-padding caps', style:'margin:auto;' %>
+                <%= f.text_field :feature_start_time, class: 'form date-time-width' %>
+              </div>
+              <div class="form-group center-flex-content">
+                <script type="text/javascript">
+                $(document).ready(function(){
+                  $('.datepicker').datepicker();
+                });
+                </script>
+                <label for='end_date' style="margin-right:46px">End Date</label>
+                <input type="text" class='datepicker form form-padding date-time-width' placeholder="MM/DD/YYYY">
+                <%= f.label :"End Time", class: 'form-padding caps', style:'margin:auto;' %>
+                <%= f.text_field :feature_end_time, class: 'form form-padding date-time-width' %>
+              </div>
             </div>
-          </div>
+            <hr>
+            <div class="margin-right">
+              <%= f.label "Resource is about the situation in: ", class:'font-16', style:'align-self: center;padding-right: 5%;' %>
+            </div>
+            <div class="form-group center-flex-content">
+                <%= radio_button_tag(:feature_location, "Delta") %>
+                <%= label_tag(:feature_location, "Delta", class:'radio-spacing') %>
+                <%= radio_button_tag(:feature_location, "BC") %>
+                <%= label_tag(:feature_location, "BC", class:'radio-spacing') %>
+                <br>
+                <%= radio_button_tag(:feature_location, "Canada") %>
+                <%= label_tag(:feature_location, "Canada", class:'radio-spacing') %>
+                <%= radio_button_tag(:feature_location, "N/A") %>
+                <%= label_tag(:feature_location, "N/A", class:'radio-spacing') %>
+            </div>
 
             <div class="form-group center-flex-content">
               <%= f.label :Topic, class:'label-baseline' %>
               <div class="form-group event-form-width dropbox-container">
-              <%= f.collection_select :topic_ids,
-              Topic.all,
-              :id,
-              :name,
-              {},
-              { multiple: true, class: 'chosen-select form-control form-padding'}
-              %>
-            </div>
+                <%= f.collection_select :topic_ids,
+                Topic.all,
+                :id,
+                :name,
+                {},
+                { multiple: true, class: 'chosen-select form-control form-padding'}
+                %>
+              </div>
             </div>
 
             <div class="form-group center-flex-content">
               <%= f.label :tags, class:'label-baseline caps' %>
-              <div class="form-group event-form-width" id="age-group-db-container">
+              <div class="form-group event-form-width dropbox-container">
                 <%= f.collection_select :age_group_ids,
                 Tag.all,
                 :id,

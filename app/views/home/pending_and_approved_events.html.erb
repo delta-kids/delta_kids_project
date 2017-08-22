@@ -5,10 +5,11 @@
         <div class="col-md-3 dash-sidebar">
           <ul class="nav nav-sidebar ">
             <%= image_tag('paperclip.png', class: 'clippy') %>
-            <h2>Dashboard</h2>
+            <h2 class="dashboard-headers2">Dashboard</h2>
             <% if user_signed_in? %>
-            <li>Hello <%= current_user.first_name %>&nbsp
-              <%= link_to 'Sign Out', signout_path, method: :delete %>
+            <li>
+              <h4 style="color:yellow">Hello <%= current_user.first_name %>, what would you like to do today?
+            </h4>
             </li>
               <li>
                 <a href="<%= new_event_path %>" class="about-us">Add an Event</a>

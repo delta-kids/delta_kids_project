@@ -1,7 +1,45 @@
-
-.wholePage{
-  background-color: #d1f0f4;
+.radio-spacing {
+	margin: 0px 25px 0px 10px;
 }
+
+.dropbox-container {
+	display: flex;
+	margin-left: auto;
+}
+
+.dropbox-container .chosen-choices {
+	display: flex;
+	justify-content: center;
+	margin-left: auto;
+	margin-top: 5px;
+	width:93%;
+	border-radius: 4px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+.dropbox-container .chosen-drop {
+	display: flex;
+	justify-content: center;
+	margin-left: 28px;
+	margin-top: 5px;
+	width:93%;
+	border-radius: 4px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+
+
+}
+
+
+.event-form-width {
+	width:400px !important;
+}
+
+.date-time-width {
+	width: 110px;
+}
+
 
 .background-wrap {
   background-color: #d1f0f4;

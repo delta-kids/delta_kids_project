@@ -5,6 +5,7 @@
 
 .wholePage{
 	background-color: #d1f0f4;
+	padding-top: 15px;
 }
 
 .calendar-row{
@@ -14,6 +15,11 @@
 .font-16 {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 16px;
+}
+
+.font-20 {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 20px;
 }
 
 .collapse-menu {
@@ -271,8 +277,21 @@
   font-size: 16px;
 }
 
+.margin-right {
+	margin-right: auto;
+}
+
+.margin-left {
+	margin-right: auto;
+}
+
+.margin-left-10px {
+	margin-left: 10px;
+}
+
 .label-baseline {
 	margin-right: auto;
+	width:25%;
 }
 
 .form-padding {
@@ -284,23 +303,6 @@
 	justify-content: center;
 }
 
-.radio-spacing {
-	margin: 0px 25px 0px 10px;
-}
-
-.dropbox-container {
-	display: flex;
-	margin-top: auto;
-	margin-bottom: auto;
-}
-
-.event-form-width {
-	width:400px !important;
-}
-
-.date-time-width {
-	width: 110px;
-}
 
 .new-admin-form{
   padding:20px;
