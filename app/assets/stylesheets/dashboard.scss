@@ -1,10 +1,82 @@
-
-.wholePage{
-  background-color: #d1f0f4;
+.radio-spacing {
+	margin: 0px 25px 0px 10px;
 }
+
+.dropbox-container {
+	display: flex;
+	margin-left: auto;
+}
+
+.dropbox-container .chosen-choices {
+	display: flex;
+	justify-content: center;
+	margin-left: auto;
+	margin-top: 5px;
+	width:93%;
+	border-radius: 4px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+.dropbox-container .chosen-drop {
+	display: flex;
+	justify-content: center;
+	margin-left: 28px;
+	margin-top: 5px;
+	width:93%;
+	border-radius: 4px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+
+
+}
+
+
+.event-form-width {
+	width:400px !important;
+}
+
+.date-time-width {
+	width: 110px;
+}
+
 
 .background-wrap {
   background-color: #d1f0f4;
+}
+.dashboard-row {
+  display: flex;
+
+  flex-direction: column !important;
+}
+
+.dashboard-headers {
+  display: flex;
+  justify-content: center;
+  font-size: 36px;
+  color: #004C81 ;
+  margin-top: 25px;
+  margin-bottom:30px;
+  font-family: 'Bree Serif', serif;
+}
+
+.dashboard-headers2 {
+  display: flex;
+  justify-content: center;
+  font-size: 36px;
+  color: white;
+  margin-bottom:30px;
+  font-family: 'Bree Serif', serif;
+}
+
+.dashboard-text {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+}
+
+.dashboard-text2 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
 }
 
 .container-background {
@@ -13,6 +85,13 @@
 
 .calendar-subsection2-card {
   margin-top: -40px;
+}
+
+.user-sign-in-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
 }
 
 .filterCard-header2{
@@ -30,6 +109,22 @@
 
 }
 
+#dashboard-btns-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.dashboard-btns {
+  display: block;
+}
+
+.dashboard-btns a button {
+  margin-top: 5px;
+}
+
+
 .button-seemore{
   background: #00A3DA;
   border-radius: 10px;
@@ -44,6 +139,11 @@
   margin: 0 auto;
   text-align: center;
   margin-top: 30px;
+}
+
+.dash-sidebar {
+  height: auto;
+  background-color: #004C81;
 }
 
 .button-cluster {
