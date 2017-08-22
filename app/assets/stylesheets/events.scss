@@ -17,6 +17,7 @@
 	font-size: 16px;
 }
 
+
 .font-20 {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 20px;
@@ -58,6 +59,7 @@
 	margin-bottom: 50px;
 }
 
+
 .filter-header-img {
 	width: 100%;
 	margin: 0;
@@ -68,6 +70,7 @@
 .filter-header-chevron {
 	width: 100%;
 	height: 100%;
+
 }
 
 .rotate-chevron {
@@ -79,6 +82,7 @@
 	flex-direction: row;
 	justify-content: space-between;
 }
+
 
 .filterCard-header1 {
 	/* For: */
@@ -289,9 +293,16 @@
 	margin-left: 10px;
 }
 
+
 .label-baseline {
 	margin-right: auto;
 	width:25%;
+}
+
+.center-flex-content {
+	display: flex;
+	justify-content: center;
+	font-size: 16px;
 }
 
 .form-padding {
