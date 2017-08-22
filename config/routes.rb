@@ -62,7 +62,11 @@ Rails.application.routes.draw do
   get '/services/children', to: 'services#children'
 
   get '/live', to: 'home#live', as: 'live'
+
   get '/dashboard', to: 'home#dashboard', as: 'dashboard'
+  get '/dashboard/pending_and_approved_events', to: 'home#pending_and_approved_events'
+  get '/dashboard/pending_and_approved_resources', to: 'home#pending_and_approved_resources'
+  
   get '/map', to: 'home#map', as: 'map'
 
   get '/search', to: 'home#search', as: 'search'

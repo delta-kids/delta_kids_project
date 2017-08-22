@@ -3,15 +3,7 @@
     <div class="col-md-12">
       <div class="container-fluid deltakids-logo">
         <div class="pull-right top-right-panel">
-          <% if user_signed_in? %>
-          Hello <%= current_user.first_name %>&nbsp
-          <%= link_to 'Sign Out', signout_path, method: :delete, class: 'top-right-panel'  %>
           <%= link_to 'Dashboard', dashboard_path %>&nbsp&nbsp&nbsp&nbsp&nbsp
-          <% else %>
-          <!-- change sign up to New User -->
-          <%= link_to 'New User', signup_path, class: 'top-right-panel' %>&nbsp
-          <%= link_to 'Log In', login_path, class: 'top-right-panel' %>&nbsp
-          <% end %>
           <a href="<%= about_path %>" class="top-right-panel">About Us</a>&nbsp
           <!-- Client asked to remove Live, I'll just comment it out for reference -->
           <!-- <a href="<#%= live_path %>" class="top-right-panel">Live 5-2-1-0</a> -->
@@ -50,7 +42,11 @@
   </button>
   <ul class="dropdown-menu learning-dropdown-menu bullet" style="margin-top: 30px !important; left: -25px">
     <div class="arrow-up" id="learn-arrow"></div>
+<<<<<<< HEAD
     <div class="learning-dropdown-div">
+=======
+    <div class="learning-dropdown-div learn-prog-serv-dropdown">
+>>>>>>> 1a6460f9b29deac825d1628391bf155692f09361
       <li><a href="/surveys">Child Surveys</a></li>
       <hr class="nav-hr">
       <li><a href="/live">Live 5-2-1-0</a></li>
@@ -68,7 +64,12 @@
   </button>
   <ul class="dropdown-menu dropdown header-menu">
     <div class="arrow-up" id="program-arrow"></div>
+<<<<<<< HEAD
     <div class="dropdown-col">
+=======
+    <div class="dropdown-col learn-prog-serv-dropdown">
+
+>>>>>>> 1a6460f9b29deac825d1628391bf155692f09361
       <ul class="programs-ul">
         <li><a href="/programs/0_5"><strong class="dropdown-category">0-5 years</strong></a></li>
         <hr class="nav-hr">
@@ -117,7 +118,12 @@
   </button>
   <ul class="dropdown-menu bullet pull-right header-menu ">
     <div class="arrow-up" id="service-arrow"></div>
+<<<<<<< HEAD
     <div class="dropdown-col">
+=======
+    <div class="dropdown-col learn-prog-serv-dropdown">
+
+>>>>>>> 1a6460f9b29deac825d1628391bf155692f09361
       <ul class="services-ul">
         <li><a href="/services/pregnancy_babies"><strong class="dropdown-category">Pregnancy & Babies</strong></a></li>
         <!-- <li><a href="#">Help in a Crisis</a></li> -->
