@@ -95,44 +95,6 @@
             </div>
             <!-- ================== -->
 
-<<<<<<< HEAD
-    <!-- AGE GROUP -->
-    <div class="form-group center-flex-content">
-      <%= f.label :Age_group, class:'label-baseline caps' %>
-      <div class="form-group event-form-width" id="age-group-db-container">
-        <%= f.collection_select :age_group_ids,
-        AgeGroup.all,
-        :id,
-        :age,
-        {},
-        { multiple: true, class: 'chosen-select form-control form-padding'}
-        %>
-      </div>
-    </div>
-
-    <!-- <div class="form-group center-flex-content"> -->
-      <%#= f.label :age_group %>
-      <%#= radio_button_tag(:age_group, "0-5") %>
-      <%#= label_tag(:age, "0-5") %>
-      <%#= radio_button_tag(:age_group, "6-12") %>
-      <%#= label_tag(:age, "6-12") %>
-      <%#= radio_button_tag(:age_group, "adult") %>
-      <%#= label_tag(:age, "adult") %>
-      <%#= radio_button_tag(:age_group, "all") %>
-      <%#= label_tag(:age, "all") %>
-    <!-- </div> -->
-
-    <!-- COST -->
-    <div class="form-group center-flex-content">
-      <%= f.label :event_cost, class:'label-baseline caps' %>
-      <div class="label-baseline">
-        <%= radio_button_tag(:event_cost, "Free") %>
-        <%= label_tag(:cost, "Free", class:'radio-spacing') %>
-        <%= radio_button_tag(:event_cost, "Paid") %>
-        <%= label_tag(:cost, "Paid", class:'radio-spacing') %>
-      </div>
-    </div>
-=======
             <!-- EVENT REPEAT -->
             <div class="form-group center-flex-content">
               <%= f.label :event_repeat , class:'label-baseline caps' %>
@@ -172,7 +134,7 @@
                 :id,
                 :age,
                 {},
-                { multiple: true, class: 'chosen-select form-control form-padding' }
+                { multiple: true, class: 'chosen-select form-control form-padding'}
                 %>
               </div>
             </div>
@@ -199,7 +161,6 @@
                 <%= label_tag(:cost, "Paid", class:'radio-spacing') %>
               </div>
             </div>
->>>>>>> 1a6460f9b29deac825d1628391bf155692f09361
 
             <!-- ACTIVITY TYPE -->
             <div class="form-group center-flex-content">
@@ -257,7 +218,6 @@
               <%= f.label :"Contact name", class:'label-baseline caps' %>
               <%= f.text_field :contact_name, class: 'form form-control form-padding event-form-width' %>
             </div>
-
             <div class="form-group">
               <%= f.label :"Contact email", class:'label-baseline caps' %>
               <%= f.email_field :contact_email, class: 'form form-control form-padding event-form-width' %>
@@ -271,29 +231,6 @@
           </div>
         </div>
 
-<<<<<<< HEAD
-    <!-- TAGS -->
-    <div class="form-group center-flex-content">
-      <%= f.label :tags, class:'label-baseline caps' %>
-      <div class="form-group event-form-width" id="age-group-db-container">
-        <%= f.collection_select :age_group_ids,
-        Tag.all,
-        :id,
-        :name,
-        {},
-        { multiple: true, class: 'chosen-select form-control form-padding'}
-        %>
-      </div>
-    </div>
-    <!-- REGISTRATION -->
-    <div class="form-group center-flex-content">
-      <%= f.label :location, "Registration", class:'label-baseline' %>
-      <div class="label-baseline">
-      <%= radio_button_tag(:location, "Drop-in") %>
-      <%= label_tag(:loc, "Drop-in", class:'radio-spacing') %>
-      <%= radio_button_tag(:location, "Registration Required") %>
-      <%= label_tag(:loc, "Registration Required", class:'radio-spacing') %>
-=======
         <% end %>
         <% else %>
         <div>
@@ -311,37 +248,14 @@
         </p>
       </div>
       <div class="col-md-1"></div>
->>>>>>> 1a6460f9b29deac825d1628391bf155692f09361
     </div>
     <% end %>
+
   </div>
-<<<<<<< HEAD
-    <!-- EVENT DESCRIPTION -->
-    <div class="form-group">
-      <%= f.label :description, class:'label-baseline' %>
-      <%= f.text_area :description, class: 'form form-control form-padding event-form-width' %>
-    </div>
-
-    <!-- MORE INFO , LINKS  -->
-    <!-- PLACEHOLDER, NEED TO COME BACK AND DO -->
-    <h3>UPLOAD PHOTO PLACEHOLDER</h3>
-    <h3>MORE INFO, LINKS PLACEHOLDER</h3>
-    <div class="form-group">
-      <%= f.label :"Contact name", class:'label-baseline caps' %>
-      <%= f.text_field :contact_name, class: 'form form-control form-padding event-form-width' %>
-    </div>
-
-    <div class="form-group">
-      <%= f.label :"Contact email", class:'label-baseline caps' %>
-      <%= f.email_field :contact_email, class: 'form form-control form-padding event-form-width' %>
-    </div>
-=======
 </div>
 </div>
 
 <!-- Rainbow Footer-->
->>>>>>> 1a6460f9b29deac825d1628391bf155692f09361
-
 
   <div class="row">
     <div class="col-md-12">
