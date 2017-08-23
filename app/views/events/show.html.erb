@@ -1,2 +1,14 @@
-<h1>Events#show</h1>
-<p>Find me in app/views/events/show.html.erb</p>
+<div class="container new-admin-form2">
+    <h4><%= @event.title %></h4>
+    <p class='font-20'><strong>Start Date: </strong><%= @event.start_date %></p>
+    <p class='font-20'><strong>Start Time: </strong><%= @event.start_time %></p>
+    <p class='font-20'><strong>End Date: </strong><%= @event.end_date %></p>
+    <p class='font-20'><strong>End Time: </strong><%= @event.end_time %></p>
+    <p class='font-20'><strong>Event Repeat: </strong><%= @event.event_repeat %></p>
+    <p class='font-20'><strong>Address: </strong><%= @event.address %></p>
+    <p class='font-20'><strong>Cost: </strong><%= @event.cost %></p>
+    <p class='font-20'><strong>Registration: </strong><%= @event.registration %></p>
+    <p class='font-20'><strong>description: </strong><%= @event.description %></p>
+    <p class='font-20'><strong>Contact Name: </strong><%= @event.contact_name %></p>
+    <p class='font-20'><strong>Contact Email: </strong><%= @event.contact_email %></p>
+</div>

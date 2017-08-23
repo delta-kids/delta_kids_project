@@ -35,6 +35,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'font-awesome-rails'
 gem 'jquery-rails'
 gem 'bootstrap-datepicker-rails'
+gem 'bootstrap-timepicker-rails'
 gem 'chosen-rails'
 gem "simple_calendar", "~> 2.0"
 # Use Capistrano for deployment
