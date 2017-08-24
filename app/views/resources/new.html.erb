@@ -2,57 +2,11 @@
   <!-- First section div -->
   <div class="container-fluid">
     <div class="row">
-      <div class="col-md-1"></div>
-      <div class="col-md-3 dash-sidebar">
-        <ul class="nav nav-sidebar ">
-          <%= image_tag('paperclip.png', class: 'clippy') %>
-          <h2 class="dashboard-headers2">Dashboard</h2>
-          <% if user_signed_in? %>
-          <li>
-            <h4 style="color:yellow">Hello <%= current_user.first_name %>, what would you like to do today?
-            </h4>
-          </li>
-          <li>
-            <a href="<%= new_event_path %>" class="dashboard-text">Add an Event</a>
-          </li>
-          <hr>
-          <li>
-            <a href="<%= new_resource_path %>" class="dashboard-text">Add a Resource</a>
-          </li>
-          <hr>
-          <li><%= link_to 'Sign Out', signout_path, method: :delete, class:"dashboard-text" %></li>
-          <hr>
-          <% if is_admin? %>
-          <h4 style="color:yellow;">Admin</h4>
-          <li>
-            <a href="<%= new_organization_path %>" class="dashboard-text">Add Organization</a>
-          </li>
-          <hr>
-          <li>
-            <a href="<%= new_program_type_path %>" class="dashboard-text">New Activity Type</a>
-          </li>
-          <hr>
-          <li>
-            <a href="<%= dashboard_pending_and_approved_events_path %>" class="dashboard-text">Pending/Approved Events</a>
-          </li>
-          <hr>
-          <li>
-            <a href="<%= dashboard_pending_and_approved_resources_path %>" class="dashboard-text">Pending/Approved Resources</a>
-          </li>
-          <hr>
-          <% end %>
-          <% else %>
-          <li>
-            <a href="<%= signup_path %>" class="top-right-panel">New User</a>
-          </li>
-          <li>
-            <a href="<%= login_path %>" class="top-right-panel">Log In</a>
-          </li>
-          <% end %>
-        </ul>
-      </div>
+      <div class="col-md-12 content">
 
-      <div class="col-md-7" style="background-color:white;">
+      <%= render 'partials/dash_sidebar' %>
+
+      <div class="col-md-9 dash-main-content" style="background-color:white;">
         <% if user_signed_in? %>
         <div class="container-fluid center-flex-content">
           <div class="create-new-container">
@@ -184,7 +138,7 @@
 
         </div>
       </div>
-      <div class="col-md-1"></div>
+    </div>
     </div>
     <% end %>
     <% else %>
@@ -209,16 +163,4 @@
 
 <!-- Rainbow Footer-->
 
-<div class="container-fluid happy-rainbow">
-  <div class="row">
-    <div class="col-md-12">
-
-      <%= image_tag("rainbow-footer-group.svg", class:"center-block") %>
-
-    </div>
-  </div>
-</div>
-<!-- ================================ -->
-<!-- ================================ -->
-<!-- ================================ -->
-<!-- ================================ -->
+<%= render 'partials/footer' %>

@@ -5,7 +5,7 @@
       <ul class="nav nav-sidebar ">
         <%= image_tag('paperclip.png', class: 'clippy') %>
         <h2 class='age-group'><%= @age_group %> YEAR OLDS</h2>
-        <p><a style="color:#00A3DA" href="#">Who to contact <br> for more information about...</a></p>
+        <p><a style="color:#00A3DA" href="<%= contact_path %>">Who to contact <br> for more information about...</a></p>
         <li><a href="/programs/0_5/arts_culture">Arts & Culture</a></li>
         <hr>
         <li><a href="/programs/0_5/sports">Sports</a></li>
@@ -130,14 +130,4 @@
 
 <!-- Rainbow Footer-->
 
-<div class="relative-enabler">
-  <div class="container-fluid happy-rainbow">
-    <div class="row">
-      <div class="col-md-12">
-
-        <%= image_tag("rainbow-footer-group.svg", class:"center-block") %>
-
-      </div>
-     </div>
-   </div>
-</div>
+<%= render 'partials/footer' %>
