@@ -1,60 +1,16 @@
 <div class="wholePage">
 <div class="container-fluid">
   <div class="row">
-    <div class="col-md-1"></div>
-    <div class="col-md-3 dash-sidebar">
-      <ul class="nav nav-sidebar ">
-        <%= image_tag('paperclip.png', class: 'clippy') %>
-        <h2 class="dashboard-headers2">Dashboard</h2>
-        <% if user_signed_in? %>
-        <li>
-          <h4 style="color:yellow">Hello <%= current_user.first_name %>, what would you like to do today?
-          </h4>
-        </li>
-        <li>
-          <a href="<%= new_event_path %>" class="dashboard-text">Add an Event</a>
-        </li>
-        <hr>
-        <li>
-          <a href="<%= new_resource_path %>" class="dashboard-text">Add a Resource</a>
-        </li>
-        <hr>
-        <li><%= link_to 'Sign Out', signout_path, method: :delete, class:"dashboard-text" %></li>
-        <hr>
-        <% if is_admin? %>
-        <h4 style="color:yellow;">Admin</h4>
-        <li>
-          <a href="<%= new_organization_path %>" class="dashboard-text">Add Organization</a>
-        </li>
-        <hr>
-        <li>
-          <a href="<%= new_program_type_path %>" class="dashboard-text">New Activity Type</a>
-        </li>
-        <hr>
-        <li>
-          <a href="<%= dashboard_pending_and_approved_events_path %>" class="dashboard-text">Pending/Approved Events</a>
-        </li>
-        <hr>
-        <li>
-          <a href="<%= dashboard_pending_and_approved_resources_path %>" class="dashboard-text">Pending/Approved Resources</a>
-        </li>
-        <hr>
-        <% end %>
-        <% else %>
-        <li>
-          <a href="<%= signup_path %>" class="top-right-panel">New User</a>
-        </li>
-        <li>
-          <a href="<%= login_path %>" class="top-right-panel">Log In</a>
-        </li>
-        <% end %>
-      </ul>
-    </div>
+    <div class="col-md-12 content">
 
-    <div class="col-md-7" style="background-color:white;">
+    <%= render 'partials/dash_sidebar' %>
+
+    <div class="col-md-9 dash-main-content">
       <div class="container-fluid">
         <p class="dashboard-headers">Welcome to the Dashboard</p>
       </div>
+      <div class="container-fluid">
+
       <% if user_signed_in? %>
       <p class="dashboard-text2">The Text below is here to show what a welcome message may look like</p>
       <br>
@@ -63,9 +19,9 @@
         <br>
         Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         <% else %>
-        <div>
-          <p>
-            Dashboard section is meant to publish a Resource and/or Event. In order to proceed you must have an account with us. Please Log In or create a New User.
+        <div class="container-fluid">
+          <p class="font-20">
+            The Dashboard section is meant to publish a Resource and/or Event. In order to proceed you must have an account with us. Please Log In or create a New User.
             <br>
             <!-- <%= link_to 'New User', signup_path, class: 'top-right-panel' %>&nbsp -->
             <!-- <div class="">
@@ -73,13 +29,14 @@
           </div> -->
         </p>
         <br>
-        <p>
+        <p class="font-20">
           If you don't want to proceed, please feel free to go elsewhere in our site.
         </p>
       </div>
+      </div>
     </div>
     <% end %>
-    <div class="col-md-1"></div>
+  </div>
   </div>
 </div>
 </div>
