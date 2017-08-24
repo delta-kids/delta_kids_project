@@ -157,7 +157,7 @@
 
         <p class="calendar-subsection2-header pull-left ">Featured</p>
 
-        <% @events.each do |event| %>
+        <% @events.first(1).each do |event| %>
 
         <div class="calendar-subsection2-card light-blue-bg-color">
           <% num = rand(1..3) %>
@@ -213,8 +213,7 @@
 
         <p class="calendar-subsection2-header pull-left ">Upcoming</p>
 
-        <% @events.each do |event| %>
-
+        <% @events.last(2).each do |event| %>
         <div class="calendar-subsection2-card light-blue-bg-color">
           <% num = rand(1..3) %>
           <%= image_tag "event#{num}.png", class: "calendar-subsection2-image" %>
@@ -262,18 +261,12 @@
             </div>
           </div>
         </div>
+        <br>
+        <br>
         <% end %>
       </div>
-
-      <br>
-      <br>
-
       <div id='button-seemore'>SEE MORE</div>
-
-
     </div>
-
-
   </div>
 </div>
 </div>
