@@ -1,11 +1,11 @@
 
 <div class="container new-admin-form2">
     <h4><%= @organization.name %></h4>
-    <p><strong>description: </strong><%= @organization.description %></p>
-    <p><strong>Address: </strong><%= @organization.address %></p>
-    <p><strong>Phone_number: </strong><%= @organization.phone %></p>
-    <p><strong>Website: </strong><%= @organization.website %></p>
+    <p class="font-20"><strong>description: </strong><%= @organization.description %></p>
+    <p class="font-20"><strong>Address: </strong><%= @organization.address %></p>
+    <p class="font-20"><strong>Phone_number: </strong><%= @organization.phone %></p>
+    <p class="font-20"><strong>Website: </strong><%= @organization.website %></p>
     <% @organization.program_types.each do |activityType|  %>
-    <p><strong>Activity type: </strong><%= activityType.name %></p>
+    <p class="font-20"><strong>Activity type: </strong><%= activityType.name %></p>
     <% end %>
 </div>

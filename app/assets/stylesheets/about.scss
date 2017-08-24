@@ -3,23 +3,19 @@
   border-radius: 10px;
   margin-top: 10px;
 }
-
 #main-body {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding:5%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
-
 .main {
-  padding-top: 30px;
   padding-bottom: 30px;
 }
-
 .background-color {
+  padding-top: 20px;
   background-color: #D1F0F4;
 }
-
 #about-us-container {
   background-color: white;
   padding: 0px;
@@ -38,14 +34,11 @@
   font-size: 24px;
   font-family: 'Open Sans', sans-serif;
 }
-
 .kids-img {
   background-color: #D1F0F4;
   width: 100%;
   height: auto;
-
 }
-
 .sub-headers {
   color: #004C81;
   font-size: 16px;
@@ -53,15 +46,15 @@
 }
 
 #sponsors-header {
+  color: #0DA3DA;
   margin-top: 5px;
+  margin-bottom:30px;
+  font-family: 'Bree Serif', serif;
+  font-size: 30px;
 }
 
 .blurb {
   font-family: 'Open Sans Semi-Bold', sans-serif;
-}
-
-#filler {
-  height: 317px;
 }
 
 #goal {
@@ -72,47 +65,52 @@
   padding-top: 10px;
   padding-bottom: 10px;
 }
-
 .hands {
   margin-bottom: 10px;
 }
-
 .blue-background {
   background-color: #f3fbfd;
   margin: 0px;
   margin-left: -10px;
   margin-right: -10px;
 }
-
 .sub-headers {
   margin-top: 2px;
 }
-
 .img {
   margin-left: 0px;
   margin-right: 0px;
 }
-
 .cursor2 {
   width: 7px;
   margin-left: 5px;
   margin-top: 3px;
 }
-
+.sponsors-padding {
+  margin: 2%;
+}
+#filler {
+  height: 80%;
+}
+.page-font {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+}
+.page-font2 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+}
 .website {
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   color: #00A3DA;
 }
-
 .partner-logo {
-  margin-top: 8px;
+  margin:auto;
 }
-
 .sponsors-img {
   padding: 5px;
 }
-
 #flex-enabler {
   display: flex;
   flex-direction: row;

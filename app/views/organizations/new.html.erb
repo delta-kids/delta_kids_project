@@ -1,123 +1,175 @@
 
-<div class="container-fluid new-admin-form">
-  <div class="row">
-    <div class="col-md-2"></div>
+<div class="wholePage">
+  <!-- First section div -->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-3 dash-sidebar">
+        <ul class="nav nav-sidebar ">
+          <%= image_tag('paperclip.png', class: 'clippy') %>
+          <h2 class="dashboard-headers2">Dashboard</h2>
+          <% if user_signed_in? %>
+          <li>
+            <h4 style="color:yellow">Hello <%= current_user.first_name %>, what would you like to do today?
+            </h4>
+          </li>
+          <li>
+            <a href="<%= new_event_path %>" class="dashboard-text">Add an Event</a>
+          </li>
+          <hr>
+          <li>
+            <a href="<%= new_resource_path %>" class="dashboard-text">Add a Resource</a>
+          </li>
+          <hr>
+          <li><%= link_to 'Sign Out', signout_path, method: :delete, class:"dashboard-text" %></li>
+          <hr>
+          <% if is_admin? %>
+          <h4 style="color:yellow;">Admin</h4>
+          <li>
+            <a href="<%= new_organization_path %>" class="dashboard-text">Add Organization</a>
+          </li>
+          <hr>
+          <li>
+            <a href="<%= new_program_type_path %>" class="dashboard-text">New Activity Type</a>
+          </li>
+          <hr>
+          <li>
+            <a href="<%= dashboard_pending_and_approved_events_path %>" class="dashboard-text">Pending/Approved Events</a>
+          </li>
+          <hr>
+          <li>
+            <a href="<%= dashboard_pending_and_approved_resources_path %>" class="dashboard-text">Pending/Approved Resources</a>
+          </li>
+          <hr>
+          <% end %>
+          <% else %>
+          <li>
+            <a href="<%= signup_path %>" class="top-right-panel">New User</a>
+          </li>
+          <li>
+            <a href="<%= login_path %>" class="top-right-panel">Log In</a>
+          </li>
+          <% end %>
+        </ul>
+      </div>
 
-    <div class="col-md-8">
-  <h2>Create New Organization</h2>
+      <div class="col-md-7" style="background-color:white;">
+        <% if user_signed_in? %>
+        <div class="container-fluid center-flex-content">
+          <div class="create-new-container">
+            <br>
+            <p class="dashboard-headers">Create New Organization</p>
 
-  <%= form_for @organization do |f| %>
-    <div class="form-group">
-      <%= f.label :name %>
-      <%= f.text_field :name, class: "form-control" %>
-    </div>
-    <div class="form-group">
-      <%= f.label :description %>
-      <%= f.text_field :description, class: "form-control" %>
-    </div>
-    <div class="form-group">
-      <%= f.label :address %>
-      <%= f.text_field :address, class: "form-control" %>
-    </div>
-    <div class="form-group">
-      <%= f.label :website %>
-      <%= f.text_field :website, class: "form-control" %>
-    </div>
-    <div class="form-group">
-      <%= f.label :phone_number %>
-      <%= f.telephone_field :phone, class: "form-control" %>
-    </div>
-    
-    <div class="form-group">
-      <%= f.label :activity_types %>
-      <%= f.collection_select :program_type_ids,
-         ProgramType.all,
-        :id,
-        :name,
-        {},
-        { multiple: true, class: 'chosen-select' }
-        %>
-    </div>
-    <div class="form-group">
-      <%= f.label :Age_group %>
-      <%= f.collection_select :age_group_ids,
-        AgeGroup.all,
-        :id,
-        :age,
-        {},
-        { multiple: true, class: 'chosen-select'}
-        %>
-    </div>
+            <%= form_for @organization do |f| %>
+            <div class="form-group center-flex-content">
+              <%= f.label :name, class: "label-baseline" %>
+              <%= f.text_field :name, class: "form form-control form-padding event-form-width" %>
+            </div>
+            <div class="form-group center-flex-content">
+              <%= f.label :address, class: "label-baseline" %>
+              <%= f.text_field :address, class: "form form-control form-padding event-form-width" %>
+            </div>
+            <h3>Logo Image Upload Placeholder</h3>
+            <h3>Activity/Service Image Upload Placeholder</h3>
+            <div class="form-group center-flex-content">
+              <%= f.label :website, class: "label-baseline" %>
+              <%= f.text_field :website, class: "form form-control form-padding event-form-width" %>
+            </div>
+            <div class="form-group center-flex-content">
+              <%= f.label :phone_number, class: "label-baseline caps" %>
+              <%= f.telephone_field :phone, class: "form form-control form-padding event-form-width" %>
+            </div>
+            <div class="form-group center-flex-content">
+              <%= f.label :Age_group, class:'label-baseline caps' %>
+              <div class="form-group event-form-width dropbox-container">
+                <%= f.collection_select :age_group_ids,
+                AgeGroup.all,
+                :id,
+                :age,
+                {},
+                { multiple: true, class: 'chosen-select form-control form-padding'}
+                %>
+              </div>
+            </div>
+            <div class="form-group center-flex-content">
+              <%= f.label :activity_types, class:'label-baseline caps' %>
+              <div class="form-group event-form-width dropbox-container">
+                <%= f.collection_select :program_type_ids,
+                ProgramType.all,
+                :id,
+                :name,
+                {},
+                { multiple: true, class: 'chosen-select form-control form-padding' }
+                %>
+              </div>
+            </div>
 
-    <!-- I'll work on the rest later -->
-    <!-- <div class="form-group">
-      <%= f.label :age_group %>
-      <%= radio_button_tag(:age, "0-5") %>
-      <%= label_tag(:age, "0-5") %>
-      <%= radio_button_tag(:age, "6-12") %>
-      <%= label_tag(:age, "6-12") %>
-      <%= radio_button_tag(:age, "adult") %>
-      <%= label_tag(:age, "adult") %>
-      <%= radio_button_tag(:age, "all") %>
-      <%= label_tag(:age, "all") %>
-    </div>
+            <div class="form-group center-flex-content">
+              <%= f.label :tags, class:'label-baseline caps' %>
+              <div class="form-group event-form-width dropbox-container">
+                <%= f.collection_select :age_group_ids,
+                Tag.all,
+                :id,
+                :name,
+                {},
+                { multiple: true, class: 'chosen-select form-control form-padding'}
+                %>
+              </div>
+            </div>
 
-    <div>
-      <%= f.label :service %>
-      <%= check_box_tag(:art_and_culture) %>
-      <%= label_tag(:art_and_culture, "Art & Culture") %>
-      <%= check_box_tag(:education) %>
-      <%= label_tag(:education, "Education") %>
-      <%= check_box_tag(:entertainment) %>
-      <%= label_tag(:entertainment, "Entertainment") %>
-      <%= check_box_tag(:health) %>
-      <%= label_tag(:health, "Health") %>
-      <%= check_box_tag(:sports) %>
-      <%= label_tag(:sports, "Sports") %>
-    </div>
+            <div class="form-group">
+              <%= f.label :description, class:'label-baseline' %>
+              <%= f.text_area :description, class: 'form form-control form-padding event-form-width' %>
+            </div>
 
-    <div class="form-group">
-      <%= f.label :tags %>
-      <%= f.text_field :tags, class: "form-control" %>
-    </div>
+            <div class="form-group center-flex-content">
+              <%= f.label :target_clientele, class:"label-baseline caps" %>
+              <div class="form-group event-form-width dropbox-container">
+                <%= select_tag(:target_clientele, options_for_select(
+                [
+                  ['Pregnancy & Babies', 1],
+                  ['something goes here', 2],
+                  ['random thing', 3],
+                  ['more stuff', 4]
+                  ]))
+                  %>
+                </div>
+              </div>
+              <br>
+              <div class="form-group center-flex-content">
+                <%= f.label :service, class:"label-baseline caps" %>
+                <div class="form-group event-form-width dropbox-container">
+                  <%= select_tag(:services, options_for_select(
+                  [
+                    ['Help in Crisis', 1],
+                    ['another service', 2],
+                    ['hello world', 3],
+                    ['random service', 4]
+                    ]))
+                    %>
+                  </div>
+                </div>
 
-    <div class="form-group">
-      <%= f.label :description %>
-      <%= f.text_area :description, class: "form-control", rows: 10%>
-    </div>
+                <br>
+                <div class="form-group">
+                  <%= f.submit class: 'btn btn-primary form-control' %>
+                </div>
+                <% end %>
+                <% end %>
 
-    <div>
-      <%= f.label :target_clientele %>
-      <%= select_tag(:target_clientele, options_for_select(
-        [
-          ['Pregnancy & Babies', 1],
-          ['something goes here', 2],
-          ['random thing', 3],
-          ['more stuff', 4]
-        ]))
-      %>
-    </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-1"></div>
+        </div>
 
-    <br>
-    <div>
-      <%= f.label :service %>
-      <%= select_tag(:services, options_for_select(
-        [
-          ['Help in Crisis', 1],
-          ['another service', 2],
-          ['hello world', 3],
-          ['random service', 4]
-        ]))
-      %>
-    </div> -->
 
-    <br>
-    <div class="form-group">
-      <%= f.submit class: 'btn btn-primary form-control' %>
-    </div>
+        <div class="container-fluid happy-rainbow">
+          <div class="row">
+            <div class="col-md-12">
 
-  <% end %>
-  <div class="col-md-2">
-</div>
-</div>
-</div>
+              <%= image_tag("rainbow-footer-group.svg", class:"center-block") %>
+
+            </div>
+          </div>
+        </div>

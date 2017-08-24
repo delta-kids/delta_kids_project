@@ -14,10 +14,34 @@
 //= require jquery_ujs
 //= require bootstrap-sprockets
 //= require bootstrap-datepicker
+//= require bootstrap-timepicker
 //= require chosen-jquery
 //= require rails-ujs
 //= require_tree .
 
 $(document).ready(function() {
   $(".dropdown-toggle").dropdown();
+});
+
+
+$(document).ready(function() {
+$("[href]").each(function() {
+    if (this.href == window.location.href) {
+        $(this).addClass("nav-guide-color");
+    }
+});
+});
+
+$(document).ready(function() {
+  $('.a-chevron').click(function() {
+    $(this).toggleClass('rotate-chevron');
+});
+});
+
+$(document).ready(function(){
+  $('.timepicker').timepicker();
+});
+
+$(document).ready(function(){
+  $('.datepicker').datepicker();
 });

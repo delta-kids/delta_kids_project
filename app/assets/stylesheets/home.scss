@@ -65,11 +65,12 @@
     height: 365px;
     display: block;
     margin: auto;
+    margin-top: -50px;
     width: 100%;
     align-self: center;
 }
 .section1-container {
-    padding: 55px;
+    padding-top: 55px;
 }
 .section1 {
     height: auto;
@@ -84,6 +85,7 @@
 .section2-container {
     background-image: url('kids-green-background.png');
     background-size: 100% 100%;
+    margin-top: -28px;
 
 }
 .section2 {
@@ -146,9 +148,7 @@
 
 
 #whats-new-board {
-  // background-color: red;
-  background-color: white;
-
+  background-color: #D1F0F4;
 }
 
 #whats-new {

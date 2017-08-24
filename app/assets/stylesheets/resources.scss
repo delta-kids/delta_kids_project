@@ -1,67 +1,64 @@
 // Place all the styles related to the resources controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.wholePage{
-  background-color: #d1f0f4;
-}
 .event-row{
-  padding: 80px;
+  padding: 20px 50px 50px 50px;
 }
-#event-subsection1{
-  background-color: #fff;
+
+#event-subsection1 {
+  background-color: #F0FFFF;
   border-radius: 10px;
 }
+
 #event-subsection1 img {
 margin: 0;
 }
+
 .icon-img{
   height: 35px;
   width: 35px;
 }
+
 #filter-header{
   display: flex;
   flex-direction: row;
   padding-top: 10px;
   justify-content: space-between;
 }
+
 #filterText {
   font-family: BreeSerif-Regular;
   font-size: 30px;
   color: #004C81;
-
 }
+
 .filter-header-img{
   width: 100%;
   margin: 0;
   height: auto;
   padding-top: 15px;
 }
-.filter-header-chevron{
+
+.filter-header-chevron {
   width: 18px;
   height: 9px;
   display: inline;
 }
-.filter-header2{
+
+.filter-header2 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-.filterCard-header1{
-  /* For: */
-  font-family: OpenSans-Semibold;
-  font-size: 14px;
-  color: #00A3DA;
 
-}
-.filterCard-header2{
+
+.filterCard-header2 {
   /* All locations: */
   font-family: OpenSans-Bold;
   font-size: 16px;
   color: #000000;
+}
 
-}
-.filter-header-chevron{
-}
 .filterCard-list {
   font-family: OpenSans;
   font-size: 16px;

@@ -1,7 +1,4 @@
-.sidebar {
-  height: 100% !important;
-  background-color: #004C81;
-}
+
 
 .organization-content h3 {
   color: #004C81 !important;
@@ -12,7 +9,7 @@
 }
 
 .content {
-  padding: 50px !important;
+  padding: 20px 50px 50px 50px !important;
   background-color: #D1F0F4 !important;
 }
 
@@ -90,10 +87,6 @@
     text-align: center;
 }
 
-.happy-rainbow {
-  background-color: #D1F0F4;
-
-}
 .nav>li>a:hover {
    text-decoration: none;
    background-color: #00A3DA !important;
@@ -107,7 +100,7 @@
 
 
 #whats-new-board {
-  background-color: white;
+  background-color: #D1F0F4;
 }
 
 #whats-new {

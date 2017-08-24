@@ -1,4 +1,5 @@
 <div class="wholePage">
+
 <!-- First section div -->
 <div class="calendar-section1 calendar-section1-container" id="calendar-section1">
     <div class="container-fluid">
@@ -69,183 +70,92 @@
   <div class="background-wrap">
   <div class="container container-background">
 
-  <div class="row">
-    <div class="col-md-12">
-
-      <h1 class="queue-header">Pending Events</h1>
-
-      <div class="table-responsive">
-
-        <table class="table table-bordered table-hover" style="text-align:center;">
-          <thead>
-            <tr>
-              <th>Event</th>
-              <th>Location</th>
-              <th>Actions</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Drop in Soccer</td>
-              <td>Delta</td>
-              <td><button class="btn btn-default">Approve</button>
-              <button class="btn btn-default">Decline</button></td>
-            </tr>
-            <tr>
-              <td>Drop in Soccer</td>
-              <td>Delta</td>
-              <td><button class="btn btn-default">Approve</button>
-              <button class="btn btn-default">Decline</button></td>
-            </tr>
-            <tr>
-              <td>Drop in Soccer</td>
-              <td>Delta</td>
-              <td><button class="btn btn-default">Approve</button>
-              <button class="btn btn-default">Decline</button></td>
-            </tr>
-            <tr>
-              <td>Drop in Soccer</td>
-              <td>Delta</td>
-              <td><button class="btn btn-default">Approve</button>
-              <button class="btn btn-default">Decline</button></td>
-            </tr>
-            <tr>
-              <td>Drop in Soccer</td>
-              <td>Delta</td>
-              <td><button class="btn btn-default">Approve</button>
-              <button class="btn btn-default">Decline</button></td>
-            </tr>
-          </tbody>
-        </table>
-
-        <h1 class="queue-header">Approved Events</h1>
-
-        <table class="table table-bordered table-hover" style="text-align:center;">
-          <thead>
-            <tr>
-              <th>Event</th>
-              <th>Location</th>
-              <th>Actions</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Drop in Soccer</td>
-              <td>Delta</td>
-              <td><button class="btn btn-default">Delete</button>
-            </tr>
-            <tr>
-              <td>Drop in Soccer</td>
-              <td>Delta</td>
-              <td><button class="btn btn-default">Delete</button>
-            </tr>
-            <tr>
-              <td>Drop in Soccer</td>
-              <td>Delta</td>
-              <td><button class="btn btn-default">Delete</button>
-            </tr>
-            <tr>
-              <td>Drop in Soccer</td>
-              <td>Delta</td>
-              <td><button class="btn btn-default">Delete</button>
-            </tr>
-            <tr>
-              <td>Drop in Soccer</td>
-              <td>Delta</td>
-              <td><button class="btn btn-default">Delete</button>
-            </tr>
-          </tbody>
-        </table>
-
-      </div>
-    </div>
-  </div>
+<div class="container-fluid">
 
   <div class="row">
-    <div class="col-xs-12">
+    <div class="col-md-1"></div>
+    <div class="col-md-3 dash-sidebar">
+      <ul class="nav nav-sidebar ">
+        <%= image_tag('paperclip.png', class: 'clippy') %>
+        <h2 class="dashboard-headers2">Dashboard</h2>
+        <% if user_signed_in? %>
+        <li>
+          <h4 style="color:yellow">Hello <%= current_user.first_name %>, what would you like to do today?
+          </h4>
+        </li>
+        <li>
+          <a href="<%= new_event_path %>" class="dashboard-text">Add an Event</a>
+        </li>
+        <hr>
+        <li>
+          <a href="<%= new_resource_path %>" class="dashboard-text">Add a Resource</a>
+        </li>
+        <hr>
+        <li><%= link_to 'Sign Out', signout_path, method: :delete, class:"dashboard-text" %></li>
+        <hr>
+        <% if is_admin? %>
+        <h4 style="color:yellow;">Admin</h4>
+        <li>
+          <a href="<%= new_organization_path %>" class="dashboard-text">Add Organization</a>
+        </li>
+        <hr>
+        <li>
+          <a href="<%= new_program_type_path %>" class="dashboard-text">New Activity Type</a>
+        </li>
+        <hr>
+        <li>
+          <a href="<%= dashboard_pending_and_approved_events_path %>" class="dashboard-text">Pending/Approved Events</a>
+        </li>
+        <hr>
+        <li>
+          <a href="<%= dashboard_pending_and_approved_resources_path %>" class="dashboard-text">Pending/Approved Resources</a>
+        </li>
+        <hr>
+        <% end %>
+        <% else %>
+        <li>
+          <a href="<%= signup_path %>" class="top-right-panel">New User</a>
+        </li>
+        <li>
+          <a href="<%= login_path %>" class="top-right-panel">Log In</a>
+        </li>
+        <% end %>
+      </ul>
+    </div>
 
-      <h1>Pending Resources</h1>
-
-      <div class="table-responsive">
-
-        <table class="table table-bordered table-hover" style="text-align:center;">
-          <thead>
-            <tr>
-              <th>Resoucer</th>
-              <th>Actions</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Resource ABC</td>
-              <td><button class="btn btn-default">Approve</button>
-              <button class="btn btn-default">Decline</button></td>
-            </tr>
-            <tr>
-              <td>Resource ABC</td>
-              <td><button class="btn btn-default">Approve</button>
-              <button class="btn btn-default">Decline</button></td>
-            </tr>
-            <tr>
-              <td>Resource ABC</td>
-              <td><button class="btn btn-default">Approve</button>
-              <button class="btn btn-default">Decline</button></td>
-            </tr>
-            <tr>
-              <td>Resource ABC</td>
-              <td><button class="btn btn-default">Approve</button>
-              <button class="btn btn-default">Decline</button></td>
-            </tr>
-            <tr>
-              <td>Resource ABC</td>
-              <td><button class="btn btn-default">Approve</button>
-              <button class="btn btn-default">Decline</button></td>
-            </tr>
-          </tbody>
-        </table>
-
-        <h1>Approved Resources</h1>
-
-        <table class="table table-bordered table-hover" style="text-align:center;">
-          <thead>
-            <tr>
-              <th>Resource</th>
-              <th>Actions</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Resource XYZ</td>
-              <td><button class="btn btn-default">Delete</button>
-            </tr>
-            <tr>
-              <td>Resource XYZ</td>
-              <td><button class="btn btn-default">Delete</button>
-            </tr>
-            <tr>
-              <td>Resource XYZ</td>
-              <td><button class="btn btn-default">Delete</button>
-            </tr>
-            <tr>
-              <td>Resource XYZ</td>
-              <td><button class="btn btn-default">Delete</button>
-            </tr>
-            <tr>
-              <td>Resource XYZ</td>
-              <td><button class="btn btn-default">Delete</button>
-            </tr>
-          </tbody>
-        </table>
-
+    <div class="col-md-7" style="background-color:white;">
+      <div class="container-fluid">
+        <p class="dashboard-headers">Welcome to the Dashboard</p>
+      </div>
+      <% if user_signed_in? %>
+      <p class="dashboard-text2">The Text below is here to show what a welcome message may look like</p>
+      <br>
+      <p class="dashboard-text2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p class="dashboard-text2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        <br>
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <% else %>
+        <div>
+          <p>
+            Dashboard section is meant to publish a Resource and/or Event. In order to proceed you must have an account with us. Please Log In or create a New User.
+            <br>
+            <!-- <%= link_to 'New User', signup_path, class: 'top-right-panel' %>&nbsp -->
+            <!-- <div class="">
+            <%= link_to 'Log In', login_path, class: 'top-right-panel' %>&nbsp
+          </div> -->
+        </p>
+        <br>
+        <p>
+          If you don't want to proceed, please feel free to go elsewhere in our site.
+        </p>
       </div>
     </div>
+    <% end %>
+    <div class="col-md-1"></div>
   </div>
-
-  </div>
-  </div>
-<% end %>
-
-<!-- Rainbow Footer-->
+</div>
+</div>
+</div>
 
 <div class="container-fluid happy-rainbow">
   <div class="row">

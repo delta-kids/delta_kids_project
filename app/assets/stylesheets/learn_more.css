@@ -6,17 +6,24 @@
 
 .learn-more-link {
   float: right;
+  margin-top: 7px;
 }
 .see-more-button {
-  padding-top: 30px;
+  padding-top: 20px;
+  margin-bottom: 30px;
 }
 
 .learn-more-image {
   width: 100%;
 }
 
+.remove-h-margin {
+  margin: 0px;
+}
+
 .info-tag {
   background-color: white;
+  padding: 7px;
 }
 
 .similar-events-box {
