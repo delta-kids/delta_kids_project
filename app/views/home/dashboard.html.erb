@@ -1,5 +1,77 @@
 <div class="wholePage">
+
+<!-- First section div -->
+<div class="calendar-section1 calendar-section1-container" id="calendar-section1">
+    <div class="container-fluid">
+        <div class="row calendar-row">
+            <div class="col-md-2">
+
+            </div>
+            <div class="col-md-8 calendar-subsection2">
+	            <div class="calendar-subsection2-card">
+		            <!-- <%= image_tag "https://user-images.githubusercontent.com/19618674/27262697-1aaca1ee-5411-11e7-9bfb-4f51346fc603.png", class: "calendar-subsection2-image" %> -->
+		            <div class="calendar-subsection2-text">
+			            <p class="calendar-subsection2-header">Welcome to the Dashboard</p>
+		            </div>
+	            </div>
+
+              <div class="button-cluster">
+                <% if user_signed_in? %>
+                    Hello <%= current_user.first_name %>&nbsp
+                    <%= link_to 'Sign Out', signout_path, method: :delete, class: 'top-right-panel'  %>
+                    <!-- <%= link_to 'Dashboard', dashboard_path %>&nbsp&nbsp&nbsp&nbsp&nbsp -->
+                    <% if is_admin? %>
+                      <a href="<%= new_organization_path %>" class="about-us"><button type="button" href="<%= new_resource_path %>" class="button-seemore">Add Organization</button></a>
+
+                      <a href="<%= new_program_type_path %>" class="about-us"><button type="button" href="<%= new_resource_path %>" class="button-seemore">New Activity Type</button></a>
+
+                    <% end %>
+
+                    <a href="<%= new_event_path %>" class="about-us"><button type="button" href="<%= new_resource_path %>" class="button-seemore">Add an Event</button></a>
+
+                    <a href="<%= new_resource_path %>" class="about-us"><button type="button" href="<%= new_resource_path %>" class="button-seemore">Add a Resource</button></a>
+                <% else %>
+                    <div>
+                      <p>
+                        Dashboard section is meant to publish a Resource and/or Event. In order to proceed you must have an account with us. Please Log In or create a New User.
+                        <br>
+                        <div class="">
+                          <!-- <%= link_to 'New User', signup_path, class: 'top-right-panel' %>&nbsp -->
+                          <a href="<%= signup_path %>" class="top-right-panel">New User</a>&nbsp
+                          <a href="<%= login_path %>" class="top-right-panel">Log In</a>&nbsp
+                        </div>
+                        <!-- <div class="">
+                          <%= link_to 'Log In', login_path, class: 'top-right-panel' %>&nbsp
+                        </div> -->
+                      </p>
+                      <br>
+                      <p>
+                        If you don't want to proceed, please feel free to go elsewhere in our site.
+                      </p>
+                    </div>
+                    <!-- change sign up to New User -->
+
+                <% end %>
+
+              </div>
+            </div>
+            <div class="col-md-2">
+
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+</div>
+
+<% if is_admin? %>
+  <div class="background-wrap">
+  <div class="container container-background">
+
 <div class="container-fluid">
+
   <div class="row">
     <div class="col-md-1"></div>
     <div class="col-md-3 dash-sidebar">
@@ -81,6 +153,7 @@
     <% end %>
     <div class="col-md-1"></div>
   </div>
+</div>
 </div>
 </div>
 
