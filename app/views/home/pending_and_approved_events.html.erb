@@ -1,29 +1,41 @@
 <div class="wholePage">
-        <div class="container-fluid">
-        <div class="row">
-          <div class="col-md-12 content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12 content">
 
         <%= render 'partials/dash_sidebar' %>
 
-            <div class="col-md-9 dash-main-content" style="background-color:white;">
-              <% if user_signed_in? %>
-              <% if is_admin? %>
-              <div class="row">
-                <div class="col-md-12">
+        <div class="col-md-9 dash-main-content" style="background-color:white;">
+          <% if user_signed_in? %>
+          <% if is_admin? %>
+          <div class="row">
+            <div class="col-md-12">
+              
+              <h1 class="queue-header">Pending Events</h1>
 
-                  <h1 class="queue-header">Pending Events</h1>
+              <div class="table-responsive">
 
-                  <div class="table-responsive">
-
-                    <table class="table table-bordered table-hover" style="text-align:center;">
-                      <thead>
-                        <tr>
-                          <th>Event</th>
-                          <th>Location</th>
-                          <th>Actions</th>
+                <table class="table table-bordered table-hover" style="text-align:center;">
+                  <thead>
+                    <tr>
+                      <th>Event</th>
+                      <th>Location</th>
+                      <th>Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Drop in Soccer</td>
+                      <td>Delta</td>
+                      <td><button class="btn btn-default">Approve</button>
+                        <button class="btn btn-default">Decline</button></td>
+                      </tr>
+                      <tr>
+                        <td>Drop in Soccer</td>
+                        <td>Delta</td>
+                        <td><button class="btn btn-default">Approve</button>
+                          <button class="btn btn-default">Decline</button></td>
                         </tr>
-                      </thead>
-                      <tbody>
                         <tr>
                           <td>Drop in Soccer</td>
                           <td>Delta</td>
@@ -42,32 +54,30 @@
                               <td><button class="btn btn-default">Approve</button>
                                 <button class="btn btn-default">Decline</button></td>
                               </tr>
+                            </tbody>
+                          </table>
+
+                          <h1 class="queue-header">Approved Events</h1>
+
+                          <table class="table table-bordered table-hover" style="text-align:center;">
+                            <thead>
+                              <tr>
+                                <th>Event</th>
+                                <th>Location</th>
+                                <th>Actions</th>
+                              </tr>
+                            </thead>
+                            <tbody>
                               <tr>
                                 <td>Drop in Soccer</td>
                                 <td>Delta</td>
-                                <td><button class="btn btn-default">Approve</button>
-                                  <button class="btn btn-default">Decline</button></td>
+                                <td><button class="btn btn-default">Delete</button>
                                 </tr>
                                 <tr>
                                   <td>Drop in Soccer</td>
                                   <td>Delta</td>
-                                  <td><button class="btn btn-default">Approve</button>
-                                    <button class="btn btn-default">Decline</button></td>
+                                  <td><button class="btn btn-default">Delete</button>
                                   </tr>
-                                </tbody>
-                              </table>
-
-                              <h1 class="queue-header">Approved Events</h1>
-
-                              <table class="table table-bordered table-hover" style="text-align:center;">
-                                <thead>
-                                  <tr>
-                                    <th>Event</th>
-                                    <th>Location</th>
-                                    <th>Actions</th>
-                                  </tr>
-                                </thead>
-                                <tbody>
                                   <tr>
                                     <td>Drop in Soccer</td>
                                     <td>Delta</td>
@@ -83,53 +93,35 @@
                                         <td>Delta</td>
                                         <td><button class="btn btn-default">Delete</button>
                                         </tr>
-                                        <tr>
-                                          <td>Drop in Soccer</td>
-                                          <td>Delta</td>
-                                          <td><button class="btn btn-default">Delete</button>
-                                          </tr>
-                                          <tr>
-                                            <td>Drop in Soccer</td>
-                                            <td>Delta</td>
-                                            <td><button class="btn btn-default">Delete</button>
-                                            </tr>
-                                          </tbody>
-                                        </table>
+                                      </tbody>
+                                    </table>
 
-                                      </div>
-                                    </div>
                                   </div>
-                <% end %>
-              <% else %>
-              <div>
-                <p>
-                  Dashboard section is meant to publish a Resource and/or Event. In order to proceed you must have an account with us. Please Log In or create a New User.
-                  <br>
-                    <!-- <%= link_to 'New User', signup_path, class: 'top-right-panel' %>&nbsp -->
-                  <!-- <div class="">
-                  <%= link_to 'Log In', login_path, class: 'top-right-panel' %>&nbsp
-                </div> -->
-              </p>
-              <br>
-              <p>
-                If you don't want to proceed, please feel free to go elsewhere in our site.
-              </p>
-            </div>
-            </div>
-            <% end %>
-          </div>
-          </div>
-        </div>
-      </div>
+                                </div>
+                              </div>
+                              <% end %>
+                              <% else %>
+                              <div>
+                                <p>
+                                  Dashboard section is meant to publish a Resource and/or Event. In order to proceed you must have an account with us. Please Log In or create a New User.
+                                  <br>
+                                  <!-- <%= link_to 'New User', signup_path, class: 'top-right-panel' %>&nbsp -->
+                                  <!-- <div class="">
+                                  <%= link_to 'Log In', login_path, class: 'top-right-panel' %>&nbsp
+                                </div> -->
+                              </p>
+                              <br>
+                              <p>
+                                If you don't want to proceed, please feel free to go elsewhere in our site.
+                              </p>
+                            </div>
+                          </div>
+                          <% end %>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
 
-      <!-- Rainbow Footer-->
+                  <!-- Rainbow Footer-->
 
-      <div class="container-fluid happy-rainbow">
-        <div class="row">
-          <div class="col-md-12">
-
-            <%= image_tag("rainbow-footer-group.svg", class:"center-block") %>
-
-          </div>
-        </div>
-      </div>
+                  <%= render 'partials/footer' %>
