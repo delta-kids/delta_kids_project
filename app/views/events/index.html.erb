@@ -176,10 +176,10 @@
                 <div class="event-info1">
                   <%= image_tag "icon-clock.svg", class: "event-info-icon" %>
                   <% if event.start_time %>
-                  <p class="event-info-txt"><%= event.start_time.strftime("%H:%M:%S") %></p>
+                  <p class="event-info-txt"><%= event.start_time.strftime("%I:%M %p") %></p>
                   <% end %>
                   <% if event.end_time %>
-                  <p class="event-info-txt"> - <%= event.end_time.strftime("%H:%M:%S") %></p>
+                  <p class="event-info-txt"> - <%= event.end_time.strftime("%I:%M %p") %></p>
                   <% end %>
                 </div>
                 <div class="event-info1">
@@ -231,10 +231,10 @@
                 <div class="event-info1">
                   <%= image_tag "icon-clock.svg", class: "event-info-icon" %>
                   <% if event.start_time %>
-                  <p class="event-info-txt"><%= event.start_time.strftime("%H:%M:%S") %></p>
+                  <p class="event-info-txt"><%= event.start_time.strftime("%I:%M %p") %></p>
                   <% end %>
                   <% if event.end_time %>
-                  <p class="event-info-txt"> - <%= event.end_time.strftime("%H:%M:%S") %></p>
+                  <p class="event-info-txt"> - <%= event.end_time.strftime("%I:%M %p") %></p>
                   <% end %>
                 </div>
                 <div class="event-info1">

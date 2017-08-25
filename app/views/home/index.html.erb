@@ -10,8 +10,9 @@
             <div class="col-md-5 subsection">
                 <p id='welcome-line3'>We are your One-Stop-Info-Shop</p>
                 <p id='welcome-line4'> for children 0-12 years in Delta, BC.<p>
-                <div id='button-learnmore'>
-                <a href="<%= about_path %>" class="about-us">LEARN MORE</a></div>
+
+                  <%= button_to "LEARN MORE", about_path, :method => "get", id:'button-learnmore' %>
+
             </div>
 
             <div class="col-md-1"></div>
@@ -45,7 +46,8 @@
                 <p id='section3-line1'>Be "in the know" </p>
                 <p id='section3-line2'> for events and activities <p>
                 <p id='section3-line3'> in your community. <p>
-                <div id='button-activities-cal'><a href="<%= events_path %>" class="about-us" style="color: white;">GO TO ACTIVITIES CALENDAR</a></div>
+                <%= button_to "GO TO ACTIVITIES CALENDAR", events_path, :method => "get", id:'button-activities-cal' %>
+                <!-- <div id='button-activities-cal'><a href="<%= events_path %>" class="about-us" style="color: white;">GO TO ACTIVITIES CALENDAR</a></div> -->
             </div>
             <div class="col-md-1"></div>
         </div>
@@ -65,7 +67,7 @@
   <div class="row">
     <div class="col-md-12">
       <h1 id="whats-new">What's New</h1>
-
+      <a href="#"></a>
       <button type="button" name="button" class="btn btn-primary" id="view-all">VIEW ALL</button>
 
     </div>
