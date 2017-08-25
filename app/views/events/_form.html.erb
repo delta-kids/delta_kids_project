@@ -17,24 +17,24 @@
 
             <div class="form-group center-flex-content">
               <%= f.label :title, class: "label-baseline" %>
-              <%= f.text_field :title, class: 'form form-control form-padding event-form-width' %>
+              <%= f.text_field :title, class: 'form form-control form-padding event-form-width', :required => true %>
             </div>
 
             <div class="form-group center-flex-content">
               <label for='start_date' style="margin-right:47px;">Start Date</label>
-              <%= f.text_field :start_date, class: 'datepicker form date-time-width',placeholder:"MM/DD/YYYY" %>
+              <%= f.text_field :start_date, class: 'datepicker form date-time-width',placeholder:"MM/DD/YYYY", :required => true %>
 
               <%= f.label :"Start Time", class: 'form-padding caps', style:'margin:auto;' %>
-              <%= f.text_field :start_time, class: 'form dateselect-time date-time-width' %>
+              <%= f.text_field :start_time, class: 'form dateselect-time date-time-width', :required => true %>
             </div>
 
             <div>
 
               <div class="form-group center-flex-content">
                 <label for='end_date' style="margin-right:46px">End Date</label>
-                <%= f.text_field :end_date, class: 'datepicker form form-padding date-time-width',placeholder:"MM/DD/YYYY" %>
-                <%= f.label :"End Time", class: 'form-padding caps', style:'margin:auto;' %>
-                <%= f.text_field :end_time, class: 'form dateselect-time form-padding date-time-width' %>
+                <%= f.text_field :end_date, class: 'datepicker form form-padding date-time-width',placeholder:"MM/DD/YYYY", :required => true %>
+                <%= f.label :"End Time", class: 'form-padding caps', style:'margin:auto;', :required => true %>
+                <%= f.text_field :end_time, class: 'form dateselect-time form-padding date-time-width', :required => true %>
               </div>
             </div>
 
@@ -65,7 +65,7 @@
             <!-- ADDRESS -->
             <div class="form-group center-flex-content">
               <%= f.label :address, class:'label-baseline' %>
-              <%= f.text_field :address, class: 'form form-control form-padding event-form-width' %>
+              <%= f.text_field :address, class: 'form form-control form-padding event-form-width', :required => true %>
             </div>
 
             <!-- AGE GROUP -->
@@ -150,20 +150,22 @@
             <!-- EVENT DESCRIPTION -->
             <div class="form-group">
               <%= f.label :description, class:'label-baseline' %>
-              <%= f.text_area :description, class: 'form form-control form-padding event-form-width' %>
+              <%= f.text_area :description, class: 'form form-control form-padding event-form-width caps', :required => true %>
             </div>
 
             <!-- MORE INFO , LINKS  -->
             <!-- PLACEHOLDER, NEED TO COME BACK AND DO -->
             <h3>UPLOAD PHOTO PLACEHOLDER</h3>
             <h3>MORE INFO, LINKS PLACEHOLDER</h3>
+
+            <!-- CONTACT NAME/EMAIL -->
             <div class="form-group">
               <%= f.label :"Contact name", class:'label-baseline caps' %>
-              <%= f.text_field :contact_name, class: 'form form-control form-padding event-form-width' %>
+              <%= f.text_field :contact_name, class: 'form form-control form-padding event-form-width', :required => true %>
             </div>
             <div class="form-group">
               <%= f.label :"Contact email", class:'label-baseline caps' %>
-              <%= f.email_field :contact_email, class: 'form form-control form-padding event-form-width' %>
+              <%= f.email_field :contact_email, class: 'form form-control form-padding event-form-width', :required => true %>
             </div>
 
             <br>
@@ -176,14 +178,11 @@
 
         <% end %>
         <% else %>
+        <!-- NOT A USER MESSAGE -->
         <div>
           <p>
             Dashboard section is meant to publish a Resource and/or Event. In order to proceed you must have an account with us. Please Log In or create a New User.
             <br>
-            <!-- <%= link_to 'New User', signup_path, class: 'top-right-panel' %>&nbsp -->
-            <!-- <div class="">
-            <%= link_to 'Log In', login_path, class: 'top-right-panel' %>&nbsp
-          </div> -->
         </p>
         <br>
         <p>
