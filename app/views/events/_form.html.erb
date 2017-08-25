@@ -42,10 +42,10 @@
             <div class="form-group center-flex-content">
               <%= f.label :event_repeat , class:'label-baseline caps' %>
               <div class="margin-right">
-                <%= radio_button_tag(:event_repeat, "Weekly") %>
-                <%= label_tag(:repeat, "Weekly", class:'radio-spacing') %>
-                <%= radio_button_tag(:event_repeat, "Never") %>
-                <%= label_tag(:repeat, "None", class:'radio-spacing') %>
+                <%= f.radio_button(:event_repeat, "Weekly") %>
+                <%= label_tag(:event_repeat, "Weekly", class:'radio-spacing') %>
+                <%= f.radio_button(:event_repeat, "Never") %>
+                <%= label_tag(:event_repeat, "None", class:'radio-spacing') %>
               </div>
             </div>
 
@@ -53,12 +53,12 @@
             <div class="form-group center-flex-content">
               <%= f.label :location , class:'label-baseline' %>
               <div class="">
-                <%= radio_button_tag(:location, "Ladner") %>
-                <%= label_tag(:loc, "Ladner", class:'radio-spacing') %>
-                <%= radio_button_tag(:location, "North Delta") %>
-                <%= label_tag(:loc, "North Delta", class:'radio-spacing') %>
-                <%= radio_button_tag(:location, "Tsawwassen") %>
-                <%= label_tag(:loc, "Tsawwassen") %>
+                <%= f.radio_button(:event_location, "Ladner") %>
+                <%= label_tag(:event_location, "Ladner", class:'radio-spacing') %>
+                <%= f.radio_button(:event_location, "North Delta") %>
+                <%= label_tag(:event_location, "North Delta", class:'radio-spacing') %>
+                <%= f.radio_button(:event_location, "Tsawwassen") %>
+                <%= label_tag(:event_location, "Tsawwassen") %>
               </div>
             </div>
 
@@ -84,13 +84,13 @@
 
             <!-- <div class="form-group center-flex-content"> -->
             <%#= f.label :age_group %>
-            <%#= radio_button_tag(:age_group, "0-5") %>
+            <%#= f.radio_button(:age_group, "0-5") %>
             <%#= label_tag(:age, "0-5") %>
-            <%#= radio_button_tag(:age_group, "6-12") %>
+            <%#= f.radio_button(:age_group, "6-12") %>
             <%#= label_tag(:age, "6-12") %>
-            <%#= radio_button_tag(:age_group, "adult") %>
+            <%#= f.radio_button(:age_group, "adult") %>
             <%#= label_tag(:age, "adult") %>
-            <%#= radio_button_tag(:age_group, "all") %>
+            <%#= f.radio_button(:age_group, "all") %>
             <%#= label_tag(:age, "all") %>
             <!-- </div> -->
 
@@ -98,9 +98,9 @@
             <div class="form-group center-flex-content">
               <%= f.label :cost, class:'label-baseline caps' %>
               <div class="margin-right">
-                <%= radio_button_tag(:cost, "Free") %>
+                <%= f.radio_button(:cost, "Free") %>
                 <%= label_tag(:cost, "Free", class:'radio-spacing') %>
-                <%= radio_button_tag(:cost, "Paid") %>
+                <%= f.radio_button(:cost, "Paid") %>
                 <%= label_tag(:cost, "Paid", class:'radio-spacing') %>
               </div>
             </div>
@@ -141,10 +141,10 @@
             <div class="form-group center-flex-content">
               <%= f.label :registration, "Registration", class:'label-baseline' %>
               <div class="">
-                <%= radio_button_tag(:registration, "Drop-in") %>
-                <%= label_tag(:loc, "Drop-in", class:'radio-spacing') %>
-                <%= radio_button_tag(:registration, "Registration Required") %>
-                <%= label_tag(:loc, "Registration Required", class:'radio-spacing') %>
+                <%= f.radio_button(:registration, "Drop-in") %>
+                <%= label_tag(:registration, "Drop-in", class:'radio-spacing') %>
+                <%= f.radio_button(:registration, "Registration Required") %>
+                <%= label_tag(:registration, "Registration Required", class:'radio-spacing') %>
               </div>
             </div>
             <!-- EVENT DESCRIPTION -->
