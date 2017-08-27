@@ -44,9 +44,9 @@ User.create([
    phone: '4u'},
   {first_name: 'Chris',
    last_name: 'C',
-   email: 'cc@nowayjose.com',
+   email: 'ctest@test.ca',
    password: PASSWORD,
-   is_admin: false,
+   is_admin: true,
    phone: '4u'},
   {first_name: 'Carlo',
    last_name: 'C.',
@@ -137,6 +137,7 @@ ProgramAgeGroup.create(
 program: Program.find_by(description: 'Reach Developmental Preschool South Delta',),
 age_group: AgeGroup.find_by(age: '0-5')
 )
+
 # Program 36 from Excel
 Organization.create(
  description: '',
@@ -219,6 +220,68 @@ ProgramAgeGroup.create(
 program: Program.find_by(description: 'Basketball, Bowling, Curling, Floor Hockey, Rhythmic Gymnastics, Alpine Skiing, Swimming, Soccer, Softball, Track and Field, Golf'),
 age_group: AgeGroup.find_by(age: '6-12'),
 )
+
+
+# Program 2 from Excel
+Organization.create(
+description: 'Ballet, Modern, Jazz, Lyrical Jazz, Hip Hop, Tap',
+name: 'Deas Island Dance',
+address: '270-6165 Hwy 17A Delta,
+BC, V4K 5B8',
+phone: '604-946-5867',
+website: 'www.deasislanddance.com',
+ )
+
+Program.create(
+program_type: ProgramType.find_by(name: 'Arts & Culture'),
+organization: Organization.find_by(name: 'Deas Island Dance'),
+description: 'Ballet, Modern, Jazz, Lyrical Jazz, Hip Hop, Tap',
+registration: 'Registered',
+cost: 'Paid'
+)
+
+ProgramAgeGroup.create(
+program: Program.find_by(description: 'Ballet, Modern, Jazz, Lyrical Jazz, Hip Hop, Tap'),
+age_group: AgeGroup.find_by(age: '0-5'),
+)
+
+ProgramAgeGroup.create(
+program: Program.find_by(description: 'Ballet, Modern, Jazz, Lyrical Jazz, Hip Hop, Tap'),
+age_group: AgeGroup.find_by(age: '6-12'),
+)
+
+# Program 4 from Excel
+Organization.create(
+description: 'Ballet, Jazz, Tap, Hip Hop, Musical Theatre, Lyrical, Contemporary',
+name: 'Studio West',
+address: '270-6165 Hwy 17A Delta,
+BC, V4K 5B8',
+phone: '604-946-5867',
+website: 'www.deasislanddance.com',
+ )
+
+Program.create(
+program_type: ProgramType.find_by(name: 'Arts & Culture'),
+organization: Organization.find_by(name: 'Studio West'),
+description: 'Ballet, Jazz, Tap, Hip Hop, Musical Theatre, Lyrical, Contemporary',
+registration: 'Registered',
+cost: 'Paid'
+)
+
+ProgramAgeGroup.create(
+program: Program.find_by(description: 'Ballet, Jazz, Tap, Hip Hop, Musical Theatre, Lyrical, Contemporary'),
+age_group: AgeGroup.find_by(age: '0-5'),
+)
+
+ProgramAgeGroup.create(
+program: Program.find_by(description: 'Ballet, Jazz, Tap, Hip Hop, Musical Theatre, Lyrical, Contemporary'),
+age_group: AgeGroup.find_by(age: '6-12'),
+)
+
+
+
+
+
 # Service 2 from Excel
 Organization.create(
 name: 'Reporting child abuse',
