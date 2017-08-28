@@ -224,7 +224,7 @@ age_group: AgeGroup.find_by(age: '6-12'),
 
 # Program 2 from Excel
 Organization.create(
-description: 'Ballet, Modern, Jazz, Lyrical Jazz, Hip Hop, Tap',
+description: '',
 name: 'Deas Island Dance',
 address: '270-6165 Hwy 17A Delta,
 BC, V4K 5B8',
@@ -252,12 +252,12 @@ age_group: AgeGroup.find_by(age: '6-12'),
 
 # Program 4 from Excel
 Organization.create(
-description: 'Ballet, Jazz, Tap, Hip Hop, Musical Theatre, Lyrical, Contemporary',
+description: '',
 name: 'Studio West',
-address: '270-6165 Hwy 17A Delta,
-BC, V4K 5B8',
-phone: '604-946-5867',
-website: 'www.deasislanddance.com',
+address: '2nd Floor, 4866 Delta Street
+Ladner, B.C.  V4K 2T8',
+phone: '604-940-9953',
+website: 'http://www.studiowestdance.ca/',
  )
 
 Program.create(
@@ -280,6 +280,186 @@ age_group: AgeGroup.find_by(age: '6-12'),
 
 
 
+# Program 6 from Excel
+Organization.create(
+description: '',
+name: 'Burns Bog Conservation Society',
+address: '4-7953 120th Street
+Delta, BC V4C 6P6',
+phone: '604.572.0373',
+website: 'www.burnsbog.org',
+ )
+
+Program.create(
+program_type: ProgramType.find_by(name: 'Arts & Culture'),
+organization: Organization.find_by(name: 'Burns Bog Conservation Society'),
+description: 'Nature classes, workshops, special events as well as tours of Burns Bog',
+registration: 'Registered',
+cost: 'Paid'
+)
+
+ProgramAgeGroup.create(
+program: Program.find_by(description: 'Nature classes, workshops, special events as well as tours of Burns Bog'),
+age_group: AgeGroup.find_by(age: '6-12'),
+)
+
+# Program 7 from Excel
+Organization.create(
+description: '',
+name: 'Delta Community Music School',
+address: '4705 Arthur Drive
+Delta, BC V4K 2X5',
+phone: '604-946-1280',
+website: 'www.dcms.ca',
+ )
+
+Program.create(
+program_type: ProgramType.find_by(name: 'Arts & Culture'),
+organization: Organization.find_by(name: 'Delta Community Music School'),
+description: 'Music',
+registration: 'Registered',
+cost: 'Paid'
+)
+
+ProgramAgeGroup.create(
+program: Program.find_by(description: 'music'),
+age_group: AgeGroup.find_by(age: '6-12'),
+)
+
+
+# Program 8 from Excel
+Organization.create(
+description: '',
+name: 'Free Flight Dance',
+address: '4942 Chisholm Street, Delta BC, V4K 3X2',
+phone: '604-946-8586',
+website: 'www.freeflightdance.com',
+ )
+
+Program.create(
+program_type: ProgramType.find_by(name: 'Arts & Culture'),
+organization: Organization.find_by(name: 'Free Flight Dance'),
+description: 'It is an award winning academy whose owner is fully accredited with the Royal Academy of Dance. Classes for 3-5 years old',
+registration: 'Registered',
+cost: 'Paid'
+)
+
+ProgramAgeGroup.create(
+program: Program.find_by(description: 'music'),
+age_group: AgeGroup.find_by(age: '0-5'),
+)
+
+# Program 9 from Excel
+Organization.create(
+description: '',
+name: 'Free Flight Dance',
+address: '4942 Chisholm Street, Delta BC, V4K 3X2',
+phone: '604-946-8586',
+website: 'www.freeflightdance.com',
+ )
+
+Program.create(
+program_type: ProgramType.find_by(name: 'Arts & Culture'),
+organization: Organization.find_by(name: 'Free Flight Dance'),
+description: 'It is an award winning academy whose owner is fully accredited with the Royal Academy of Dance. It excels in providing general and elite training in Ballet (including Royal Academy of Dance examination preparation to the Advance 2 level), Jazz, Tap, Hip Hop, Contemporary, Lyrical, Musical Theatre, Stage, Flamenco, and Acro.',
+registration: 'Registered',
+cost: 'Paid'
+)
+
+ProgramAgeGroup.create(
+program: Program.find_by(description: 'music'),
+age_group: AgeGroup.find_by(age: '6-12'),
+)
+
+# Program 10/11 from Excel
+Organization.create(
+description: '',
+name: 'Surrey Arts Umbrella',
+address: '4942 Chisholm Street, Delta BC, V4K 3X2',
+phone: '604-535-1127',
+website: '
+www.artsumbrella.com/surrey
+',
+ )
+
+Program.create(
+program_type: ProgramType.find_by(name: 'Arts & Culture'),
+organization: Organization.find_by(name: 'Surrey Arts Umbrella'),
+description: 'Visual Arts, Dance, Theatre, Music, and Media',
+registration: 'Registered',
+cost: 'Paid'
+)
+
+ProgramAgeGroup.create(
+program: Program.find_by(description: 'Visual Arts, Dance, Theatre, Music, and Media'),
+age_group: AgeGroup.find_by(age: '0-5'),
+)
+
+ProgramAgeGroup.create(
+program: Program.find_by(description: 'Visual Arts, Dance, Theatre, Music, and Media'),
+age_group: AgeGroup.find_by(age: '6-12'),
+)
+
+# Program 12 from Excel
+Organization.create(
+description: '',
+name: 'Nurturing Nature',
+address: '',
+phone: '778-999-4175',
+website: '
+www.nurturingnature.weebly.com
+',
+ )
+
+Program.create(
+program_type: ProgramType.find_by(name: 'Arts & Culture'),
+organization: Organization.find_by(name: 'Nurturing Nature'),
+description: 'Nature classes',
+registration: 'Registered',
+cost: 'Paid'
+)
+
+ProgramAgeGroup.create(
+program: Program.find_by(description: 'Nature classes'),
+age_group: AgeGroup.find_by(age: '6-12'),
+)
+
+# Program 13 from Excel
+Organization.create(
+description: '',
+name: 'Delta Parks & Recreation',
+address: 'Harris Barn, 4140 Arthur Dr, Delta, BC V4K 1A7',
+phone: '',
+website: '
+http://www.delta.ca/parks-recreation/activity-search
+',
+ )
+
+Program.create(
+program_type: ProgramType.find_by(name: 'Arts & Culture'),
+organization: Organization.find_by(name: 'Nurturing Nature'),
+description: 'Various, such as: Dance, Music, Parent & Tot, Playtime, Reading',
+registration: 'Registered',
+cost: 'Paid'
+)
+
+ProgramAgeGroup.create(
+program: Program.find_by(description: 'Various, such as: Dance, Music, Parent & Tot, Playtime, Reading'),
+age_group: AgeGroup.find_by(age: '6-12'),
+)
+
+
+
+
+
+
+
+
+
+
+
+
+# Services Below
 
 
 # Service 2 from Excel
