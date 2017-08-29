@@ -109,13 +109,12 @@
           <%= label_tag(:art_and_culture, "Report", class:'radio-spacing font-16') %>
           <br>
           <%= check_box_tag("Report") %>
-          <%= label_tag(:art_and_culture, "Canada", class:'radio-spacing font-16') %>
+          <%= label_tag(:art_and_culture, "Research", class:'radio-spacing font-16') %>
           <br>
           <hr/ class="filterCard-line">
         </div>
       </div>
-
-      <div id='button-add-resource'><a href="/resources/new" style="color:white">ADD NEW RESOURCE</a></div>
+<%= button_to "ADD NEW RESOURCE", new_resource_path, :method => "get", id:'button-add-resource' %>
     </div>
 
     <div class="col-md-8 event-subsection2">

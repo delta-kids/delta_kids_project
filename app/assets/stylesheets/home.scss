@@ -2,6 +2,15 @@
 /* ------------- Section1 elements ------------- */
 /* Welcome to Delta Kid: */
 
+// input:focus {
+//   outline: none;
+//   box-shadow:0px 0px 25px lightblue;
+// }
+
+.btn:focus {
+  border-radius: 10%;
+}
+
 #welcome-line1 {
     font-family: 'Bree Serif', serif;
     font-size: 55px;
@@ -54,6 +63,7 @@
     text-align: center;
     font-family: 'Open Sans', sans-serif;
     font-size: 20px;
+    padding-bottom:50px;
     color: #00A3DA;
     letter-spacing: 0;
     line-height: 50px;
@@ -85,7 +95,6 @@
 .section2-container {
     background-image: url('kids-green-background.png');
     background-size: 100% 100%;
-    margin-top: -28px;
 
 }
 .section2 {
@@ -118,14 +127,15 @@
     width: 300px;
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
+    padding-bottom: 50px;
     color: #FFFFFF;
     letter-spacing: 0;
     line-height: 50px;
     display: block;
     margin: 0 auto;
     text-align: center;
-
 }
+
 
 .section3 {
 //     height: 528px;
