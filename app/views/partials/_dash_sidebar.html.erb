@@ -28,13 +28,24 @@
     </li>
     <hr>
     <li>
+      <a href="<%= dashboard_pending_and_approved_events_path %>" class="dashboard-text">Manage Programs</a>
+    </li>
+    <hr>
+    <li>
+      <a href="<%= dashboard_pending_and_approved_resources_path %>" class="dashboard-text">Manage Services</a>
+    </li>
+    <hr>
+    <li>
+      <a href="<%= dashboard_pending_and_approved_resources_path %>" class="dashboard-text">Manage Organizations</a>
+    </li>
+    <hr>
+    <li>
       <a href="<%= dashboard_pending_and_approved_events_path %>" class="dashboard-text">Pending/Approved Events</a>
     </li>
     <hr>
     <li>
       <a href="<%= dashboard_pending_and_approved_resources_path %>" class="dashboard-text">Pending/Approved Resources</a>
     </li>
-    <hr>
     <% end %>
     <% else %>
     <p><a style="color:#00A3DA" href="<%= contact_path %>">Who to contact <br> for more information about...</a></p>

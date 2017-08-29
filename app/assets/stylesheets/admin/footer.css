@@ -1,6 +1,4 @@
-* {
-  font-family: 'Open Sans';
-}
+
 footer div {
   text-align: center;
 }
@@ -18,8 +16,10 @@ footer ul li {
   min-height: 130px;
   background-color: #004C81;
 }
-.footer-icon-container {
-  text-align: center;
+.footer-icon-background {
+  display: flex ;
+  justify-content: center;
+  align-items: center;
   background-color: #FFFFFF;
   width: 30px;
   height: 30px;

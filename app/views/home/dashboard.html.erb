@@ -21,20 +21,24 @@
                   <% else %>
                   <div class="container-fluid">
                     <p class="font-20">
-                      If you would like to add an event or a resource to our website, you are in the right place. Please Log In or create an account as a New User.
+                      The Dashboard section is meant to publish a Resource and/or Event. In order to proceed you must have an account with us. Please Log In or create a New User.
                       <br>
-                    </p>
-                    <br>
-                    <p class="font-20">
-                      Please note: All events and resources are checked and approved by the website administrator. This means there may be a few days delay before you see your item up on our website. If we can’t upload your event or resource, we will let you know. Thank you for your patience!
-                    </p>
-                    <% end %>
-                  </div>
+                      <!-- <%= link_to 'New User', signup_path, class: 'top-right-panel' %>&nbsp -->
+                      <!-- <div class="">
+                      <%= link_to 'Log In', login_path, class: 'top-right-panel' %>&nbsp
+                    </div> -->
+                  </p>
+                  <br>
+                  <p class="font-20">
+                    If you don't want to proceed, please feel free to go elsewhere in our site.
+                  </p>
                 </div>
               </div>
             </div>
+            <% end %>
           </div>
         </div>
-  </div>
+      </div>
+</div>
 
-    <%= render 'partials/footer' %>
+<%= render 'partials/footer' %>

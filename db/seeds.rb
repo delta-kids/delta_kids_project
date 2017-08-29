@@ -44,9 +44,9 @@ User.create([
    phone: '4u'},
   {first_name: 'Chris',
    last_name: 'C',
-   email: 'cc@nowayjose.com',
+   email: 'ctest@test.ca',
    password: PASSWORD,
-   is_admin: false,
+   is_admin: true,
    phone: '4u'},
   {first_name: 'Carlo',
    last_name: 'C.',
@@ -137,6 +137,7 @@ ProgramAgeGroup.create(
 program: Program.find_by(description: 'Reach Developmental Preschool South Delta',),
 age_group: AgeGroup.find_by(age: '0-5')
 )
+
 # Program 36 from Excel
 Organization.create(
  description: '',
@@ -219,6 +220,469 @@ ProgramAgeGroup.create(
 program: Program.find_by(description: 'Basketball, Bowling, Curling, Floor Hockey, Rhythmic Gymnastics, Alpine Skiing, Swimming, Soccer, Softball, Track and Field, Golf'),
 age_group: AgeGroup.find_by(age: '6-12'),
 )
+
+
+# Program 2 from Excel
+Organization.create(
+description: '',
+name: 'Deas Island Dance',
+address: '270-6165 Hwy 17A Delta,
+BC, V4K 5B8',
+phone: '604-946-5867',
+website: 'www.deasislanddance.com',
+ )
+
+Program.create(
+program_type: ProgramType.find_by(name: 'Arts & Culture'),
+organization: Organization.find_by(name: 'Deas Island Dance'),
+description: 'Ballet, Modern, Jazz, Lyrical Jazz, Hip Hop, Tap',
+registration: 'Registered',
+cost: 'Paid'
+)
+
+ProgramAgeGroup.create(
+program: Program.find_by(description: 'Ballet, Modern, Jazz, Lyrical Jazz, Hip Hop, Tap'),
+age_group: AgeGroup.find_by(age: '0-5'),
+)
+
+ProgramAgeGroup.create(
+program: Program.find_by(description: 'Ballet, Modern, Jazz, Lyrical Jazz, Hip Hop, Tap'),
+age_group: AgeGroup.find_by(age: '6-12'),
+)
+
+# Program 4 from Excel
+Organization.create(
+description: '',
+name: 'Studio West',
+address: '2nd Floor, 4866 Delta Street
+Ladner, B.C.  V4K 2T8',
+phone: '604-940-9953',
+website: 'http://www.studiowestdance.ca/',
+ )
+
+Program.create(
+program_type: ProgramType.find_by(name: 'Arts & Culture'),
+organization: Organization.find_by(name: 'Studio West'),
+description: 'Ballet, Jazz, Tap, Hip Hop, Musical Theatre, Lyrical, Contemporary',
+registration: 'Registered',
+cost: 'Paid'
+)
+
+ProgramAgeGroup.create(
+program: Program.find_by(description: 'Ballet, Jazz, Tap, Hip Hop, Musical Theatre, Lyrical, Contemporary'),
+age_group: AgeGroup.find_by(age: '0-5'),
+)
+
+ProgramAgeGroup.create(
+program: Program.find_by(description: 'Ballet, Jazz, Tap, Hip Hop, Musical Theatre, Lyrical, Contemporary'),
+age_group: AgeGroup.find_by(age: '6-12'),
+)
+
+
+
+# Program 6 from Excel
+Organization.create(
+description: '',
+name: 'Burns Bog Conservation Society',
+address: '4-7953 120th Street
+Delta, BC V4C 6P6',
+phone: '604.572.0373',
+website: 'www.burnsbog.org',
+ )
+
+Program.create(
+program_type: ProgramType.find_by(name: 'Arts & Culture'),
+organization: Organization.find_by(name: 'Burns Bog Conservation Society'),
+description: 'Nature classes, workshops, special events as well as tours of Burns Bog',
+registration: 'Registered',
+cost: 'Paid'
+)
+
+ProgramAgeGroup.create(
+program: Program.find_by(description: 'Nature classes, workshops, special events as well as tours of Burns Bog'),
+age_group: AgeGroup.find_by(age: '6-12'),
+)
+
+# Program 7 from Excel
+Organization.create(
+description: '',
+name: 'Delta Community Music School',
+address: '4705 Arthur Drive
+Delta, BC V4K 2X5',
+phone: '604-946-1280',
+website: 'www.dcms.ca',
+ )
+
+Program.create(
+program_type: ProgramType.find_by(name: 'Arts & Culture'),
+organization: Organization.find_by(name: 'Delta Community Music School'),
+description: 'Music',
+registration: 'Registered',
+cost: 'Paid'
+)
+
+ProgramAgeGroup.create(
+program: Program.find_by(description: 'music'),
+age_group: AgeGroup.find_by(age: '6-12'),
+)
+
+
+# Program 8 from Excel
+Organization.create(
+description: '',
+name: 'Free Flight Dance',
+address: '4942 Chisholm Street, Delta BC, V4K 3X2',
+phone: '604-946-8586',
+website: 'www.freeflightdance.com',
+ )
+
+Program.create(
+program_type: ProgramType.find_by(name: 'Arts & Culture'),
+organization: Organization.find_by(name: 'Free Flight Dance'),
+description: 'It is an award winning academy whose owner is fully accredited with the Royal Academy of Dance. Classes for 3-5 years old',
+registration: 'Registered',
+cost: 'Paid'
+)
+
+ProgramAgeGroup.create(
+program: Program.find_by(description: 'music'),
+age_group: AgeGroup.find_by(age: '0-5'),
+)
+
+# Program 9 from Excel
+Organization.create(
+description: '',
+name: 'Free Flight Dance',
+address: '4942 Chisholm Street, Delta BC, V4K 3X2',
+phone: '604-946-8586',
+website: 'www.freeflightdance.com',
+ )
+
+Program.create(
+program_type: ProgramType.find_by(name: 'Arts & Culture'),
+organization: Organization.find_by(name: 'Free Flight Dance'),
+description: 'It is an award winning academy whose owner is fully accredited with the Royal Academy of Dance. It excels in providing general and elite training in Ballet (including Royal Academy of Dance examination preparation to the Advance 2 level), Jazz, Tap, Hip Hop, Contemporary, Lyrical, Musical Theatre, Stage, Flamenco, and Acro.',
+registration: 'Registered',
+cost: 'Paid'
+)
+
+ProgramAgeGroup.create(
+program: Program.find_by(description: 'music'),
+age_group: AgeGroup.find_by(age: '6-12'),
+)
+
+# Program 10/11 from Excel
+Organization.create(
+description: '',
+name: 'Surrey Arts Umbrella',
+address: '4942 Chisholm Street, Delta BC, V4K 3X2',
+phone: '604-535-1127',
+website: '
+www.artsumbrella.com/surrey
+',
+ )
+
+Program.create(
+program_type: ProgramType.find_by(name: 'Arts & Culture'),
+organization: Organization.find_by(name: 'Surrey Arts Umbrella'),
+description: 'Visual Arts, Dance, Theatre, Music, and Media',
+registration: 'Registered',
+cost: 'Paid'
+)
+
+ProgramAgeGroup.create(
+program: Program.find_by(description: 'Visual Arts, Dance, Theatre, Music, and Media'),
+age_group: AgeGroup.find_by(age: '0-5'),
+)
+
+ProgramAgeGroup.create(
+program: Program.find_by(description: 'Visual Arts, Dance, Theatre, Music, and Media'),
+age_group: AgeGroup.find_by(age: '6-12'),
+)
+
+# Program 12 from Excel
+Organization.create(
+description: '',
+name: 'Nurturing Nature',
+address: '',
+phone: '778-999-4175',
+website: '
+www.nurturingnature.weebly.com
+',
+ )
+
+Program.create(
+program_type: ProgramType.find_by(name: 'Arts & Culture'),
+organization: Organization.find_by(name: 'Nurturing Nature'),
+description: 'Nature classes',
+registration: 'Registered',
+cost: 'Paid'
+)
+
+ProgramAgeGroup.create(
+program: Program.find_by(description: 'Nature classes'),
+age_group: AgeGroup.find_by(age: '6-12'),
+)
+
+# Program 13 from Excel
+Organization.create(
+description: '',
+name: 'Delta Parks & Recreation - Harris Barn',
+address: 'Harris Barn, 4140 Arthur Dr, Delta, BC V4K 1A7',
+phone: '',
+website: '
+http://www.delta.ca/parks-recreation/activity-search
+',
+ )
+
+Program.create(
+program_type: ProgramType.find_by(name: 'Arts & Culture'),
+organization: Organization.find_by(name: 'Delta Parks & Recreation - Harris Barn'),
+description: 'Various, such as: Dance, Music, Parent & Tot, Playtime, Reading',
+registration: 'Registered',
+cost: 'Paid'
+)
+
+ProgramAgeGroup.create(
+program: Program.find_by(description: 'Various, such as: Dance, Music, Parent & Tot, Playtime, Reading'),
+age_group: AgeGroup.find_by(age: '0-5'),
+)
+
+# From 14 Program Excel
+
+Organization.create(
+description: '',
+name: 'Delta Parks & Recreation - Ladner Community Centre',
+address: 'Ladner Community Centre,4734 51 Street, Delta, BC V4K 3R8',
+phone: '604-946-9226',
+website: '
+http://www.delta.ca/parks-recreation/activity-search
+',
+ )
+
+Program.create(
+program_type: ProgramType.find_by(name: 'Arts & Culture'),
+organization: Organization.find_by(name: 'Delta Parks & Recreation - Ladner'),
+description: 'Various, such as: Acting, Birthday Parties, Cooking, Dance, Nature classes, Music, Parent & Tot, Playtime, Reading',
+registration: 'Registered',
+cost: 'Paid'
+)
+
+ProgramAgeGroup.create(
+program: Program.find_by(description: 'Various, such as: Acting, Birthday Parties, Cooking, Dance, Nature classes, Music, Parent & Tot, Playtime, Reading'),
+age_group: AgeGroup.find_by(age: '0-5'),
+)
+
+# From 15 Program Excel
+Organization.create(
+description: '',
+name: 'Delta Parks & Recreation - North Delta Recreation Centre',
+address: 'North Delta Recreation Centre, 11415 84 Avenue, Delta, BC V4C 2L9',
+phone: '604-952-3045',
+website: '
+http://www.delta.ca/parks-recreation/activity-search
+',
+ )
+
+Program.create(
+program_type: ProgramType.find_by(name: 'Arts & Culture'),
+organization: Organization.find_by(name: 'Delta Parks & Recreation - North Delta Recreation Centre'),
+description: 'Various, such as: Acting, Birthday Parties, Cooking, Dance, Nature classes, Music, Parent & Tot, Playtime, Reading',
+registration: 'Registered',
+cost: 'Paid'
+)
+
+ProgramAgeGroup.create(
+program: Program.find_by(description: 'Various, such as: Acting, Birthday Parties, Cooking, Dance, Nature classes, Music, Parent & Tot, Playtime, Reading'),
+age_group: AgeGroup.find_by(age: '0-5'),
+)
+
+# From 16 Program Excel
+Organization.create(
+description: '',
+name: 'Delta Parks & Recreation - South Delta Recreation Centre',
+address: 'South Delta Recreation Centre, 1720 56 Street, Delta, BC V4L 2B1',
+phone: '604-952-3020',
+website: '
+http://www.delta.ca/parks-recreation/activity-search
+',
+ )
+
+Program.create(
+program_type: ProgramType.find_by(name: 'Arts & Culture'),
+organization: Organization.find_by(name: 'Delta Parks & Recreation - South Delta Recreation Centre'),
+description: 'Various, such as: Acting, Birthday Parties, Cooking, Dance, Nature classes, Music, Parent & Tot, Playtime, Reading',
+registration: 'Registered',
+cost: 'Paid'
+)
+
+ProgramAgeGroup.create(
+program: Program.find_by(description: 'Various, such as: Acting, Birthday Parties, Cooking, Dance, Nature classes, Music, Parent & Tot, Playtime, Reading'),
+age_group: AgeGroup.find_by(age: '0-5'),
+)
+
+# From 17 Program Excel
+Organization.create(
+description: '',
+name: 'Delta Parks & Recreation - Tsawwassen Arts Centre',
+address: 'Tsawwassen Arts Centre, 1172 56 Street, Delta, BC V4L 2A3',
+phone: '604-943-9437',
+website: '
+http://www.delta.ca/parks-recreation/activity-search
+',
+ )
+
+Program.create(
+program_type: ProgramType.find_by(name: 'Arts & Culture'),
+organization: Organization.find_by(name: 'Delta Parks & Recreation - Tsawwassen Arts Centre'),
+description: 'Various, such as: Acting, Birthday Parties, Cooking, Dance, Nature classes, Music, Parent & Tot, Playtime, Reading',
+registration: 'Registered',
+cost: 'Paid'
+)
+
+ProgramAgeGroup.create(
+program: Program.find_by(description: 'Various, such as: Acting, Birthday Parties, Cooking, Dance, Nature classes, Music, Parent & Tot, Playtime, Reading'),
+age_group: AgeGroup.find_by(age: '0-5'),
+)
+
+# From 18 Program Excel
+
+Program.create(
+program_type: ProgramType.find_by(name: 'Arts & Culture'),
+organization: Organization.find_by(name: 'Delta Parks & Recreation - Harris Barn'),
+description: 'May Include: Acting, Art, Baking, Ballet, Cooking, Dance, Drama, Drawing, Guitar, Lego, Magic, Painting, Piano, Pottery, Science, Sewing, Singing, Storytelling, Theatre, Zumba',
+registration: 'Registered',
+cost: 'Paid'
+)
+
+ProgramAgeGroup.create(
+program: Program.find_by(description: 'Various, such as: Acting, Birthday Parties, Cooking, Dance, Nature classes, Music, Parent & Tot, Playtime, Reading'),
+age_group: AgeGroup.find_by(age: '6-12'),
+)
+
+# From 19 Program Excel
+
+Program.create(
+program_type: ProgramType.find_by(name: 'Arts & Culture'),
+organization: Organization.find_by(name: 'Delta Parks & Recreation - North Delta Recreation Centre'),
+description: 'May Include: Acting, Art, Baking, Ballet, Cooking, Dance, Drama, Drawing, Guitar, Lego, Magic, Painting, Piano, Pottery, Science, Sewing, Singing, Storytelling, Theatre, Zumba',
+registration: 'Registered',
+cost: 'Paid'
+)
+
+ProgramAgeGroup.create(
+program: Program.find_by(description: 'Various, such as: Acting, Birthday Parties, Cooking, Dance, Nature classes, Music, Parent & Tot, Playtime, Reading'),
+age_group: AgeGroup.find_by(age: '6-12'),
+)
+
+# From 20 Program Excel
+
+Program.create(
+program_type: ProgramType.find_by(name: 'Arts & Culture'),
+organization: Organization.find_by(name: 'Delta Parks & Recreation - South Delta Recreation Centre'),
+description: 'May Include: Acting, Art, Baking, Ballet, Cooking, Dance, Drama, Drawing, Guitar, Lego, Magic, Painting, Piano, Pottery, Science, Sewing, Singing, Storytelling, Theatre, Zumba',
+registration: 'Registered',
+cost: 'Paid'
+)
+
+ProgramAgeGroup.create(
+program: Program.find_by(description: 'Various, such as: Acting, Birthday Parties, Cooking, Dance, Nature classes, Music, Parent & Tot, Playtime, Reading'),
+age_group: AgeGroup.find_by(age: '6-12'),
+)
+# From 21 Program Excel
+
+Program.create(
+program_type: ProgramType.find_by(name: 'Arts & Culture'),
+organization: Organization.find_by(name: 'Delta Parks & Recreation - Tsawwassen Arts Centre'),
+description: 'May Include: Acting, Art, Baking, Ballet, Cooking, Dance, Drama, Drawing, Guitar, Lego, Magic, Painting, Piano, Pottery, Science, Sewing, Singing, Storytelling, Theatre, Zumba',
+registration: 'Registered',
+cost: 'Paid'
+)
+
+ProgramAgeGroup.create(
+program: Program.find_by(description: 'Various, such as: Acting, Birthday Parties, Cooking, Dance, Nature classes, Music, Parent & Tot, Playtime, Reading'),
+age_group: AgeGroup.find_by(age: '6-12'),
+)
+
+# From 22 Program Excel
+
+Program.create(
+program_type: ProgramType.find_by(name: 'Arts & Culture'),
+organization: Organization.find_by(name: 'Delta Parks & Recreation - Ladner Community Centre'),
+description: 'May Include: Acting, Art, Baking, Ballet, Cooking, Dance, Drama, Drawing, Guitar, Lego, Magic, Painting, Piano, Pottery, Science, Sewing, Singing, Storytelling, Theatre, Zumba',
+registration: 'Registered',
+cost: 'Paid'
+)
+
+ProgramAgeGroup.create(
+program: Program.find_by(description: 'Various, such as: Acting, Birthday Parties, Cooking, Dance, Nature classes, Music, Parent & Tot, Playtime, Reading'),
+age_group: AgeGroup.find_by(age: '6-12'),
+)
+
+# From 23 Program Excel
+
+Organization.create(
+description: '',
+name: 'Delta Parks & Recreation - Sungod Recreation Centre',
+address: 'Sungod Recreation Centre, 7815 112 Street, Delta, BC V4C 4V9',
+phone: '604-952-3075',
+website: '
+http://www.delta.ca/parks-recreation/activity-search
+',
+ )
+
+Program.create(
+program_type: ProgramType.find_by(name: 'Arts & Culture'),
+organization: Organization.find_by(name: 'Delta Parks & Recreation - Sungod Recreation Centre'),
+description: 'May Include: Acting, Art, Baking, Ballet, Cooking, Dance, Drama, Drawing, Guitar, Lego, Magic, Painting, Piano, Pottery, Science, Sewing, Singing, Storytelling, Theatre, Zumba',
+registration: 'Registered',
+cost: 'Paid'
+)
+
+ProgramAgeGroup.create(
+program: Program.find_by(description: 'Various, such as: Acting, Birthday Parties, Cooking, Dance, Nature classes, Music, Parent & Tot, Playtime, Reading'),
+age_group: AgeGroup.find_by(age: '6-12'),
+)
+
+# From 24 Program Excel
+
+Organization.create(
+description: '',
+name: 'Boys & Girls Club of the South Coast',
+address: '11339-84th Ave., North Delta V4C 2L9',
+phone: '604.596.9595',
+website: '
+https://www.bgcbc.ca/what-we-do/clubs/hillside-club/
+',
+ )
+
+Program.create(
+program_type: ProgramType.find_by(name: 'Arts & Culture'),
+organization: Organization.find_by(name: 'Boys & Girls Club of the South Coast'),
+description: 'Hillside Club: To kids, their Club feels like a place where they can hang out with their friends, and make new ones! But it’s so much more. It’s a safe place that provides them with three of the things they need most: a sense of belonging, a sense of success, and positive relationships. That happens through a wide range of activities that are not only of interest to kids, but that are good for them, too: sports, homework, safe access to the on-line world, arts, crafts, and of course, sharing meals.',
+registration: 'Registered',
+cost: 'Paid'
+)
+
+ProgramAgeGroup.create(
+program: Program.find_by(description: 'Hillside Club: To kids, their Club feels like a place where they can hang out with their friends, and make new ones! But it’s so much more. It’s a safe place that provides them with three of the things they need most: a sense of belonging, a sense of success, and positive relationships. That happens through a wide range of activities that are not only of interest to kids, but that are good for them, too: sports, homework, safe access to the on-line world, arts, crafts, and of course, sharing meals.'),
+age_group: AgeGroup.find_by(age: '6-12'),
+)
+
+
+
+
+
+
+
+
+
+
+
+
+# Services Below
+
+
 # Service 2 from Excel
 Organization.create(
 name: 'Reporting child abuse',
