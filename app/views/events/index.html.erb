@@ -166,7 +166,7 @@
           <div class="carousel-inner">
             <div class="item active">
               <div class="">
-                <% @events.first(1).each do |event| %>
+                <% @events.last(1).each do |event| %>
                 <div class="calendar-subsection2-card light-blue-bg-color">
                   <% num = rand(1..3) %>
                   <%= image_tag "event#{num}.png", class: "calendar-subsection2-image" %>
@@ -359,7 +359,7 @@
           <div class="carousel-inner">
             <div class="item active">
               <div class="">
-                <% @events.first(1).each do |event| %>
+                <% @events.last(1).each do |event| %>
                 <div class="calendar-subsection2-card light-blue-bg-color">
                   <% num = rand(1..3) %>
                   <%= image_tag "event#{num}.png", class: "calendar-subsection2-image" %>
@@ -415,7 +415,7 @@
 
             <div class="item">
               <div class="">
-                <% @events.first(1).each do |event| %>
+                <% @events.last(1).each do |event| %>
 
                 <div class="calendar-subsection2-card light-blue-bg-color">
                   <% num = rand(1..3) %>
