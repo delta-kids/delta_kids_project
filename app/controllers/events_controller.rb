@@ -5,6 +5,16 @@ class EventsController < ApplicationController
 
   def index
     @events = Event.all
+    @events_by_start_date = @events.group_by(&:start_date)
+  end
+
+  def show
+    @event = Event.find(params[:id])
+  end
+
+
+  def new
+    @event = Event.new
   end
 
   def create
@@ -17,20 +27,6 @@ class EventsController < ApplicationController
       render :new
     end
   end
-
-
-  def show
-    @event = Event.find(params[:id])
-  end
-
-  def index
-    @events = Event.all
-  end
-
-  def new
-    @event = Event.new
-  end
-
 
   # def edit
   # end

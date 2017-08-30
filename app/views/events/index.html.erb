@@ -147,8 +147,15 @@
         <p class="calendar-subsection2-header">ACTIVITIES CALENDAR</p>
       </div>
       <div class="calendar-subsection2-card" style="margin-top:0px;">
-        <%= month_calendar do |date| %>
+        <%= month_calendar  do |date| %>
         <%= date.day %>
+        <% if @events_by_start_date[date] %>
+        <ul>
+          <% @events_by_start_date[date].each do |event|  %>
+          <li><%= event.title  %></li>
+          <% end %>
+        </ul>
+        <% end %>
         <% end %>
       </div>
 
