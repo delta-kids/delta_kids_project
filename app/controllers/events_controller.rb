@@ -20,7 +20,7 @@ class EventsController < ApplicationController
   def create
     @event = Event.new event_params
     if @event.save
-      flash[:notice] = 'Event create'
+      flash[:notice] = 'Event Created'
       redirect_to event_path(@event)
     else
       flash.now[:alert] = @event.pretty_errors

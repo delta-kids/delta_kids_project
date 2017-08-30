@@ -20,6 +20,9 @@
 //= require_tree .
 
 
+
+
+
 $(document).ready(function() {
   $(".dropdown-toggle").dropdown();
 });
@@ -44,5 +47,5 @@ $(document).ready(function(){
 });
 
 $(document).ready(function(){
-  $('.datepicker').datepicker();
+  $('.datepicker').datepicker({ dateFormat: 'yy-mm-dd' });
 });

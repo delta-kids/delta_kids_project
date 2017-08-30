@@ -150,11 +150,11 @@
         <%= month_calendar  do |date| %>
         <%= date.day %>
         <% if @events_by_start_date[date] %>
-        <ul>
+
           <% @events_by_start_date[date].each do |event|  %>
-          <li><%= event.title  %></li>
+          <p><%= event.title  %></p>
           <% end %>
-        </ul>
+
         <% end %>
         <% end %>
       </div>
