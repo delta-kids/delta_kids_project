@@ -3,6 +3,11 @@
   background: #D1F0F4;
 }
 
+.ellipsis {
+  height:100px;
+  text-overflow:ellipsis;
+}
+
 .whats-new-container {
   margin-bottom: 25px;
   padding-bottom: 15px;
