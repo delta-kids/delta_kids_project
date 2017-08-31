@@ -11,11 +11,10 @@
           <div class="row">
             <div class="col-md-12">
 
-                <h1 class="bree-font">Organizations</h1>
+                <h1 class="bree-font">Programs</h1>
                 <br>
-                <% @organizations.each do |organization| %>
-                <p><strong>Name: </strong></p><%= link_to organization.name, organization_path(organization) %>
-
+                <% @programs.each do |program| %>
+                <p><strong>Description: </strong></p><%= link_to program.description, program_path(program) %>
                 <hr>
                 <% end %>
 

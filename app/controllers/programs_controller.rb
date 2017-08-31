@@ -1,6 +1,9 @@
 class ProgramsController < ApplicationController
 
   # ONLY ADMIN
+    def index
+      @programs = Program.all
+    end
 
     def index0_5
         @age_group = "0-5"
@@ -21,6 +24,7 @@ class ProgramsController < ApplicationController
     end
 
     def show
+        @program = Program.find(params[:id])
     end
 
     def edit
