@@ -36,9 +36,7 @@ class OrganizationsController < ApplicationController
 
 
   def edit
-
       @organization = Organization.find(params[:id])
-
   end
 
   def update

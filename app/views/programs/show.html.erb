@@ -10,16 +10,26 @@
           <% if is_admin? %>
           <div class="row">
             <div class="col-md-12">
+                  <div class="container-fluid">
+                    <br>
 
-                <h1 class="bree-font">Organizations</h1>
-                <br>
-                <% @organizations.each do |organization| %>
-                <p><%= link_to organization.name, organization_path(organization) %></p>
-
-                <hr>
-                <% end %>
+                  <p class="bree-font">Program</p>
+                  <p class="font-20"><strong>Description: </strong><%= @program.description %></p>
+                  <p class="font-20"><strong>Registration: </strong><%= @program.registration %></p>
+                  <p class="font-20"><strong>Cost: </strong><%= @program.cost %></p>
+                  <p class="font-20"><strong>Organization: </strong><%= @program.organization_id %></p>
 
 
+                      <%= link_to 'Delete', program_path(@program),
+                                            method: :delete,
+                                            data: {confirm: 'Are you sure?'},
+                                            class: 'btn btn-danger edit-delete-btn-width', style:'color:white !important;' %>
+
+                      <%= link_to 'Edit', edit_program_path(@program),
+                      class: 'btn btn-success form-padding edit-delete-btn-width'  %>
+
+
+              </div>
             </div>
           </div>
           <% end %>

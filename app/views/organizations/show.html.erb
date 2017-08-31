@@ -10,9 +10,10 @@
           <% if is_admin? %>
           <div class="row">
             <div class="col-md-12">
+                  <div class="container-fluid">
+                    <br>
 
-
-                  <p class="font-20"><strong>Organization Name: </strong><%= @organization.name %></p>
+                  <p class="bree-font"><%= @organization.name %></p>
                   <p class="font-20"><strong>Description: </strong><%= @organization.description %></p>
                   <p class="font-20"><strong>Address: </strong><%= @organization.address %></p>
                   <p class="font-20"><strong>Phone_number: </strong><%= @organization.phone %></p>
@@ -24,13 +25,13 @@
                       <%= link_to 'Delete', organization_path(@organization),
                                             method: :delete,
                                             data: {confirm: 'Are you sure?'},
-                                            class: 'btn btn-danger' %>
+                                            class: 'btn btn-danger edit-delete-btn-width', style:'color:white !important;' %>
 
                       <%= link_to 'Edit', edit_organization_path(@organization),
-                      class: 'btn btn-success'  %>
+                      class: 'btn btn-success form-padding edit-delete-btn-width'  %>
 
 
-
+              </div>
             </div>
           </div>
           <% end %>
