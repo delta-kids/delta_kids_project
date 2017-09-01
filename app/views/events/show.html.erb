@@ -7,7 +7,6 @@
 
         <div class="col-md-9 dash-main-content" style="background-color:white;">
           <% if user_signed_in? %>
-          <% if is_admin? %>
           <div class="row">
             <div class="col-md-12">
                   <div class="container-fluid">
@@ -34,12 +33,20 @@
 
                       <%= link_to 'Edit', edit_event_path(@event),
                       class: 'btn btn-success form-padding edit-delete-btn-width'  %>
-
+                      <br>
+                      <br>
+                      <% if user_signed_in? %>
+                      <% if is_admin? %><% else %>
+                      <p class="font-16">
+                        * Please Note: You may only edit your request while it is still pending. When your request for a new Event has been processed any further changes must be done by an Admin.
+                      </p>
+                      <br>
+                      <% end %>
+                      <% end %>
 
               </div>
             </div>
           </div>
-          <% end %>
           <% else %>
           <div>
             <p>

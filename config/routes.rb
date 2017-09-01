@@ -70,7 +70,7 @@ Rails.application.routes.draw do
   get '/dashboard/manage_services', to: 'services#index'
   get '/dashboard/manage_organizations', to: 'organizations#index'
   get '/dashboard/manage_events', to: 'events#index2'
-  get '/dashboard/manage_resources', to: 'resources#index'
+  get '/dashboard/manage_resources', to: 'resources#index2'
 
   get '/map', to: 'home#map', as: 'map'
 

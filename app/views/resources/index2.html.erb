@@ -1,0 +1,50 @@
+<div class="wholePage">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12 content">
+
+        <%= render 'partials/dash_sidebar' %>
+
+        <div class="col-md-9 dash-main-content" style="background-color:white;">
+          <% if user_signed_in? %>
+          <% if is_admin? %>
+          <div class="row">
+            <div class="col-md-12">
+
+                <h1 class="bree-font">Resources</h1>
+                <br>
+                <% @resources.each do |resource| %>
+                <p class="font-16"><%= link_to resource.name, resource_path(resource) %></p>
+
+                <hr>
+                <% end %>
+
+
+            </div>
+          </div>
+          <% end %>
+          <% else %>
+          <div>
+            <p>
+              Dashboard section is meant to publish a Resource and/or Event. In order to proceed you must have an account with us. Please Log In or create a New User.
+              <br>
+              <!-- <%= link_to 'New User', signup_path, class: 'top-right-panel' %>&nbsp -->
+              <!-- <div class="">
+              <%= link_to 'Log In', login_path, class: 'top-right-panel' %>&nbsp
+            </div> -->
+          </p>
+          <br>
+          <p>
+            If you don't want to proceed, please feel free to go elsewhere in our site.
+          </p>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- Rainbow Footer-->
+
+<%= render 'partials/footer' %>

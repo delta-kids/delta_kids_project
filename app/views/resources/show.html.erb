@@ -1,15 +1,77 @@
+<div class="wholePage">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12 content">
 
-<div class="container new-admin-form2">
-    <p class="font-20"><strong>Resource Name: </strong><%= @resource.name %></p>
-    <p class="font-20"><strong>Feature Resource: </strong><%= @resource.feature %></p>
-    <p class="font-20"><strong>Feature Start Date: </strong><%= @resource.feature_start_date %></p>
-    <p class="font-20"><strong>Feature Start Time: </strong><%= @resource.feature_start_time %></p>
-    <p class="font-20"><strong>Feature End Date: </strong><%= @resource.feature_end_date %></p>
-    <p class="font-20"><strong>Feature End Time: </strong><%= @resource.feature_end_time %></p>
-    <p class="font-20"><strong>Resource Location: </strong><%= @resource.resource_location %></p>
-    <p class="font-20"><strong>Description: </strong><%= @resource.description %></p>
-    <p class="font-20"><strong>Contact Name: </strong><%= @resource.contact_name %></p>
-    <p class="font-20"><strong>Contact Email: </strong><%= @resource.contact_email %></p>
+        <%= render 'partials/dash_sidebar' %>
+
+        <div class="col-md-9 dash-main-content" style="background-color:white;">
+          <% if user_signed_in? %>
+
+          <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+                  <div class="container-fluid">
+                    <br>
+
+                  <p class="bree-font">Edit Resource</p>
+
+                  <p class="font-20"><strong>Resource Name: </strong><%= @resource.name %></p>
+                  <p class="font-20"><strong>Feature Resource: </strong><%= @resource.feature %></p>
+                  <p class="font-20"><strong>Feature Start Date: </strong><%= @resource.feature_start_date %></p>
+                  <p class="font-20"><strong>Feature Start Time: </strong><%= @resource.feature_start_time %></p>
+                  <p class="font-20"><strong>Feature End Date: </strong><%= @resource.feature_end_date %></p>
+                  <p class="font-20"><strong>Feature End Time: </strong><%= @resource.feature_end_time %></p>
+                  <p class="font-20"><strong>Resource Location: </strong><%= @resource.resource_location %></p>
+                  <p class="font-20"><strong>Description: </strong><%= @resource.description %></p>
+                  <p class="font-20"><strong>Contact Name: </strong><%= @resource.contact_name %></p>
+                  <p class="font-20"><strong>Contact Email: </strong><%= @resource.contact_email %></p>
+
+                      <%= link_to 'Delete', resource_path(@resource),
+                                            method: :delete,
+                                            data: {confirm: 'Are you sure?'},
+                                            class: 'btn btn-danger edit-delete-btn-width', style:'color:white !important;' %>
+
+                      <%= link_to 'Edit', edit_resource_path(@resource),
+                      class: 'btn btn-success form-padding edit-delete-btn-width'  %>
+                      <br>
+                      <br>
+                      <% if user_signed_in? %>
+                      <% if is_admin? %><% else %>
+                      <p class="font-16">
+                        * Please Note: You may only edit your request while it is still pending. When your request for a new Resource has been processed any further changes must be done by an Admin.
+                      </p>
+                      <br>
+                      <% end %>
+                      <% end %>
+
+              </div>
+            </div>
+            <div class="col-md-1 pull-right"></div>
+          </div>
+
+          <% else %>
+          <div>
+            <p class="font-20">
+              Dashboard section is meant to publish a Resource and/or Event. In order to proceed you must have an account with us. Please Log In or create a New User.
+              <br>
+              <!-- <%= link_to 'New User', signup_path, class: 'top-right-panel' %>&nbsp -->
+              <!-- <div class="">
+              <%= link_to 'Log In', login_path, class: 'top-right-panel' %>&nbsp
+            </div> -->
+          </p>
+          <br>
+          <p class="font-20">
+            If you don't want to proceed, please feel free to go elsewhere in our site.
+          </p>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
 </div>
+</div>
+
+<!-- Rainbow Footer-->
 
 <%= render 'partials/footer' %>
