@@ -6,18 +6,13 @@ class OrganizationsController < ApplicationController
 
 
   def new
-    if is_admin?
       @organization = Organization.new
-    else
-      redirect_to login_path, notice: 'You are not authorized'
-    end
   end
-
 
   def create
     @organization = Organization.new organization_params
     if @organization.save
-      flash[:notice] = 'Organization create'
+      flash[:notice] = 'Organization Created'
       redirect_to organization_path(@organization)
     else
       flash.now[:alert] = @organization.pretty_errors

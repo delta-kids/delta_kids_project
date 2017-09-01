@@ -14,7 +14,7 @@
                 <h1 class="bree-font">Organizations</h1>
                 <br>
                 <% @organizations.each do |organization| %>
-                <p><%= link_to organization.name, organization_path(organization) %></p>
+                <p class="font-16"><%= link_to organization.name, organization_path(organization) %></p>
 
                 <hr>
                 <% end %>

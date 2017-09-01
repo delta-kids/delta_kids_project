@@ -11,98 +11,48 @@
         <div class="container-fluid center-flex-content">
           <div class="create-new-container">
             <br>
-            <p class="dashboard-headers">Create New Program</p>
+            <p class="dashboard-headers">Create Program</p>
 
             <%= form_for @program do |f| %>
-            <div class="form-group center-flex-content">
-              <%= f.label :name, class: "label-baseline" %>
-              <%= f.text_field :name, class: "form form-control form-padding event-form-width", :required => true %>
-            </div>
-            <div class="form-group center-flex-content">
-              <%= f.label :address, class: "label-baseline" %>
-              <%= f.text_field :address, class: "form form-control form-padding event-form-width", :required => true %>
-            </div>
-            <h3>Logo Image Upload Placeholder</h3>
-            <h3>Activity/Service Image Upload Placeholder</h3>
-            <div class="form-group center-flex-content">
-              <%= f.label :website, class: "label-baseline" %>
-              <%= f.text_field :website, class: "form form-control form-padding event-form-width", :required => true %>
-            </div>
-            <div class="form-group center-flex-content">
-              <%= f.label :phone_number, class: "label-baseline caps" %>
-              <%= f.telephone_field :phone, class: "form form-control form-padding event-form-width", :required => true %>
-            </div>
-            <div class="form-group center-flex-content">
-              <%= f.label :Age_group, class:'label-baseline caps' %>
-              <div class="form-group event-form-width dropbox-container">
-                <%= f.collection_select :age_group_ids,
-                AgeGroup.all,
-                :id,
-                :age,
-                {},
-                { multiple: true, class: 'chosen-select form-control form-padding'}
-                %>
-              </div>
-            </div>
-            <div class="form-group center-flex-content">
-              <%= f.label :activity_types, class:'label-baseline caps' %>
-              <div class="form-group event-form-width dropbox-container">
-                <%= f.collection_select :program_type_ids,
-                ProgramType.all,
-                :id,
-                :name,
-                {},
-                { multiple: true, class: 'chosen-select form-control form-padding' }
-                %>
-              </div>
-            </div>
-
-            <div class="form-group center-flex-content">
-              <%= f.label :tags, class:'label-baseline caps' %>
-              <div class="form-group event-form-width dropbox-container">
-                <%= f.collection_select :age_group_ids,
-                Tag.all,
-                :id,
-                :name,
-                {},
-                { multiple: true, class: 'chosen-select form-control form-padding'}
-                %>
-              </div>
-            </div>
-
             <div class="form-group">
               <%= f.label :description, class:'label-baseline' %>
               <%= f.text_area :description, class: 'form form-control form-padding event-form-width caps', :required => true %>
             </div>
-
             <div class="form-group center-flex-content">
-              <%= f.label :target_clientele, class:"label-baseline caps" %>
-              <div class="form-group event-form-width dropbox-container">
-                <%= select_tag(:target_clientele, options_for_select(
-                [
-                  ['Pregnancy & Babies', 1],
-                  ['something goes here', 2],
-                  ['random thing', 3],
-                  ['more stuff', 4]
-                  ]))
-                  %>
+              <%= f.label :registration, class:'label-baseline caps' %>
+              <div class="margin-right">
+                <%= f.radio_button(:registration, "Registered") %>
+                <%= label_tag(:registration, "Registered", class:'radio-spacing') %>
+                <%= f.radio_button(:registration, "Drop In") %>
+                <%= label_tag(:registration, "Drop In", class:'radio-spacing') %>
+              </div>
+            </div>
+            <div class="form-group center-flex-content">
+              <%= f.label :cost, class:'label-baseline caps' %>
+              <div class="margin-right">
+                <%= f.radio_button(:cost, "Free") %>
+                <%= label_tag(:cost, "Free", class:'radio-spacing') %>
+                <%= f.radio_button(:cost, "Paid") %>
+                <%= label_tag(:cost, "Paid", class:'radio-spacing') %>
+              </div>
+            </div>
+            <div class="form-group center-flex-content">
+              <%= f.label :service , "Activity Type", class:'label-baseline', style:'align-self: center; padding-right: 5%' %>
+              <div class="">
+                <%= check_box_tag(:education) %>
+                <%= label_tag(:education, "Education", class:'radio-spacing') %>
+                <%= check_box_tag(:sports) %>
+                <%= label_tag(:sports, "Sports", class:'radio-spacing') %>
+                <%= check_box_tag(:health) %>
+                <%= label_tag(:health, "Health", class:'radio-spacing') %>
+                  <div class="">
+                    <%= check_box_tag(:art_and_culture) %>
+                    <%= label_tag(:art_and_culture, "Art & Culture", class:'radio-spacing') %>
+                  <%= check_box_tag(:entertainment) %>
+                  <%= label_tag(:entertainment, "Entertainment", class:'radio-spacing') %>
                 </div>
               </div>
-              <br>
-              <div class="form-group center-flex-content">
-                <%= f.label :service, class:"label-baseline caps" %>
-                <div class="form-group event-form-width dropbox-container">
-                  <%= select_tag(:services, options_for_select(
-                  [
-                    ['Help in Crisis', 1],
-                    ['another service', 2],
-                    ['hello world', 3],
-                    ['random service', 4]
-                    ]))
-                    %>
-                  </div>
-                </div>
-
+            </div>
                 <br>
                 <div class="form-group">
                   <%= f.submit class: 'btn btn-primary form-control' %>

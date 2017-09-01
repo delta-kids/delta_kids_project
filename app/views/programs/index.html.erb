@@ -14,7 +14,7 @@
                 <h1 class="bree-font">Programs</h1>
                 <br>
                 <% @programs.each do |program| %>
-                <p><strong>Description: </strong></p><%= link_to program.description, program_path(program) %>
+                <p class="font-16"><strong>Description: </strong><%= link_to program.description, program_path(program) %></p>
                 <hr>
                 <% end %>
 

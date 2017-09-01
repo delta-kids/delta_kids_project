@@ -8,6 +8,11 @@ class EventsController < ApplicationController
     @events_by_start_date = @events.group_by(&:start_date)
   end
 
+  def index2
+    @events = Event.all
+    @events_by_start_date = @events.group_by(&:start_date)
+  end
+
   def show
     @event = Event.find(params[:id])
   end
@@ -28,14 +33,20 @@ class EventsController < ApplicationController
     end
   end
 
-  # def edit
-  # end
-  #
-  # def update
-  # end
-  #
-  # def destroy
-  # end
+  def update
+    @event.update(event_params)
+    redirect_to @event, notice: "Successfully Updated"
+  end
+
+  def destroy
+    if is_admin?
+      @event.destroy
+      redirect_to events_path, notice: "Organization Deleted!"
+    else
+      flash[:alert] = "Access Denied"
+      redirect_to @event
+    end
+  end
 
   private
   def event_params

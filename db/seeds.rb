@@ -105,7 +105,6 @@ ProgramType.create([
 {name: 'Parent & Child'},
 {name: 'Childcare & Preschools'},
 {name: 'Sports'},
-{name: 'Child Care & Preschools'},
 {name: 'Community Clubs'},
 {name: 'Education'}
 ])

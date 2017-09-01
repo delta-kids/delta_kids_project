@@ -69,6 +69,8 @@ Rails.application.routes.draw do
   get '/dashboard/manage_programs', to: 'programs#index'
   get '/dashboard/manage_services', to: 'services#index'
   get '/dashboard/manage_organizations', to: 'organizations#index'
+  get '/dashboard/manage_events', to: 'events#index2'
+  get '/dashboard/manage_resources', to: 'resources#index'
 
   get '/map', to: 'home#map', as: 'map'
 
@@ -82,10 +84,12 @@ Rails.application.routes.draw do
 
   resources :resources
 
+  resources :services
+
   resources :events
 
   resources :organizations
-  
+
   resources :programs
 
 end
