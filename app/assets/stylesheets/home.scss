@@ -7,8 +7,8 @@
 //   box-shadow:0px 0px 25px lightblue;
 // }
 
-.btn:focus {
-  border-radius: 10%;
+.button_to {
+
 }
 
 #welcome-line1 {
@@ -134,7 +134,13 @@
     display: block;
     margin: 0 auto;
     text-align: center;
+    outline: none;
 }
+
+#button-activities-cal:focus {
+  border: medium #004c81 solid;
+}
+
 
 
 .section3 {

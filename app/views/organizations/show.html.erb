@@ -1,13 +1,63 @@
+<div class="wholePage">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12 content">
 
-<div class="container new-admin-form2">
-    <h4><%= @organization.name %></h4>
-    <p class="font-20"><strong>Description: </strong><%= @organization.description %></p>
-    <p class="font-20"><strong>Address: </strong><%= @organization.address %></p>
-    <p class="font-20"><strong>Phone_number: </strong><%= @organization.phone %></p>
-    <p class="font-20"><strong>Website: </strong><%= @organization.website %></p>
-    <% @organization.program_types.each do |activityType|  %>
-    <p class="font-20"><strong>Activity type: </strong><%= activityType.name %></p>
-    <% end %>
+        <%= render 'partials/dash_sidebar' %>
+
+        <div class="col-md-9 dash-main-content" style="background-color:white;">
+          <% if user_signed_in? %>
+          <% if is_admin? %>
+          <div class="row">
+            <div class="col-md-12">
+                  <div class="container-fluid">
+                    <br>
+
+                  <p class="bree-font">Edit Organization</p>
+                  <p class="font-20"><strong>Name: </strong><%= @organization.name %></p>
+                  <p class="font-20"><strong>Description: </strong><%= @organization.description %></p>
+                  <p class="font-20"><strong>Address: </strong><%= @organization.address %></p>
+                  <p class="font-20"><strong>Phone_number: </strong><%= @organization.phone %></p>
+                  <p class="font-20"><strong>Website: </strong><%= @organization.website %></p>
+                  <% @organization.program_types.each do |activityType|  %>
+                  <p class="font-20"><strong>Activity type: </strong><%= activityType.name %></p>
+                  <% end %>
+
+                      <%= link_to 'Delete', organization_path(@organization),
+                                            method: :delete,
+                                            data: {confirm: 'Are you sure?'},
+                                            class: 'btn btn-danger edit-delete-btn-width', style:'color:white !important;' %>
+
+                      <%= link_to 'Edit', edit_organization_path(@organization),
+                      class: 'btn btn-success form-padding edit-delete-btn-width'  %>
+
+
+              </div>
+            </div>
+          </div>
+          <% end %>
+          <% else %>
+          <div>
+            <p>
+              Dashboard section is meant to publish a Resource and/or Event. In order to proceed you must have an account with us. Please Log In or create a New User.
+              <br>
+              <!-- <%= link_to 'New User', signup_path, class: 'top-right-panel' %>&nbsp -->
+              <!-- <div class="">
+              <%= link_to 'Log In', login_path, class: 'top-right-panel' %>&nbsp
+            </div> -->
+          </p>
+          <br>
+          <p>
+            If you don't want to proceed, please feel free to go elsewhere in our site.
+          </p>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
 </div>
+</div>
+
+<!-- Rainbow Footer-->
 
 <%= render 'partials/footer' %>

@@ -3,6 +3,22 @@
   background: #D1F0F4;
 }
 
+.ellipsis-3 {
+  display: -webkit-box;
+  overflow : hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.ellipsis-1 {
+  display: -webkit-box;
+  overflow : hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
 .whats-new-container {
   margin-bottom: 25px;
   padding-bottom: 15px;

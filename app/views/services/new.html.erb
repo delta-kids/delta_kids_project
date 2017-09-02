@@ -1,2 +1,51 @@
-<h1>Services#new</h1>
-<p>Find me in app/views/services/new.html.erb</p>
+<div class="wholePage">
+  <!-- First section div -->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12 content">
+
+      <%= render 'partials/dash_sidebar' %>
+
+      <div class="col-md-9 dash-main-content" style="background-color:white;">
+        <% if user_signed_in? %>
+        <div class="container-fluid center-flex-content">
+          <div class="create-new-container">
+            <br>
+            <p class="dashboard-headers">Create Service</p>
+
+            <%= form_for @service do |f| %>
+            <div class="form-group">
+              <%= f.label :description, class:'label-baseline' %>
+              <%= f.text_area :description, class: 'form form-control form-padding event-form-width caps', :required => true %>
+            </div>
+            <div class="form-group">
+              <%= f.label :organization_id, class:'label-baseline' %>
+              <%= f.text_field :organization_id, class: 'form form-control form-padding event-form-width caps', :required => true %>
+            </div>
+            <div class="form-group">
+              <%= f.label :service_type_id, class:'label-baseline' %>
+              <%= f.text_field :service_type_id, class: 'form form-control form-padding event-form-width caps', :required => true %>
+            </div>
+                <br>
+                <div class="form-group">
+                  <%= f.submit class: 'btn btn-primary form-control' %>
+                </div>
+                <% end %>
+                <% end %>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+
+
+        <div class="container-fluid happy-rainbow">
+          <div class="row">
+            <div class="col-md-12">
+
+              <%= image_tag("rainbow-footer-group.svg", class:"center-block") %>
+
+            </div>
+          </div>
+        </div>

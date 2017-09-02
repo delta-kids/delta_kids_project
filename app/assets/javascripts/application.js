@@ -12,12 +12,16 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery-ui/widgets/datepicker
 //= require bootstrap-sprockets
-//= require bootstrap-datepicker
 //= require bootstrap-timepicker
 //= require chosen-jquery
 //= require rails-ujs
 //= require_tree .
+
+
+
+
 
 $(document).ready(function() {
   $(".dropdown-toggle").dropdown();
@@ -43,5 +47,5 @@ $(document).ready(function(){
 });
 
 $(document).ready(function(){
-  $('.datepicker').datepicker();
+  $('.datepicker').datepicker({ dateFormat: 'yy-mm-dd' });
 });

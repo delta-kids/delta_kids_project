@@ -32,12 +32,14 @@ gem 'cancancan'
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
+gem 'kaminari'
 gem 'font-awesome-rails'
 gem 'jquery-rails'
-gem 'bootstrap-datepicker-rails'
+gem 'jquery-ui-rails'
 gem 'bootstrap-timepicker-rails'
 gem 'chosen-rails'
 gem "simple_calendar", "~> 2.0"
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

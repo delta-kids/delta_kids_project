@@ -66,7 +66,12 @@ Rails.application.routes.draw do
   get '/dashboard', to: 'home#dashboard', as: 'dashboard'
   get '/dashboard/pending_and_approved_events', to: 'home#pending_and_approved_events'
   get '/dashboard/pending_and_approved_resources', to: 'home#pending_and_approved_resources'
-  
+  get '/dashboard/manage_programs', to: 'programs#index'
+  get '/dashboard/manage_services', to: 'services#index'
+  get '/dashboard/manage_organizations', to: 'organizations#index'
+  get '/dashboard/manage_events', to: 'events#index2'
+  get '/dashboard/manage_resources', to: 'resources#index2'
+
   get '/map', to: 'home#map', as: 'map'
 
   get '/search', to: 'home#search', as: 'search'
@@ -79,8 +84,12 @@ Rails.application.routes.draw do
 
   resources :resources
 
+  resources :services
+
   resources :events
 
   resources :organizations
+
+  resources :programs
 
 end

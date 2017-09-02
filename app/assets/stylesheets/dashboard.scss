@@ -7,6 +7,14 @@
 	margin-left: auto;
 }
 
+.edit-delete-btn-width {
+	width:150px;
+}
+
+.show-inline {
+	display: inline;
+}
+
 .dropbox-container .chosen-choices {
 	display: flex;
 	justify-content: center;
@@ -27,10 +35,7 @@
 	border-radius: 4px;
 	padding-top: 2px;
 	padding-bottom: 2px;
-
-
 }
-
 
 .event-form-width {
 	width:400px !important;
@@ -46,7 +51,6 @@
 }
 .dashboard-row {
   display: flex;
-
   flex-direction: column !important;
 }
 

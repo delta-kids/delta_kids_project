@@ -27,15 +27,28 @@ class ResourcesController < ApplicationController
       @resources = Resource.all
     end
 
+    def index2
+      @resources = Resource.all
+    end
 
-    # def edit
-    # end
-    #
-    # def update
-    # end
-    #
-    # def destroy
-    # end
+    def edit
+      @resource = Resource.find(params[:id])
+    end
+
+    def update
+      @resource.update(resource_params)
+      redirect_to @resource, notice: "Successfully Updated"
+    end
+
+    def destroy
+      if is_admin?
+        @resource.destroy
+        redirect_to resources_path, notice: "Resource Deleted!"
+      else
+        flash[:alert] = "Access Denied"
+        redirect_to @resource
+      end
+    end
 
     private
     def resource_params

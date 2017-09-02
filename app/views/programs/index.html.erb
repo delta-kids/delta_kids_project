@@ -10,26 +10,15 @@
           <% if is_admin? %>
           <div class="row">
             <div class="col-md-12">
-                  <div class="container-fluid">
-                    <br>
 
-                  <p class="bree-font">Edit Service</p>
-                  <p class="font-20"><strong>Description: </strong><%= @service.description %></p>
-                  <p class="font-20"><strong>Organization ID: </strong><%= @service.organization_id %></p>
-                  <p class="font-20"><strong>Category ID: </strong><%= @service.category_id %></p>
-                  <p class="font-20"><strong>Service Type ID: </strong><%= @service.service_type_id %></p>
-                
-
-                      <%= link_to 'Delete', service_path(@service),
-                                            method: :delete,
-                                            data: {confirm: 'Are you sure?'},
-                                            class: 'btn btn-danger edit-delete-btn-width', style:'color:white !important;' %>
-
-                      <%= link_to 'Edit', edit_service_path(@service),
-                      class: 'btn btn-success form-padding edit-delete-btn-width'  %>
+                <h1 class="bree-font">Programs</h1>
+                <br>
+                <% @programs.each do |program| %>
+                <p class="font-16"><strong>Description: </strong><%= link_to program.description, program_path(program) %></p>
+                <hr>
+                <% end %>
 
 
-              </div>
             </div>
           </div>
           <% end %>

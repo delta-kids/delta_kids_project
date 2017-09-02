@@ -1,123 +1,49 @@
-<div class="row">
-  <div class="col-md-12 content">
+<div class="wholePage">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12 content">
 
-    <div class="col-md-3 hidden-xs hidden-sm sidebar">
-      <ul class="nav nav-sidebar ">
-        <h2 class='age-group'>YEAR OLDS</h2>
-        <p><a style="color:#00A3DA" href="<%= contact_path %>">Who to contact <br> for more information about...</a></p>
-        <hr>
-      </ul>
-    </div>
+        <%= render 'partials/dash_sidebar' %>
 
-    <div class="col-md-9 organization-content">
-      <div class="col-md-6">
-        <h3>ORGANIZATIONS</h3>
-      </div>
-      <div class="col-md-5">
-        <h3>SERVICES OFFERED</h3>
-      </div>
+        <div class="col-md-9 dash-main-content" style="background-color:white;">
+          <% if user_signed_in? %>
+          <% if is_admin? %>
+          <div class="row">
+            <div class="col-md-12">
 
-
-      <% @services&.each do |s| %>
-      <div class="col-md-12">
-        <hr class="divider">
-      </div>
-
-      <div class="col-md-12 ">
-        <div class="organization-details">
+                <h1 class="bree-font">Services</h1>
+                <br>
+                <% @services.each do |service| %>
+                <p class="font-16"><strong>Description: </strong><%= link_to service.description, service_path(service) %></p>
+                <hr>
+                <% end %>
 
 
-          <div class="organization-info col-md-6">
-            <div class="organization-logo">
-              <%= image_tag "program-logo#{rand(1..2)}.png"  %>
-            </div>
-
-            <div class="col-md-8 col-sm-7">
-              <p><%= s.organization.name %></p>
-              <a href="#">Learn More</a>
             </div>
           </div>
-
-          <div class="col-md-5">
-            <p><%= s.description %></p>
-          </div>
+          <% end %>
+          <% else %>
+          <div>
+            <p>
+              Dashboard section is meant to publish a Resource and/or Event. In order to proceed you must have an account with us. Please Log In or create a New User.
+              <br>
+              <!-- <%= link_to 'New User', signup_path, class: 'top-right-panel' %>&nbsp -->
+              <!-- <div class="">
+              <%= link_to 'Log In', login_path, class: 'top-right-panel' %>&nbsp
+            </div> -->
+          </p>
+          <br>
+          <p>
+            If you don't want to proceed, please feel free to go elsewhere in our site.
+          </p>
         </div>
       </div>
       <% end %>
-
-    </div>
-  </div>
-
-</div>
-
-<div class="col-md-12 program-details-link">
-  <h4>LOOKING FOR PROGRAM DETAILS?</h4>
-  <div id="organization-button">
-    <a href="http://delta.ca/parks-recreation/overview" style="color:white">Delta Parks & Rec Website</a>
-  </div>
-</div>
-
-
-<!-- Fourth section div -->
-
-<div class="col-md-12 outer-blue-container">
-<div id="whats-new-board" class="container">
-
-  <div class="row">
-    <div class="col-md-12">
-      <%= image_tag("whats-new-top.svg", class:"img-responsive center-block whats-new") %>
-    </div>
-  </div>
-  <div class="conatiner" style="background-color:white; height:102%; width:96%;margin:auto">
-  <div class="row">
-    <div class="col-md-12">
-      <h1 id="whats-new">What's New</h1>
-
-      <button type="button" name="button" class="btn btn-primary" id="view-all">VIEW ALL</button>
-
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-md-4">
-      <%= image_tag("DeltaKids1.jpg", class:"img-responsive") %>
-      <h2 class="new-events">FOOD SKILLS FOR FAMILIES!</h2>
-      <h5 class="posted-on">Posted on: 2017-01-01</h5>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      <i><%= image_tag("cursor.svg", class:"img-responsive cursor") %></i>
-      <p class="learn-more">Learn More</p>
-
-    </div>
-    <div class="col-md-4">
-      <%= image_tag("DeltaKids4.jpg", class:"img-responsive") %>
-      <h2 class="new-events">PARENT CHILD LEARNING TOGETHER IS BACK!</h2>
-      <h5 class="posted-on">Posted on: 2017-01-01</h5>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      <i><%= image_tag("cursor.svg", class:"img-responsive cursor") %></i>
-      <p class="learn-more">Learn More</p>
-
-    </div>
-    <div class="col-md-4">
-      <%= image_tag("DeltaKids2.jpg", class:"img-responsive") %>
-      <h2 class="new-events">NEW CHILD DEVELOPMENT RESOURCES</h2>
-      <h5 class="posted-on">Posted on: 2017-01-01</h5>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      <i><%= image_tag("cursor.svg", class:"img-responsive cursor") %></i>
-      <p class="learn-more">Learn More</p>
     </div>
   </div>
 </div>
-
-  <div class="row">
-    <div class="col-md-12">
-      <%= image_tag("whats-new-bottom.svg", class:"img-responsive center-block whats-new") %>
-    </div>
-  </div>
-
-  </div>
 </div>
-
 
 <!-- Rainbow Footer-->
 
-  <%= render 'partials/footer' %>
+<%= render 'partials/footer' %>
