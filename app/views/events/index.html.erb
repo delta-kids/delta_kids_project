@@ -22,10 +22,10 @@
 
         <div class="form-group">
           <label for='start_date' class="">Start Date</label>
-          <input type="text" class='datepicker form date-time-width form-padding' placeholder="MM/DD/YYYY" >
+          <input type="text" class='datepicker form date-time-width form-padding' placeholder="YYYY/MM/DD" >
           <br>
           <label for='end_date' class="">End Date &nbsp</label>
-          <input type="text" class='datepicker form form-padding date-time-width' placeholder="MM/DD/YYYY">
+          <input type="text" class='datepicker form form-padding date-time-width' placeholder="YYYY/MM/DD">
 
           <script type="text/javascript">
           $(document).ready(function(){
@@ -39,7 +39,7 @@
       <div class="filterCard">
         <div class="filter-header-container">
           <p class="filterCard-header1">For</p>
-          <a data-toggle="collapse" data-target=".collapse-for"><%= image_tag "icon-chevron-up.svg", class: "filter-header-chevron a-chevron"  %></a>
+          <a data-toggle="collapse" data-toggle="chevron-anchor" data-target=".collapse-for" class="chevron-anchor"><%= image_tag "icon-chevron-up.svg", class: "filter-header-chevron a-chevron"  %></a>
 
         </div>
         <div class="collapse-for collapse in">
@@ -493,16 +493,7 @@
 </div>
 </div>
 
+
+</div>
 <!-- Rainbow Footer-->
-
-<div class="container-fluid happy-rainbow">
-  <div class="row">
-    <div class="col-md-12">
-
-      <%= image_tag("rainbow-footer-group.svg", class:"center-block") %>
-
-    </div>
-  </div>
-</div>
-
-</div>
+<%= render 'partials/footer' %>
