@@ -10,16 +10,17 @@
           <% if is_admin? %>
           <div class="row">
             <div class="col-md-12">
-
+              <div class="container-fluid">
                 <h1 class="bree-font">Resources</h1>
                 <br>
+
                 <% @resources.each do |resource| %>
                 <p class="font-16"><%= link_to resource.name, resource_path(resource) %></p>
 
                 <hr>
                 <% end %>
 
-
+                </div>
             </div>
           </div>
           <% end %>

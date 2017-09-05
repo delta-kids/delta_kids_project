@@ -5,12 +5,11 @@
 
         <%= render 'partials/dash_sidebar' %>
 
-        <div class="col-md-9 dash-main-content" style="background-color:white;">
+        <div class="col-md-9 dash-main-content" style="background-color:white; margin:auto">
           <% if user_signed_in? %>
 
           <div class="row">
-            <div class="col-md-1"></div>
-            <div class="col-md-10">
+            <div class="col-md-12">
                   <div class="container-fluid">
                     <br>
 
@@ -47,7 +46,6 @@
 
               </div>
             </div>
-            <div class="col-md-1 pull-right"></div>
           </div>
 
           <% else %>
