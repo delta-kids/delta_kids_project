@@ -80,6 +80,7 @@ GEM
     ffi (1.9.18)
     font-awesome-rails (4.7.0.2)
       railties (>= 3.2, < 5.2)
+    geocoder (1.4.4)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
     hirb (0.7.3)
@@ -227,6 +228,7 @@ DEPENDENCIES
   cowsay
   faker!
   font-awesome-rails
+  geocoder
   hirb
   interactive_editor
   jbuilder (~> 2.5)

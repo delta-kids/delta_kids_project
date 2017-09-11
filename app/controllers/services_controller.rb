@@ -2,19 +2,19 @@ class ServicesController < ApplicationController
 
   # ONLY ADMIN
   def index
-    @services = Service.all
+    @services = Service.order(description: :asc).page(params[:page]).per(25)
   end
 
   def show
-      @service = Service.find(params[:id])
+    @service = Service.find(params[:id])
   end
 
   def pregnancy_babies
     @services = Service.all.where(:category_id => '3')
-    @help_crisis = @services.where("service_type_id = '4'")
-    @baby_health = @services.where("service_type_id = '3'")
-    @support = @services.where("service_type_id = '8'")
-    @load_service = @services
+    @help_crisis = @services.where("service_type_id = '4'").order(description: :asc).page(params[:page]).per(8)
+    @baby_health = @services.where("service_type_id = '3'").order(description: :asc).page(params[:page]).per(8)
+    @support = @services.where("service_type_id = '8'").order(description: :asc).page(params[:page]).per(8)
+    @load_service = @services.order(description: :asc).page(params[:page]).per(8)
 
     url = request.path_info
     if url.include?('pregnancy_babies/help_crisis')
@@ -29,11 +29,11 @@ class ServicesController < ApplicationController
 
   def children
     @services = Service.all.where(:category_id => '1')
-    @help_crisis = @services.where("service_type_id = '4'")
-    @child_advocacy = @services.where("service_type_id = '1'")
-    @health_development = @services.where("service_type_id = '3'")
-    @support = @services.where("service_type_id = '5'")
-    @load_service = @services
+    @help_crisis = @services.where("service_type_id = '4'").order(description: :asc).page(params[:page]).per(8)
+    @child_advocacy = @services.where("service_type_id = '1'").order(description: :asc).page(params[:page]).per(8)
+    @health_development = @services.where("service_type_id = '3'").order(description: :asc).page(params[:page]).per(8)
+    @support = @services.where("service_type_id = '5'").order(description: :asc).page(params[:page]).per(8)
+    @load_service = @services.order(description: :asc).page(params[:page]).per(8)
 
     url = request.path_info
     if url.include?('children/help_crisis')
@@ -48,12 +48,12 @@ class ServicesController < ApplicationController
   end
 
   def families
-    @services = Service.all.where(:category_id => '2')
-    @help_crisis = @services.where("service_type_id = '4'")
-    @child_preschool = @services.where("service_type_id = '7'")
-    @assistance = @services.where("service_type_id = '6'")
-    @support = @services.where("service_type_id = '5'")
-    @load_service = @services
+    @services = Service.all.where(:category_id => '2').order(description: :asc).page(params[:page]).per(8)
+    @help_crisis = @services.where("service_type_id = '4'").order(description: :asc).page(params[:page]).per(8)
+    @child_preschool = @services.where("service_type_id = '7'").order(description: :asc).page(params[:page]).per(8)
+    @assistance = @services.where("service_type_id = '6'").order(description: :asc).page(params[:page]).per(8)
+    @support = @services.where("service_type_id = '5'").order(description: :asc).page(params[:page]).per(8)
+    @load_service = @services.order(description: :asc).page(params[:page]).per(8)
 
     url = request.path_info
     if url.include?('families/help_crisis')

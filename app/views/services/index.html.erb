@@ -17,6 +17,9 @@
                 <p class="font-16"><strong>Description: </strong><%= link_to service.description, service_path(service) %></p>
                 <hr>
                 <% end %>
+                <div class="container-fluid center-flex-content">
+                  <%= paginate @services, window: 2 %>
+                </div>
 
               </div>
             </div>

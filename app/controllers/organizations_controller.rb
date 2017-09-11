@@ -26,7 +26,7 @@ class OrganizationsController < ApplicationController
   end
 
   def index
-    @organizations = Organization.all
+    @organizations = Organization.order(name: :asc).page(params[:page]).per(25)
   end
 
 

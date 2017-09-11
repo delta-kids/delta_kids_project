@@ -1,0 +1,65 @@
+<div class="wholePage">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12 content">
+
+        <%= render 'partials/dash_sidebar' %>
+
+        <div class="col-md-9 dash-main-content" style="background-color:white;">
+          <% if user_signed_in? %>
+          <% if is_admin? %>
+          <div class="row">
+            <div class="col-md-12">
+
+              <h1>Pending Resources</h1>
+
+              <div class="table-responsive">
+
+                <table class="table table-bordered table-hover" style="text-align:center;">
+                  <thead>
+                    <tr>
+                      <th>Resouces</th>
+                      <th>Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <% @resources.each do |resource| %>
+                    <tr>
+                      <td><p class="font-16"><%= link_to resource.name, resource_path(resource) %></p></td>
+                      <td><p class="font-16"><%= resource.resource_location %></p></td>
+                      <td><button class="btn btn-default">Approve</button>
+                        <button class="btn btn-default">Decline</button></td>
+                      </tr>
+                      <% end %>
+                    </tbody>
+                  </table>
+
+                  <h1>Approved Resources</h1>
+
+                  <table class="table table-bordered table-hover" style="text-align:center;">
+                    <thead>
+                      <tr>
+                        <th>Resource</th>
+                        <th>Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                  </table>
+
+                </div>
+              </div>
+            </div>
+            <% end %>
+            <% else %>
+            <%= render 'partials/login_msg' %>
+          </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Rainbow Footer-->
+
+  <%= render 'partials/footer' %>

@@ -2,18 +2,18 @@ class ProgramsController < ApplicationController
 
   # ONLY ADMIN
   def index
-    @programs = Program.all
+    @programs = Program.order(description: :asc).page(params[:page]).per(25)
   end
 
   def index0_5
     @age_group = "0-5"
     @programs = Program.all.joins(:age_groups).where(:age_groups => {:id => '1'})
-    @artsandculture0_5 = @programs.where("program_type_id = '1'")
-    @sports0_5 = @programs.where("program_type_id = '4'")
-    @education0_5 = @programs.where("program_type_id = '6'")
-    @parentandchild0_5 = @programs.where("program_type_id = '2'")
-    @childandpreschool0_5 = @programs.where("program_type_id = '3'")
-    @load_program = @programs
+    @artsandculture0_5 = @programs.where("program_type_id = '1'").order(description: :asc).page(params[:page]).per(8)
+    @sports0_5 = @programs.where("program_type_id = '4'").order(description: :asc).page(params[:page]).per(8)
+    @education0_5 = @programs.where("program_type_id = '6'").order(description: :asc).page(params[:page]).per(8)
+    @parentandchild0_5 = @programs.where("program_type_id = '2'").order(description: :asc).page(params[:page]).per(8)
+    @childandpreschool0_5 = @programs.where("program_type_id = '3'").order(description: :asc).page(params[:page]).per(8)
+    @load_program = @programs.order(description: :asc).page(params[:page]).per(8)
 
     url = request.path_info
     if url.include?('0_5/arts_culture')
@@ -32,12 +32,12 @@ class ProgramsController < ApplicationController
   def index6_12
     @age_group = "6-12"
     @programs = Program.all.joins(:age_groups).where(:age_groups => {:id => '2'})
-    @artsandculture6_12 = @programs.where("program_type_id = '1'")
-    @sports6_12 = @programs.where("program_type_id = '4'")
-    @education6_12 = @programs.where("program_type_id = '6'")
-    @parentandchild6_12 = @programs.where("program_type_id = '2'")
-    @childandpreschool6_12 = @programs.where("program_type_id = '3'")
-    @load_program = @programs
+    @artsandculture6_12 = @programs.where("program_type_id = '1'").order(description: :asc).page(params[:page]).per(8)
+    @sports6_12 = @programs.where("program_type_id = '4'").order(description: :asc).page(params[:page]).per(8)
+    @education6_12 = @programs.where("program_type_id = '6'").order(description: :asc).page(params[:page]).per(8)
+    @parentandchild6_12 = @programs.where("program_type_id = '2'").order(description: :asc).page(params[:page]).per(8)
+    @childandpreschool6_12 = @programs.where("program_type_id = '3'").order(description: :asc).page(params[:page]).per(8)
+    @load_program = @programs.order(description: :asc).page(params[:page]).per(8)
 
     url = request.path_info
     if url.include?('6_12/arts_culture')

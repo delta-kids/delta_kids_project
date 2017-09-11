@@ -39,7 +39,7 @@ gem 'jquery-ui-rails'
 gem 'bootstrap-timepicker-rails'
 gem 'chosen-rails'
 gem "simple_calendar", "~> 2.0"
-
+gem 'geocoder'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

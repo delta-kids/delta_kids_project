@@ -243,14 +243,14 @@
  	border-radius: 10px;
  	height: 50px;
  	width: 150px;
- 	font-family: OpenSans-Semibold;
+ 	font-family: 'OpenSans', serif;
  	font-size: 16px;
- 	color: #FFFFFF;
- 	letter-spacing: 0;
- 	line-height: 50px;
- 	margin: auto;
- 	text-align: center;
- 	margin-top: 30px;
+	color: #FFFFFF;
+	letter-spacing: 0;
+	line-height: 50px;
+	display: block;
+	margin: 0 auto;
+	text-align: center;
 }
 #button-add-resource{
   	background: #00A3DA;

@@ -9,7 +9,7 @@ class EventsController < ApplicationController
   end
 
   def index2
-    @events = Event.all
+    @events = Event.where(:approved => true).order(title: :asc).page(params[:page]).per(25)
     @events_by_start_date = @events.group_by(&:start_date)
   end
 
@@ -36,6 +36,16 @@ class EventsController < ApplicationController
   def update
     @event.update(event_params)
     redirect_to @event, notice: "Successfully Updated"
+  end
+
+  def pending_and_approved_events
+    @events = Event.where(:approved => false || nil).order(title: :asc).page(params[:page]).per(25)
+  end
+
+  def approve_event
+    @event = Event.find(params[:id])
+    @event.update_attributes(approved: true)
+    redirect_to @event, notice: "Event Approved"
   end
 
   def destroy
