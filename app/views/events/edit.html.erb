@@ -178,17 +178,7 @@
 
         <% end %>
         <% else %>
-        <!-- NOT A USER MESSAGE -->
-        <div>
-          <p>
-            Dashboard section is meant to publish a Resource and/or Event. In order to proceed you must have an account with us. Please Log In or create a New User.
-            <br>
-        </p>
-        <br>
-        <p>
-          If you don't want to proceed, please feel free to go elsewhere in our site.
-        </p>
-      </div>
+        <%= render 'partials/login_msg' %>
     </div>
     <% end %>
   </div>

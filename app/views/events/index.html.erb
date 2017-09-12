@@ -140,6 +140,9 @@
       <div class="center-flex-content">
         <%= submit_tag 'Filter', class:"btn-primary btn-lg filter-btn" %>
       </div>
+      <div class="center-flex-content">
+        <%= button_to "Create New Event", new_event_path, :method => "get", class:"btn-primary btn-lg filter-btn" %>
+      </div>
     </div>
 
     <div class="col-md-8 calendar-subsection2">
@@ -487,7 +490,8 @@
           </a>
         </div>
       </div>
-      <div id='button-seemore'>SEE MORE</div>
+      <%= button_to "SEE MORE", new_event_path, :method => "get", id:'button-seemore'%>
+
     </div>
   </div>
 </div>
@@ -496,4 +500,4 @@
 
 </div>
 <!-- Rainbow Footer-->
-<%= render 'partials/footer' %>
+<%= render 'partials/footer' %>w

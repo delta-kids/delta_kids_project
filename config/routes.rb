@@ -36,10 +36,10 @@ Rails.application.routes.draw do
   get '/programs/6_12/community', to: 'programs#index6_12'
   get '/programs/6_12/childcare', to: 'programs#index6_12'
 
-  get '/services/pregnancy_babies', to: 'services#pregnancy_babies'
-  get '/services/pregnancy_babies/help_crisis', to: 'services#pregnancy_babies'
-  get '/services/pregnancy_babies/health', to: 'services#pregnancy_babies'
-  get '/services/pregnancy_babies/support', to: 'services#pregnancy_babies'
+  get '/services/pregnancy_babies/:type', to: 'services#pregnancy_babies'
+  # get '/services/pregnancy_babies/help_crisis', to: 'services#pregnancy_babies'
+  # get '/services/pregnancy_babies/health', to: 'services#pregnancy_babies'
+  # get '/services/pregnancy_babies/support', to: 'services#pregnancy_babies'
 
   get '/services/families', to: 'services#families'
   get '/services/families/help_crisis', to: 'services#families'
@@ -64,8 +64,8 @@ Rails.application.routes.draw do
   get '/live', to: 'home#live', as: 'live'
 
   get '/dashboard', to: 'home#dashboard', as: 'dashboard'
-  get '/dashboard/pending_and_approved_events', to: 'home#pending_and_approved_events'
-  get '/dashboard/pending_and_approved_resources', to: 'home#pending_and_approved_resources'
+  get '/dashboard/pending_and_approved_events', to: 'events#pending_and_approved_events'
+  get '/dashboard/pending_and_approved_resources', to: 'resources#pending_and_approved_resources'
   get '/dashboard/manage_programs', to: 'programs#index'
   get '/dashboard/manage_services', to: 'services#index'
   get '/dashboard/manage_organizations', to: 'organizations#index'

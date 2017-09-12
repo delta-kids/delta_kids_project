@@ -35,6 +35,9 @@
                   <%= f.submit class: 'btn btn-primary form-control' %>
                 </div>
                 <% end %>
+                <% else %>
+                <%= render 'partials/login_msg' %>
+              </div>
                 <% end %>
 
               </div>

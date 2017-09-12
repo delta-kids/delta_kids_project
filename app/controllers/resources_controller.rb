@@ -28,7 +28,7 @@ class ResourcesController < ApplicationController
     end
 
     def index2
-      @resources = Resource.all
+      @resources = Resource.where(:approved => true).order(name: :asc).page(params[:page]).per(25)
     end
 
     def edit
@@ -38,6 +38,16 @@ class ResourcesController < ApplicationController
     def update
       @resource.update(resource_params)
       redirect_to @resource, notice: "Successfully Updated"
+    end
+
+    def pending_and_approved_resources
+      @resources = Resource.where(:approved => false || nil).order(name: :asc).page(params[:page]).per(25)
+    end
+
+    def approve_resource
+      @resource = Resource.find(params[:id])
+      @resource.update_attributes(approved: true)
+      redirect_to @resource, notice: "Resource Approved"
     end
 
     def destroy

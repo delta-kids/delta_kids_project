@@ -10,7 +10,7 @@
           <% if is_admin? %>
           <div class="row">
             <div class="col-md-12">
-              
+
               <h1 class="queue-header">Pending Events</h1>
 
               <div class="table-responsive">
@@ -23,40 +23,24 @@
                       <th>Actions</th>
                     </tr>
                   </thead>
+
                   <tbody>
+                    <% @events.each do |event| %>
                     <tr>
-                      <td>Drop in Soccer</td>
-                      <td>Delta</td>
-                      <td><button class="btn btn-default">Approve</button>
+                      <td><p class="font-16"><%= link_to event.title, event_path(event) %></p></td>
+                      <td><p class="font-16"><%= event.event_location %></p></td>
+                      <td>
+                        <%= link_to 'Approve', event_path(event),
+                                              method: :delete,
+                                              class: 'btn btn-default edit-delete-btn-width', style:'color:white !important;' %>
+                                          
                         <button class="btn btn-default">Decline</button></td>
                       </tr>
-                      <tr>
-                        <td>Drop in Soccer</td>
-                        <td>Delta</td>
-                        <td><button class="btn btn-default">Approve</button>
-                          <button class="btn btn-default">Decline</button></td>
-                        </tr>
-                        <tr>
-                          <td>Drop in Soccer</td>
-                          <td>Delta</td>
-                          <td><button class="btn btn-default">Approve</button>
-                            <button class="btn btn-default">Decline</button></td>
-                          </tr>
-                          <tr>
-                            <td>Drop in Soccer</td>
-                            <td>Delta</td>
-                            <td><button class="btn btn-default">Approve</button>
-                              <button class="btn btn-default">Decline</button></td>
-                            </tr>
-                            <tr>
-                              <td>Drop in Soccer</td>
-                              <td>Delta</td>
-                              <td><button class="btn btn-default">Approve</button>
-                                <button class="btn btn-default">Decline</button></td>
-                              </tr>
+                      <% end %>
                             </tbody>
+                            <%= paginate @events, window: 2 %>
                           </table>
-
+                          <br><br>
                           <h1 class="queue-header">Approved Events</h1>
 
                           <table class="table table-bordered table-hover" style="text-align:center;">
@@ -68,7 +52,7 @@
                               </tr>
                             </thead>
                             <tbody>
-                              <tr>
+                              <!-- <tr>
                                 <td>Drop in Soccer</td>
                                 <td>Delta</td>
                                 <td><button class="btn btn-default">Delete</button>
@@ -92,7 +76,7 @@
                                         <td>Drop in Soccer</td>
                                         <td>Delta</td>
                                         <td><button class="btn btn-default">Delete</button>
-                                        </tr>
+                                        </tr> -->
                                       </tbody>
                                     </table>
 
@@ -101,19 +85,7 @@
                               </div>
                               <% end %>
                               <% else %>
-                              <div>
-                                <p>
-                                  Dashboard section is meant to publish a Resource and/or Event. In order to proceed you must have an account with us. Please Log In or create a New User.
-                                  <br>
-                                  <!-- <%= link_to 'New User', signup_path, class: 'top-right-panel' %>&nbsp -->
-                                  <!-- <div class="">
-                                  <%= link_to 'Log In', login_path, class: 'top-right-panel' %>&nbsp
-                                </div> -->
-                              </p>
-                              <br>
-                              <p>
-                                If you don't want to proceed, please feel free to go elsewhere in our site.
-                              </p>
+                              <%= render 'partials/login_msg' %>
                             </div>
                           </div>
                           <% end %>

@@ -4,27 +4,67 @@
     <h2 class="dashboard-headers2">Dashboard</h2>
     <% if user_signed_in? %>
       <% if is_admin? %>
-    <h4 style="color:#00a3da;">Admin</h4>
+      <p class="font-16" style="color:#00A3DA">Welcome to the Admin Dashboard,
+        <br>what would you like to do today?</p>
+        <br>
+
+        <div class="filterCard">
+          <div class="filter-header-container">
+            <p class="filterCard-header1">Pending</p>
+            <a data-toggle="collapse" data-toggle="chevron-anchor" data-target=".collapse-pending" class="chevron-anchor"><%= image_tag "icon-chevron-up.svg", class: "filter-header-chevron a-chevron"  %></a>
+
+          </div>
+          <div class="collapse-pending collapse in">
+            <br>
     <li>
-      <a href="<%= dashboard_manage_events_path %>" class="dashboard-text">Manage Events</a>
+      <a href="<%= dashboard_pending_and_approved_events_path %>" class="dashboard-text">Pending Events</a>
     </li>
     <hr>
     <li>
-      <a href="<%= dashboard_manage_resources_path %>" class="dashboard-text">Manage Resources</a>
+      <a href="<%= dashboard_pending_and_approved_resources_path %>" class="dashboard-text">Pending Resources</a>
+    </li>
+    </div>
+  </div>
+  <hr>
+        <div class="filterCard">
+          <div class="filter-header-container">
+            <p class="filterCard-header1">Manage</p>
+            <a data-toggle="collapse" data-toggle="chevron-anchor" data-target=".collapse-manage" class="chevron-anchor"><%= image_tag "icon-chevron-up.svg", class: "filter-header-chevron a-chevron"  %></a>
+
+          </div>
+          <div class="collapse-manage collapse in">
+            <br>
+    <li>
+      <a href="<%= dashboard_manage_events_path %>" class="dashboard-text">View Events</a>
     </li>
     <hr>
     <li>
-      <a href="<%= dashboard_manage_programs_path %>" class="dashboard-text">Manage Programs</a>
+      <a href="<%= dashboard_manage_resources_path %>" class="dashboard-text">View Resources</a>
     </li>
     <hr>
     <li>
-      <a href="<%= dashboard_manage_services_path %>" class="dashboard-text">Manage Services</a>
+      <a href="<%= dashboard_manage_programs_path %>" class="dashboard-text">View Programs</a>
     </li>
     <hr>
     <li>
-      <a href="<%= dashboard_manage_organizations_path %>" class="dashboard-text">Manage Organizations</a>
+      <a href="<%= dashboard_manage_services_path %>" class="dashboard-text">View Services</a>
     </li>
     <hr>
+    <li>
+      <a href="<%= dashboard_manage_organizations_path %>" class="dashboard-text">View Organizations</a>
+    </li>
+    </div>
+    <hr>
+  </div>
+
+  <div class="filterCard">
+    <div class="filter-header-container">
+      <p class="filterCard-header1">Add</p>
+      <a data-toggle="collapse" data-toggle="chevron-anchor" data-target=".collapse-add" class="chevron-anchor"><%= image_tag "icon-chevron-up.svg", class: "filter-header-chevron a-chevron"  %></a>
+
+    </div>
+    <div class="collapse-add collapse in">
+      <br>
     <li>
       <a href="<%= new_event_path %>" class="dashboard-text">Add an Event</a>
     </li>
@@ -48,7 +88,10 @@
     <li>
       <a href="<%= new_program_type_path %>" class="dashboard-text">Add New Activity Type</a>
     </li>
-    <hr>
+  </div>
+  <hr>
+</div>
+
     <li><%= link_to 'Sign Out', signout_path, method: :delete, class:"dashboard-text" %></li>
     <hr>
     <% else %>
@@ -68,7 +111,8 @@
       <hr>
     <% end %>
     <% else %>
-    <p><a style="color:#00A3DA" href="<%= contact_path %>">Who to contact <br> for more information about...</a></p>
+    <p class="font-16" style="color:#00A3DA">Welcome to the Dashboard,
+      <br>what would you like to do today?</p>
     <li>
       <a href="<%= signup_path %>" class="dashboard-text">New User</a>
     </li>

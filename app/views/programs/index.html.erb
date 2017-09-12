@@ -17,26 +17,14 @@
                 <p class="font-16"><strong>Description: </strong><%= link_to program.description, program_path(program) %></p>
                 <hr>
                 <% end %>
-
-
+                <div class="container-fluid center-flex-content">
+                  <%= paginate @programs, window: 2 %>
+                </div>
             </div>
           </div>
           <% end %>
           <% else %>
-          <div>
-            <p>
-              Dashboard section is meant to publish a Resource and/or Event. In order to proceed you must have an account with us. Please Log In or create a New User.
-              <br>
-              <!-- <%= link_to 'New User', signup_path, class: 'top-right-panel' %>&nbsp -->
-              <!-- <div class="">
-              <%= link_to 'Log In', login_path, class: 'top-right-panel' %>&nbsp
-            </div> -->
-          </p>
-          <br>
-          <p>
-            If you don't want to proceed, please feel free to go elsewhere in our site.
-          </p>
-        </div>
+          <%= render 'partials/login_msg' %>
       </div>
       <% end %>
     </div>
