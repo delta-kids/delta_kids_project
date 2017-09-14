@@ -42,12 +42,6 @@ class EventsController < ApplicationController
     @events = Event.where(:approved => false || nil).order(title: :asc).page(params[:page]).per(25)
   end
 
-  def approve_event
-    @event = Event.find(params[:id])
-    @event.update_attributes(approved: true)
-    redirect_to @event, notice: "Event Approved"
-  end
-
   def destroy
     if is_admin?
       @event.destroy

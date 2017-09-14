@@ -17,7 +17,6 @@ Rails.application.routes.draw do
   end
   # get '/program_types/new', to: 'program_types#new', as: ''
 
-
   get '/', to: 'home#index', as: 'home'
   get '/about', to: 'home#about', as: 'about'
   get '/contact', to: 'home#contact', as: 'contact'
