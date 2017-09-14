@@ -44,12 +44,6 @@ class ResourcesController < ApplicationController
       @resources = Resource.where(:approved => false || nil).order(name: :asc).page(params[:page]).per(25)
     end
 
-    def approve_resource
-      @resource = Resource.find(params[:id])
-      @resource.update_attributes(approved: true)
-      redirect_to @resource, notice: "Resource Approved"
-    end
-
     def destroy
       if is_admin?
         @resource.destroy

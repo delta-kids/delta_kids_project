@@ -30,11 +30,12 @@
                       <td><p class="font-16"><%= link_to event.title, event_path(event) %></p></td>
                       <td><p class="font-16"><%= event.event_location %></p></td>
                       <td>
-                        <%= link_to 'Approve', event_path(event),
-                                              method: :delete,
-                                              class: 'btn btn-default edit-delete-btn-width', style:'color:white !important;' %>
-                                          
-                        <button class="btn btn-default">Decline</button></td>
+                          <%= form_for event do |f| %>
+                            <%= f.hidden_field :approved, value: true %>
+                            <%= f.submit 'Approve', class: 'btn btn-default edit-delete-btn-width' %>
+                            <%= f.submit 'Decline', class: 'btn btn-default edit-delete-btn-width' %>
+                        <% end %>
+                      </td>
                       </tr>
                       <% end %>
                             </tbody>
