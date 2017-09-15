@@ -21,19 +21,19 @@ Rails.application.routes.draw do
   get '/about', to: 'home#about', as: 'about'
   get '/contact', to: 'home#contact', as: 'contact'
 
-  get '/programs/0_5', to: 'programs#index0_5'
-  get '/programs/0_5/arts_culture', to: 'programs#index0_5'
-  get '/programs/0_5/sports', to: 'programs#index0_5'
-  get '/programs/0_5/education', to: 'programs#index0_5'
-  get '/programs/0_5/parent_child', to: 'programs#index0_5'
-  get '/programs/0_5/childcare', to: 'programs#index0_5'
+  get '/programs/0_5/', to: 'programs#index0_5'
+  get '/programs/0_5/:type', to: 'programs#index0_5'
+  # get '/programs/0_5/sports', to: 'programs#index0_5'
+  # get '/programs/0_5/education', to: 'programs#index0_5'
+  # get '/programs/0_5/parent_child', to: 'programs#index0_5'
+  # get '/programs/0_5/childcare', to: 'programs#index0_5'
 
   get '/programs/6_12', to: 'programs#index6_12'
-  get '/programs/6_12/arts_culture', to: 'programs#index6_12'
-  get '/programs/6_12/sports', to: 'programs#index6_12'
-  get '/programs/6_12/education', to: 'programs#index6_12'
-  get '/programs/6_12/community', to: 'programs#index6_12'
-  get '/programs/6_12/childcare', to: 'programs#index6_12'
+  get '/programs/6_12/:type', to: 'programs#index6_12'
+  # get '/programs/6_12/sports', to: 'programs#index6_12'
+  # get '/programs/6_12/education', to: 'programs#index6_12'
+  # get '/programs/6_12/community', to: 'programs#index6_12'
+  # get '/programs/6_12/childcare', to: 'programs#index6_12'
 
   get '/services/pregnancy_babies/:type', to: 'services#pregnancy_babies'
   # get '/services/pregnancy_babies/help_crisis', to: 'services#pregnancy_babies'
@@ -52,7 +52,9 @@ Rails.application.routes.draw do
   get '/services/children/health', to: 'services#children'
   get '/services/children/support', to: 'services#children'
 
-  get '/learn_more', to: 'programs#learn_more', as: 'learn_more'
+  get '/programs/learn_more/:id', to: 'programs#learn_more', as: 'program_learn_more'
+  get '/services/learn_more/:id', to: 'services#learn_more', as: 'service_learn_more'
+  get '/events/learn_more/:id', to: 'events#learn_more', as: 'event_learn_more'
 
   get '/services/pregnancy_babies', to: 'services#pregnancy_babies'
 
@@ -60,7 +62,7 @@ Rails.application.routes.draw do
 
   get '/services/children', to: 'services#children'
 
-  get '/live', to: 'home#live', as: 'live'
+  get '/live', to: 'home#live', as: 'live5210'
 
   get '/dashboard', to: 'home#dashboard', as: 'dashboard'
   get '/dashboard/pending_and_approved_events', to: 'events#pending_and_approved_events'

@@ -13,8 +13,8 @@
 
         <!-- text body below image -->
         <div class="container-fluid" style="padding-left:30px">
-          <p class="bree-font"><%= @program.organization.name %></p>
-          <p class="font-16"><%= @program.description %></p>
+          <p class="bree-font"><%= @service.organization.name %></p>
+          <p class="font-16"><%= @service.description %></p>
         </div>
 
         <!-- contact information -->
@@ -22,11 +22,11 @@
           <hr>
           <div class="row">
             <div class="col-md-6">
-              <p class="font-16"><strong>Address:</strong> <%= @program.organization.address %></p>
+              <p class="font-16"><strong>Address:</strong> <%= @service.organization.address %></p>
             </div>
             <div class="col-md-6">
-              <p class="font-16"><strong>Phone:</strong> <%= @program.organization.phone %></p>
-              <p class="font-16"><strong>Website:</strong> <a href="<%= @program.organization.website %>"><%= @program.organization.website %></a></p>
+              <p class="font-16"><strong>Phone:</strong> <%= @service.organization.phone %></p>
+              <p class="font-16"><strong>Website:</strong> <a href="<%= @service.organization.website %>"><%= @service.organization.website %></a></p>
               <p class="font-16"><strong>Email:</strong> Currently No Emails In Database</p>
             </div>
           </div>
@@ -51,9 +51,10 @@
     <!--  right column -->
     <div class="col-md-3">
       <div>
-        <h2 class="remove-h-margin">Similar Programs</h2>
+        <h2 class="remove-h-margin">Similar Services</h2>
+        <br>
       </div>
-      <br>
+
       <div class="similar-events-box">
         <%= image_tag "DeltaKids2.jpg", class: "similar-events-image" %>
         <div class="info-tag">

@@ -13,20 +13,53 @@
 
         <!-- text body below image -->
         <div class="container-fluid" style="padding-left:30px">
-          <p class="bree-font"><%= @program.organization.name %></p>
-          <p class="font-16"><%= @program.description %></p>
+          <p class="bree-font"><%= @event.organization_id %></p>
+          <p class="font-16"><%= @event.description %></p>
         </div>
+        <div class="container-fluid">
+        <div class="event-info">
+          <div>
+            <%= image_tag "icon-calendar.svg", class: "event-info-icon" %>
+            <p class="event-info-txt-bold">Date:</p>
+            <p class="event-info-txt"><%= @event.start_date %></p>
+            <p class="event-info-txt"> - <%= @event.end_date %></p>
+          </div>
+          <div class="event-info1">
+            <%= image_tag "icon-clock.svg", class: "event-info-icon" %>
+            <% if @event.start_time %>
+            <p class="event-info-txt"><%= @event.start_time.strftime("%I:%M %p") %></p>
+            <% end %>
+            <% if @event.end_time %>
+            <p class="event-info-txt"> - <%= @event.end_time.strftime("%I:%M %p") %></p>
+            <% end %>
+          </div>
+          <div class="event-info1">
+            <%= image_tag "icon-baby.svg", class: "event-info-icon" %>
+            <% @event.age_groups.each do |age| %>
+            <p class="event-info-txt"><%= age.age %></p>
+            <% end %>
+          </div>
+          <div class="event-info1">
+            <%= image_tag "icon-tag.svg", class: "event-info-icon" %>
+            <p class="event-info-txt"><%= @event.cost %></p>
+          </div>
+          <div class="event-info1">
+            <%= image_tag "icon-location-pin.svg", class: "event-info-icon" %>
+            <p class="event-info-txt"><%= @event.event_location %></p>
+          </div>
+        </div>
+      </div>
 
         <!-- contact information -->
         <div class="container-fluid">
           <hr>
           <div class="row">
             <div class="col-md-6">
-              <p class="font-16"><strong>Address:</strong> <%= @program.organization.address %></p>
+              <p class="font-16"><strong>Address:</strong> <%= @event.organization_id %></p>
             </div>
             <div class="col-md-6">
-              <p class="font-16"><strong>Phone:</strong> <%= @program.organization.phone %></p>
-              <p class="font-16"><strong>Website:</strong> <a href="<%= @program.organization.website %>"><%= @program.organization.website %></a></p>
+              <p class="font-16"><strong>Phone:</strong> <%= @event.organization_id %></p>
+              <p class="font-16"><strong>Website:</strong> <a href="<%= @event.organization_id %>"><%= @event.organization_id %></a></p>
               <p class="font-16"><strong>Email:</strong> Currently No Emails In Database</p>
             </div>
           </div>
@@ -51,7 +84,7 @@
     <!--  right column -->
     <div class="col-md-3">
       <div>
-        <h2 class="remove-h-margin">Similar Programs</h2>
+        <h2 class="remove-h-margin">Similar Events</h2>
       </div>
       <br>
       <div class="similar-events-box">
