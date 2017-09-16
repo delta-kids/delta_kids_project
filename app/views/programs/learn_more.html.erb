@@ -26,7 +26,8 @@
             </div>
             <div class="col-md-6">
               <p class="font-16"><strong>Phone:</strong> <%= @program.organization.phone %></p>
-              <p class="font-16"><strong>Website:</strong> <a href="<%= @program.organization.website %>"><%= @program.organization.website %></a></p>
+              <p class="font-16"><strong>Website:</strong>
+              <%= link_to @program.organization.website, @program.organization.website, :target => "_blank", style:'word-wrap: break-word;' %></p>
               <p class="font-16"><strong>Email:</strong> Currently No Emails In Database</p>
             </div>
           </div>
