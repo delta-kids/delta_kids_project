@@ -1,0 +1,140 @@
+<div class="wholePage">
+<div class="container-fluid light-blue-bg-color">
+  <div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-7">
+      <!--  left column -->
+      <div class="container-fluid " id="feature-box">
+        <!-- set the image to be displayed -->
+        <%= image_tag "DeltaKids1.jpg", class: "learn-more-image" %>
+
+        <p class="font-16"></p>
+        <hr>
+
+        <!-- text body below image -->
+        <div class="container-fluid" style="padding-left:30px">
+          <p class="bree-font"><%= @event.organization_id %></p>
+          <p class="font-16"><%= @event.description %></p>
+        </div>
+        <div class="container-fluid">
+        <div class="event-info">
+          <div>
+            <%= image_tag "icon-calendar.svg", class: "event-info-icon" %>
+            <p class="event-info-txt-bold">Date:</p>
+            <p class="event-info-txt"><%= @event.start_date %></p>
+            <p class="event-info-txt"> - <%= @event.end_date %></p>
+          </div>
+          <div class="event-info1">
+            <%= image_tag "icon-clock.svg", class: "event-info-icon" %>
+            <% if @event.start_time %>
+            <p class="event-info-txt"><%= @event.start_time.strftime("%I:%M %p") %></p>
+            <% end %>
+            <% if @event.end_time %>
+            <p class="event-info-txt"> - <%= @event.end_time.strftime("%I:%M %p") %></p>
+            <% end %>
+          </div>
+          <div class="event-info1">
+            <%= image_tag "icon-baby.svg", class: "event-info-icon" %>
+            <% @event.age_groups.each do |age| %>
+            <p class="event-info-txt"><%= age.age %></p>
+            <% end %>
+          </div>
+          <div class="event-info1">
+            <%= image_tag "icon-tag.svg", class: "event-info-icon" %>
+            <p class="event-info-txt"><%= @event.cost %></p>
+          </div>
+          <div class="event-info1">
+            <%= image_tag "icon-location-pin.svg", class: "event-info-icon" %>
+            <p class="event-info-txt"><%= @event.event_location %></p>
+          </div>
+        </div>
+      </div>
+
+        <!-- contact information -->
+        <div class="container-fluid">
+          <hr>
+          <div class="row">
+            <div class="col-md-6">
+              <p class="font-16"><strong>Address:</strong> <%= @event.address %></p>
+            </div>
+            <div class="col-md-6">
+              <p class="font-16" style="">
+                <i class="fa fa-globe" aria-hidden="true">
+                </i>&nbsp&nbsp&nbsp
+                <%= link_to @event.more_info,
+                @event.more_info,
+                 :target => "_blank", class:"wb-all"%>
+              </p>
+              <span class='flex'>
+                <i class="fa fa-envelope align-self" aria-hidden="true"></i>
+                &nbsp&nbsp&nbsp
+                <p class="font-16"><%= link_to @event.contact_email,
+                @event.contact_email,
+                 :target => "_blank", class:"wb-all"%></p>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Share Links -->
+        <div class="container-fluid share-section">
+          <hr>
+          <h2>Share</h2>
+          <br>
+          <!-- share buttons -->
+          <a href="#" target="_blank"><img src="https://cache.addthiscdn.com/icons/v3/thumbs/32x32/email.png" border="0" alt="Email"/></a>
+          <a href="#" target="_blank"><img src="https://cache.addthiscdn.com/icons/v3/thumbs/32x32/facebook.png" border="0" alt="Facebook"/></a>
+          <a href="#" target="_blank"><img src="https://cache.addthiscdn.com/icons/v3/thumbs/32x32/google_plusone_share.png" border="0" alt="Google+"/></a>
+          <a href="#" target="_blank"><img src="https://cache.addthiscdn.com/icons/v3/thumbs/32x32/twitter.png" border="0" alt="Twitter"/></a>
+          <!-- share buttons -->
+        </div>
+      </div>
+    </div> <!-- col -->
+    <!-- left column -->
+
+    <!--  right column -->
+    <div class="col-md-3">
+      <div>
+        <h2 class="remove-h-margin">Similar Events</h2>
+      </div>
+      <br>
+      <div class="similar-events-box">
+        <%= image_tag "DeltaKids2.jpg", class: "similar-events-image" %>
+        <div class="info-tag">
+          <p>DeltaKids is a coalition of community partners. We work together to build Delta's capacity as a child-friendly community where all children thrive.</p>
+          <br>
+          <a href="#" class="learn-more-link">Learn More</a>
+        </div>
+      </div>
+
+      <div class="similar-events-box">
+        <%= image_tag "DeltaKids2.jpg", class: "similar-events-image" %>
+        <div class="info-tag">
+          <p>DeltaKids is a coalition of community partners. We work together to build Delta's capacity as a child-friendly community where all children thrive.</p>
+          <br>
+          <a href="#" class="learn-more-link">Learn More</a>
+        </div>
+      </div>
+
+      <div class="similar-events-box">
+        <%= image_tag "DeltaKids2.jpg", class: "similar-events-image" %>
+        <div class="info-tag">
+          <p>DeltaKids is a coalition of community partners. We work together to build Delta's capacity as a child-friendly community where all children thrive.</p>
+          <br>
+          <a href="#" class="learn-more-link">Learn More</a>
+        </div>
+      </div>
+
+      <div class="see-more-button">
+        <input type="submit" class="btn btn-primary" value="SEE MORE"></input>
+      </div>
+    </div> <!-- col -->
+    <div class="col-md-1"></div>
+  </div> <!-- row -->
+  <!--  right column -->
+</div>
+</div>
+
+<!-- Rainbow Footer-->
+
+<%= render 'partials/footer' %>

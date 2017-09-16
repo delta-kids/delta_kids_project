@@ -1,0 +1,98 @@
+<div class="wholePage">
+<div class="container-fluid light-blue-bg-color">
+  <div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-7">
+      <!--  left column -->
+      <div class="container-fluid " id="feature-box">
+        <!-- set the image to be displayed -->
+        <%= image_tag "DeltaKids1.jpg", class: "learn-more-image" %>
+
+        <p class="font-16"></p>
+        <hr>
+
+        <!-- text body below image -->
+        <div class="container-fluid" style="padding-left:30px">
+          <p class="bree-font"><%= @service.organization.name %></p>
+          <p class="font-16"><%= @service.description %></p>
+        </div>
+
+        <!-- contact information -->
+        <div class="container-fluid">
+          <hr>
+          <div class="row">
+            <div class="col-md-6">
+              <p class="font-16"><strong>Address:</strong> <%= @service.organization.address %></p>
+            </div>
+            <div class="col-md-6">
+              <p class="font-16"><strong>Phone:</strong> <%= @service.organization.phone %></p>
+              <p class="font-16"><strong>Website:</strong>
+              <%= link_to @service.organization.website, @service.organization.website, :target => "_blank", style:'word-wrap: break-word;' %></p>
+              <p class="font-16"><strong>Email:</strong> Currently No Emails In Database</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Share Links -->
+        <div class="container-fluid share-section">
+          <hr>
+          <h2>Share</h2>
+          <br>
+          <!-- share buttons -->
+          <a href="#" target="_blank"><img src="https://cache.addthiscdn.com/icons/v3/thumbs/32x32/email.png" border="0" alt="Email"/></a>
+          <a href="#" target="_blank"><img src="https://cache.addthiscdn.com/icons/v3/thumbs/32x32/facebook.png" border="0" alt="Facebook"/></a>
+          <a href="#" target="_blank"><img src="https://cache.addthiscdn.com/icons/v3/thumbs/32x32/google_plusone_share.png" border="0" alt="Google+"/></a>
+          <a href="#" target="_blank"><img src="https://cache.addthiscdn.com/icons/v3/thumbs/32x32/twitter.png" border="0" alt="Twitter"/></a>
+          <!-- share buttons -->
+        </div>
+      </div>
+    </div> <!-- col -->
+    <!-- left column -->
+
+    <!--  right column -->
+    <div class="col-md-3">
+      <div>
+        <h2 class="remove-h-margin">Similar Services</h2>
+        <br>
+      </div>
+
+      <div class="similar-events-box">
+        <%= image_tag "DeltaKids2.jpg", class: "similar-events-image" %>
+        <div class="info-tag">
+          <p>DeltaKids is a coalition of community partners. We work together to build Delta's capacity as a child-friendly community where all children thrive.</p>
+          <br>
+          <a href="#" class="learn-more-link">Learn More</a>
+        </div>
+      </div>
+
+      <div class="similar-events-box">
+        <%= image_tag "DeltaKids2.jpg", class: "similar-events-image" %>
+        <div class="info-tag">
+          <p>DeltaKids is a coalition of community partners. We work together to build Delta's capacity as a child-friendly community where all children thrive.</p>
+          <br>
+          <a href="#" class="learn-more-link">Learn More</a>
+        </div>
+      </div>
+
+      <div class="similar-events-box">
+        <%= image_tag "DeltaKids2.jpg", class: "similar-events-image" %>
+        <div class="info-tag">
+          <p>DeltaKids is a coalition of community partners. We work together to build Delta's capacity as a child-friendly community where all children thrive.</p>
+          <br>
+          <a href="#" class="learn-more-link">Learn More</a>
+        </div>
+      </div>
+
+      <div class="see-more-button">
+        <input type="submit" class="btn btn-primary" value="SEE MORE"></input>
+      </div>
+    </div> <!-- col -->
+    <div class="col-md-1"></div>
+  </div> <!-- row -->
+  <!--  right column -->
+</div>
+</div>
+
+<!-- Rainbow Footer-->
+
+<%= render 'partials/footer' %>

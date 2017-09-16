@@ -17,7 +17,7 @@
                   <p class="font-20"><strong>Description: </strong><%= @program.description %></p>
                   <p class="font-20"><strong>Registration: </strong><%= @program.registration %></p>
                   <p class="font-20"><strong>Cost: </strong><%= @program.cost %></p>
-                  <p class="font-20"><strong>Organization: </strong><%= @program.organization_id %></p>
+                  <p class="font-20"><strong>Organization: </strong><%= @program.organization.name %></p>
 
 
                       <%= link_to 'Delete', program_path(@program),

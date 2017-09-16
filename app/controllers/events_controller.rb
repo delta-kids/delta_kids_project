@@ -17,6 +17,9 @@ class EventsController < ApplicationController
     @event = Event.find(params[:id])
   end
 
+  def learn_more
+    @event = Event.find(params[:id])
+  end
 
   def new
     @event = Event.new

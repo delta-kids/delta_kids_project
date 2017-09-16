@@ -91,6 +91,10 @@ class ServicesController < ApplicationController
     redirect_to @service, notice: "Successfully Updated"
   end
 
+  def learn_more
+    @service = Service.find(params[:id])
+  end
+
   def destroy
     if is_admin?
       @service.destroy
