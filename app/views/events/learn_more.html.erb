@@ -55,12 +55,23 @@
           <hr>
           <div class="row">
             <div class="col-md-6">
-              <p class="font-16"><strong>Address:</strong> <%= @event.organization_id %></p>
+              <p class="font-16"><strong>Address:</strong> <%= @event.address %></p>
             </div>
             <div class="col-md-6">
-              <p class="font-16"><strong>Phone:</strong> <%= @event.organization_id %></p>
-              <p class="font-16"><strong>Website:</strong> <a href="<%= @event.organization_id %>"><%= @event.organization_id %></a></p>
-              <p class="font-16"><strong>Email:</strong> Currently No Emails In Database</p>
+              <p class="font-16" style="">
+                <i class="fa fa-globe" aria-hidden="true">
+                </i>&nbsp&nbsp&nbsp
+                <%= link_to @event.more_info,
+                @event.more_info,
+                 :target => "_blank", class:"wb-all"%>
+              </p>
+              <span class='flex'>
+                <i class="fa fa-envelope align-self" aria-hidden="true"></i>
+                &nbsp&nbsp&nbsp
+                <p class="font-16"><%= link_to @event.contact_email,
+                @event.contact_email,
+                 :target => "_blank", class:"wb-all"%></p>
+              </span>
             </div>
           </div>
         </div>
