@@ -28,8 +28,6 @@
               <%= f.text_field :start_time, class: 'form dateselect-time date-time-width', :required => true %>
             </div>
 
-
-
             <div>
 
               <div class="form-group center-flex-content">
@@ -155,10 +153,13 @@
               <%= f.text_area :description, class: 'form form-control form-padding event-form-width caps', :required => true %>
             </div>
 
-            <!-- MORE INFO , LINKS  -->
             <!-- PLACEHOLDER, NEED TO COME BACK AND DO -->
             <h3>UPLOAD PHOTO PLACEHOLDER</h3>
-            <h3>MORE INFO, LINKS PLACEHOLDER</h3>
+            <!-- MORE INFO, URLs -->
+            <div class="form-group center-flex-content">
+              <%= f.label :more_info, class:'label-baseline caps' %>
+              <%= f.text_field :more_info, class: 'form form-control form-padding event-form-width', placeholder: "Provide web links here" %>
+            </div>
 
             <!-- CONTACT NAME/EMAIL -->
             <div class="form-group">
@@ -169,7 +170,6 @@
               <%= f.label :"Contact email", class:'label-baseline caps' %>
               <%= f.email_field :contact_email, class: 'form form-control form-padding event-form-width', :required => true %>
             </div>
-
             <br>
             <div class="form-group">
               <%= f.submit class: 'btn btn-primary form form-control form-padding event-form-width' %>
