@@ -13,6 +13,7 @@
 
 .ellipsis-1 {
   display: -webkit-box;
+  margin-bottom: 0px;
   overflow : hidden;
   text-overflow: ellipsis;
   -webkit-line-clamp: 1;
