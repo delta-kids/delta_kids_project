@@ -6,7 +6,8 @@ class EventsController < ApplicationController
   def index
     @events = Event.all
     @events_by_start_date = @events.group_by(&:start_date)
-    @events_search = Event.search(params[:term])
+    @search_count = Event.search(params[:term])
+    @events_search = Event.search(params[:term]).page(params[:page]).per(5)
   end
 
   def index2

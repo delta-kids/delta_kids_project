@@ -25,7 +25,6 @@
           <br>
           <%= label_tag  "end_date", "End Date" %>&nbsp
           <%= text_field_tag "end_date", "YYYY/MM/DD", class: 'datepicker form form-padding date-time-width' %>
-
           <% end %>
         </div>
       </div>
@@ -47,7 +46,7 @@
           <%= label_tag(:art_and_culture, "Parents", class:'radio-spacing font-16') %>
           <br>
           <%= check_box_tag(:art_and_culture) %>
-          <%= label_tag(:art_and_culture, "Child care workers or service providers", class:'radio-spacing font-16') %>
+          <%= label_tag(:art_and_culture, "Childcare workers/providers", class:'radio-spacing font-16') %>
           <br>
           <hr/ class="filterCard-line">
         </div>
@@ -107,7 +106,7 @@
 
       <div class="filterCard">
         <div class="filter-header-container">
-          <p class="filterCard-header1">Type of Event/Activity/Service</p>
+          <p class="filterCard-header1">Type of Event</p>
           <a data-toggle="collapse" data-target=".collapse-typeof"><%= image_tag "icon-chevron-up.svg", class: " filter-header-chevron a-chevron" %></a>
 
         </div>
@@ -494,7 +493,7 @@
       <!-- <%= button_to "SEE MORE", new_event_path, :method => "get", id:'button-seemore'%> -->
 
 <div class="container-fluid">
-    <p class="bree-font">Results (<%= @events_search.count %>)</p>
+    <p class="bree-font">Results (<%= @search_count.count %>)</p>
     <br>
     <br>
     <% for event in @events_search %>
@@ -548,6 +547,9 @@
       </div>
     </div>
     <% end %>
+    <div class="container-fluid center-flex-content" style="width:400px; height:70px;">
+      <%= paginate @events_search, window: 2 %>
+    </div>
   </div>
 </div>
 </div>
