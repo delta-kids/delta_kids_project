@@ -22,7 +22,7 @@
 
             <div class="form-group center-flex-content">
               <label for='start_date' style="margin-right:47px;">Start Date</label>
-              <%= f.text_field :start_date, class: 'start-date datepicker form date-time-width',placeholder:"YYYY/MM/DD", :required => true %>
+              <%= f.text_field :start_date, class: 'start-date datepicker form date-time-width',placeholder:"DD/MM/YYYY", :required => true %>
 
               <%= f.label :"Start Time", class: 'form-padding caps', style:'margin:auto;' %>
               <%= f.text_field :start_time, class: 'form dateselect-time date-time-width', :required => true %>
@@ -32,7 +32,7 @@
 
               <div class="form-group center-flex-content">
                 <label for='end_date' style="margin-right:46px">End Date</label>
-                <%= f.text_field :end_date, class: 'end-date datepicker form form-padding date-time-width',placeholder:"YYYY/MM/DD", :required => true %>
+                <%= f.text_field :end_date, class: 'end-date datepicker form form-padding date-time-width',placeholder:"DD/MM/YYYY", :required => true %>
                 <%= f.label :"End Time", class: 'form-padding caps', style:'margin:auto;', :required => true %>
                 <%= f.text_field :end_time, class: 'form dateselect-time form-padding date-time-width', :required => true %>
               </div>
@@ -77,7 +77,7 @@
                 :id,
                 :age,
                 {},
-                { multiple: false, class: 'chosen-select form-control form-padding'}
+                { multiple: true, class: 'chosen-select form-control form-padding'}
                 %>
               </div>
             </div>
@@ -150,13 +150,16 @@
             <!-- EVENT DESCRIPTION -->
             <div class="form-group">
               <%= f.label :description, class:'label-baseline' %>
-              <%= f.text_area :description, class: 'form form-control form-padding event-form-width caps', :required => true %>
+              <%= f.text_area :description, class: 'form form-control form-padding event-form-width', :required => true %>
             </div>
 
-            <!-- MORE INFO , LINKS  -->
             <!-- PLACEHOLDER, NEED TO COME BACK AND DO -->
             <h3>UPLOAD PHOTO PLACEHOLDER</h3>
-            <h3>MORE INFO, LINKS PLACEHOLDER</h3>
+            <!-- MORE INFO, URLs -->
+            <div class="form-group center-flex-content">
+              <%= f.label :more_info, class:'label-baseline caps' %>
+              <%= f.text_field :more_info, class: 'form form-control form-padding event-form-width', placeholder: "Provide web links here" %>
+            </div>
 
             <!-- CONTACT NAME/EMAIL -->
             <div class="form-group">

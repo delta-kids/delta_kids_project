@@ -1,4 +1,4 @@
-nav {
+#header-nav {
   z-index: 1;
   background-image: url("cloud1.png");
   background-size: cover;

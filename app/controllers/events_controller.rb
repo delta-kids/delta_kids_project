@@ -6,6 +6,8 @@ class EventsController < ApplicationController
   def index
     @events = Event.all
     @events_by_start_date = @events.group_by(&:start_date)
+    @search_count = Event.search(params[:term])
+    @events_search = Event.search(params[:term]).page(params[:page]).per(5)
   end
 
   def index2
@@ -57,7 +59,7 @@ class EventsController < ApplicationController
 
   private
   def event_params
-    params.require(:event).permit([:title, :start_date, :end_date, :start_time, :end_time, :event_repeat, :event_location, :address, :cost, :registration, :more_info, :contact_name, :contact_email, :approved, :description, { age_group_ids: [] } ])
+    params.require(:event).permit([:title, :term, :start_date, :end_date, :start_time, :end_time, :event_repeat, :event_location, :address, :cost, :registration, :more_info, :contact_name, :contact_email, :approved, :description, { age_group_ids: [] } ])
   end
   def find_event
     @event = Event.find params[:id]
