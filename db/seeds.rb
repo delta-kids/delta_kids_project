@@ -68,6 +68,53 @@ User.create([
     phone: '4u'}
   ])
 
+Event.create([
+  {title: 'Ladner Test Event',
+  start_date: "2017-09-29",
+  end_date: "2017-09-29",
+  start_time: "12:00",
+  end_time: "2:00",
+  event_location: "Ladner",
+  address: "4600 Clarence Taylor Crescent, Delta, BC V4K 3X3",
+  cost: "Free",
+  registration: "Registered",
+  description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+  more_info: "www.codecore.ca",
+  contact_name: "John Doe",
+  contact_email: "j.doe@fake.ca"},
+])
+
+Event.create([
+  {title: 'North Delta Test Event',
+  start_date: "2017-09-29",
+  end_date: "2017-09-29",
+  start_time: "17:00",
+  end_time: "18:00",
+  event_location: "North Delta",
+  address: "11415 84 Avenue, Delta, BC  V4C 2L9",
+  cost: "Free",
+  registration: "Registered",
+  description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+  more_info: "www.codecore.ca",
+  contact_name: "John Doe",
+  contact_email: "j.doe@fake.ca"},
+])
+
+Event.create([
+  {title: 'Tsawwassen Test Event',
+  start_date: "2017-010-10",
+  end_date: "2017-010-10",
+  start_time: "11:00",
+  end_time: "3:00",
+  event_location: "Tsawwassen",
+  address: "1172 56 Street, Delta, BC V4L 2A3",
+  cost: "Free",
+  registration: "Registered",
+  description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+  more_info: "www.codecore.ca",
+  contact_name: "John Doe",
+  contact_email: "j.doe@fake.ca"},
+])
 
 Topic.create(
 [

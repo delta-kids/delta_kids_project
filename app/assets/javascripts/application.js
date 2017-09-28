@@ -17,6 +17,8 @@
 //= require bootstrap-timepicker
 //= require chosen-jquery
 //= require rails-ujs
+//= require underscore
+//= require gmaps/google
 //= require_tree .
 
 
