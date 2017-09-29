@@ -152,9 +152,12 @@
               <%= f.label :description, class:'label-baseline' %>
               <%= f.text_area :description, class: 'form form-control form-padding event-form-width', :required => true %>
             </div>
+            <!-- IMAGE UPLOADER -->
+            <div class="form-group center-flex-content">
+              <%= f.label :image, class: "label-baseline" %>
+              <%= f.file_field :image  %>
+            </div>
 
-            <!-- PLACEHOLDER, NEED TO COME BACK AND DO -->
-            <h3>UPLOAD PHOTO PLACEHOLDER</h3>
             <!-- MORE INFO, URLs -->
             <div class="form-group center-flex-content">
               <%= f.label :more_info, class:'label-baseline caps' %>

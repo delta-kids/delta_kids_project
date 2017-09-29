@@ -1,5 +1,6 @@
 class Event < ApplicationRecord
   # belongs_to :organization, :class, optional: true
+  mount_uploader :image, ImageUploader
 
   has_many :EventTaggings, dependent: :destroy
   has_many :tags, through: :EventTaggings
@@ -10,7 +11,7 @@ class Event < ApplicationRecord
   has_many :EventProgramTypes, dependent: :destroy
   has_many :programTypes, through: :EventProgramTypes
 
-  geocoded_by :address   
+  geocoded_by :address
   after_validation :geocode
 
   def self.search(term)

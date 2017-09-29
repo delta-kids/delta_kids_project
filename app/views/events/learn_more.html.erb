@@ -1,13 +1,12 @@
 <div class="wholePage">
 <div class="container-fluid light-blue-bg-color">
   <div class="row">
-    <div class="col-md-1"></div>
-    <div class="col-md-7">
+    <div class="col-md-1 col-sm-1 col-xs-1"></div>
+    <div class="col-md-7 col-sm-7 col-xs-7">
       <!--  left column -->
       <div class="container-fluid " id="feature-box">
         <!-- set the image to be displayed -->
-        <%= image_tag "DeltaKids1.jpg", class: "learn-more-image" %>
-
+        <%= image_tag(@event.image_url.to_s, class:"img-responsive learn-more-image") %>
         <p class="font-16"></p>
         <hr>
 
@@ -135,7 +134,7 @@
         <input type="submit" class="btn btn-primary" style="height:60px; width:100%;" value="VIEW MORE EVENTS?"></input>
       </div>
     </div> <!-- col -->
-    <div class="col-md-1"></div>
+    <div class="col-md-1 col-sm-1 col-xs-1"></div>
   </div> <!-- row -->
   <!--  right column -->
 </div>

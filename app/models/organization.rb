@@ -1,4 +1,5 @@
 class Organization < ApplicationRecord
+  mount_uploader :image, ImageUploader
 
   has_many :programs,  dependent: :destroy
   has_many :services, dependent: :destroy

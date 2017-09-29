@@ -19,6 +19,12 @@
                   <p class="font-20"><strong>Address: </strong><%= @organization.address %></p>
                   <p class="font-20"><strong>Phone_number: </strong><%= @organization.phone %></p>
                   <p class="font-20"><strong>Website: </strong><%= @organization.website %></p>
+                  <p class="font-20"><strong>Image: </strong></p>
+                  <div class="">
+                    <%= image_tag(@organization.image_url.to_s, style:"width:400px;height:300px;") %>
+                  </div>
+                  <br>
+                  <br>
                   <% @organization.program_types.each do |activityType|  %>
                   <p class="font-20"><strong>Activity type: </strong><%= activityType.name %></p>
                   <% end %>
