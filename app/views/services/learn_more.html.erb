@@ -53,41 +53,28 @@
     <div class="col-md-3">
       <div>
         <h2 class="remove-h-margin">Similar Services</h2>
-        <br>
       </div>
-
+      <br>
+      <% @similar_services.each do |service| %>
       <div class="similar-events-box">
         <%= image_tag "DeltaKids2.jpg", class: "similar-events-image" %>
         <div class="info-tag">
-          <p>DeltaKids is a coalition of community partners. We work together to build Delta's capacity as a child-friendly community where all children thrive.</p>
+          <p class="ellipsis-4"><%= service.description %>
           <br>
-          <a href="#" class="learn-more-link">Learn More</a>
-        </div>
-      </div>
+          </p>
 
-      <div class="similar-events-box">
-        <%= image_tag "DeltaKids2.jpg", class: "similar-events-image" %>
-        <div class="info-tag">
-          <p>DeltaKids is a coalition of community partners. We work together to build Delta's capacity as a child-friendly community where all children thrive.</p>
+            <p><%= link_to 'Learn More', service_learn_more_path(service), class: "learn-more-link" %></p>
           <br>
-          <a href="#" class="learn-more-link">Learn More</a>
         </div>
       </div>
-
-      <div class="similar-events-box">
-        <%= image_tag "DeltaKids2.jpg", class: "similar-events-image" %>
-        <div class="info-tag">
-          <p>DeltaKids is a coalition of community partners. We work together to build Delta's capacity as a child-friendly community where all children thrive.</p>
-          <br>
-          <a href="#" class="learn-more-link">Learn More</a>
-        </div>
-      </div>
+      <br>
+      <% end %>
 
       <div class="see-more-button">
-        <input type="submit" class="btn btn-primary" value="SEE MORE"></input>
+        <input type="submit" class="btn btn-primary" style="height:60px; width:100%;" value="VIEW MORE EVENTS?"></input>
       </div>
     </div> <!-- col -->
-    <div class="col-md-1"></div>
+    <div class="col-md-1 col-sm-1 col-xs-1"></div>
   </div> <!-- row -->
   <!--  right column -->
 </div>

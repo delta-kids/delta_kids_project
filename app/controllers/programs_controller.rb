@@ -93,6 +93,7 @@ class ProgramsController < ApplicationController
 
   def learn_more
     @program = Program.find(params[:id])
+    @similar_programs =  Program.limit(3).order("RANDOM()")
   end
 
 

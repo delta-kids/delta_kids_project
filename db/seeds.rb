@@ -211,7 +211,7 @@ csv.each do |row|
   )
 
   Tag.create(
-    name: row['Tags'],
+    name: row['Tags']
   )
 
 end

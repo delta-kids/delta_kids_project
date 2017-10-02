@@ -367,8 +367,7 @@ Left and right controls
   <br>
   <br>
   <div class="calendar-subsection2-card light-blue-bg-color">
-    <% num = rand(1..3) %>
-    <%= image_tag "event#{num}.png", class: "calendar-subsection2-image" %>
+    <%= image_tag(event.image_url.to_s, class:"img-responsive calendar-subsection2-image",style:"height:300px;") %>
 
     <div class="calendar-subsection2-text" style="background-color: #fff">
       <div class="calendar-subsection2-details">

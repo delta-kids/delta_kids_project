@@ -93,6 +93,7 @@ class ServicesController < ApplicationController
 
   def learn_more
     @service = Service.find(params[:id])
+    @similar_services =  Service.limit(3).order("RANDOM()")
   end
 
   def destroy
