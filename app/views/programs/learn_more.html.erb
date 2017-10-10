@@ -38,11 +38,6 @@
                   @program.organization.website,
                    :target => "_blank", class:"wb-all"%>
                 </p>
-                <span class='flex'>
-                  <i class="fa fa-envelope align-self" aria-hidden="true"></i>
-                  &nbsp&nbsp&nbsp
-                  <p class="font-16">Currently No Emails In Database</p>
-                </span>
               </div>
             </div>
           </div>
@@ -73,6 +68,7 @@
         <div class="similar-events-box">
           <%= image_tag "DeltaKids2.jpg", class: "similar-events-image" %>
           <div class="info-tag">
+            <p class="ellipsis-1 bree-font" style="font-size:20px;margin-bottom:2px;"><%= program.organization.name %>
             <p class="font-16 ellipsis-4"><%= program.description %>
             <br>
             </p>

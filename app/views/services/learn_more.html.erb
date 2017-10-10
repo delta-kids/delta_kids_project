@@ -28,7 +28,6 @@
               <p class="font-16"><strong>Phone:</strong> <%= @service.organization.phone %></p>
               <p class="font-16"><strong>Website:</strong>
               <%= link_to @service.organization.website, @service.organization.website, :target => "_blank", style:'word-wrap: break-word;' %></p>
-              <p class="font-16"><strong>Email:</strong> Currently No Emails In Database</p>
             </div>
           </div>
         </div>
@@ -59,6 +58,7 @@
       <div class="similar-events-box">
         <%= image_tag "DeltaKids2.jpg", class: "similar-events-image" %>
         <div class="info-tag">
+          <p class="ellipsis-1 bree-font" style="font-size:20px;margin-bottom:2px;"><%= service.organization.name %>
           <p class="ellipsis-4"><%= service.description %>
           <br>
           </p>
