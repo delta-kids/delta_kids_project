@@ -8,4 +8,6 @@ class Tag < ApplicationRecord
   has_many :EventTaggings, dependent: :destroy
   has_many :events, through: :EventTaggings
 
+  validates :name, uniqueness: true
+
 end

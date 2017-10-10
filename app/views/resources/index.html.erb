@@ -114,7 +114,13 @@
           <hr/ class="filterCard-line">
         </div>
       </div>
-<%= button_to "ADD NEW RESOURCE", new_resource_path, :method => "get", id:'button-add-resource' %>
+      <div class="center-flex-content">
+        <%= submit_tag 'Filter', class:"btn-primary btn-lg filter-btn" %>
+      </div>
+      <div class="center-flex-content">
+        <%= button_to "Add New Resource", new_resource_path, :method => "get", class:"btn-primary btn-lg filter-btn" %>
+      </div>
+
     </div>
 
     <div class="col-md-9 event-subsection2">

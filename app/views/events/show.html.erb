@@ -25,6 +25,12 @@
                   <p class='font-20'><strong>Description: </strong><%= @event.description %></p>
                   <p class='font-20'><strong>Contact Name: </strong><%= @event.contact_name %></p>
                   <p class='font-20'><strong>Contact Email: </strong><%= @event.contact_email %></p>
+                  <p class='font-20'><strong>Image: </strong></p>
+                  <div class="">
+                    <%= image_tag(@event.image_url.to_s, style:"width:400px;height:300px;") %>
+                  </div>
+                  <br>
+                  <br>
 
                       <%= link_to 'Delete', event_path(@event),
                                             method: :delete,

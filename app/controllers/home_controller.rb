@@ -25,9 +25,13 @@ class HomeController < ApplicationController
   def surveys
   end
 
-
   def map
-
+    @map_events = Event.search(params[:term])
+    @hash = Gmaps4rails.build_markers(@map_events) do |event, marker|
+      marker.lat event.latitude
+      marker.lng event.longitude
+      marker.infowindow event.address
+    end
   end
 
   def search
