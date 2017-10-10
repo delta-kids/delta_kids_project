@@ -1,5 +1,6 @@
 class Event < ApplicationRecord
   # belongs_to :organization, :class, optional: true
+
   # scope :by_date, -> (start_date: Date.current() - 9999.years, end_date: Date.current() + 9999.years) { where(start_date: start_date..end_date, end_date: start_date..end_date) }
   scope :by_date, -> start_date, end_date { where("start_date = ? AND end_date = ?", start_date, end_date) }
   scope :event_location, -> event_location { where(:event_location => event_location) }
@@ -17,6 +18,9 @@ class Event < ApplicationRecord
 
   has_many :EventProgramTypes, dependent: :destroy
   has_many :program_types, through: :EventProgramTypes
+
+  geocoded_by :address
+  after_validation :geocode
 
   geocoded_by :address
   after_validation :geocode
