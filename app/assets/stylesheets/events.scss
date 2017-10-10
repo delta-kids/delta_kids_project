@@ -127,11 +127,13 @@
 .calendar-subsection2-image {
 	background-color:#D1F0F4;
 	width: 100%;
-	height: auto;
+	height: 300px;
 }
 
 .calendar-subsection2-card {
   margin-right: 0px;
+	margin-bottom: 20px;
+	background-color: #fff;
 }
 
 .calendar-row .calendar-subsection2 {
@@ -172,11 +174,6 @@
 }
 
 .calendar-subsection2-text{
-	background-color: #fff;
-}
-
-.calendar-subsection2-card{
-	margin-bottom: 30px;
 	background-color: #fff;
 }
 

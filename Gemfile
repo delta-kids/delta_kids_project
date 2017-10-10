@@ -43,6 +43,7 @@ gem 'geocoder'
 gem 'gmaps4rails'
 gem 'underscore-rails'
 gem 'carrierwave', '~> 1.0'
+gem 'has_scope'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

@@ -359,16 +359,11 @@ Left and right controls
 
 <div class="container-fluid">
   <p class="bree-font">Results (<%= @search_count.count %>)</p>
-  <br>
-  <br>
   <% for event in @events_search %>
   <% if event.approved != true %>
   <% else %>
-  <br>
-  <br>
-  <div class="calendar-subsection2-card light-blue-bg-color">
-    <%= image_tag(event.image_url.to_s, class:"img-responsive calendar-subsection2-image",style:"height:300px;") %>
-
+  <div class="calendar-subsection2-card light-blue-bg-color" style="margin-top:30px">
+      <%= image_tag(event.image_url.to_s, class:"img-responsive", style:"height:325px; min-width:100%;") %>
     <div class="calendar-subsection2-text" style="background-color: #fff">
       <div class="calendar-subsection2-details">
         <p class="calendar-subsection2-header2"><%= event.title %></p>
@@ -413,10 +408,10 @@ Left and right controls
     </div>
   </div>
   <% end %>
-  <div class="container-fluid center-flex-content" style="width:400px; height:70px;">
-    <%= paginate @events_search, window: 2 %>
-  </div>
   <% end %>
+</div>
+<div class="container-fluid center-flex-content" style="width:400px; height:70px;">
+  <%= paginate @events_search, window: 2 %>
 </div>
 
 </div>
