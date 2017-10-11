@@ -1,18 +1,16 @@
 class EventsController < ApplicationController
   # ALL USERS, including ADMIN
   before_action :find_event, only: [:show, :edit, :update, :destroy]
-  has_scope :by_date, :using => [:start_date, :end_date], :type => :hash
 
+  has_scope :by_date, :using => [:start_date, :end_date], :type => :hash
   has_scope :event_location, :type => :array
   has_scope :registration, :type => :array
   has_scope :cost, :type => :array
   has_scope :age_groups, :type => :array
-  # has_scope :registration
+  has_scope :program_types, :type => :array
 
 
   def index
-    # @events = Event.all
-    # @event_location = Event.where("event_location IN (?)", params[:event_location])
     @events = apply_scopes(Event).all
     @search_count = @events.search(params[:term])
     @events_search = @events.search(params[:term]).page(params[:page]).per(5)

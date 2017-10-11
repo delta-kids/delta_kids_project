@@ -11,7 +11,7 @@
       </div>
     -->
     <div class="">
-      <%= form_tag(events_path, method: :get) do %>
+      <%= form_tag(map_path, method: :get) do %>
       <%= text_field_tag :term, params[:term] %>
       <%= submit_tag "Search", :name => nil, class:'btn-primary' %>
       <br>
