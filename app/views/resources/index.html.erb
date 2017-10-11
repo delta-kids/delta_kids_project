@@ -131,21 +131,21 @@
         </div>
       </div>
 
-      <p class="event-header">Featured</p>
-      <%=  @featured.each do |r| %>
+      <p class="bree-font">Featured</p>
+      <%  @featured.each do |r| %>
       <div class="event-subsection2-text-resource">
         <div class="event-subsection2-details">
           <p class="event-subsection2-header2"><%= r.name %></p>
           <div class="event-info">
             <div>
               <%= image_tag "icon-calendar.svg", class: "event-info-icon" %>
-              <p class="event-info-txt"><%= r.published_date %></p>
+              <p class="event-info-txt"><%= r.created_at %></p>
             </div>
           </div>
           <p class="event-paragraph-resource"><%= r.description  %></p>
           <div class="div-tags">
             <p class="tags-txt">Tags:</p>
-            <div class="report-button"><%= r.tags  %></div>
+            <div class="report-button"><p><%= r.tags.map(&:name).join(', ')  %></p></div>
           </div>
           <hr/ class="event-subsection2-line">
           <div class="share-view">
@@ -162,21 +162,22 @@
       </div>
       <% end %>
 
-      <p class="event-header">Results</p>
-      <%=  @resources.each do |r| %>
+      <p class="bree-font">Results (<%= @resources.count %>)</p>
+      <br>
+      <%  @resources.each do |r| %>
       <div class="event-subsection2-text-resource">
         <div class="event-subsection2-details">
           <p class="event-subsection2-header2"><%= r.name %></p>
           <div class="event-info">
             <div>
               <%= image_tag "icon-calendar.svg", class: "event-info-icon" %>
-              <p class="event-info-txt"><%= r.published_date %></p>
+              <p class="event-info-txt"><%= r.created_at %></p>
             </div>
           </div>
           <p class="event-paragraph-resource"><%= r.description  %></p>
           <div class="div-tags">
             <p class="tags-txt">Tags:</p>
-            <div class="report-button"><%= r.tags  %></div>
+            <div class="report-button"><p><%= r.tags.map(&:name).join(', ')  %></p></div>
           </div>
           <hr/ class="event-subsection2-line">
           <div class="share-view">
@@ -192,9 +193,9 @@
         </div>
       </div>
       <% end %>
-
-
-      <div id='button-seemore'>SEE MORE</div>
+      <div class="container-fluid center-flex-content" style="width:400px; height:70px;">
+        <%= paginate @resources, window: 2 %>
+      </div>
     </div>
   </div>
 </div>

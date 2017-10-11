@@ -28,7 +28,7 @@ class Event < ApplicationRecord
 
   def self.search(term)
     if term
-      where('title LIKE ?', "%#{term}%").order('title ASC')
+      where('title ILIKE ?', "%#{term}%").order('title ASC')
     else
       order('title ASC')
     end

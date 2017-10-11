@@ -24,8 +24,8 @@ class ResourcesController < ApplicationController
     end
 
     def index
-      @featured = Resource.all.where(:feature == true)
-      @resources = Resource.all
+      @featured = Resource.where(:feature => true)
+      @resources = Resource.all.order(name: :asc).page(params[:page]).per(5)
     end
 
     def index2
