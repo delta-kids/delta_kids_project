@@ -363,7 +363,9 @@ Left and right controls
   <% if event.approved != true %>
   <% else %>
   <div class="calendar-subsection2-card light-blue-bg-color" style="margin-top:30px">
-    <%= image_tag(event.image_url.to_s, class:"img-responsive", style:"height:325px; min-width:100%;") %>
+    <div class="event-image-container">
+      <%= image_tag(event.image_url.to_s, class:"img-responsive", style:"height:100%; width:100%; object-fit: cover ") %>
+    </div>
     <div class="calendar-subsection2-text" style="background-color: #fff">
       <div class="calendar-subsection2-details">
         <p class="calendar-subsection2-header2"><%= event.title %></p>
