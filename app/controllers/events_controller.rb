@@ -71,6 +71,7 @@ class EventsController < ApplicationController
     { tag_ids: [] }
     ])
   end
+  
   def find_event
     @event = Event.find params[:id]
   end

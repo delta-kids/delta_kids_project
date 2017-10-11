@@ -1,5 +1,6 @@
 class Resource < ApplicationRecord
   # belongs_to :organization
+  mount_uploader :resource_file, ImageUploader
 
   has_many :ResourceTaggings, dependent: :destroy
   has_many :tags, through: :ResourceTaggings

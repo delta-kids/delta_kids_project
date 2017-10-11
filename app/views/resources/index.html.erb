@@ -155,7 +155,7 @@
             </div>
             <div class="event-info1">
               <%= image_tag "icon-acrobat.svg", class: "event-info-icon" %>
-              <p class="resource-info-txt">View</p>
+              <p class="resource-info-txt"><%= link_to "View", asset_path(r.resource_file) %></p>
             </div>
           </div>
         </div>
@@ -187,7 +187,7 @@
             </div>
             <div class="event-info1">
               <%= image_tag "icon-acrobat.svg", class: "event-info-icon" %>
-              <p class="resource-info-txt">View</p>
+              <p class="resource-info-txt"><%= link_to "View", asset_path(r.resource_file) %></p>
             </div>
           </div>
         </div>
