@@ -132,21 +132,20 @@
       </div>
 
       <p class="event-header">Featured</p>
-
-
+      <%=  @featured.each do |r| %>
       <div class="event-subsection2-text-resource">
         <div class="event-subsection2-details">
-          <p class="event-subsection2-header2">BC Smart Family Policy 2010 Report Card</p>
+          <p class="event-subsection2-header2"><%= r.name %></p>
           <div class="event-info">
             <div>
               <%= image_tag "icon-calendar.svg", class: "event-info-icon" %>
-              <p class="event-info-txt">Published in 2010</p>
+              <p class="event-info-txt"><%= r.published_date %></p>
             </div>
           </div>
-          <p class="event-paragraph-resource">HELP report card describing British Columbia’s progress with implementing the family policy investments described in the 15 by 15 report.</p>
+          <p class="event-paragraph-resource"><%= r.description  %></p>
           <div class="div-tags">
             <p class="tags-txt">Tags:</p>
-            <div class="report-button">Report</div>
+            <div class="report-button"><%= r.tags  %></div>
           </div>
           <hr/ class="event-subsection2-line">
           <div class="share-view">
@@ -161,20 +160,23 @@
           </div>
         </div>
       </div>
+      <% end %>
 
+      <p class="event-header">Results</p>
+      <%=  @resources.each do |r| %>
       <div class="event-subsection2-text-resource">
         <div class="event-subsection2-details">
-          <p class="event-subsection2-header2">Crisis in Kindergarten – Why Children Need to Play in School</p>
+          <p class="event-subsection2-header2"><%= r.name %></p>
           <div class="event-info">
             <div>
               <%= image_tag "icon-calendar.svg", class: "event-info-icon" %>
-              <p class="event-info-txt">Published in 2009</p>
+              <p class="event-info-txt"><%= r.published_date %></p>
             </div>
           </div>
-          <p class="event-paragraph-resource">A report based on 9 recent studies and written by the Alliance for Childhood in the U.S. , with specific recommendations of change needed in Kindergarten education.</p>
+          <p class="event-paragraph-resource"><%= r.description  %></p>
           <div class="div-tags">
             <p class="tags-txt">Tags:</p>
-            <div class="report-button">Report</div>
+            <div class="report-button"><%= r.tags  %></div>
           </div>
           <hr/ class="event-subsection2-line">
           <div class="share-view">
@@ -189,43 +191,14 @@
           </div>
         </div>
       </div>
+      <% end %>
 
 
-      <div class="event-subsection2-text-resource">
-        <div class="event-subsection2-details">
-          <p class="event-subsection2-header2">International Perspectives on Early Childhood Development</p>
-          <div class="event-info">
-            <div>
-              <%= image_tag "icon-calendar.svg", class: "event-info-icon" %>
-              <p class="event-info-txt">Published in 2009</p>
-            </div>
-          </div>
-          <p class="event-paragraph-resource">Knowledge Network for Early Childhood Development paper looking at ECD and what can be done toward a successful approach where early childhood development is seen as a determinant of health.</p>
-          <div class="div-tags">
-            <p class="tags-txt">Tags:</p>
-            <div class="phealth-button">Physical Health</div>
-          </div>
-          <hr/ class="event-subsection2-line">
-          <div class="share-view">
-            <div class="event-info1">
-              <%= image_tag "icon-share.svg", class: "event-info-icon" %>
-              <p class="resource-info-txt">Share PDF</p>
-            </div>
-            <div class="event-info1">
-              <%= image_tag "icon-acrobat.svg", class: "event-info-icon" %>
-              <p class="resource-info-txt">View</p>
-            </div>
-          </div>
-        </div>
-      </div>
       <div id='button-seemore'>SEE MORE</div>
     </div>
   </div>
 </div>
 </div>
 </div>
-
-
-
 
 <%= render 'partials/footer' %>
