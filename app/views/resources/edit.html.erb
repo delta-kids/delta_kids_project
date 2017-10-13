@@ -17,7 +17,7 @@
 
             <div class="form-group center-flex-content">
               <%= f.label :name, class: "label-baseline" %>
-              <%= f.text_field :name, class: "form form-control form-padding event-form-width", :required => true %>
+              <%= f.text_field :name, class: "form form-control form-padding event-form-width" %>
             </div>
             <hr>
             <div class="form-group center-flex-content">
@@ -25,7 +25,7 @@
               <div class="margin-right">
                 <%= f.radio_button(:feature, true) %>
                 <%= label_tag(:feature, "Yes", class:'radio-spacing') %>
-                <%= f.radio_button(:feature, false, :required => true) %>
+                <%= f.radio_button(:feature, false) %>
                 <%= label_tag(:feature, "No", class:'radio-spacing') %>
               </div>
             </div>
@@ -86,9 +86,9 @@
             </div>
 
             <div class="form-group center-flex-content">
-              <%= f.label :tags, class:'label-baseline caps' %>
+              <%= f.label :Tags, class:'label-baseline caps' %>
               <div class="form-group event-form-width dropbox-container">
-                <%= f.collection_select :age_group_ids,
+                <%= f.collection_select :tag_ids,
                 Tag.all,
                 :id,
                 :name,
@@ -118,7 +118,7 @@
 
           <div class="form-group">
             <%= f.label :description, class:'label-baseline' %>
-            <%= f.text_area :description, class: 'form form-control form-padding event-form-width caps', :required => true %>
+            <%= f.text_area :description, class: 'form form-control form-padding event-form-width caps' %>
           </div>
 
           <!-- FILE UPLOADER -->
@@ -129,12 +129,12 @@
 
           <div class="form-group">
             <%= f.label :"Contact name", class:'label-baseline caps' %>
-            <%= f.text_field :contact_name, class: 'form form-control form-padding event-form-width', :required => true %>
+            <%= f.text_field :contact_name, class: 'form form-control form-padding event-form-width' %>
           </div>
 
           <div class="form-group">
             <%= f.label :"Contact email", class:'label-baseline caps' %>
-            <%= f.email_field :contact_email, class: 'form form-control form-padding event-form-width', :required => true %>
+            <%= f.email_field :contact_email, class: 'form form-control form-padding event-form-width' %>
           </div>
           <br>
           <div class="form-group">

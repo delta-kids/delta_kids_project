@@ -3,6 +3,9 @@ class ResourcesController < ApplicationController
 
     has_scope :by_date, :using => [:start_date, :end_date], :type => :hash
     has_scope :resource_location, :type => :array
+    has_scope :resource_topic, :type => :array
+    has_scope :resource_age_group, :type => :array
+
 
     def new
       @resource = Resource.new

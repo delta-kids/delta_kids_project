@@ -34,21 +34,21 @@
           <a data-toggle="collapse" data-target=".collapse-for"><%= image_tag "icon-chevron-up.svg", class: "filter-header-chevron a-chevron"  %></a>
         </div>
         <div class="collapse-for collapse in">
-          <!-- <%= check_box_tag("Physical Health") %>
-          <%= label_tag(:art_and_culture, "Physical Health", class:'radio-spacing font-16') %>
+          <%= check_box_tag("resource_topic[]","1", "checked") %>
+          <%= label_tag(:resource_topic, "Physical Health", class:'radio-spacing font-16') %>
           <br>
-          <%= check_box_tag("Mental Health") %>
-          <%= label_tag(:art_and_culture, "Mental Health", class:'radio-spacing font-16') %>
+          <%= check_box_tag("resource_topic[]","2", "checked") %>
+          <%= label_tag(:resource_topic, "Mental Health", class:'radio-spacing font-16') %>
           <br>
-          <%= check_box_tag("Child Development") %>
-          <%= label_tag(:art_and_culture, "Child Development", class:'radio-spacing font-16') %>
+          <%= check_box_tag("resource_topic[]","3", "checked") %>
+          <%= label_tag(:resource_topic, "Child Development", class:'radio-spacing font-16') %>
           <br>
-          <%= check_box_tag("Policy") %>
-          <%= label_tag(:art_and_culture, "Policy", class:'radio-spacing font-16') %>
+          <%= check_box_tag("resource_topic[]","4", "checked") %>
+          <%= label_tag(:resource_topic, "Policy", class:'radio-spacing font-16') %>
           <br>
-          <%= check_box_tag("Child Safety") %>
-          <%= label_tag(:art_and_culture, "Child Safety", class:'radio-spacing font-16') %>
-          <br> -->
+          <%= check_box_tag("resource_topic[]","5", "checked") %>
+          <%= label_tag(:resource_topic, "Child Safety", class:'radio-spacing font-16') %>
+          <br>
           <hr/ class="filterCard-line">
         </div>
       </div>
@@ -82,12 +82,12 @@
           <a data-toggle="collapse" data-target=".collapse-for"><%= image_tag "icon-chevron-up.svg", class: "filter-header-chevron a-chevron"  %></a>
         </div>
         <div class="collapse-for collapse in">
-          <!-- <%= check_box_tag("0-5 years") %>
-          <%= label_tag(:art_and_culture, "0-5 years", class:'radio-spacing font-16') %>
+          <%= check_box_tag("resource_age_group[]","1","checked") %>
+          <%= label_tag(:resource_age_group, "0-5 years", class:'radio-spacing font-16') %>
           <br>
-          <%= check_box_tag("6-12 years") %>
-          <%= label_tag(:art_and_culture, "6-12 years", class:'radio-spacing font-16') %>
-          <br> -->
+          <%= check_box_tag("resource_age_group[]","2","checked") %>
+          <%= label_tag(:resource_age_group, "6-12 years", class:'radio-spacing font-16') %>
+          <br>
           <hr/ class="filterCard-line">
         </div>
       </div>
@@ -98,7 +98,7 @@
           <a data-toggle="collapse" data-target=".collapse-for"><%= image_tag "icon-chevron-up.svg", class: "filter-header-chevron a-chevron"  %></a>
         </div>
         <div class="collapse-for collapse in">
-          <!-- <%= check_box_tag("Tips & Guidelines") %>
+          <%= check_box_tag("Tips & Guidelines") %>
           <%= label_tag(:art_and_culture, "Tips & Guidelines", class:'radio-spacing font-16') %>
           <br>
           <%= check_box_tag("Report") %>
@@ -106,7 +106,7 @@
           <br>
           <%= check_box_tag("Report") %>
           <%= label_tag(:art_and_culture, "Research", class:'radio-spacing font-16') %>
-          <br> -->
+          <br>
           <hr/ class="filterCard-line">
         </div>
       </div>
@@ -142,7 +142,9 @@
           <p class="event-paragraph-resource"><%= r.description  %></p>
           <div class="div-tags">
             <p class="tags-txt">Tags:</p>
-            <div class="report-button"><p><%= r.tags.map(&:name).join(', ')  %></p></div>
+            <div class="report-button">
+              <p class="tag-margin"><%= r.tags.map(&:name).join(', ')  %></p>
+            </div>
           </div>
           <hr/ class="event-subsection2-line">
           <div class="share-view">
@@ -174,7 +176,10 @@
           <p class="event-paragraph-resource"><%= r.description  %></p>
           <div class="div-tags">
             <p class="tags-txt">Tags:</p>
-            <div class="report-button"><p><%= r.tags.map(&:name).join(', ')  %></p></div>
+            <div class="report-button">
+
+              <p class="tag-margin"><%= r.tags.map(&:name).join(', ')  %></p>
+            </div>
           </div>
           <hr/ class="event-subsection2-line">
           <div class="share-view">

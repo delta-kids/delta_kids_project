@@ -121,12 +121,11 @@ Event.create([
 
 Topic.create(
 [
-  {name: 'Physical Health'},
-  {name: 'Mental Health'},
-  {name: 'Child Development'},
-  {name: 'Policy'},
-  {name: 'Child Safety'},
-  {name: 'Other (specify in tags)'}
+  {topic_name: 'Physical Health'},
+  {topic_name: 'Mental Health'},
+  {topic_name: 'Child Development'},
+  {topic_name: 'Policy'},
+  {topic_name: 'Child Safety'},
   ])
 
 ServiceType.create([
@@ -226,6 +225,10 @@ csv_text = File.read(Rails.root.join('db', 'resources_info_sheet1.csv'))
 csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')
 csv.each do |row|
 
+  Tag.create(
+    name: row['Tags']
+  )
+
   Resource.create(
   name: row['PDF Name'],
   feature: row['Feature?'],
@@ -234,37 +237,25 @@ csv.each do |row|
   approved: true,
   )
 
-#   Resource.all.each do |resource|
-#   resource_name = resource.name.downcase.gsub(' ', '_')
-#   directory = File.join(Rails.root, "app/assets/images/resources/stock/#{resource_name}")
-#
-#   # making sure the directory for this service exists
-#   if File.directory?(directory)
-#     gallery = resource.create_gallery
-#
-#     Dir.foreach(directory) do |item|
-#       next if item == '.' or item == '..'
-#       # do work on real items
-#       image = Photo.create!(gallery_id: gallery.id)
-#       image.file.store!(File.open(File.join(directory, item)))
-#       gallery.photos << image
-#     end
-#
-#     resource.save!
-#
-#   end
-# end
+  ResourceTopic.create(
+  resource: Resource.find_by(name: row['PDF Name']),
+  topic: Topic.find_by(topic_name: row['Topic']),
+  )
 
+  ResourceTagging.create(
+  resource: Resource.find_by(name: row['PDF Name']),
+  tag: Tag.find_by(name: row['Tags']),
+  )
 
   ResourceAgeGroup.create(
   resource: Resource.find_by(name: row['PDF Name']),
   age_group: AgeGroup.find_by(age: row['Age']),
   )
 
-  Tag.create(
-    name: row['Tags']
-  )
-
 end
 
-  puts "There are now #{Resource.count} rows in the Resource table and #{Tag.count} rows in the Tag table and  #{ResourceAgeGroup.count} rows in the ResourceAgeGroup table"
+  puts "Resource Count:#{Resource.count}"
+  puts "Tag Count:#{Tag.count}"
+  puts "ResourceTagging Count:#{ResourceTagging.count}"
+  puts "ResourceTopics Count:#{ResourceTopic.count}"
+  puts "ResourceAgeGroup Count:#{ResourceAgeGroup.count}"
