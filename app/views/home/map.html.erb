@@ -4,67 +4,93 @@ src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHDSOM8UnLFbt2SQYhPg2ZY7G
 <script src="//cdn.rawgit.com/mahnunchik/markerclustererplus/master/dist/markerclusterer.min.js"></script>
 
 <div class="wholePage">
-  <!-- First section div -->
+
   <%= render 'partials/map_filter' %>
 
-    <div class="col-md-9 calendar-subsection2" style='padding-top:40px'>
-      <div class="calendar-subsection2-card">
-        <!-- <div id="map"></div>
-        <script>
-        function initMap() {
+  <div class="col-md-9 calendar-subsection2" style='padding-top:40px'>
+    <div class="calendar-subsection2-card">
 
-
-        let options = {
-        zoom: 12,
-        center:{lat:49.0921 , lng:-123.0265}
-      };
-
-      let map = new google.maps.Map(document.getElementById('map'),options);
-
-      let marker = new google.maps.Marker({
-      position: {lat:49.0921 , lng:-123.0265},
-      map: map
-    });
-  }
-
-</script>
-<script async defer
-src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHDSOM8UnLFbt2SQYhPg2ZY7GQ601JS5Y&callback=initMap">
-</script> -->
-
-<!-- <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d83595.7217138828!2d-123.11159588831279!3d49.09868126439793!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5485fce1db8802b7%3A0xe7af052ac3c8ad9b!2sDelta%2C+BC%2C+Canada!5e0!3m2!1sen!2sus!4v1497812376694" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe> -->
-<%#= image_tag "https://user-images.githubusercontent.com/19618674/27262697-1aaca1ee-5411-11e7-9bfb-4f51346fc603.png", class: "calendar-subsection2-image" %>
-
-<div id="map">
-  <div id="multi_markers" style="width:100%; height:100%"></div>
-</div>
-
-<script type="text/javascript">
-handler = Gmaps.build('Google');
-handler.buildMap({ provider: {}, internal: {id: 'multi_markers'}}, function(){
-  markers = handler.addMarkers(<%=raw @hash.to_json %>);
-  handler.bounds.extendWith(markers);
-  handler.fitMapToBounds();
-});</script>
-
-
-<div class="calendar-subsection2-text">
-  <p class="calendar-subsection2-header">Map of Delta</p>
-  <div class="calendar-subsection2-text" style="background-color: #fff">
-    <div class="calendar-subsection2-details">
-      <p class="event-paragraph">This is Delta. It includes the communities of Tsawwassen, Ladner, and North Delta.
-        On the north side it is bordered by the Fraser River and 96th Avenue.
-        On the east side, it is bordered by Scott Road (or 120th Street).</p>
+      <div id="map">
+        <div id="multi_markers" style="width:100%; height:100%"></div>
       </div>
+
+      <script type="text/javascript">
+      handler = Gmaps.build('Google');
+      handler.buildMap({ provider: {}, internal: {id: 'multi_markers'}}, function(){
+        markers = handler.addMarkers(<%=raw @hash.to_json %>);
+        handler.bounds.extendWith(markers);
+        handler.fitMapToBounds();
+      });</script>
+
+
+      <div class="calendar-subsection2-text">
+        <p class="calendar-subsection2-header">Map of Delta</p>
+        <div class="calendar-subsection2-text" style="background-color: #fff">
+          <div class="calendar-subsection2-details">
+            <p class="event-paragraph">This is Delta. It includes the communities of Tsawwassen, Ladner, and North Delta.
+              On the north side it is bordered by the Fraser River and 96th Avenue.
+              On the east side, it is bordered by Scott Road (or 120th Street).</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="container-fluid">
+        <p class="bree-font">Results (<%= @map_search_results.total_count %>)</p>
+        <% for event in @map_search_results %>
+        <% if event.approved != true %>
+        <% else %>
+        <div class="calendar-subsection2-card light-blue-bg-color" style="margin-top:30px">
+          <div class="calendar-subsection2-text" style="background-color: #fff">
+            <div class="calendar-subsection2-details">
+              <p class="calendar-subsection2-header2"><%= event.title %></p>
+              <div class="event-info">
+                <div>
+                  <%= image_tag "icon-calendar.svg", class: "event-info-icon" %>
+                  <p class="event-info-txt-bold">Date:</p>
+                  <p class="event-info-txt"><%= event.start_date %></p>
+                  <p class="event-info-txt"> - <%= event.end_date %></p>
+                </div>
+                <div class="event-info1">
+                  <%= image_tag "icon-clock.svg", class: "event-info-icon" %>
+                  <% if event.start_time %>
+                  <p class="event-info-txt"><%= event.start_time.strftime("%I:%M %p") %></p>
+                  <% end %>
+                  <% if event.end_time %>
+                  <p class="event-info-txt"> - <%= event.end_time.strftime("%I:%M %p") %></p>
+                  <% end %>
+                </div>
+                <div class="event-info1">
+                  <%= image_tag "icon-baby.svg", class: "event-info-icon" %>
+                  <% event.age_groups.each do |age| %>
+                  <p class="event-info-txt"><%= age.age %></p>
+                  <% end %>
+                </div>
+                <div class="event-info1">
+                  <%= image_tag "icon-tag.svg", class: "event-info-icon" %>
+                  <p class="event-info-txt"><%= event.cost %></p>
+                </div>
+                <div class="event-info1">
+                  <%= image_tag "icon-location-pin.svg", class: "event-info-icon" %>
+                  <p class="event-info-txt"><%= event.event_location %></p>
+                </div>
+              </div>
+              <p class="event-paragraph ellipsis-3"><%= event.description %></p>
+              <div class="event-info2">
+                <!-- <p  class="event-info-bold2">Learn More</p> -->
+                <p><%= link_to 'Learn More', event_learn_more_path(event), class: "event-info-bold2" %></p>
+                <%= image_tag "cursor.svg", class: "event-info-icon2" %>
+              </div>
+            </div>
+          </div>
+        </div>
+        <% end %>
+        <% end %>
+      </div>
+      <div class="container-fluid center-flex-content bree-font" style="align-items:center;">
+        <%= paginate @map_search_results, window: 2 %>
+      </div>
+
     </div>
   </div>
-</div>
-
-</div>
-
-
-</div>
-</div>
-</div>
-
 </div>

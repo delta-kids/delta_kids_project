@@ -35,6 +35,7 @@ class HomeController < ApplicationController
   def map
     @events = apply_scopes(Event).all
     @map_events = @events.search(params[:term])
+    @map_search_results = @map_events.search(params[:term]).page(params[:page]).per(5)
     @hash = Gmaps4rails.build_markers(@map_events) do |event, marker|
       marker.lat event.latitude
       marker.lng event.longitude
