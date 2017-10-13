@@ -70,8 +70,8 @@ User.create([
 
 Event.create([
   {title: 'Ladner Test Event',
-  start_date: "2017-09-29",
-  end_date: "2017-09-29",
+  start_date: "2017-10-29",
+  end_date: "2017-10-29",
   start_time: "12:00",
   end_time: "2:00",
   event_location: "Ladner",
@@ -87,8 +87,8 @@ Event.create([
 
 Event.create([
   {title: 'North Delta Test Event',
-  start_date: "2017-09-29",
-  end_date: "2017-09-29",
+  start_date: "2017-10-25",
+  end_date: "2017-10-25",
   start_time: "17:00",
   end_time: "18:00",
   event_location: "North Delta",
@@ -104,8 +104,8 @@ Event.create([
 
 Event.create([
   {title: 'Tsawwassen Test Event',
-  start_date: "2017-010-10",
-  end_date: "2017-010-10",
+  start_date: "2017-10-15",
+  end_date: "2017-10-15",
   start_time: "11:00",
   end_time: "3:00",
   event_location: "Tsawwassen",
@@ -119,14 +119,13 @@ Event.create([
   contact_email: "j.doe@fake.ca"},
 ])
 
-Topic.create(
-[
-  {topic_name: 'Physical Health'},
-  {topic_name: 'Mental Health'},
-  {topic_name: 'Child Development'},
-  {topic_name: 'Policy'},
-  {topic_name: 'Child Safety'},
-  ])
+Topic.create([
+{topic_name: 'Physical Health'},
+{topic_name: 'Mental Health'},
+{topic_name: 'Child Development'},
+{topic_name: 'Policy'},
+{topic_name: 'Child Safety'},
+])
 
 ServiceType.create([
 {name: 'Child Advocacy'},

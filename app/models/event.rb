@@ -6,8 +6,8 @@ class Event < ApplicationRecord
   scope :event_location, -> event_location { where(:event_location => event_location) }
   scope :registration, -> registration { where(:registration => registration) }
   scope :cost, -> cost { where(:cost => cost) }
-  scope :age_groups, -> age_groups { Event.joins(:age_groups).where(:age_groups => {id: age_groups })}
-  scope :program_types, -> program_types { Event.joins(:program_types).where(:program_types => {id: program_types })}
+  scope :program_type, -> program_type_id { Event.includes(:program_types).where(:program_types => {:id => program_type_id})}
+  scope :event_age_group, -> age_id { Event.includes(:age_groups).where(:age_groups => {:id => age_id})}
 
   mount_uploader :image, ImageUploader
 

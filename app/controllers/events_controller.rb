@@ -6,8 +6,9 @@ class EventsController < ApplicationController
   has_scope :event_location, :type => :array
   has_scope :registration, :type => :array
   has_scope :cost, :type => :array
-  has_scope :age_groups, :type => :array
-  has_scope :program_types, :type => :array
+  has_scope :program_type, :type => :array
+  has_scope :event_age_group, :type => :array
+
 
 
   def index
@@ -71,7 +72,7 @@ class EventsController < ApplicationController
     { tag_ids: [] }
     ])
   end
-  
+
   def find_event
     @event = Event.find params[:id]
   end
