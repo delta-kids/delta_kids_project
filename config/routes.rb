@@ -83,6 +83,8 @@ Rails.application.routes.draw do
 
   post '/contact_submit', to: 'home#submit', as: 'contacted'
 
+
+
   resources :resources
 
   resources :services
