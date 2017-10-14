@@ -43,7 +43,7 @@
   margin: auto;
   width: 95%;
   height: 400px;
-  object-fit: fill;
+  object-fit: cover;
   background-color: #D1F0F4;
   margin-bottom:2%;
   margin-top:1%;

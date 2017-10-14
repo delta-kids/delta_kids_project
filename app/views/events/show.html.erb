@@ -19,6 +19,7 @@
                   <p class='font-20'><strong>End Date: </strong><%= @event.end_date %></p>
                   <p class='font-20'><strong>End Time: </strong><%= @event.end_time.strftime("%I:%M%p") %></p>
                   <p class='font-20'><strong>Event Repeat: </strong><%= @event.event_repeat %></p>
+                  <p class='font-20'><strong>Location: </strong><%= @event.event_location %></p>
                   <p class='font-20'><strong>Address: </strong><%= @event.address %></p>
                   <p class='font-20'><strong>Age Group: </strong><%= @event.age_groups.map(&:age).join(', ') %></p>
                   <p class='font-20'><strong>Cost: </strong><%= @event.cost %></p>
@@ -26,6 +27,7 @@
                   <p class='font-20'><strong>Registration: </strong><%= @event.registration %></p>
                   <p class='font-20'><strong>Description: </strong><%= @event.description %></p>
                   <p class='font-20'><strong>Tags: </strong><%= @event.tags.map(&:name).join(', ') %></p>
+                  <p class='font-20'><strong>More Info: </strong><%= @event.more_info %></p>
                   <p class='font-20'><strong>Contact Name: </strong><%= @event.contact_name %></p>
                   <p class='font-20'><strong>Contact Email: </strong><%= @event.contact_email %></p>
                   <p class='font-20'><strong>Image: </strong></p>
