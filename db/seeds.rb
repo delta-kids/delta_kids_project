@@ -234,6 +234,7 @@ csv.each do |row|
   resource_location: row['Location'],
   description: row['Description'],
   approved: true,
+  resource_type: row['Type'],
   )
 
   ResourceTopic.create(

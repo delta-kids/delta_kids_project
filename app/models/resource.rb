@@ -1,6 +1,7 @@
 class Resource < ApplicationRecord
-  scope :by_date, -> start_date, end_date { where("start_date = ? AND end_date = ?", start_date, end_date) }
+  # scope :by_date, -> start_date, end_date { where("start_date = ? AND end_date = ?", start_date, end_date) }
   scope :resource_location, -> resource_location { where(:resource_location => resource_location) }
+  scope :resource_type, -> resource_type { where(:resource_type => resource_type) }
   scope :resource_topic, -> topic_id { Resource.includes(:topics).where(:topics => {:id => topic_id})}
   scope :resource_age_group, -> age_id { Resource.includes(:age_groups).where(:age_groups => {:id => age_id})}
 

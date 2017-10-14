@@ -17,13 +17,13 @@
         <%= submit_tag "Search", :name => nil, class:'btn-primary' %>
         <br>
         <br>
-        <div class="form-group">
+        <!-- <div class="form-group">
           <%= label_tag  "start_date", "Start Date" %>
           <%= text_field_tag "start_date",Date.current(), placeholder: "YYYY/MM/DD", class: 'datepicker form date-time-width form-padding' %>
           <br>
           <%= label_tag  "end_date", "End Date", style:"padding-right:6px;" %>
           <%= text_field_tag "end_date",Date.current() + 1.month, placeholder: "YYYY/MM/DD", class: 'datepicker form form-padding date-time-width' %>
-        </div>
+        </div> -->
       </div>
       <br>
       <hr>
@@ -98,14 +98,14 @@
           <a data-toggle="collapse" data-target=".collapse-for"><%= image_tag "icon-chevron-up.svg", class: "filter-header-chevron a-chevron"  %></a>
         </div>
         <div class="collapse-for collapse in">
-          <%= check_box_tag("Tips & Guidelines") %>
-          <%= label_tag(:art_and_culture, "Tips & Guidelines", class:'radio-spacing font-16') %>
+          <%= check_box_tag("resource_type[]", "Tips & Guidelines", "checked") %>
+          <%= label_tag(:resource_type, "Tips & Guidelines", class:'radio-spacing font-16') %>
           <br>
-          <%= check_box_tag("Report") %>
-          <%= label_tag(:art_and_culture, "Report", class:'radio-spacing font-16') %>
+          <%= check_box_tag("resource_type[]", "Report", "checked") %>
+          <%= label_tag(:resource_type, "Report", class:'radio-spacing font-16') %>
           <br>
-          <%= check_box_tag("Report") %>
-          <%= label_tag(:art_and_culture, "Research", class:'radio-spacing font-16') %>
+          <%= check_box_tag("resource_type[]","Research", "checked") %>
+          <%= label_tag(:resource_type, "Research", class:'radio-spacing font-16') %>
           <br>
           <hr/ class="filterCard-line">
         </div>

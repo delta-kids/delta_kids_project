@@ -1,7 +1,8 @@
 class HomeController < ApplicationController
   # before_action :authenticate_user!, only: [:dashboard]
 
-  has_scope :by_date, :using => [:start_date, :end_date], :type => :hash
+  has_scope :by_start_date
+  has_scope :by_end_date
   has_scope :event_location, :type => :array
   has_scope :registration, :type => :array
   has_scope :cost, :type => :array

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171011204709) do
+ActiveRecord::Schema.define(version: 20171014040850) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -189,6 +189,7 @@ ActiveRecord::Schema.define(version: 20171011204709) do
     t.string "published_date"
     t.string "string"
     t.string "resource_file"
+    t.string "resource_type"
     t.index ["organization_id"], name: "index_resources_on_organization_id"
   end
 
