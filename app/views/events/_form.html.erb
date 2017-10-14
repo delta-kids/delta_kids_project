@@ -22,7 +22,7 @@
 
             <div class="form-group center-flex-content">
               <label for='start_date' style="margin-right:47px;">Start Date</label>
-              <%= f.text_field :start_date, class: 'start-date datepicker form date-time-width',placeholder:"YYYY/MM/DD", :required => true %>
+              <%= f.text_field :start_date, class: 'start-date datepicker form date-time-width',placeholder:"DD/MM/YYYY", :required => true %>
 
               <%= f.label :"Start Time", class: 'form-padding caps', style:'margin:auto;' %>
               <%= f.text_field :start_time, class: 'form dateselect-time date-time-width', :required => true %>
@@ -32,7 +32,7 @@
 
               <div class="form-group center-flex-content">
                 <label for='end_date' style="margin-right:46px">End Date</label>
-                <%= f.text_field :end_date, class: 'end-date datepicker form form-padding date-time-width',placeholder:"YYYY/MM/DD", :required => true %>
+                <%= f.text_field :end_date, class: 'end-date datepicker form form-padding date-time-width',placeholder:"DD/MM/YYYY", :required => true %>
                 <%= f.label :"End Time", class: 'form-padding caps', style:'margin:auto;', :required => true %>
                 <%= f.text_field :end_time, class: 'form dateselect-time form-padding date-time-width', :required => true %>
               </div>
@@ -70,7 +70,7 @@
 
             <!-- AGE GROUP -->
             <div class="form-group center-flex-content">
-              <%= f.label :Age_group, class:'label-baseline caps' %>
+              <%= f.label :age_group, class:'label-baseline caps' %>
               <div class="form-group event-form-width dropbox-container">
                 <%= f.collection_select :age_group_ids,
                 AgeGroup.all,
@@ -107,7 +107,7 @@
 
             <!-- ACTIVITY TYPE -->
             <div class="form-group center-flex-content">
-              <%= f.label :program_type, class:'label-baseline caps' %>
+              <%= f.label :activity_type, class:'label-baseline caps' %>
               <div class="form-group event-form-width dropbox-container">
                 <%= f.collection_select :program_type_ids,
                 ProgramType.all,
@@ -121,7 +121,7 @@
 
             <!-- TAGS -->
             <div class="form-group center-flex-content">
-              <%= f.label :EventTaggings, class:'label-baseline caps' %>
+              <%= f.label :Tags, class:'label-baseline caps' %>
               <div class="form-group event-form-width dropbox-container">
                 <%= f.collection_select :tag_ids,
                 Tag.all,
@@ -147,6 +147,7 @@
               <%= f.label :description, class:'label-baseline' %>
               <%= f.text_area :description, class: 'form form-control form-padding event-form-width', :required => true %>
             </div>
+
             <!-- IMAGE UPLOADER -->
             <div class="form-group center-flex-content">
               <%= f.label :image, class: "label-baseline" %>
@@ -156,7 +157,7 @@
             <!-- MORE INFO, URLs -->
             <div class="form-group center-flex-content">
               <%= f.label :more_info, class:'label-baseline caps' %>
-              <%= f.text_field :more_info, class: 'form form-control form-padding event-form-width', placeholder: "Provide Web Links Here" %>
+              <%= f.text_field :more_info, class: 'form form-control form-padding event-form-width', placeholder: "Provide web links here" %>
             </div>
 
             <!-- CONTACT NAME/EMAIL -->
@@ -168,7 +169,6 @@
               <%= f.label :"Contact email", class:'label-baseline caps' %>
               <%= f.email_field :contact_email, class: 'form form-control form-padding event-form-width', :required => true %>
             </div>
-
             <br>
             <div class="form-group">
               <%= f.submit class: 'btn btn-primary form form-control form-padding event-form-width' %>

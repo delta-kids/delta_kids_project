@@ -16,8 +16,9 @@
                 <% @events.each do |event| %>
                 <p class="font-16"><%= link_to event.title, event_path(event) %></p>
                 <hr>
-                <% end %>
+                <% end %><div class="container-fluid center-flex-content bree-font" style="align-items:center;">
                 <%= paginate @events, window: 2 %>
+              </div>
               </div>
             </div>
           </div>

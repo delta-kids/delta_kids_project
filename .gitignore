@@ -20,4 +20,5 @@
 
 */.DS_Store
 /app/.DS_Store
+/config/initializers/app_keys.rb
 /app/assets/.DS_Store

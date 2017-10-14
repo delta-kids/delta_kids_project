@@ -11,7 +11,7 @@ class ServicesController < ApplicationController
 
   def pregnancy_babies
     @services = Service.all.where(:category_id => '3')
-    @help_crisis = @services.where("service_type_id = '4'").order(description: :asc).page(params[:page]).per(8)
+    @help_crisis = @services.where("service_type_id = '8'").order(description: :asc).page(params[:page]).per(8)
     @baby_health = @services.where("service_type_id = '3'").order(description: :asc).page(params[:page]).per(8)
     @support = @services.where("service_type_id = '8'").order(description: :asc).page(params[:page]).per(8)
     @load_service = @services.order(description: :asc).page(params[:page]).per(8)
@@ -19,7 +19,7 @@ class ServicesController < ApplicationController
     url = request.path_info
     if url.include?('pregnancy_babies/help_crisis')
       @load_service = @help_crisis
-    elsif url.include?('pregnancy_babies/support')
+    elsif url.include?('pregnancy_babies/health')
       @load_service = @baby_health
     elsif url.include?('pregnancy_babies/support')
       @load_service = @support
@@ -52,16 +52,16 @@ class ServicesController < ApplicationController
     @help_crisis = @services.where("service_type_id = '4'").order(description: :asc).page(params[:page]).per(8)
     @child_preschool = @services.where("service_type_id = '7'").order(description: :asc).page(params[:page]).per(8)
     @assistance = @services.where("service_type_id = '6'").order(description: :asc).page(params[:page]).per(8)
-    @support = @services.where("service_type_id = '5'").order(description: :asc).page(params[:page]).per(8)
+    @support = @services.where("service_type_id = '8'").order(description: :asc).page(params[:page]).per(8)
     @load_service = @services.order(description: :asc).page(params[:page]).per(8)
 
     url = request.path_info
     if url.include?('families/help_crisis')
       @load_service = @help_crisis
-    elsif url.include?('families/childcare')
-      @load_service = @child_advocacy
+    elsif url.include?('services/families/childcare')
+      @load_service = @child_preschool
     elsif url.include?('families/assistance')
-      @load_service = @health_development
+      @load_service = @assistance
     elsif url.include?('families/support')
       @load_service = @support
     end

@@ -107,7 +107,7 @@
 
             <!-- ACTIVITY TYPE -->
             <div class="form-group center-flex-content">
-              <%= f.label :program_type, class:'label-baseline caps' %>
+              <%= f.label :activity_type, class:'label-baseline caps' %>
               <div class="form-group event-form-width dropbox-container">
                 <%= f.collection_select :program_type_ids,
                 ProgramType.all,
@@ -121,7 +121,7 @@
 
             <!-- TAGS -->
             <div class="form-group center-flex-content">
-              <%= f.label :EventTaggings, class:'label-baseline caps' %>
+              <%= f.label :Tags, class:'label-baseline caps' %>
               <div class="form-group event-form-width dropbox-container">
                 <%= f.collection_select :tag_ids,
                 Tag.all,
@@ -145,7 +145,7 @@
             <!-- EVENT DESCRIPTION -->
             <div class="form-group">
               <%= f.label :description, class:'label-baseline' %>
-              <%= f.text_area :description, class: 'form form-control form-padding event-form-width caps', :required => true %>
+              <%= f.text_area :description, class: 'form form-control form-padding event-form-width', :required => true %>
             </div>
 
             <!-- IMAGE UPLOADER -->
@@ -154,8 +154,6 @@
               <%= f.file_field :image  %>
             </div>
 
-            <!-- PLACEHOLDER, NEED TO COME BACK AND DO -->
-            <h3>UPLOAD PHOTO PLACEHOLDER</h3>
             <!-- MORE INFO, URLs -->
             <div class="form-group center-flex-content">
               <%= f.label :more_info, class:'label-baseline caps' %>

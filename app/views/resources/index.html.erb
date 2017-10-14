@@ -12,27 +12,20 @@
         </div>
       -->
       <div class="">
-        <%= form_tag() do %>
-        <%= text_field_tag :term %>
-        <%= submit_tag 'Search', class:'btn-primary' %>
-        <% end %>
+        <%= form_tag(resources_path, method: :get) do %>
+        <%= text_field_tag :term, params[:term] %>
+        <%= submit_tag "Search", :name => nil, class:'btn-primary' %>
         <br>
-
-        <div class="form-group">
-          <label for='start_date' class="">Start Date</label>
-          <input type="text" class='datepicker form date-time-width form-padding' placeholder="MM/DD/YYYY" >
+        <br>
+        <!-- <div class="form-group">
+          <%= label_tag  "start_date", "Start Date" %>
+          <%= text_field_tag "start_date",Date.current(), placeholder: "YYYY/MM/DD", class: 'datepicker form date-time-width form-padding' %>
           <br>
-          <label for='end_date' class="">End Date &nbsp</label>
-          <input type="text" class='datepicker form form-padding date-time-width' placeholder="MM/DD/YYYY">
-
-          <script type="text/javascript">
-          $(document).ready(function(){
-            $('.datepicker').datepicker();
-          });
-          </script>
-
-        </div>
+          <%= label_tag  "end_date", "End Date", style:"padding-right:6px;" %>
+          <%= text_field_tag "end_date",Date.current() + 1.month, placeholder: "YYYY/MM/DD", class: 'datepicker form form-padding date-time-width' %>
+        </div> -->
       </div>
+      <br>
       <hr>
 
       <div class="filterCard">
@@ -41,20 +34,20 @@
           <a data-toggle="collapse" data-target=".collapse-for"><%= image_tag "icon-chevron-up.svg", class: "filter-header-chevron a-chevron"  %></a>
         </div>
         <div class="collapse-for collapse in">
-          <%= check_box_tag("Physical Health") %>
-          <%= label_tag(:art_and_culture, "Physical Health", class:'radio-spacing font-16') %>
+          <%= check_box_tag("resource_topic[]","1", "checked") %>
+          <%= label_tag(:resource_topic, "Physical Health", class:'radio-spacing font-16') %>
           <br>
-          <%= check_box_tag("Mental Health") %>
-          <%= label_tag(:art_and_culture, "Mental Health", class:'radio-spacing font-16') %>
+          <%= check_box_tag("resource_topic[]","2", "checked") %>
+          <%= label_tag(:resource_topic, "Mental Health", class:'radio-spacing font-16') %>
           <br>
-          <%= check_box_tag("Child Development") %>
-          <%= label_tag(:art_and_culture, "Child Development", class:'radio-spacing font-16') %>
+          <%= check_box_tag("resource_topic[]","3", "checked") %>
+          <%= label_tag(:resource_topic, "Child Development", class:'radio-spacing font-16') %>
           <br>
-          <%= check_box_tag("Policy") %>
-          <%= label_tag(:art_and_culture, "Policy", class:'radio-spacing font-16') %>
+          <%= check_box_tag("resource_topic[]","4", "checked") %>
+          <%= label_tag(:resource_topic, "Policy", class:'radio-spacing font-16') %>
           <br>
-          <%= check_box_tag("Child Safety") %>
-          <%= label_tag(:art_and_culture, "Child Safety", class:'radio-spacing font-16') %>
+          <%= check_box_tag("resource_topic[]","5", "checked") %>
+          <%= label_tag(:resource_topic, "Child Safety", class:'radio-spacing font-16') %>
           <br>
           <hr/ class="filterCard-line">
         </div>
@@ -66,14 +59,17 @@
           <a data-toggle="collapse" data-target=".collapse-for"><%= image_tag "icon-chevron-up.svg", class: "filter-header-chevron a-chevron"  %></a>
         </div>
         <div class="collapse-for collapse in">
-          <%= check_box_tag("Delta") %>
-          <%= label_tag(:art_and_culture, "Delta", class:'radio-spacing font-16') %>
+          <%= check_box_tag("resource_location[]","Delta","checked") %>
+          <%= label_tag(:resource_location, "Delta", class:'radio-spacing font-16') %>
           <br>
-          <%= check_box_tag("BC") %>
-          <%= label_tag(:art_and_culture, "BC", class:'radio-spacing font-16') %>
+          <%= check_box_tag("resource_location[]","BC","checked") %>
+          <%= label_tag(:resource_location, "BC", class:'radio-spacing font-16') %>
           <br>
-          <%= check_box_tag("Canada") %>
-          <%= label_tag(:art_and_culture, "Canada", class:'radio-spacing font-16') %>
+          <%= check_box_tag("resource_location[]","Canada","checked") %>
+          <%= label_tag(:resource_location, "Canada", class:'radio-spacing font-16') %>
+          <br>
+          <%= check_box_tag("resource_location[]","N/A","checked") %>
+          <%= label_tag(:resource_location, "N/A", class:'radio-spacing font-16') %>
           <br>
           <hr/ class="filterCard-line">
         </div>
@@ -86,11 +82,11 @@
           <a data-toggle="collapse" data-target=".collapse-for"><%= image_tag "icon-chevron-up.svg", class: "filter-header-chevron a-chevron"  %></a>
         </div>
         <div class="collapse-for collapse in">
-          <%= check_box_tag("0-5 years") %>
-          <%= label_tag(:art_and_culture, "0-5 years", class:'radio-spacing font-16') %>
+          <%= check_box_tag("resource_age_group[]","1","checked") %>
+          <%= label_tag(:resource_age_group, "0-5 years", class:'radio-spacing font-16') %>
           <br>
-          <%= check_box_tag("6-12 years") %>
-          <%= label_tag(:art_and_culture, "6-12 years", class:'radio-spacing font-16') %>
+          <%= check_box_tag("resource_age_group[]","2","checked") %>
+          <%= label_tag(:resource_age_group, "6-12 years", class:'radio-spacing font-16') %>
           <br>
           <hr/ class="filterCard-line">
         </div>
@@ -102,14 +98,14 @@
           <a data-toggle="collapse" data-target=".collapse-for"><%= image_tag "icon-chevron-up.svg", class: "filter-header-chevron a-chevron"  %></a>
         </div>
         <div class="collapse-for collapse in">
-          <%= check_box_tag("Tips & Guidelines") %>
-          <%= label_tag(:art_and_culture, "Tips & Guidelines", class:'radio-spacing font-16') %>
+          <%= check_box_tag("resource_type[]", "Tips & Guidelines", "checked") %>
+          <%= label_tag(:resource_type, "Tips & Guidelines", class:'radio-spacing font-16') %>
           <br>
-          <%= check_box_tag("Report") %>
-          <%= label_tag(:art_and_culture, "Report", class:'radio-spacing font-16') %>
+          <%= check_box_tag("resource_type[]", "Report", "checked") %>
+          <%= label_tag(:resource_type, "Report", class:'radio-spacing font-16') %>
           <br>
-          <%= check_box_tag("Report") %>
-          <%= label_tag(:art_and_culture, "Research", class:'radio-spacing font-16') %>
+          <%= check_box_tag("resource_type[]","Research", "checked") %>
+          <%= label_tag(:resource_type, "Research", class:'radio-spacing font-16') %>
           <br>
           <hr/ class="filterCard-line">
         </div>
@@ -117,6 +113,7 @@
       <div class="center-flex-content">
         <%= submit_tag 'Filter', class:"btn-primary btn-lg filter-btn" %>
       </div>
+      <% end %>
       <div class="center-flex-content">
         <%= button_to "Add New Resource", new_resource_path, :method => "get", class:"btn-primary btn-lg filter-btn" %>
       </div>
@@ -131,22 +128,23 @@
         </div>
       </div>
 
-      <p class="event-header">Featured</p>
-
-
+      <p class="bree-font">Featured</p>
+      <%  @featured.each do |r| %>
       <div class="event-subsection2-text-resource">
         <div class="event-subsection2-details">
-          <p class="event-subsection2-header2">BC Smart Family Policy 2010 Report Card</p>
+          <p class="event-subsection2-header2"><%= r.name %></p>
           <div class="event-info">
             <div>
               <%= image_tag "icon-calendar.svg", class: "event-info-icon" %>
-              <p class="event-info-txt">Published in 2010</p>
+              <p class="event-info-txt"><%= r.created_at %></p>
             </div>
           </div>
-          <p class="event-paragraph-resource">HELP report card describing British Columbia’s progress with implementing the family policy investments described in the 15 by 15 report.</p>
+          <p class="event-paragraph-resource"><%= r.description  %></p>
           <div class="div-tags">
             <p class="tags-txt">Tags:</p>
-            <div class="report-button">Report</div>
+            <div class="report-button">
+              <p class="tag-margin"><%= r.tags.map(&:name).join(', ')  %></p>
+            </div>
           </div>
           <hr/ class="event-subsection2-line">
           <div class="share-view">
@@ -156,25 +154,32 @@
             </div>
             <div class="event-info1">
               <%= image_tag "icon-acrobat.svg", class: "event-info-icon" %>
-              <p class="resource-info-txt">View</p>
+              <p class="resource-info-txt"><%= link_to "View", asset_path(r.resource_file) %></p>
             </div>
           </div>
         </div>
       </div>
+      <% end %>
 
+      <p class="bree-font">Results (<%= @resources_search.total_count %>)</p>
+      <br>
+      <%  @resources_search.each do |r| %>
       <div class="event-subsection2-text-resource">
         <div class="event-subsection2-details">
-          <p class="event-subsection2-header2">Crisis in Kindergarten – Why Children Need to Play in School</p>
+          <p class="event-subsection2-header2"><%= r.name %></p>
           <div class="event-info">
             <div>
               <%= image_tag "icon-calendar.svg", class: "event-info-icon" %>
-              <p class="event-info-txt">Published in 2009</p>
+              <p class="event-info-txt"><%= r.created_at %></p>
             </div>
           </div>
-          <p class="event-paragraph-resource">A report based on 9 recent studies and written by the Alliance for Childhood in the U.S. , with specific recommendations of change needed in Kindergarten education.</p>
+          <p class="event-paragraph-resource"><%= r.description  %></p>
           <div class="div-tags">
             <p class="tags-txt">Tags:</p>
-            <div class="report-button">Report</div>
+            <div class="report-button">
+
+              <p class="tag-margin"><%= r.tags.map(&:name).join(', ')  %></p>
+            </div>
           </div>
           <hr/ class="event-subsection2-line">
           <div class="share-view">
@@ -184,48 +189,19 @@
             </div>
             <div class="event-info1">
               <%= image_tag "icon-acrobat.svg", class: "event-info-icon" %>
-              <p class="resource-info-txt">View</p>
+              <p class="resource-info-txt"><%= link_to "View", asset_path(r.resource_file) %></p>
             </div>
           </div>
         </div>
       </div>
-
-
-      <div class="event-subsection2-text-resource">
-        <div class="event-subsection2-details">
-          <p class="event-subsection2-header2">International Perspectives on Early Childhood Development</p>
-          <div class="event-info">
-            <div>
-              <%= image_tag "icon-calendar.svg", class: "event-info-icon" %>
-              <p class="event-info-txt">Published in 2009</p>
-            </div>
-          </div>
-          <p class="event-paragraph-resource">Knowledge Network for Early Childhood Development paper looking at ECD and what can be done toward a successful approach where early childhood development is seen as a determinant of health.</p>
-          <div class="div-tags">
-            <p class="tags-txt">Tags:</p>
-            <div class="phealth-button">Physical Health</div>
-          </div>
-          <hr/ class="event-subsection2-line">
-          <div class="share-view">
-            <div class="event-info1">
-              <%= image_tag "icon-share.svg", class: "event-info-icon" %>
-              <p class="resource-info-txt">Share PDF</p>
-            </div>
-            <div class="event-info1">
-              <%= image_tag "icon-acrobat.svg", class: "event-info-icon" %>
-              <p class="resource-info-txt">View</p>
-            </div>
-          </div>
-        </div>
+      <% end %>
+      <div class="container-fluid center-flex-content bree-font" style="align-items:center;">
+        <%= paginate @resources_search, window: 2 %>
       </div>
-      <div id='button-seemore'>SEE MORE</div>
     </div>
   </div>
 </div>
 </div>
 </div>
-
-
-
 
 <%= render 'partials/footer' %>

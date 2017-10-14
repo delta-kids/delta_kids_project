@@ -2,11 +2,15 @@ class Event < ApplicationRecord
   # belongs_to :organization, :class, optional: true
 
   # scope :by_date, -> (start_date: Date.current() - 9999.years, end_date: Date.current() + 9999.years) { where(start_date: start_date..end_date, end_date: start_date..end_date) }
-  scope :by_date, -> start_date, end_date { where("start_date = ? AND end_date = ?", start_date, end_date) }
+  scope :by_start_date, -> start_date { where(['start_date >= ?', start_date]) }
+  scope :by_end_date, -> end_date { where(['start_date <= ?', end_date]) }
+
+
   scope :event_location, -> event_location { where(:event_location => event_location) }
   scope :registration, -> registration { where(:registration => registration) }
   scope :cost, -> cost { where(:cost => cost) }
-  scope :age_groups, -> age_groups { Event.joins(:age_groups).where(:age_groups => {id: age_groups })}
+  scope :program_type, -> program_type_id { Event.includes(:program_types).where(:program_types => {:id => program_type_id})}
+  scope :event_age_group, -> age_id { Event.includes(:age_groups).where(:age_groups => {:id => age_id})}
 
   mount_uploader :image, ImageUploader
 
@@ -27,7 +31,7 @@ class Event < ApplicationRecord
 
   def self.search(term)
     if term
-      where('title LIKE ?', "%#{term}%").order('title ASC')
+      where('title ILIKE (?) OR description ILIKE (?)', "%#{term}%", "%#{term}%").order('title ASC')
     else
       order('title ASC')
     end
