@@ -92,7 +92,11 @@ class ProgramsController < ApplicationController
   end
 
   def learn_more
+    @program = Program.find(params[:id])
+    @similar_programs =  Program.limit(3).order("RANDOM()")
   end
+
+
   private
   def program_params
     params.require(:program).permit([:description, :registration, :cost, { program_type_ids: [] }, { organization_id: [] }])

@@ -8,13 +8,18 @@
 	padding-top: 15px;
 }
 
-#featured-carousel {
-	// width: fit-content;
+.event-image-container {
+	height:325px;
+	width: 100%;
 }
 
-.carousel-control.left, .carousel-control.right {
-    background-image: none !important;
-}
+// #featured-carousel {
+// 	// width: fit-content;
+// }
+//
+// .carousel-control.left, .carousel-control.right {
+//     background-image: none !important;
+// }
 
 .calendar-row{
 	padding: 10px 3% 5% 3%;
@@ -127,11 +132,13 @@
 .calendar-subsection2-image {
 	background-color:#D1F0F4;
 	width: 100%;
-	height: auto;
+	height: 300px;
 }
 
 .calendar-subsection2-card {
   margin-right: 0px;
+	margin-bottom: 20px;
+	background-color: #fff;
 }
 
 .calendar-row .calendar-subsection2 {
@@ -172,11 +179,6 @@
 }
 
 .calendar-subsection2-text{
-	background-color: #fff;
-}
-
-.calendar-subsection2-card{
-	margin-bottom: 30px;
 	background-color: #fff;
 }
 

@@ -1,6 +1,12 @@
 class ResourcesController < ApplicationController
     before_action :find_resource, only: [:show, :edit, :update, :destroy]
 
+    # has_scope :by_date, :using => [:start_date, :end_date], :type => :hash
+    has_scope :resource_location, :type => :array
+    has_scope :resource_topic, :type => :array
+    has_scope :resource_age_group, :type => :array
+    has_scope :resource_type, :type => :array
+
 
     def new
       @resource = Resource.new
@@ -24,7 +30,9 @@ class ResourcesController < ApplicationController
     end
 
     def index
-      @resources = Resource.all
+      @featured = Resource.where(:feature => true)
+      @resources = apply_scopes(Resource).all
+      @resources_search = @resources.search(params[:term]).page(params[:page]).per(5)
     end
 
     def index2
@@ -44,12 +52,6 @@ class ResourcesController < ApplicationController
       @resources = Resource.where(:approved => false || nil).order(name: :asc).page(params[:page]).per(25)
     end
 
-    def approve_resource
-      @resource = Resource.find(params[:id])
-      @resource.update_attributes(approved: true)
-      redirect_to @resource, notice: "Resource Approved"
-    end
-
     def destroy
       if is_admin?
         @resource.destroy
@@ -62,7 +64,7 @@ class ResourcesController < ApplicationController
 
     private
     def resource_params
-      params.require(:resource).permit([:name, :feature, :feature_start_date, :feature_end_date, :feature_start_time, :feature_end_time, :resource_location, :description, :contact_name, :contact_email, :created_at, :updated_at, :approved, { topic_ids: [] } ])
+      params.require(:resource).permit([:name, :feature, :feature_start_date, :feature_end_date, :feature_start_time, :feature_end_time, :resource_location, :description, :contact_name, :contact_email, :created_at, :updated_at, :approved, :published_date, :term, :resource_file, { topic_ids: [] } ])
     end
     def find_resource
       @resource = Resource.find params[:id]

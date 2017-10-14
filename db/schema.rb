@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170618221423) do
+ActiveRecord::Schema.define(version: 20171014040850) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -58,8 +58,8 @@ ActiveRecord::Schema.define(version: 20170618221423) do
     t.string "title"
     t.date "start_date"
     t.date "end_date"
-    t.time "start_time"
-    t.time "end_time"
+    t.datetime "start_time"
+    t.datetime "end_time"
     t.string "event_repeat"
     t.string "event_location"
     t.text "address"
@@ -73,6 +73,9 @@ ActiveRecord::Schema.define(version: 20170618221423) do
     t.datetime "updated_at", null: false
     t.boolean "approved"
     t.bigint "organization_id"
+    t.float "latitude"
+    t.float "longitude"
+    t.string "image"
     t.index ["organization_id"], name: "index_events_on_organization_id"
   end
 
@@ -111,6 +114,7 @@ ActiveRecord::Schema.define(version: 20170618221423) do
     t.string "website"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "image"
   end
 
   create_table "program_age_groups", force: :cascade do |t|
@@ -182,6 +186,10 @@ ActiveRecord::Schema.define(version: 20170618221423) do
     t.datetime "updated_at", null: false
     t.boolean "approved"
     t.bigint "organization_id"
+    t.string "published_date"
+    t.string "string"
+    t.string "resource_file"
+    t.string "resource_type"
     t.index ["organization_id"], name: "index_resources_on_organization_id"
   end
 
@@ -210,7 +218,7 @@ ActiveRecord::Schema.define(version: 20170618221423) do
   end
 
   create_table "topics", force: :cascade do |t|
-    t.string "name"
+    t.string "topic_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

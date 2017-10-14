@@ -41,8 +41,9 @@
   display: block;
   position: relative;
   margin: auto;
-  width: 60%;
+  width: 95%;
   height: 400px;
+  object-fit: cover;
   background-color: #D1F0F4;
   margin-bottom:2%;
   margin-top:1%;

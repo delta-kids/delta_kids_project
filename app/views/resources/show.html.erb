@@ -10,39 +10,35 @@
 
           <div class="row">
             <div class="col-md-12">
-                  <div class="container-fluid">
-                    <br>
+              <div class="container-fluid">
+                <br>
+                <p class="bree-font"><%= @resource.name %></p>
+                <p class="font-20"><strong>Feature Resource: </strong><%= @resource.feature %></p>
+              
+                <h4>Commented Out Feated Date and Time</h4>
+                <p class="font-20"><strong>Resource Location: </strong><%= @resource.resource_location %></p>
+                <p class="font-20"><strong>Description: </strong><%= @resource.description %></p>
+                <p class="font-20"><strong>Uploaded File: </strong><%= link_to "View File", asset_path(@resource.resource_file) %></p>
+                <p class="font-20"><strong>Contact Name: </strong><%= @resource.contact_name %></p>
+                <p class="font-20"><strong>Contact Email: </strong><%= @resource.contact_email %></p>
 
-                  <p class="bree-font">Edit Resource</p>
+                <%= link_to 'Delete', resource_path(@resource),
+                method: :delete,
+                data: {confirm: 'Are you sure?'},
+                class: 'btn btn-danger edit-delete-btn-width', style:'color:white !important;' %>
 
-                  <p class="font-20"><strong>Resource Name: </strong><%= @resource.name %></p>
-                  <p class="font-20"><strong>Feature Resource: </strong><%= @resource.feature %></p>
-                  <p class="font-20"><strong>Feature Start Date: </strong><%= @resource.feature_start_date %></p>
-                  <p class="font-20"><strong>Feature Start Time: </strong><%= @resource.feature_start_time %></p>
-                  <p class="font-20"><strong>Feature End Date: </strong><%= @resource.feature_end_date %></p>
-                  <p class="font-20"><strong>Feature End Time: </strong><%= @resource.feature_end_time %></p>
-                  <p class="font-20"><strong>Resource Location: </strong><%= @resource.resource_location %></p>
-                  <p class="font-20"><strong>Description: </strong><%= @resource.description %></p>
-                  <p class="font-20"><strong>Contact Name: </strong><%= @resource.contact_name %></p>
-                  <p class="font-20"><strong>Contact Email: </strong><%= @resource.contact_email %></p>
-
-                      <%= link_to 'Delete', resource_path(@resource),
-                                            method: :delete,
-                                            data: {confirm: 'Are you sure?'},
-                                            class: 'btn btn-danger edit-delete-btn-width', style:'color:white !important;' %>
-
-                      <%= link_to 'Edit', edit_resource_path(@resource),
-                      class: 'btn btn-success form-padding edit-delete-btn-width'  %>
-                      <br>
-                      <br>
-                      <% if user_signed_in? %>
-                      <% if is_admin? %><% else %>
-                      <p class="font-16">
-                        * Please Note: You may only edit your request while it is still pending. When your request for a new Resource has been processed any further changes must be done by an Admin.
-                      </p>
-                      <br>
-                      <% end %>
-                      <% end %>
+                <%= link_to 'Edit', edit_resource_path(@resource),
+                class: 'btn btn-success form-padding edit-delete-btn-width'  %>
+                <br>
+                <br>
+                <% if user_signed_in? %>
+                <% if is_admin? %><% else %>
+                <p class="font-16">
+                  * Please Note: You may only edit your request while it is still pending. When your request for a new Resource has been processed any further changes must be done by an Admin.
+                </p>
+                <br>
+                <% end %>
+                <% end %>
 
               </div>
             </div>
@@ -50,11 +46,11 @@
 
           <% else %>
           <%= render 'partials/login_msg' %>
+        </div>
+        <% end %>
       </div>
-      <% end %>
     </div>
   </div>
-</div>
 </div>
 
 <!-- Rainbow Footer-->

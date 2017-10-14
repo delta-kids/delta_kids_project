@@ -1,5 +1,5 @@
 class AgeGroup < ApplicationRecord
-  validates :age, presence: { message: 'group must be provided'}, uniqueness: true
+  validates :age, presence: { message: 'Age Group must be provided'}, uniqueness: true
 
   has_many :EventAgeGroups, dependent: :destroy
   has_many :events, through: :EventAgeGroups

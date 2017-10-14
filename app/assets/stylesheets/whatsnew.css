@@ -3,6 +3,15 @@
   background: #D1F0F4;
 }
 
+.ellipsis-1 {
+  display: -webkit-box;
+  margin-bottom: 0px;
+  overflow : hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
 .ellipsis-3 {
   display: -webkit-box;
   overflow : hidden;
@@ -11,11 +20,11 @@
   -webkit-box-orient: vertical;
 }
 
-.ellipsis-1 {
+.ellipsis-4 {
   display: -webkit-box;
   overflow : hidden;
   text-overflow: ellipsis;
-  -webkit-line-clamp: 1;
+  -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
 }
 

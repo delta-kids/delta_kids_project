@@ -51,7 +51,7 @@ class OrganizationsController < ApplicationController
 
   private
   def organization_params
-    params.require(:organization).permit([:name, :description, :address, :phone, :website, { program_type_ids: [] }, { age_group_ids: [] }])
+    params.require(:organization).permit([:name, :description, :address, :phone, :website, :image, { program_type_ids: [] }, { age_group_ids: [] }])
   end
   def find_organization
     @organization = Organization.find params[:id]

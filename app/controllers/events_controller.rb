@@ -1,11 +1,22 @@
 class EventsController < ApplicationController
+  # ALL USERS, including ADMIN
   before_action :find_event, only: [:show, :edit, :update, :destroy]
 
-  # ALL USERS, including ADMIN
+  has_scope :by_start_date
+  has_scope :by_end_date
+  has_scope :event_location, :type => :array
+  has_scope :registration, :type => :array
+  has_scope :cost, :type => :array
+  has_scope :program_type, :type => :array
+  has_scope :event_age_group, :type => :array
+
+
 
   def index
-    @events = Event.all
-    @events_by_start_date = @events.group_by(&:start_date)
+    @events = apply_scopes(Event).all
+    @search_count = @events.search(params[:term])
+    @events_search = @events.search(params[:term]).page(params[:page]).per(5)
+    @events_by_start_date = @search_count.group_by(&:start_date)
   end
 
   def index2
@@ -17,6 +28,9 @@ class EventsController < ApplicationController
     @event = Event.find(params[:id])
   end
 
+  def learn_more
+    @event = Event.find(params[:id])
+  end
 
   def new
     @event = Event.new
@@ -42,12 +56,6 @@ class EventsController < ApplicationController
     @events = Event.where(:approved => false || nil).order(title: :asc).page(params[:page]).per(25)
   end
 
-  def approve_event
-    @event = Event.find(params[:id])
-    @event.update_attributes(approved: true)
-    redirect_to @event, notice: "Event Approved"
-  end
-
   def destroy
     if is_admin?
       @event.destroy
@@ -58,10 +66,14 @@ class EventsController < ApplicationController
     end
   end
 
+
   private
   def event_params
-    params.require(:event).permit([:title, :start_date, :end_date, :start_time, :end_time, :event_repeat, :event_location, :address, :cost, :registration, :more_info, :contact_name, :contact_email, :approved, :description, { age_group_ids: [] } ])
+    params.require(:event).permit([:title, :term, :start_date, :end_date, :start_time, :end_time, :event_repeat, :event_location, :address, :cost, :registration, :more_info, :contact_name, :contact_email, :approved, :description, :image, { age_group_ids: [] }, { program_type_ids: [] },
+    { tag_ids: [] }
+    ])
   end
+
   def find_event
     @event = Event.find params[:id]
   end
