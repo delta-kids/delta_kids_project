@@ -18,9 +18,8 @@
 //= require chosen-jquery
 //= require rails-ujs
 //= require underscore
-//= require gmaps4rails.base
-//= require gmaps4rails.googlemaps
-
+//= require gmaps/google
+//= require_tree .
 
 
 
