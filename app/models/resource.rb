@@ -19,7 +19,7 @@ class Resource < ApplicationRecord
 
   def self.search(term)
     if term
-      where('name ILIKE (?) OR description ILIKE (?)', "%#{term}%", "%#{term}%").order('title ASC')
+      where('name ILIKE (?) OR description ILIKE (?)', "%#{term}%", "%#{term}%").order('name ASC')
     else
       order('name ASC')
     end
