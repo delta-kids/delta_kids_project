@@ -20,7 +20,7 @@
 //= require underscore
 //= require gmaps4rails.base
 //= require gmaps4rails.googlemaps
-//= require_tree .
+
 
 
 
