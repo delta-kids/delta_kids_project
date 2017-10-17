@@ -9,7 +9,7 @@ class EventsController < ApplicationController
   has_scope :cost, :type => :array
   has_scope :program_type, :type => :array
   has_scope :age_group, :type => :array
-  
+
 
 
   def index
@@ -30,6 +30,7 @@ class EventsController < ApplicationController
 
   def learn_more
     @event = Event.find(params[:id])
+    @featured_events = Event.where(:featured => true).limit(3).order("RANDOM()")
   end
 
   def new
