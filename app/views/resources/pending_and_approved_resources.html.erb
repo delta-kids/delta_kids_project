@@ -10,61 +10,39 @@
           <% if is_admin? %>
           <div class="row">
             <div class="col-md-12">
+              <div class="container-fluid">
+                <h1 class="bree-font">Pending Resources</h1>
+                <br>
+                <% if @resources.count == 0 %>
+                <p class="font-16"> There are no Pending Resources at this time.</p>
+                <% else %>
+                <% @resources.each do |resource| %>
 
-              <h1>Pending Resources</h1>
-
-              <div class="table-responsive">
-
-                <table class="table table-bordered table-hover" style="text-align:center;">
-                  <thead>
-                    <tr>
-                      <th>Resouces</th>
-                      <th>Actions</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <% @resources.each do |resource| %>
-                    <tr>
-                      <td><p class="font-16"><%= link_to resource.name, resource_path(resource) %></p></td>
-                      <td><p class="font-16"><%= resource.resource_location %></p></td>
-                      <td>
-                        <%= form_for resource do |f| %>
-                          <%= f.hidden_field :approved, value: true %>
-                          <%= f.submit 'Approve', class: 'btn btn-default' %>
-                          <%= f.submit 'Decline', class: 'btn btn-default' %>
-                      <% end %>
-                      </td>
-                      </tr>
-                      <% end %>
-                    </tbody>
-                  </table>
-
-                  <h1>Approved Resources</h1>
-
-                  <table class="table table-bordered table-hover" style="text-align:center;">
-                    <thead>
-                      <tr>
-                        <th>Resource</th>
-                        <th>Actions</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                    </tbody>
-                  </table>
-
-                </div>
+                <p class="font-16"><%= link_to resource.title, resource_path(resource) %></p>
+                <hr>
+                <%= form_for resource do |f| %>
+                  <%= f.hidden_field :approved, value: true %>
+                  <%= f.submit 'Approve', class: 'btn btn-default edit-delete-btn-width' %>
+                  <%= f.submit 'Decline', class: 'btn btn-default edit-delete-btn-width' %>
+                  <% end %>
+                <% end %>
+                <% end %>
+                <div class="container-fluid center-flex-content bree-font" style="align-items:center;">
+                <%= paginate @resources, window: 2 %>
+              </div>
               </div>
             </div>
-            <% end %>
-            <% else %>
-            <%= render 'partials/login_msg' %>
           </div>
           <% end %>
-        </div>
+          <% else %>
+          <%= render 'partials/login_msg' %>
       </div>
+      <% end %>
     </div>
   </div>
+</div>
+</div>
 
-  <!-- Rainbow Footer-->
+<!-- Rainbow Footer-->
 
-  <%= render 'partials/footer' %>
+<%= render 'partials/footer' %>
