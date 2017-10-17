@@ -160,8 +160,8 @@ ProgramType.create([
 AgeGroup.create([
 {age: '0-5'},
 {age: '6-12'},
-{age: 'Parents'},
-{age: 'Childcare workers/providers'}
+{age: 'Adults'},
+{age: 'N/A'}
 ])
 
 

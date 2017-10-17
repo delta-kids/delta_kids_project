@@ -40,6 +40,8 @@ class HomeController < ApplicationController
     @programs = apply_scopes(Program).all
     @services = apply_scopes(Service).all
     @event_results = @events.search(params[:term])
+    @program_results = @programs.search(params[:term])
+    @service_results = @services.search(params[:term])
     @map_search_results = @event_results.page(params[:page]).per(5)
 
     @hash1 = Gmaps4rails.build_markers(@events) do |event, marker|

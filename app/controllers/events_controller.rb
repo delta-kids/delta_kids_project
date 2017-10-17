@@ -9,7 +9,7 @@ class EventsController < ApplicationController
   has_scope :cost, :type => :array
   has_scope :program_type, :type => :array
   has_scope :age_group, :type => :array
-
+  
 
 
   def index

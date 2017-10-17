@@ -1,6 +1,6 @@
 class Service < ApplicationRecord
 
-  scope :service_type, -> service_type_id { Event.includes(:service_types).where(:service_types => {:id => service_type_id})}
+  scope :service_type, -> service_type_id { self.includes(:service_types).where(:service_types => {:id => service_type_id}) if self.present?}
   scope :category, -> category_id { self.includes(:category).where(:category => {:id => category_id}) if self.present? }
 
   belongs_to :service_type

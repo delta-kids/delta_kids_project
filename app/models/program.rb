@@ -1,7 +1,7 @@
 class Program < ApplicationRecord
 
-  
-  scope :program_type, -> program_type_id { Event.includes(:program_types).where(:program_types => {:id => program_type_id})}
+
+  scope :program_type, -> program_type_id { self.includes(:program_types).where(:program_types => {:id => program_type_id}) if self.present? }
   scope :age_group, -> age_id { self.includes(:age_groups).where(:age_groups => {:id => age_id}) if self.present? }
 
   belongs_to :program_type

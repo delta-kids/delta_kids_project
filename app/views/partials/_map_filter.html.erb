@@ -39,10 +39,10 @@
         <%= label_tag(:event_age_group, "6-12 year olds", class:'radio-spacing font-16') %>
         <br>
         <%= check_box_tag("event_age_group[]","3","checked") %>
-        <%= label_tag(:event_age_group, "Parents", class:'radio-spacing font-16') %>
+        <%= label_tag(:event_age_group, "Adults", class:'radio-spacing font-16') %>
         <br>
         <%= check_box_tag("event_age_group[]","4", "checked") %>
-        <%= label_tag(:event_age_group, "Childcare workers/providers", class:'radio-spacing font-16', style:"margin-right:0;") %>
+        <%= label_tag(:event_age_group, "N/A", class:'radio-spacing font-16', style:"margin-right:0;") %>
         <br>
         <hr/ class="filterCard-line">
       </div>
@@ -124,6 +124,72 @@
         <br>
         <%= check_box_tag("program_type[]", "6", "checked") %>
         <%= label_tag(:program_type, "Education", class:'radio-spacing font-16') %>
+        <br>
+        <hr/ class="filterCard-line">
+      </div>
+    </div>
+    <div class="filterCard">
+      <div class="filter-header-container">
+        <p class="filterCard-header1">Type of Program</p>
+        <a data-toggle="collapse" data-target=".collapse-typeof"><%= image_tag "icon-chevron-up.svg", class: " filter-header-chevron a-chevron" %></a>
+
+      </div>
+      <div class="collapse-typeof collapse in">
+        <%= check_box_tag("program_type[]", "1", "checked") %>
+        <%= label_tag(:program_type, "Arts & Culture", class:'radio-spacing font-16') %>
+        <br>
+        <%= check_box_tag("program_type[]", "2", "checked") %>
+        <%= label_tag(:program_type, "Parent & Child", class:'radio-spacing font-16') %>
+        <br>
+        <%= check_box_tag("program_type[]", "3", "checked") %>
+        <%= label_tag(:program_type, "Childcare & Preschools", class:'radio-spacing font-16') %>
+        <br>
+        <%= check_box_tag("program_type[]", "4", "checked") %>
+        <%= label_tag(:program_type, "Sports", class:'radio-spacing font-16') %>
+        <br>
+        <%= check_box_tag("program_type[]", "5", "checked") %>
+        <%= label_tag(:program_type, "Community Clubs", class:'radio-spacing font-16') %>
+        <br>
+        <%= check_box_tag("program_type[]", "6", "checked") %>
+        <%= label_tag(:program_type, "Education", class:'radio-spacing font-16') %>
+        <br>
+        <hr/ class="filterCard-line">
+      </div>
+    </div>
+
+    <div class="filterCard">
+      <div class="filter-header-container">
+        <p class="filterCard-header1">Type of Service</p>
+        <a data-toggle="collapse" data-target=".collapse-typeof"><%= image_tag "icon-chevron-up.svg", class: " filter-header-chevron a-chevron" %></a>
+
+      </div>
+      <div class="collapse-typeof collapse in">
+        <%= check_box_tag("service_type[]", "1", "checked") %>
+        <%= label_tag(:service_type, "Child Advocacy", class:'radio-spacing font-16') %>
+        <br>
+        <%= check_box_tag("service_type[]", "2", "checked") %>
+        <%= label_tag(:service_type, "Arts & Culture", class:'radio-spacing font-16') %>
+        <br>
+        <%= check_box_tag("service_type[]", "3", "checked") %>
+        <%= label_tag(:service_type, "Health & Development", class:'radio-spacing font-16') %>
+        <br>
+        <%= check_box_tag("service_type[]", "4", "checked") %>
+        <%= label_tag(:service_type, "Help in a Crisis", class:'radio-spacing font-16') %>
+        <br>
+        <%= check_box_tag("service_type[]", "5", "checked") %>
+        <%= label_tag(:service_type, "Supports for Children", class:'radio-spacing font-16') %>
+        <br>
+        <%= check_box_tag("service_type[]", "6", "checked") %>
+        <%= label_tag(:service_type, "Assistance with fees", class:'radio-spacing font-16') %>
+        <br>
+        <%= check_box_tag("service_type[]", "7", "checked") %>
+        <%= label_tag(:service_type, "Childcare & Preschool", class:'radio-spacing font-16') %>
+        <br>
+        <%= check_box_tag("service_type[]", "8", "checked") %>
+        <%= label_tag(:service_type, "Supports for families", class:'radio-spacing font-16') %>
+        <br>
+        <%= check_box_tag("service_type[]", "9", "checked") %>
+        <%= label_tag(:service_type, "Meals", class:'radio-spacing font-16') %>
         <br>
         <hr/ class="filterCard-line">
       </div>
