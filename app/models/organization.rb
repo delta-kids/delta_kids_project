@@ -16,7 +16,8 @@ class Organization < ApplicationRecord
   has_many :OrganizationProgramTypes, dependent: :destroy
   has_many :program_types, through: :OrganizationProgramTypes
 
-
+  geocoded_by :address
+  after_validation :geocode
 
   # validates :description, {presence: {message: "must be provided"}}
   validates :name, presence: { message: 'must be provided'}, uniqueness: true

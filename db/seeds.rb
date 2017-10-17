@@ -136,7 +136,7 @@ ServiceType.create([
 {name: 'Assistance with fees'},
 {name: 'Childcare & Preschool'},
 {name: 'Supports for families'},
-{name: 'Health & Development'}
+{name: 'Meals'}
 ])
 
 cost = ['Paid', 'Free']

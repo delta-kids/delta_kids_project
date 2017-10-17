@@ -18,7 +18,9 @@
       <script type="text/javascript">
       handler = Gmaps.build('Google');
       handler.buildMap({ provider: {}, internal: {id: 'multi_markers'}}, function(){
-        markers = handler.addMarkers(<%=raw @hash.to_json %>);
+        markers = handler.addMarkers(<%=raw @hash1.to_json %>);
+        markers = handler.addMarkers(<%=raw @hash2.to_json %>);
+        markers = handler.addMarkers(<%=raw @hash3.to_json %>);
         handler.bounds.extendWith(markers);
         handler.fitMapToBounds();
       });</script>

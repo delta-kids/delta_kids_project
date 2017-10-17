@@ -8,7 +8,7 @@ class EventsController < ApplicationController
   has_scope :registration, :type => :array
   has_scope :cost, :type => :array
   has_scope :program_type, :type => :array
-  has_scope :event_age_group, :type => :array
+  has_scope :age_group, :type => :array
 
 
 
