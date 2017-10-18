@@ -1,4 +1,4 @@
 class EventProgramType < ApplicationRecord
-  belongs_to :event
-  belongs_to :program_type
+  # belongs_to :event
+  # belongs_to :event_type
 end

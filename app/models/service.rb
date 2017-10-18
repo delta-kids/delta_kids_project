@@ -1,7 +1,16 @@
 class Service < ApplicationRecord
 
-  scope :service_type, -> service_type_id { self.includes(:service_types).where(:service_types => {:id => service_type_id}) if self.present?}
+  scope :service_type, -> service_type_id { where(:service_type_id => service_type_id)}
   scope :category, -> category_id { self.includes(:category).where(:category => {:id => category_id}) if self.present? }
+  scope :search, -> term {
+    if self.has_attribute?(:event_type_id)
+      where('title ILIKE (?) OR description ILIKE (?)', "%#{term}%", "%#{term}%").order('title ASC')
+    elsif self.has_attribute?(:program_type_id)
+      where('description ILIKE (?)', "%#{term}%").order('description ASC')
+    elsif self.has_attribute?(:service_type_id)
+      where('description ILIKE (?)', "%#{term}%").order('description ASC')
+  end
+}
 
   belongs_to :service_type
   belongs_to :organization
@@ -9,11 +18,4 @@ class Service < ApplicationRecord
 
   validates :description, presence: { message: 'must be provided'}, uniqueness: true
 
-  def self.search(term)
-    if term
-      where('description ILIKE (?)', "%#{term}%").order('description ASC')
-    else
-      order('description ASC')
-    end
-  end
 end

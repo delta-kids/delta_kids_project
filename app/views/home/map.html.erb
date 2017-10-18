@@ -19,10 +19,9 @@
       handler = Gmaps.build('Google');
       handler.buildMap({ provider: {}, internal: {id: 'multi_markers'}}, function(){
         markers = handler.addMarkers(<%=raw @hash1.to_json %>);
-        markers = handler.addMarkers(<%=raw @hash2.to_json %>);
-        markers = handler.addMarkers(<%=raw @hash3.to_json %>);
         handler.bounds.extendWith(markers);
-        handler.fitMapToBounds();
+        handler.map.centerOn ({lat:49.0952,lng:-123.0265});
+        handler.getMap().setZoom(11);
       });</script>
 
 
@@ -41,8 +40,7 @@
       <div class="container-fluid">
         <p class="bree-font">Results (<%= @map_search_results.total_count %>)</p>
         <% for event in @map_search_results %>
-        <% if event.approved != true %>
-        <% else %>
+        <% if event.has_attribute?(:title) %>
         <div class="calendar-subsection2-card light-blue-bg-color" style="margin-top:30px">
           <div class="calendar-subsection2-text" style="background-color: #fff">
             <div class="calendar-subsection2-details">
@@ -87,8 +85,36 @@
             </div>
           </div>
         </div>
+        <% elsif event.has_attribute?(:program_type_id) %>
+        <div class="calendar-subsection2-card light-blue-bg-color" style="margin-top:30px">
+          <div class="calendar-subsection2-text" style="background-color: #fff">
+            <div class="calendar-subsection2-details">
+              <p class="calendar-subsection2-header2"><%= event.organization.name %></p>
+              <div class="">
+                  <%= image_tag "icon-baby.svg", class: "event-info-icon" %>
+                  <% event.age_groups.each do |age| %>
+                  <p class="event-info-txt" style="margin-right:15px;"><%= age.age %></p>
+                  <% end %>
+                  <%= image_tag "icon-tag.svg", class: "event-info-icon" %>
+                  <p class="event-info-txt"><%= event.cost %></p>
+              </div>
+              <br>
+              <br>
+              <p class="event-paragraph ellipsis-3"><%= event.description %></p>
+              <div class="event-info">
+              <p class="event-paragraph ellipsis-3"><%= event.organization.address %></p>
+              <p class="event-paragraph ellipsis-3"><%= event.organization.phone %></p>
+            </div>
+              <div class="event-info2">
+                <!-- <p  class="event-info-bold2">Learn More</p> -->
+                <p><%= link_to 'Learn More', program_learn_more_path(event), class: "event-info-bold2" %></p>
+                <%= image_tag "cursor.svg", class: "event-info-icon2" %>
+              </div>
+            </div>
+          </div>
+        </div>
         <% end %>
-        <% end %>
+      <% end %>
       </div>
       <div class="container-fluid center-flex-content bree-font" style="align-items:center;">
         <%= paginate @map_search_results, window: 2 %>

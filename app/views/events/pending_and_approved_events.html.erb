@@ -19,11 +19,11 @@
                 <% @events.each do |event| %>
 
                 <p class="font-16"><%= link_to event.title, event_path(event) %></p>
-                <hr>
                 <%= form_for event do |f| %>
                   <%= f.hidden_field :approved, value: true %>
                   <%= f.submit 'Approve', class: 'btn btn-default edit-delete-btn-width' %>
                   <%= f.submit 'Decline', class: 'btn btn-default edit-delete-btn-width' %>
+                  <hr>
                   <% end %>
                 <% end %>
                 <% end %>

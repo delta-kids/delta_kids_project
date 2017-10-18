@@ -68,6 +68,14 @@ User.create([
     phone: '4u'}
   ])
 
+  EventType.create([
+  {name: 'Arts & Culture'},
+  {name: 'Education'},
+  {name: 'Entertainment'},
+  {name: 'Health'},
+  {name: 'Sports'},
+  ])
+
 Event.create([
   {title: 'Ladner Test Event',
   start_date: "2017-10-29",
@@ -78,6 +86,8 @@ Event.create([
   address: "4600 Clarence Taylor Crescent, Delta, BC V4K 3X3",
   cost: "Free",
   approved: true,
+  featured: true,
+  event_type: EventType.find_by(id: 1),
   registration: "Registered",
   description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
   more_info: "www.codecore.ca",
@@ -95,6 +105,8 @@ Event.create([
   address: "11415 84 Avenue, Delta, BC  V4C 2L9",
   cost: "Free",
   approved: true,
+  featured: true,
+  event_type: EventType.find_by(id: 2),
   registration: "Registered",
   description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
   more_info: "www.codecore.ca",
@@ -112,6 +124,8 @@ Event.create([
   address: "1172 56 Street, Delta, BC V4L 2A3",
   cost: "Free",
   approved: true,
+  featured: true,
+  event_type: EventType.find_by(id: 4),
   registration: "Registered",
   description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
   more_info: "www.codecore.ca",
@@ -171,11 +185,11 @@ csv_text = File.read(Rails.root.join('db', 'programs_with_agencies_sheet2.csv'))
 csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')
 csv.each do |row|
   Organization.create(
-   description: '',
-   name: row['Agencies'],
-   address: row['Address'],
-   phone: row['Phone Number'],
-   website: row['Website'],
+  description: '',
+  name: row['Agencies'],
+  address: row['Address'],
+  phone: row['Phone Number'],
+  website: row['Website'],
   )
 
   Program.create(
@@ -185,6 +199,7 @@ csv.each do |row|
   registration: row['Registration'],
   cost: row['Cost']
   )
+
   ProgramAgeGroup.create(
   program: Program.find_by(description: row['Short Description that relate to program']),
   age_group: AgeGroup.find_by(age: row['Age Group']),
@@ -212,7 +227,7 @@ csv.each do |row|
   )
 
   Tag.create(
-    name: row['Tags']
+  name: row['Tags']
   )
 
 end
@@ -225,7 +240,7 @@ csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')
 csv.each do |row|
 
   Tag.create(
-    name: row['Tags']
+  name: row['Tags']
   )
 
   Resource.create(

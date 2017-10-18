@@ -12,7 +12,7 @@
     -->
     <div class="">
       <%= form_tag(map_path, method: :get) do %>
-      <%= text_field_tag :term, params[:term] %>
+      <%= text_field_tag :search, params[:search_event] %>
       <%= submit_tag "Search", :name => nil, class:'btn-primary' %>
       <br>
       <br>
@@ -107,23 +107,23 @@
 
       </div>
       <div class="collapse-typeof collapse in">
-        <%= check_box_tag("program_type[]", "1", "checked") %>
-        <%= label_tag(:program_type, "Arts & Culture", class:'radio-spacing font-16') %>
+        <%= check_box_tag("event_type[]", "1", "checked") %>
+        <%= label_tag(:event_type, "Arts & Culture", class:'radio-spacing font-16') %>
         <br>
-        <%= check_box_tag("program_type[]", "2", "checked") %>
-        <%= label_tag(:program_type, "Parent & Child", class:'radio-spacing font-16') %>
+        <%= check_box_tag("event_type[]", "2", "checked") %>
+        <%= label_tag(:event_type, "Parent & Child", class:'radio-spacing font-16') %>
         <br>
-        <%= check_box_tag("program_type[]", "3", "checked") %>
-        <%= label_tag(:program_type, "Childcare & Preschools", class:'radio-spacing font-16') %>
+        <%= check_box_tag("event_type[]", "3", "checked") %>
+        <%= label_tag(:event_type, "Childcare & Preschools", class:'radio-spacing font-16') %>
         <br>
-        <%= check_box_tag("program_type[]", "4", "checked") %>
-        <%= label_tag(:program_type, "Sports", class:'radio-spacing font-16') %>
+        <%= check_box_tag("event_type[]", "4", "checked") %>
+        <%= label_tag(:event_type, "Sports", class:'radio-spacing font-16') %>
         <br>
-        <%= check_box_tag("program_type[]", "5", "checked") %>
-        <%= label_tag(:program_type, "Community Clubs", class:'radio-spacing font-16') %>
+        <%= check_box_tag("event_type[]", "5", "checked") %>
+        <%= label_tag(:event_type, "Community Clubs", class:'radio-spacing font-16') %>
         <br>
-        <%= check_box_tag("program_type[]", "6", "checked") %>
-        <%= label_tag(:program_type, "Education", class:'radio-spacing font-16') %>
+        <%= check_box_tag("event_type[]", "6", "checked") %>
+        <%= label_tag(:event_type, "Education", class:'radio-spacing font-16') %>
         <br>
         <hr/ class="filterCard-line">
       </div>

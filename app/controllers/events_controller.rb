@@ -4,19 +4,20 @@ class EventsController < ApplicationController
 
   has_scope :by_start_date
   has_scope :by_end_date
+  has_scope :search
+  has_scope :approved
   has_scope :event_location, :type => :array
   has_scope :registration, :type => :array
   has_scope :cost, :type => :array
-  has_scope :program_type, :type => :array
+  has_scope :event_type, :type => :array
   has_scope :age_group, :type => :array
 
 
 
   def index
     @events = apply_scopes(Event).all
-    @search_count = @events.search(params[:term])
-    @events_search = @events.search(params[:term]).page(params[:page]).per(5)
-    @events_by_start_date = @search_count.group_by(&:start_date)
+    @events_search = @events.page(params[:page]).per(5)
+    @events_by_start_date = @events.group_by(&:start_date)
   end
 
   def index2
@@ -70,7 +71,7 @@ class EventsController < ApplicationController
 
   private
   def event_params
-    params.require(:event).permit([:title, :term, :start_date, :end_date, :start_time, :end_time, :event_repeat, :event_location, :address, :cost, :registration, :more_info, :contact_name, :contact_email, :approved, :description, :image, { age_group_ids: [] }, { program_type_ids: [] },
+    params.require(:event).permit([:title, :term, :start_date, :end_date, :start_time, :end_time, :event_repeat, :event_location, :address, :cost, :registration, :more_info, :contact_name, :contact_email, :approved, :description, :image, { age_group_ids: [] }, { event_type_ids: [] },
     { tag_ids: [] }
     ])
   end

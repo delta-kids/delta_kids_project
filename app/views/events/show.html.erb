@@ -23,7 +23,7 @@
                   <p class='font-20'><strong>Address: </strong><%= @event.address %></p>
                   <p class='font-20'><strong>Age Group: </strong><%= @event.age_groups.map(&:age).join(', ') %></p>
                   <p class='font-20'><strong>Cost: </strong><%= @event.cost %></p>
-                  <p class='font-20'><strong>Activity Type: </strong><%= @event.program_types.map(&:name).join(', ') %></p>
+                  <p class='font-20'><strong>Activity Type: </strong><%= @event.event_type.name %></p>
                   <p class='font-20'><strong>Registration: </strong><%= @event.registration %></p>
                   <p class='font-20'><strong>Description: </strong><%= @event.description %></p>
                   <p class='font-20'><strong>Tags: </strong><%= @event.tags.map(&:name).join(', ') %></p>

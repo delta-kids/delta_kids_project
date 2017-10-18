@@ -2,14 +2,23 @@ class Event < ApplicationRecord
   # belongs_to :organization, :class, optional: true
 
   # scope :by_date, -> (start_date: Date.current() - 9999.years, end_date: Date.current() + 9999.years) { where(start_date: start_date..end_date, end_date: start_date..end_date) }
-  scope :by_start_date, -> start_date { self.where(['start_date >= ?', start_date]) if self.present?  }
-  scope :by_end_date, -> end_date { self.where(['start_date <= ?', end_date]) if self.present? }
-
-  scope :event_location, -> event_location { self.where(:event_location => event_location) if self.present? }
-  scope :registration, -> registration { self.where(:registration => registration) if self.present? }
-  scope :cost, -> cost { self.where(:cost => cost) if self.present? }
-  scope :program_type, -> program_type_id { self.includes(:program_types).where(:program_types => {:id => program_type_id}) if self.present?}
-  scope :age_group, -> age_id { self.includes(:age_groups).where(:age_groups => {:id => age_id}) if self.present? }
+  scope :by_start_date, -> start_date { where(['start_date >= ?', start_date])  }
+  scope :by_end_date, -> end_date { where(['start_date <= ?', end_date]) }
+  scope :search, -> term {
+    if self.has_attribute?(:event_type_id)
+      where('title ILIKE (?) OR description ILIKE (?)', "%#{term}%", "%#{term}%").order('title ASC')
+    elsif self.has_attribute?(:program_type_id)
+      where('description ILIKE (?)', "%#{term}%").order('description ASC')
+    elsif self.has_attribute?(:service_type_id)
+      where('description ILIKE (?)', "%#{term}%").order('description ASC')
+  end
+}
+  scope :event_location, -> event_location { where(:event_location => event_location) }
+  scope :event_approved, -> approved { where(:approved => true) }
+  scope :registration, -> registration { where(:registration => registration) }
+  scope :cost, -> cost { where(:cost => cost) }
+  scope :event_type, -> event_type { where(:event_type_id => event_type) }
+  scope :age_group, -> age_id { includes(:age_groups).where(:age_groups => {:id => age_id}) }
 
   mount_uploader :image, ImageUploader
 
@@ -19,20 +28,12 @@ class Event < ApplicationRecord
   has_many :EventAgeGroups, dependent: :destroy
   has_many :age_groups, through: :EventAgeGroups
 
-  has_many :EventProgramTypes, dependent: :destroy
-  has_many :program_types, through: :EventProgramTypes
+  belongs_to :event_type
 
   geocoded_by :address
   after_validation :geocode
 
-  geocoded_by :address
-  after_validation :geocode
 
-  def self.search(term)
-    if term
-      where('title ILIKE (?) OR description ILIKE (?)', "%#{term}%", "%#{term}%").order('title ASC')
-    else
-      order('title ASC')
-    end
-  end
+
+
 end
