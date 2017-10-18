@@ -21,14 +21,12 @@ Rails.application.routes.draw do
   get '/about', to: 'home#about', as: 'about'
   get '/contact', to: 'home#contact', as: 'contact'
 
-  get '/programs/0_5/', to: 'programs#index0_5'
   get '/programs/0_5/:type', to: 'programs#index0_5'
   # get '/programs/0_5/sports', to: 'programs#index0_5'
   # get '/programs/0_5/education', to: 'programs#index0_5'
   # get '/programs/0_5/parent_child', to: 'programs#index0_5'
   # get '/programs/0_5/childcare', to: 'programs#index0_5'
 
-  get '/programs/6_12', to: 'programs#index6_12'
   get '/programs/6_12/:type', to: 'programs#index6_12'
   # get '/programs/6_12/sports', to: 'programs#index6_12'
   # get '/programs/6_12/education', to: 'programs#index6_12'
@@ -40,17 +38,17 @@ Rails.application.routes.draw do
   # get '/services/pregnancy_babies/health', to: 'services#pregnancy_babies'
   # get '/services/pregnancy_babies/support', to: 'services#pregnancy_babies'
 
-  get '/services/families', to: 'services#families'
-  get '/services/families/help_crisis', to: 'services#families'
-  get '/services/families/childcare', to: 'services#families'
-  get '/services/families/assistance', to: 'services#families'
-  get '/services/families/support', to: 'services#families'
+  get '/services/families/:type', to: 'services#families'
+  # get '/services/families/help_crisis', to: 'services#families'
+  # get '/services/families/childcare', to: 'services#families'
+  # get '/services/families/assistance', to: 'services#families'
+  # get '/services/families/support', to: 'services#families'
 
-  get '/services/children', to: 'services#children'
-  get '/services/children/help_crisis', to: 'services#children'
-  get '/services/children/child_advocacy', to: 'services#children'
-  get '/services/children/health', to: 'services#children'
-  get '/services/children/support', to: 'services#children'
+  get '/services/children/:type', to: 'services#children'
+  # get '/services/children/help_crisis', to: 'services#children'
+  # get '/services/children/child_advocacy', to: 'services#children'
+  # get '/services/children/health', to: 'services#children'
+  # get '/services/children/support', to: 'services#children'
 
   get '/programs/learn_more/:id', to: 'programs#learn_more', as: 'program_learn_more'
   get '/services/learn_more/:id', to: 'services#learn_more', as: 'service_learn_more'
@@ -75,11 +73,11 @@ Rails.application.routes.draw do
 
   get '/map', to: 'home#map', as: 'map'
 
-  get '/search', to: 'home#search', as: 'search'
-  post '/search', to: 'home#search'
+  # get '/search', to: 'home#search', as: 'search'
+  # post '/search', to: 'home#search'
 
-  get '/whatsnew', to: 'home#whatsnew', as: 'whatsnew'
   get '/surveys', to: 'home#surveys', as: 'surveys'
+  get '/whatsnew', to: 'home#whatsnew', as: 'whatsnew'
 
   post '/contact_submit', to: 'home#submit', as: 'contacted'
 

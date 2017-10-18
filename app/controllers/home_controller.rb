@@ -36,6 +36,7 @@ class HomeController < ApplicationController
   end
 
   def surveys
+
   end
 
   def map

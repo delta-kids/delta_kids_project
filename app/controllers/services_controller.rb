@@ -53,6 +53,7 @@ class ServicesController < ApplicationController
     @child_preschool = @services.where("service_type_id = '7'").order(description: :asc).page(params[:page]).per(8)
     @assistance = @services.where("service_type_id = '6'").order(description: :asc).page(params[:page]).per(8)
     @support = @services.where("service_type_id = '8'").order(description: :asc).page(params[:page]).per(8)
+    @meals = @services.where("service_type_id = '9'").order(description: :asc).page(params[:page]).per(8)
     @load_service = @services.order(description: :asc).page(params[:page]).per(8)
 
     url = request.path_info
@@ -64,6 +65,8 @@ class ServicesController < ApplicationController
       @load_service = @assistance
     elsif url.include?('families/support')
       @load_service = @support
+    elsif url.include?('families/meals')
+      @load_service = @meals
     end
   end
 
