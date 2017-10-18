@@ -27,8 +27,6 @@
 <div class="container-fluid">
   <p class="bree-font">Results (<%= @events_search.total_count %>)</p>
   <% for event in @events_search %>
-  <% if event.approved != true %>
-  <% else %>
   <div class="calendar-subsection2-card light-blue-bg-color" style="margin-top:30px">
     <div class="event-image-container">
       <%= image_tag(event.image_url.to_s, class:"img-responsive", style:"height:100%; width:100%; object-fit: cover") %>
@@ -76,7 +74,6 @@
       </div>
     </div>
   </div>
-  <% end %>
   <% end %>
 </div>
 <div class="container-fluid center-flex-content bree-font" style="align-items:center;">

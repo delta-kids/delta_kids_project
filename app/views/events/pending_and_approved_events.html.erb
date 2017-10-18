@@ -10,91 +10,39 @@
           <% if is_admin? %>
           <div class="row">
             <div class="col-md-12">
+              <div class="container-fluid">
+                <h1 class="bree-font">Pending Events</h1>
+                <br>
+                <% if @events.count == 0 %>
+                <p class="font-16"> There are no Pending Events at this time.</p>
+                <% else %>
+                <% @events.each do |event| %>
 
-              <h1 class="queue-header">Pending Events</h1>
+                <p class="font-16"><%= link_to event.title, event_path(event) %></p>
+                <%= form_for event do |f| %>
+                  <%= f.hidden_field :approved, value: true %>
+                  <%= f.submit 'Approve', class: 'btn btn-default edit-delete-btn-width' %>
+                  <%= f.submit 'Decline', class: 'btn btn-default edit-delete-btn-width' %>
+                  <hr>
+                  <% end %>
+                <% end %>
+                <% end %>
+                <div class="container-fluid center-flex-content bree-font" style="align-items:center;">
+                <%= paginate @events, window: 2 %>
+              </div>
+              </div>
+            </div>
+          </div>
+          <% end %>
+          <% else %>
+          <%= render 'partials/login_msg' %>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+</div>
 
-              <div class="table-responsive">
+<!-- Rainbow Footer-->
 
-                <table class="table table-bordered table-hover" style="text-align:center;">
-                  <thead>
-                    <tr>
-                      <th>Event</th>
-                      <th>Location</th>
-                      <th>Actions</th>
-                    </tr>
-                  </thead>
-
-                  <tbody>
-                    <% @events.each do |event| %>
-                    <tr>
-                      <td><p class="font-16"><%= link_to event.title, event_path(event) %></p></td>
-                      <td><p class="font-16"><%= event.event_location %></p></td>
-                      <td>
-                          <%= form_for event do |f| %>
-                            <%= f.hidden_field :approved, value: true %>
-                            <%= f.submit 'Approve', class: 'btn btn-default edit-delete-btn-width' %>
-                            <%= f.submit 'Decline', class: 'btn btn-default edit-delete-btn-width' %>
-                        <% end %>
-                      </td>
-                      </tr>
-                      <% end %>
-                            </tbody>
-                            <%= paginate @events, window: 2 %>
-                          </table>
-                          <br><br>
-                          <h1 class="queue-header">Approved Events</h1>
-
-                          <table class="table table-bordered table-hover" style="text-align:center;">
-                            <thead>
-                              <tr>
-                                <th>Event</th>
-                                <th>Location</th>
-                                <th>Actions</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <!-- <tr>
-                                <td>Drop in Soccer</td>
-                                <td>Delta</td>
-                                <td><button class="btn btn-default">Delete</button>
-                                </tr>
-                                <tr>
-                                  <td>Drop in Soccer</td>
-                                  <td>Delta</td>
-                                  <td><button class="btn btn-default">Delete</button>
-                                  </tr>
-                                  <tr>
-                                    <td>Drop in Soccer</td>
-                                    <td>Delta</td>
-                                    <td><button class="btn btn-default">Delete</button>
-                                    </tr>
-                                    <tr>
-                                      <td>Drop in Soccer</td>
-                                      <td>Delta</td>
-                                      <td><button class="btn btn-default">Delete</button>
-                                      </tr>
-                                      <tr>
-                                        <td>Drop in Soccer</td>
-                                        <td>Delta</td>
-                                        <td><button class="btn btn-default">Delete</button>
-                                        </tr> -->
-                                      </tbody>
-                                    </table>
-
-                                  </div>
-                                </div>
-                              </div>
-                              <% end %>
-                              <% else %>
-                              <%= render 'partials/login_msg' %>
-                            </div>
-                          </div>
-                          <% end %>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Rainbow Footer-->
-
-                  <%= render 'partials/footer' %>
+<%= render 'partials/footer' %>

@@ -109,8 +109,8 @@
             <div class="form-group center-flex-content">
               <%= f.label :activity_type, class:'label-baseline caps' %>
               <div class="form-group event-form-width dropbox-container">
-                <%= f.collection_select :program_type_ids,
-                ProgramType.all,
+                <%= f.collection_select :event_type_id,
+                EventType.all,
                 :id,
                 :name,
                 {},
