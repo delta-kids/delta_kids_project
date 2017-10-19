@@ -3,6 +3,7 @@ class ResourcesController < ApplicationController
 
     # has_scope :by_date, :using => [:start_date, :end_date], :type => :hash
     has_scope :resource_location, type: :array
+    has_scope :approved
     has_scope :resource_topic, type: :array
     has_scope :resource_age_group, type: :array
     has_scope :resource_type, type: :array
@@ -15,6 +16,9 @@ class ResourcesController < ApplicationController
 
     def create
       @resource = Resource.new resource_params
+      if is_admin?
+        @resource.approved = true
+      end
       if @resource.save
         flash[:notice] = 'Resource create'
         redirect_to resource_path(@resource)
@@ -64,7 +68,7 @@ class ResourcesController < ApplicationController
 
     private
     def resource_params
-      params.require(:resource).permit([:name, :feature, :feature_start_date, :feature_end_date, :feature_start_time, :feature_end_time, :resource_location, :description, :contact_name, :contact_email, :created_at, :updated_at, :approved, :published_date, :term, :resource_file, { topic_ids: [] } ])
+      params.require(:resource).permit([:name, :feature, :feature_start_date, :feature_end_date, :feature_start_time, :feature_end_time, :resource_location, :description, :contact_name, :contact_email, :created_at, :updated_at, :approved, :published_date, :term, :resource_file, { topic_ids: [] }, { tag_ids: [] }, { age_group_ids: [] } ])
     end
     def find_resource
       @resource = Resource.find params[:id]

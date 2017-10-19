@@ -1,0 +1,98 @@
+<div class="wholePage">
+  <div class="container-fluid light-blue-bg-color">
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-7">
+        <!--  left column -->
+        <div class="container-fluid " id="feature-box">
+          <!-- set the image to be displayed -->
+          <%= image_tag "DeltaKids1.jpg", class: "learn-more-image" %>
+
+          <p class="font-16"></p>
+          <hr>
+
+          <!-- text body below image -->
+          <div class="container-fluid" style="padding-left:30px">
+            <p class="bree-font"><%= @service.organization.name %></p>
+            <p class="font-16"><%= @service.description %></p>
+          </div>
+
+          <!-- contact information -->
+          <div class="container-fluid">
+            <hr>
+            <div class="row">
+              <div class="col-md-6">
+                <% if @service.organization.address.present?%>
+                <p class="font-16"><strong>Address:</strong> <%= @service.organization.address %></p>
+                <% end %>
+              </div>
+
+              <div class="col-md-6">
+                <% if @service.organization.phone.present?%>
+                <p class="font-16">
+                  <i class="fa fa-phone" aria-hidden="true"></i>
+                  &nbsp&nbsp&nbsp
+                  <%= @service.organization.phone %>
+                </p>
+                <% end %>
+                <p class="font-16" style="">
+                  <% if @service.organization.website.present?%>
+                  <i class="fa fa-globe" aria-hidden="true">
+                  </i>&nbsp&nbsp&nbsp
+                  <%= link_to @service.organization.website,
+                  @service.organization.website,
+                   :target => "_blank", class:"wb-all"%>
+                </p>
+                <% end %>
+              </div>
+            </div>
+          </div>
+
+          <!-- Share Links -->
+          <div class="container-fluid share-section">
+            <hr>
+            <h2>Share</h2>
+            <br>
+            <!-- share buttons -->
+            <a href="#" target="_blank"><img src="https://cache.addthiscdn.com/icons/v3/thumbs/32x32/email.png" border="0" alt="Email"/></a>
+            <a href="#" target="_blank"><img src="https://cache.addthiscdn.com/icons/v3/thumbs/32x32/facebook.png" border="0" alt="Facebook"/></a>
+            <a href="#" target="_blank"><img src="https://cache.addthiscdn.com/icons/v3/thumbs/32x32/google_plusone_share.png" border="0" alt="Google+"/></a>
+            <a href="#" target="_blank"><img src="https://cache.addthiscdn.com/icons/v3/thumbs/32x32/twitter.png" border="0" alt="Twitter"/></a>
+            <!-- share buttons -->
+          </div>
+        </div>
+      </div> <!-- col -->
+      <!-- left column -->
+      <!--  right column -->
+      <div class="col-md-3">
+        <div>
+          <h2 class="remove-h-margin">Similar Services</h2>
+        </div>
+        <br>
+
+        <% @similar_services.each do |service| %>
+        <div class="similar-events-box">
+          <%= image_tag "DeltaKids2.jpg", class: "similar-events-image" %>
+          <div class="info-tag">
+            <p class="ellipsis-1 bree-font" style="font-size:20px;margin-bottom:2px;"><%= service.organization.name %>
+
+            <p class="font-16 ellipsis-4"><%= service.description %>
+            <br>
+            </p>
+
+              <p><%= link_to 'Learn More', service_learn_more_path(service), class: "learn-more-link" %></p>
+            <br>
+          </div>
+        </div>
+        <br>
+        <% end %>
+      </div> <!-- col -->
+      <div class="col-md-1 col-sm-1 col-xs-1"></div>
+    </div> <!-- row -->
+    <!--  right column -->
+    </div>
+    </div>
+
+    <!-- Rainbow Footer-->
+
+    <%= render 'partials/footer' %>

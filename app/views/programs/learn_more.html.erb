@@ -22,22 +22,28 @@
             <hr>
             <div class="row">
               <div class="col-md-6">
+                <% if @program.organization.address.present?%>
                 <p class="font-16"><strong>Address:</strong> <%= @program.organization.address %></p>
+                <% end %>
               </div>
 
               <div class="col-md-6">
                 <p class="font-16">
+                  <% if @program.organization.phone.present?%>
                   <i class="fa fa-phone" aria-hidden="true"></i>
                   &nbsp&nbsp&nbsp
                   <%= @program.organization.phone %>
                 </p>
+                <% end %>
                 <p class="font-16" style="">
+                  <% if @program.organization.website.present?%>
                   <i class="fa fa-globe" aria-hidden="true">
                   </i>&nbsp&nbsp&nbsp
                   <%= link_to @program.organization.website,
                   @program.organization.website,
                    :target => "_blank", class:"wb-all"%>
                 </p>
+                <% end %>
               </div>
             </div>
           </div>

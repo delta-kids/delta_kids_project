@@ -30,35 +30,9 @@
               </div>
             </div>
             <!--  FEATURE UNTIL add calender -->
-            <div>
-              <p class="bree-font" style="font-size:20px;">Feature Until</p>
-              <br>
-              <div class="form-group center-flex-content">
-                <label for='feature_start_date' style="margin-right:47px;">Start Date</label>
-                <%= f.text_field :feature_start_date, class: 'datepicker form date-time-width',placeholder:"MM/DD/YYYY" %>
-                <script type="text/javascript">
-                $(document).ready(function(){
-                  $('.datepicker').datepicker();
-                });
-                </script>
-                <%= f.label :"Start Time", class: 'form-padding caps', style:'margin:auto;' %>
-                <%= f.text_field :feature_start_time, class: 'form date-time-width' %>
-              </div>
-              <div class="form-group center-flex-content">
-                <script type="text/javascript">
-                $(document).ready(function(){
-                  $('.datepicker').datepicker();
-                });
-                </script>
-                <label for='feature_end_date' style="margin-right:46px">End Date</label>
-                <%= f.text_field :feature_end_date, class: 'datepicker form form-padding date-time-width',placeholder:"MM/DD/YYYY" %>
-                <%= f.label :"End Time", class: 'form-padding caps', style:'margin:auto;' %>
-                <%= f.text_field :feature_end_time, class: 'form form-padding date-time-width' %>
-              </div>
-            </div>
             <hr>
             <div class="margin-right">
-              <%= f.label "Resource is about the situation in: ", class:'font-16', style:'align-self: center;padding-right: 5%;' %>
+              <%= f.label "Resource is about the situation in: ", class:'font-16 center-flex-content', style:'align-self: center;padding-right: 5%;' %>
             </div>
             <div class="form-group center-flex-content">
                 <%= f.radio_button(:resource_location, "Delta",:checked => true) %>
@@ -86,6 +60,19 @@
             </div>
 
             <div class="form-group center-flex-content">
+              <%= f.label :age_group, class:'label-baseline caps' %>
+              <div class="form-group event-form-width dropbox-container">
+                <%= f.collection_select :age_group_ids,
+                AgeGroup.all,
+                :id,
+                :age,
+                {},
+                { multiple: true, class: 'chosen-select form-control form-padding'}
+                %>
+              </div>
+            </div>
+
+            <div class="form-group center-flex-content">
               <%= f.label :Tags, class:'label-baseline caps' %>
               <div class="form-group event-form-width dropbox-container">
                 <%= f.collection_select :tag_ids,
@@ -97,24 +84,6 @@
                 %>
               </div>
             </div>
-
-            <div class="form-group">
-              <%#= f.label :age_group %>
-              <%#= f.radio_button(:age, "0-5") %>
-              <%#= label_tag(:age, "0-5") %>
-              <%#= f.radio_button(:age, "6-12") %>
-              <%#= label_tag(:age, "6-12") %>
-              <%#= f.radio_button(:age, "adult") %>
-              <%#= label_tag(:age, "adult") %>
-              <%#= f.radio_button(:age, "all") %>
-              <%#= label_tag(:age, "all") %>
-            </div>
-
-
-            <!-- <div class="form-group">
-            <%= f.label :tags %>
-            <%= f.text_field :tags, class: "form form-control form-padding event-form-width" %>
-          </div> -->
 
           <div class="form-group">
             <%= f.label :description, class:'label-baseline' %>

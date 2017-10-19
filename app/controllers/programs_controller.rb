@@ -1,4 +1,5 @@
 class ProgramsController < ApplicationController
+  before_action :find_program, only: [:show, :edit, :update, :destroy]
 
   # ONLY ADMIN
   def index
@@ -60,7 +61,7 @@ class ProgramsController < ApplicationController
   def create
     @program = Program.new program_params
     if @program.save
-      flash[:notice] = 'Organization create'
+      flash[:notice] = 'Program Created'
       redirect_to program_path(@program)
     else
       flash.now[:alert] = @program.pretty_errors
@@ -99,7 +100,7 @@ class ProgramsController < ApplicationController
 
   private
   def program_params
-    params.require(:program).permit([:description, :registration, :cost, { program_type_ids: [] }, { organization_id: [] }])
+    params.require(:program).permit([:description, :registration, :cost, :program_type_id, :organization_id ])
   end
 
   def find_program

@@ -14,7 +14,7 @@ class Event < ApplicationRecord
   end
 }
   scope :event_location, -> event_location { where(:event_location => event_location) }
-  scope :event_approved, -> approved { where(:approved => true) }
+  scope :approved, -> approved { where(:approved => true) }
   scope :registration, -> registration { where(:registration => registration) }
   scope :cost, -> cost { where(:cost => cost) }
   scope :event_type, -> event_type { where(:event_type_id => event_type) }

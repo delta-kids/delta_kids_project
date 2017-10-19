@@ -21,10 +21,10 @@
             <div class="form-group center-flex-content">
               <%= f.label :registration, class:'label-baseline caps' %>
               <div class="margin-right">
-                <%= f.radio_button(:registration, "Registered") %>
-                <%= label_tag(:registration, "Registered", class:'radio-spacing') %>
                 <%= f.radio_button(:registration, "Drop In") %>
                 <%= label_tag(:registration, "Drop In", class:'radio-spacing') %>
+                <%= f.radio_button(:registration, "Registered") %>
+                <%= label_tag(:registration, "Registered", class:'radio-spacing') %>
               </div>
             </div>
             <div class="form-group center-flex-content">
@@ -37,20 +37,27 @@
               </div>
             </div>
             <div class="form-group center-flex-content">
-              <%= f.label :service , "Activity Type", class:'label-baseline', style:'align-self: center; padding-right: 5%' %>
-              <div class="">
-                <%= check_box_tag(:education) %>
-                <%= label_tag(:education, "Education", class:'radio-spacing') %>
-                <%= check_box_tag(:sports) %>
-                <%= label_tag(:sports, "Sports", class:'radio-spacing') %>
-                <%= check_box_tag(:health) %>
-                <%= label_tag(:health, "Health", class:'radio-spacing') %>
-                  <div class="">
-                    <%= check_box_tag(:art_and_culture) %>
-                    <%= label_tag(:art_and_culture, "Art & Culture", class:'radio-spacing') %>
-                  <%= check_box_tag(:entertainment) %>
-                  <%= label_tag(:entertainment, "Entertainment", class:'radio-spacing') %>
-                </div>
+              <%= f.label :program_type, class:'label-baseline caps' %>
+              <div class="form-group event-form-width dropbox-container">
+                <%= f.collection_select :program_type_id,
+                ProgramType.all,
+                :id,
+                :name,
+                {},
+                { multiple: false, class: 'form-control form-padding'}
+                %>
+              </div>
+            </div>
+            <div class="form-group center-flex-content">
+              <%= f.label :Organization, class:'label-baseline caps' %>
+              <div class="form-group event-form-width dropbox-container" style="width:375px !important" >
+                <%= f.collection_select :organization_id,
+                Organization.all,
+                :id,
+                :name,
+                {},
+                { multiple: false, class: 'chosen-select form-control '}
+                %>
               </div>
             </div>
                 <br>
@@ -66,13 +73,6 @@
         </div>
         </div>
 
+        <!-- Rainbow Footer-->
 
-        <div class="container-fluid happy-rainbow">
-          <div class="row">
-            <div class="col-md-12">
-
-              <%= image_tag("rainbow-footer-group.svg", class:"center-block") %>
-
-            </div>
-          </div>
-        </div>
+        <%= render 'partials/footer' %>
