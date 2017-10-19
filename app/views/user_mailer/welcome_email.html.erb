@@ -4,14 +4,18 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
   <body>
+    
     <h1>Welcome to Delta Kids, <%= @user.full_name %></h1>
+
     <p>
       You have successfully signed up to deltakids.ca,
       your username is: <%= @user.email %>.<br>
     </p>
+    <br>
     <p>
       To login to the site, just follow this link: <%= @url %>.
     </p>
+    <br>
     <p>Thanks for joining and have a great day!</p>
   </body>
 </html>
