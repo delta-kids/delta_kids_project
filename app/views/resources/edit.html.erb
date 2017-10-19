@@ -8,13 +8,15 @@
 
       <div class="col-md-9 dash-main-content" style="background-color:white;">
         <% if user_signed_in? %>
+
+
         <div class="container-fluid center-flex-content">
           <div class="create-new-container">
             <br>
             <h2 class="bree-font" style="margin-top:0;margin-bottom:40px;margin-left:auto;margin-right: auto;">Edit Resource</h2>
 
             <%= form_for @resource do |f| %>
-
+      
             <div class="form-group center-flex-content">
               <%= f.label :name, class: "label-baseline" %>
               <%= f.text_field :name, class: "form form-control form-padding event-form-width" %>

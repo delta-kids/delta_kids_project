@@ -25,7 +25,7 @@
               <div class="margin-right">
                 <%= f.radio_button(:feature, true) %>
                 <%= label_tag(:feature, "Yes", class:'radio-spacing') %>
-                <%= f.radio_button(:feature, false) %>
+                <%= f.radio_button(:feature, false, :checked => true) %>
                 <%= label_tag(:feature, "No", class:'radio-spacing') %>
               </div>
             </div>
@@ -61,7 +61,7 @@
               <%= f.label "Resource is about the situation in: ", class:'font-16', style:'align-self: center;padding-right: 5%;' %>
             </div>
             <div class="form-group center-flex-content">
-                <%= f.radio_button(:resource_location, "Delta") %>
+                <%= f.radio_button(:resource_location, "Delta",:checked => true) %>
                 <%= label_tag(:resource_location, "Delta", class:'radio-spacing') %>
                 <%= f.radio_button(:resource_location, "BC") %>
                 <%= label_tag(:resource_location, "BC", class:'radio-spacing') %>
