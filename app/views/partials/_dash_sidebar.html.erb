@@ -17,11 +17,11 @@
           <div class="collapse-pending collapse in">
             <br>
     <li>
-      <a href="<%= dashboard_pending_and_approved_events_path %>" class="dashboard-text">Pending Events</a>
+      <a href="<%= dashboard_pending_and_approved_events_path %>" class="dashboard-text">Pending Events (<%= Event.where(:approved => false || nil).count  %>)</a>
     </li>
     <hr>
     <li>
-      <a href="<%= dashboard_pending_and_approved_resources_path %>" class="dashboard-text">Pending Resources</a>
+      <a href="<%= dashboard_pending_and_approved_resources_path %>" class="dashboard-text">Pending Resources (<%= Resource.where(:approved => false || nil).count  %>)</a>
     </li>
     </div>
   </div>
@@ -66,28 +66,28 @@
     <div class="collapse-add collapse in">
       <br>
     <li>
-      <a href="<%= new_event_path %>" class="dashboard-text">Add an Event</a>
+      <a href="<%= new_event_path %>" class="dashboard-text">Add New Event</a>
     </li>
     <hr>
     <li>
-      <a href="<%= new_resource_path %>" class="dashboard-text">Add Resource</a>
+      <a href="<%= new_resource_path %>" class="dashboard-text">Add New Resource</a>
     </li>
     <hr>
     <li>
-      <a href="<%= new_organization_path %>" class="dashboard-text">Add Organization</a>
+      <a href="<%= new_organization_path %>" class="dashboard-text">Add New Organization</a>
     </li>
     <hr>
     <li>
-      <a href="<%= new_program_path %>" class="dashboard-text">Add Program</a>
+      <a href="<%= new_program_path %>" class="dashboard-text">Add New Program</a>
     </li>
     <hr>
     <li>
-      <a href="<%= new_service_path %>" class="dashboard-text">Add Service</a>
+      <a href="<%= new_service_path %>" class="dashboard-text">Add New Service</a>
     </li>
-    <hr>
+    <!-- <hr>
     <li>
-      <a href="<%= new_program_type_path %>" class="dashboard-text">Add New Activity Type</a>
-    </li>
+      <a href="<%= new_program_type_path %>" class="dashboard-text">Add New New Activity Type</a>
+    </li> -->
   </div>
   <hr>
 </div>
@@ -100,11 +100,11 @@
     </h4>
     </li>
       <li>
-        <a href="<%= new_event_path %>" class="dashboard-text">Add an Event</a>
+        <a href="<%= new_event_path %>" class="dashboard-text">Add New an Event</a>
       </li>
       <hr>
       <li>
-        <a href="<%= new_resource_path %>" class="dashboard-text">Add a Resource</a>
+        <a href="<%= new_resource_path %>" class="dashboard-text">Add New a Resource</a>
       </li>
       <hr>
       <li><%= link_to 'Sign Out', signout_path, method: :delete, class:"dashboard-text" %></li>

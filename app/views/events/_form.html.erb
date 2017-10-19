@@ -82,18 +82,6 @@
               </div>
             </div>
 
-            <!-- <div class="form-group center-flex-content"> -->
-            <%#= f.label :age_group %>
-            <%#= f.radio_button(:age_group, "0-5") %>
-            <%#= label_tag(:age, "0-5") %>
-            <%#= f.radio_button(:age_group, "6-12") %>
-            <%#= label_tag(:age, "6-12") %>
-            <%#= f.radio_button(:age_group, "adult") %>
-            <%#= label_tag(:age, "adult") %>
-            <%#= f.radio_button(:age_group, "all") %>
-            <%#= label_tag(:age, "all") %>
-            <!-- </div> -->
-
             <!-- COST -->
             <div class="form-group center-flex-content">
               <%= f.label :cost, class:'label-baseline caps' %>
@@ -114,7 +102,7 @@
                 :id,
                 :name,
                 {},
-                { multiple: true, class: 'chosen-select form-control form-padding'}
+                { multiple: false, class: 'form-control form-padding'}
                 %>
               </div>
             </div>

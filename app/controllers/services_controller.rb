@@ -1,4 +1,6 @@
+
 class ServicesController < ApplicationController
+  before_action :find_service, only: [:show, :edit, :update, :destroy]
 
   # ONLY ADMIN
   def index
@@ -111,7 +113,7 @@ class ServicesController < ApplicationController
 
 private
   def service_params
-    params.require(:service).permit([:description, { service_type_ids: [] }, { organization_id: [] }, { category_id: [] }])
+    params.require(:service).permit([:description, :category_id, :service_type_id, :organization_id]) 
   end
 
   def find_service

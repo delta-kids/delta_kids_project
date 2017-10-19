@@ -40,6 +40,9 @@ class EventsController < ApplicationController
 
   def create
     @event = Event.new event_params
+    if is_admin?
+      @event.approved = true
+    end
     if @event.save
       flash[:notice] = 'Event Created'
       redirect_to event_path(@event)
@@ -71,7 +74,7 @@ class EventsController < ApplicationController
 
   private
   def event_params
-    params.require(:event).permit([:title, :term, :start_date, :end_date, :start_time, :end_time, :event_repeat, :event_location, :address, :cost, :registration, :more_info, :contact_name, :contact_email, :approved, :event_type_id, :description, :image, { age_group_ids: [] }, { event_type_ids: [] },
+    params.require(:event).permit([:title, :term, :start_date, :end_date, :start_time, :end_time, :event_repeat, :event_location, :address, :cost, :registration, :more_info, :contact_name, :contact_email, :approved, :age_group_id, :event_type_id, :description, :image, { age_group_ids: [] },
     { tag_ids: [] }
     ])
   end

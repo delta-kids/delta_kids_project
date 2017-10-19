@@ -13,11 +13,16 @@
               <div class="container-fluid">
                 <br>
                 <p class="bree-font"><%= @resource.name %></p>
-                <p class="font-20"><strong>Feature Resource: </strong><%= @resource.feature %></p>
-
-                <h4>Commented Out Featured Date and Time</h4>
+                <p class="font-20"><strong>Feature Resource: </strong>
+                  <% if @resource.feature? %>Yes</p>
+                    <% else %>
+                    No</p>
+                <% end %>
                 <p class="font-20"><strong>Resource Location: </strong><%= @resource.resource_location %></p>
                 <p class="font-20"><strong>Description: </strong><%= @resource.description %></p>
+                <p class='font-20'><strong>Topics: </strong><%= @resource.topics.map(&:topic_name).join(', ') %></p>
+                <p class='font-20'><strong>Age Groups: </strong><%= @resource.age_groups.map(&:age).join(', ') %></p>
+                <p class='font-20'><strong>Tags: </strong><%= @resource.tags.map(&:name).join(', ') %></p>
                 <p class="font-20"><strong>Uploaded File: </strong><%= link_to "View File", asset_path(@resource.resource_file) %></p>
                 <p class="font-20"><strong>Contact Name: </strong><%= @resource.contact_name %></p>
                 <p class="font-20"><strong>Contact Email: </strong><%= @resource.contact_email %></p>

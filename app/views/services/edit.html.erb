@@ -16,19 +16,43 @@
             <%= form_for @service do |f| %>
             <div class="form-group">
               <%= f.label :description, class:'label-baseline' %>
-              <%= f.text_area :description, class: 'form form-control form-padding event-form-width caps', :required => true %>
+              <%= f.text_area :description, class: 'form form-control  event-form-width caps', :required => true %>
             </div>
-            <div class="form-group">
-              <%= f.label :organization_id, class:'label-baseline' %>
-              <%= f.text_field :organization_id, class: 'form form-control form-padding event-form-width caps', :required => true %>
+            <div class="form-group center-flex-content">
+              <%= f.label :Organization, class:'label-baseline caps' %>
+              <div class="form-group event-form-width dropbox-container" style="width:375px !important" >
+                <%= f.collection_select :organization_id,
+                Organization.all,
+                :id,
+                :name,
+                {},
+                { multiple: false, class: 'chosen-select form-control '}
+                %>
+              </div>
             </div>
-            <div class="form-group">
-              <%= f.label :category_id, class:'label-baseline' %>
-              <%= f.text_field :category_id, class: 'form form-control form-padding event-form-width caps', :required => true %>
+            <div class="form-group center-flex-content">
+              <%= f.label :service_type, class:'label-baseline caps' %>
+              <div class="form-group event-form-width dropbox-container" >
+                <%= f.collection_select :service_type_id,
+                ServiceType.all,
+                :id,
+                :name,
+                {},
+                { multiple: false, class: 'form-control '}
+                %>
+              </div>
             </div>
-            <div class="form-group">
-              <%= f.label :service_type_id, class:'label-baseline' %>
-              <%= f.text_field :service_type_id, class: 'form form-control form-padding event-form-width caps', :required => true %>
+            <div class="form-group center-flex-content">
+              <%= f.label :category, class:'label-baseline caps' %>
+              <div class="form-group event-form-width dropbox-container" >
+                <%= f.collection_select :category_id,
+                Category.all,
+                :id,
+                :name,
+                {},
+                { multiple: false, class: 'form-control '}
+                %>
+              </div>
             </div>
                 <br>
                 <div class="form-group">
@@ -45,7 +69,6 @@
           </div>
         </div>
         </div>
-
 
         <!-- Rainbow Footer-->
 
