@@ -18,7 +18,7 @@
                 <% else %>
                 <% @resources.each do |resource| %>
 
-                <p class="font-16"><%= link_to resource.title, resource_path(resource) %></p>
+                <p class="font-16"><%= link_to resource.name, resource_path(resource) %></p>
                 <%= form_for resource do |f| %>
                   <%= f.hidden_field :approved, value: true %>
                   <%= f.submit 'Approve', class: 'btn btn-default edit-delete-btn-width' %>

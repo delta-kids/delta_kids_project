@@ -26,7 +26,7 @@
 
 
       <div class="calendar-subsection2-text">
-        <p class="calendar-subsection2-header">Map of Delta</p>
+        <p class="calendar-subsection2-header bree-font">Map of Delta</p>
         <div class="calendar-subsection2-text" style="background-color: #fff">
           <div class="calendar-subsection2-details">
             <p class="event-paragraph">This is Delta. It includes the communities of Tsawwassen, Ladner, and North Delta.
@@ -40,7 +40,7 @@
       <div class="container-fluid">
         <p class="bree-font">Results (<%= @map_search_results.total_count %>)</p>
         <% for event in @map_search_results %>
-        <% if event.has_attribute?(:title) %>
+        <% if event.has_attribute?(:event_type_id) %>
         <div class="calendar-subsection2-card light-blue-bg-color" style="margin-top:30px">
           <div class="calendar-subsection2-text" style="background-color: #fff">
             <div class="calendar-subsection2-details">
@@ -76,7 +76,7 @@
                   <p class="event-info-txt"><%= event.event_location %></p>
                 </div>
               </div>
-              <p class="event-paragraph ellipsis-3"><%= event.description %></p>
+              <p class="event-paragraph ellipsis-3 font-16"><%= event.description %></p>
               <div class="event-info2">
                 <!-- <p  class="event-info-bold2">Learn More</p> -->
                 <p><%= link_to 'Learn More', event_learn_more_path(event), class: "event-info-bold2" %></p>
@@ -100,14 +100,38 @@
               </div>
               <br>
               <br>
-              <p class="event-paragraph ellipsis-3"><%= event.description %></p>
+              <p class="font-16 ellipsis-3"><%= event.description %></p>
               <div class="event-info">
-              <p class="event-paragraph ellipsis-3"><%= event.organization.address %></p>
-              <p class="event-paragraph ellipsis-3"><%= event.organization.phone %></p>
+              <p class="event-paragraph ellipsis-3 font-16"><%= event.organization.address %></p>
+              <p class="event-paragraph ellipsis-3 font-16"><%= event.organization.phone %></p>
             </div>
               <div class="event-info2">
                 <!-- <p  class="event-info-bold2">Learn More</p> -->
                 <p><%= link_to 'Learn More', program_learn_more_path(event), class: "event-info-bold2" %></p>
+                <%= image_tag "cursor.svg", class: "event-info-icon2" %>
+              </div>
+            </div>
+          </div>
+        </div>
+        <% elsif event.has_attribute?(:service_type_id) %>
+        <div class="calendar-subsection2-card light-blue-bg-color" style="margin-top:30px">
+          <div class="calendar-subsection2-text" style="background-color: #fff">
+            <div class="calendar-subsection2-details">
+              <p class="calendar-subsection2-header2"><%= event.organization.name %></p>
+              <div class="">
+                  <%= image_tag "icon-tag.svg", class: "event-info-icon" %>
+                  <p class="event-info-txt font16"><%= event.category.name %></p>
+              </div>
+              <br>
+              <br>
+              <p class="ellipsis-3 font-16"><%= event.description %></p>
+              <div class="event-info">
+              <p class="event-paragraph ellipsis-3 font-16"><%= event.organization.address %></p>
+              <p class="event-paragraph ellipsis-3 font-16"><%= event.organization.phone %></p>
+            </div>
+              <div class="event-info2">
+                <!-- <p  class="event-info-bold2">Learn More</p> -->
+                <p><%= link_to 'Learn More', service_learn_more_path(event), class: "event-info-bold2" %></p>
                 <%= image_tag "cursor.svg", class: "event-info-icon2" %>
               </div>
             </div>
