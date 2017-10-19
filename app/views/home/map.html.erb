@@ -44,7 +44,7 @@
         <div class="calendar-subsection2-card light-blue-bg-color" style="margin-top:30px">
           <div class="calendar-subsection2-text" style="background-color: #fff">
             <div class="calendar-subsection2-details">
-              <p class="calendar-subsection2-header2 bree-font24"><%= event.title %></p>
+              <p class="calendar-subsection2-header2"><%= event.title %></p>
               <div class="event-info">
                 <div>
                   <%= image_tag "icon-calendar.svg", class: "event-info-icon" %>
@@ -89,7 +89,7 @@
         <div class="calendar-subsection2-card light-blue-bg-color" style="margin-top:30px">
           <div class="calendar-subsection2-text" style="background-color: #fff">
             <div class="calendar-subsection2-details">
-              <p class="calendar-subsection2-header2 bree-font24"><%= event.organization.name %></p>
+              <p class="calendar-subsection2-header2"><%= event.organization.name %></p>
               <div class="">
                   <%= image_tag "icon-baby.svg", class: "event-info-icon" %>
                   <% event.age_groups.each do |age| %>
@@ -117,7 +117,7 @@
         <div class="calendar-subsection2-card light-blue-bg-color" style="margin-top:30px">
           <div class="calendar-subsection2-text" style="background-color: #fff">
             <div class="calendar-subsection2-details">
-              <p class="calendar-subsection2-header2 bree-font24"><%= event.organization.name %></p>
+              <p class="calendar-subsection2-header2"><%= event.organization.name %></p>
               <div class="">
                   <%= image_tag "icon-tag.svg", class: "event-info-icon" %>
                   <p class="event-info-txt font16"><%= event.category.name %></p>

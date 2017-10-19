@@ -38,11 +38,11 @@ $("[href]").each(function() {
 });
 });
 
-$(document).ready(function() {
-  $('.a-chevron').click(function() {
-    $(this).toggleClass('rotate-chevron');
-});
-});
+// $(document).ready(function() {
+//   $('.a-chevron').click(function() {
+//     $(this).toggleClass('rotate-chevron');
+// });
+// });
 
 $(document).ready(function(){
   $('.timepicker').timepicker();
