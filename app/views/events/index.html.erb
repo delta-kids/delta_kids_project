@@ -13,7 +13,7 @@
         <% @events_by_start_date[date].each do |event|  %>
         <% if event.approved != true %>
         <% else %>
-        <script>
+        <!-- <script>
         // When the user clicks on <div>, open the popup
         function calendarPopup() {
           let popup = document.getElementById("cal-popup-window-<%=event.id%>");
@@ -58,7 +58,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
         <% end %>
         <% end %>
         <% end %>
