@@ -46,6 +46,19 @@
                 <%= label_tag(:resource_location, "N/A", class:'radio-spacing') %>
             </div>
 
+            <div class="margin-right">
+              <%= f.label "Resource Type: ", class:'font-16 center-flex-content', style:'align-self: center;padding-right: 5%;' %>
+            </div>
+            <div class="form-group center-flex-content">
+                <%= f.radio_button(:resource_type, "Research",:checked => true) %>
+                <%= label_tag(:resource_type, "Research", class:'radio-spacing') %>
+                <%= f.radio_button(:resource_type, "Report") %>
+                <%= label_tag(:resource_type, "Report", class:'radio-spacing') %>
+                <br>
+                <%= f.radio_button(:resource_type, "Tips & Guidelines") %>
+                <%= label_tag(:resource_type, "Tips & Guidelines", class:'radio-spacing') %>
+            </div>
+            <hr>
             <div class="form-group center-flex-content">
               <%= f.label :Topic, class:'label-baseline' %>
               <div class="form-group event-form-width dropbox-container">
