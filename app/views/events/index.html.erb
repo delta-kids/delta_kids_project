@@ -21,7 +21,7 @@
         }
         </script>
         <div class="popup" onclick="calendarPopup()">
-          <p class="ellipsis-1" style="color:#3ea3da">  <%= event.start_time.strftime("%I:%M %p") %></p>
+          <p class="cal-links"><%= event.start_time.strftime("%I:%M %p") %></p>
           <div class="popuptext" id="cal-popup-window-<%=event.id%>">
             <i class="fa fa-times pull-right" aria-hidden="true" style="color:yellow; font-size:30px;"></i>
             <p class="bree-font"><%= link_to event.title, event_learn_more_path(event), class:"", style:"text-decoration:none; color:yellow"  %></p>

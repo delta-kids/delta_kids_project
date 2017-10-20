@@ -21,12 +21,14 @@ Rails.application.routes.draw do
   get '/about', to: 'home#about', as: 'about'
   get '/contact', to: 'home#contact', as: 'contact'
 
+  get '/programs/0_5', to: 'programs#index0_5'
   get '/programs/0_5/:type', to: 'programs#index0_5'
   # get '/programs/0_5/sports', to: 'programs#index0_5'
   # get '/programs/0_5/education', to: 'programs#index0_5'
   # get '/programs/0_5/parent_child', to: 'programs#index0_5'
   # get '/programs/0_5/childcare', to: 'programs#index0_5'
 
+  get '/programs/6_12', to: 'programs#index6_12'
   get '/programs/6_12/:type', to: 'programs#index6_12'
   # get '/programs/6_12/sports', to: 'programs#index6_12'
   # get '/programs/6_12/education', to: 'programs#index6_12'
