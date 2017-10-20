@@ -1,195 +1,88 @@
-<div class="wholePage">
-  <!-- First section div -->
-  <div class="event-section1 event-section1-container" id="event-section1">
-    <div class="container-fluid ">
-      <div class="row event-row">
-        <div class="col-md-3" id="event-subsection1">
-          <%= image_tag "filter-header.svg", class: " filter-header-img"  %>
-          <div class="">
-            <%= form_tag(resources_path, method: :get) do %>
-            <%= text_field_tag :term, params[:term] %>
-            <%= submit_tag "Search", :name => nil, class:'btn-primary' %>
-            <br>
-            <br>
-          </div>
-          <br>
-          <hr>
+<%= render "partials/resource_filter" %>
 
-          <div class="filterCard">
-            <div class="filter-header-container">
-              <p class="filterCard-header1">Topic</p>
-              <a data-toggle="collapse" data-target=".collapse-for"><%= image_tag "icon-chevron-up.svg", class: "filter-header-chevron a-chevron"  %></a>
-            </div>
-            <div class="collapse-for collapse in">
-              <%= check_box_tag("resource_topic[]","1", "checked") %>
-              <%= label_tag(:resource_topic, "Physical Health", class:'radio-spacing font-16') %>
-              <br>
-              <%= check_box_tag("resource_topic[]","2", "checked") %>
-              <%= label_tag(:resource_topic, "Mental Health", class:'radio-spacing font-16') %>
-              <br>
-              <%= check_box_tag("resource_topic[]","3", "checked") %>
-              <%= label_tag(:resource_topic, "Child Development", class:'radio-spacing font-16') %>
-              <br>
-              <%= check_box_tag("resource_topic[]","4", "checked") %>
-              <%= label_tag(:resource_topic, "Policy", class:'radio-spacing font-16') %>
-              <br>
-              <%= check_box_tag("resource_topic[]","5", "checked") %>
-              <%= label_tag(:resource_topic, "Child Safety", class:'radio-spacing font-16') %>
-              <br>
-              <hr/ class="filterCard-line">
-            </div>
-          </div>
+<div class="col-md-9 event-subsection2">
+  <div class="event-subsection2-card">
+    <%= image_tag "https://user-images.githubusercontent.com/19618674/27264549-ada2ad26-5435-11e7-8a69-bf291986d6ea.png", class: "event-subsection2-image" %>
+    <div class="event-subsection2-text">
+      <p class="event-subsection2-header">Resources</p>
+    </div>
+  </div>
 
-          <div class="filterCard">
-            <div class="filter-header-container">
-              <p class="filterCard-header1">Resource Covers</p>
-              <a data-toggle="collapse" data-target=".collapse-for"><%= image_tag "icon-chevron-up.svg", class: "filter-header-chevron a-chevron"  %></a>
-            </div>
-            <div class="collapse-for collapse in">
-              <%= check_box_tag("resource_location[]","Delta","checked") %>
-              <%= label_tag(:resource_location, "Delta", class:'radio-spacing font-16') %>
-              <br>
-              <%= check_box_tag("resource_location[]","BC","checked") %>
-              <%= label_tag(:resource_location, "BC", class:'radio-spacing font-16') %>
-              <br>
-              <%= check_box_tag("resource_location[]","Canada","checked") %>
-              <%= label_tag(:resource_location, "Canada", class:'radio-spacing font-16') %>
-              <br>
-              <%= check_box_tag("resource_location[]","N/A","checked") %>
-              <%= label_tag(:resource_location, "N/A", class:'radio-spacing font-16') %>
-              <br>
-              <hr/ class="filterCard-line">
-            </div>
-          </div>
-
-
-          <div class="filterCard">
-            <div class="filter-header-container">
-              <p class="filterCard-header1">Children Aged</p>
-              <a data-toggle="collapse" data-target=".collapse-for"><%= image_tag "icon-chevron-up.svg", class: "filter-header-chevron a-chevron"  %></a>
-            </div>
-            <div class="collapse-for collapse in">
-              <%= check_box_tag("resource_age_group[]","1","checked") %>
-              <%= label_tag(:resource_age_group, "0-5 years", class:'radio-spacing font-16') %>
-              <br>
-              <%= check_box_tag("resource_age_group[]","2","checked") %>
-              <%= label_tag(:resource_age_group, "6-12 years", class:'radio-spacing font-16') %>
-              <br>
-              <hr/ class="filterCard-line">
-            </div>
-          </div>
-
-          <div class="filterCard">
-            <div class="filter-header-container">
-              <p class="filterCard-header1">Type of Resource</p>
-              <a data-toggle="collapse" data-target=".collapse-for"><%= image_tag "icon-chevron-up.svg", class: "filter-header-chevron a-chevron"  %></a>
-            </div>
-            <div class="collapse-for collapse in">
-              <%= check_box_tag("resource_type[]", "Tips & Guidelines", "checked") %>
-              <%= label_tag(:resource_type, "Tips & Guidelines", class:'radio-spacing font-16') %>
-              <br>
-              <%= check_box_tag("resource_type[]", "Report", "checked") %>
-              <%= label_tag(:resource_type, "Report", class:'radio-spacing font-16') %>
-              <br>
-              <%= check_box_tag("resource_type[]","Research", "checked") %>
-              <%= label_tag(:resource_type, "Research", class:'radio-spacing font-16') %>
-              <br>
-              <hr/ class="filterCard-line">
-            </div>
-          </div>
-          <div class="center-flex-content">
-            <%= submit_tag 'Filter', class:"btn-primary btn-lg filter-btn" %>
-          </div>
-          <% end %>
-          <div class="center-flex-content">
-            <%= button_to "Add New Resource", new_resource_path, :method => "get", class:"btn-primary btn-lg filter-btn" %>
-          </div>
-
+  <p class="bree-font">Featured</p>
+  <%  @featured.each do |r| %>
+  <div class="event-subsection2-text-resource">
+    <div class="event-subsection2-details">
+      <p class="event-subsection2-header2"><%= r.name %></p>
+      <div class="event-info">
+        <div>
+          <%= image_tag "icon-calendar.svg", class: "event-info-icon" %>
+          <p class="event-info-txt"><%= r.created_at %></p>
         </div>
-
-        <div class="col-md-9 event-subsection2">
-          <div class="event-subsection2-card">
-            <%= image_tag "https://user-images.githubusercontent.com/19618674/27264549-ada2ad26-5435-11e7-8a69-bf291986d6ea.png", class: "event-subsection2-image" %>
-            <div class="event-subsection2-text">
-              <p class="event-subsection2-header">Resources</p>
-            </div>
-          </div>
-
-          <p class="bree-font">Featured</p>
-          <%  @featured.each do |r| %>
-          <div class="event-subsection2-text-resource">
-            <div class="event-subsection2-details">
-              <p class="event-subsection2-header2"><%= r.name %></p>
-              <div class="event-info">
-                <div>
-                  <%= image_tag "icon-calendar.svg", class: "event-info-icon" %>
-                  <p class="event-info-txt"><%= r.created_at %></p>
-                </div>
-              </div>
-              <p class="event-paragraph-resource"><%= r.description  %></p>
-              <div class="div-tags">
-                <p class="tags-txt">Tags:</p>
-                <div class="report-button">
-                  <p class="tag-margin"><%= r.tags.map(&:name).join(', ')  %></p>
-                </div>
-              </div>
-              <hr/ class="event-subsection2-line">
-              <div class="share-view">
-                <div class="event-info1">
-                  <%= image_tag "icon-share.svg", class: "event-info-icon" %>
-                  <p class="resource-info-txt">Share PDF</p>
-                </div>
-                <div class="event-info1">
-                  <%= image_tag "icon-acrobat.svg", class: "event-info-icon" %>
-                  <p class="resource-info-txt"><%= link_to "View", asset_path(r.resource_file) %></p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <% end %>
-
-
-          <p class="bree-font" id="resource-results">Results (<%= @resources_search.total_count %>)</p>
-          <br>
-          <%  @resources_search.each do |r| %>
-          <div class="event-subsection2-text-resource">
-            <div class="event-subsection2-details">
-              <p class="event-subsection2-header2"><%= r.name %></p>
-              <div class="event-info">
-                <div>
-                  <%= image_tag "icon-calendar.svg", class: "event-info-icon" %>
-                  <p class="event-info-txt"><%= r.created_at %></p>
-                </div>
-              </div>
-              <p class="event-paragraph-resource"><%= r.description  %></p>
-              <div class="div-tags">
-                <p class="tags-txt">Tags:</p>
-                <div class="report-button">
-
-                  <p class="tag-margin"><%= r.tags.map(&:name).join(', ')  %></p>
-                </div>
-              </div>
-              <hr/ class="event-subsection2-line">
-              <div class="share-view">
-                <div class="event-info1">
-                  <%= image_tag "icon-share.svg", class: "event-info-icon" %>
-                  <p class="resource-info-txt">Share PDF</p>
-                </div>
-                <div class="event-info1">
-                  <%= image_tag "icon-acrobat.svg", class: "event-info-icon" %>
-                  <p class="resource-info-txt"><%= link_to "View", asset_path(r.resource_file) %></p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <% end %>
-          <div class="container-fluid center-flex-content bree-font" style="align-items:center;">
-            <%= paginate @resources_search, window: 2 %>
-          </div>
+      </div>
+      <p class="event-paragraph-resource font-16"><%= r.description  %></p>
+      <div class="div-tags">
+        <p class="tags-txt">Tags:</p>
+        <div class="report-button">
+          <p class="tag-margin"><%= r.tags.map(&:name).join(', ')  %></p>
+        </div>
+      </div>
+      <hr/ class="event-subsection2-line">
+      <div class="share-view">
+        <div class="event-info1">
+          <%= image_tag "icon-share.svg", class: "event-info-icon" %>
+          <p class="resource-info-txt">Share PDF</p>
+        </div>
+        <div class="event-info1">
+          <%= image_tag "icon-acrobat.svg", class: "event-info-icon" %>
+          <p class="resource-info-txt"><%= link_to "View", asset_path(r.resource_file) %></p>
         </div>
       </div>
     </div>
   </div>
+  <% end %>
+
+
+  <p class="bree-font" id="resource-results">Results (<%= @resources_search.total_count %>)</p>
+  <br>
+  <%  @resources_search.each do |r| %>
+  <div class="event-subsection2-text-resource">
+    <div class="event-subsection2-details">
+      <p class="event-subsection2-header2"><%= r.name %></p>
+      <div class="event-info">
+        <div>
+          <%= image_tag "icon-calendar.svg", class: "event-info-icon" %>
+          <p class="event-info-txt"><%= r.created_at %></p>
+        </div>
+      </div>
+      <p class="event-paragraph-resource"><%= r.description  %></p>
+      <div class="div-tags">
+        <p class="tags-txt">Tags:</p>
+        <div class="report-button">
+
+          <p class="tag-margin"><%= r.tags.map(&:name).join(', ')  %></p>
+        </div>
+      </div>
+      <hr/ class="event-subsection2-line">
+      <div class="share-view">
+        <div class="event-info1">
+          <%= image_tag "icon-share.svg", class: "event-info-icon" %>
+          <p class="resource-info-txt">Share PDF</p>
+        </div>
+        <div class="event-info1">
+          <%= image_tag "icon-acrobat.svg", class: "event-info-icon" %>
+          <p class="resource-info-txt"><%= link_to "View", asset_path(r.resource_file) %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <% end %>
+  <div class="container-fluid center-flex-content bree-font" style="align-items:center;">
+    <%= paginate @resources_search, window: 2 %>
+  </div>
+</div>
+</div>
+</div>
+</div>
 </div>
 
 <%= render 'partials/footer' %>

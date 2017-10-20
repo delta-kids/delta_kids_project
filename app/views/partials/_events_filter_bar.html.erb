@@ -2,14 +2,10 @@
 <div class="calendar-section1 calendar-section1-container" id="calendar-section1">
   <div class="container-fluid">
     <div class="row calendar-row">
-      <div class="col-md-3" id="calendar-subsection1">
+      <div class="col-xs-hidden col-sm-hidden col-md-3" id="calendar-subsection1">
         <%= image_tag "filter-header.svg", class: " filter-header-img"  %>
-        <!--
-        <div id="filter-header">
-        <p id="#filterText">Filter</p>
-        <%#= image_tag "icon-filter.svg", class: " filter-header-chevron" %>
-      </div>
-    -->
+        <br>
+        <br>
     <div class="">
       <%= form_tag(events_path, method: :get) do %>
       <%= text_field_tag :search, params[:search] %>
@@ -24,12 +20,11 @@
         <%= text_field_tag "by_end_date",Date.current() + 1.month, placeholder: "YYYY/MM/DD", class: 'datepicker form form-padding date-time-width' %>
       </div>
     </div>
-    <br>
+
     <div class="filterCard">
       <div class="filter-header-container">
         <p class="filterCard-header1">For</p>
-        <a data-toggle="collapse" data-toggle="chevron-anchor" data-target=".collapse-for" class="chevron-anchor"><%= image_tag "icon-chevron-up.svg", class: "filter-header-chevron a-chevron"  %></a>
-
+        <a data-toggle="collapse" data-target=".collapse-for" class="chevron-anchor"><%= image_tag "icon-chevron-up.svg", class: "filter-header-chevron a-chevron"  %></a>
       </div>
       <div class="collapse-for collapse in">
         <%= check_box_tag("event_age_group[]","1", "checked") %>
@@ -39,10 +34,10 @@
         <%= label_tag(:event_age_group, "6-12 year olds", class:'radio-spacing font-16') %>
         <br>
         <%= check_box_tag("event_age_group[]","3","checked") %>
-        <%= label_tag(:event_age_group, "Parents", class:'radio-spacing font-16') %>
+        <%= label_tag(:event_age_group, "Adults", class:'radio-spacing font-16') %>
         <br>
         <%= check_box_tag("event_age_group[]","4", "checked") %>
-        <%= label_tag(:event_age_group, "Childcare workers/providers", class:'radio-spacing font-16', style:"margin-right:0;") %>
+        <%= label_tag(:event_age_group, "N/A", class:'radio-spacing font-16', style:"margin-right:0;") %>
         <br>
         <hr/ class="filterCard-line">
       </div>
@@ -136,4 +131,13 @@
     <div class="center-flex-content">
       <%= button_to "Create New Event", new_event_path, :method => "get", class:"btn-primary btn-lg filter-btn" %>
     </div>
+    <% if @events_search.total_count == 0 %>
+    <%= image_tag("girl-search-not-found-with-rainbow.svg",style:"width:100%;height:350px;") %>
+    <%= image_tag("cloud1.png",style:"width:100%;height:75px; transform: scaleY(-1); position:relative; bottom:45px") %>
+    <%= image_tag("cloud1.png",style:"width:100%;height:75px; position:relative; bottom:45px") %>
+    <% else %>
+    <%= image_tag("girl-search-with-rainbow.svg",style:"width:100%;height:350px;") %>
+    <%= image_tag("cloud1.png",style:"width:100%;height:75px; transform: scaleY(-1); position:relative; bottom:45px") %>
+    <%= image_tag("cloud1.png",style:"width:100%;height:75px; position:relative; bottom:45px") %>
+    <% end %>
   </div>
