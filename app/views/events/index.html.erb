@@ -13,22 +13,23 @@
         <% @events_by_start_date[date].each do |event|  %>
         <% if event.approved != true %>
         <% else %>
-        <!-- <script>
+        <script>
         // When the user clicks on <div>, open the popup
-        function calendarPopup() {
-          let popup = document.getElementById("cal-popup-window-<%=event.id%>");
+        function calendarPopup(id) {
+          let popup = document.getElementById(`cal-popup-window-${id}`);
           popup.classList.toggle("show");
         }
         </script>
-        <div class="popup" onclick="calendarPopup()">
-          <p class="cal-links"><%= event.start_time.strftime("%I:%M %p") %></p>
+        <div class="popup" onclick="calendarPopup(<%= event.id %>)">
+          <p class="cal-links"><%= event.start_time.strftime("%I:%M %p") %> <%= event.title %></p>
+          <br>
           <div class="popuptext" id="cal-popup-window-<%=event.id%>">
             <i class="fa fa-times pull-right" aria-hidden="true" style="color:yellow; font-size:30px;"></i>
             <p class="bree-font"><%= link_to event.title, event_learn_more_path(event), class:"", style:"text-decoration:none; color:yellow"  %></p>
             <div class="row">
               <div class="col-xs-12 col-sm-12 col-md-12">
                 <%= image_tag(event.image_url.to_s,class:"popup-pic") %>
-                <p class='font-16'><strong>Description:<br> </strong><%= event.description %></p>
+                <p class='font-16'><strong>Description: </strong><%= event.description %></p>
                 <p class='font-16'><strong>Tags:<br> </strong><%= event.tags.map(&:name).join(', ') %></p>
               </div>
               <br>
@@ -46,7 +47,7 @@
                   <p class='font-16'><strong>Age Group:<br> </strong><%= event.age_groups.map(&:age).join(', ') %></p>
                   <p class='font-16'><strong>Registration:<br> </strong><%= event.registration %></p>
                   <p class='font-16'><strong>Address:<br> </strong><%= event.address %></p>
-                  <p class='font-16'><strong>More Info:<br> </strong><%= link_to event.more_info %></p>
+                  <p class='font-16'><strong>More Info:<br> </strong><%= link_to event.more_info, class:"cal-links " %></p>
                 </div>
                 <div class="col-xs-6 col-sm-6 col-md-6">
                   <p class='font-16'><strong>End Date:<br> </strong><%= event.end_date %></p>
@@ -58,7 +59,7 @@
               </div>
             </div>
           </div>
-        </div> -->
+        </div>
         <% end %>
         <% end %>
         <% end %>

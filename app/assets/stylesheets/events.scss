@@ -17,9 +17,10 @@
 	width: 100%;
 }
 
-.day-container {
-	// max-height: 100px;
-	// overflow-y:scroll;
+.day-scroller {
+	max-height: 100px;
+	overflow-x: auto;
+	overflow-y: auto;
 }
 
 .cal-links {
@@ -34,13 +35,6 @@
 .testClass a {
 	margin: 2px;
 }
-// #featured-carousel {
-// 	// width: fit-content;
-// }
-//
-// .carousel-control.left, .carousel-control.right {
-//     background-image: none !important;
-// }
 
 .calendar-row{
 	padding: 10px 3% 5% 3%;
@@ -261,6 +255,7 @@
 	font-size: 16px;
 	color: #00A3DA;
 }
+
 #button-seemore{
  	background: #00A3DA;
  	border-radius: 10px;
@@ -372,7 +367,11 @@
 .table-hover button:hover {
 	background-color: yellow !important;
 }
-/* Popup container - can be anything you want */
+
+.disable-scrolling {
+		overflow: hidden;
+}
+
 .popup {
     position: relative;
     display: inline-block;
@@ -383,20 +382,19 @@
     user-select: none;
 }
 
-/* The actual popup */
 .popup .popuptext {
     visibility: hidden;
     width: 700px;
-    height: 450px;
+    height: 600px;
 		overflow-y: auto;
     background-color: #144D7D;
     color: #fff;
 		padding:5px 15px 15px 15px;
     border-radius: 6px;
-    position:absolute;
+    position:fixed;
     z-index: 1;
-    bottom:0%;
-    right:0%;
+    bottom:10%;
+    right:13%;
 }
 .fa-times:hover {
 	color: #3ea3da !important;
