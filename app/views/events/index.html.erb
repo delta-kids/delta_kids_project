@@ -31,6 +31,7 @@
                 <%= image_tag(event.image_url.to_s,class:"popup-pic") %>
                 <p class='font-16'><strong>Description: </strong><%= event.description %></p>
                 <p class='font-16'><strong>Tags:<br> </strong><%= event.tags.map(&:name).join(', ') %></p>
+                <p><%= link_to 'Learn More', event_learn_more_path(event), class: "event-info-bold2" %></p>
               </div>
               <br>
               <div class="col-xs-12 col-sm-12 col-md-12">
