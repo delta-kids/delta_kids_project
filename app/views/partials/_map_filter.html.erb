@@ -27,7 +27,7 @@
             <a data-toggle="collapse" data-toggle="chevron-anchor" data-target=".collapse-for" class="chevron-anchor"><%= image_tag "icon-chevron-up.svg", class: "filter-header-chevron a-chevron"  %></a>
 
           </div>
-          <div class="collapse-for collapse in">
+          <div class="collapse-for collapse in checkbox-container">
             <%= check_box_tag("age_group[]","1", "checked", id:"age1") %>
             <%= label_tag(:age1, "0-5 year olds", class:'radio-spacing font-16') %>
             <br>
@@ -49,7 +49,7 @@
             <p class="filterCard-header1">Where</p>
             <a data-toggle="collapse" data-target=".collapse-where"><%= image_tag "icon-chevron-up.svg", class: "filter-header-chevron a-chevron" %></a>
           </div>
-          <div class="collapse-where collapse in">
+          <div class="collapse-where collapse in checkbox-container">
             <%= check_box_tag("event_location[]", "Ladner", "checked", id:"location1") %>
             <%= label_tag(:location1, "Ladner", class:'radio-spacing font-16') %>
             <br>
@@ -69,7 +69,7 @@
             <a data-toggle="collapse" data-target=".collapse-registration" class="a-chevron"><%= image_tag "icon-chevron-up.svg", class: "filter-header-chevron"  %></a>
 
           </div>
-          <div class="collapse-registration collapse in">
+          <div class="collapse-registration collapse in checkbox-container">
             <%= check_box_tag("registration[]","Drop-in", "checked", id:"registration1") %>
             <%= label_tag(:registration1, "Drop in Program", class:'radio-spacing font-16') %>
             <br>
@@ -85,7 +85,7 @@
             <p class="filterCard-header1">Cost</p>
             <a data-toggle="collapse" data-target=".collapse-cost"><%= image_tag "icon-chevron-up.svg", class: "filter-header-chevron a-chevron"  %></a>
           </div>
-          <div class="collapse-cost collapse in">
+          <div class="collapse-cost collapse in checkbox-container">
             <%= check_box_tag("cost[]","Free", "checked",id:"cost1") %>
             <%= label_tag(:cost1, "Free", class:'radio-spacing font-16') %>
             <br>
@@ -102,21 +102,21 @@
             <a data-toggle="collapse" data-target=".collapse-typeof-event"><%= image_tag "icon-chevron-up.svg", class: " filter-header-chevron a-chevron" %></a>
 
           </div>
-          <div class="collapse-typeof-event collapse in">
-            <%= check_box_tag("event_type[]", "1", "checked", id:"eventtype1") %>
-            <%= label_tag(:eventtype1, "Arts & Culture", class:'radio-spacing font-16') %>
+          <div class="collapse-typeof-event collapse in checkbox-container">
+            <%= check_box_tag("event_type[]", "1", "checked", id:"mapeventtype1") %>
+            <%= label_tag(:mapeventtype1, "Arts & Culture", class:'radio-spacing font-16') %>
             <br>
-            <%= check_box_tag("event_type[]", "2", "checked", id:"eventtype2") %>
-            <%= label_tag(:eventtype2, "Education", class:'radio-spacing font-16') %>
+            <%= check_box_tag("event_type[]", "2", "checked", id:"mapeventtype2") %>
+            <%= label_tag(:mapeventtype2, "Education", class:'radio-spacing font-16') %>
             <br>
-            <%= check_box_tag("event_type[]", "3", "checked", id:"eventtype3") %>
-            <%= label_tag(:eventtype3, "Entertainment", class:'radio-spacing font-16') %>
+            <%= check_box_tag("event_type[]", "3", "checked", id:"mapeventtype3") %>
+            <%= label_tag(:mapeventtype3, "Entertainment", class:'radio-spacing font-16') %>
             <br>
-            <%= check_box_tag("event_type[]", "4", "checked", id:"eventtype4") %>
-            <%= label_tag(:eventtype4, "Health", class:'radio-spacing font-16') %>
+            <%= check_box_tag("event_type[]", "4", "checked", id:"mapeventtype4") %>
+            <%= label_tag(:mapeventtype4, "Health", class:'radio-spacing font-16') %>
             <br>
-            <%= check_box_tag("event_type[]", "5", "checked", id:"eventtype5") %>
-            <%= label_tag(:eventtype5, "Sports", class:'radio-spacing font-16') %>
+            <%= check_box_tag("event_type[]", "5", "checked", id:"mapeventtype5") %>
+            <%= label_tag(:mapeventtype5, "Sports", class:'radio-spacing font-16') %>
             <br>
             <hr/ class="filterCard-line">
           </div>
@@ -127,7 +127,7 @@
             <a data-toggle="collapse" data-target=".collapse-typeof-program"><%= image_tag "icon-chevron-up.svg", class: " filter-header-chevron a-chevron" %></a>
 
           </div>
-          <div class="collapse-typeof-program collapse in">
+          <div class="collapse-typeof-program collapse in checkbox-container">
             <%= check_box_tag("program_type[]", "1", "checked", id:"programtype1") %>
             <%= label_tag(:programtype1, "Arts & Culture", class:'radio-spacing font-16') %>
             <br>
@@ -156,7 +156,7 @@
             <a data-toggle="collapse" data-target=".collapse-typeof-service"><%= image_tag "icon-chevron-up.svg", class: " filter-header-chevron a-chevron" %></a>
 
           </div>
-          <div class="collapse-typeof-service collapse in">
+          <div class="collapse-typeof-service collapse in checkbox-container">
             <%= check_box_tag("service_type[]", "1", "checked", id:"servicetype1") %>
             <%= label_tag(:servicetype1, "Child Advocacy", class:'radio-spacing font-16') %>
             <br>
@@ -196,3 +196,20 @@
           <%= button_to "Create New Event", new_event_path, :method => "get", class:"btn-primary btn-lg filter-btn" %>
         </div>
       </div>
+      <script>
+      var checkboxValues = JSON.parse(localStorage.getItem('checkboxValues')) || {},
+          $checkboxes = $(".checkbox-container :checkbox");
+
+      $checkboxes.on("change", function(){
+        $checkboxes.each(function(){
+          checkboxValues[this.id] = this.checked;
+        });
+
+        localStorage.setItem("checkboxValues", JSON.stringify(checkboxValues));
+      });
+
+      // On page load
+      $.each(checkboxValues, function(key, value) {
+        $("#" + key).prop('checked', value);
+      });
+      </script>

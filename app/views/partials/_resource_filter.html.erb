@@ -19,7 +19,7 @@
               <p class="filterCard-header1">Topic</p>
               <a data-toggle="collapse" data-target=".collapse-for"><%= image_tag "icon-chevron-up.svg", class: "filter-header-chevron a-chevron"  %></a>
             </div>
-            <div class="collapse-for collapse in">
+            <div class="collapse-for collapse in checkbox-container">
               <%= check_box_tag("resource_topic[]","1", "checked", id:"topic1") %>
               <%= label_tag(:topic1, "Physical Health", class:'radio-spacing font-16') %>
               <br>
@@ -44,7 +44,7 @@
               <p class="filterCard-header1">Resource Covers</p>
               <a data-toggle="collapse" data-target=".collapse-for"><%= image_tag "icon-chevron-up.svg", class: "filter-header-chevron a-chevron"  %></a>
             </div>
-            <div class="collapse-for collapse in">
+            <div class="collapse-for collapse in checkbox-container">
               <%= check_box_tag("resource_location[]","Delta","checked", id:"location1") %>
               <%= label_tag(:location1, "Delta", class:'radio-spacing font-16') %>
               <br>
@@ -67,12 +67,12 @@
               <p class="filterCard-header1">Children Aged</p>
               <a data-toggle="collapse" data-target=".collapse-for"><%= image_tag "icon-chevron-up.svg", class: "filter-header-chevron a-chevron"  %></a>
             </div>
-            <div class="collapse-for collapse in">
-              <%= check_box_tag("resource_age_group[]","1","checked", id:"age1") %>
-              <%= label_tag(:age1, "0-5 years", class:'radio-spacing font-16') %>
+            <div class="collapse-for collapse in checkbox-container">
+              <%= check_box_tag("resource_age_group[]","1","checked", id:"resourceage1") %>
+              <%= label_tag(:resourceage1, "0-5 years", class:'radio-spacing font-16') %>
               <br>
-              <%= check_box_tag("resource_age_group[]","2","checked", id:"age2") %>
-              <%= label_tag(:age2, "6-12 years", class:'radio-spacing font-16') %>
+              <%= check_box_tag("resource_age_group[]","2","checked", id:"resourceage2") %>
+              <%= label_tag(:resourceage2, "6-12 years", class:'radio-spacing font-16') %>
               <br>
               <hr/ class="filterCard-line">
             </div>
@@ -83,7 +83,7 @@
               <p class="filterCard-header1">Type of Resource</p>
               <a data-toggle="collapse" data-target=".collapse-for"><%= image_tag "icon-chevron-up.svg", class: "filter-header-chevron a-chevron"  %></a>
             </div>
-            <div class="collapse-for collapse in">
+            <div class="collapse-for collapse in checkbox-container">
               <%= check_box_tag("resource_type[]", "Tips & Guidelines", "checked", id:"resourcetype1") %>
               <%= label_tag(:resourcetype1, "Tips & Guidelines", class:'radio-spacing font-16') %>
               <br>
@@ -104,3 +104,20 @@
             <%= button_to "Add New Resource", new_resource_path, :method => "get", class:"btn-primary btn-lg filter-btn" %>
           </div>
         </div>
+        <script>
+        var checkboxValues = JSON.parse(localStorage.getItem('checkboxValues')) || {},
+        $checkboxes = $(".checkbox-container :checkbox");
+
+        $checkboxes.on("change", function(){
+          $checkboxes.each(function(){
+            checkboxValues[this.id] = this.checked;
+          });
+
+          localStorage.setItem("checkboxValues", JSON.stringify(checkboxValues));
+        });
+
+        // On page load
+        $.each(checkboxValues, function(key, value) {
+          $("#" + key).prop('checked', value);
+        });
+        </script>
