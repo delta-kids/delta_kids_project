@@ -1,7 +1,5 @@
 class Event < ApplicationRecord
   # belongs_to :organization, :class, optional: true
-
-  # scope :by_date, -> (start_date: Date.current() - 9999.years, end_date: Date.current() + 9999.years) { where(start_date: start_date..end_date, end_date: start_date..end_date) }
   scope :by_start_date, -> start_date { where(['start_date >= ?', start_date])  }
   scope :by_end_date, -> end_date { where(['start_date <= ?', end_date]) }
   scope :search, -> term {

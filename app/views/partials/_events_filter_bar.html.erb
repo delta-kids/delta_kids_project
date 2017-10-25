@@ -27,16 +27,16 @@
         <a data-toggle="collapse" data-target=".collapse-for" class="chevron-anchor"><%= image_tag "icon-chevron-up.svg", class: "filter-header-chevron a-chevron"  %></a>
       </div>
       <div class="collapse-for collapse in checkbox-container">
-        <%= check_box_tag("event_age_group[]","1", "checked", id:"eventage1") %>
+        <%= check_box_tag("age_group[]","1", "checked", id:"eventage1") %>
         <%= label_tag(:eventage1, "0-5 year olds", class:'radio-spacing font-16') %>
         <br>
-        <%= check_box_tag("event_age_group[]","2", "checked", id:"eventage2") %>
+        <%= check_box_tag("age_group[]","2", "checked", id:"eventage2") %>
         <%= label_tag(:eventage2, "6-12 year olds", class:'radio-spacing font-16') %>
         <br>
-        <%= check_box_tag("event_age_group[]","3","checked", id:"eventage3") %>
+        <%= check_box_tag("age_group[]","3","checked", id:"eventage3") %>
         <%= label_tag(:eventage3, "Adults", class:'radio-spacing font-16') %>
         <br>
-        <%= check_box_tag("event_age_group[]","4", "checked", id:"eventage4") %>
+        <%= check_box_tag("age_group[]","4", "checked", id:"eventage4") %>
         <%= label_tag(:eventage4, "N/A", class:'radio-spacing font-16', style:"margin-right:0;") %>
         <br>
         <hr/ class="filterCard-line">
