@@ -7,7 +7,7 @@
         <br>
         <br>
         <div class="">
-          <%= form_tag(map_path, method: :get) do %>
+          <%= form_tag("/map#results", method: :get) do %>
           <%= text_field_tag :search, params[:search_event] %>
           <%= submit_tag "Search", :name => nil, class:'btn-primary' %>
           <br>

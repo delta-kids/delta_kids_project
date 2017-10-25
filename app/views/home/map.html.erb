@@ -38,6 +38,7 @@
 
       </div>
       <div class="container-fluid">
+        <a id="results"></a>
         <p class="bree-font">Results (<%= @map_search_results.total_count %>)</p>
         <% for event in @map_search_results %>
         <% if event.has_attribute?(:event_type_id) %>

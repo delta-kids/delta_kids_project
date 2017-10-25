@@ -20,35 +20,34 @@
       <br>
     </div>
 
-    <div class="col-md-9 organization-content">
-      <div class="col-md-6">
+    <div class="col-md-9 col-sm-12 col-xs-12 organization-content">
+      <div class="col-md-6 col-sm-6 col-xs-6">
         <h3>ORGANIZATIONS</h3>
       </div>
-      <div class="col-md-5">
+      <div class="col-md-6 col-sm-6 col-xs-6">
         <h3>PROGRAMS OFFERED</h3>
       </div>
 
       <% @load_program&.each do |p| %>
-      <div class="col-md-12">
+      <div class="col-md-12 col-sm-12 col-xs-12">
         <hr class="divider">
       </div>
 
-      <div class="col-md-12 ">
+      <div class="col-md-12 col-sm-12 col-xs-12 ">
         <div class="organization-details">
 
 
-          <div class="organization-info col-md-6">
+          <div class="organization-info col-md-6 col-sm-6 col-xs-6">
             <div class="organization-logo">
               <%= image_tag "program-logo#{rand(1..2)}.png"  %>
             </div>
 
-            <div class="col-md-8 col-sm-7">
+            <div class="col-md-8 col-sm-5 col-xs-5">
               <p><%= p.organization.name %></p>
               <!-- <a href="#">Learn More</a> -->
               <%= link_to 'Learn More', program_learn_more_path(p) %>
             </div>
           </div>
-
           <div class="col-md-5">
             <p><%= p.description %></p>
           </div>

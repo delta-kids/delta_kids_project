@@ -8,6 +8,7 @@
     <div class="calendar-subsection2-card" style="margin-top:0px;">
       <%= month_calendar  do |date| %>
       <%= date.day %>
+
       <div class="day-scroller">
         <% if @events_by_start_date[date] %>
         <% @events_by_start_date[date].each do |event|  %>
@@ -68,8 +69,11 @@
       <% end %>
     </div>
 
+
     <div class="container-fluid">
+      <a id="results"></a>
       <p class="bree-font">Results (<%= @events_search.total_count %>)</p>
+
       <% for event in @events_search %>
       <div class="calendar-subsection2-card light-blue-bg-color" style="margin-top:30px">
         <div class="event-image-container">
