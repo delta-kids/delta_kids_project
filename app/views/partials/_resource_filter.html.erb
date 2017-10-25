@@ -20,20 +20,20 @@
               <a data-toggle="collapse" data-target=".collapse-for"><%= image_tag "icon-chevron-up.svg", class: "filter-header-chevron a-chevron"  %></a>
             </div>
             <div class="collapse-for collapse in">
-              <%= check_box_tag("resource_topic[]","1", "checked") %>
-              <%= label_tag(:resource_topic, "Physical Health", class:'radio-spacing font-16') %>
+              <%= check_box_tag("resource_topic[]","1", "checked", id:"topic1") %>
+              <%= label_tag(:topic1, "Physical Health", class:'radio-spacing font-16') %>
               <br>
-              <%= check_box_tag("resource_topic[]","2", "checked") %>
-              <%= label_tag(:resource_topic, "Mental Health", class:'radio-spacing font-16') %>
+              <%= check_box_tag("resource_topic[]","2", "checked", id:"topic2") %>
+              <%= label_tag(:topic2, "Mental Health", class:'radio-spacing font-16') %>
               <br>
-              <%= check_box_tag("resource_topic[]","3", "checked") %>
-              <%= label_tag(:resource_topic, "Child Development", class:'radio-spacing font-16') %>
+              <%= check_box_tag("resource_topic[]","3", "checked", id:"topic3") %>
+              <%= label_tag(:topic3, "Child Development", class:'radio-spacing font-16') %>
               <br>
-              <%= check_box_tag("resource_topic[]","4", "checked") %>
-              <%= label_tag(:resource_topic, "Policy", class:'radio-spacing font-16') %>
+              <%= check_box_tag("resource_topic[]","4", "checked", id:"topic4") %>
+              <%= label_tag(:topic4, "Policy", class:'radio-spacing font-16') %>
               <br>
-              <%= check_box_tag("resource_topic[]","5", "checked") %>
-              <%= label_tag(:resource_topic, "Child Safety", class:'radio-spacing font-16') %>
+              <%= check_box_tag("resource_topic[]","5", "checked", id:"topic5") %>
+              <%= label_tag(:topic5, "Child Safety", class:'radio-spacing font-16') %>
               <br>
               <hr/ class="filterCard-line">
             </div>
@@ -45,17 +45,17 @@
               <a data-toggle="collapse" data-target=".collapse-for"><%= image_tag "icon-chevron-up.svg", class: "filter-header-chevron a-chevron"  %></a>
             </div>
             <div class="collapse-for collapse in">
-              <%= check_box_tag("resource_location[]","Delta","checked") %>
-              <%= label_tag(:resource_location, "Delta", class:'radio-spacing font-16') %>
+              <%= check_box_tag("resource_location[]","Delta","checked", id:"location1") %>
+              <%= label_tag(:location1, "Delta", class:'radio-spacing font-16') %>
               <br>
-              <%= check_box_tag("resource_location[]","BC","checked") %>
-              <%= label_tag(:resource_location, "BC", class:'radio-spacing font-16') %>
+              <%= check_box_tag("resource_location[]","BC","checked", id:"location2") %>
+              <%= label_tag(:location2, "BC", class:'radio-spacing font-16') %>
               <br>
-              <%= check_box_tag("resource_location[]","Canada","checked") %>
-              <%= label_tag(:resource_location, "Canada", class:'radio-spacing font-16') %>
+              <%= check_box_tag("resource_location[]","Canada","checked", id:"location3") %>
+              <%= label_tag(:location3, "Canada", class:'radio-spacing font-16') %>
               <br>
-              <%= check_box_tag("resource_location[]","N/A","checked") %>
-              <%= label_tag(:resource_location, "N/A", class:'radio-spacing font-16') %>
+              <%= check_box_tag("resource_location[]","N/A","checked", id:"location4") %>
+              <%= label_tag(:location4, "N/A", class:'radio-spacing font-16') %>
               <br>
               <hr/ class="filterCard-line">
             </div>
@@ -68,11 +68,11 @@
               <a data-toggle="collapse" data-target=".collapse-for"><%= image_tag "icon-chevron-up.svg", class: "filter-header-chevron a-chevron"  %></a>
             </div>
             <div class="collapse-for collapse in">
-              <%= check_box_tag("resource_age_group[]","1","checked") %>
-              <%= label_tag(:resource_age_group, "0-5 years", class:'radio-spacing font-16') %>
+              <%= check_box_tag("resource_age_group[]","1","checked", id:"age1") %>
+              <%= label_tag(:age1, "0-5 years", class:'radio-spacing font-16') %>
               <br>
-              <%= check_box_tag("resource_age_group[]","2","checked") %>
-              <%= label_tag(:resource_age_group, "6-12 years", class:'radio-spacing font-16') %>
+              <%= check_box_tag("resource_age_group[]","2","checked", id:"age2") %>
+              <%= label_tag(:age2, "6-12 years", class:'radio-spacing font-16') %>
               <br>
               <hr/ class="filterCard-line">
             </div>
@@ -84,14 +84,14 @@
               <a data-toggle="collapse" data-target=".collapse-for"><%= image_tag "icon-chevron-up.svg", class: "filter-header-chevron a-chevron"  %></a>
             </div>
             <div class="collapse-for collapse in">
-              <%= check_box_tag("resource_type[]", "Tips & Guidelines", "checked") %>
-              <%= label_tag(:resource_type, "Tips & Guidelines", class:'radio-spacing font-16') %>
+              <%= check_box_tag("resource_type[]", "Tips & Guidelines", "checked", id:"resourcetype1") %>
+              <%= label_tag(:resourcetype1, "Tips & Guidelines", class:'radio-spacing font-16') %>
               <br>
-              <%= check_box_tag("resource_type[]", "Report", "checked") %>
-              <%= label_tag(:resource_type, "Report", class:'radio-spacing font-16') %>
+              <%= check_box_tag("resource_type[]", "Report", "checked", id:"resourcetype2") %>
+              <%= label_tag(:resourcetype2, "Report", class:'radio-spacing font-16') %>
               <br>
-              <%= check_box_tag("resource_type[]","Research", "checked") %>
-              <%= label_tag(:resource_type, "Research", class:'radio-spacing font-16') %>
+              <%= check_box_tag("resource_type[]","Research", "checked", id:"resourcetype3") %>
+              <%= label_tag(:resourcetype3, "Research", class:'radio-spacing font-16') %>
               <br>
               <hr/ class="filterCard-line">
             </div>
