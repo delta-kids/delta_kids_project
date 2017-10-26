@@ -37,6 +37,18 @@
                 <%= f.text_field :end_time, class: 'form dateselect-time form-padding date-time-width', :required => true %>
               </div>
             </div>
+            <% if is_admin? %>
+            <!-- EVENT FEATURED? -->
+            <div class="form-group center-flex-content">
+              <%= f.label "Feature Event?", class:'label-baseline caps' %>
+              <div class="margin-right">
+                <%= f.radio_button(:featured, true) %>
+                <%= label_tag(:featured, "Yes", class:'radio-spacing') %>
+                <%= f.radio_button(:featured, false) %>
+                <%= label_tag(:featured, "No", class:'radio-spacing') %>
+              </div>
+            </div>
+            <% end %>
 
             <!-- EVENT REPEAT -->
             <div class="form-group center-flex-content">

@@ -66,21 +66,21 @@
       <!--  right column -->
       <div class="col-md-3">
         <div>
-          <h2 class="remove-h-margin">Similar Services</h2>
+          <h2 class="remove-h-margin bree-font"><strong>Similar Services</strong></h2>
         </div>
         <br>
 
         <% @similar_services.each do |service| %>
         <div class="similar-events-box">
-          <%= image_tag "DeltaKids2.jpg", class: "similar-events-image" %>
+          <%= image_tag "DeltaKids2.jpg", class: "similar-events-image fit-img" %>
           <div class="info-tag">
-            <p class="ellipsis-1 bree-font" style="font-size:20px;margin-bottom:2px;"><%= service.organization.name %>
+            <p class="ellipsis-1 bree-font" style="font-size:24px;margin-bottom:2px;"><%= service.organization.name %>
 
             <p class="font-16 ellipsis-4"><%= service.description %>
             <br>
             </p>
 
-              <p><%= link_to 'Learn More', service_learn_more_path(service), class: "learn-more-link" %></p>
+              <p><%= link_to 'Learn More', service_learn_more_path(service), class: "font-16 learn-more-link" %></p>
             <br>
           </div>
         </div>

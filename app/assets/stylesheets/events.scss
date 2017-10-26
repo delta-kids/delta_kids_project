@@ -3,6 +3,12 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.fit-img {
+	height:100%;
+	width:100%;
+	object-fit: cover
+}
+
 .wholePage{
 	background-color: #d1f0f4;
 	padding-top: 15px;

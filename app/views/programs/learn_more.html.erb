@@ -1,8 +1,8 @@
 <div class="wholePage">
   <div class="container-fluid light-blue-bg-color">
     <div class="row">
-      <div class="col-md-1"></div>
-      <div class="col-md-7">
+      <div class="col-md-1 col-sm-1 col-xs-1"></div>
+      <div class="col-md-7 col-sm-10 col-xs-10">
         <!--  left column -->
         <div class="container-fluid " id="feature-box">
           <!-- set the image to be displayed -->
@@ -64,23 +64,23 @@
       </div> <!-- col -->
       <!-- left column -->
       <!--  right column -->
-      <div class="col-md-3">
+      <div class="col-md-3 col-sm-10 col-xs-10">
         <div>
-          <h2 class="remove-h-margin">Similar Programs</h2>
+          <h2 class="remove-h-margin bree-font"><strong>Similar Programs</strong></h2>
         </div>
         <br>
 
         <% @similar_programs.each do |program| %>
         <div class="similar-events-box">
-          <%= image_tag "DeltaKids2.jpg", class: "similar-events-image" %>
+          <%= image_tag "DeltaKids2.jpg", class: "similar-events-image fit-img" %>
           <div class="info-tag">
-            <p class="ellipsis-1 bree-font" style="font-size:20px;margin-bottom:2px;"><%= program.organization.name %>
+            <p class="ellipsis-1 bree-font" style="font-size:24px;margin-bottom:2px;"><%= program.organization.name %>
 
             <p class="font-16 ellipsis-4"><%= program.description %>
             <br>
             </p>
 
-              <p><%= link_to 'Learn More', program_learn_more_path(program), class: "learn-more-link" %></p>
+              <p class="font-16"><%= link_to 'Learn More', program_learn_more_path(program), class: "learn-more-link"  %></p>
             <br>
           </div>
         </div>

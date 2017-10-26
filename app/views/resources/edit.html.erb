@@ -8,6 +8,7 @@
 
       <div class="col-md-9 dash-main-content" style="background-color:white;">
         <% if user_signed_in? %>
+        <% if is_admin? %>
         <div class="container-fluid center-flex-content">
           <div class="create-new-container">
             <br>
@@ -128,6 +129,7 @@
       </div>
     </div>
     </div>
+    <% end %>
     <% end %>
     <% else %>
     <%= render 'partials/login_msg' %>

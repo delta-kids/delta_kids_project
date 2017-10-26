@@ -16,6 +16,13 @@
                   <p class='font-20'><strong>Start Time: </strong><%= @event.start_time.strftime("%I:%M%p") %></p>
                   <p class='font-20'><strong>End Date: </strong><%= @event.end_date %></p>
                   <p class='font-20'><strong>End Time: </strong><%= @event.end_time.strftime("%I:%M%p") %></p>
+                  <p class='font-20'><strong>Featured: </strong>
+                    <% if @event.featured = true %>
+                    Yes
+                    <% else %>
+                    No
+                    <% end %>
+                  </p>
                   <p class='font-20'><strong>Event Repeat: </strong><%= @event.event_repeat %></p>
                   <p class='font-20'><strong>Location: </strong><%= @event.event_location %></p>
                   <p class='font-20'><strong>Address: </strong><%= @event.address %></p>

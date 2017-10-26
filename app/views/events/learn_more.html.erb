@@ -7,13 +7,11 @@
       <div class="container-fluid " id="feature-box">
         <!-- set the image to be displayed -->
         <%= image_tag(@event.image_url.to_s, class:"img-responsive learn-more-image") %>
-        <p class="font-16"></p>
         <hr>
-
         <!-- text body below image -->
         <div class="container-fluid" style="padding-left:30px">
           <p class="bree-font"><%= @event.title %></p>
-          <p class="font-16"><%= @event.description %></p>
+          <p class="font-20"><%= @event.description %></p>
         </div>
         <div class="container-fluid">
         <div class="event-info">
@@ -54,23 +52,21 @@
           <hr>
           <div class="row">
             <div class="col-md-6">
-              <p class="font-16"><strong>Address:</strong> <%= @event.address %></p>
+              <p class="font-20"><strong>Address:</strong> <%= @event.address %></p>
             </div>
             <div class="col-md-6">
-              <p class="font-16" style="">
+              <p class="font-20">
                 <i class="fa fa-globe" aria-hidden="true">
                 </i>&nbsp&nbsp&nbsp
-                <%= link_to @event.more_info,
-                @event.more_info,
-                 :target => "_blank", class:"wb-all"%>
+                <%= link_to @event.more_info, "http://#{@event.more_info}", class:"wb-all"%>
               </p>
-              <span class='flex'>
+              <p class="font-20">
                 <i class="fa fa-envelope align-self" aria-hidden="true"></i>
                 &nbsp&nbsp&nbsp
-                <p class="font-16"><%= link_to @event.contact_email,
+                <%= link_to @event.contact_email,
                 @event.contact_email,
-                 :target => "_blank", class:"wb-all"%></p>
-              </span>
+                 :target => "_blank", class:"wb-all"%>
+              </p>
             </div>
           </div>
         </div>
@@ -94,19 +90,19 @@
     <!--  right column -->
     <div class="col-md-3">
       <div>
-        <h2 class="remove-h-margin">Featured Events</h2>
+        <h2 class="remove-h-margin bree-font"><strong>Featured Events</strong></h2>
       </div>
       <br>
 
   <% @featured_events.each do |event| %>
       <div class="similar-events-box">
-        <%= image_tag "DeltaKids2.jpg", class: "similar-events-image" %>
+        <%= image_tag(event.image_url.to_s, class:"similar-events-image fit-img") %>
         <div class="info-tag">
-          <p class="ellipsis-1 bree-font" style="font-size:20px;margin-bottom:2px;"><%= event.title %></p>
-          <p class="ellipsis-4"><%= event.description %>
+          <p class="ellipsis-1 bree-font" style="font-size:24px;margin-bottom:2px;"><%= event.title %></p>
+          <p class="ellipsis-4 font-16"><%= event.description %>
           <br>
           </p>
-          <p><%= link_to 'Learn More', event_learn_more_path(event), class: "learn-more-link" %></p>
+          <p class="font-16"><%= link_to 'Learn More', event_learn_more_path(event), class: "learn-more-link" %></p>
           <br>
         </div>
       </div>

@@ -1,20 +1,19 @@
 <div class="row">
   <div class="col-md-12 content">
-
     <div class="col-md-3 hidden-xs hidden-sm sidebar">
       <ul class="nav nav-sidebar ">
         <%= image_tag('paperclip.png', class: 'clippy') %>
         <h2 class='age-group'><%= @age_group %> YEAR OLDS</h2>
-        <p style="color:#00A3DA">Who to contact <br> for more information about...</p>
-        <li><a href="/programs/0_5/arts_culture">Arts & Culture</a></li>
+        <p class='font-16' style="color:#00A3DA">Who to contact <br> for more information about...</p>
+        <li class='font-16'><a href="/programs/0_5/arts_culture">Arts & Culture</a></li>
         <hr>
-        <li><a href="/programs/0_5/sports">Sports</a></li>
+        <li class='font-16'><a href="/programs/0_5/sports">Sports</a></li>
         <hr>
-        <li><a href="/programs/0_5/education">Education</a></li>
+        <li class='font-16'><a href="/programs/0_5/education">Education</a></li>
         <hr>
-        <li><a href="/programs/0_5/parent_child">Parent & Child</a></li>
+        <li class='font-16'><a href="/programs/0_5/parent_child">Parent & Child</a></li>
         <hr>
-        <li><a href="/programs/0_5/childcare">Childcare & Preschools</a></li>
+        <li class='font-16'><a href="/programs/0_5/childcare">Childcare & Preschools</a></li>
         <hr>
       </ul>
       <br>
@@ -22,10 +21,10 @@
 
     <div class="col-md-9 col-sm-12 col-xs-12 organization-content">
       <div class="col-md-6 col-sm-6 col-xs-6">
-        <h3>ORGANIZATIONS</h3>
+        <h3 class="bree-font">ORGANIZATIONS</h3>
       </div>
       <div class="col-md-6 col-sm-6 col-xs-6">
-        <h3>PROGRAMS OFFERED</h3>
+        <h3 class="bree-font">PROGRAMS OFFERED</h3>
       </div>
 
       <% @load_program&.each do |p| %>
@@ -42,14 +41,14 @@
               <%= image_tag "program-logo#{rand(1..2)}.png"  %>
             </div>
 
-            <div class="col-md-8 col-sm-5 col-xs-5">
-              <p><%= p.organization.name %></p>
+            <div class="col-md-8 col-sm-8 col-xs-8">
+              <p class="font-20"><%= p.organization.name %></p>
               <!-- <a href="#">Learn More</a> -->
-              <%= link_to 'Learn More', program_learn_more_path(p) %>
+              <%= link_to 'Learn More', program_learn_more_path(p), class:"font-16" %>
             </div>
           </div>
-          <div class="col-md-5">
-            <p><%= p.description %></p>
+          <div class="col-md-5 col-sm-5 col-xs-5">
+            <p class="font-20"><%= p.description %></p>
           </div>
         </div>
       </div>

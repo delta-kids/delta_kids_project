@@ -5,49 +5,49 @@
       <ul class="nav nav-sidebar ">
         <%= image_tag('paperclip.png', class: 'clippy') %>
         <h2 class='age-group'>Families</h2>
-        <p style="color:#00A3DA">Who to contact <br> for more information about...</p>
-        <li><a href="/services/families/help_crisis">Help in a Crisis</a></li>
+        <p class="font-16" style="color:#00A3DA">Who to contact <br> for more information about...</p>
+        <li class="font-16"><a href="/services/families/help_crisis">Help in a Crisis</a></li>
         <hr>
-        <li><a href="/services/families/childcare">Child & Preschool</a></li>
+        <li class="font-16"><a href="/services/families/childcare">Child & Preschool</a></li>
         <hr>
-        <li><a href="/services/families/assistance">Assistance with fees</a></li>
+        <li class="font-16"><a href="/services/families/assistance">Assistance with fees</a></li>
         <hr>
-        <li><a href="/services/families/support">Support for Families</a></li>
+        <li class="font-16"><a href="/services/families/support">Support for Families</a></li>
         <hr>
-        <li><a href="/services/families/meals">Meals for Families</a></li>
+        <li class="font-16"><a href="/services/families/meals">Meals for Families</a></li>
         <hr>
       </ul>
       <br>
     </div>
 
-    <div class="col-md-9 organization-content">
-      <div class="col-md-6">
-        <h3>ORGANIZATIONS</h3>
+    <div class="col-md-9 col-sm-12 col-xs-12 organization-content">
+      <div class="col-md-6 col-sm-6 col-xs-6">
+        <h3 class="bree-font">ORGANIZATIONS</h3>
       </div>
-      <div class="col-md-5">
-        <h3>PROGRAMS OFFERED</h3>
+      <div class="col-md-6 col-sm-6 col-xs-6">
+        <h3 class="bree-font">PROGRAMS OFFERED</h3>
       </div>
             <% @load_service&.each do |s| %>
-            <div class="col-md-12">
+            <div class="col-md-12 col-sm-12 col-xs-12">
               <hr class="divider">
             </div>
 
-            <div class="col-md-12 ">
+            <div class="col-md-12 col-sm-12 col-xs-12">
               <div class="organization-details">
 
-          <div class="organization-info col-md-6">
+          <div class="organization-info col-md-6 col-sm-6 col-xs-6">
             <div class="organization-logo">
               <%= image_tag "program-logo#{rand(1..2)}.png"  %>
             </div>
 
-            <div class="col-md-8 col-sm-7">
-              <p class="font-16"><%= s.organization.name %></p>
-              <%= link_to 'Learn More', service_learn_more_path(s) %>
+            <div class="col-md-8 col-sm-8 col-xs-8">
+              <p class="font-20"><%= s.organization.name %></p>
+              <%= link_to 'Learn More', service_learn_more_path(s) , class:"font-16"%>
             </div>
           </div>
 
-          <div class="col-md-5">
-            <p class="font-16"><%= s.description %></p>
+          <div class="col-md-6 col-sm-6 col-xs-6">
+            <p class="font-20"><%= s.description %></p>
           </div>
         </div>
       </div>
