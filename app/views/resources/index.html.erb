@@ -12,13 +12,7 @@
   <%  @featured.each do |r| %>
   <div class="event-subsection2-text-resource">
     <div class="event-subsection2-details">
-      <p class="event-subsection2-header2"><%= r.name %></p>
-      <div class="event-info">
-        <div>
-          <%= image_tag "icon-calendar.svg", class: "event-info-icon" %>
-          <p class="event-info-txt"><%= r.created_at %></p>
-        </div>
-      </div>
+      <p class="event-subsection2-header2 bree-font26"><%= r.name %></p>
       <p class="event-paragraph-resource font-16"><%= r.description  %></p>
       <div class="div-tags">
         <p class="tags-txt">Tags:</p>
@@ -47,13 +41,7 @@
   <%  @resources_search.each do |r| %>
   <div class="event-subsection2-text-resource">
     <div class="event-subsection2-details">
-      <p class="event-subsection2-header2"><%= r.name %></p>
-      <div class="event-info">
-        <div>
-          <%= image_tag "icon-calendar.svg", class: "event-info-icon" %>
-          <p class="event-info-txt"><%= r.created_at %></p>
-        </div>
-      </div>
+      <p class="event-subsection2-header2 bree-font26"><%= r.name %></p>
       <p class="event-paragraph-resource"><%= r.description  %></p>
       <div class="div-tags">
         <p class="tags-txt">Tags:</p>

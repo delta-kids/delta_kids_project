@@ -12,7 +12,7 @@
   padding:10px;
   background-color: white;
   color:#00A3DA;
-  width: 60%;
+  width: auto;
   border-radius: 10px;
   text-align: center;
   font-size: 20px;
@@ -28,7 +28,8 @@
   background-color: white;
   border-radius: 10px;
   padding:10px;
-  width:40%;
+  width:100%;
+  height:auto;
   font-size: 16px;
 }
 
@@ -59,8 +60,8 @@
   font-size: 36px;
 }
 
-.bree-font24 {
+.bree-font26 {
   font-family: 'Bree Serif', serif;
   color:#004C81;
-  font-size: 24px;
+  font-size: 26px;
 }
