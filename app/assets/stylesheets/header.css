@@ -1,4 +1,10 @@
+.one-point-five-em {
+  font-size: 1.5em
+}
 
+.margin-t10 {
+  margin-top: 10px;
+}
 
 #header-nav-cloud {
   z-index: 1;
@@ -7,6 +13,19 @@
   background-repeat: no-repeat;
   background-position:bottom;
   top: 80px;
+}
+
+#header-nav-cloud-mobile {
+  z-index: 1;
+  background-image: url("cloud1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position:bottom;
+  margin-bottom: 0;
+  position: relative;
+  top:15px;
+  width: 100%;
+  height: 20px;
 }
 
 .nav-font {
@@ -222,7 +241,7 @@ li a {
 
 .page-padding {
   position: relative;
-  top:5px;
+  top:10px;
   height: 60px;
   width: 100%;
   background-color: #D1F0F4

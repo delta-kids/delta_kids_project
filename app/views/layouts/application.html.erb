@@ -3,6 +3,7 @@
   <head>
     <title>DeltaKidsProject</title>
     <%= csrf_meta_tags %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
 
@@ -26,7 +27,7 @@
       <% elsif flash[:alert] %>
         <div class='alert alert-danger'><%= flash[:alert] %></div>
       <% end %>
-      <%= render 'layouts/header.html.erb' %>
+      <%= render 'layouts/mobile_header.html.erb' %>
       <%= yield %>
       <%= render 'layouts/footer.html.erb' %>
     </div>
