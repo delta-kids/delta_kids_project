@@ -42,6 +42,7 @@ gem 'gmaps4rails'
 gem 'underscore-rails'
 gem 'carrierwave', '~> 1.0'
 gem 'has_scope'
+gem 'social-share-button'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

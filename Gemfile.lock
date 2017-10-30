@@ -191,6 +191,8 @@ GEM
     simple_calendar (2.2.6)
       rails (>= 3.0)
     slop (3.6.0)
+    social-share-button (1.0.0)
+      coffee-rails
     spoon (0.0.6)
       ffi
     spring (2.0.2)
@@ -255,6 +257,7 @@ DEPENDENCIES
   rails-erd
   sass-rails (~> 5.0)
   simple_calendar (~> 2.0)
+  social-share-button
   spring
   spring-watcher-listen (~> 2.0.0)
   tzinfo-data

@@ -54,11 +54,7 @@
             <h2>Share</h2>
             <br>
             <!-- share buttons -->
-            <a href="#" target="_blank"><img src="https://cache.addthiscdn.com/icons/v3/thumbs/32x32/email.png" border="0" alt="Email"/></a>
-            <a href="#" target="_blank"><img src="https://cache.addthiscdn.com/icons/v3/thumbs/32x32/facebook.png" border="0" alt="Facebook"/></a>
-            <a href="#" target="_blank"><img src="https://cache.addthiscdn.com/icons/v3/thumbs/32x32/google_plusone_share.png" border="0" alt="Google+"/></a>
-            <a href="#" target="_blank"><img src="https://cache.addthiscdn.com/icons/v3/thumbs/32x32/twitter.png" border="0" alt="Twitter"/></a>
-            <!-- share buttons -->
+            <%= social_share_button_tag(@program.description) %>
           </div>
         </div>
       </div> <!-- col -->
