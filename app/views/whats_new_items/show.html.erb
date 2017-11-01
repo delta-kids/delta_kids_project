@@ -1,0 +1,60 @@
+<div class="wholePage">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12 content">
+
+        <%= render 'partials/dash_sidebar' %>
+
+        <div class="col-xs-9 dash-main-content" style="background-color:white;">
+          <% if user_signed_in? %>
+          <div class="row">
+            <div class="col-xs-12">
+                  <div class="container-fluid">
+                    <br>
+                  <p class='font-20'><strong>Title: </strong><%= @whats_new_item.title %></p>
+                  <p class='font-20'><strong>Description: </strong><%= @whats_new_item.description %></p>
+                  <p class='font-20'><strong>Address: </strong><%= @whats_new_item.address %></p>
+                  <p class='font-20'><strong>Phone: </strong><%= @whats_new_item.phone %></p>
+                  <p class='font-20'><strong>Email: </strong><%= @whats_new_item.email %></p>
+                  <p class='font-20'><strong>Website: </strong><%= @whats_new_item.website_url %></p>
+                  <p class='font-20'><strong>Image: </strong></p>
+                  <div class="">
+                    <%= image_tag(@whats_new_item.image_url.to_s, style:"width:400px;height:300px;") %>
+                  </div>
+                  <br>
+                  <br>
+
+                      <%= link_to 'Delete', whats_new_item_path(@whats_new_item),
+                                            method: :delete,
+                                            data: {confirm: 'Are you sure?'},
+                                            class: 'btn btn-danger edit-delete-btn-width', style:'color:white !important;' %>
+
+                      <%= link_to 'Edit', edit_whats_new_item_path(@whats_new_item),
+                      class: 'btn btn-success form-padding edit-delete-btn-width'  %>
+                      <br>
+                      <br>
+                      <% if user_signed_in? %>
+                      <% if is_admin? %><% else %>
+                      <p class="font-16">
+                        * Please Note: You may only edit your request while it is still pending. When your request for a new Event has been processed any further changes must be done by an Admin.
+                      </p>
+                      <br>
+                      <% end %>
+                      <% end %>
+
+              </div>
+            </div>
+          </div>
+          <% else %>
+          <%= render 'partials/login_msg' %>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- Rainbow Footer-->
+
+<%= render 'partials/footer' %>

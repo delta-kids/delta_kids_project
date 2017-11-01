@@ -64,7 +64,7 @@ class EventsController < ApplicationController
   def destroy
     if is_admin?
       @event.destroy
-      redirect_to events_path, notice: "Organization Deleted!"
+      redirect_to events_path, notice: "Event Deleted!"
     else
       flash[:alert] = "Access Denied"
       redirect_to @event

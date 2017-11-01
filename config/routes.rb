@@ -55,6 +55,7 @@ Rails.application.routes.draw do
   get '/programs/learn_more/:id', to: 'programs#learn_more', as: 'program_learn_more'
   get '/services/learn_more/:id', to: 'services#learn_more', as: 'service_learn_more'
   get '/events/learn_more/:id', to: 'events#learn_more', as: 'event_learn_more'
+  get '/whats_new_items/learn_more/:id', to: 'whats_new_items#learn_more', as: 'whats_new_item_learn_more'
 
   get '/services/pregnancy_babies', to: 'services#pregnancy_babies'
 
@@ -71,6 +72,7 @@ Rails.application.routes.draw do
   get '/dashboard/manage_services', to: 'services#index'
   get '/dashboard/manage_organizations', to: 'organizations#index'
   get '/dashboard/manage_events', to: 'events#index2'
+  get '/dashboard/manage_whats_new_items', to: 'whats_new_items#index'
   get '/dashboard/manage_resources', to: 'resources#index2'
 
   get '/map', to: 'home#map', as: 'map'
@@ -79,13 +81,14 @@ Rails.application.routes.draw do
   # post '/search', to: 'home#search'
 
   get '/surveys', to: 'home#surveys', as: 'surveys'
-  get '/whatsnew', to: 'home#whatsnew', as: 'whatsnew'
 
   post '/contact_submit', to: 'home#submit', as: 'contacted'
 
 
 
   resources :resources
+
+  resources :whats_new_items
 
   resources :services
 

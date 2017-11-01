@@ -1,0 +1,102 @@
+<div class="wholePage">
+<div class="container-fluid light-blue-bg-color">
+  <div class="row">
+    <div class="col-md-1 col-sm-1 col-xs-1"></div>
+    <div class="col-md-7 col-sm-7 col-xs-7">
+      <!--  left column -->
+      <div class="container-fluid " id="feature-box">
+        <!-- set the image to be displayed -->
+        <%= image_tag(@whats_new_item.image_url.to_s, class:"img-responsive learn-more-image") %>
+        <hr>
+        <!-- text body below image -->
+        <div class="container-fluid" style="padding-left:30px">
+          <p class="bree-font"><%= @whats_new_item.title %></p>
+          <p class="font-20"><%= @whats_new_item.description %></p>
+        </div>
+        <div class="container-fluid">
+        <div class="event-info">
+
+        </div>
+      </div>
+
+        <!-- contact information -->
+        <div class="container-fluid">
+          <hr>
+          <div class="row">
+            <div class="col-md-6">
+              <% if @whats_new_item.address.present? %>
+              <p class="font-20"><strong>Address:</strong> <%= @whats_new_item.address %></p>
+              <% end %>
+            </div>
+            <div class="col-md-6">
+              <% if @whats_new_item.phone.present?%>
+              <p class="font-20">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                &nbsp&nbsp&nbsp
+                <%= @whats_new_item.phone %>
+              </p>
+              <% end %>
+              <% if @whats_new_item.website_url.present? %>
+              <p class="font-20">
+                <i class="fa fa-globe" aria-hidden="true">
+                </i>&nbsp&nbsp&nbsp&nbsp
+                <%= link_to @whats_new_item.website_url, "http://#{@whats_new_item.website_url}", class:"wb-all"%>
+              </p>
+              <% end %>
+              <% if @whats_new_item.email.present? %>
+              <p class="font-20">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                &nbsp&nbsp&nbsp
+                <%= link_to @whats_new_item.email,
+                @whats_new_item.email,
+                 :target => "_blank", class:"wb-all"%>
+              </p>
+              <% end %>
+            </div>
+          </div>
+        </div>
+
+        <!-- Share Links -->
+        <div class="container-fluid share-section">
+          <hr>
+          <h2>Share</h2>
+          <br>
+          <!-- share buttons -->
+          <%= social_share_button_tag(@whats_new_item.title) %>
+        </div>
+      </div>
+    </div> <!-- col -->
+    <!-- left column -->
+
+    <!--  right column -->
+    <div class="col-md-3">
+      <div>
+        <h2 class="remove-h-margin bree-font"><strong>What's New</strong></h2>
+      </div>
+      <br>
+
+  <% @whats_new_items_random.each do |item| %>
+      <div class="similar-events-box">
+        <%= image_tag(item.image_url.to_s, class:"similar-events-image fit-img") %>
+        <div class="info-tag">
+          <p class="ellipsis-1 bree-font" style="font-size:24px;margin-bottom:2px;"><%= item.title %></p>
+          <p class="ellipsis-4 font-16"><%= item.description %>
+          <br>
+          </p>
+          <p class="font-16"><%= link_to 'Learn More', whats_new_item_learn_more_path(item), class: "learn-more-link" %></p>
+          <br>
+        </div>
+      </div>
+      <br>
+  <% end %>
+
+    </div> <!-- col -->
+    <div class="col-md-1 col-sm-1 col-xs-1"></div>
+  </div> <!-- row -->
+  <!--  right column -->
+</div>
+</div>
+
+<!-- Rainbow Footer-->
+
+<%= render 'partials/footer' %>

@@ -15,6 +15,7 @@ class HomeController < ApplicationController
   has_scope :service_type, type: :array
 
   def index
+    @whats_new_items_random = WhatsNewItem.all.limit(3).order("RANDOM()")
   end
 
   def about
@@ -41,11 +42,11 @@ class HomeController < ApplicationController
 
   def map
 
-    @events = apply_scopes(Event, params.slice(:by_start_date, :by_end_date,:search,:approved, :event_location, :registration,:cost,:age_group,:event_type)).all
-    @programs = apply_scopes(Program, params.slice(:age_group,:search, :program_type, :cost)).all
-    @services = apply_scopes(Service, params.slice(:category,:search, :service_type)).all
+    @events = apply_scopes(Event, params.slice(event_params)).all
+    @programs = apply_scopes(Program, params.slice(program_params)).all
+    @services = apply_scopes(Service, params.slice(service_params)).all
 
-    @all_results = @programs + @events + @services
+    @all_results = @events + @programs + @services
 
     if @all_results.kind_of?(Array)
       @map_search_results = Kaminari.paginate_array(@all_results).page(params[:page]).per(5)
@@ -84,15 +85,15 @@ class HomeController < ApplicationController
 private
 
   def event_params
-    params.slice(:by_start_date, :by_end_date, :event_location, :registration,:cost,:age_group,:program_type)
+    params.slice(:by_start_date, :by_end_date,:search,:approved, :event_location, :registration,:cost,:age_group,:event_type)
   end
 
   def program_params
-    params.slice(:age_group, :program_type)
+    params.slice(:age_group,:search, :program_type, :cost)
   end
 
   def service_params
-    params.slice(:category, :service_type)
+    params.slice(:category,:search, :service_type)
   end
 
 end

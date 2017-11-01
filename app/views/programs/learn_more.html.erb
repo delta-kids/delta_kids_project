@@ -28,8 +28,8 @@
               </div>
 
               <div class="col-md-6">
+                <% if @program.organization.phone.present?%>
                 <p class="font-16">
-                  <% if @program.organization.phone.present?%>
                   <i class="fa fa-phone" aria-hidden="true"></i>
                   &nbsp&nbsp&nbsp
                   <%= @program.organization.phone %>
