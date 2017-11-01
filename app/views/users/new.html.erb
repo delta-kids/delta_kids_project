@@ -1,51 +1,51 @@
 <div class="signup-image">
   <div class="row">
-    <div class="col-md-10 col-md-offset-1 login-container">
-      <h1 class="login-header">User Sign Up</h1>
+    <div class="col-xs-10 col-xs-offset-1 login-container">
+      <h1 class="login-header bree-font">User Sign Up</h1>
       <%= form_for @user do |f| %>
          <% if @user.errors.any? %>
           <div class="error_messages">
-            <h2>Form is invalid</h2>
+            <h2 style="color:orange">Invalid Input</h2>
             <ul>
               <% @user.errors.full_messages.each do |message| %>
-                <li><%= message %></li>
+                <li>-<%= message %></li>
               <% end %>
             </ul>
           </div>
         <% end %>
         <div class="row">
-          <div class="col-md-6 col-md-offset-3 form-field">
-            <%= f.label :first_name, class: 'login-header' %>:
+          <div class="col-xs-6 col-xs-offset-3 form-field">
+            <%= f.label :first_name, class: 'login-header' %>
             <%= f.text_field :first_name, class: 'form-control' %>
           </div>
         </div>
         <div class="row">
-          <div class="col-md-6 col-md-offset-3 form-field">
-            <%= f.label :last_name, class: 'login-header' %>:
+          <div class="col-xs-6 col-xs-offset-3 form-field">
+            <%= f.label :last_name, class: 'login-header' %>
             <%= f.text_field :last_name, class: 'form-control' %>
           </div>
         </div>
         <div class="row">
-          <div class="col-md-6 col-md-offset-3 form-field">
-            <%= f.label :phone_number, nil, class: 'login-header' %>:
+          <div class="col-xs-6 col-xs-offset-3 form-field">
+            <%= f.label :phone_number, nil, class: 'login-header' %>
             <%= f.text_field :phone, class: 'form-control' %>
           </div>
         </div>
         <div class="row">
-          <div class="col-md-6 col-md-offset-3 form-field">
-            <%= f.label :email, nil, class: 'login-header' %>:
+          <div class="col-xs-6 col-xs-offset-3 form-field">
+            <%= f.label :email, nil, class: 'login-header' %>
             <%= f.email_field :email, class: 'form-control' %>
           </div>
         </div>
         <div class="row">
-          <div class="col-md-6 col-md-offset-3 form-field">
-            <%= f.label :password, nil, class: 'login-header' %>:
+          <div class="col-xs-6 col-xs-offset-3 form-field">
+            <%= f.label :password, nil, class: 'login-header' %>
             <%= f.password_field :password, class: 'form-control' %>
           </div>
         </div>
         <div class="row">
-          <div class="col-md-6 col-md-offset-3 form-field">
-            <%= f.label :password_confirmation, nil, class: 'login-header' %>:
+          <div class="col-xs-6 col-xs-offset-3 form-field">
+            <%= f.label :password_confirmation, nil, class: 'login-header' %>
             <%= f.password_field :password_confirmation, class: 'form-control' %>
           </div>
         </div>

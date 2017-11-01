@@ -21,14 +21,20 @@ class HomeController < ApplicationController
   def about
   end
 
-  def contact
+  def contact_mail
+    name = params[:name]
+    email = params[:email]
+    message = params[:message]
+    ContactUsMailer.contact_email(name, email, message).deliver
+    redirect_to contact_submit_path, notice: 'Message sent'
   end
+
 
   def live
   end
 
   def submit
-    @name = params(:name)
+
   end
 
   def dashboard

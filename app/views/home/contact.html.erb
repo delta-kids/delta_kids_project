@@ -6,6 +6,8 @@
       <p class="font-16" style="font-size:15px">Do you have any questions or what to learn more about a specific subject? Drop us a line.</p>
       <br>
 
+      <%= form_tag(contact_mail_path) do %>
+
     <div class="flex form-group">
       <%= text_field_tag :name, nil, {placeholder: "Name",class: "form-control contact-form"} %>
       &nbsp;&nbsp;&nbsp;
@@ -16,6 +18,8 @@
     </div>
       <%= submit_tag 'Send Message', class:"btn-primary pull-right btn-lg", id:"btn-padding" %>
     </div>
+
+    <% end %>
 
 
     <div class="pull-right flex container"id="about-us-box">

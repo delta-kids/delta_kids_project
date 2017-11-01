@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+
+    <h1>Contact Us Message sent <%= Date.today  %></h1>
+
+    <p>You have received the following email from <%= "#{ @name } (#{ @email }):" %></p>
+       <p><%= @message %></p>
+
+  </body>
+</html>
