@@ -21,7 +21,7 @@
             </div>
 
             <div class="form-group center-flex-content">
-              <label for='start_date' style="margin-right:47px;">Start Date</label>
+              <label for='start_date' style="margin-right:60px;">Start Date</label>
               <%= f.text_field :start_date, class: 'start-date datepicker form date-time-width',placeholder:"DD/MM/YYYY", :required => true %>
 
               <%= f.label :"Start Time", class: 'form-padding caps', style:'margin:auto;' %>
@@ -31,7 +31,7 @@
             <div>
 
               <div class="form-group center-flex-content">
-                <label for='end_date' style="margin-right:46px">End Date</label>
+                <label for='end_date' style="margin-right:59px">End Date</label>
                 <%= f.text_field :end_date, class: 'end-date datepicker form form-padding date-time-width',placeholder:"DD/MM/YYYY", :required => true %>
                 <%= f.label :"End Time", class: 'form-padding caps', style:'margin:auto;', :required => true %>
                 <%= f.text_field :end_time,value: "12:00pm", class: 'form dateselect-time form-padding date-time-width', :required => true %>
