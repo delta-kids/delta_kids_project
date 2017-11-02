@@ -52,9 +52,6 @@ Rails.application.routes.draw do
   # get '/services/children/health', to: 'services#children'
   # get '/services/children/support', to: 'services#children'
 
-  match '/contact_mail', to: 'home#contact_mail', via: 'post'
-
-
   get '/programs/learn_more/:id', to: 'programs#learn_more', as: 'program_learn_more'
   get '/services/learn_more/:id', to: 'services#learn_more', as: 'service_learn_more'
   get '/events/learn_more/:id', to: 'events#learn_more', as: 'event_learn_more'
@@ -86,7 +83,12 @@ Rails.application.routes.draw do
   get '/surveys', to: 'home#surveys', as: 'surveys'
 
   get '/contact_submit', to: 'home#submit', as: 'contact_submit'
+  match '/contact_mail', to: 'home#contact_mail', via: 'post'
 
+  get 'dashboard/pending_and_approved_events/decline/:id', to: 'events#decline', as: 'decline_event'
+  get 'dashboard/pending_and_approved_resources/decline/:id', to: 'resources#decline', as: 'decline_resource'
+  match '/decline_event_mail', to: 'events#decline_mail', via: 'post'
+  match '/decline_resource_mail', to: 'resources#decline_mail', via: 'post'
 
 
   resources :resources

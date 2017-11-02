@@ -37,6 +37,7 @@ class HomeController < ApplicationController
 
   end
 
+
   def dashboard
     @pending_and_approved_events = Event.where(:approved => false || nil)
     @pending_and_approved_resources = Resource.where(:approved => false || nil)

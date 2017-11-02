@@ -29,6 +29,18 @@ class EventsController < ApplicationController
     @event = Event.find(params[:id])
   end
 
+  def decline
+    @event = Event.find(params[:id])
+  end
+
+  def decline_mail
+    event = params[:event]
+    event_email = params[:event_email]
+    message = params[:message]
+    PendingEventMailer.decline_email(event,event_email,message).deliver
+    redirect_to dashboard_pending_and_approved_events_path, notice: "Decline Email Sent"
+  end
+
   def learn_more
     @event = Event.find(params[:id])
     @featured_events = Event.where(:featured => true).limit(3).order("RANDOM()")

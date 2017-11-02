@@ -1,0 +1,36 @@
+<div class="wholePage">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12 col-md-8 col-md-offset-2">
+
+          <h1 class='bree-font'>Decline Event Request</h1>
+          <br>
+          <h4 class='font-20'><strong>Title: </strong><%= @event.title %></h4>
+          <h4 class='font-20'><strong>Description: </strong><%= @event.description %></h4>
+          <h4 class='font-20'><strong>Contact Name: </strong><%= @event.contact_name %></h4>
+          <p class="bree-font26">Reason:</p>
+
+          <%= form_tag(decline_event_mail_path) do %>
+        <div class="">
+          <div class="contact-form">
+          <%= hidden_field_tag :event, @event.title %>
+          <%= hidden_field_tag :event_email, @event.contact_email %>
+          <%= text_area_tag :message, nil, {placeholder: "Message", class: "form-control contact-form", rows: 10, :required => true} %>
+        </div>
+          <%= submit_tag 'Send Message', class:"btn-primary pull-right btn-lg", id:"btn-padding" %>
+        </div>
+
+        <% end %>
+
+        </div>
+          </div>
+          <br>
+        </div>
+
+
+
+      </div>
+    </div>
+</div>
+
+<%= render 'partials/footer' %>

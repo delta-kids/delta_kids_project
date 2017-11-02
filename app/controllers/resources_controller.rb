@@ -33,6 +33,19 @@ class ResourcesController < ApplicationController
       @resource = Resource.find(params[:id])
     end
 
+    def decline
+      @resource = Resource.find(params[:id])
+    end
+
+    def decline_mail
+      resource = params[:resource]
+      resource_email = params[:resource_email]
+      message = params[:message]
+      PendingEventMailer.decline_email(resource,resource_email,message).deliver
+      redirect_to dashboard_pending_and_approved_resources_path, notice: "Decline Email Sent"
+    end
+
+
     def index
       @featured = Resource.where(:feature => true)
       @resources = apply_scopes(Resource).all
