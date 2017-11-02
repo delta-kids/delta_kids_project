@@ -43,6 +43,7 @@ gem 'underscore-rails'
 gem 'carrierwave', '~> 1.0'
 gem 'has_scope'
 gem 'social-share-button'
+gem 'holidays'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

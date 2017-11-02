@@ -1,5 +1,7 @@
 {
   "name": "delta_kids_project",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "timepicker": "^1.11.12"
+  }
 }

@@ -14,6 +14,7 @@ class EventsController < ApplicationController
 
 
 
+
   def index
     @events = apply_scopes(Event).all
     @events_search = @events.page(params[:page]).per(5)

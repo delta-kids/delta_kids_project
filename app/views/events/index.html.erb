@@ -21,6 +21,12 @@
           popup.classList.toggle("show");
         }
         </script>
+
+
+        date = Date.civil(2007,7,2)
+
+
+
         <div class="popup" onclick="calendarPopup(<%= event.id %>)">
           <p class="cal-links"><%= event.start_time.strftime("%I:%M %p") %> <%= event.title %></p>
           <br>

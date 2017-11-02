@@ -14,7 +14,6 @@
 //= require jquery_ujs
 //= require jquery-ui/widgets/datepicker
 //= require bootstrap-sprockets
-//= require bootstrap-timepicker
 //= require chosen-jquery
 //= require rails-ujs
 //= require underscore
@@ -46,7 +45,7 @@ $("[href]").each(function() {
 // });
 
 $(document).ready(function(){
-  $('.timepicker').timepicker();
+  $('.dateselect-time').timepicker({ 'scrollDefault': 'now' });
 });
 
 $(document).ready(function(){

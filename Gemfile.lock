@@ -85,6 +85,7 @@ GEM
       actionpack (>= 4.1, < 5.2)
       activesupport (>= 4.1, < 5.2)
     hirb (0.7.3)
+    holidays (6.2.0)
     i18n (0.8.6)
     interactive_editor (0.0.10)
       spoon (>= 0.0.1)
@@ -242,6 +243,7 @@ DEPENDENCIES
   gmaps4rails
   has_scope
   hirb
+  holidays
   interactive_editor
   jbuilder (~> 2.5)
   jquery-rails
