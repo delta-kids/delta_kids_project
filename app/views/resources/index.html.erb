@@ -16,9 +16,11 @@
       <p class="event-paragraph-resource font-16"><%= r.description  %></p>
       <div class="div-tags">
         <p class="tags-txt">Tags:</p>
+        <% r.tags.map(&:name).each do |t|  %>
         <div class="report-button">
-          <p class="tag-margin"><%= r.tags.map(&:name).join(', ')  %></p>
+          <p class="tag-margin"><%= t %></p>
         </div>
+        <% end %>
       </div>
       <hr/ class="event-subsection2-line">
       <div class="share-view">
@@ -45,10 +47,11 @@
       <p class="event-paragraph-resource"><%= r.description  %></p>
       <div class="div-tags">
         <p class="tags-txt">Tags:</p>
+          <% r.tags.map(&:name).each do |t|  %>
         <div class="report-button">
-
-          <p class="tag-margin"><%= r.tags.map(&:name).join(', ')  %></p>
+          <p class="tag-margin"><%= t %></p>
         </div>
+        <% end %>
       </div>
       <hr/ class="event-subsection2-line">
       <div class="share-view">

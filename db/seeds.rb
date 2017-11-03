@@ -226,9 +226,10 @@ csv.each do |row|
   description: row['Description that relate to service']
   )
 
-  Tag.create(
-  name: row['Tags']
-  )
+  name_tag = row['Tags'].to_s.split(", ")
+  name_tag.each do |r|
+    Tag.create(name: r)
+  end
 
 end
 
@@ -239,9 +240,10 @@ csv_text = File.read(Rails.root.join('db', 'resources_info_sheet1.csv'))
 csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')
 csv.each do |row|
 
-  Tag.create(
-  name: row['Tags']
-  )
+  name_tag = row['Tags'].to_s.split(", ")
+  name_tag.each do |r|
+    Tag.create(name: r)
+  end
 
   Resource.create(
   name: row['PDF Name'],
@@ -257,10 +259,14 @@ csv.each do |row|
   topic: Topic.find_by(topic_name: row['Topic']),
   )
 
+  resource_tag = row['Tags'].to_s.split(", ")
+  resource_tag.each do |r|
+
   ResourceTagging.create(
   resource: Resource.find_by(name: row['PDF Name']),
-  tag: Tag.find_by(name: row['Tags']),
+  tag: Tag.find_by(name: r),
   )
+end
 
   ResourceAgeGroup.create(
   resource: Resource.find_by(name: row['PDF Name']),
