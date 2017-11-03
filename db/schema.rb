@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171101164814) do
+ActiveRecord::Schema.define(version: 20171103213636) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -150,6 +150,7 @@ ActiveRecord::Schema.define(version: 20171101164814) do
     t.bigint "organization_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "image"
     t.index ["organization_id"], name: "index_programs_on_organization_id"
     t.index ["program_type_id"], name: "index_programs_on_program_type_id"
   end
@@ -216,6 +217,7 @@ ActiveRecord::Schema.define(version: 20171101164814) do
     t.bigint "category_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "image"
     t.index ["category_id"], name: "index_services_on_category_id"
     t.index ["organization_id"], name: "index_services_on_organization_id"
     t.index ["service_type_id"], name: "index_services_on_service_type_id"

@@ -7,6 +7,7 @@ class ProgramsController < ApplicationController
   end
 
   def index0_5
+    @whats_new_items_random = WhatsNewItem.all.limit(3).order("RANDOM()")
     @age_group = "0-5"
     @programs = Program.all.joins(:age_groups).where(:age_groups => {:id => '1'})
     @artsandculture0_5 = @programs.where("program_type_id = '1'").order(description: :asc).page(params[:page]).per(8)
@@ -31,6 +32,7 @@ class ProgramsController < ApplicationController
   end
 
   def index6_12
+    @whats_new_items_random = WhatsNewItem.all.limit(3).order("RANDOM()")
     @age_group = "6-12"
     @programs = Program.all.joins(:age_groups).where(:age_groups => {:id => '2'})
     @artsandculture6_12 = @programs.where("program_type_id = '1'").order(description: :asc).page(params[:page]).per(8)

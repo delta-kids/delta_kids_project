@@ -1,5 +1,6 @@
 class Program < ApplicationRecord
 
+  mount_uploader :image, ImageUploader
 
   scope :program_type, -> program_type_id { where(:program_type_id => program_type_id) }
   scope :age_group, -> age_id { includes(:age_groups).where(:age_groups => {:id => age_id}) }
@@ -23,6 +24,5 @@ class Program < ApplicationRecord
   validates :description, { presence: {message: "must be provided"}}
   validates :registration, inclusion: { in: ['Registered', 'Drop In'] }
   validates :cost, inclusion: { in: ['Free', 'Paid'] }
-
 
 end

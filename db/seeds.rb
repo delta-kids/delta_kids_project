@@ -192,12 +192,15 @@ csv.each do |row|
   website: row['Website'],
   )
 
+  program_img_file  = File.open(File.join(Rails.root,"app/assets/images/DeltaKids#{rand(4)}.jpg"))
+
   Program.create(
   program_type: ProgramType.find_by(name:row['Programs']),
   organization: Organization.find_by(name:row['Agencies']),
   description: row['Short Description that relate to program'],
   registration: row['Registration'],
-  cost: row['Cost']
+  cost: row['Cost'],
+  image: program_img_file
   )
 
   ProgramAgeGroup.create(
@@ -219,11 +222,15 @@ csv.each do |row|
    phone: row['Phone Number'],
    website: row['Website'],
   )
+
+  service_img_file  = File.open(File.join(Rails.root,"app/assets/images/DeltaKids#{rand(4)}.jpg"))
+
   Service.create(
   service_type: ServiceType.find_by(name: row['Service']),
   organization: Organization.find_by(name: row['Agency']),
   category: Category.find_by(name: row['Category']),
-  description: row['Description that relate to service']
+  description: row['Description that relate to service'],
+  image: service_img_file
   )
 
   name_tag = row['Tags'].to_s.split(", ")
@@ -274,6 +281,8 @@ end
   )
 
 end
+
+
 
   puts "Resource Count:#{Resource.count}"
   puts "Tag Count:#{Tag.count}"

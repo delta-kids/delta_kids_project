@@ -12,6 +12,7 @@ class ServicesController < ApplicationController
   end
 
   def pregnancy_babies
+    @whats_new_items_random = WhatsNewItem.all.limit(3).order("RANDOM()")
     @services = Service.all.where(:category_id => '3')
     @help_crisis = @services.where("service_type_id = '8'").order(description: :asc).page(params[:page]).per(8)
     @baby_health = @services.where("service_type_id = '3'").order(description: :asc).page(params[:page]).per(8)
@@ -30,6 +31,7 @@ class ServicesController < ApplicationController
 
 
   def children
+    @whats_new_items_random = WhatsNewItem.all.limit(3).order("RANDOM()")
     @services = Service.all.where(:category_id => '1')
     @help_crisis = @services.where("service_type_id = '4'").order(description: :asc).page(params[:page]).per(8)
     @child_advocacy = @services.where("service_type_id = '1'").order(description: :asc).page(params[:page]).per(8)
@@ -50,6 +52,7 @@ class ServicesController < ApplicationController
   end
 
   def families
+    @whats_new_items_random = WhatsNewItem.all.limit(3).order("RANDOM()")
     @services = Service.all.where(:category_id => '2').order(description: :asc).page(params[:page]).per(8)
     @help_crisis = @services.where("service_type_id = '4'").order(description: :asc).page(params[:page]).per(8)
     @child_preschool = @services.where("service_type_id = '7'").order(description: :asc).page(params[:page]).per(8)
@@ -113,7 +116,7 @@ class ServicesController < ApplicationController
 
 private
   def service_params
-    params.require(:service).permit([:description, :category_id, :service_type_id, :organization_id]) 
+    params.require(:service).permit([:description, :category_id, :service_type_id, :organization_id])
   end
 
   def find_service
