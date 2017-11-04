@@ -76,32 +76,6 @@ User.create([
   {name: 'Sports'},
   ])
 
-#   up_to_a_month_from_now = rand(Time.now + 1.month)
-#   random_location = ["Ladner", "Delta", "Tsawwassen"].sample
-#   random_address = ["4600 Clarence Taylor Crescent, Delta, BC V4K 3X3", "1172 56 Street, Delta, BC V4L 2A3", "11415 84 Avenue, Delta, BC  V4C 2L9"].sample
-#   random_cost = ["Free", "Paid"].sample
-#   random_featured = ["true", "false"].sample
-#   random_event_type = rand(4)
-#   random_registration = ["Registered", "Drop In"].sample
-#
-#   100.times do
-#   Event.create(    title: Faker::Hacker.say_something_smart,
-#                   description: Faker::Hipster.paragraph,
-#                   start_date: up_to_a_month_from_now,
-#                   end_date: up_to_a_month_from_now,
-#                   start_time: "12:00",
-#                   end_time: "2:00",
-#                   event_location: random_location,
-#                   address:random_address,
-#                   cost: random_cost,
-#                   approved: true,
-#                   featured: random_featured,
-#                   event_type: EventType.find_by(id: random_event_type),
-#                   registration: random_registration,
-#                   more_info: "www.codecore.ca",
-#                 )
-# end
-
 Event.create([
   {title: 'Ladner Test Event',
   start_date: "2017-10-29",
