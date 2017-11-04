@@ -13,7 +13,7 @@
       <div class="day-scroller">
         <% if Holidays.on(date, :ca_bc, :observed) != [] %>
          <% holiday = Holidays.on(date, :ca_bc, :observed) %>
-        <p class="font-16"><%= holiday[0][:name] %></p>
+        <p class="font-16 center-flex-content" style="color:#144d81"><strong><%= holiday[0][:name] %></strong></p>
         <% end %>
         <% if @events_by_start_date[date] %>
         <% @events_by_start_date[date].each do |event|  %>
