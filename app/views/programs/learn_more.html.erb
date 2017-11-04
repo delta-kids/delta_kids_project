@@ -6,7 +6,7 @@
         <!--  left column -->
         <div class="container-fluid " id="feature-box">
           <!-- set the image to be displayed -->
-<%= image_tag(@program.image_url.to_s, class:"learn-more-image img-responsive") %>
+          <%= image_tag(@program.image_url.to_s, class:"learn-more-image img-responsive") %>
           <p class="font-16"></p>
           <hr>
 
@@ -40,7 +40,7 @@
                   </i>&nbsp&nbsp&nbsp
                   <%= link_to @program.organization.website,
                   @program.organization.website,
-                   :target => "_blank", class:"wb-all"%>
+                  :target => "_blank", class:"wb-all"%>
                 </p>
                 <% end %>
               </div>
@@ -53,7 +53,7 @@
             <h2>Share</h2>
             <br>
             <!-- share buttons -->
-            <%= social_share_button_tag(@program.description) %>
+            <%= social_share_button_tag(@program.description, :url => "#{request.protocol}#{request.host_with_port}#{request.fullpath}", :image => @program.image_url.to_s) %>
           </div>
         </div>
       </div> <!-- col -->
@@ -71,23 +71,23 @@
           <div class="info-tag">
             <p class="ellipsis-1 bree-font" style="font-size:24px;margin-bottom:2px;"><%= program.organization.name %>
 
-            <p class="font-16 ellipsis-4"><%= program.description %>
-            <br>
-            </p>
+              <p class="font-16 ellipsis-4"><%= program.description %>
+                <br>
+              </p>
 
               <p class="font-16"><%= link_to 'Learn More', program_learn_more_path(program), class: "learn-more-link"  %></p>
-            <br>
+              <br>
+            </div>
           </div>
-        </div>
-        <br>
-        <% end %>
-      </div> <!-- col -->
-      <div class="col-md-1 col-sm-1 col-xs-1"></div>
-    </div> <!-- row -->
-    <!--  right column -->
+          <br>
+          <% end %>
+        </div> <!-- col -->
+        <div class="col-md-1 col-sm-1 col-xs-1"></div>
+      </div> <!-- row -->
+      <!--  right column -->
     </div>
-    </div>
+  </div>
 
-    <!-- Rainbow Footer-->
+  <!-- Rainbow Footer-->
 
-    <%= render 'partials/footer' %>
+  <%= render 'partials/footer' %>

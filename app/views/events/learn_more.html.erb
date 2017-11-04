@@ -77,7 +77,7 @@
           <h2>Share</h2>
           <br>
           <!-- share buttons -->
-          <%= social_share_button_tag(@event.title) %>
+            <%= social_share_button_tag(@event.description, :url => "#{request.protocol}#{request.host_with_port}#{request.fullpath}", :image => @event.image_url.to_s) %>
         </div>
       </div>
     </div> <!-- col -->

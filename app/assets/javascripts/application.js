@@ -17,6 +17,7 @@
 //= require chosen-jquery
 //= require rails-ujs
 //= require underscore
+//= require social-share-button
 //= require gmaps/google
 //= require_tree .
 
