@@ -1,18 +1,18 @@
 class HomeController < ApplicationController
   # before_action :authenticate_user!, only: [:dashboard]
 
-  has_scope :by_start_date, allow_blank: true
-  has_scope :by_end_date, allow_blank: true
-  has_scope :search, allow_blank: true
-  has_scope :approved, allow_blank: true
-  has_scope :event_location, allow_blank: true, type: :array
-  has_scope :registration, allow_blank: true, type: :array
-  has_scope :cost, allow_blank: true, type: :array
-  has_scope :age_group, allow_blank: true, type: :array
-  has_scope :program_type, allow_blank: true, type: :array
-  has_scope :event_type, allow_blank: true, type: :array
-  has_scope :category, allow_blank: true, type: :array
-  has_scope :service_type, allow_blank: true, type: :array
+  has_scope :by_start_date
+  has_scope :by_end_date
+  has_scope :search
+  has_scope :approved
+  has_scope :event_location, type: :array
+  has_scope :registration, type: :array
+  has_scope :cost, type: :array
+  has_scope :age_group, type: :array
+  has_scope :program_type, type: :array
+  has_scope :event_type, type: :array
+  has_scope :category, type: :array
+  has_scope :service_type, type: :array
 
   def index
     @whats_new_items_random = WhatsNewItem.all.limit(3).order("RANDOM()")
