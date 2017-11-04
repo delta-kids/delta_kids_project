@@ -103,6 +103,15 @@
           <div class="center-flex-content">
             <%= button_to "Add New Resource", new_resource_path, :method => "get", class:"btn-primary btn-lg filter-btn" %>
           </div>
+          <% if @resources_search.total_count == 0 %>
+          <%= image_tag("girl-search-not-found-with-rainbow.svg",style:"width:100%;height:350px;") %>
+          <%= image_tag("cloud1.png",style:"width:100%;height:75px; transform: scaleY(-1); position:relative; bottom:45px") %>
+          <%= image_tag("cloud1.png",style:"width:100%;height:75px; position:relative; bottom:45px") %>
+          <% else %>
+          <%= image_tag("girl-search-with-rainbow.svg",style:"width:100%;height:350px;") %>
+          <%= image_tag("cloud1.png",style:"width:100%;height:75px; transform: scaleY(-1); position:relative; bottom:45px") %>
+          <%= image_tag("cloud1.png",style:"width:100%;height:75px; position:relative; bottom:45px") %>
+          <% end %>
         </div>
         <script>
         var checkboxValues = JSON.parse(localStorage.getItem('checkboxValues')) || {},

@@ -1,18 +1,18 @@
 class HomeController < ApplicationController
   # before_action :authenticate_user!, only: [:dashboard]
 
-  has_scope :by_start_date
-  has_scope :by_end_date
-  has_scope :search
-  has_scope :approved
-  has_scope :event_location, type: :array
-  has_scope :registration, type: :array
-  has_scope :cost, type: :array
-  has_scope :age_group, type: :array
-  has_scope :program_type, type: :array
-  has_scope :event_type, type: :array
-  has_scope :category, type: :array
-  has_scope :service_type, type: :array
+  has_scope :by_start_date, allow_blank: true
+  has_scope :by_end_date, allow_blank: true
+  has_scope :search, allow_blank: true
+  has_scope :approved, allow_blank: true
+  has_scope :event_location, allow_blank: true, type: :array
+  has_scope :registration, allow_blank: true, type: :array
+  has_scope :cost, allow_blank: true, type: :array
+  has_scope :age_group, allow_blank: true, type: :array
+  has_scope :program_type, allow_blank: true, type: :array
+  has_scope :event_type, allow_blank: true, type: :array
+  has_scope :category, allow_blank: true, type: :array
+  has_scope :service_type, allow_blank: true, type: :array
 
   def index
     @whats_new_items_random = WhatsNewItem.all.limit(3).order("RANDOM()")
@@ -54,10 +54,7 @@ class HomeController < ApplicationController
     @services = apply_scopes(Service, service_params).all
 
     @all_results = @events + @programs + @services
-
-    if @all_results.kind_of?(Array)
-      @map_search_results = Kaminari.paginate_array(@all_results).page(params[:page]).per(5)
-    end
+    @map_search_results = Kaminari.paginate_array(@all_results).page(params[:page]).per(5)
 
 
     @hash1 = Gmaps4rails.build_markers(@all_results) do |event, marker|
@@ -66,7 +63,9 @@ class HomeController < ApplicationController
       <p class='bree-font26'>#{event.title}</p>
       <br>
       <img src='#{event.image_url.to_s}' class='img-responsive' style='width:100%;height:250px;object-fit: cover'></img>
+      <br>
       <p class='font-16'>#{event.description}</p>
+      <p class='font-16'>#{event.address}</p>
       <a class='event-info-bold2 font-16' href='events/learn_more/#{event.id}'>Learn More</a>"
       marker.lat event.latitude
       marker.lng event.longitude
@@ -77,7 +76,9 @@ class HomeController < ApplicationController
       <p class='bree-font26'>#{event.organization.name}</p>
       <br>
       <img src='#{event.image_url.to_s}' class='img-responsive' style='width:100%;height:250px;object-fit: cover'></img>
+      <br>
       <p class='font-16'>#{event.description}</p>
+      <p class='font-16'>#{event.organization.address}</p>
       <a class='event-info-bold2 font-16' href='programs/learn_more/#{event.id}'>Learn More</a>"
 
       marker.lat event.organization.latitude
@@ -88,7 +89,9 @@ class HomeController < ApplicationController
       <p class='bree-font26'>#{event.organization.name}</p>
       <br>
       <img src='#{event.image_url.to_s}' class='img-responsive' style='width:100%;height:250px;object-fit: cover'></img>
+      <br>
       <p class='font-16'>#{event.description}</p>
+      <p class='font-16'>#{event.organization.address}</p>
       <a class='event-info-bold2 font-16' href='services/learn_more/#{event.id}'>Learn More</a>"
       marker.lat event.organization.latitude
       marker.lng event.organization.longitude
@@ -109,15 +112,15 @@ class HomeController < ApplicationController
 private
 
   def event_params
-    params.slice(:by_start_date, :by_end_date,:approved, :event_location, :registration,:cost,:age_group,:event_type,:search)
+    params.slice(:search, :by_start_date, :by_end_date,:approved, :event_location, :registration,:cost,:age_group,:event_type)
   end
 
   def program_params
-    params.slice(:age_group, :program_type, :cost,:search)
+    params.slice(:search, :age_group, :program_type, :cost, :registration)
   end
 
   def service_params
-    params.slice(:category, :service_type,:search)
+    params.slice(:search, :category, :service_type)
   end
 
 end

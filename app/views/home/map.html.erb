@@ -55,6 +55,7 @@
                 </div> -->
               </div>
               <p class="ellipsis-3 font-16"><%= event.description %></p>
+              <p class="font-16"><%= event.address %></p>
               <div class="event-info2">
                 <!-- <p  class="event-info-bold2">Learn More</p> -->
                 <p><%= link_to 'Learn More', event_learn_more_path(event), class: "event-info-bold2 font-16" %></p>
@@ -71,7 +72,7 @@
               <p class="ellipsis-3 font-16"><%= event.description %></p>
               <div class="">
               <p class="font-16"><%= event.organization.address %></p>
-              <p class="font-16"><%= event.organization.phone %>&nbsp&nbsp</p>
+              <!-- <p class="font-16"><%= event.organization.phone %>&nbsp&nbsp</p> -->
             </div>
               <div class="event-info2">
                 <p><%= link_to 'Learn More', program_learn_more_path(event), class: "event-info-bold2 font-16" %></p>
@@ -88,7 +89,6 @@
               <p class="ellipsis-3 font-16"><%= event.description %></p>
               <div class="event-info">
               <p class="font-16"><%= event.organization.address %></p>
-              <p class="font-16"><%= event.organization.phone %>&nbsp&nbsp</p>
             </div>
               <div class="event-info2">
                 <p><%= link_to 'Learn More', service_learn_more_path(event), class: "event-info-bold2 font-16" %></p>

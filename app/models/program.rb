@@ -2,8 +2,9 @@ class Program < ApplicationRecord
 
   mount_uploader :image, ImageUploader
 
+  scope :registration, -> registration { where(:registration => registration) }
   scope :program_type, -> program_type_id { where(:program_type_id => program_type_id) }
-  scope :age_group, -> age_id { includes(:age_groups).where(:age_groups => {:id => age_id}) }
+  scope :age_group, -> age_id { Program.includes(:age_groups).where(:age_groups => {:id => age_id}) }
   scope :cost, -> cost { where(:cost => cost) }
   scope :search, -> term {
     if self.has_attribute?(:event_type_id)
@@ -13,6 +14,7 @@ class Program < ApplicationRecord
     elsif self.has_attribute?(:service_type_id)
       where('description ILIKE (?)', "%#{term}%").order('description ASC')
   end
+
 }
 
   belongs_to :program_type

@@ -16,7 +16,7 @@ class Event < ApplicationRecord
   scope :registration, -> registration { where(:registration => registration) }
   scope :cost, -> cost { where(:cost => cost) }
   scope :event_type, -> event_type { where(:event_type_id => event_type) }
-  scope :age_group, -> age_id { includes(:age_groups).where(:age_groups => {:id => age_id}) }
+  scope :age_group, -> age_id { Event.includes(:age_groups).where(:age_groups => {:id => age_id}) }
 
   mount_uploader :image, ImageUploader
 

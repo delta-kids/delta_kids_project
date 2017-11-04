@@ -6,8 +6,7 @@
         <!--  left column -->
         <div class="container-fluid " id="feature-box">
           <!-- set the image to be displayed -->
-          <%= image_tag "DeltaKids1.jpg", class: "learn-more-image" %>
-
+<%= image_tag(@program.image_url.to_s, class:"learn-more-image img-responsive") %>
           <p class="font-16"></p>
           <hr>
 
@@ -62,13 +61,13 @@
       <!--  right column -->
       <div class="col-md-3 col-sm-10 col-xs-10">
         <div>
-          <h2 class="remove-h-margin bree-font"><strong>Similar Programs</strong></h2>
+          <h1 class="remove-h-margin bree-font">Similar Programs</h1>
         </div>
         <br>
 
         <% @similar_programs.each do |program| %>
         <div class="similar-events-box">
-          <%= image_tag "DeltaKids2.jpg", class: "similar-events-image fit-img" %>
+          <%= image_tag program.image_url.to_s, class: "similar-events-image fit-img" %>
           <div class="info-tag">
             <p class="ellipsis-1 bree-font" style="font-size:24px;margin-bottom:2px;"><%= program.organization.name %>
 
