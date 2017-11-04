@@ -9,9 +9,16 @@
       <%= month_calendar  do |date| %>
       <%= date.day %>
 
+
       <div class="day-scroller">
+        <% if Holidays.on(date, :ca_bc, :observed) != [] %>
+         <% holiday = Holidays.on(date, :ca_bc, :observed) %>
+        <p class="font-16"><%= holiday[0][:name] %></p>
+        <% end %>
         <% if @events_by_start_date[date] %>
         <% @events_by_start_date[date].each do |event|  %>
+        <% if Holidays.on(date, :ca_bc, :observed) != [] %>
+        <% else %>
         <% if event.approved != true %>
         <% else %>
         <script>
@@ -22,8 +29,6 @@
         }
         </script>
 
-
-        date = Date.civil(2007,7,2)
 
 
 
@@ -68,6 +73,7 @@
             </div>
           </div>
         </div>
+        <% end %>
         <% end %>
         <% end %>
         <% end %>
