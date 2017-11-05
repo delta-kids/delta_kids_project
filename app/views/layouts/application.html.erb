@@ -25,6 +25,7 @@
       <% elsif flash[:alert] %>
         <div class='alert alert-danger'><%= flash[:alert] %></div>
       <% end %>
+      <%= render 'layouts/mobile_header.html.erb' %>
       <%= render 'layouts/header.html.erb' %>
       <%= yield %>
       <%= render 'layouts/footer.html.erb' %>

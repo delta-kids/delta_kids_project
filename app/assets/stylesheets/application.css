@@ -24,14 +24,32 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
 
+ @media only screen and (min-width: 765px) {
+   #reg-header {
+     display: "";
+   }
+   .page-padding {
+     height:60px;
+   }
+   #mobile-header {
+     display: none;
+   }
+}
 
- @media only screen and (max-width: 730px) {
-    /* styles for low res screens go here */
-    /* hide our medium and large divs)  */
-    .font-16, .font-20, .bree-font, .bree-font26  {
+ @media only screen and (max-width: 764px) {
+    #mobile-header {
+      display: "";
+    }
+    #reg-header {
+      display: none;
+    }
+    .page-padding {
+      height:30px;
+    }
+    .font-16, .font-20  {
         font-size: 1.5em !important;
    }
-   #delta-image {
-     display: none;
+     .bree-font, .bree-font26 {
+        font-size: 2em !important;
    }
 }

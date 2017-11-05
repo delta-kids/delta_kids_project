@@ -1,7 +1,7 @@
 <div class="row">
-  <div class="col-md-12 content">
+  <div class="col-xs-12 background-color">
 
-    <div class="col-md-3 hidden-xs hidden-sm sidebar">
+    <div class="hidden-xs hidden-sm col-md-3 sidebar">
       <ul class="nav nav-sidebar ">
         <%= image_tag('paperclip.png', class: 'clippy') %>
         <h2 class='age-group'>Families</h2>
@@ -20,47 +20,52 @@
       <br>
     </div>
 
-    <div class="col-md-9 col-sm-12 col-xs-12 organization-content">
-      <div class="col-md-6 col-sm-6 col-xs-6">
+    <div class="col-xs-12 col-sm-12 col-md-9 organization-content">
+      <div class="hidden-xs hidden-sm col-md-6">
         <h3 class="bree-font">ORGANIZATIONS</h3>
       </div>
-      <div class="col-md-6 col-sm-6 col-xs-6">
-        <h3 class="bree-font">PROGRAMS OFFERED</h3>
+      <div class="col-xs-12 col-sm-12 col-md-6">
+        <h3 class="bree-font">SERVICES OFFERED</h3>
       </div>
-            <% @load_service&.each do |s| %>
-            <div class="col-md-12 col-sm-12 col-xs-12">
-              <hr class="divider">
-            </div>
 
-            <div class="col-md-12 col-sm-12 col-xs-12">
-              <div class="organization-details">
+      <% @load_service.each do |p| %>
 
-          <div class="organization-info col-md-6 col-sm-6 col-xs-6">
+      <div class="col-xs-12 col-sm-12 col-md-12">
+        <hr class="divider">
+      </div>
+
+      <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="organization-details">
+          <div class="organization-info col-xs-12 col-sm-12 col-md-6">
             <div class="organization-logo">
-              <%= image_tag "program-logo#{rand(1..2)}.png"  %>
+              <%= image_tag "program-logo#{rand(1..2)}.png", class:"img-responsive", style:"object-fit:fill;height:100%"  %>
             </div>
 
-            <div class="col-md-8 col-sm-8 col-xs-8">
-              <p class="font-20"><%= s.organization.name %></p>
-              <%= link_to 'Learn More', service_learn_more_path(s) , class:"font-16"%>
+            <div class="col-xs-12 col-sm-12 col-md-8">
+              <p class="font-20"><%= p.organization.name %></p>
+              <!-- <a href="#">Learn More</a> -->
+              <%= link_to 'Learn More', service_learn_more_path(p), class:"font-16" %>
             </div>
           </div>
 
-          <div class="col-md-6 col-sm-6 col-xs-6">
-            <p class="font-20"><%= s.description %></p>
+          <div class="col-xs-12 col-sm-12 col-md-6">
+            <p class="font-20"><%= p.description %></p>
           </div>
         </div>
       </div>
       <% end %>
-
+      <div class="col-xs-12 col-sm-12 col-md-12 container-fluid center-flex-content bree-font" style="align-items:center;">
+        <%= paginate @load_service, window: 2 %>
+      </div>
     </div>
   </div>
 
-</div>
+  </div>
 
-<!-- Fourth section div -->
-<%= render 'partials/whatsnew' %>
 
-<!-- Rainbow Footer-->
+  <!-- Fourth section div -->
+  <%= render 'partials/whatsnew' %>
 
-<%= render 'partials/footer' %>
+  <!-- Rainbow Footer-->
+
+  <%= render 'partials/footer' %>

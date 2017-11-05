@@ -1,40 +1,43 @@
 <div class="row">
-<div class="outer-blue-container col-sm-12 col-md-12">
+<div class="outer-blue-container col-xs-12 col-sm-12 col-md-12">
 <div id="whats-new-board" class="container">
 
   <div class="row">
-    <div class="col-md-12">
+    <div class="col-xs-12">
       <%= image_tag("whats-new-top.svg", class:"img-responsive center-block whats-new") %>
     </div>
   </div>
-  <div class="conatiner" style="background-color:white; height:102%; width:96%;margin:auto">
+  <div class="conatiner" style="background-color:white; height:102%; width:90%; margin:auto">
   <div class="row">
-    <div class="col-md-12">
-      <h1 id="whats-new">What's New in Delta</h1>
+    <div class="col-xs-12">
+      <h1 class="center-flex-content bree-font" id="whats-new">What's New in Delta</h1>
 
       <!-- <button type="button" name="button" class="btn btn-primary" id="btn-view-all">VIEW ALL</button> -->
 
     </div>
   </div>
   <div class="row">
-
+    <div class="col-xs-12">
     <% @whats_new_items_random.each do |item| %>
 
-    <div class="col-sm-4 col-md-4">
+    <div class="col-xs-12 col-sm-12 col-md-4">
       <%= image_tag(item.image_url.to_s, class:"whats-new-image fit-img") %>
       <h2 class="new-events font-20 ellipsis-1"><%= item.title.upcase %></h2>
-      <br>
-      <p class="ellipsis-3 font-16" style="min-height:60px"><%= item.description %></p>
+
+      <p class="ellipsis-3 font-16" style="margin-top:10px; min-height:70px"><%= item.description %></p>
+      <div>
       <i><%= image_tag("cursor.svg", class:"img-responsive cursor") %></i>
-      <p><%= link_to 'Learn More', whats_new_item_learn_more_path(item), class: "event-info-bold2 font-16 learn-more" %></p>
+      <p><%= link_to 'Learn More', whats_new_item_learn_more_path(item), class: " font-16 learn-more" %></p>
+    </div>
       <br>
     </div>
     <% end %>
+    </div>
   </div>
 </div>
 
   <div class="row">
-    <div class="col-md-12">
+    <div class="col-xs-12">
       <%= image_tag("whats-new-bottom.svg", class:"img-responsive center-block whats-new") %>
     </div>
   </div>
