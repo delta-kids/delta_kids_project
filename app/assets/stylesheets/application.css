@@ -71,6 +71,12 @@
     .live-btm-imgs {
       left:0;
     }
+    #latest-news,
+    #survey-results {
+      width:100%;
+      margin:10px 0px 10px 0px;
+    }
+
 
     /*.font-16, .font-20  {
         font-size: 1.5em !important;
