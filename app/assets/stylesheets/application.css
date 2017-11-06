@@ -34,6 +34,12 @@
    #mobile-header {
      display: none;
    }
+   #live5210-img-container {
+     height:350px;
+   }
+   .mobile-block {
+     display: inline;
+   }
 }
 
  @media only screen and (max-width: 764px) {
@@ -46,10 +52,30 @@
     .page-padding {
       height:30px;
     }
-    .font-16, .font-20  {
+    #live5210-img-container {
+      height:200px;
+    }
+    .mobile-block {
+      display: block;
+    }
+    #section1-heading, {
+     margin-left:25%
+    }
+    #plan-for-living-heading,
+    #new-resources-heading {
+      text-align:center;
+    }
+    .mobile-font-16 {
+      font-size:16px;
+    }
+    .live-btm-imgs {
+      left:0;
+    }
+
+    /*.font-16, .font-20  {
         font-size: 1.5em !important;
    }
      .bree-font, .bree-font26 {
         font-size: 2em !important;
-   }
+   }*/
 }

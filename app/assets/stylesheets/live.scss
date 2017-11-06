@@ -6,11 +6,11 @@
   margin: 30px 50px 50px 20px;
 }
 
-.new-resources-heading {
+#new-resources-heading {
   padding: 40px 0 40px 0;
 }
 
-.plan-for-living-heading {
+#plan-for-living-heading {
   padding: 10px 0 10px 0;
 }
 
@@ -33,19 +33,16 @@
   margin-bottom: 1%;
 }
 
+.center-heading {
+  margin-left:inherit;
+}
+
 #live5210-img {
-  height:103%;
-  width:85%;
+  margin-top:10px;
+
 }
 
-#carrot-image {
-  position: relative;
-  left: -5%;
-  height: 100%;
-  width: 100%;
-}
-
-#lets-go-image {
+.live-btm-imgs {
   position: relative;
   left: -5%;
   height: 100%;

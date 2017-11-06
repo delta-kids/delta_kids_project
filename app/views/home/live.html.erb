@@ -1,60 +1,64 @@
 <div class="live-page-container container-fluid">
-  <div class="container live5210-background">
-    <%= image_tag("live.png", id: "live5210-img") %>
+  <div class="container live5210-background" id="live5210-img-container">
+    <%= image_tag("live.png", class:"img-responsive" ,id: "live5210-img") %>
   </div>
-  <div class="container" style="border-radius: 5px; background-color: white; padding: 10px 50px 40px 50px">
-    <div id="section1-heading">
-      <h3 class="live5210">What is "live 5210"?</h3>
+  <div class="row">
+  <div class="col-xs-12 col-sm-12 col-md-12">
+  <div class="container" style="border-radius: 5px; background-color: white; padding: 1% 5% 4% 5%">
+    <div class="" id="section1-heading">
+      <h3 class="live5210"><span class="center-heading">What is </span><span class="mobile-block">"live 5210"?</span></h3>
     </div>
-
     <div class="container">
-      <div class="live52102-background">
-        <%= image_tag("5210-image2.png", id: "live5210-img2") %>
+      <div class="">
+        <%= image_tag("5210-image2.png", class:"img-responsive") %>
       </div>
     </div>
     <br>
     <br>
     <div class="container-fluid section1-text">
-      <p>Have you asked yourself questions like:<br>
+
+      <div class="col-xs-12 col-sm-12 col-md-12">
+      <p class="font-20 mobile-font-16">Have you asked yourself questions like:<br>
         What should my child eat to be healthy?<br>
         She will play on our iPad all day – should I let her?<br>
         Iʼve seen commercials saying itʼs important for him to be “active” – what does this mean?</p>
 
-        <p>Now there is one answer to all these questions – Live 5-2-1-0!<br>
+        <p class="font-20 mobile-font-16">Now there is one answer to all these questions – Live 5-2-1-0!<br>
           Watch the video below to learn more.</p>
         </div>
+      </div>
 
         <!--  YOUTUBE EMBED  -->
 
-        <div class="container">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/D9K0LSgGjwY" frameborder="0" allowfullscreen></iframe>
+        <div class="col-xs-12 colsm-6 col-md-6 container-fluid">
+          <iframe width="100%" height="315" src="https://www.youtube.com/embed/D9K0LSgGjwY" frameborder="0" allowfullscreen></iframe>
         </div>
 
         <!--  YOUTUBE EMBED  -->
 
-        <div class="container-fluid section1-text">
-          <p>Looking for something to do with your child on a rainy day? Planning a picnic in the park and looking for some games? Look no further – the Live 5210 activity ideas below can help! Find the activity ideas based on the age of your child:</p>
-          <p>Birth to 1 year old:</p>
-          <p>Raising an active child starts now! Look at the Activity Ideas and Nutrition pages for ideas.</p>
-          <p>1 to 4 years old:</p>
-          <p>Your child is busy and learning more every day. Try some of these Activity Ideas and Nutrition Suggestions.</p>
-          <p>5 to 12 years old:</p>
-          <p>Work with child to set goals for healthy living 5210. Your child can help think of activities and track how it is going on a Goal Tracking Sheet. You can find activity ideas beginning on page 13 of the Interactive Toolkit.</p>
+        <div class="col-xs-12 col-sm-12 col-md-12 container-fluid section1-text">
+          <p class="font-20 mobile-font-16">Looking for something to do with your child on a rainy day? Planning a picnic in the park and looking for some games? Look no further – the Live 5210 activity ideas below can help! Find the activity ideas based on the age of your child:</p>
+          <p class="font-20 mobile-font-16">Birth to 1 year old:</p>
+          <p class="font-20 mobile-font-16">Raising an active child starts now! Look at the Activity Ideas and Nutrition pages for ideas.</p>
+          <p class="font-20 mobile-font-16">1 to 4 years old:</p>
+          <p class="font-20 mobile-font-16">Your child is busy and learning more every day. Try some of these Activity Ideas and Nutrition Suggestions.</p>
+          <p class="font-20 mobile-font-16">5 to 12 years old:</p>
+          <p class="font-20 mobile-font-16">Work with child to set goals for healthy living 5210. Your child can help think of activities and track how it is going on a Goal Tracking Sheet. You can find activity ideas beginning on page 13 of the Interactive Toolkit.</p>
         </div>
 
+        <div class="col-xs-12 col-sm-12 col-md-12">
 
-        <div class="container plan-for-living-heading">
-          <h3>Plan For Fun Living 5210!</h3>
+        <div class="container" id="plan-for-living-heading">
+          <h3><span class="center-heading"><span class="">Plan For Fun</span><span class="mobile-block"> Living 5210!</span></h3>
         </div>
 
         <div class="container-fluid">
-          <div class="row">
-            <div class="col-sm-4 col-md-4">
-              <%= image_tag "carrot.png", id: "carrot-image", class: "img-responsive"%>
+            <div class="col-xs-12 col-sm-6 col-md-4" style="margin-bottom:10px">
+              <%= image_tag "carrot.png", class: "img-responsive live-btm-imgs"%>
             </div>
 
-            <div class="col-sm-8 col-md-8 resources-text-body">
-              <p>Get Rewards for Healthy Choices!
+            <div class="col-xs-12 col-sm-6 col-md-8 resources-text-body">
+              <p class="font-20 mobile-font-16">Get Rewards for Healthy Choices!
                 Screen Shot 2016-03-14 at 1.13.32 PMBC’s
                 Ministry of Health & the Public Health Agency of
                 Canada, with partners, have created “Carrot
@@ -66,31 +70,31 @@
                 activities. To learn more, click here – <a href='https://www.carrotrewards.ca/home/'>Carrot
                   Rewards</a></p>
                 </div>
-              </div>
             </div>
 
-            <div class="container new-resources-heading">
-              <h3>New Resources to Live 5-2-1-0</h3>
+            <div class="container" id="new-resources-heading">
+              <h3><span class="">New Resources to</span><span class="mobile-block"> Live 5-2-1-0</span></h3>
             </div>
 
             <div class="container-fluid">
-              <div class="row">
-                <div class="col-sm-4 col-md-4">
-                  <%= image_tag "5210-lets-go@2x.png", id: "lets-go-image", class: "img-responsive" %>
+                <div class="col-xs-12 col-sm-6 col-md-4" style="margin-bottom:10px">
+                  <%= image_tag "5210-lets-go@2x.png", class: "img-responsive live-btm-imgs" %>
                 </div>
 
-                <div class="col-sm-8 col-md-8 resources-text-body">
-                  <p>See below for some more information and ideas to
+                <div class="col-xs-12 col-sm-6 col-md-8 resources-text-body">
+                  <p class="font-20 mobile-font-16">See below for some more information and ideas to
                     Live 5210 with your children!</p>
-                    <p>Screen Time to Live 5210 – learn more about healthy
+                    <p class="font-20 mobile-font-16">Screen Time to Live 5210 – learn more about healthy
                       amounts of screen time for your child!</p>
-                      <p>5210 Colouring Sheet – print off and spend some
+                      <p class="font-20 mobile-font-16">5210 Colouring Sheet – print off and spend some
                         time colouring and talking about the Live 5210 habits
                         with your child.</p>
                       </div>
                     </div>
                   </div>
                 </div>
+              </div>
+              </div>
               </div>
 
               <!-- Rainbow Footer-->
