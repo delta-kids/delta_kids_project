@@ -43,6 +43,9 @@
 }
 
  @media only screen and (max-width: 764px) {
+   .happy-rainbow {
+     padding-top:0px;
+   }
     #mobile-header {
       display: "";
     }
@@ -85,6 +88,16 @@
     }
     #pad-200 {
       padding-top:200px;
+    }
+    #contact-us-text {
+      font-size:20px;
+      bottom:60px;
+    }
+    #boyrunning {
+      padding-bottom: 50px;
+    }
+    #boyrunning-container {
+      height:200px;
     }
 
 
