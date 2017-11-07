@@ -76,6 +76,13 @@
       width:100%;
       margin:10px 0px 10px 0px;
     }
+    .page-padding {
+      height:75px;
+      margin-bottom: 10px;
+    }
+    .content {
+      padding: 15px !important;
+    }
 
 
     /*.font-16, .font-20  {

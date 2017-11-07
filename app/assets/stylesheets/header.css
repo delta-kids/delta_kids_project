@@ -2,8 +2,13 @@
   font-size: 1.5em
 }
 
-.margin-t10 {
-  margin-top: 10px;
+.margin-t-1p {
+  margin-top: 5%;
+}
+
+.ddm-scroll {
+  max-height:300px;
+  overflow-y: auto;
 }
 
 .header-nav-cloud {

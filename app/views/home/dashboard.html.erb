@@ -1,32 +1,31 @@
 <div class="wholePage">
-      <div class="container-fluid">
         <div class="row">
-          <div class="col-md-12 content">
+          <div class="col-xs-12 col-sm-12 col-md-12 content">
 
             <%= render 'partials/dash_sidebar' %>
 
-            <div class="col-md-9 dash-main-content">
+            <div class="col-xs-12 col-sm-9 col-md-9 dash-main-content">
               <div class="container-fluid">
 
                 <% if user_signed_in? %>
 
                 <div class="container-fluid">
-                  <p class="dashboard-headers">Welcome to the Dashboard</p>
+                  <p class="dashboard-headers mobile-font-16">Welcome to the Dashboard</p>
                 </div>
 
                 <% if is_admin? %>
                 <div class="container-fluid center-flex-content">
-                  <p class="font-20" style="color:#004c81;"><strong>Pending Events:</strong> <span style="color:#00a3da"><%= @pending_and_approved_events.count %></span></p>
+                  <p class="font-20 mobile-font-16" style="color:#004c81;"><strong>Pending Events:</strong> <span style="color:#00a3da;"><%= @pending_and_approved_events.count %></span></p>
 
-                  <p class="font-20" style="padding-left:100px; color:#004c81;"><strong>Pending Resources:</strong> <span style="color:#00a3da"><%= @pending_and_approved_resources.count %></span></p>
+                  <p class="font-20 mobile-font-16" style="padding-left:10%; color:#004c81;"><strong>Pending Resources:</strong> <span style="color:#00a3da;"><%= @pending_and_approved_resources.count %></span></p>
               </div>
               <br>
               <br>
               <% end %>
-                <p class="dashboard-text2">The Text below is here to show what a welcome message may look like</p>
+                <p class="dashboard-text2 mobile-font-16">The Text below is here to show what a welcome message may look like</p>
                 <br>
-                <p class="dashboard-text2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <p class="dashboard-text2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                <p class="dashboard-text2 mobile-font-16">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p class="dashboard-text2 mobile-font-16">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   <br>
                   Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                   <% else %>

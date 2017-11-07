@@ -17,7 +17,7 @@
           <a class="dropdown-toggle one-point-five-em" data-toggle="dropdown" href="#" style="color:#144d81"><strong>LEARNING</strong><span class="caret"></span></a>
           <ul class="dropdown-menu learning-dropdown-menu">
             <div class="learning-dropdown-div learn-prog-serv-dropdown">
-              <li class="margin-t10"><a href="/surveys" class="">Child Surveys</a></li>
+              <li class="margin-t-1p"><a href="/surveys" class="">Child Surveys</a></li>
               <hr class="nav-hr">
               <li><a href="/live" class="">Live 5-2-1-0</a></li>
               <hr class="nav-hr">
@@ -30,7 +30,7 @@
           <a class="dropdown-toggle one-point-five-em" data-toggle="dropdown" href="#" style="color:#144d81"><strong>PROGRAMS</strong><span class="caret"></span></a>
           <ul class="dropdown-menu learning-dropdown-menu">
             <ul class="learning-dropdown-div learn-prog-serv-dropdown">
-              <li class="margin-t10"><a href="/programs/0_5"><strong class="dropdown-category ">0-5 years</strong></a></li>
+              <li class="margin-t-1p"><a href="/programs/0_5"><strong class="dropdown-category ">0-5 years</strong></a></li>
               <hr class="nav-hr">
               <div class="programs-li">
                 <li><a href="/programs/0_5/arts_culture" class="">Arts & Culture</a></li>
@@ -70,9 +70,9 @@
         </li>
         <li class="dropdown">
           <a class="dropdown-toggle one-point-five-em" data-toggle="dropdown" href="#" style="color:#144d81"><strong>SERVICES</strong><span class="caret"></span></a>
-          <ul class="dropdown-menu learning-dropdown-menu">
+          <ul class="dropdown-menu learning-dropdown-menu ddm-scroll">
             <ul class="learning-dropdown-div learn-prog-serv-dropdown">
-              <li class="margin-t10"><a href="/services/pregnancy_babies"><strong class="dropdown-category ">Pregnancy & Babies</strong></a></li>
+              <li class="margin-t-1p"><a href="/services/pregnancy_babies"><strong class=" dropdown-category ">Pregnancy & Babies</strong></a></li>
               <hr class="nav-hr">
               <li class=""><%= link_to 'Help in a Crisis', '/services/pregnancy_babies/help_crisis' %><li>
                 <hr class="nav-hr">
@@ -83,7 +83,7 @@
                   </ul>
 
                   <ul class="learning-dropdown-div learn-prog-serv-dropdown">
-                    <li><a href="/services/children"><strong class="dropdown-category">Children</strong></a></li>
+                    <li><a href="/services/children"><strong class="dropdown-category ">Children</strong></a></li>
                     <hr class="nav-hr">
                     <li class=""><%= link_to 'Help in a Crisis', '/services/children/help_crisis' %><li>
                       <hr class="nav-hr">
@@ -98,15 +98,15 @@
                           <ul class="learning-dropdown-div learn-prog-serv-dropdown">
                             <li><a href="/services/families"><strong class="dropdown-category ">Families</strong></a></li>
                             <hr class="nav-hr">
-                            <li><a href="/services/families/help_crisis" class="">Help in a Crisis</a></li>
+                            <li class=""><a href="/services/families/help_crisis" class="">Help in a Crisis</a></li>
                             <hr class="nav-hr">
-                            <li><a href="/services/families/childcare" class="">Childcare & Preschool</a></li>
+                            <li class=""><a href="/services/families/childcare" class="">Childcare & Preschool</a></li>
                             <hr class="nav-hr">
-                            <li><a href="/services/families/assistance" class="">Assistance with fees</a></li>
+                            <li class=""><a href="/services/families/assistance" class="">Assistance with fees</a></li>
                             <hr class="nav-hr">
-                            <li><a href="/services/families/support" class="">Supports for Families</a></li>
+                            <li class=""><a href="/services/families/support" class="">Supports for Families</a></li>
                             <hr class="nav-hr">
-                            <li><a href="/services/families/meals" class="">Meals for Families</a></li>
+                            <li class=""><a href="/services/families/meals" class="">Meals for Families</a></li>
                             <hr class="nav-hr">
                           </ul>
                         </ul>
@@ -114,9 +114,77 @@
                       <li>
                         <a href="/map" class="header-titles one-point-five-em"><p class="nav-font">SEARCH</p></a>
                       </li>
-                      <li>
-                        <a href="<%= dashboard_path %>" class="one-point-five-em" style="color:#144d81">Dashboard</a>
-                      </li>
+                      <li class="dropdown">
+                        <a class="dropdown-toggle one-point-five-em" data-toggle="dropdown" href="#" style="color:#144d81"><strong>Dashboard</strong><span class="caret"></span></a>
+                        <ul class="dropdown-menu learning-dropdown-menu ddm-scroll">
+                          <div class="learning-dropdown-div learn-prog-serv-dropdown">
+                            <% if user_signed_in? %>
+                            <% if is_admin? %>
+                            <li class="margin-t-1p">
+                              <a style="color:yellow" href="<%= dashboard_path %>">Dashboard</a>
+                            </li>
+                            <hr class="nav-hr">
+                            <li>
+                              <a href="<%= dashboard_pending_and_approved_events_path %>" class="">Pending Events (<%= Event.where(:approved => false || nil).count  %>)</a>
+                            </li>
+                            <hr class="nav-hr">
+                            <li>
+                              <a href="<%= dashboard_pending_and_approved_resources_path %>" class="">Pending Resources (<%= Resource.where(:approved => false || nil).count  %>)</a>
+                            </li>
+                            <hr class="nav-hr">
+                            <li>
+                              <a href="<%= dashboard_manage_whats_new_items_path %>" class="">What's New Items Index</a>
+                            </li>
+                            <hr class="nav-hr">
+                            <li>
+                              <a href="<%= dashboard_manage_events_path %>" class="">Events Index</a>
+                            </li>
+                            <hr class="nav-hr">
+                            <li>
+                              <a href="<%= dashboard_manage_resources_path %>" class="">Resources Index</a>
+                            </li>
+                            <hr class="nav-hr">
+                            <li>
+                              <a href="<%= dashboard_manage_programs_path %>" class="">Programs Index</a>
+                            </li>
+                            <hr class="nav-hr">
+                            <li>
+                              <a href="<%= dashboard_manage_services_path %>" class="">Services Index</a>
+                            </li>
+                            <hr class="nav-hr">
+                            <li>
+                              <a href="<%= dashboard_manage_organizations_path %>" class="">Organizations Index</a>
+                            </li>
+                            <hr class="nav-hr">
+                            <li><%= link_to 'Sign Out', signout_path, method: :delete, class:"" %></li>
+                            <hr class="nav-hr">
+                          </div>
+                        <% else %>
+                        <li class="margin-t-1p">
+                          <a href="<%= new_event_path %>" class="">Add New an Event</a>
+                        </li>
+                        <hr class="nav-hr">
+                        <li>
+                          <a href="<%= new_resource_path %>" class="">Add New a Resource</a>
+                        </li>
+                        <hr class="nav-hr">
+                        <li><%= link_to 'Sign Out', signout_path, method: :delete, class:"" %>
+                        </li>
+                        <hr class="nav-hr">
+                        <% end %>
+                        <% else %>
+                        <li class="margin-t-1p">
+                          <a href="<%= signup_path %>" class="">New User</a>
+                        </li>
+                        <hr class="nav-hr">
+                        <li>
+                          <a href="<%= login_path %>" class="">Log In</a>
+                        </li>
+                        <hr class="nav-hr">
+                        <% end %>
+                      </ul>
+                    </li>
+
                       <li>
                         <a href="<%= about_path %>" class="one-point-five-em" style="color:#144d81">About Us</a>
                       </li>
