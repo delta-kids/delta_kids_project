@@ -1,17 +1,17 @@
 <div class="wholePage">
-  <div class="container-fluid">
+
     <div class="row">
-      <div class="col-xs-12 content">
+      <div class="col-xs-12 col-sm-12 col-md-12 content">
 
         <%= render 'partials/dash_sidebar' %>
 
-        <div class="col-xs-9 dash-main-content" style="background-color:white;">
+        <div class="col-xs-12 col-sm-9 col-md-9 dash-main-content" style="background-color:white;">
           <% if user_signed_in? %>
           <% if is_admin? %>
           <div class="row">
             <div class="col-xs-12">
               <div class="container-fluid">
-                <h1 class="bree-font">Pending Events</h1>
+                <h1 class="bree-font mobile-font-24">Pending Events</h1>
                 <br>
                 <% if @events.count == 0 %>
                 <p class="font-16"> There are no Pending Events at this time.</p>
@@ -43,7 +43,7 @@
       <% end %>
     </div>
   </div>
-</div>
+
 </div>
 
 <!-- Rainbow Footer-->

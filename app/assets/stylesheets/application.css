@@ -68,8 +68,17 @@
     #new-resources-heading {
       text-align:center;
     }
+    .mobile-font-10 {
+      font-size:10px !important;
+    }
     .mobile-font-16 {
       font-size:16px !important;
+    }
+    .mobile-font-24 {
+      font-size:24px !important;
+    }
+    .cal-links {
+       word-break: break-all;
     }
     .live-btm-imgs {
       left:0;
@@ -99,12 +108,21 @@
     #boyrunning-container {
       height:200px;
     }
+    .bree-font {
+      font-size:30px;
+    }
+    .calendar-subsection2 {
+      padding-left:0 !important;
+      padding-right:0 !important;
+    }
+    .calendar-title {
+      text-align: center !important;
+    }
+    .event-info {
+      flex-direction: column;
+    }
 
 
-    /*.font-16, .font-20  {
-        font-size: 1.5em !important;
-   }
-     .bree-font, .bree-font26 {
-        font-size: 2em !important;
-   }*/
+
+
 }

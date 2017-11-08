@@ -2,11 +2,11 @@
   <!-- First section div -->
   <div class="container-fluid">
     <div class="row">
-      <div class="col-md-12 content">
+      <div class="col-xs-12 col-sm-12 col-md-12 content">
 
         <%= render 'partials/dash_sidebar' %>
 
-        <div class="col-md-9 dash-main-content" style="background-color:white;">
+        <div class="col-xs-12 col-sm-12 col-md-9 dash-main-content" style="background-color:white;">
           <% if user_signed_in? %>
           <div class="container-fluid center-flex-content">
             <div class="create-new-container">
@@ -89,14 +89,5 @@
         </div>
       </div>
     </div>
-
-
-    <div class="container-fluid happy-rainbow">
-      <div class="row">
-        <div class="col-md-12">
-
-          <%= image_tag("rainbow-footer-group.svg", class:"center-block") %>
-
-        </div>
-      </div>
-    </div>
+  </div>
+</div>
