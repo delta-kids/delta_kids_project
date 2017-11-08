@@ -111,6 +111,18 @@
     .bree-font {
       font-size:30px;
     }
+    .event-row {
+      padding:0;
+    }
+    .event-row .event-subsection2 {
+      padding:10px;
+    }
+    .div-tags {
+      flex-direction: column;
+    }
+    .report-button {
+      margin:3px;
+    }
     .calendar-subsection2 {
       padding-left:0 !important;
       padding-right:0 !important;
