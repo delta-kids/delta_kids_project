@@ -40,6 +40,9 @@
    .mobile-block {
      display: inline;
    }
+   #boyrunning-container {
+    margin-bottom: 7%;
+   }
 }
 
  @media only screen and (max-width: 764px) {
