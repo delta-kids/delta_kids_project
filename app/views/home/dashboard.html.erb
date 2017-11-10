@@ -1,36 +1,32 @@
 <div class="wholePage">
   <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12 content">
-
       <%= render 'partials/dash_sidebar' %>
-
-      <div class="col-xs-12 col-sm-9 col-md-9 dash-main-content">
+      <div class="col-xs-12 col-sm-8 col-md-9 dash-main-content">
         <div class="container-fluid">
-
           <% if user_signed_in? %>
-
           <div class="container-fluid">
             <p class="dashboard-headers mobile-font-16">Welcome to the Dashboard</p>
           </div>
-
           <% if is_admin? %>
-          <div class="container-fluid center-flex-content">
+          <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="col-xs-12 col-sm-12 col-md-4 col-md-offset-1">
             <p class="font-20 mobile-font-16" style="color:#004c81;"><strong>Pending Events:</strong> <span style="color:#00a3da;"><%= @pending_and_approved_events.count %></span></p>
-
-            <p class="font-20 mobile-font-16" style="padding-left:10%; color:#004c81;"><strong>Pending Resources:</strong> <span style="color:#00a3da;"><%= @pending_and_approved_resources.count %></span></p>
+            <br>
           </div>
-          <br>
-          <br>
+          <div class="col-xs-12 col-sm-12 col-md-4 col-md-offset-1">
+            <p class="font-20 mobile-font-16" style=" color:#004c81;"><strong>Pending Resources:</strong> <span style="color:#00a3da;"><%= @pending_and_approved_resources.count %></span></p>
+            <br>
+          </div>
+          </div>
           <% end %>
           <p class="dashboard-text2 mobile-font-16">Welcome to DeltaKids! We are excited to have you as part of our community.
-
           </p>
           <br>
           <p class="dashboard-text2 mobile-font-16" > Feel free to add to our website using the directory on the left.
             Once you add something, the webmaster will be notified. He/she will then ensure your item is appropriate for our website and double check the spelling/grammar. After that it will be published to the site.</p>
 
             <p class="dashboard-text2 mobile-font-16"> If you have any questions, please email coordinator@deltakids.ca</p>
-
 
             <% else %>
             <%= render 'partials/login_msg' %>
