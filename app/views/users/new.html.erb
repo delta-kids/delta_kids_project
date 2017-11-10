@@ -1,6 +1,6 @@
-<div class="signup-image">
+<div class="wholePage signup-image">
   <div class="row">
-    <div class="col-xs-10 col-xs-offset-1 login-container">
+    <div class="col-xs-12 col-sm-10 col-sm-offset-1 login-container">
       <h1 class="login-header bree-font">User Sign Up</h1>
       <%= form_for @user do |f| %>
          <% if @user.errors.any? %>
@@ -13,43 +13,31 @@
             </ul>
           </div>
         <% end %>
-        <div class="row">
-          <div class="col-xs-6 col-xs-offset-3 form-field">
+          <div class="col-xs-12 col-sm-6 col-md-4 col-sm-offset-3  col-md-offset-4 form-field">
             <%= f.label :first_name, class: 'login-header' %>
             <%= f.text_field :first_name, class: 'form-control' %>
           </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-6 col-xs-offset-3 form-field">
+          <div class="col-xs-12 col-sm-6 col-md-4 col-sm-offset-3  col-md-offset-4 form-field">
             <%= f.label :last_name, class: 'login-header' %>
             <%= f.text_field :last_name, class: 'form-control' %>
           </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-6 col-xs-offset-3 form-field">
+          <div class="col-xs-12 col-sm-6 col-md-4 col-sm-offset-3  col-md-offset-4 form-field">
             <%= f.label :phone_number, nil, class: 'login-header' %>
             <%= f.text_field :phone, class: 'form-control' %>
           </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-6 col-xs-offset-3 form-field">
+          <div class="col-xs-12 col-sm-6 col-md-4 col-sm-offset-3  col-md-offset-4 form-field">
             <%= f.label :email, nil, class: 'login-header' %>
             <%= f.email_field :email, class: 'form-control' %>
           </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-6 col-xs-offset-3 form-field">
+          <div class="col-xs-12 col-sm-6 col-md-4 col-sm-offset-3  col-md-offset-4 form-field">
             <%= f.label :password, nil, class: 'login-header' %>
             <%= f.password_field :password, class: 'form-control' %>
           </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-6 col-xs-offset-3 form-field">
+          <div class="col-xs-12 col-sm-6 col-md-4 col-sm-offset-3  col-md-offset-4 form-field">
             <%= f.label :password_confirmation, nil, class: 'login-header' %>
             <%= f.password_field :password_confirmation, class: 'form-control' %>
           </div>
-        </div>
-        <div class="form-field">
+        <div class="col-xs-12 col-sm-6 col-md-4 col-sm-offset-3  col-md-offset-4 form-field">
           <%= f.submit "Sign Up", class: 'btn btn-primary' %>
         </div>
       <% end %>

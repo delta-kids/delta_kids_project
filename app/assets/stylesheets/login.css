@@ -1,7 +1,6 @@
 .login-container {
   text-align: center;
   padding-top: 20px;
-  padding-bottom: 100px;
   margin-bottom: 30px;
 }
 .login-header {
@@ -20,9 +19,8 @@
   background-image: url('clouds.png');
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 100% 50%;
+  background-size: fill;
   background-color: #D1F0F4;
-  position: relative;
   bottom: -2px;
 }
 .form-field {
