@@ -1,26 +1,22 @@
 <div class="wholePage">
-<div class="login-image">
   <div class="row">
-    <div class="col-xs-10 col-xs-offset-1 login-container">
-      <h1 class="login-header">User Sign In</h1>
-      <%= form_tag sessions_path do %>
-        <div class="row">
-          <div class="col-xs-6 col-xs-offset-3 form-field">
+    <div class="col-xs-12 col-sm-12 col-md-12 login-image">
+      <div class="col-xs-10 col-xs-offset-1 login-container">
+        <h1 class="login-header">User Sign In</h1>
+        <%= form_tag sessions_path do %>
+          <div class="col-xs-12 col-sm-6 col-md-4 col-sm-offset-3  col-md-offset-4 form-field">
             <%= label_tag :email, nil, class: 'login-header' %>:
             <%= email_field_tag :email, "", class: 'form-control' %>
           </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-6 col-xs-offset-3 form-field">
+          <div class="col-xs-12 col-sm-6 col-md-4 col-sm-offset-3  col-md-offset-4 form-field">
             <%= label_tag :password, nil, class: 'login-header' %>:
             <%= password_field_tag :password, "", class: 'form-control' %>
           </div>
-        </div>
-        <div class="form-field">
+        <div class="col-xs-12 col-sm-6 col-md-4 col-sm-offset-3  col-md-offset-4 form-field">
           <%= submit_tag "Log In", class: 'btn btn-primary' %>
         </div>
-      <% end %>
+        <% end %>
+      </div>
     </div>
   </div>
-</div>
 </div>

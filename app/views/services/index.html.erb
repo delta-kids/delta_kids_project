@@ -1,36 +1,28 @@
 <div class="wholePage">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-md-12 content">
-
-        <%= render 'partials/dash_sidebar' %>
-
-        <div class="col-md-9 dash-main-content" style="background-color:white;">
-          <% if user_signed_in? %>
-          <% if is_admin? %>
-          <div class="row">
-            <div class="col-md-12">
-              <div class="container-fluid">
-                <h1 class="bree-font">Services</h1>
-                <br>
-                <% @services.each do |service| %>
-                <p class="font-16"><strong>Description: </strong><%= link_to service.description, service_path(service) %></p>
-                <hr>
-                <% end %>
-                <div class="container-fluid center-flex-content bree-font" style="align-items:center;">
-                  <%= paginate @services, window: 2 %>
-                </div>
-              </div>
-            </div>
-          </div>
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 content">
+      <%= render 'partials/dash_sidebar' %>
+      <div class="col-xs-12 col-sm-8 col-md-9 dash-main-content" style="background-color:white;">
+        <% if user_signed_in? %>
+        <% if is_admin? %>
+        <div class="container-fluid">
+          <h1 class="bree-font">Services</h1>
+          <br>
+          <% @services.each do |service| %>
+          <p class="font-16"><strong>Description: </strong><%= link_to service.description, service_path(service) %></p>
+          <hr>
           <% end %>
-          <% else %>
-          <%= render 'partials/login_msg' %>
+          <div class="container-fluid center-flex-content bree-font" style="align-items:center;">
+            <%= paginate @services, window: 2 %>
+          </div>
+        </div>
+        <% end %>
+        <% else %>
+        <%= render 'partials/login_msg' %>
       </div>
       <% end %>
     </div>
   </div>
-</div>
 </div>
 
 <!-- Rainbow Footer-->

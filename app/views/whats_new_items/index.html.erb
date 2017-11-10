@@ -1,35 +1,27 @@
 <div class="wholePage">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-md-12 content">
-
-        <%= render 'partials/dash_sidebar' %>
-
-        <div class="col-md-9 dash-main-content" style="background-color:white;">
-          <% if user_signed_in? %>
-          <% if is_admin? %>
-          <div class="row">
-            <div class="col-md-12">
-              <div class="container-fluid">
-                <h1 class="bree-font">What's New Items</h1>
-                <br>
-                <% @whats_new_items.each do |item| %>
-                <p class="font-16"><%= link_to item.title, whats_new_item_path(item) %></p>
-                <hr>
-                <% end %><div class="container-fluid center-flex-content bree-font" style="align-items:center;">
-                <%= paginate @whats_new_items, window: 2 %>
-              </div>
-              </div>
-            </div>
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 content">
+      <%= render 'partials/dash_sidebar' %>
+      <div class="col-xs-12 col-sm-8 col-md-9 dash-main-content" style="background-color:white;">
+        <% if user_signed_in? %>
+        <% if is_admin? %>
+        <div class="container-fluid">
+          <h1 class="bree-font">What's New Items</h1>
+          <br>
+          <% @whats_new_items.each do |item| %>
+          <p class="font-16"><%= link_to item.title, whats_new_item_path(item) %></p>
+          <hr>
+          <% end %><div class="container-fluid center-flex-content bree-font" style="align-items:center;">
+            <%= paginate @whats_new_items, window: 2 %>
           </div>
-          <% end %>
-          <% else %>
-          <%= render 'partials/login_msg' %>
+        </div>
+        <% end %>
+        <% else %>
+        <%= render 'partials/login_msg' %>
       </div>
       <% end %>
     </div>
   </div>
-</div>
 </div>
 
 <!-- Rainbow Footer-->

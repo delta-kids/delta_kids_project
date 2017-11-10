@@ -8,7 +8,12 @@
 
 .ddm-scroll {
   max-height:300px;
-  overflow-y: auto;
+  overflow-y: scroll;
+}
+
+#mobile-header-logo {
+  height:55px;
+  margin:3% 0 0 5% ;
 }
 
 .header-nav-cloud {
@@ -21,6 +26,7 @@
 }
 
 #mobile-header {
+  border:none;
   width: 100vw;
   background-color: white !important;
   z-index: 3;
@@ -228,6 +234,8 @@
 
 .head-btn {
     background-color: white !important;
+    padding-left: 8px !important;
+    padding-right: 8px !important;
 }
 
 .head-btn:focus {

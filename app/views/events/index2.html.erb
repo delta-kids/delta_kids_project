@@ -1,27 +1,23 @@
 <div class="wholePage">
-    <div class="row">
-      <div class="col-xs-12 col-sm-12 col-md-12 content">
-
-        <%= render 'partials/dash_sidebar' %>
-
-        <div class="col-xs-12 col-sm-12 col-md-9 dash-main-content">
-          <% if user_signed_in? %>
-          <% if is_admin? %>
-
-              <div class="container-fluid">
-                <h1 class="bree-font">Events</h1>
-                <br>
-                <% @events.each do |event| %>
-                <p class="font-16"><%= link_to event.title, event_path(event) %></p>
-                <hr>
-                <% end %><div class="container-fluid center-flex-content bree-font" style="align-items:center;">
-                <%= paginate @events, window: 2 %>
-              </div>
-
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 content">
+      <%= render 'partials/dash_sidebar' %>
+      <div class="col-xs-12 col-sm-8 col-md-9 dash-main-content">
+        <% if user_signed_in? %>
+        <% if is_admin? %>
+        <div class="container-fluid">
+          <h1 class="bree-font">Events</h1>
+          <br>
+          <% @events.each do |event| %>
+          <p class="font-16"><%= link_to event.title, event_path(event) %></p>
+          <hr>
+          <% end %><div class="container-fluid center-flex-content bree-font" style="align-items:center;">
+            <%= paginate @events, window: 2 %>
           </div>
-          <% end %>
-          <% else %>
-          <%= render 'partials/login_msg' %>
+        </div>
+        <% end %>
+        <% else %>
+        <%= render 'partials/login_msg' %>
       </div>
       <% end %>
     </div>
