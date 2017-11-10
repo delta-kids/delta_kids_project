@@ -2,8 +2,18 @@
   font-size: 1.5em
 }
 
-.margin-t10 {
-  margin-top: 10px;
+.margin-t-1p {
+  margin-top: 5%;
+}
+
+.ddm-scroll {
+  max-height:300px;
+  overflow-y: scroll;
+}
+
+#mobile-header-logo {
+  height:55px;
+  margin:3% 0 0 5% ;
 }
 
 .header-nav-cloud {
@@ -15,17 +25,34 @@
   top: 80px;
 }
 
+#mobile-header {
+  border:none;
+  width: 100vw;
+  background-color: white !important;
+  z-index: 3;
+  position: fixed;
+  margin-bottom:10px;
+  height:45px !important;
+}
+
+#mobile-header .navbar-collapse{
+  background-color: white !important;
+  width: 100vw;
+  position: relative;
+  top:-2px;
+}
+
 #header-nav-cloud-mobile {
-  z-index: 1;
+  z-index: 3;
   background-image: url("cloud1.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position:bottom;
   margin-bottom: 0;
   position: relative;
-  top:30px;
+  top:-2px;
   width: 100%;
-  height: 30px;
+  height: 35px;
 }
 
 .nav-font {
@@ -207,6 +234,8 @@
 
 .head-btn {
     background-color: white !important;
+    padding-left: 8px !important;
+    padding-right: 8px !important;
 }
 
 .head-btn:focus {

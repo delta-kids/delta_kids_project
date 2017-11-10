@@ -1,8 +1,9 @@
 <div class="wholePage">
   <div class="container-fluid light-blue-bg-color">
     <div class="row">
-      <div class="col-md-1 col-sm-1 col-xs-1"></div>
-      <div class="col-md-7 col-sm-10 col-xs-10">
+      <div class="col-xs-12 col-sm-12 col-md-12">
+      <div class="hidden-xs hidden-sm col-md-1"></div>
+      <div class="col-xs-12 col-sm-12 col-md-7">
         <!--  left column -->
         <div class="container-fluid " id="feature-box">
           <!-- set the image to be displayed -->
@@ -20,13 +21,14 @@
           <div class="container-fluid">
             <hr>
             <div class="row">
-              <div class="col-md-6">
+              <div class="col-xs-12 col-sm-12 col-md-12">
+              <div class="col-xs-12 col-sm-6 col-md-6">
                 <% if @program.organization.address.present?%>
                 <p class="font-16"><strong>Address:</strong> <%= @program.organization.address %></p>
                 <% end %>
               </div>
 
-              <div class="col-md-6">
+              <div class="col-xs-12 col-sm-6 col-md-6">
                 <% if @program.organization.phone.present?%>
                 <p class="font-16">
                   <i class="fa fa-phone" aria-hidden="true"></i>
@@ -46,6 +48,7 @@
               </div>
             </div>
           </div>
+          </div>
 
           <!-- Share Links -->
           <div class="container-fluid share-section">
@@ -56,10 +59,11 @@
             <%= social_share_button_tag(@program.description, :url => "#{request.protocol}#{request.host_with_port}#{request.fullpath}", :image => @program.image_url.to_s) %>
           </div>
         </div>
+        <br>
       </div> <!-- col -->
       <!-- left column -->
       <!--  right column -->
-      <div class="col-md-3 col-sm-10 col-xs-10">
+      <div class="col-xs-12 col-sm-12 col-md-3">
         <div>
           <h1 class="remove-h-margin bree-font">Similar Programs</h1>
         </div>
@@ -82,9 +86,10 @@
           <br>
           <% end %>
         </div> <!-- col -->
-        <div class="col-md-1 col-sm-1 col-xs-1"></div>
+        <div class="hidden-xs hidden-sm col-md-1"></div>
       </div> <!-- row -->
       <!--  right column -->
+    </div>
     </div>
   </div>
 

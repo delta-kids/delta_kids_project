@@ -1,17 +1,17 @@
 .login-container {
   text-align: center;
   padding-top: 20px;
-  padding-bottom: 100px;
   margin-bottom: 30px;
 }
 .login-header {
   font-family: 'Bree Serif', sans-serif;
 }
 .login-image {
+  height: 66vh;
   background-image: url('kids-green-background.png');
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 100% 100%;
+  background-size: cover;
   position: relative;
   bottom: -2px;
   background-color: #D1F0F4;
@@ -20,9 +20,8 @@
   background-image: url('clouds.png');
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 100% 50%;
+  background-size: fill;
   background-color: #D1F0F4;
-  position: relative;
   bottom: -2px;
 }
 .form-field {

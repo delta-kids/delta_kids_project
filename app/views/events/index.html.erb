@@ -3,7 +3,7 @@
   <%= render 'partials/events_filter_bar' %>
   <div class="col-xs-12 col-sm-12 col-md-9 calendar-subsection2">
     <div class="calendar-subsection2-text">
-      <p class="calendar-subsection2-header"><span class="bree-font">ACTIVITIES CALENDAR</span></p>
+      <p class="calendar-subsection2-header"><span class="bree-font mobile-font-16">ACTIVITIES CALENDAR</span></p>
     </div>
     <div class="calendar-subsection2-card" style="margin-top:0px;">
       <%= month_calendar  do |date| %>
@@ -13,7 +13,7 @@
       <div class="day-scroller">
         <% if Holidays.on(date, :ca_bc, :observed) != [] %>
          <% holiday = Holidays.on(date, :ca_bc, :observed) %>
-        <p class="font-16 center-flex-content" style="color:#144d81"><strong><%= holiday[0][:name] %></strong></p>
+        <p class="cal-links mobile-font-10 center-flex-content" style="color:#144d81"><strong><%= holiday[0][:name] %></strong></p>
         <% end %>
         <% if @events_by_start_date[date] %>
         <% @events_by_start_date[date].each do |event|  %>
@@ -30,10 +30,8 @@
         </script>
 
 
-
-
         <div class="popup" onclick="calendarPopup(<%= event.id %>)">
-          <p class="cal-links"><%= event.start_time.strftime("%I:%M %p") %> <%= event.title %></p>
+          <p class="cal-links mobile-font-10"><%= event.start_time.strftime("%I:%M %p") %> <%= event.title %></p>
           <br>
           <div class="popuptext" id="cal-popup-window-<%=event.id%>">
             <i class="fa fa-times pull-right" aria-hidden="true" style="color:yellow; font-size:30px;"></i>
@@ -95,7 +93,7 @@
           <div class="calendar-subsection2-details">
             <p class="calendar-subsection2-header2 bree-font26"><%= event.title %></p>
             <div class="event-info">
-              <div>
+              <div class="event-info1">
                 <%= image_tag "icon-calendar.svg", class: "event-info-icon" %>
                 <p class="event-info-txt-bold">Date:</p>
                 <p class="event-info-txt"><%= event.start_date %></p>

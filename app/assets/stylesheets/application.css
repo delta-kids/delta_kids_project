@@ -40,11 +40,20 @@
    .mobile-block {
      display: inline;
    }
+   #boyrunning-container {
+     margin-bottom: 7%
+   }
 }
 
  @media only screen and (max-width: 764px) {
+   .happy-rainbow {
+     padding-top:0px;
+   }
     #mobile-header {
       display: "";
+    }
+    #mobile-scroll-pad{
+      height:120px;
     }
     #reg-header {
       display: none;
@@ -65,17 +74,74 @@
     #new-resources-heading {
       text-align:center;
     }
+    .mobile-font-10 {
+      font-size:10px !important;
+    }
     .mobile-font-16 {
-      font-size:16px;
+      font-size:16px !important;
+    }
+    .mobile-font-24 {
+      font-size:24px !important;
+    }
+    .cal-links {
+       word-break: break-all;
     }
     .live-btm-imgs {
       left:0;
     }
+    #latest-news,
+    #survey-results {
+      width:100%;
+      margin:10px 0px 10px 0px;
+    }
+    .page-padding {
+      height:75px;
+      margin-bottom: 10px;
+    }
+    .content {
+      padding: 15px !important;
+    }
+    #pad-200 {
+      padding-top:200px;
+    }
+    #contact-us-text {
+      font-size:20px;
+      bottom:60px;
+    }
+    #boyrunning {
+      margin-top: 20px;
+      padding-bottom: 50px;
+    }
+    #boyrunning-container {
+      margin-bottom: 0px;
+    }
+    .bree-font {
+      font-size:30px;
+    }
+    .event-row {
+      padding:0;
+    }
+    .event-row .event-subsection2 {
+      padding:10px;
+    }
+    .div-tags {
+      flex-direction: column;
+    }
+    .report-button {
+      margin:3px;
+    }
+    .calendar-subsection2 {
+      padding-left:0 !important;
+      padding-right:0 !important;
+    }
+    .calendar-title {
+      text-align: center !important;
+    }
+    .event-info {
+      flex-direction: column;
+    }
 
-    /*.font-16, .font-20  {
-        font-size: 1.5em !important;
-   }
-     .bree-font, .bree-font26 {
-        font-size: 2em !important;
-   }*/
+
+
+
 }

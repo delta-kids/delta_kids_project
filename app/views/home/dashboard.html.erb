@@ -1,42 +1,41 @@
 <div class="wholePage">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-md-12 content">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 content">
+      <%= render 'partials/dash_sidebar' %>
+      <div class="col-xs-12 col-sm-8 col-md-9 dash-main-content">
+        <div class="container-fluid">
+          <% if user_signed_in? %>
+          <div class="container-fluid">
+            <p class="dashboard-headers mobile-font-16">Welcome to the Dashboard</p>
+          </div>
+          <% if is_admin? %>
+          <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="col-xs-12 col-sm-12 col-md-4 col-md-offset-1">
+            <p class="font-20 mobile-font-16" style="color:#004c81;"><strong>Pending Events:</strong> <span style="color:#00a3da;"><%= @pending_and_approved_events.count %></span></p>
+            <br>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-4 col-md-offset-1">
+            <p class="font-20 mobile-font-16" style=" color:#004c81;"><strong>Pending Resources:</strong> <span style="color:#00a3da;"><%= @pending_and_approved_resources.count %></span></p>
+            <br>
+          </div>
+          </div>
+          <% end %>
+          <p class="dashboard-text2 mobile-font-16">Welcome to DeltaKids! We are excited to have you as part of our community.
+          </p>
+          <br>
+          <p class="dashboard-text2 mobile-font-16" > Feel free to add to our website using the directory on the left.
+            Once you add something, the webmaster will be notified. He/she will then ensure your item is appropriate for our website and double check the spelling/grammar. After that it will be published to the site.</p>
 
-            <%= render 'partials/dash_sidebar' %>
+            <p class="dashboard-text2 mobile-font-16"> If you have any questions, please email coordinator@deltakids.ca</p>
 
-            <div class="col-md-9 dash-main-content">
-              <div class="container-fluid">
-
-                <% if user_signed_in? %>
-
-                <div class="container-fluid">
-                  <p class="dashboard-headers">Welcome to the Dashboard</p>
-                </div>
-
-                <% if is_admin? %>
-                <div class="container-fluid center-flex-content">
-                  <p class="font-20" style="color:#004c81;"><strong>Pending Events:</strong> <span style="color:#00a3da"><%= @pending_and_approved_events.count %></span></p>
-
-                  <p class="font-20" style="padding-left:100px; color:#004c81;"><strong>Pending Resources:</strong> <span style="color:#00a3da"><%= @pending_and_approved_resources.count %></span></p>
-              </div>
-              <br>
-              <br>
-              <% end %>
-                <p class="dashboard-text2">The Text below is here to show what a welcome message may look like</p>
-                <br>
-                <p class="dashboard-text2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <p class="dashboard-text2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  <br>
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                  <% else %>
-                  <%= render 'partials/login_msg' %>
-              </div>
-            </div>
-            <% end %>
+            <% else %>
+            <%= render 'partials/login_msg' %>
           </div>
         </div>
+        <% end %>
       </div>
+    </div>
+  </div>
 </div>
 
 <%= render 'partials/footer' %>
