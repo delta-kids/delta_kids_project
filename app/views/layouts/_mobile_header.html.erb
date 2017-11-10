@@ -34,7 +34,7 @@
         </li>
         <li class="dropdown">
           <a class="dropdown-toggle one-point-five-em" data-toggle="dropdown" href="#" style="color:#144d81"><strong>PROGRAMS</strong><span class="caret"></span></a>
-          <ul class="dropdown-menu learning-dropdown-menu">
+          <ul class="dropdown-menu learning-dropdown-menu ddm-scroll">
             <ul class="learning-dropdown-div learn-prog-serv-dropdown">
               <li class="margin-t-1p"><a href="/programs/0_5"><strong class="dropdown-category ">0-5 years</strong></a></li>
               <hr class="nav-hr">
@@ -164,6 +164,7 @@
                             <hr class="nav-hr">
                             <li><%= link_to 'Sign Out', signout_path, method: :delete, class:"" %></li>
                             <hr class="nav-hr">
+                            <li id="mobile-scroll-pad"></li>
                           </div>
                         <% else %>
                         <li class="margin-t-1p">

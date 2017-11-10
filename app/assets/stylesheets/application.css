@@ -52,6 +52,9 @@
     #mobile-header {
       display: "";
     }
+    #mobile-scroll-pad{
+      height:120px;
+    }
     #reg-header {
       display: none;
     }

@@ -19,13 +19,13 @@
           <li>
             <a href="<%= dashboard_pending_and_approved_events_path %>" class="dashboard-text">Pending Events (<%= Event.where(:approved => false || nil).count  %>)</a>
           </li>
-          <hr>
+          <hr class="nav-hr">
           <li>
             <a href="<%= dashboard_pending_and_approved_resources_path %>" class="dashboard-text">Pending Resources (<%= Resource.where(:approved => false || nil).count  %>)</a>
           </li>
         </div>
       </div>
-      <hr>
+      <hr class="nav-hr">
       <div class="filterCard">
         <div class="filter-header-container">
           <p class="filterCard-header1">Manage</p>
@@ -35,30 +35,30 @@
         <div class="collapse-manage collapse in">
           <br>
           <li>
-            <a href="<%= dashboard_manage_whats_new_items_path %>" class="dashboard-text">View What's New Items</a>
+            <a href="<%= dashboard_manage_whats_new_items_path %>" class="dashboard-text">What's New Items Index</a>
           </li>
-          <hr>
+          <hr class="nav-hr">
           <li>
-            <a href="<%= dashboard_manage_events_path %>" class="dashboard-text">View Events</a>
+            <a href="<%= dashboard_manage_events_path %>" class="dashboard-text">Events Index</a>
           </li>
-          <hr>
+          <hr class="nav-hr">
           <li>
-            <a href="<%= dashboard_manage_resources_path %>" class="dashboard-text">View Resources</a>
+            <a href="<%= dashboard_manage_resources_path %>" class="dashboard-text">Resources Index</a>
           </li>
-          <hr>
+          <hr class="nav-hr">
           <li>
-            <a href="<%= dashboard_manage_programs_path %>" class="dashboard-text">View Programs</a>
+            <a href="<%= dashboard_manage_programs_path %>" class="dashboard-text">Programs Index</a>
           </li>
-          <hr>
+          <hr class="nav-hr">
           <li>
-            <a href="<%= dashboard_manage_services_path %>" class="dashboard-text">View Services</a>
+            <a href="<%= dashboard_manage_services_path %>" class="dashboard-text">Services Index</a>
           </li>
-          <hr>
+          <hr class="nav-hr">
           <li>
-            <a href="<%= dashboard_manage_organizations_path %>" class="dashboard-text">View Organizations</a>
+            <a href="<%= dashboard_manage_organizations_path %>" class="dashboard-text">Organizations Index</a>
           </li>
         </div>
-        <hr>
+        <hr class="nav-hr">
       </div>
 
       <div class="filterCard">
@@ -72,36 +72,36 @@
           <li>
             <a href="<%= new_whats_new_item_path %>" class="dashboard-text">Add What's New Item</a>
           </li>
-          <hr>
+          <hr class="nav-hr">
           <li>
             <a href="<%= new_event_path %>" class="dashboard-text">Add New Event</a>
           </li>
-          <hr>
+          <hr class="nav-hr">
           <li>
             <a href="<%= new_resource_path %>" class="dashboard-text">Add New Resource</a>
           </li>
-          <hr>
+          <hr class="nav-hr">
           <li>
             <a href="<%= new_organization_path %>" class="dashboard-text">Add New Organization</a>
           </li>
-          <hr>
+          <hr class="nav-hr">
           <li>
             <a href="<%= new_program_path %>" class="dashboard-text">Add New Program</a>
           </li>
-          <hr>
+          <hr class="nav-hr">
           <li>
             <a href="<%= new_service_path %>" class="dashboard-text">Add New Service</a>
           </li>
-          <!-- <hr>
+          <!-- <hr class="nav-hr">
           <li>
           <a href="<%= new_program_type_path %>" class="dashboard-text">Add New New Activity Type</a>
         </li> -->
       </div>
-      <hr>
+      <hr class="nav-hr">
     </div>
 
     <li><%= link_to 'Sign Out', signout_path, method: :delete, class:"dashboard-text" %></li>
-    <hr>
+    <hr class="nav-hr">
     <% else %>
     <li>
       <h4 style="color:#00a3da">Hello <%= current_user.first_name %>, what would you like to do today?
@@ -110,13 +110,13 @@
     <li>
       <a href="<%= new_event_path %>" class="dashboard-text">Add New an Event</a>
     </li>
-    <hr>
+    <hr class="nav-hr">
     <li>
       <a href="<%= new_resource_path %>" class="dashboard-text">Add New a Resource</a>
     </li>
-    <hr>
+    <hr class="nav-hr">
     <li><%= link_to 'Sign Out', signout_path, method: :delete, class:"dashboard-text" %></li>
-    <hr>
+    <hr class="nav-hr">
     <% end %>
     <% else %>
     <p class="font-16" style="color:#00A3DA">Welcome to the Dashboard,
@@ -124,11 +124,11 @@
       <li>
         <a href="<%= signup_path %>" class="dashboard-text">New User</a>
       </li>
-      <hr>
+      <hr class="nav-hr">
       <li>
         <a href="<%= login_path %>" class="dashboard-text">Log In</a>
       </li>
-      <hr>
+      <hr class="nav-hr">
       <% end %>
     </ul>
   </div>
