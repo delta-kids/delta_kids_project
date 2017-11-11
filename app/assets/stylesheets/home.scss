@@ -16,10 +16,7 @@
   height: 240px;
 }
 
-.clouds-background {
-  min-height: 400px !important;
-  height: auto;
-}
+
 
 .flex {
   display: flex;
@@ -104,8 +101,8 @@
 
 .clouds-background {
     background-image: url('clouds.png');
-    background-size: 100% auto;
-    background-repeat: no-repeat;
+    background-size:cover;
+    background-repeat:no-repeat;
     height: 365px;
     display: block;
     margin: auto;

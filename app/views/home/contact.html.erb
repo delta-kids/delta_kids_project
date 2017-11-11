@@ -1,12 +1,18 @@
-<div class="container-fluid contact-us-body">
-  <div class="container" id="boyrunning-container">
-    <%= image_tag  "BoyRunning.jpeg", id:"boyrunning" %>
-    <h1 class="mobile-font-24"id="contact-us-text">CONTACT US</h1>
-  </div>
-  <div class="row">
-    <div class="col-xs-12 col-sm-12 col-md-12">
+<div class="wholePage">
 
-      <div class="col-xs-12 col-sm-8 col-md-8">
+  <div class="row main">
+    <div class="col-xs-12 col-sm-12 col-md-12">
+      <div class="col-xs-12" id="about-us-container">
+        <div class="container-fluid" style="padding:0 5% 0 5%;">
+          <%= image_tag  "BoyRunning.jpeg", class:"img-responsive", id:"boyrunning" %>
+          <div class="col-xs-12" style="background-color:white">
+            <h1 class="mobile-font-24"id="about-us">CONTACT US</h1>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-xs-12 col-sm-8 col-md-8" style="margin-top:2%">
         <div class="container-fluid" id="contact-box">
           <p class="font-16">Do you have any questions or what to learn more about a specific subject? Drop us a line.</p>
           <br>
@@ -27,7 +33,7 @@
       </div>
 
 
-      <div class="col-xs-12 col-sm-4 col-md-4">
+      <div class="col-xs-12 col-sm-4 col-md-4" style="margin-top:2%">
         <div class="container-fluid" id="about-us-box">
           <p class="bree-font" style="font-size:26px;">About us</p>
           <%= image_tag  "jumbotron-about-us.svg", id: "jumbo-about-us" %>

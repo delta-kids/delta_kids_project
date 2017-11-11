@@ -2,11 +2,11 @@
   <div class="container-fluid">
     <div class="navbar-header" style="background-color:white">
       <% if flash[:notice] %>
-        <div class='alert alert-success'><%= flash[:notice] %></div>
+      <div class='alert alert-success'><%= flash[:notice] %></div>
       <% elsif flash[:alert] %>
-        <div class='alert alert-danger'><%= flash[:alert] %></div>
+      <div class='alert alert-danger'><%= flash[:alert] %></div>
       <% end %>
-      <%= link_to image_tag("Delta-logo.png", id:"mobile-header-logo") %>
+      <%= link_to image_tag("Delta-logo.png", id:"mobile-header-logo"), home_path %>
 
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" style="background-color:#144d81;margin-top:20px;margin-right:30px;">
         <span class="icon-bar" style="background-color:#3ea3da"></span>
@@ -166,31 +166,31 @@
                             <hr class="nav-hr">
                             <li id="mobile-scroll-pad"></li>
                           </div>
-                        <% else %>
-                        <li class="margin-t-1p">
-                          <a href="<%= new_event_path %>" class="">Add New an Event</a>
-                        </li>
-                        <hr class="nav-hr">
-                        <li>
-                          <a href="<%= new_resource_path %>" class="">Add New a Resource</a>
-                        </li>
-                        <hr class="nav-hr">
-                        <li><%= link_to 'Sign Out', signout_path, method: :delete, class:"" %>
-                        </li>
-                        <hr class="nav-hr">
-                        <% end %>
-                        <% else %>
-                        <li class="margin-t-1p">
-                          <a href="<%= signup_path %>" class="">New User</a>
-                        </li>
-                        <hr class="nav-hr">
-                        <li>
-                          <a href="<%= login_path %>" class="">Log In</a>
-                        </li>
-                        <hr class="nav-hr">
-                        <% end %>
-                      </ul>
-                    </li>
+                          <% else %>
+                          <li class="margin-t-1p">
+                            <a href="<%= new_event_path %>" class="">Add New an Event</a>
+                          </li>
+                          <hr class="nav-hr">
+                          <li>
+                            <a href="<%= new_resource_path %>" class="">Add New a Resource</a>
+                          </li>
+                          <hr class="nav-hr">
+                          <li><%= link_to 'Sign Out', signout_path, method: :delete, class:"" %>
+                          </li>
+                          <hr class="nav-hr">
+                          <% end %>
+                          <% else %>
+                          <li class="margin-t-1p">
+                            <a href="<%= signup_path %>" class="">New User</a>
+                          </li>
+                          <hr class="nav-hr">
+                          <li>
+                            <a href="<%= login_path %>" class="">Log In</a>
+                          </li>
+                          <hr class="nav-hr">
+                          <% end %>
+                        </ul>
+                      </li>
 
                       <li>
                         <a href="<%= about_path %>" class="one-point-five-em" style="color:#144d81">About Us</a>
