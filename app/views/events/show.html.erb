@@ -1,17 +1,17 @@
 <div class="wholePage">
-  <div class="container-fluid">
     <div class="row">
-      <div class="col-xs-12 content">
+      <div class="col-xs-12 col-sm-12 col-md-12 content">
 
         <%= render 'partials/dash_sidebar' %>
 
-        <div class="col-xs-12 col-md-9 dash-main-content" style="background-color:white;">
+        <div class="col-xs-12 col-sm-8 col-md-9 dash-main-content" style="background-color:white;">
           <% if user_signed_in? %>
           <div class="row">
-            <div class="col-md-12">
+            <div class="col-xs-12 col-sm-12 col-md-12">
                   <div class="container-fluid">
                     <br>
                   <h4 class='bree-font'><%= @event.title %></h4>
+                  <br>
                   <p class='font-20'><strong>Start Date: </strong><%= @event.start_date %></p>
                   <p class='font-20'><strong>Start Time: </strong><%= @event.start_time.strftime("%I:%M%p") %></p>
                   <p class='font-20'><strong>End Date: </strong><%= @event.end_date %></p>
@@ -37,18 +37,20 @@
                   <p class='font-20'><strong>Contact Email: </strong><%= @event.contact_email %></p>
                   <p class='font-20'><strong>Image: </strong></p>
                   <div class="">
-                    <%= image_tag(@event.image_url.to_s, style:"width:400px;height:300px;") %>
+                    <%= image_tag(@event.image_url.to_s, style:"width:100%;height:100%;") %>
                   </div>
                   <br>
                   <br>
 
-                      <%= link_to 'Delete', event_path(@event),
-                                            method: :delete,
-                                            data: {confirm: 'Are you sure?'},
-                                            class: 'btn btn-danger edit-delete-btn-width', style:'color:white !important;' %>
-
+                  <div class="center-flex-content">
                       <%= link_to 'Edit', edit_event_path(@event),
-                      class: 'btn btn-success form-padding edit-delete-btn-width'  %>
+                      class: 'btn btn-success edit-delete-btn-width'  %>
+
+                      <%= link_to 'Delete', event_path(@event),
+                      method: :delete,
+                      data: {confirm: 'Are you sure?'},
+                      class: 'btn btn-danger form-padding edit-delete-btn-width', style:'color:white !important;' %>
+                    </div>
                       <br>
                       <br>
                       <% if user_signed_in? %>
@@ -69,7 +71,6 @@
       </div>
       <% end %>
     </div>
-  </div>
 </div>
 </div>
 
