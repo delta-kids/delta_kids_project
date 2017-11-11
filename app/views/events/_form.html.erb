@@ -22,11 +22,11 @@
               <div class="hidden-xs col-sm-3 col-md-3">
                 <!-- Spacer -->
               </div>
-              <div class="col-xs-12 col-sm-6 col-md-3 col-sm-offset-3  col-md-offset-0 form-field">
+              <div class="col-xs-12 col-sm-3 col-md-3 form-field">
                 <%= f.label :start_date,"Start Date", class: "", style:"padding-right:10px;" %>
                 <%= f.text_field :start_date, class: 'start-date datepicker date-time-width',placeholder:"DD/MM/YYYY", :required => true %>
               </div>
-              <div class="col-xs-12 col-sm-6 col-md-3 col-sm-offset-3  col-md-offset-0 form-field">
+              <div class="col-xs-12 col-sm-3 col-md-3 form-field">
                 <%= f.label :start_time,"Start Time", class: "", style:"padding-right:10px;" %>
                 <%= f.text_field :start_time,value: "12:00pm",class: 'dateselect-time date-time-width ui-timepicker-input', :required => true %>
               </div>
@@ -40,11 +40,11 @@
             <div class="hidden-xs col-sm-3 col-md-3">
               <!-- Spacer -->
             </div>
-              <div class="col-xs-12 col-sm-3 col-md-3 col-sm-offset-3  col-md-offset-0 form-field">
+              <div class="col-xs-12 col-sm-3 col-md-3 form-field">
                 <%= f.label :start_date,"End Date", class: "", style:"padding-right:17px;" %>
                 <%= f.text_field :end_date, class: 'end-date datepicker  date-time-width',placeholder:"DD/MM/YYYY", :required => true %>
               </div>
-              <div class="col-xs-12 col-sm-3 col-md-3 col-sm-offset-3  col-md-offset-0 form-field">
+              <div class="col-xs-12 col-sm-3 col-md-3 form-field">
                 <%= f.label :"End Time", class: ' caps', style:"padding-right:17px;", :required => true %>
                 <%= f.text_field :end_time,value: "12:00pm", class: 'dateselect-time  date-time-width', :required => true %>
               </div>
@@ -70,10 +70,14 @@
             <div class="col-xs-12 col-sm-6 col-md-6 col-sm-offset-3  col-md-offset-3 form-field">
               <%= f.label :event_repeat , class:' caps' %>
               <div class="">
+                <div class="in-block">
                 <%= f.radio_button(:event_repeat, "Weekly") %>
                 <%= label_tag(:event_repeat, "Weekly", class:'radio-spacing') %>
+              </div>
+              <div class="in-block">
                 <%= f.radio_button(:event_repeat, "Never",:checked => true) %>
                 <%= label_tag(:event_repeat, "None", class:'radio-spacing') %>
+              </div>
               </div>
             </div>
 
@@ -81,16 +85,16 @@
             <div class="col-xs-12 col-sm-6 col-md-6 col-sm-offset-3  col-md-offset-3 form-field">
               <%= f.label :location , class:'' %>
               <div class="">
-                <div class="" style="display:inline-block">
+                <div class="in-block">
                 <%= f.radio_button(:event_location, "Ladner") %>
                 <%= label_tag(:event_location, "Ladner", class:'radio-spacing') %>
               </div>
-              <div class=""  style="display:inline-block">
+              <div class="in-block" >
 
                 <%= f.radio_button(:event_location, "North Delta",:checked => true) %>
                 <%= label_tag(:event_location, "North Delta", class:'radio-spacing') %>
               </div>
-              <div class=""  style="display:inline-block">
+              <div class="in-block" >
                 <%= f.radio_button(:event_location, "Tsawwassen") %>
                 <%= label_tag(:event_location, "Tsawwassen") %>
               </div>
@@ -101,10 +105,14 @@
             <div class="col-xs-12 col-sm-6 col-md-6 col-sm-offset-3  col-md-offset-3 form-field">
               <%= f.label :registration, "Registration", class:'' %>
               <div class="">
+                <div class="in-block">
                 <%= f.radio_button(:registration, "Drop In") %>
                 <%= label_tag(:registration, "Drop In", class:'radio-spacing') %>
+              </div>
+                <div class="in-block">
                 <%= f.radio_button(:registration, "Registered Required",:checked => true) %>
-                <%= label_tag(:registration, "Registration Required", class:'radio-spacing') %>
+                <%= label_tag(:registration, "Registration Required", class:'radio-spacing',style:"display:inline") %>
+              </div>
               </div>
             </div>
 

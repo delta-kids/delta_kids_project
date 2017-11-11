@@ -3,6 +3,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
 .fit-img {
 	height:100%;
 	width:100%;
@@ -13,10 +14,15 @@
 	background-color: #d1f0f4;
 	padding-top: 15px;
 }
+.calendar-title {
+		font-size: 36px;
+		font-family: 'Bree Serif', serif;
+}
 
 #calendar-section1{
 
 }
+
 
 .event-image-container {
 	height:325px;
@@ -414,11 +420,6 @@
 .calendar-heading a {
 	font-family: 'Open Sans', sans-serif;
 	font-size:20px !important;
-}
-
-.calendar-title {
-  font-family: 'Bree Serif', serif;
-	font-size:35px !important;
 }
 
 .popup-pic {
