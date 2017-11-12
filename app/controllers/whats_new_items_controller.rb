@@ -1,4 +1,5 @@
 class WhatsNewItemsController < ApplicationController
+  before_action :authenticate_user!
   before_action :find_whats_new, only: [:show, :edit, :update, :destroy]
 
 

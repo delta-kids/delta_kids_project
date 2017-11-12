@@ -1,56 +1,59 @@
 <div class="wholePage">
   <!-- First section div -->
-  <div class="container-fluid">
     <div class="row">
       <div class="col-xs-12 col-sm-12 col-md-12 content">
 
-        <%= render 'partials/dash_sidebar' %>
+      <%= render 'partials/dash_sidebar' %>
 
-        <div class="col-xs-12 col-sm-12 col-md-9 dash-main-content" style="background-color:white;">
-          <% if user_signed_in? %>
-          <div class="container-fluid center-flex-content">
-            <div class="create-new-container">
-              <br>
-              <p class="dashboard-headers">Create Program</p>
+      <div class="col-xs-12 col-sm-8 col-md-9 dash-main-content">
+        <% if user_signed_in? %>
+        <% if is_admin? %>
+        <div class="">
+            <br>
+              <p class="dashboard-headers mobile-font-24">Create Program</p>
 
               <%= form_for @program do |f| %>
-              <div class="form-group">
-                <%= f.label :description, class:'label-baseline' %>
-                <%= f.text_area :description, class: 'form form-control form-padding event-form-width caps', :required => true %>
+              <div class="col-xs-12 col-sm-6 col-md-6 col-sm-offset-3  col-md-offset-3 form-field">
+                <%= f.label :description, class:'' %>
+                <%= f.text_area :description, class: 'form-control  ', :required => true %>
               </div>
-              <div class="form-group center-flex-content">
-                <%= f.label :registration, class:'label-baseline caps' %>
-                <div class="margin-right">
+              <div class="col-xs-12 col-sm-6 col-md-6 col-sm-offset-3  col-md-offset-3 form-field">
+                <%= f.label :registration, "Registration", class:'' %>
+                <div class="">
+                  <div class="in-block">
                   <%= f.radio_button(:registration, "Drop In") %>
                   <%= label_tag(:registration, "Drop In", class:'radio-spacing') %>
-                  <%= f.radio_button(:registration, "Registered",:checked => true) %>
-                  <%= label_tag(:registration, "Registered", class:'radio-spacing') %>
+                </div>
+                  <div class="in-block">
+                  <%= f.radio_button(:registration, "Register Required",:checked => true) %>
+                  <%= label_tag(:registration, "Registration Required", class:'radio-spacing',style:"display:inline") %>
+                </div>
                 </div>
               </div>
-              <div class="form-group center-flex-content">
-                <%= f.label :cost, class:'label-baseline caps' %>
-                <div class="margin-right">
-                  <%= f.radio_button(:cost, "Free") %>
-                  <%= label_tag(:cost, "Free", class:'radio-spacing') %>
-                  <%= f.radio_button(:cost, "Paid",:checked => true) %>
+              <div class="col-xs-12 col-sm-6 col-md-6 col-sm-offset-3  col-md-offset-3 form-field">
+                <%= f.label :cost, class:' caps' %>
+                <div class="">
+                  <%= f.radio_button(:cost, "Paid") %>
                   <%= label_tag(:cost, "Paid", class:'radio-spacing') %>
+                  <%= f.radio_button(:cost, "Free",:checked => true) %>
+                  <%= label_tag(:cost, "Free", class:'radio-spacing') %>
                 </div>
               </div>
-              <div class="form-group center-flex-content">
-                <%= f.label :program_type, class:'label-baseline caps' %>
-                <div class="form-group event-form-width dropbox-container">
+              <div class="col-xs-12 col-sm-6 col-md-6 col-sm-offset-3  col-md-offset-3 form-field">
+                <%= f.label :program_type, class:' caps', style:"margin-left:30%" %>
+                <div class="form-group  dropbox-container">
                   <%= f.collection_select :program_type_id,
                   ProgramType.all,
                   :id,
                   :name,
                   {},
-                  { multiple: false, class: 'form-control form-padding'}
+                  { multiple: true, class: 'chosen-select form-control ' }
                   %>
                 </div>
               </div>
-              <div class="form-group center-flex-content">
-                <%= f.label :Organization, class:'label-baseline caps' %>
-                <div class="form-group event-form-width dropbox-container" style="width:375px !important" >
+              <div class="col-xs-12 col-sm-6 col-md-6 col-sm-offset-3  col-md-offset-3 form-field">
+                <%= f.label :Organization, class:'caps' %>
+                <div class="form-group  dropbox-container" >
                   <%= f.collection_select :organization_id,
                   Organization.all,
                   :id,
@@ -59,14 +62,21 @@
                   { multiple: false, class: 'chosen-select form-control '}
                   %>
                 </div>
-
+                </div>
+              <br>
+              <div class="col-xs-12 col-sm-6 col-md-6 col-sm-offset-3  col-md-offset-3 form-field" style="padding-bottom:10%">
+                <%= f.submit class: 'btn btn-primary form-control ' %>
               </div>
               <br>
-              <div class="form-group">
-                <%= f.submit class: 'btn btn-primary form-control' %>
-              </div>
               <% end %>
-              <% end %>
+              <% else %>
+              <%= render 'partials/login_msg' %>
+          </div>
+          <% end %>
+              <% else %>
+              <%= render 'partials/login_msg' %>
+          </div>
+          <% end %>
 
             </div>
           </div>

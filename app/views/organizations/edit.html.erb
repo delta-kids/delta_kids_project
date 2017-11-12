@@ -1,102 +1,101 @@
 <div class="wholePage">
   <!-- First section div -->
-  <div class="container-fluid">
     <div class="row">
-      <div class="col-md-12 content">
+      <div class="col-xs-12 col-sm-12 col-md-12 content">
 
-        <%= render 'partials/dash_sidebar' %>
+      <%= render 'partials/dash_sidebar' %>
 
-        <div class="col-md-9 dash-main-content" style="background-color:white;">
-          <% if user_signed_in? %>
-          <div class="container-fluid center-flex-content">
-            <div class="create-new-container">
-              <br>
-              <p class="dashboard-headers">Edit Organization</p>
+      <div class="col-xs-12 col-sm-8 col-md-9 dash-main-content">
+        <% if user_signed_in? %>
+        <% if is_admin? %>
+        <div class="">
+            <br>
+              <p class="dashboard-headers mobile-font-24">Edit Organization</p>
 
               <%= form_for @organization, :html => {:multipart => true} do |f| %>
-              <div class="form-group center-flex-content">
-                <%= f.label :name, class: "label-baseline" %>
-                <%= f.text_field :name, class: "form form-control form-padding event-form-width", :required => true %>
+              <div class="col-xs-12 col-sm-6 col-md-6 col-sm-offset-3  col-md-offset-3 form-field">
+                <%= f.label :name, class: "" %>
+                <%= f.text_field :name, class: "form-control  ", :required => true %>
               </div>
-              <div class="form-group center-flex-content">
-                <%= f.label :address, class: "label-baseline" %>
-                <%= f.text_field :address, class: "form form-control form-padding event-form-width", :required => true %>
+              <div class="col-xs-12 col-sm-6 col-md-6 col-sm-offset-3  col-md-offset-3 form-field">
+                <%= f.label :address, class: "" %>
+                <%= f.text_field :address, class: "form-control  ", :required => true %>
               </div>
-              <div class="form-group center-flex-content">
-                <%= f.label :website, class: "label-baseline" %>
-                <%= f.text_field :website, class: "form form-control form-padding event-form-width", :required => true %>
+              <div class="col-xs-12 col-sm-6 col-md-6 col-sm-offset-3  col-md-offset-3 form-field">
+                <%= f.label :website, class: "" %>
+                <%= f.text_field :website, class: "form-control  ", :required => true %>
               </div>
-              <div class="form-group center-flex-content">
-                <%= f.label :phone_number, class: "label-baseline caps" %>
-                <%= f.telephone_field :phone, class: "form form-control form-padding event-form-width", :required => true %>
+              <div class="col-xs-12 col-sm-6 col-md-6 col-sm-offset-3  col-md-offset-3 form-field">
+                <%= f.label :phone_number, class: " caps" %>
+                <%= f.telephone_field :phone, class: "form-control  ", :required => true %>
               </div>
-              <div class="form-group center-flex-content">
-                <%= f.label :Age_group, class:'label-baseline caps' %>
-                <div class="form-group event-form-width dropbox-container">
+              <div class="col-xs-12 col-sm-6 col-md-6 col-sm-offset-3  col-md-offset-3 form-field">
+                <%= f.label :Age_group, class:' caps', style:"margin-left:42%" %>
+                <div class="form-group  dropbox-container">
                   <%= f.collection_select :age_group_ids,
                   AgeGroup.all,
                   :id,
                   :age,
                   {},
-                  { multiple: true, class: 'chosen-select form-control form-padding'}
+                  { multiple: true, class: 'chosen-select form-control '}
                   %>
                 </div>
               </div>
-              <div class="form-group center-flex-content">
-                <%= f.label :program_type, class:'label-baseline caps' %>
-                <div class="form-group event-form-width dropbox-container">
+              <div class="col-xs-12 col-sm-6 col-md-6 col-sm-offset-3  col-md-offset-3 form-field">
+                <%= f.label :program_type, class:' caps', style:"margin-left:40%" %>
+                <div class="form-group  dropbox-container">
                   <%= f.collection_select :program_type_ids,
                   ProgramType.all,
                   :id,
                   :name,
                   {},
-                  { multiple: true, class: 'chosen-select form-control form-padding' }
+                  { multiple: true, class: 'chosen-select form-control ' }
                   %>
                 </div>
               </div>
 
-              <div class="form-group center-flex-content">
-                <%= f.label :tags, class:'label-baseline caps' %>
-                <div class="form-group event-form-width dropbox-container">
+              <div class="col-xs-12 col-sm-6 col-md-6 col-sm-offset-3  col-md-offset-3 form-field">
+                <%= f.label :tags, class:' caps', style:"margin-left:45%" %>
+                <div class="form-group  dropbox-container">
                   <%= f.collection_select :age_group_ids,
                   Tag.all,
                   :id,
                   :name,
                   {},
-                  { multiple: true, class: 'chosen-select form-control form-padding'}
+                  { multiple: true, class: 'chosen-select form-control '}
                   %>
                 </div>
               </div>
 
-              <div class="form-group">
-                <%= f.label :description, class:'label-baseline' %>
-                <%= f.text_area :description, class: 'form form-control form-padding event-form-width caps', :required => true %>
+              <div class="col-xs-12 col-sm-6 col-md-6 col-sm-offset-3  col-md-offset-3 form-field">
+                <%= f.label :description, class:'' %>
+                <%= f.text_area :description, class: 'form-control  ', :required => true %>
               </div>
-              <div class="form-group center-flex-content">
-                <%= f.label :image, class: "label-baseline" %>
+
+              <div class="col-xs-12 col-sm-6 col-md-6 col-sm-offset-3  col-md-offset-3 form-field">
+                <%= f.label :image, class: "" %>
                 <%= f.file_field :image  %>
               </div>
 
               <br>
-              <div class="form-group">
-                <%= f.submit class: 'btn btn-primary form-control' %>
+              <div class="col-xs-12 col-sm-6 col-md-6 col-sm-offset-3  col-md-offset-3 form-field" style="padding-bottom:10%">
+                <%= f.submit class: 'btn btn-primary form-control ' %>
               </div>
-              <% end %>
-              <% end %>
+              <br>
+
 
             </div>
+
+              <% end %>
+              <% else %>
+              <%= render 'partials/login_msg' %>
           </div>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="container-fluid happy-rainbow">
-      <div class="row">
-        <div class="col-md-12">
-
-          <%= image_tag("rainbow-footer-group.svg", class:"center-block") %>
-
+          <% end %>
+              <% else %>
+              <%= render 'partials/login_msg' %>
+          </div>
+          <% end %>
+          </div>
         </div>
       </div>
     </div>

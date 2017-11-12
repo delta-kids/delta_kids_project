@@ -1,7 +1,6 @@
 class OrganizationsController < ApplicationController
-  before_action :authenticate_user!
-
   # ONLY ADMIN
+  before_action :authenticate_user!
   before_action :find_organization, only: [:show, :edit, :update, :destroy]
 
 

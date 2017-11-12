@@ -1,5 +1,6 @@
 
 class ServicesController < ApplicationController
+  before_action :authenticate_user!
   before_action :find_service, only: [:show, :edit, :update, :destroy]
 
   # ONLY ADMIN
