@@ -1,46 +1,57 @@
 <div class="wholePage">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-md-12 content">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 content">
 
-        <%= render 'partials/dash_sidebar' %>
+      <%= render 'partials/dash_sidebar' %>
 
-        <div class="col-md-9 dash-main-content" style="background-color:white;">
-          <% if user_signed_in? %>
-          <% if is_admin? %>
-          <div class="row">
-            <div class="col-md-12">
-                  <div class="container-fluid">
-                    <br>
+      <div class="col-xs-12 col-sm-8 col-md-9 dash-main-content" style="background-color:white;">
+        <% if user_signed_in? %>
+        <% if is_admin? %>
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="container-fluid">
+              <br>
+              <p class="bree-font">Edit Service</p>
+              <p class="font-20"><strong>Description: </strong><%= @service.description %></p>
+              <p class="font-20"><strong>Organization: </strong><%= @service.organization.name %></p>
+              <p class="font-20"><strong>Category: </strong><%= @service.category.name %></p>
+              <p class="font-20"><strong>Service Type: </strong><%= @service.service_type.name %></p>
 
-                  <p class="bree-font">Edit Service</p>
-                  <p class="font-20"><strong>Description: </strong><%= @service.description %></p>
-                  <p class="font-20"><strong>Organization: </strong><%= @service.organization.name %></p>
-                  <p class="font-20"><strong>Category: </strong><%= @service.category.name %></p>
-                  <p class="font-20"><strong>Service Type: </strong><%= @service.service_type.name %></p>
-
-
-                      <%= link_to 'Delete', service_path(@service),
-                                            method: :delete,
-                                            data: {confirm: 'Are you sure?'},
-                                            class: 'btn btn-danger edit-delete-btn-width', style:'color:white !important;' %>
-
-                      <%= link_to 'Edit', edit_service_path(@service),
-                      class: 'btn btn-success form-padding edit-delete-btn-width'  %>
-
-
+              <div class="">
+                <%= image_tag(@service.image_url.to_s, style:"width:100%;height:100%") %>
               </div>
+              <br>
+              <br>
+
+              <div class="center-flex-content">
+                <%= link_to 'Edit', edit_service_path(@service),
+                class: 'btn btn-success edit-delete-btn-width'  %>
+
+                <%= link_to 'Delete', service_path(@service),
+                method: :delete,
+                data: {confirm: 'Are you sure?'},
+                class: 'btn btn-danger form-padding edit-delete-btn-width', style:'color:white !important;' %>
+              </div>
+
+              <br>
+
             </div>
           </div>
-          <% end %>
-          <% else %>
-          <%= render 'partials/login_msg' %>
+        </div>
+        <% else %>
+        <%= render 'partials/login_msg' %>
+        <% end %>
+        <br>
       </div>
-      <% end %>
     </div>
   </div>
+  </div>
+  <% else %>
+  <%= render 'partials/login_msg' %>
 </div>
 </div>
+</div>
+<% end %>
 
 <!-- Rainbow Footer-->
 
