@@ -1,10 +1,18 @@
 .radio-spacing {
 	margin: 0px 25px 0px 10px;
 }
-
+.chosen-choices{
+	max-width: 100%
+}
+.chosen-container {
+	max-width: 100%;
+}
 .dropbox-container {
 	display: flex;
 	margin-left: auto;
+}
+.in-block {
+	display: inline-block;
 }
 
 .edit-delete-btn-width {

@@ -1,127 +1,146 @@
 <div class="wholePage">
   <!-- First section div -->
-  <div class="container-fluid">
     <div class="row">
-      <div class="col-md-12 content">
+      <div class="col-xs-12 col-sm-12 col-md-12 content">
 
       <%= render 'partials/dash_sidebar' %>
 
-      <div class="col-md-9 dash-main-content" style="background-color:white;">
+      <div class="col-xs-12 col-sm-8 col-md-9 dash-main-content">
         <% if user_signed_in? %>
-        <% if is_admin? %>
-        <div class="container-fluid center-flex-content">
-          <div class="create-new-container">
+        <div class="">
             <br>
-            <h2 class="bree-font" style="margin-top:0;margin-bottom:40px;margin-left:auto;margin-right: auto;">Edit Resource</h2>
+            <p class="dashboard-headers mobile-font-24">Edit Resource</p>
 
             <%= form_for @resource do |f| %>
 
-            <div class="form-group center-flex-content">
-              <%= f.label :name, class: "label-baseline" %>
-              <%= f.text_field :name, class: "form form-control form-padding event-form-width" %>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-sm-offset-3  col-md-offset-3 form-field">
+              <%= f.label :name, class: "" %>
+              <%= f.text_field :name, class: 'form-control  ' %>
             </div>
-            <hr>
-            <div class="form-group center-flex-content">
-              <%= f.label "Feature Resource?", class:'label-baseline caps' %>
-              <div class="margin-right">
+
+            <div class="col-xs-12 col-sm-6 col-md-6 col-sm-offset-3  col-md-offset-3 form-field">
+              <%= f.label "Feature Resource?", class:' caps' %>
+              <div class="">
+                <div class="in-block">
                 <%= f.radio_button(:feature, true) %>
                 <%= label_tag(:feature, "Yes", class:'radio-spacing') %>
-                <%= f.radio_button(:feature, false) %>
+              </div>
+              <div class="in-block">
+                <%= f.radio_button(:feature, false, :checked => true) %>
                 <%= label_tag(:feature, "No", class:'radio-spacing') %>
               </div>
+              </div>
             </div>
-            <!--  FEATURE UNTIL add calender -->
-            <hr>
-            <div class="margin-right">
-              <%= f.label "Resource is about the situation in: ", class:'font-16 center-flex-content', style:'align-self: center;padding-right: 5%;' %>
-            </div>
-            <div class="form-group center-flex-content">
-                <%= f.radio_button(:resource_location, "Delta") %>
+
+
+            <div class="col-xs-12 col-sm-6 col-md-6 col-sm-offset-3  col-md-offset-3 form-field">
+              <hr>
+              <%= f.label "Resource is about the situation in: ", class:'font-16', style:'align-self: center;padding-right: 5%;' %>
+            <div class="">
+              <div class="in-block">
+                <%= f.radio_button(:resource_location, "Delta",:checked => true) %>
                 <%= label_tag(:resource_location, "Delta", class:'radio-spacing') %>
+              </div>
+              <div class="in-block">
                 <%= f.radio_button(:resource_location, "BC") %>
                 <%= label_tag(:resource_location, "BC", class:'radio-spacing') %>
+                </div>
                 <br>
+                <div class="in-block">
                 <%= f.radio_button(:resource_location, "Canada") %>
                 <%= label_tag(:resource_location, "Canada", class:'radio-spacing') %>
+              </div>
+                <div class="in-block">
                 <%= f.radio_button(:resource_location, "N/A") %>
                 <%= label_tag(:resource_location, "N/A", class:'radio-spacing') %>
             </div>
-
-            <div class="margin-right">
-              <%= f.label "Resource Type: ", class:'font-16 center-flex-content', style:'align-self: center;padding-right: 5%;' %>
+            <hr>
             </div>
-            <div class="form-group center-flex-content">
-                <%= f.radio_button(:resource_type, "Research") %>
+            </div>
+
+            <div class="col-xs-12 col-sm-6 col-md-6 col-sm-offset-3  col-md-offset-3 form-field">
+              <%= f.label "Resource Type: ", class:'font-16', style:'align-self: center;padding-right: 5%;' %>
+            <div>
+              <div class="in-block">
+
+                <%= f.radio_button(:resource_type, "Research",:checked => true) %>
                 <%= label_tag(:resource_type, "Research", class:'radio-spacing') %>
+              </div>
+              <div class="in-block">
                 <%= f.radio_button(:resource_type, "Report") %>
                 <%= label_tag(:resource_type, "Report", class:'radio-spacing') %>
+              </div>
                 <br>
+                <div class="in-block">
                 <%= f.radio_button(:resource_type, "Tips & Guidelines") %>
                 <%= label_tag(:resource_type, "Tips & Guidelines", class:'radio-spacing') %>
+              </div>
             </div>
             <hr>
-            <div class="form-group center-flex-content">
-              <%= f.label :Topic, class:'label-baseline' %>
-              <div class="form-group event-form-width dropbox-container">
+          </div>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-sm-offset-3  col-md-offset-3 form-field">
+              <%= f.label :Topic, class:'', style:"margin-left:44%" %>
+              <div class="form-group  dropbox-container">
                 <%= f.collection_select :topic_ids,
                 Topic.all,
                 :id,
                 :topic_name,
                 {},
-                { multiple: true, class: 'chosen-select form-control form-padding'}
+                { multiple: true, class: 'chosen-select form-control'}
                 %>
               </div>
             </div>
 
-            <div class="form-group center-flex-content">
-              <%= f.label :age_group, class:'label-baseline caps' %>
-              <div class="form-group event-form-width dropbox-container">
+            <!-- AGE GROUP -->
+            <div class="col-xs-12 col-sm-6 col-md-6 col-sm-offset-3  col-md-offset-3 form-field" >
+              <%= f.label :age_group, class:'caps', style:"margin-left:40%" %>
+              <div class="form-group  dropbox-container">
                 <%= f.collection_select :age_group_ids,
                 AgeGroup.all,
                 :id,
                 :age,
                 {},
-                { multiple: true, class: 'chosen-select form-control form-padding'}
+                { multiple: true, class: 'chosen-select form-control '}
                 %>
               </div>
             </div>
 
-            <div class="form-group center-flex-content">
-              <%= f.label :Tags, class:'label-baseline caps' %>
-              <div class="form-group event-form-width dropbox-container">
+            <!-- TAGS -->
+            <div class="col-xs-12 col-sm-6 col-md-6 col-sm-offset-3  col-md-offset-3 form-field">
+              <%= f.label :Tags, class:'caps', style:"margin-left:45%" %>
+              <div class="form-group  dropbox-container">
                 <%= f.collection_select :tag_ids,
                 Tag.all,
                 :id,
                 :name,
                 {},
-                { multiple: true, class: 'chosen-select form-control form-padding'}
+                { multiple: true, class: 'chosen-select form-control '}
                 %>
               </div>
             </div>
 
-          <div class="form-group">
-            <%= f.label :description, class:'label-baseline' %>
-            <%= f.text_area :description, class: 'form form-control form-padding event-form-width caps' %>
-          </div>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-sm-offset-3  col-md-offset-3 form-field">
+              <%= f.label :description, class:'' %>
+              <%= f.text_area :description, class: 'form-control  ' %>
+            </div>
 
           <!-- FILE UPLOADER -->
-          <div class="form-group center-flex-content">
-            <%= f.label :resource_file, class: "label-baseline" %>
+          <div class="col-xs-12 col-sm-6 col-md-6 col-sm-offset-3  col-md-offset-3 form-field">
+            <%= f.label :resource_file, class: "" %>
             <%= f.file_field :resource_file %>
           </div>
 
-          <div class="form-group">
-            <%= f.label :"Contact name", class:'label-baseline caps' %>
-            <%= f.text_field :contact_name, class: 'form form-control form-padding event-form-width' %>
+          <div class="col-xs-12 col-sm-6 col-md-6 col-sm-offset-3  col-md-offset-3 form-field">
+            <%= f.label :"Contact name", class:' caps' %>
+            <%= f.text_field :contact_name, class: 'form-control  ' %>
           </div>
-
-          <div class="form-group">
-            <%= f.label :"Contact email", class:'label-baseline caps' %>
-            <%= f.email_field :contact_email, class: 'form form-control form-padding event-form-width' %>
+          <div class="col-xs-12 col-sm-6 col-md-6 col-sm-offset-3  col-md-offset-3 form-field">
+            <%= f.label :"Contact email", class:' caps' %>
+            <%= f.email_field :contact_email, class: 'form-control  ' %>
           </div>
           <br>
-          <div class="form-group">
-            <%= f.submit class: 'btn btn-primary form form-control form-padding event-form-width' %>
+          <div class="col-xs-12 col-sm-6 col-md-6 col-sm-offset-3  col-md-offset-3 form-field" style="padding-bottom:10%">
+            <%= f.submit class: 'btn btn-primary form-control ' %>
           </div>
 
 
@@ -130,12 +149,10 @@
     </div>
     </div>
     <% end %>
-    <% end %>
     <% else %>
     <%= render 'partials/login_msg' %>
     <% end %>
 
-  </div>
   </div>
 </div>
 

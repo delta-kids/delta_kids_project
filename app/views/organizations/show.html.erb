@@ -1,55 +1,61 @@
 <div class="wholePage">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-md-12 content">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 content">
 
-        <%= render 'partials/dash_sidebar' %>
+      <%= render 'partials/dash_sidebar' %>
 
-        <div class="col-md-9 dash-main-content" style="background-color:white;">
-          <% if user_signed_in? %>
-          <% if is_admin? %>
-          <div class="row">
-            <div class="col-md-12">
-                  <div class="container-fluid">
-                    <br>
-
-                  <p class="bree-font">Edit Organization</p>
-                  <p class="font-20"><strong>Name: </strong><%= @organization.name %></p>
-                  <p class="font-20"><strong>Description: </strong><%= @organization.description %></p>
-                  <p class="font-20"><strong>Address: </strong><%= @organization.address %></p>
-                  <p class="font-20"><strong>Phone_number: </strong><%= @organization.phone %></p>
-                  <p class="font-20"><strong>Website: </strong><%= @organization.website %></p>
-                  <p class="font-20"><strong>Image: </strong></p>
-                  <div class="">
-                    <%= image_tag(@organization.image_url.to_s, style:"width:400px;height:300px;") %>
-                  </div>
-                  <br>
-                  <br>
-                  <% @organization.program_types.each do |activityType|  %>
-                  <p class="font-20"><strong>Activity type: </strong><%= activityType.name %></p>
-                  <% end %>
-
-                      <%= link_to 'Delete', organization_path(@organization),
-                                            method: :delete,
-                                            data: {confirm: 'Are you sure?'},
-                                            class: 'btn btn-danger edit-delete-btn-width', style:'color:white !important;' %>
-
-                      <%= link_to 'Edit', edit_organization_path(@organization),
-                      class: 'btn btn-success form-padding edit-delete-btn-width'  %>
-
-
+      <div class="col-xs-12 col-sm-8 col-md-9 dash-main-content" style="background-color:white;">
+        <% if user_signed_in? %>
+        <% if is_admin? %>
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="container-fluid">
+              <br>
+              <h4 class='bree-font'><%= @organization.name %></h4>
+              <br>
+              <p class="font-20"><strong>Description: </strong><%= @organization.description %></p>
+              <p class="font-20"><strong>Address: </strong><%= @organization.address %></p>
+              <p class="font-20"><strong>Phone_number: </strong><%= @organization.phone %></p>
+              <p class="font-20"><strong>Website: </strong><%= @organization.website %></p>
+              <p class="font-20"><strong>Image: </strong></p>
+              <div class="">
+                <%= image_tag(@organization.image_url.to_s, style:"width:100%;height:100%") %>
               </div>
+              <br>
+              <br>
+              <% @organization.program_types.each do |activityType|  %>
+              <p class="font-20"><strong>Activity type: </strong><%= activityType.name %></p>
+              <% end %>
+
+              <div class="center-flex-content">
+                <%= link_to 'Edit', edit_organization_path(@organization),
+                class: 'btn btn-success edit-delete-btn-width'  %>
+
+                <%= link_to 'Delete', organization_path(@organization),
+                method: :delete,
+                data: {confirm: 'Are you sure?'},
+                class: 'btn btn-danger form-padding edit-delete-btn-width', style:'color:white !important;' %>
+              </div>
+
+              <br>
+
             </div>
           </div>
-          <% end %>
-          <% else %>
-          <%= render 'partials/login_msg' %>
+        </div>
+        <% else %>
+        <%= render 'partials/login_msg' %>
+        <% end %>
+        <br>
       </div>
-      <% end %>
     </div>
   </div>
+  </div>
+  <% else %>
+  <%= render 'partials/login_msg' %>
 </div>
 </div>
+</div>
+<% end %>
 
 <!-- Rainbow Footer-->
 

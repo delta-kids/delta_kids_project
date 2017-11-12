@@ -1,17 +1,32 @@
+
 <div class="container-fluid">
   <p class="dashboard-headers">Welcome to the Dashboard</p>
 </div>
+
+<% if user_signed_in? %>
+
 <div class="container-fluid">
   <br>
   <br>
   <p class="font-20">
     Welcome to DeltaKids! We are excited to have you as part of our community.
-</p>
-<br>
-<p class="font-20">
-  Feel free to add to our website using the directory on the left.
-Once you add something, the webmaster will be notified. He/she will then ensure your item is appropriate for our website and double check the spelling/grammar. After that it will be published to the site.
-</p>
-<br>
-<p class="font-20">If you have any questions, please email coordinator@deltakids.ca!</p>
+
+  </p>
+  <br>
+  <p class="font-20">
+    Feel free to add to our website using the directory on the left.
+    Once you add something, the webmaster will be notified. He/she will then ensure your item is appropriate for our website and double check the spelling/grammar. After that it will be published to the site.
+  </p>
+  <br>
+  <p class="font-20">If you have any questions, please email coordinator@deltakids.ca!</p>
 </div>
+
+<% else %>
+<p class="font-20">If you would like to add an event or a resource to our website, you are in the right place. Please Log In or create an account as a New User.</p>
+<br>
+<p class="font-20">Please note: All events and resources are checked and approved by the website administrator. This means there may be a few days delay before you see your item up on our website. If we can’t upload your event or resource, we will let you know.</p>
+
+
+<p class="font-20">Thank you for your patience!</p>
+<% end %>
+

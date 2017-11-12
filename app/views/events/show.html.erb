@@ -1,74 +1,75 @@
 <div class="wholePage">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-xs-12 content">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 content">
 
-        <%= render 'partials/dash_sidebar' %>
+      <%= render 'partials/dash_sidebar' %>
 
-        <div class="col-xs-12 col-md-9 dash-main-content" style="background-color:white;">
-          <% if user_signed_in? %>
-          <div class="row">
-            <div class="col-md-12">
-                  <div class="container-fluid">
-                    <br>
-                  <h4 class='bree-font'><%= @event.title %></h4>
-                  <p class='font-20'><strong>Start Date: </strong><%= @event.start_date %></p>
-                  <p class='font-20'><strong>Start Time: </strong><%= @event.start_time.strftime("%I:%M%p") %></p>
-                  <p class='font-20'><strong>End Date: </strong><%= @event.end_date %></p>
-                  <p class='font-20'><strong>End Time: </strong><%= @event.end_time.strftime("%I:%M%p") %></p>
-                  <p class='font-20'><strong>Featured: </strong>
-                    <% if @event.featured = true %>
-                    Yes
-                    <% else %>
-                    No
-                    <% end %>
-                  </p>
-                  <p class='font-20'><strong>Event Repeat: </strong><%= @event.event_repeat %></p>
-                  <p class='font-20'><strong>Location: </strong><%= @event.event_location %></p>
-                  <p class='font-20'><strong>Address: </strong><%= @event.address %></p>
-                  <p class='font-20'><strong>Age Group: </strong><%= @event.age_groups.map(&:age).join(', ') %></p>
-                  <p class='font-20'><strong>Cost: </strong><%= @event.cost %></p>
-                  <p class='font-20'><strong>Activity Type: </strong><%= @event.event_type.name %></p>
-                  <p class='font-20'><strong>Registration: </strong><%= @event.registration %></p>
-                  <p class='font-20'><strong>Description: </strong><%= @event.description %></p>
-                  <p class='font-20'><strong>Tags: </strong><%= @event.tags.map(&:name).join(', ') %></p>
-                  <p class='font-20'><strong>More Info: </strong><%= @event.more_info %></p>
-                  <p class='font-20'><strong>Contact Name: </strong><%= @event.contact_name %></p>
-                  <p class='font-20'><strong>Contact Email: </strong><%= @event.contact_email %></p>
-                  <p class='font-20'><strong>Image: </strong></p>
-                  <div class="">
-                    <%= image_tag(@event.image_url.to_s, style:"width:400px;height:300px;") %>
-                  </div>
-                  <br>
-                  <br>
-
-                      <%= link_to 'Delete', event_path(@event),
-                                            method: :delete,
-                                            data: {confirm: 'Are you sure?'},
-                                            class: 'btn btn-danger edit-delete-btn-width', style:'color:white !important;' %>
-
-                      <%= link_to 'Edit', edit_event_path(@event),
-                      class: 'btn btn-success form-padding edit-delete-btn-width'  %>
-                      <br>
-                      <br>
-                      <% if user_signed_in? %>
-                      <% if is_admin? %><% else %>
-                      <p class="font-16">
-                        * Please Note: You may only edit your request while it is still pending. When your request for a new Event has been processed any further changes must be done by an Admin.
-                      </p>
-                      <br>
-                      <% end %>
-                      <% end %>
-
+      <div class="col-xs-12 col-sm-8 col-md-9 dash-main-content" style="background-color:white;">
+        <% if user_signed_in? %>
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="container-fluid">
+              <br>
+              <h4 class='bree-font'><%= @event.title %></h4>
+              <br>
+              <p class='font-20'><strong>Start Date: </strong><%= @event.start_date %></p>
+              <p class='font-20'><strong>Start Time: </strong><%= @event.start_time.strftime("%I:%M%p") %></p>
+              <p class='font-20'><strong>End Date: </strong><%= @event.end_date %></p>
+              <p class='font-20'><strong>End Time: </strong><%= @event.end_time.strftime("%I:%M%p") %></p>
+              <p class='font-20'><strong>Featured: </strong>
+                <% if @event.featured = true %>
+                Yes
+                <% else %>
+                No
+                <% end %>
+              </p>
+              <p class='font-20'><strong>Event Repeat: </strong><%= @event.event_repeat %></p>
+              <p class='font-20'><strong>Location: </strong><%= @event.event_location %></p>
+              <p class='font-20'><strong>Address: </strong><%= @event.address %></p>
+              <p class='font-20'><strong>Age Group: </strong><%= @event.age_groups.map(&:age).join(', ') %></p>
+              <p class='font-20'><strong>Cost: </strong><%= @event.cost %></p>
+              <p class='font-20'><strong>Activity Type: </strong><%= @event.event_type.name %></p>
+              <p class='font-20'><strong>Registration: </strong><%= @event.registration %></p>
+              <p class='font-20'><strong>Description: </strong><%= @event.description %></p>
+              <p class='font-20'><strong>Tags: </strong><%= @event.tags.map(&:name).join(', ') %></p>
+              <p class='font-20'><strong>More Info: </strong><%= @event.more_info %></p>
+              <p class='font-20'><strong>Contact Name: </strong><%= @event.contact_name %></p>
+              <p class='font-20'><strong>Contact Email: </strong><%= @event.contact_email %></p>
+              <p class='font-20'><strong>Image: </strong></p>
+              <div class="">
+                <%= image_tag(@event.image_url.to_s, style:"width:100%;height:100%;") %>
               </div>
+              <br>
+              <br>
+
+              <div class="center-flex-content">
+                <%= link_to 'Edit', edit_event_path(@event),
+                class: 'btn btn-success edit-delete-btn-width'  %>
+                
+                <%= link_to 'Delete', event_path(@event),
+                method: :delete,
+                data: {confirm: 'Are you sure?'},
+                class: 'btn btn-danger form-padding edit-delete-btn-width', style:'color:white !important;' %>
+              </div>
+              <br>
+              <br>
+              <% if user_signed_in? %>
+              <% if is_admin? %><% else %>
+              <p class="font-16">
+                * Please Note: You may only edit your request while it is still pending. When your request for a new Event has been processed any further changes must be done by an Admin.
+              </p>
+              <br>
+              <% end %>
+              <% end %>
+
             </div>
           </div>
-          <% else %>
-          <%= render 'partials/login_msg' %>
         </div>
+        <% else %>
+        <%= render 'partials/login_msg' %>
       </div>
-      <% end %>
     </div>
+    <% end %>
   </div>
 </div>
 </div>

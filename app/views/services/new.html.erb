@@ -1,76 +1,76 @@
+
 <div class="wholePage">
   <!-- First section div -->
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-xs-12 col-sm-12 col-md-12 content">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 content">
 
       <%= render 'partials/dash_sidebar' %>
 
-      <div class="col-xs-12 col-sm-12 col-md-9 dash-main-content" style="background-color:white;">
+      <div class="col-xs-12 col-sm-8 col-md-9 dash-main-content">
         <% if user_signed_in? %>
-        <div class="container-fluid center-flex-content">
-          <div class="create-new-container">
-            <br>
-            <p class="dashboard-headers">Create Service</p>
+        <% if is_admin? %>
+        <div class="">
+          <br>
+          <p class="dashboard-headers mobile-font-24">Create Service</p>
 
-            <%= form_for @service do |f| %>
-            <div class="form-group center-flex-content">
-              <%= f.label :description, class:'label-baseline' %>
-              <%= f.text_area :description, class: 'form form-control  event-form-width caps', :required => true %>
-            </div>
-            <div class="form-group center-flex-content">
-              <%= f.label :Organization, class:'label-baseline caps' %>
-              <div class="form-group event-form-width dropbox-container" style="width:375px !important" >
-                <%= f.collection_select :organization_id,
-                Organization.all,
-                :id,
-                :name,
-                {},
-                { multiple: false, class: 'chosen-select form-control '}
-                %>
-              </div>
-            </div>
-            <div class="form-group center-flex-content">
-              <%= f.label :service_type, class:'label-baseline caps' %>
-              <div class="form-group event-form-width dropbox-container" >
-                <%= f.collection_select :service_type_id,
-                ServiceType.all,
-                :id,
-                :name,
-                {},
-                { multiple: false, class: 'form-control '}
-                %>
-              </div>
-            </div>
-            <div class="form-group center-flex-content">
-              <%= f.label :category, class:'label-baseline caps' %>
-              <div class="form-group event-form-width dropbox-container" >
-                <%= f.collection_select :category_id,
-                Category.all,
-                :id,
-                :name,
-                {},
-                { multiple: false, class: 'form-control '}
-                %>
-              </div>
-            </div>
-                <br>
-                <div class="form-group">
-                  <%= f.submit class: 'btn btn-primary form-control' %>
-                </div>
-                <% end %>
-                <% else %>
-                <%= render 'partials/login_msg' %>
-              </div>
-                <% end %>
+          <%= form_for @service do |f| %>
+          <div class="col-xs-12 col-sm-6 col-md-6 col-sm-offset-3  col-md-offset-3 form-field">
+            <%= f.label :description, class:'' %>
+            <%= f.text_area :description, class: 'form-control   caps', :required => true %>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-6 col-sm-offset-3  col-md-offset-3 form-field">
+            <%= f.label :Organization, class:' caps' %>
+            <div class="form-group  dropbox-container" >
+              <%= f.collection_select :organization_id,
+              Organization.all,
+              :id,
+              :name,
+              {},
+              { multiple: false, class: 'chosen-select form-control '}
+              %>
 
-              </div>
             </div>
           </div>
+          <div class="col-xs-12 col-sm-6 col-md-6 col-sm-offset-3  col-md-offset-3 form-field">
+            <%= f.label :service_type, class:' caps' %>
+            <div class="form-group  dropbox-container" >
+              <%= f.collection_select :service_type_id,
+              ServiceType.all,
+              :id,
+              :name,
+              {},
+              { multiple: false, class: 'form-control '}
+              %>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-6 col-sm-offset-3  col-md-offset-3 form-field">
+            <%= f.label :category, class:' caps' %>
+            <div class="form-group  dropbox-container" >
+              <%= f.collection_select :category_id,
+              Category.all,
+              :id,
+              :name,
+              {},
+              { multiple: false, class: 'form-control '}
+              %>
+            </div>
+          </div>
+          <br>
+          <div class="col-xs-12 col-sm-6 col-md-6 col-sm-offset-3  col-md-offset-3 form-field" style="padding-bottom:10%">
+            <%= f.submit class: 'btn btn-primary form-control ' %>
+          </div>
+          <br>
+          <% end %>
+          <% else %>
+          <%= render 'partials/login_msg' %>
         </div>
-        </div>
-        </div>
+        <% end %>
+        <% else %>
+        <%= render 'partials/login_msg' %>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+</div>
 
-        <!-- Rainbow Footer-->
-
-        <%= render 'partials/footer' %>

@@ -1,4 +1,5 @@
 class ProgramsController < ApplicationController
+  before_action :authenticate_user!
   before_action :find_program, only: [:show, :edit, :update, :destroy]
 
   # ONLY ADMIN

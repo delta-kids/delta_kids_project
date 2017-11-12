@@ -6,7 +6,13 @@
         <% if user_signed_in? %>
         <% if is_admin? %>
         <div class="container-fluid">
+          <div class="">
+
+          <%= link_to 'Add New Event', new_event_path,
+          class: 'btn btn-primary edit-delete-btn-width pull-right add-btn', style:'color:white !important;' %>
+
           <h1 class="bree-font">Events</h1>
+        </div>
           <br>
           <% @events.each do |event| %>
           <p class="font-16"><%= link_to event.title, event_path(event) %></p>
