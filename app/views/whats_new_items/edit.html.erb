@@ -1,72 +1,71 @@
 <div class="wholePage">
   <!-- First section div -->
-  <div class="container-fluid">
     <div class="row">
       <div class="col-xs-12 content">
 
       <%= render 'partials/dash_sidebar' %>
 
-      <div class="col-xs-9 dash-main-content" style="background-color:white;">
+      <div class="col-xs-12 col-sm-8 col-md-9 dash-main-content" style="background-color:white;">
         <% if user_signed_in? %>
         <% if is_admin? %>
-        <div class="container-fluid center-flex-content">
-          <div class="create-new-container">
+        <div class="">
             <br>
-            <p class="dashboard-headers">Edit What's New Item</p>
+            <p class="dashboard-headers mobile-font-24">Edit What's New Item</p>
 
             <%= form_for @whats_new_item do |f| %>
 
-            <div class="form-group center-flex-content">
-              <%= f.label :title, class: "label-baseline" %>
-              <%= f.text_field :title, class: 'form form-control event-form-width', :required => true %>
+            <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2  col-md-offset-3 form-field">
+              <%= f.label :title, class: "" %>
+              <%= f.text_field :title, class: 'form-control', :required => true %>
             </div>
 
-            <div class="form-group">
-              <%= f.label :description, class:'label-baseline' %>
-              <%= f.text_area :description, class: 'form form-control  event-form-width', :required => true %>
+            <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2  col-md-offset-3 form-field">
+              <%= f.label :description, class:'' %>
+              <%= f.text_area :description, class: 'form-control ', :required => true %>
             </div>
 
-            <div class="form-group">
-              <%= f.label :address, class:'label-baseline' %>
-              <%= f.text_field :address, class: 'form form-control  event-form-width', :required => true %>
+            <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2  col-md-offset-3 form-field">
+              <%= f.label :address, class:'' %>
+              <%= f.text_field :address, class: 'form-control ', :required => true %>
             </div>
 
-            <div class="form-group">
-              <%= f.label :phone, class:'label-baseline' %>
-              <%= f.text_field :phone, class: 'form form-control  event-form-width', :required => true %>
+            <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2  col-md-offset-3 form-field">
+              <%= f.label :phone, class:'' %>
+              <%= f.text_field :phone, class: 'form-control ', :required => true %>
             </div>
 
-            <div class="form-group">
-              <%= f.label :email, class:'label-baseline' %>
-              <%= f.text_field :email, class: 'form form-control  event-form-width', :required => true %>
+            <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2  col-md-offset-3 form-field">
+              <%= f.label :email, class:'' %>
+              <%= f.text_field :email, class: 'form-control ', :required => true %>
             </div>
 
-            <div class="form-group">
-              <%= f.label :website, class:'label-baseline' %>
-              <%= f.text_field :website_url, class: 'form form-control  event-form-width', :required => true %>
+            <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2  col-md-offset-3 form-field">
+              <%= f.label :website, class:'' %>
+              <%= f.text_field :website_url, class: 'form-control ', :required => true %>
             </div>
 
             <!-- IMAGE UPLOADER -->
-            <div class="form-group center-flex-content">
-              <%= f.label :image, class: "label-baseline" %>
+            <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2  col-md-offset-3 form-field">
+              <%= f.label :image, class: "" %>
               <%= f.file_field :image  %>
             </div>
 
                 <br>
-                <div class="form-group">
-                  <%= f.submit "Create Item", class: 'btn btn-primary form-control' %>
+                <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2  col-md-offset-3 form-field" style="padding-bottom:10%;">
+                  <%= f.submit class: 'btn btn-primary form-control  ' %>
+                </div>
                 </div>
                 <% end %>
                 <% else %>
                 <%= render 'partials/login_msg' %>
-              </div>
                 <% end %>
+                <% else %>
+                <%= render 'partials/login_msg' %>
                 <% end %>
 
               </div>
             </div>
           </div>
-        </div>
         </div>
 
         <!-- Rainbow Footer-->
