@@ -5,8 +5,8 @@
 
       <%= render 'partials/dash_sidebar' %>
 
+      <% if user_signed_in? %>
       <div class="col-xs-12 col-sm-8 col-md-9 dash-main-content">
-        <% if user_signed_in? %>
         <div class="">
           <br>
           <p class="dashboard-headers mobile-font-24">Create New Event</p>
@@ -202,9 +202,9 @@
         </div>
 
         <% end %>
+      </div>
         <% else %>
         <%= render 'partials/login_msg' %>
-      </div>
       <% end %>
     </div>
   </div>
