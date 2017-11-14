@@ -10,7 +10,7 @@
           <div class="container-fluid">
             <br>
 
-            <p class="bree-font">Edit Program</p>
+            <p class="bree-font mobile-font-24">Edit Program</p>
             <p class="font-20"><strong>Description: </strong><%= @program.description %></p>
             <p class="font-20"><strong>Registration: </strong><%= @program.registration %></p>
             <p class="font-20"><strong>Cost: </strong><%= @program.cost %></p>
@@ -18,7 +18,6 @@
             <div class="">
               <%= image_tag(@program.image_url.to_s, style:"width:100%;height:100%;") %>
             </div>
-            <br>
             <br>
             <% if is_admin? %>
             <div class="center-flex-content">
@@ -31,11 +30,8 @@
               data: {confirm: 'Are you sure?'},
               class: 'btn btn-danger edit-delete-btn-width', style:'color:white !important;' %>
             </div>
+            <br>
             <% end %>
-            <br>
-            <br>
-
-
           </div>
         </div>
         <% else %>
