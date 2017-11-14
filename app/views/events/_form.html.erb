@@ -1,195 +1,212 @@
 <div class="wholePage">
   <!-- First section div -->
-    <div class="row">
-      <div class="col-xs-12 col-sm-12 col-md-12 content">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 content">
 
       <%= render 'partials/dash_sidebar' %>
 
       <div class="col-xs-12 col-sm-8 col-md-9 dash-main-content">
         <% if user_signed_in? %>
         <div class="">
-            <br>
-            <p class="dashboard-headers mobile-font-24">Create New Event</p>
+          <br>
+          <p class="dashboard-headers mobile-font-24">Create New Event</p>
 
-            <%= form_for @event do |f|  %>
+          <%= form_for @event do |f|  %>
 
-            <div class="col-xs-12 col-sm-6 col-md-6 col-sm-offset-3  col-md-offset-3 form-field">
-              <%= f.label :title, class: "" %>
-              <%= f.text_field :title, class: 'form-control  ', :required => true %>
+          <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2  col-md-offset-3 form-field">
+            <%= f.label :title, class: "" %>
+            <%= f.text_field :title, class: 'form-control  ', :required => true %>
+          </div>
+
+          <div class="col-xs-6 col-sm-12">
+            <div class="hidden-xs col-sm-3 col-md-3">
+              <!-- SPACER -->
             </div>
-
-            <div class="col-xs-12 col-sm-6 col-md-6 col-sm-offset-3  col-md-offset-3 form-field">
+            <div class="col-xs-12 col-sm-3 col-md-3 form-field">
               <label for='start_date'>Start Date</label>
-              <%= f.text_field :start_date, class: 'start-date datepicker date-time-width',placeholder:"DD/MM/YYYY", :required => true %>
+              <%= f.text_field :start_date, class: 'start-date datepicker date-time-width dashboard-btns',placeholder:"DD/MM/YYYY", :required => true %>
             </div>
-            <div class="col-xs-12 col-sm-6 col-md-6 col-sm-offset-3  col-md-offset-3 form-field">
-              <%= f.label :"Start Time", class: ' caps', style:'margin:auto;' %>
-              <%= f.text_field :start_time,value: "12:00pm",class: 'dateselect-time date-time-width ui-timepicker-input', :required => true %>
+            <div class="col-xs-12 col-sm-3 col-md-3 form-field">
+              <%= f.label :"Start Time", class: ' caps' %>
+              <%= f.text_field :start_time,value: "12:00pm",class: 'dateselect-time date-time-width ui-timepicker-input dashboard-btns', :required => true %>
             </div>
-
-            <div>
-
-              <div class="col-xs-12 col-sm-6 col-md-6 col-sm-offset-3  col-md-offset-3 form-field">
-                <label for='end_date'>End Date</label>
-                <%= f.text_field :end_date, class: 'end-date datepicker  date-time-width',placeholder:"DD/MM/YYYY", :required => true %>
-              </div>
-              <div class="col-xs-12 col-sm-6 col-md-6 col-sm-offset-3  col-md-offset-3 form-field">
-                <%= f.label :"End Time", class: ' caps', style:'margin:auto;', :required => true %>
-                <%= f.text_field :end_time,value: "12:00pm", class: 'dateselect-time  date-time-width', :required => true %>
-              </div>
+            <div class="hidden-xs col-sm-3 col-md-3">
+              <!-- SPACER -->
             </div>
+          </div>
 
-            <% if is_admin? %>
-            <!-- EVENT FEATURED? -->
-            <div class="col-xs-12 col-sm-6 col-md-6 col-sm-offset-3  col-md-offset-3 form-field">
-              <%= f.label "Feature Event?", class:' caps' %>
-              <div class="">
-                <%= f.radio_button(:featured, true) %>
-                <%= label_tag(:featured, "Yes", class:'radio-spacing') %>
-                <%= f.radio_button(:featured, false,:checked => true) %>
-                <%= label_tag(:featured, "No", class:'radio-spacing') %>
-              </div>
+
+          <div class="col-xs-6 col-sm-12">
+            <div class="hidden-xs col-sm-3 col-md-3">
+              <!-- SPACER -->
             </div>
-            <% end %>
-
-            <!-- EVENT REPEAT -->
-            <div class="col-xs-12 col-sm-6 col-md-6 col-sm-offset-3  col-md-offset-3 form-field">
-              <%= f.label :event_repeat , class:' caps' %>
-              <div class="">
-                <%= f.radio_button(:event_repeat, "Weekly") %>
-                <%= label_tag(:event_repeat, "Weekly", class:'radio-spacing') %>
-                <%= f.radio_button(:event_repeat, "Never",:checked => true) %>
-                <%= label_tag(:event_repeat, "None", class:'radio-spacing') %>
-              </div>
+            <div class="col-xs-12 col-sm-3 col-md-3 form-field">
+              <label for='end_date'>End Date</label>
+              <%= f.text_field :end_date, class: 'end-date datepicker  date-time-width dashboard-btns',placeholder:"DD/MM/YYYY", :required => true %>
             </div>
+            <div class="col-xs-12 col-sm-3 col-md-3 form-field">
+              <%= f.label :"End Time", class: ' caps', :required => true %>
+              <%= f.text_field :end_time,value: "12:00pm", class: 'dateselect-time  date-time-width dashboard-btns', :required => true %>
+            </div>
+            <div class="hidden-xs col-sm-3 col-md-3">
+              <!-- SPACER -->
+            </div>
+          </div>
 
-            <!-- EVENT LOCATION -->
-            <div class="col-xs-12 col-sm-6 col-md-6 col-sm-offset-3  col-md-offset-3 form-field">
-              <%= f.label :location , class:'' %>
-              <div class="">
-                <div class="" style="display:inline-block">
+          <% if is_admin? %>
+          <!-- EVENT FEATURED? -->
+          <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2  col-md-offset-3 form-field">
+            <%= f.label "Feature Event?", class:' caps' %>
+            <div class="">
+              <%= f.radio_button(:featured, true) %>
+              <%= label_tag(:featured, "Yes", class:'radio-spacing') %>
+              <%= f.radio_button(:featured, false,:checked => true) %>
+              <%= label_tag(:featured, "No", class:'radio-spacing') %>
+            </div>
+          </div>
+          <% end %>
+
+          <!-- EVENT REPEAT -->
+          <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2  col-md-offset-3 form-field">
+            <%= f.label :event_repeat , class:' caps' %>
+            <div class="">
+              <%= f.radio_button(:event_repeat, "Weekly") %>
+              <%= label_tag(:event_repeat, "Weekly", class:'radio-spacing') %>
+              <%= f.radio_button(:event_repeat, "Never",:checked => true) %>
+              <%= label_tag(:event_repeat, "None", class:'radio-spacing') %>
+            </div>
+          </div>
+
+          <!-- EVENT LOCATION -->
+          <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2  col-md-offset-3 form-field">
+            <%= f.label :location , class:'' %>
+            <div class="">
+              <div class="in-block">
                 <%= f.radio_button(:event_location, "Ladner") %>
                 <%= label_tag(:event_location, "Ladner", class:'radio-spacing') %>
               </div>
-              <div class=""  style="display:inline-block">
-
+              <div class="in-block" >
                 <%= f.radio_button(:event_location, "North Delta",:checked => true) %>
                 <%= label_tag(:event_location, "North Delta", class:'radio-spacing') %>
               </div>
-              <div class=""  style="display:inline-block">
+              <div class="in-block" >
                 <%= f.radio_button(:event_location, "Tsawwassen") %>
-                <%= label_tag(:event_location, "Tsawwassen") %>
-              </div>
-              </div>
-            </div>
-
-            <!-- ADDRESS -->
-            <div class="col-xs-12 col-sm-6 col-md-6 col-sm-offset-3  col-md-offset-3 form-field">
-              <%= f.label :address, class:'' %>
-              <%= f.text_field :address, class: 'form-control  ', :required => true %>
-            </div>
-
-            <!-- AGE GROUP -->
-            <div class="col-xs-12 col-sm-6 col-md-6 col-sm-offset-3  col-md-offset-3 form-field">
-              <%= f.label :age_group, class:' caps' %>
-              <div class="form-group  dropbox-container">
-                <%= f.collection_select :age_group_ids,
-                AgeGroup.all,
-                :id,
-                :age,
-                {},
-                { multiple: true, class: 'chosen-select form-control '}
-                %>
+                <%= label_tag(:event_location, "Tsawwassen", class:'radio-spacing') %>
               </div>
             </div>
+          </div>
 
-            <!-- COST -->
-            <div class="col-xs-12 col-sm-6 col-md-6 col-sm-offset-3  col-md-offset-3 form-field">
-              <%= f.label :cost, class:' caps' %>
-              <div class="">
-                <%= f.radio_button(:cost, "Paid") %>
-                <%= label_tag(:cost, "Paid", class:'radio-spacing') %>
-                <%= f.radio_button(:cost, "Free",:checked => true) %>
-                <%= label_tag(:cost, "Free", class:'radio-spacing') %>
-              </div>
-            </div>
+          <!-- ADDRESS -->
+          <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2  col-md-offset-3 form-field">
+            <%= f.label :address, class:'' %>
+            <%= f.text_field :address, class: 'form-control  ', :required => true %>
+          </div>
 
-            <!-- ACTIVITY TYPE -->
-            <div class="col-xs-12 col-sm-6 col-md-6 col-sm-offset-3  col-md-offset-3 form-field">
-              <%= f.label :activity_type, class:' caps' %>
-              <div class="form-group  dropbox-container">
-                <%= f.collection_select :event_type_id,
-                EventType.all,
-                :id,
-                :name,
-                {},
-                { multiple: false, class: 'form-control '}
-                %>
-              </div>
+          <!-- AGE GROUP -->
+          <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2  col-md-offset-3 form-field">
+            <%= f.label :age_group, class:' caps' %>
+            <div class="form-group  dropbox-container">
+              <%= f.collection_select :age_group_ids,
+              AgeGroup.all,
+              :id,
+              :age,
+              {},
+              { multiple: true, class: 'chosen-select form-control '}
+              %>
             </div>
+          </div>
 
-            <!-- TAGS -->
-            <div class="col-xs-12 col-sm-6 col-md-6 col-sm-offset-3  col-md-offset-3 form-field">
-              <%= f.label :Tags, class:' caps' %>
-              <div class="form-group  dropbox-container">
-                <%= f.collection_select :tag_ids,
-                Tag.all,
-                :id,
-                :name,
-                {},
-                { multiple: true, class: 'chosen-select form-control '}
-                %>
-              </div>
+          <!-- COST -->
+          <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2  col-md-offset-3 form-field">
+            <%= f.label :cost, class:' caps' %>
+            <div class="">
+              <%= f.radio_button(:cost, "Paid") %>
+              <%= label_tag(:cost, "Paid", class:'radio-spacing') %>
+              <%= f.radio_button(:cost, "Free",:checked => true) %>
+              <%= label_tag(:cost, "Free", class:'radio-spacing') %>
             </div>
-            <!-- REGISTRATION -->
-            <div class="col-xs-12 col-sm-6 col-md-6 col-sm-offset-3  col-md-offset-3 form-field">
-              <%= f.label :registration, "Registration", class:'' %>
-              <div class="">
-                <%= f.radio_button(:registration, "Drop In") %>
-                <%= label_tag(:registration, "Drop In", class:'radio-spacing') %>
-                <%= f.radio_button(:registration, "Registered Required",:checked => true) %>
-                <%= label_tag(:registration, "Registration Required", class:'radio-spacing') %>
-              </div>
-            </div>
-            <!-- EVENT DESCRIPTION -->
-            <div class="col-xs-12 col-sm-6 col-md-6 col-sm-offset-3  col-md-offset-3 form-field">
-              <%= f.label :description, class:'' %>
-              <%= f.text_area :description, class: 'form-control  ', :required => true %>
-            </div>
+          </div>
 
-            <!-- IMAGE UPLOADER -->
-            <div class="col-xs-12 col-sm-6 col-md-6 col-sm-offset-3  col-md-offset-3 form-field">
-              <%= f.label :image, class: "" %>
-              <%= f.file_field :image  %>
+          <!-- ACTIVITY TYPE -->
+          <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2  col-md-offset-3 form-field">
+            <%= f.label :activity_type, class:' caps' %>
+            <div class="form-group  dropbox-container">
+              <%= f.collection_select :event_type_id,
+              EventType.all,
+              :id,
+              :name,
+              {},
+              { multiple: false, class: 'form-control '}
+              %>
             </div>
+          </div>
 
-            <!-- MORE INFO, URLs -->
-            <div class="col-xs-12 col-sm-6 col-md-6 col-sm-offset-3  col-md-offset-3 form-field">
-              <%= f.label :more_info, class:' caps' %>
-              <%= f.text_field :more_info, class: 'form-control  ', placeholder: "Provide web links here" %>
+          <!-- TAGS -->
+          <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2  col-md-offset-3 form-field">
+            <%= f.label :Tags, class:' caps' %>
+            <div class="form-group  dropbox-container">
+              <%= f.collection_select :tag_ids,
+              Tag.all,
+              :id,
+              :name,
+              {},
+              { multiple: true, class: 'chosen-select form-control '}
+              %>
             </div>
+          </div>
+          <!-- REGISTRATION -->
+          <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2  col-md-offset-3 form-field">
+            <%= f.label :registration, "Registration", class:'' %>
+            <div class="">
+              <div class="in-block">
+              <%= f.radio_button(:registration, "Drop In") %>
+              <%= label_tag(:registration, "Drop In", class:'radio-spacing') %>
+            </div>
+            <div class="in-block">
+              <%= f.radio_button(:registration, "Registered Required",:checked => true) %>
+              <%= label_tag(:registration, "Registration Required", class:'radio-spacing') %>
+            </div>
+            </div>
+          </div>
+          <!-- EVENT DESCRIPTION -->
+          <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2  col-md-offset-3 form-field">
+            <%= f.label :description, class:'' %>
+            <%= f.text_area :description, class: 'form-control  ', :required => true %>
+          </div>
 
-            <!-- CONTACT NAME/EMAIL -->
-            <div class="col-xs-12 col-sm-6 col-md-6 col-sm-offset-3  col-md-offset-3 form-field">
-              <%= f.label :"Contact name", class:' caps' %>
-              <%= f.text_field :contact_name, class: 'form-control  ', :required => true %>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-6 col-sm-offset-3  col-md-offset-3 form-field">
-              <%= f.label :"Contact email", class:' caps' %>
-              <%= f.email_field :contact_email, class: 'form-control  ', :required => true %>
-            </div>
-            <br>
-            <div class="col-xs-12 col-sm-6 col-md-6 col-sm-offset-3  col-md-offset-3 form-field">
-              <%= f.submit class: 'btn btn-primary form-control  ' %>
-            </div>
+          <!-- IMAGE UPLOADER -->
+          <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2  col-md-offset-3 form-field">
+            <%= f.label :image, class: "" %>
+            <%= f.file_field :image  %>
+          </div>
+
+          <!-- MORE INFO, URLs -->
+          <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2  col-md-offset-3 form-field">
+            <%= f.label :more_info, class:' caps' %>
+            <%= f.text_field :more_info, class: 'form-control  ', placeholder: "Provide web links here" %>
+          </div>
+
+          <!-- CONTACT NAME/EMAIL -->
+          <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2  col-md-offset-3 form-field">
+            <%= f.label :"Contact name", class:' caps' %>
+            <%= f.text_field :contact_name, class: 'form-control  ', :required => true %>
+          </div>
+          <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2  col-md-offset-3 form-field">
+            <%= f.label :"Contact email", class:' caps' %>
+            <%= f.email_field :contact_email, class: 'form-control  ', :required => true %>
+          </div>
+          <br>
+          <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2  col-md-offset-3 form-field" style="padding-bottom:10%;">
+            <%= f.submit class: 'btn btn-primary form-control  ' %>
+          </div>
         </div>
 
         <% end %>
         <% else %>
         <%= render 'partials/login_msg' %>
+      </div>
+      <% end %>
     </div>
-    <% end %>
-  </div>
   </div>
 
 </div>

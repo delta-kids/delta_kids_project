@@ -20,7 +20,7 @@
 	justify-content: center;
 	margin-left: auto;
 	margin-top: 5px;
-	width:93%;
+	width: auto;
 	border-radius: 4px;
 	padding-top: 2px;
 	padding-bottom: 2px;
@@ -123,6 +123,11 @@
 .dashboard-btns {
   display: block;
 }
+
+.in-block {
+	display: inline-block;
+}
+
 
 .dashboard-btns a button {
   margin-top: 5px;
