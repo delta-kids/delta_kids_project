@@ -1,8 +1,4 @@
-<div class="wholePage">
-  <!-- First section div -->
-  <div class="event-section1 event-section1-container" id="event-section1">
-      <div class="row event-row">
-        <div class="hidden-xs hidden-sm col-md-3" id="event-subsection1">
+
           <%= image_tag "filter-header.svg", class: " filter-header-img"  %>
           <br>
           <br>
@@ -115,21 +111,3 @@
           <%= image_tag("cloud1.png",style:"width:100%;height:75px; transform: scaleY(-1); position:relative; bottom:45px") %>
           <%= image_tag("cloud1.png",style:"width:100%;height:75px; position:relative; bottom:45px") %>
           <% end %>
-        </div>
-        <script>
-        var checkboxValues = JSON.parse(localStorage.getItem('checkboxValues')) || {},
-        $checkboxes = $(".checkbox-container :checkbox");
-
-        $checkboxes.on("change", function(){
-          $checkboxes.each(function(){
-            checkboxValues[this.id] = this.checked;
-          });
-
-          localStorage.setItem("checkboxValues", JSON.stringify(checkboxValues));
-        });
-
-        // On page load
-        $.each(checkboxValues, function(key, value) {
-          $("#" + key).prop('checked', value);
-        });
-        </script>

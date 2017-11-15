@@ -24,6 +24,7 @@
 }
 
 .day-scroller {
+	min-height: 50px;
 	max-height: 100px;
 	max-width: 130px;
 	overflow-x: auto;
@@ -164,7 +165,6 @@
 }
 
 .calendar-row .calendar-subsection2 {
-	padding-left: 40px;
 	top:0;
 }
 

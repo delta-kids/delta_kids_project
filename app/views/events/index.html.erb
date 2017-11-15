@@ -1,145 +1,176 @@
 <!-- ACTIVITIES CALENDAR PAGE -->
 <div class="wholePage">
-  <%= render 'partials/events_filter_bar' %>
-  <div class="col-xs-12 col-sm-12 col-md-9 calendar-subsection2">
-    <div class="calendar-subsection2-text">
-      <p class="calendar-subsection2-header"><span class="bree-font mobile-font-16">ACTIVITIES CALENDAR</span></p>
-    </div>
-    <div class="calendar-subsection2-card" style="margin-top:0px;">
-      <%= month_calendar  do |date| %>
-      <%= date.day %>
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 hidden-md hidden-lg" style="padding-left:5%;padding-right:5%">
+        <button type="button" class="btn btn-primary" id="map_filter-btn" data-toggle="modal" data-target="#calenderFilterModal" style="width:100%;  margin:20px auto 0px auto">
+          Filter
+        </button>
 
-
-      <div class="day-scroller">
-        <% if Holidays.on(date, :ca_bc, :observed) != [] %>
-         <% holiday = Holidays.on(date, :ca_bc, :observed) %>
-        <p class="cal-links mobile-font-10 center-flex-content" style="color:#144d81"><strong><%= holiday[0][:name] %></strong></p>
-        <% end %>
-        <% if @events_by_start_date[date] %>
-        <% @events_by_start_date[date].each do |event|  %>
-        <% if Holidays.on(date, :ca_bc, :observed) != [] %>
-        <% else %>
-        <% if event.approved != true %>
-        <% else %>
-        <script>
-        // When the user clicks on <div>, open the popup
-        function calendarPopup(id) {
-          let popup = document.getElementById(`cal-popup-window-${id}`);
-          popup.classList.toggle("show");
-        }
-        </script>
-
-
-        <div class="popup" onclick="calendarPopup(<%= event.id %>)">
-          <p class="cal-links mobile-font-10"><%= event.start_time.strftime("%I:%M %p") %> <%= event.title %></p>
-          <br>
-          <div class="popuptext" id="cal-popup-window-<%=event.id%>">
-            <i class="fa fa-times pull-right" aria-hidden="true" style="color:yellow; font-size:30px;"></i>
-            <p class="bree-font"><%= link_to event.title, event_learn_more_path(event), class:"", style:"text-decoration:none; color:yellow"  %></p>
-            <div class="row">
-              <div class="col-xs-12 col-sm-12 col-md-12">
-                <%= image_tag(event.image_url.to_s,class:"popup-pic") %>
-                <p class='font-16'><strong>Description: </strong><%= event.description %></p>
-                <p class='font-16'><strong>Tags:<br> </strong><%= event.tags.map(&:name).join(', ') %></p>
-                <p><%= link_to 'Learn More', event_learn_more_path(event), class: "event-info-bold2" %></p>
+        <!-- Modal -->
+        <div class="modal fade" id="calenderFilterModal" tabindex="-1" role="dialog" aria-labelledby="calenderFilterModalTitle" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header" style="background-color:#144c81">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color:white">
+                  <span aria-hidden="true">&times;</span>
+                </button>
               </div>
+              <div class="modal-body background-color" >
+                <%= render "partials/events_filter_bar" %>
+              </div>
+              <div class="modal-footer" style="background-color:#144c81">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <div class="calendar-section1 calendar-section1-container" id="calendar-section1">
+    <div class="row calendar-row">
+      <div class="hidden-xs hidden-sm col-md-3" id="calendar-subsection1">
+        <%= render 'partials/events_filter_bar' %>
+      </div>
+
+      <div class="col-xs-12 col-sm-12 col-md-9 calendar-subsection2">
+        <div class="calendar-subsection2-text">
+          <p class="calendar-subsection2-header"><span class="bree-font mobile-font-16">ACTIVITIES CALENDAR</span></p>
+        </div>
+        <div class="calendar-subsection2-card" style="margin-top:0px;">
+          <%= month_calendar  do |date| %>
+          <%= date.day %>
+
+          <div class="day-scroller">
+            <% if Holidays.on(date, :ca_bc, :observed) != [] %>
+            <% holiday = Holidays.on(date, :ca_bc, :observed) %>
+            <p class="cal-links mobile-font-10" style="color:#144d81"><strong><%= holiday[0][:name] %></strong></p>
+            <% end %>
+            <% if @events_by_start_date[date] %>
+            <% @events_by_start_date[date].each do |event|  %>
+            <% if Holidays.on(date, :ca_bc, :observed) != [] %>
+            <% else %>
+            <% if event.approved != true %>
+            <% else %>
+            <script>
+            // When the user clicks on <div>, open the popup
+            function calendarPopup(id) {
+              let popup = document.getElementById(`cal-popup-window-${id}`);
+              popup.classList.toggle("show");
+            }
+            </script>
+
+
+            <div class="popup" onclick="calendarPopup(<%= event.id %>)">
+              <p class="cal-links mobile-font-10"><%= event.start_time.strftime("%I:%M %p") %> <%= event.title %></p>
               <br>
-              <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="col-xs-6 col-sm-6 col-md-6">
-                  <p class='font-16'><strong>Start Date:<br> </strong><%= event.start_date %></p>
-                  <p class='font-16'><strong>Start Time:<br> </strong><%= event.start_time.strftime("%I:%M%p") %></p>
-                  <p class='font-16'><strong>Event Repeat:<br> </strong>
-                    <% if event.event_repeat = "Never" %>
-                    No
-                    <% else %>
-                    Weekly
+              <div class="popuptext" id="cal-popup-window-<%=event.id%>">
+                <i class="fa fa-times pull-right" aria-hidden="true" style="color:yellow; font-size:30px;"></i>
+                <p class="bree-font"><%= link_to event.title, event_learn_more_path(event), class:"", style:"text-decoration:none; color:yellow"  %></p>
+                <div class="row">
+                  <div class="col-xs-12 col-sm-12 col-md-12">
+                    <%= image_tag(event.image_url.to_s,class:"popup-pic") %>
+                    <p class='font-16'><strong>Description: </strong><%= event.description %></p>
+                    <p class='font-16'><strong>Tags:<br> </strong><%= event.tags.map(&:name).join(', ') %></p>
+                    <p><%= link_to 'Learn More', event_learn_more_path(event), class: "event-info-bold2" %></p>
+                  </div>
+                  <br>
+                  <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="col-xs-6 col-sm-6 col-md-6">
+                      <p class='font-16'><strong>Start Date:<br> </strong><%= event.start_date %></p>
+                      <p class='font-16'><strong>Start Time:<br> </strong><%= event.start_time.strftime("%I:%M%p") %></p>
+                      <p class='font-16'><strong>Event Repeat:<br> </strong>
+                        <% if event.event_repeat = "Never" %>
+                        No
+                        <% else %>
+                        Weekly
+                        <% end %>
+                      </p>
+                      <p class='font-16'><strong>Age Group:<br> </strong><%= event.age_groups.map(&:age).join(', ') %></p>
+                      <p class='font-16'><strong>Registration:<br> </strong><%= event.registration %></p>
+                      <p class='font-16'><strong>Address:<br> </strong><%= event.address %></p>
+                      <p class='font-16'><strong>More Info:<br> </strong><%= link_to event.more_info, class:"cal-links " %></p>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6">
+                      <p class='font-16'><strong>End Date:<br> </strong><%= event.end_date %></p>
+                      <p class='font-16'><strong>End Time:<br> </strong><%= event.end_time.strftime("%I:%M%p") %></p>
+                      <p class='font-16'><strong>Location:<br> </strong><%= event.event_location %></p>
+                      <p class='font-16'><strong>Cost:<br> </strong><%= event.cost %></p>
+                      <p class='font-16'><strong>Activity Type:<br> </strong><%= event.event_type.name %></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <% end %>
+            <% end %>
+            <% end %>
+            <% end %>
+          </div>
+          <% end %>
+        </div>
+
+
+        <div class="container-fluid">
+          <a id="results"></a>
+          <p class="bree-font">Results (<%= @events_search.total_count %>)</p>
+
+          <% for event in @events_search %>
+          <div class="calendar-subsection2-card light-blue-bg-color" style="margin-top:30px">
+            <div class="event-image-container">
+              <%= image_tag(event.image_url.to_s, class:"img-responsive", style:"height:100%; width:100%; object-fit: cover") %>
+            </div>
+            <div class="calendar-subsection2-text" style="background-color: #fff">
+              <div class="calendar-subsection2-details">
+                <p class="calendar-subsection2-header2 bree-font26"><%= event.title %></p>
+                <div class="event-info">
+                  <div class="event-info1">
+                    <%= image_tag "icon-calendar.svg", class: "event-info-icon" %>
+                    <p class="event-info-txt-bold">Date:</p>
+                    <p class="event-info-txt"><%= event.start_date %></p>
+                    <p class="event-info-txt"> - <%= event.end_date %></p>
+                  </div>
+                  <div class="event-info1">
+                    <%= image_tag "icon-clock.svg", class: "event-info-icon" %>
+                    <% if event.start_time %>
+                    <p class="event-info-txt"><%= event.start_time.strftime("%I:%M %p") %></p>
                     <% end %>
-                  </p>
-                  <p class='font-16'><strong>Age Group:<br> </strong><%= event.age_groups.map(&:age).join(', ') %></p>
-                  <p class='font-16'><strong>Registration:<br> </strong><%= event.registration %></p>
-                  <p class='font-16'><strong>Address:<br> </strong><%= event.address %></p>
-                  <p class='font-16'><strong>More Info:<br> </strong><%= link_to event.more_info, class:"cal-links " %></p>
+                    <% if event.end_time %>
+                    <p class="event-info-txt"> - <%= event.end_time.strftime("%I:%M %p") %></p>
+                    <% end %>
+                  </div>
+                  <div class="event-info1">
+                    <%= image_tag "icon-baby.svg", class: "event-info-icon" %>
+                    <% event.age_groups.each do |age| %>
+                    <p class="event-info-txt"><%= age.age %></p>
+                    <% end %>
+                  </div>
+                  <div class="event-info1">
+                    <%= image_tag "icon-tag.svg", class: "event-info-icon" %>
+                    <p class="event-info-txt"><%= event.cost %></p>
+                  </div>
+                  <div class="event-info1">
+                    <%= image_tag "icon-location-pin.svg", class: "event-info-icon" %>
+                    <p class="event-info-txt"><%= event.event_location %></p>
+                  </div>
                 </div>
-                <div class="col-xs-6 col-sm-6 col-md-6">
-                  <p class='font-16'><strong>End Date:<br> </strong><%= event.end_date %></p>
-                  <p class='font-16'><strong>End Time:<br> </strong><%= event.end_time.strftime("%I:%M%p") %></p>
-                  <p class='font-16'><strong>Location:<br> </strong><%= event.event_location %></p>
-                  <p class='font-16'><strong>Cost:<br> </strong><%= event.cost %></p>
-                  <p class='font-16'><strong>Activity Type:<br> </strong><%= event.event_type.name %></p>
+                <p class="ellipsis-3 font-16"><%= event.description %></p>
+                <div class="event-info2">
+                  <!-- <p  class="event-info-bold2">Learn More</p> -->
+                  <p><%= link_to 'Learn More', event_learn_more_path(event), class: "event-info-bold2 font-16" %></p>
+                  <%= image_tag "cursor.svg", class: "event-info-icon2" %>
                 </div>
               </div>
             </div>
           </div>
+          <% end %>
         </div>
-        <% end %>
-        <% end %>
-        <% end %>
-        <% end %>
+        <div class="container-fluid center-flex-content bree-font" style="align-items:center;">
+          <%= paginate @events_search, window: 2 %>
+        </div>
+
       </div>
-      <% end %>
     </div>
-
-
-    <div class="container-fluid">
-      <a id="results"></a>
-      <p class="bree-font">Results (<%= @events_search.total_count %>)</p>
-
-      <% for event in @events_search %>
-      <div class="calendar-subsection2-card light-blue-bg-color" style="margin-top:30px">
-        <div class="event-image-container">
-          <%= image_tag(event.image_url.to_s, class:"img-responsive", style:"height:100%; width:100%; object-fit: cover") %>
-        </div>
-        <div class="calendar-subsection2-text" style="background-color: #fff">
-          <div class="calendar-subsection2-details">
-            <p class="calendar-subsection2-header2 bree-font26"><%= event.title %></p>
-            <div class="event-info">
-              <div class="event-info1">
-                <%= image_tag "icon-calendar.svg", class: "event-info-icon" %>
-                <p class="event-info-txt-bold">Date:</p>
-                <p class="event-info-txt"><%= event.start_date %></p>
-                <p class="event-info-txt"> - <%= event.end_date %></p>
-              </div>
-              <div class="event-info1">
-                <%= image_tag "icon-clock.svg", class: "event-info-icon" %>
-                <% if event.start_time %>
-                <p class="event-info-txt"><%= event.start_time.strftime("%I:%M %p") %></p>
-                <% end %>
-                <% if event.end_time %>
-                <p class="event-info-txt"> - <%= event.end_time.strftime("%I:%M %p") %></p>
-                <% end %>
-              </div>
-              <div class="event-info1">
-                <%= image_tag "icon-baby.svg", class: "event-info-icon" %>
-                <% event.age_groups.each do |age| %>
-                <p class="event-info-txt"><%= age.age %></p>
-                <% end %>
-              </div>
-              <div class="event-info1">
-                <%= image_tag "icon-tag.svg", class: "event-info-icon" %>
-                <p class="event-info-txt"><%= event.cost %></p>
-              </div>
-              <div class="event-info1">
-                <%= image_tag "icon-location-pin.svg", class: "event-info-icon" %>
-                <p class="event-info-txt"><%= event.event_location %></p>
-              </div>
-            </div>
-            <p class="ellipsis-3 font-16"><%= event.description %></p>
-            <div class="event-info2">
-              <!-- <p  class="event-info-bold2">Learn More</p> -->
-              <p><%= link_to 'Learn More', event_learn_more_path(event), class: "event-info-bold2 font-16" %></p>
-              <%= image_tag "cursor.svg", class: "event-info-icon2" %>
-            </div>
-          </div>
-        </div>
-      </div>
-      <% end %>
-    </div>
-    <div class="container-fluid center-flex-content bree-font" style="align-items:center;">
-      <%= paginate @events_search, window: 2 %>
-    </div>
-
   </div>
-</div>
-</div>
-<!-- Rainbow Footer-->
-<%= render 'partials/footer' %>
+  <!-- Rainbow Footer-->
+  <%= render 'partials/footer' %>

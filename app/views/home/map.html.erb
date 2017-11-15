@@ -8,14 +8,14 @@
 <div class="wholePage">
   <div class="calendar-section1 calendar-section1-container" id="calendar-section1">
     <div class="row">
-      <div class="col-xs-12 hidden-sm hidden-md hidden-lg">
+      <div class="col-xs-12 col-sm-12 hidden-md hidden-lg" style="padding-left:5%;padding-right:5%">
 
-        <button type="button" class="btn btn-primary" id="map_filter-btn" data-toggle="modal" data-target="#exampleModalLong" style="width:100%; margin-top:20px;">
+        <button type="button" class="btn btn-primary" id="map_filter-btn" data-toggle="modal" data-target="#mapFilterModal" style="width:100%; margin-top:20px;">
           Filter
         </button>
 
         <!-- Modal -->
-        <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal fade" id="mapFilterModal" tabindex="-1" role="dialog" aria-labelledby="mapFilterModalTitle" aria-hidden="true">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="modal-header" style="background-color:#144c81">
@@ -36,11 +36,11 @@
     </div>
 
     <div class="row calendar-row">
-      <div class="hidden-xs col-sm-4 col-md-3" id="calendar-subsection1">
+      <div class="hidden-xs hidden-sm col-md-3" id="calendar-subsection1">
         <%= render 'partials/map_filter' %>
       </div>
 
-      <div class="col-xs-12 col-sm-8 col-md-9 calendar-subsection2" style='padding-top:40px'>
+      <div class="col-xs-12 col-sm-12 col-md-9 calendar-subsection2" style='padding-top:40px'>
 
         <div class="calendar-subsection2-card">
           <div id="map">
