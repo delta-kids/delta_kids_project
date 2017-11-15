@@ -26,6 +26,7 @@ class Event < ApplicationRecord
   has_many :EventAgeGroups, dependent: :destroy
   has_many :age_groups, through: :EventAgeGroups
 
+  belongs_to :user, optional: true
   belongs_to :event_type
 
   geocoded_by :address

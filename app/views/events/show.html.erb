@@ -39,6 +39,16 @@
                   </div>
                   <br>
                   <br>
+                  <% if is_admin? %>
+                      <%= link_to 'Edit', edit_event_path(@event),
+                      class: 'btn btn-success form-padding edit-delete-btn-width'  %>
+
+                      <%= link_to 'Delete', event_path(@event),
+                                            method: :delete,
+                                            data: {confirm: 'Are you sure?'},
+                                            class: 'btn btn-danger edit-delete-btn-width', style:'color:white !important;' %>
+                      <% elsif @event.approved? %>
+                      <% else  %>
 
                       <%= link_to 'Edit', edit_event_path(@event),
                       class: 'btn btn-success form-padding edit-delete-btn-width'  %>
@@ -47,6 +57,7 @@
                                             method: :delete,
                                             data: {confirm: 'Are you sure?'},
                                             class: 'btn btn-danger edit-delete-btn-width', style:'color:white !important;' %>
+                      <% end %>
                       <br>
                       <br>
                       <% if user_signed_in? %>

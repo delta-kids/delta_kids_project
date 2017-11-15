@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171103213636) do
+ActiveRecord::Schema.define(version: 20171115231814) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -84,6 +84,7 @@ ActiveRecord::Schema.define(version: 20171103213636) do
     t.string "image"
     t.boolean "featured"
     t.integer "event_type_id"
+    t.integer "user_id"
     t.index ["organization_id"], name: "index_events_on_organization_id"
   end
 

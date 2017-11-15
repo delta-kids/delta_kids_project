@@ -15,7 +15,19 @@
             <%= paginate @events, window: 2 %>
           </div>
         </div>
+        <% else %>
+        <div class="container-fluid">
+          <h1 class="bree-font">Events</h1>
+          <br>
+          <% @events_public.each do |event| %>
+          <p class="font-16"><%= link_to event.title, event_path(event) %></p>
+          <hr>
+          <% end %><div class="container-fluid center-flex-content bree-font" style="align-items:center;">
+            <%= paginate @events_public, window: 2 %>
+          </div>
+        </div>
         <% end %>
+
         <% else %>
         <%= render 'partials/login_msg' %>
       </div>

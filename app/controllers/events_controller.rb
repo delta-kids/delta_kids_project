@@ -24,6 +24,7 @@ class EventsController < ApplicationController
   def index2
     @events = Event.where(:approved => true).order(title: :asc).page(params[:page]).per(25)
     @events_by_start_date = @events.group_by(&:start_date)
+    @events_public = Event.where(:user_id => current_user.id ).order(title: :asc).page(params[:page]).per(25)
   end
 
   def show
@@ -56,6 +57,7 @@ class EventsController < ApplicationController
     if is_admin?
       @event.approved = true
     end
+      @event.user_id = current_user.id
     if @event.save
       flash[:notice] = 'Event Created'
       redirect_to event_path(@event)
@@ -87,7 +89,7 @@ class EventsController < ApplicationController
 
   private
   def event_params
-    params.require(:event).permit([:title, :term, :start_date, :end_date, :start_time, :end_time, :event_repeat, :event_location, :address, :cost, :registration, :more_info, :contact_name, :contact_email, :approved, :age_group_id, :event_type_id, :description, :image, { age_group_ids: [] },
+    params.require(:event).permit([:title, :term, :start_date, :end_date, :start_time, :end_time, :event_repeat, :event_location, :address, :cost, :registration, :more_info, :contact_name, :contact_email, :approved, :age_group_id, :event_type_id, :description, :image, :user_id, { age_group_ids: [] },
     { tag_ids: [] }
     ])
   end
