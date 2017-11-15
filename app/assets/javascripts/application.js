@@ -13,7 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery-ui/widgets/datepicker
-//= require bootstrap-sprockets
 //= require chosen-jquery
 //= require rails-ujs
 //= require underscore
@@ -51,4 +50,20 @@ $(document).ready(function(){
 
 $(document).ready(function(){
   $('.datepicker').datepicker({ dateFormat: 'yy-mm-dd' });
+});
+
+let checkboxValues = JSON.parse(localStorage.getItem('checkboxValues')) || {},
+    $checkboxes = $(".checkbox-container :checkbox");
+
+$checkboxes.on("change", function(){
+  $checkboxes.each(function(){
+    checkboxValues[this.id] = this.checked;
+  });
+
+  localStorage.setItem("checkboxValues", JSON.stringify(checkboxValues));
+});
+
+// On page load
+$.each(checkboxValues, function(key, value) {
+  $("#" + key).prop('checked', value);
 });

@@ -4,107 +4,137 @@
 <script src="//cdn.rawgit.com/mahnunchik/markerclustererplus/master/dist/markerclusterer.min.js"></script>
 
 
+<!-- First section div -->
+<div class="wholePage">
+  <div class="calendar-section1 calendar-section1-container" id="calendar-section1">
+    <div class="row">
+      <div class="col-xs-12 hidden-sm hidden-md hidden-lg">
 
-  <%= render 'partials/map_filter' %>
+        <button type="button" class="btn btn-primary" id="map_filter-btn" data-toggle="modal" data-target="#exampleModalLong" style="width:100%; margin-top:20px;">
+          Filter
+        </button>
 
-  <div class="col-xs-12 col-sm-12 col-md-9 calendar-subsection2" style='padding-top:40px'>
-    <!-- <div class="col-xs-12 col-sm-12 hidden-md">
-      <button type="button" onclick="">Filter</button>
-    </div> -->
-    <div class="calendar-subsection2-card">
-
-      <div id="map">
-        <div id="multi_markers" style="width:100%; height:100%"></div>
-      </div>
-
-      <script type="text/javascript">
-      handler = Gmaps.build('Google');
-      handler.buildMap({ provider: {}, internal: {id: 'multi_markers'}}, function(){
-        markers = handler.addMarkers(<%=raw @hash1.to_json %>);
-        handler.bounds.extendWith(markers);
-        handler.map.centerOn ({lat:49.0952,lng:-123.0265});
-        handler.getMap().setZoom(11);
-      });</script>
-
-
-      <div class="calendar-subsection2-text">
-        <p class="calendar-subsection2-header bree-font">Map of Delta</p>
-        <div class="calendar-subsection2-text" style="background-color: #fff">
-          <div class="calendar-subsection2-details">
-            <p class="font-20">This is Delta. It includes the communities of Tsawwassen, Ladner, and North Delta.
-              On the north side it is bordered by the Fraser River and 96th Avenue.
-              On the east side, it is bordered by Scott Road (or 120th Street).</p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-      <div class="container-fluid">
-        <a id="results"></a>
-        <p class="bree-font">Results (<%= @map_search_results.total_count %>)</p>
-        <% for event in @map_search_results %>
-        <% if event.has_attribute?(:event_type_id) %>
-        <div class="calendar-subsection2-card light-blue-bg-color" style="margin-top:30px">
-          <div class="calendar-subsection2-text" style="background-color: #fff">
-            <div class="calendar-subsection2-details">
-              <p class="calendar-subsection2-header2 bree-font26"><%= event.title %></p>
-              <div class="event-info">
-                <!-- <div>
-                  <%= image_tag "icon-calendar.svg", class: "event-info-icon" %>
-                  <p class="event-info-txt-bold">Date:</p>
-                  <p class="event-info-txt"><%= event.start_date %></p>
-                  <p class="event-info-txt"> - <%= event.end_date %></p>
-                </div> -->
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header" style="background-color:#144c81">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color:white">
+                  <span aria-hidden="true">&times;</span>
+                </button>
               </div>
-              <p class="ellipsis-3 font-16"><%= event.description %></p>
-              <p class="font-16"><%= event.address %></p>
-              <div class="event-info2">
-                <!-- <p  class="event-info-bold2">Learn More</p> -->
-                <p><%= link_to 'Learn More', event_learn_more_path(event), class: "event-info-bold2 font-16" %></p>
-                <%= image_tag "cursor.svg", class: "event-info-icon2" %>
+              <div class="modal-body background-color" >
+                <%= render "partials/map_filter" %>
+              </div>
+              <div class="modal-footer" style="background-color:#144c81">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
               </div>
             </div>
           </div>
         </div>
-        <% elsif event.has_attribute?(:program_type_id) %>
-        <div class="calendar-subsection2-card light-blue-bg-color" style="margin-top:30px">
-          <div class="calendar-subsection2-text" style="background-color: #fff">
-            <div class="calendar-subsection2-details">
-              <p class="calendar-subsection2-header2 bree-font26"><%= event.organization.name %></p>
-              <p class="ellipsis-3 font-16"><%= event.description %></p>
-              <div class="">
-              <p class="font-16"><%= event.organization.address %></p>
-              <!-- <p class="font-16"><%= event.organization.phone %>&nbsp&nbsp</p> -->
-            </div>
-              <div class="event-info2">
-                <p><%= link_to 'Learn More', program_learn_more_path(event), class: "event-info-bold2 font-16" %></p>
-                <%= image_tag "cursor.svg", class: "event-info-icon2" %>
-              </div>
-            </div>
-          </div>
-        </div>
-        <% elsif event.has_attribute?(:service_type_id) %>
-        <div class="calendar-subsection2-card light-blue-bg-color" style="margin-top:30px">
-          <div class="calendar-subsection2-text" style="background-color: #fff">
-            <div class="calendar-subsection2-details">
-              <p class="calendar-subsection2-header2 bree-font26"><%= event.organization.name %></p>
-              <p class="ellipsis-3 font-16"><%= event.description %></p>
-              <div class="event-info">
-              <p class="font-16"><%= event.organization.address %></p>
-            </div>
-              <div class="event-info2">
-                <p><%= link_to 'Learn More', service_learn_more_path(event), class: "event-info-bold2 font-16" %></p>
-                <%= image_tag "cursor.svg", class: "event-info-icon2" %>
-              </div>
-            </div>
-          </div>
-        </div>
-        <% end %>
-      <% end %>
       </div>
-      <div class="container-fluid center-flex-content bree-font" style="align-items:center;">
-        <%= paginate @map_search_results, window: 2 %>
-      </div>
-
     </div>
-</div>
+
+    <div class="row calendar-row">
+      <div class="hidden-xs col-sm-4 col-md-3" id="calendar-subsection1">
+        <%= render 'partials/map_filter' %>
+      </div>
+
+      <div class="col-xs-12 col-sm-8 col-md-9 calendar-subsection2" style='padding-top:40px'>
+
+        <div class="calendar-subsection2-card">
+          <div id="map">
+            <div id="multi_markers" style="width:100%; height:100%"></div>
+          </div>
+
+          <script type="text/javascript">
+          handler = Gmaps.build('Google');
+          handler.buildMap({ provider: {}, internal: {id: 'multi_markers'}}, function(){
+            markers = handler.addMarkers(<%=raw @hash1.to_json %>);
+            handler.bounds.extendWith(markers);
+            handler.map.centerOn ({lat:49.0952,lng:-123.0265});
+            handler.getMap().setZoom(11);
+          });</script>
+
+
+          <div class="calendar-subsection2-text">
+            <p class="calendar-subsection2-header bree-font">Map of Delta</p>
+            <div class="calendar-subsection2-text" style="background-color: #fff">
+              <div class="calendar-subsection2-details">
+                <p class="font-20">This is Delta. It includes the communities of Tsawwassen, Ladner, and North Delta.
+                  On the north side it is bordered by the Fraser River and 96th Avenue.
+                  On the east side, it is bordered by Scott Road (or 120th Street).</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="container-fluid">
+            <a id="results"></a>
+            <p class="bree-font">Results (<%= @map_search_results.total_count %>)</p>
+            <% for event in @map_search_results %>
+            <% if event.has_attribute?(:event_type_id) %>
+            <div class="calendar-subsection2-card light-blue-bg-color" style="margin-top:30px">
+              <div class="calendar-subsection2-text" style="background-color: #fff">
+                <div class="calendar-subsection2-details">
+                  <p class="calendar-subsection2-header2 bree-font26"><%= event.title %></p>
+                  <div class="event-info">
+                    <!-- <div>
+                    <%= image_tag "icon-calendar.svg", class: "event-info-icon" %>
+                    <p class="event-info-txt-bold">Date:</p>
+                    <p class="event-info-txt"><%= event.start_date %></p>
+                    <p class="event-info-txt"> - <%= event.end_date %></p>
+                  </div> -->
+                </div>
+                <p class="ellipsis-3 font-16"><%= event.description %></p>
+                <p class="font-16"><%= event.address %></p>
+                <div class="event-info2">
+                  <!-- <p  class="event-info-bold2">Learn More</p> -->
+                  <p><%= link_to 'Learn More', event_learn_more_path(event), class: "event-info-bold2 font-16" %></p>
+                  <%= image_tag "cursor.svg", class: "event-info-icon2" %>
+                </div>
+              </div>
+            </div>
+          </div>
+          <% elsif event.has_attribute?(:program_type_id) %>
+          <div class="calendar-subsection2-card light-blue-bg-color" style="margin-top:30px">
+            <div class="calendar-subsection2-text" style="background-color: #fff">
+              <div class="calendar-subsection2-details">
+                <p class="calendar-subsection2-header2 bree-font26"><%= event.organization.name %></p>
+                <p class="ellipsis-3 font-16"><%= event.description %></p>
+                <div class="">
+                  <p class="font-16"><%= event.organization.address %></p>
+                  <!-- <p class="font-16"><%= event.organization.phone %>&nbsp&nbsp</p> -->
+                </div>
+                <div class="event-info2">
+                  <p><%= link_to 'Learn More', program_learn_more_path(event), class: "event-info-bold2 font-16" %></p>
+                  <%= image_tag "cursor.svg", class: "event-info-icon2" %>
+                </div>
+              </div>
+            </div>
+          </div>
+          <% elsif event.has_attribute?(:service_type_id) %>
+          <div class="calendar-subsection2-card light-blue-bg-color" style="margin-top:30px">
+            <div class="calendar-subsection2-text" style="background-color: #fff">
+              <div class="calendar-subsection2-details">
+                <p class="calendar-subsection2-header2 bree-font26"><%= event.organization.name %></p>
+                <p class="ellipsis-3 font-16"><%= event.description %></p>
+                <div class="event-info">
+                  <p class="font-16"><%= event.organization.address %></p>
+                </div>
+                <div class="event-info2">
+                  <p><%= link_to 'Learn More', service_learn_more_path(event), class: "event-info-bold2 font-16" %></p>
+                  <%= image_tag "cursor.svg", class: "event-info-icon2" %>
+                </div>
+              </div>
+            </div>
+          </div>
+          <% end %>
+          <% end %>
+        </div>
+        <div class="container-fluid center-flex-content bree-font" style="align-items:center;">
+          <%= paginate @map_search_results, window: 2 %>
+        </div>
+
+      </div>
+    </div>

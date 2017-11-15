@@ -1,8 +1,4 @@
-<!-- First section div -->
-<div class="wholePage">
-<div class="calendar-section1 calendar-section1-container" id="calendar-section1">
-    <div class="row calendar-row">
-      <div class="hidden-sm hidden-xs col-md-3 mobile-map-filter" id="calendar-subsection1">
+
         <%= image_tag "filter-header.svg", class: " filter-header-img"  %>
         <br>
         <br>
@@ -206,29 +202,9 @@
         <% if @map_search_results.total_count == 0 %>
         <%= image_tag("girl-search-not-found-with-rainbow.svg",style:"width:100%;height:350px;") %>
         <%= image_tag("cloud1.png",style:"width:100%;height:75px; transform: scaleY(-1); position:relative; bottom:45px") %>
-        <%= image_tag("cloud1.png",style:"width:100%;height:75px; position:relative; bottom:45px") %>
+        <%= image_tag("cloud1.png",style:"width:100%;height:75px; position:relative; bottom:46px") %>
         <% else %>
         <%= image_tag("girl-search-with-rainbow.svg",style:"width:100%;height:350px;") %>
         <%= image_tag("cloud1.png",style:"width:100%;height:75px; transform: scaleY(-1); position:relative; bottom:45px") %>
-        <%= image_tag("cloud1.png",style:"width:100%;height:75px; position:relative; bottom:45px") %>
+        <%= image_tag("cloud1.png",style:"width:100%;height:75px; position:relative; bottom:46px") %>
         <% end %>
-
-      </div>
-
-      <script>
-      var checkboxValues = JSON.parse(localStorage.getItem('checkboxValues')) || {},
-          $checkboxes = $(".checkbox-container :checkbox");
-
-      $checkboxes.on("change", function(){
-        $checkboxes.each(function(){
-          checkboxValues[this.id] = this.checked;
-        });
-
-        localStorage.setItem("checkboxValues", JSON.stringify(checkboxValues));
-      });
-
-      // On page load
-      $.each(checkboxValues, function(key, value) {
-        $("#" + key).prop('checked', value);
-      });
-      </script>
