@@ -19,6 +19,7 @@ class ResourcesController < ApplicationController
       if is_admin?
         @resource.approved = true
       end
+      @resource.user_id = current_user.id
       if @resource.save
         flash[:notice] = 'Resource create'
         redirect_to resource_path(@resource)
@@ -54,6 +55,7 @@ class ResourcesController < ApplicationController
 
     def index2
       @resources = Resource.where(:approved => true).order(name: :asc).page(params[:page]).per(25)
+      @resources_public = Resource.where(:user_id => current_user.id ).order(name: :asc).page(params[:page]).per(25)
     end
 
     def edit
@@ -81,7 +83,7 @@ class ResourcesController < ApplicationController
 
     private
     def resource_params
-      params.require(:resource).permit([:name, :feature, :feature_start_date, :feature_end_date, :feature_start_time, :feature_end_time, :resource_location, :description, :contact_name, :contact_email, :created_at, :updated_at, :approved, :published_date, :term, :resource_file, { topic_ids: [] }, { tag_ids: [] }, { age_group_ids: [] } ])
+      params.require(:resource).permit([:name, :feature, :feature_start_date, :feature_end_date, :feature_start_time, :feature_end_time, :resource_location, :description, :contact_name, :contact_email, :created_at, :updated_at, :approved, :published_date, :term, :user_id, :resource_file, { topic_ids: [] }, { tag_ids: [] }, { age_group_ids: [] } ])
     end
     def find_resource
       @resource = Resource.find params[:id]

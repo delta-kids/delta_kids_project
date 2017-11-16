@@ -6,17 +6,28 @@
         <% if user_signed_in? %>
         <% if is_admin? %>
         <div class="container-fluid">
-          <h1 class="bree-font">Resources</h1>
+          <h1 class="bree-font">Events</h1>
           <br>
           <% @resources.each do |resource| %>
           <p class="font-16"><%= link_to resource.name, resource_path(resource) %></p>
           <hr>
-          <% end %>
-          <div class="container-fluid center-flex-content bree-font" style="align-items:center;">
+          <% end %><div class="container-fluid center-flex-content bree-font" style="align-items:center;">
             <%= paginate @resources, window: 2 %>
           </div>
         </div>
+        <% else %>
+        <div class="container-fluid">
+          <h1 class="bree-font">Events</h1>
+          <br>
+          <% @resources_public.each do |resource| %>
+          <p class="font-16"><%= link_to resource.name, resource_path(resource) %></p>
+          <hr>
+          <% end %><div class="container-fluid center-flex-content bree-font" style="align-items:center;">
+            <%= paginate @resources_public, window: 2 %>
+          </div>
+        </div>
         <% end %>
+
         <% else %>
         <%= render 'partials/login_msg' %>
       </div>

@@ -18,6 +18,8 @@ class Resource < ApplicationRecord
   has_many :ResourceAgeGroups, dependent: :destroy
   has_many :age_groups, through: :ResourceAgeGroups
 
+  belongs_to :user, optional: true
+
   def self.search(term)
     if term
       where('name ILIKE (?) OR description ILIKE (?)', "%#{term}%", "%#{term}%").order('name ASC')

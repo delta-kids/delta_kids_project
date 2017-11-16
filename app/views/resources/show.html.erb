@@ -27,17 +27,28 @@
                 <p class="font-20"><strong>Contact Email: </strong><%= @resource.contact_email %></p>
 
                 <br>
-                <div class="center-flex-content">
+                <% if is_admin? %>
+                    <%= link_to 'Edit', edit_resource_path(@resource),
+                    class: 'btn btn-success form-padding edit-delete-btn-width'  %>
 
-                  <%= link_to 'Edit', edit_resource_path(@resource),
-                  class: 'btn btn-success form-padding edit-delete-btn-width',style:"margin-right:5%;"  %>
+                    <%= link_to 'Delete', resource_path(@resource),
+                                          method: :delete,
+                                          data: {confirm: 'Are you sure?'},
+                                          class: 'btn btn-danger edit-delete-btn-width', style:'color:white !important;' %>
+                    <% elsif @resource.approved? %>
+                    <% else  %>
 
-                  <%= link_to 'Delete', resource_path(@resource),
-                  method: :delete,
-                  data: {confirm: 'Are you sure?'},
-                  class: 'btn btn-danger edit-delete-btn-width', style:'color:white !important;' %>
-                </div>
-                <br>
+                    <%= link_to 'Edit', edit_resource_path(@resource),
+                    class: 'btn btn-success form-padding edit-delete-btn-width'  %>
+
+                    <%= link_to 'Delete', resource_path(@resource),
+                                          method: :delete,
+                                          data: {confirm: 'Are you sure?'},
+                                          class: 'btn btn-danger edit-delete-btn-width', style:'color:white !important;' %>
+                    <% end %>
+                    <br>
+                    <br>
+
                 <% if is_admin? %><% else %>
                 <p class="font-16">
                   * Please Note: You may only edit your request while it is still pending. When your request for a new Resource has been processed any further changes must be done by an Admin.
