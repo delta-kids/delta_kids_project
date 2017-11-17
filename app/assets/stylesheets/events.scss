@@ -390,8 +390,8 @@
 
 .popup .popuptext {
     visibility: hidden;
-    width: 700px;
-    height: 600px;
+    width: 70%;
+    height: 80%;
 		overflow-y: auto;
     background-color: #144D7D;
     color: #fff;
@@ -399,8 +399,8 @@
     border-radius: 6px;
     position:fixed;
     z-index: 1;
-    bottom:10%;
-    right:13%;
+    bottom:8%;
+    right:10%;
 }
 .fa-times:hover {
 	color: #3ea3da !important;
