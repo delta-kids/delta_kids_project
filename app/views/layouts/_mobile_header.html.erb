@@ -6,7 +6,7 @@
       <% elsif flash[:alert] %>
         <div class='alert alert-danger'><%= flash[:alert] %></div>
       <% end %>
-      <%= link_to image_tag("Delta-logo.png", id:"mobile-header-logo") %>
+      <%= link_to image_tag("Delta-logo.png", id:"mobile-header-logo"), home_path %>
 
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" style="background-color:#144d81;margin-top:20px;margin-right:30px;">
         <span class="icon-bar" style="background-color:#3ea3da"></span>
