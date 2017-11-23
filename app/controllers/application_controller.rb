@@ -3,17 +3,18 @@ class ApplicationController < ActionController::Base
 
 
   def user_signed_in?
-    if session[:user_id].present? && current_user.nil?
-      session[:user_id] = nil
+    if cookies[:auth_token].present? && current_user.nil?
+      cookies[:auth_token] = nil
     end
-    session[:user_id].present?
+    cookies[:auth_token].present?
   end
+
   helper_method :user_signed_in?
 
   def current_user
-    @current_user ||= User.find(session[:user_id]) if session[:user_id]
-    # debugger
+    @current_user ||= User.where("auth_token =?", cookies[:auth_token]).first if cookies[:auth_token]
   end
+
   helper_method :current_user
 
   def authenticate_user!

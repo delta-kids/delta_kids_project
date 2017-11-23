@@ -48,18 +48,10 @@
             <% end %>
             <% if @events_by_start_date[date] %>
             <% @events_by_start_date[date].each do |event|  %>
-            <% if Holidays.on(date, :ca_bc, :observed) != [] %>
+            <% if Holidays.on(date, :ca, :observed) != [] %>
             <% else %>
             <% if event.approved != true %>
             <% else %>
-            <script>
-            // When the user clicks on <div>, open the popup
-            function calendarPopup(id) {
-              let popup = document.getElementById(`cal-popup-window-${id}`);
-              popup.classList.toggle("show");
-            }
-            </script>
-
 
             <div class="popup" onclick="calendarPopup(<%= event.id %>)">
               <p class="cal-links mobile-font-10"><%= event.start_time.strftime("%I:%M %p") %> <%= event.title %></p>
@@ -160,9 +152,13 @@
   <%= render 'partials/footer' %>
 
 
-
   <script>
-
+  // When the user clicks on <div>, open the popup
+  function calendarPopup(id) {
+    let popup = document.getElementById(`cal-popup-window-${id}`);
+    popup.classList.toggle("show");
+  }
+  //Save checkbox values
   let checkboxValues = JSON.parse(localStorage.getItem('checkboxValues')) || {},
   $checkboxes = $(".checkbox-container :checkbox");
 
