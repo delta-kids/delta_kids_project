@@ -6,7 +6,7 @@
         <% if user_signed_in? %>
         <% if is_admin? %>
         <div class="container-fluid">
-          <h1 class="bree-font">Events</h1>
+          <h1 class="bree-font">Resources</h1>
           <br>
           <% @resources.each do |resource| %>
           <p class="font-16"><%= link_to resource.name, resource_path(resource) %></p>
@@ -17,7 +17,7 @@
         </div>
         <% else %>
         <div class="container-fluid">
-          <h1 class="bree-font">Events</h1>
+          <h1 class="bree-font">Resources</h1>
           <br>
           <% @resources_public.each do |resource| %>
           <p class="font-16"><%= link_to resource.name, resource_path(resource) %></p>
