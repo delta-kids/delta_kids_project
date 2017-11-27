@@ -1,16 +1,16 @@
 <div class="wholePage">
   <div class="row">
-    <div class="col-xs-12 col-sm-12 col-md-12 login-image">
-
+    <div class="col-xs-12 col-sm-12 col-md-12 login-image login-container">
+      <h1 class="login-header bree-font">Request Password Reset</h1>
       <div class="col-xs-12 col-sm-6 col-md-4 col-sm-offset-3 col-md-offset-4 form-field">
       <%= form_tag password_resets_path, :method => :post do %>
-      <div class="field">
         <%= label_tag :email %>
-        <%= text_field_tag :email, params[:email] %>
+        <%= text_field_tag :email, params[:email], class: 'form-control' %>
       </div>
-      <div class="actions"><%= submit_tag "Reset Password" %></div>
-      <% end %>
+      <div class="col-xs-12 col-sm-6 col-md-4 col-sm-offset-3 col-md-offset-4 form-field">
+      <%= submit_tag "Reset Password", class: 'btn btn-primary' %>
     </div>
+      <% end %>
 
     </div>
   </div>
