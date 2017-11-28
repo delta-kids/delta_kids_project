@@ -67,10 +67,34 @@
                 </div>
               </div>
             </div>
-
           </div>
+
+          <div class="container-fluid">
+            <p class="bree-font">Additional Resources</p>
+            <div class="calendar-subsection2-details">
+              <p class="calendar-subsection2-header2 bree-font26">Deltaassist Family & Community Services</p>
+              <p class="font-16">Online directory of community services.</p>
+              <div class="event-info">
+                <p class="font-16">604-594-3455</p>
+                <p class="font-16">9097 120 Street, Delta B.C. V4C 6R7</p>
+              </div>
+              <a class="font-16" href="http://www.deltaassist.com/about-deltassist/find-a-service">http://www.deltaassist.com/about-deltassist/find-a-service</a>
+            </div>
+          <br>
+            <div class="calendar-subsection2-details">
+              <p class="calendar-subsection2-header2 bree-font26">BC211</p>
+              <p class="font-16">Referalls and online directory of community services.</p>
+              <div class="event-info">
+                <p class="font-16">Call 211</p>
+                <p class="font-16">Delta, BC</p>
+              </div>
+              <a class="font-16" href="http://redbookonline.bc211.ca/">http://redbookonline.bc211.ca/</a>
+            </div>
+          </div>
+
           <div class="container-fluid">
             <a id="results"></a>
+            <br>
             <p class="bree-font">Results (<%= @map_search_results.total_count %>)</p>
             <% for event in @map_search_results %>
             <% if event.has_attribute?(:event_type_id) %>
