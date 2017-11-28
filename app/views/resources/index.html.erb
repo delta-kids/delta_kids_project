@@ -60,7 +60,9 @@
             <div class="share-view">
               <div class="event-info1">
                 <%= image_tag "icon-share.svg", class: "event-info-icon" %>
-                <p class="resource-info-txt">Share PDF</p>
+                <p class="resource-info-txt">
+                <%= link_to 'Download PDF', asset_path(r.resource_file), download: "" %></p>
+
               </div>
               <div class="event-info1">
                 <%= image_tag "icon-acrobat.svg", class: "event-info-icon" %>
