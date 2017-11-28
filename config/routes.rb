@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'password_resets/new'
+
   get 'signup', to: 'users#new', as: 'signup'
   get 'login', to: 'sessions#new', as: 'login'
   delete 'signout', to: 'sessions#destroy', as: 'signout'
@@ -92,15 +94,11 @@ Rails.application.routes.draw do
 
 
   resources :resources
-
   resources :whats_new_items
-
   resources :services
-
   resources :events
-
   resources :organizations
-
   resources :programs
+  resources :password_resets
 
 end

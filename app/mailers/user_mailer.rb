@@ -6,4 +6,10 @@ class UserMailer < ApplicationMailer
     @url  = 'http://deltakids.ca/dashboard'
     mail(to: @user.email, subject: 'Welcome to Delta Kids')
   end
+
+  def password_reset(user)
+    @user = user
+    mail :to => user.email, :subject => "Password Reset"
+  end
+
 end

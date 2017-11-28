@@ -1,0 +1,32 @@
+<div class="wholePage">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 login-image login-container">
+      <h1 class="login-header bree-font">Password Reset</h1>
+
+        <%= form_for @user, :url => password_reset_path(params[:id]) do |f| %>
+        <% if @user.errors.any? %>
+        <div class="error_messages">
+          <h2>Form is invalid</h2>
+          <ul>
+            <% for message in @user.errors.full_messages %>
+            <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+        <% end %>
+        <div class="col-xs-12 col-sm-6 col-md-4 col-sm-offset-3 col-md-offset-4 form-field">
+          <%= f.label :password %>
+          <%= f.password_field :password, class: 'form-control' %>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-4 col-sm-offset-3 col-md-offset-4 form-field">
+          <%= f.label :password_confirmation %>
+          <%= f.password_field :password_confirmation, class: 'form-control' %>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-4 col-sm-offset-3 col-md-offset-4 form-field">
+          <%= f.submit "Update Password", class: 'btn btn-primary' %>
+        </div>
+        <% end %>
+
+    </div>
+  </div>
+</div>

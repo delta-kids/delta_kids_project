@@ -256,6 +256,7 @@ csv.each do |row|
   description: row['Description'],
   approved: true,
   resource_type: row['Type'],
+  resource_file: File.open(File.join(Rails.root,"public/#{row['PDF Name']}.pdf")),
   )
 
   ResourceTopic.create(
