@@ -16,7 +16,7 @@
                 </button>
               </div>
               <div class="modal-body background-color" >
-                <%= render "partials/events_filter_bar" %>
+                <%= render "partials/mobile_events_filter_bar" %>
               </div>
               <div class="modal-footer" style="background-color:#144c81">
                 <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
@@ -88,9 +88,9 @@
 
 
         <div class="container-fluid">
+          <a id="results"></a>
           <p class="bree-font">Results (<%= @events_search.total_count %>)</p>
 
-          <a id="results"></a>
           <% for event in @events_search %>
           <div class="calendar-subsection2-card light-blue-bg-color" style="margin-top:30px">
             <div class="event-image-container">

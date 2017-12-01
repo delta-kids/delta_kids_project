@@ -78,8 +78,8 @@ User.create([
 
 Event.create([
   {title: 'Ladner Test Event',
-  start_date: "2017-10-29",
-  end_date: "2017-10-29",
+  start_date: "2017-12-29",
+  end_date: "2017-12-29",
   start_time: "12:00",
   end_time: "2:00",
   event_location: "Ladner",
@@ -88,7 +88,7 @@ Event.create([
   approved: true,
   featured: true,
   event_type: EventType.find_by(id: 1),
-  registration: "Registered",
+  registration: "Registration Required",
   description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
   more_info: "www.codecore.ca",
   contact_name: "John Doe",
@@ -97,8 +97,8 @@ Event.create([
 
 Event.create([
   {title: 'North Delta Test Event',
-  start_date: "2017-10-25",
-  end_date: "2017-10-25",
+  start_date: "2017-12-11",
+  end_date: "2017-12-11",
   start_time: "17:00",
   end_time: "18:00",
   event_location: "North Delta",
@@ -107,7 +107,7 @@ Event.create([
   approved: true,
   featured: true,
   event_type: EventType.find_by(id: 2),
-  registration: "Registered",
+  registration: "Registration Required",
   description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
   more_info: "www.codecore.ca",
   contact_name: "John Doe",
@@ -116,8 +116,8 @@ Event.create([
 
 Event.create([
   {title: 'Tsawwassen Test Event',
-  start_date: "2017-10-15",
-  end_date: "2017-10-15",
+  start_date: "2017-12-15",
+  end_date: "2017-12-15",
   start_time: "11:00",
   end_time: "3:00",
   event_location: "Tsawwassen",
@@ -171,7 +171,7 @@ ProgramType.create([
 AgeGroup.create([
 {age: '0-5'},
 {age: '6-12'},
-{age: 'Adults'},
+{age: 'All ages'},
 {age: 'N/A'}
 ])
 

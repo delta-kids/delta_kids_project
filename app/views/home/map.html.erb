@@ -24,7 +24,7 @@
                 </button>
               </div>
               <div class="modal-body background-color" >
-                <%= render "partials/map_filter" %>
+                <%= render "partials/mobile_map_filter" %>
               </div>
               <div class="modal-footer" style="background-color:#144c81">
                 <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
@@ -80,7 +80,7 @@
               </div>
               <a class="font-16" href="http://www.deltaassist.com/about-deltassist/find-a-service">http://www.deltaassist.com/about-deltassist/find-a-service</a>
             </div>
-          <br>
+            <br>
             <div class="calendar-subsection2-details">
               <p class="calendar-subsection2-header2 bree-font26">BC211</p>
               <p class="font-16">Referalls and online directory of community services.</p>
@@ -91,6 +91,7 @@
               <a class="font-16" href="http://redbookonline.bc211.ca/">http://redbookonline.bc211.ca/</a>
             </div>
           </div>
+          
 
           <div class="container-fluid">
             <a id="results"></a>
@@ -102,81 +103,73 @@
               <div class="calendar-subsection2-text" style="background-color: #fff">
                 <div class="calendar-subsection2-details">
                   <p class="calendar-subsection2-header2 bree-font26"><%= event.title %></p>
+                  <p class="ellipsis-3 font-16"><%= event.description %></p>
+                  <p class="font-16"><%= event.address %></p>
+                  <div class="event-info2">
+                    <p><%= link_to 'Learn More', event_learn_more_path(event), class: "event-info-bold2 font-16" %></p>
+                    <%= image_tag "cursor.svg", class: "event-info-icon2" %>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <% elsif event.has_attribute?(:program_type_id) %>
+            <div class="calendar-subsection2-card light-blue-bg-color" style="margin-top:30px">
+              <div class="calendar-subsection2-text" style="background-color: #fff">
+                <div class="calendar-subsection2-details">
+                  <p class="calendar-subsection2-header2 bree-font26"><%= event.organization.name %></p>
+                  <p class="ellipsis-3 font-16"><%= event.description %></p>
+                  <div class="">
+                    <p class="font-16">
+                      <%= event.organization.address %>
+                    </p>
+                  </div>
+                  <div class="event-info2">
+                    <p><%= link_to 'Learn More', program_learn_more_path(event), class: "event-info-bold2 font-16" %></p>
+                    <%= image_tag "cursor.svg", class: "event-info-icon2" %>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <% elsif event.has_attribute?(:service_type_id) %>
+            <div class="calendar-subsection2-card light-blue-bg-color" style="margin-top:30px">
+              <div class="calendar-subsection2-text" style="background-color: #fff">
+                <div class="calendar-subsection2-details">
+                  <p class="calendar-subsection2-header2 bree-font26"><%= event.organization.name %></p>
+                  <p class="ellipsis-3 font-16"><%= event.description %></p>
                   <div class="event-info">
-                    <!-- <div>
-                    <%= image_tag "icon-calendar.svg", class: "event-info-icon" %>
-                    <p class="event-info-txt-bold">Date:</p>
-                    <p class="event-info-txt"><%= event.start_date %></p>
-                    <p class="event-info-txt"> - <%= event.end_date %></p>
-                  </div> -->
-                </div>
-                <p class="ellipsis-3 font-16"><%= event.description %></p>
-                <p class="font-16"><%= event.address %></p>
-                <div class="event-info2">
-                  <!-- <p  class="event-info-bold2">Learn More</p> -->
-                  <p><%= link_to 'Learn More', event_learn_more_path(event), class: "event-info-bold2 font-16" %></p>
-                  <%= image_tag "cursor.svg", class: "event-info-icon2" %>
+                    <p class="font-16"><%= event.organization.address %></p>
+                  </div>
+                  <div class="event-info2">
+                    <p><%= link_to 'Learn More', service_learn_more_path(event), class: "event-info-bold2 font-16" %></p>
+                    <%= image_tag "cursor.svg", class: "event-info-icon2" %>
+                  </div>
                 </div>
               </div>
             </div>
+            <% end %>
+            <% end %>
           </div>
-          <% elsif event.has_attribute?(:program_type_id) %>
-          <div class="calendar-subsection2-card light-blue-bg-color" style="margin-top:30px">
-            <div class="calendar-subsection2-text" style="background-color: #fff">
-              <div class="calendar-subsection2-details">
-                <p class="calendar-subsection2-header2 bree-font26"><%= event.organization.name %></p>
-                <p class="ellipsis-3 font-16"><%= event.description %></p>
-                <div class="">
-                  <p class="font-16"><%= event.organization.address %></p>
-                  <!-- <p class="font-16"><%= event.organization.phone %>&nbsp&nbsp</p> -->
-                </div>
-                <div class="event-info2">
-                  <p><%= link_to 'Learn More', program_learn_more_path(event), class: "event-info-bold2 font-16" %></p>
-                  <%= image_tag "cursor.svg", class: "event-info-icon2" %>
-                </div>
-              </div>
-            </div>
+          <div class="container-fluid center-flex-content bree-font" style="align-items:center;">
+            <%= paginate @map_search_results, window: 2 %>
           </div>
-          <% elsif event.has_attribute?(:service_type_id) %>
-          <div class="calendar-subsection2-card light-blue-bg-color" style="margin-top:30px">
-            <div class="calendar-subsection2-text" style="background-color: #fff">
-              <div class="calendar-subsection2-details">
-                <p class="calendar-subsection2-header2 bree-font26"><%= event.organization.name %></p>
-                <p class="ellipsis-3 font-16"><%= event.description %></p>
-                <div class="event-info">
-                  <p class="font-16"><%= event.organization.address %></p>
-                </div>
-                <div class="event-info2">
-                  <p><%= link_to 'Learn More', service_learn_more_path(event), class: "event-info-bold2 font-16" %></p>
-                  <%= image_tag "cursor.svg", class: "event-info-icon2" %>
-                </div>
-              </div>
-            </div>
-          </div>
-          <% end %>
-          <% end %>
-        </div>
-        <div class="container-fluid center-flex-content bree-font" style="align-items:center;">
-          <%= paginate @map_search_results, window: 2 %>
-        </div>
 
+        </div>
       </div>
-    </div>
-    <script>
+      <script>
 
-    let checkboxValues = JSON.parse(localStorage.getItem('checkboxValues')) || {},
-    $checkboxes = $(".checkbox-container :checkbox");
+      let checkboxValues = JSON.parse(localStorage.getItem('checkboxValues')) || {},
+      $checkboxes = $(".checkbox-container :checkbox");
 
-    $checkboxes.on("change", function(){
-      $checkboxes.each(function(){
-        checkboxValues[this.id] = this.checked;
+      $checkboxes.on("change", function(){
+        $checkboxes.each(function(){
+          checkboxValues[this.id] = this.checked;
+        });
+
+        localStorage.setItem("checkboxValues", JSON.stringify(checkboxValues));
       });
 
-      localStorage.setItem("checkboxValues", JSON.stringify(checkboxValues));
-    });
-
-    // On page load
-    $.each(checkboxValues, function(key, value) {
-      $("#" + key).prop('checked', value);
-    });
-    </script>
+      // On page load
+      $.each(checkboxValues, function(key, value) {
+        $("#" + key).prop('checked', value);
+      });
+      </script>
