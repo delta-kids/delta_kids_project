@@ -30,7 +30,7 @@
     <%= label_tag("eventage2", "6-12 year olds", class:'radio-spacing font-16') %>
     <br>
     <%= check_box_tag("age_group[]","3","checked", id:"eventage3") %>
-    <%= label_tag("eventage3", "Adults", class:'radio-spacing font-16') %>
+    <%= label_tag("eventage3", "All Ages", class:'radio-spacing font-16') %>
     <br>
     <%= check_box_tag("age_group[]","4", "checked", id:"eventage4") %>
     <%= label_tag("eventage4", "N/A", class:'radio-spacing font-16', style:"margin-right:0;") %>
@@ -67,10 +67,10 @@
   </div>
   <div class="collapse-registration collapse in checkbox-container">
     <%= hidden_field_tag "registration[]", '' %>
-    <%= check_box_tag("registration[]","Drop-in", "checked", id:"eventregistration1") %>
+    <%= check_box_tag("registration[]","Drop In", "checked", id:"eventregistration1") %>
     <%= label_tag("eventregistration", "Drop in Program", class:'radio-spacing font-16') %>
     <br>
-    <%= check_box_tag("registration[]","Registration Required", "checked", id:"eventregistration2") %>
+    <%= check_box_tag("registration[]","Registered", "checked", id:"eventregistration2") %>
     <%= label_tag("eventregistration", "Pre-registration", class:'radio-spacing font-16') %>
     <br>
     <hr/ class="filterCard-line">
