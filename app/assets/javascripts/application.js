@@ -36,18 +36,18 @@ $("[href]").each(function() {
     }
 });
 });
-//
-// $(document).ready(function() {
-//   $('.a-chevron').click(function() {
-//     $(this).closest('collapse-where')
-//     $(this).toggleClass('rotate-chevron');
-// });
-// });
+
+$(document).ready(function() {
+  $('.a-chevron').click(function() {
+    $(this).closest('collapse-where')
+    $(this).toggleClass('rotate-chevron');
+});
+});
 
 $(document).ready(function(){
   $('.dateselect-time').timepicker({ 'scrollDefault': 'now' });
 });
 
 $(document).ready(function(){
-  $('.datepicker').datepicker({ dateFormat: 'yy-mm-dd' });
+  $('.datepicker').datepicker({ dateFormat: 'yy-mm-dd ' });
 });

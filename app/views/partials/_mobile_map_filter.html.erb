@@ -10,10 +10,10 @@
           <br>
           <div class="form-group">
             <%= label_tag  "by_start_date", "Start Date" %>
-            <%= text_field_tag "by_start_date",Date.current(), placeholder: "YYYY/MM/DD", class: 'datepicker form date-time-width form-padding' %>
+            <%= text_field_tag "by_start_date",Date.current(), placeholder: "YYYY/MM/DD", class: 'datepicker form date-time-width form-padding',id:"mobile-map-datepicker-1" %>
             <br>
             <%= label_tag  "by_end_date", "End Date", style:"padding-right:6px;" %>
-            <%= text_field_tag "by_end_date",Date.current() + 1.month, placeholder: "YYYY/MM/DD", class: 'datepicker form form-padding date-time-width' %>
+            <%= text_field_tag "by_end_date",Date.current() + 1.month, placeholder: "YYYY/MM/DD", class: 'datepicker form form-padding date-time-width',id:"mobile-map-datepicker-2" %>
           </div>
         </div>
         <br>

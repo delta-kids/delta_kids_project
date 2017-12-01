@@ -2,8 +2,8 @@ class ResourcesController < ApplicationController
     before_action :find_resource, only: [:show, :edit, :update, :destroy]
 
     # has_scope :by_date, :using => [:start_date, :end_date], :type => :hash
-    has_scope :resource_location, type: :array
     has_scope :approved
+    has_scope :resource_location, type: :array
     has_scope :resource_topic, type: :array
     has_scope :resource_age_group, type: :array
     has_scope :resource_type, type: :array

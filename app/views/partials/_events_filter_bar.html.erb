@@ -1,5 +1,3 @@
-
-
         <%= image_tag "filter-header.svg", class: " filter-header-img"  %>
         <br>
         <br>
@@ -26,16 +24,16 @@
           <div class="collapse-for collapse in checkbox-container">
             <%= hidden_field_tag "age_group[]", '0' %>
             <%= check_box_tag("age_group[]","1", "checked", id:"eventage1") %>
-            <%= label_tag(:eventage1, "0-5 year olds", class:'radio-spacing font-16') %>
+            <%= label_tag("eventage1", "0-5 year olds", class:'radio-spacing font-16') %>
             <br>
             <%= check_box_tag("age_group[]","2", "checked", id:"eventage2") %>
-            <%= label_tag(:eventage2, "6-12 year olds", class:'radio-spacing font-16') %>
+            <%= label_tag("eventage2", "6-12 year olds", class:'radio-spacing font-16') %>
             <br>
             <%= check_box_tag("age_group[]","3","checked", id:"eventage3") %>
-            <%= label_tag(:eventage3, "Adults", class:'radio-spacing font-16') %>
+            <%= label_tag("eventage3", "Adults", class:'radio-spacing font-16') %>
             <br>
             <%= check_box_tag("age_group[]","4", "checked", id:"eventage4") %>
-            <%= label_tag(:eventage4, "N/A", class:'radio-spacing font-16', style:"margin-right:0;") %>
+            <%= label_tag("eventage4", "N/A", class:'radio-spacing font-16', style:"margin-right:0;") %>
             <br>
             <hr/ class="filterCard-line">
           </div>
@@ -49,13 +47,13 @@
           <div class="collapse-where collapse in checkbox-container">
             <%= hidden_field_tag "event_location[]", '' %>
             <%= check_box_tag("event_location[]", "Ladner", "checked", id:"eventlocation1") %>
-            <%= label_tag(:eventlocation1, "Ladner", class:'radio-spacing font-16') %>
+            <%= label_tag("eventlocation1", "Ladner", class:'radio-spacing font-16') %>
             <br>
             <%= check_box_tag("event_location[]","North Delta", "checked", id:"eventlocation2") %>
-            <%= label_tag(:eventlocation2, "North Delta", class:'radio-spacing font-16') %>
+            <%= label_tag("eventlocation2", "North Delta", class:'radio-spacing font-16') %>
             <br>
             <%= check_box_tag("event_location[]","Tsawwassen", "checked", id:"eventlocation3") %>
-            <%= label_tag(:eventlocation3, "Tsawwassen", class:'radio-spacing font-16') %>
+            <%= label_tag("eventlocation3", "Tsawwassen", class:'radio-spacing font-16') %>
             <br>
             <hr/ class="filterCard-line">
           </div>
@@ -70,10 +68,10 @@
           <div class="collapse-registration collapse in checkbox-container">
             <%= hidden_field_tag "registration[]", '' %>
             <%= check_box_tag("registration[]","Drop-in", "checked", id:"eventregistration1") %>
-            <%= label_tag(:eventregistration1, "Drop in Program", class:'radio-spacing font-16') %>
+            <%= label_tag("eventregistration", "Drop in Program", class:'radio-spacing font-16') %>
             <br>
             <%= check_box_tag("registration[]","Registration Required", "checked", id:"eventregistration2") %>
-            <%= label_tag(:eventregistration2, "Pre-registration", class:'radio-spacing font-16') %>
+            <%= label_tag("eventregistration", "Pre-registration", class:'radio-spacing font-16') %>
             <br>
             <hr/ class="filterCard-line">
           </div>
@@ -87,10 +85,10 @@
           <div class="collapse-cost collapse in checkbox-container">
             <%= hidden_field_tag "cost[]", '' %>
             <%= check_box_tag("cost[]","Free", "checked", id:"eventcost1") %>
-            <%= label_tag(:eventcost1, "Free", class:'radio-spacing font-16') %>
+            <%= label_tag("eventcost1", "Free", class:'radio-spacing font-16') %>
             <br>
             <%= check_box_tag("cost[]","Paid", "checked", id:"eventcost2") %>
-            <%= label_tag(:eventcost2, "Paid", class:'radio-spacing font-16') %>
+            <%= label_tag("eventcost2", "Paid", class:'radio-spacing font-16') %>
             <br>
             <hr/ class="filterCard-line">
           </div>
@@ -105,22 +103,22 @@
           <div class="collapse-typeof collapse in checkbox-container">
             <%= hidden_field_tag "event_type[]", 0 %>
             <%= check_box_tag("event_type[]", 1, "checked", id:"eventtype1") %>
-            <%= label_tag(:eventtype1, "Arts & Culture", class:'radio-spacing font-16') %>
+            <%= label_tag("eventtype1", "Arts & Culture", class:'radio-spacing font-16') %>
             <br>
             <%= check_box_tag("event_type[]", 2, "checked", id:"eventtype2") %>
-            <%= label_tag(:eventtype2, "Parent & Child", class:'radio-spacing font-16') %>
+            <%= label_tag("eventtype2", "Parent & Child", class:'radio-spacing font-16') %>
             <br>
             <%= check_box_tag("event_type[]", 3, "checked", id:"eventtype3") %>
-            <%= label_tag(:eventtype3, "Childcare & Preschools", class:'radio-spacing font-16') %>
+            <%= label_tag("eventtype3", "Childcare & Preschools", class:'radio-spacing font-16') %>
             <br>
             <%= check_box_tag("event_type[]", 4, "checked", id:"eventtype4") %>
-            <%= label_tag(:eventtype4, "Sports", class:'radio-spacing font-16') %>
+            <%= label_tag("eventtype4", "Sports", class:'radio-spacing font-16') %>
             <br>
             <%= check_box_tag("event_type[]", 5, "checked", id:"eventtype5") %>
-            <%= label_tag(:eventtype5, "Community Clubs", class:'radio-spacing font-16') %>
+            <%= label_tag("eventtype5", "Community Clubs", class:'radio-spacing font-16') %>
             <br>
             <%= check_box_tag("event_type[]", 6, "checked", id:"eventtype6") %>
-            <%= label_tag(:eventtype6, "Education", class:'radio-spacing font-16') %>
+            <%= label_tag("eventtype6", "Education", class:'radio-spacing font-16') %>
             <br>
             <hr/ class="filterCard-line">
           </div>
@@ -142,4 +140,3 @@
         <%= image_tag("cloud1.png",style:"width:100%;height:75px; transform: scaleY(-1); position:relative; bottom:45px") %>
         <%= image_tag("cloud1.png",style:"width:100%;height:75px; position:relative; bottom:45px") %>
         <% end %>
-      
