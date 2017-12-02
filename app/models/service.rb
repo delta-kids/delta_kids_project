@@ -1,6 +1,7 @@
 class Service < ApplicationRecord
 
   mount_uploader :image, ImageUploader
+  mount_uploader :logo, ImageUploader
 
   scope :service_type, -> service_type_id { where(:service_type_id => service_type_id)}
   scope :category, -> category_id { self.includes(:category).where(:category => {:id => category_id}) if self.present? }

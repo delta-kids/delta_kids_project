@@ -1,6 +1,7 @@
 class Program < ApplicationRecord
 
   mount_uploader :image, ImageUploader
+  mount_uploader :logo, ImageUploader
 
   scope :registration, -> registration { where(:registration => registration) }
   scope :program_type, -> program_type_id { where(:program_type_id => program_type_id) }
