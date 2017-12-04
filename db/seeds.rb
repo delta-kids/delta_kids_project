@@ -187,6 +187,7 @@ csv.each do |row|
   address: row['Address'],
   phone: row['Phone Number'],
   website: row['Website'],
+  image: File.open(File.join(Rails.root,"app/assets/images/logos/#{row['Logo']}")),
   )
 
   program_img_file  = File.open(File.join(Rails.root,"app/assets/images/DeltaKids#{rand(4)}.jpg"))
@@ -198,7 +199,6 @@ csv.each do |row|
   registration: row['Registration'],
   cost: row['Cost'],
   image: program_img_file,
-  logo: File.open(File.join(Rails.root,"app/assets/images/logos/#{row['Logo']}")),
   )
 
   ProgramAgeGroup.create(
@@ -219,6 +219,7 @@ csv.each do |row|
    address: row['Address'],
    phone: row['Phone Number'],
    website: row['Website'],
+   image: File.open(File.join(Rails.root,"app/assets/images/logos/#{row['Logo']}")),
   )
 
   service_img_file  = File.open(File.join(Rails.root,"app/assets/images/DeltaKids#{rand(4)}.jpg"))
@@ -229,7 +230,6 @@ csv.each do |row|
   category: Category.find_by(name: row['Category']),
   description: row['Description that relate to service'],
   image: service_img_file,
-  logo: File.open(File.join(Rails.root,"app/assets/images/logos/#{row['Logo']}")),
   )
 
   name_tag = row['Tags'].to_s.split(", ")
