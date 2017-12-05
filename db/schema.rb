@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171122224344) do
+ActiveRecord::Schema.define(version: 20171205230417) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -85,6 +85,7 @@ ActiveRecord::Schema.define(version: 20171122224344) do
     t.boolean "featured"
     t.integer "event_type_id"
     t.integer "user_id"
+    t.text "recurring"
     t.index ["organization_id"], name: "index_events_on_organization_id"
   end
 
@@ -184,7 +185,7 @@ ActiveRecord::Schema.define(version: 20171122224344) do
   end
 
   create_table "resources", force: :cascade do |t|
-    t.string "name"
+    t.string "resource_name"
     t.boolean "feature"
     t.date "feature_start_date"
     t.date "feature_end_date"

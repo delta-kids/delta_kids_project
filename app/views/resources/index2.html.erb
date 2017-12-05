@@ -9,7 +9,7 @@
           <h1 class="bree-font">Resources</h1>
           <br>
           <% @resources.each do |resource| %>
-          <p class="font-16"><%= link_to resource.name, resource_path(resource) %></p>
+          <p class="font-16"><%= link_to resource.resource_name, resource_path(resource) %></p>
           <hr>
           <% end %><div class="container-fluid center-flex-content bree-font" style="align-items:center;">
             <%= paginate @resources, window: 2 %>
@@ -20,7 +20,7 @@
           <h1 class="bree-font">Resources</h1>
           <br>
           <% @resources_public.each do |resource| %>
-          <p class="font-16"><%= link_to resource.name, resource_path(resource) %></p>
+          <p class="font-16"><%= link_to resource.resource_name, resource_path(resource) %></p>
           <hr>
           <% end %><div class="container-fluid center-flex-content bree-font" style="align-items:center;">
             <%= paginate @resources_public, window: 2 %>

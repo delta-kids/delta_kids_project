@@ -5,7 +5,7 @@
 
           <h1 class='bree-font'>Decline Resource Request</h1>
           <br>
-          <h4 class='font-20'><strong>Name: </strong><%= @resource.name %></h4>
+          <h4 class='font-20'><strong>Name: </strong><%= @resource.resource_name %></h4>
           <h4 class='font-20'><strong>Description: </strong><%= @resource.description %></h4>
           <h4 class='font-20'><strong>Contact Name: </strong><%= @resource.contact_name %></h4>
           <p class="bree-font26">Reason:</p>
@@ -13,7 +13,7 @@
           <%= form_tag(decline_resource_mail_path) do %>
         <div class="">
           <div class="contact-form">
-          <%= hidden_field_tag :resource, @resource.name %>
+          <%= hidden_field_tag :resource, @resource.resource_name %>
           <%= hidden_field_tag :resource_email, @resource.contact_email %>
           <%= text_area_tag :message, nil, {placeholder: "Message", class: "form-control contact-form", rows: 10, :required => true} %>
         </div>

@@ -12,10 +12,11 @@
  * It is generally better to create a new file per style scope.
  *
  *= require bootstrap_and_overrides
-  *= require jquery-ui/datepicker
+ *= require jquery-ui/datepicker
  *= require bootstrap-timepicker
  *= require chosen
  *= require font-awesome
+ *= require recurring_select
  *= require_tree .
  *= require_self
  */

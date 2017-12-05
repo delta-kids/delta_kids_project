@@ -1,3 +1,14 @@
+GIT
+  remote: https://github.com/RundownApp/recurring_select.git
+  revision: b934e8d1fb20eb101086d1b03ecd766c97826eae
+  specs:
+    recurring_select (2.0.0)
+      coffee-rails (>= 3.1)
+      ice_cube (>= 0.11)
+      jquery-rails (>= 3.0)
+      rails (>= 3.2)
+      sass-rails (>= 4.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -87,6 +98,7 @@ GEM
     hirb (0.7.3)
     holidays (6.2.0)
     i18n (0.8.6)
+    ice_cube (0.16.2)
     interactive_editor (0.0.10)
       spoon (>= 0.0.1)
     jbuilder (2.7.0)
@@ -257,6 +269,7 @@ DEPENDENCIES
   puma (~> 3.7)
   rails (~> 5.1.1)
   rails-erd
+  recurring_select!
   sass-rails (~> 5.0)
   simple_calendar (~> 2.0)
   social-share-button
@@ -271,4 +284,4 @@ RUBY VERSION
    ruby 2.4.1p111
 
 BUNDLED WITH
-   1.15.4
+   1.16.0

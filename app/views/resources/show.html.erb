@@ -11,7 +11,7 @@
             <div class="col-xs-12">
               <div class="container-fluid">
                 <br>
-                <p class="bree-font"><%= @resource.name %></p>
+                <p class="bree-font"><%= @resource.resource_name %></p>
                 <p class="font-20"><strong>Feature Resource: </strong>
                   <% if @resource.feature? %>Yes</p>
                     <% else %>
@@ -28,7 +28,7 @@
 
                 <br>
                 <% if is_admin? %>
-                
+
                     <%= link_to 'Edit', edit_resource_path(@resource),
                     class: 'btn btn-success form-padding edit-delete-btn-width'  %>
 

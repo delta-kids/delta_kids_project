@@ -38,7 +38,7 @@
           <p class="calendar-subsection2-header"><span class="bree-font mobile-font-16">ACTIVITIES CALENDAR</span></p>
         </div>
         <div class="calendar-subsection2-card" style="margin-top:0px;">
-          <%= month_calendar  do |date| %>
+          <%= month_calendar events: @calendar_events do |date, events| %>
           <%= date.day %>
 
           <div class="day-scroller">
@@ -46,11 +46,10 @@
             <% holiday = Holidays.on(date, :ca_bc, :observed) %>
             <p class="cal-links mobile-font-10" style="color:#144d81"><strong><%= holiday[0][:name] %></strong></p>
             <% end %>
-            <% if @events_by_start_date[date] %>
-            <% @events_by_start_date[date].each do |event|  %>
+            <% events.each do |event|  %>
             <% if Holidays.on(date, :ca, :observed) != [] %>
             <% else %>
-            <% if event.approved != true %>
+            <% if event.approved === false %>
             <% else %>
 
             <div class="popup" onclick="calendarPopup(<%= event.id %>)">
@@ -66,19 +65,14 @@
                     <p class='font-16'><strong style="color:#3fa3da">Address:<br> </strong><%= event.address %></p>
                   <br>
                     <div class="col-xs-12 col-sm-6 col-md-6">
-                      <p class='font-16'><strong style="color:#3fa3da">Start Date:<br> </strong><%= event.start_date %></p>
+
                       <p class='font-16'><strong style="color:#3fa3da">Start Time:<br> </strong><%= event.start_time.strftime("%I:%M%p") %></p>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-6">
-                      <p class='font-16'><strong style="color:#3fa3da">End Date:<br> </strong><%= event.end_date %></p>
-                      <p class='font-16'><strong style="color:#3fa3da">End Time:<br> </strong><%= event.end_time.strftime("%I:%M%p") %></p>
                     </div>
                     <p><%= link_to 'Learn More', event_learn_more_path(event), class: "event-info-bold2 pull-right", style:"color:yellow" %></p>
                   </div>
                 </div>
               </div>
             </div>
-            <% end %>
             <% end %>
             <% end %>
             <% end %>
@@ -103,8 +97,8 @@
                   <div class="event-info1">
                     <%= image_tag "icon-calendar.svg", class: "event-info-icon" %>
                     <p class="event-info-txt-bold">Date:</p>
-                    <p class="event-info-txt"><%= event.start_date %></p>
-                    <p class="event-info-txt"> - <%= event.end_date %></p>
+                    <p class="event-info-txt"><%= event.start_time.strftime("%m/%d/%Y") %></p>
+                    <p class="event-info-txt"> - <%= event.end_time.strftime("%m/%d/%Y") %></p>
                   </div>
                   <div class="event-info1">
                     <%= image_tag "icon-clock.svg", class: "event-info-icon" %>

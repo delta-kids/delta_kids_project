@@ -22,9 +22,9 @@ class Resource < ApplicationRecord
 
   def self.search(term)
     if term
-      where('name ILIKE (?) OR description ILIKE (?)', "%#{term}%", "%#{term}%").order('name ASC')
+      joins(:tags).where('tags.name ILIKE (?) OR resource_name ILIKE (?) OR description ILIKE (?)', "%#{term}%", "%#{term}%", "%#{term}%").order('resource_name ASC')
     else
-      order('name ASC')
+      order('resource_name ASC')
     end
   end
 

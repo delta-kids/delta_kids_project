@@ -18,7 +18,7 @@
                 <% else %>
                 <% @resources.each do |resource| %>
 
-                <p class="font-16"><%= link_to resource.name, resource_path(resource) %></p>
+                <p class="font-16"><%= link_to resource.resource_name, resource_path(resource) %></p>
                 <div class="flex">
 
                 <%= form_for resource do |f| %>
