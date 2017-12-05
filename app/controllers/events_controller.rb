@@ -12,13 +12,11 @@ class EventsController < ApplicationController
   has_scope :event_type, :type => :array
   has_scope :age_group, :type => :array
 
-
-
-
   def index
     @events = apply_scopes(Event).all
     @events_search = @events.page(params[:page]).per(5)
     @events_by_start_date = @events.group_by(&:start_date)
+    @calendar_events = @events.flat_map{ |e| e.calendar_events(params.fetch(:start_time, Time.zone.now).to_date ) }
   end
 
   def index2
@@ -54,10 +52,12 @@ class EventsController < ApplicationController
 
   def create
     @event = Event.new event_params
+    @event.user_id = current_user.id
     if is_admin?
       @event.approved = true
     end
-      @event.user_id = current_user.id
+    @event.start_date = @event.start_time.strftime("%Y/%m/%d")
+    @event.end_date = @event.end_time.strftime("%Y/%m/%d")
     if @event.save
       flash[:notice] = 'Event Created'
       redirect_to event_path(@event)
@@ -68,8 +68,11 @@ class EventsController < ApplicationController
   end
 
   def update
-    @event.update(event_params)
-    redirect_to @event, notice: "Successfully Updated"
+    @event_update = find_event
+    @event_update.start_date = @event_update.start_time.strftime("%Y/%m/%d")
+    @event_update.end_date = @event_update.end_time.strftime("%Y/%m/%d")
+    @event_update.update(event_params)
+    redirect_to @event_update, notice: "Successfully Updated"
   end
 
   def pending_and_approved_events
@@ -79,7 +82,7 @@ class EventsController < ApplicationController
   def destroy
     if is_admin?
       @event.destroy
-      redirect_to events_path, notice: "Event Deleted!"
+      redirect_to dashboard_manage_events_path, notice: "Event Deleted!"
     else
       flash[:alert] = "Access Denied"
       redirect_to @event
@@ -89,7 +92,7 @@ class EventsController < ApplicationController
 
   private
   def event_params
-    params.require(:event).permit([:title, :term, :start_date, :end_date, :start_time, :end_time, :event_repeat, :event_location, :address, :cost, :registration, :more_info, :contact_name, :contact_email, :approved, :age_group_id, :event_type_id, :description, :image, :user_id, { age_group_ids: [] },
+    params.require(:event).permit([:title, :term, :start_date, :end_date, :start_time, :end_time, :event_repeat, :event_location, :address, :cost, :registration, :more_info, :contact_name, :contact_email, :approved, :age_group_id, :event_type_id, :description, :image, :user_id, :recurring, { age_group_ids: [] },
     { tag_ids: [] }
     ])
   end

@@ -18,41 +18,6 @@
             <%= f.text_field :title, class: 'form-control  ' %>
           </div>
 
-          <div class="col-xs-6 col-sm-12">
-            <div class="hidden-xs col-sm-3 col-md-3">
-              <!-- SPACER -->
-            </div>
-            <div class="col-xs-12 col-sm-3 col-md-3 form-field">
-              <label for='start_date'>Start Date</label>
-              <%= f.text_field :start_date, class: 'start-date datepicker date-time-width dashboard-btns',placeholder:"DD/MM/YYYY" %>
-            </div>
-            <div class="col-xs-12 col-sm-3 col-md-3 form-field">
-              <%= f.label :"Start Time", class: ' caps' %>
-              <%= f.text_field :start_time,value: "12:00pm",class: 'dateselect-time date-time-width ui-timepicker-input dashboard-btns' %>
-            </div>
-            <div class="hidden-xs col-sm-3 col-md-3">
-              <!-- SPACER -->
-            </div>
-          </div>
-
-
-          <div class="col-xs-6 col-sm-12">
-            <div class="hidden-xs col-sm-3 col-md-3">
-              <!-- SPACER -->
-            </div>
-            <div class="col-xs-12 col-sm-3 col-md-3 form-field">
-              <label for='end_date'>End Date</label>
-              <%= f.text_field :end_date, class: 'end-date datepicker  date-time-width dashboard-btns',placeholder:"DD/MM/YYYY" %>
-            </div>
-            <div class="col-xs-12 col-sm-3 col-md-3 form-field">
-              <%= f.label :"End Time", class: ' caps' %>
-              <%= f.text_field :end_time,value: "12:00pm", class: 'dateselect-time  date-time-width dashboard-btns' %>
-            </div>
-            <div class="hidden-xs col-sm-3 col-md-3">
-              <!-- SPACER -->
-            </div>
-          </div>
-
           <% if is_admin? %>
           <!-- EVENT FEATURED? -->
           <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2  col-md-offset-3 form-field">
@@ -66,20 +31,25 @@
           </div>
           <% end %>
 
-          <!-- EVENT REPEAT -->
           <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2  col-md-offset-3 form-field">
-            <%= f.label :event_repeat , class:' caps' %>
-            <div class="">
-              <div class="in-block">
-              <%= f.radio_button(:event_repeat, "Weekly") %>
-              <%= label_tag(:event_repeat, "Weekly", class:'radio-spacing') %>
-            </div>
-            <div class="in-block">
-              <%= f.radio_button(:event_repeat, "Never",:checked => true) %>
-              <%= label_tag(:event_repeat, "None", class:'radio-spacing') %>
-            </div>
-            </div>
+            <%= f.label :recurring %>
+            <br>
+            <%= f.select_recurring :recurring, nil, allow_blank: true %>
           </div>
+
+          <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2  col-md-offset-3 form-field">
+            <%= f.label :start_time, "Start Date & Time", class: "" %>
+            <br>
+            <%= f.datetime_select :start_time, class: '', :required => true %>
+          </div>
+
+          <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2  col-md-offset-3 form-field" id="end-time-container">
+            <%= f.label :end_time, "End Date & Time", class: "" %>
+            <br>
+            <%= f.datetime_select :end_time, class: '' %>
+          </div>
+
+
 
           <!-- EVENT LOCATION -->
           <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2  col-md-offset-3 form-field">

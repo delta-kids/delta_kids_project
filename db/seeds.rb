@@ -9,63 +9,21 @@ Topic.destroy_all
 Service.destroy_all
 User.destroy_all
 
-PASSWORD = '123'
+PASSWORD = 'Skuzz123'
 
 User.create([
-  {first_name: 'Hung',
-   last_name: 'H.',
-   email: 'hh@nowayjose.com',
-   password: PASSWORD,
-   is_admin: false,
-   phone: '4u'},
-  {first_name: 'Jesse',
-   last_name: 'J.',
-   email: 'jj@nowayjose.com',
-   password: PASSWORD,
-   is_admin: false,
-   phone: '4u'},
-  {first_name: 'Dylan',
-   last_name: 'D.',
-   email: 'dd@nowayjose.com',
-   password: PASSWORD,
-   is_admin: false,
-   phone: '4u'},
-  {first_name: 'Ruby',
-   last_name: 'R.',
-   email: 'rr@nowayjose.com',
-   password: PASSWORD,
-   is_admin: false,
-   phone: '4u'},
-  {first_name: 'Hano',
-   last_name: 'H.',
-   email: 'ha@nowayjose.com',
-   password: PASSWORD,
-   is_admin: false,
-   phone: '4u'},
+  {first_name: 'Andrea',
+   last_name: 'Lemire',
+   email: 'coordinator@deltakids.ca',
+   password: "Deltakids2017",
+   is_admin: true,
+   phone: ''},
   {first_name: 'Chris',
-   last_name: 'C',
-   email: 'ctest@test.ca',
+   last_name: 'R',
+   email: 'chrisryan@hotmail.ca',
    password: PASSWORD,
    is_admin: true,
    phone: '4u'},
-  {first_name: 'Carlo',
-   last_name: 'C.',
-   email: 'ca@nowayjose.com',
-   password: PASSWORD,
-   is_admin: false,
-   phone: '4u'},
-  {first_name: 'José',
-   last_name: 'G.',
-   email: 'jg@nowayjose.com',
-   password: PASSWORD,
-   is_admin: true,
-   phone: '4u'},
-   {first_name: 'Tam',
-    last_name: 'K',
-    email: 'tam@codecore.com',
-    password: PASSWORD,
-    is_admin: true,
-    phone: '4u'}
   ])
 
   EventType.create([
@@ -76,62 +34,6 @@ User.create([
   {name: 'Sports'},
   ])
 
-Event.create([
-  {title: 'Ladner Test Event',
-  start_date: "2017-12-29",
-  end_date: "2017-12-29",
-  start_time: "12:00",
-  end_time: "2:00",
-  event_location: "Ladner",
-  address: "4600 Clarence Taylor Crescent, Delta, BC V4K 3X3",
-  cost: "Free",
-  approved: true,
-  featured: true,
-  event_type: EventType.find_by(id: 1),
-  registration: "Registration Required",
-  description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-  more_info: "www.codecore.ca",
-  contact_name: "John Doe",
-  contact_email: "j.doe@fake.ca"},
-])
-
-Event.create([
-  {title: 'North Delta Test Event',
-  start_date: "2017-12-11",
-  end_date: "2017-12-11",
-  start_time: "17:00",
-  end_time: "18:00",
-  event_location: "North Delta",
-  address: "11415 84 Avenue, Delta, BC  V4C 2L9",
-  cost: "Free",
-  approved: true,
-  featured: true,
-  event_type: EventType.find_by(id: 2),
-  registration: "Registration Required",
-  description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-  more_info: "www.codecore.ca",
-  contact_name: "John Doe",
-  contact_email: "j.doe@fake.ca"},
-])
-
-Event.create([
-  {title: 'Tsawwassen Test Event',
-  start_date: "2017-12-15",
-  end_date: "2017-12-15",
-  start_time: "11:00",
-  end_time: "3:00",
-  event_location: "Tsawwassen",
-  address: "1172 56 Street, Delta, BC V4L 2A3",
-  cost: "Free",
-  approved: true,
-  featured: true,
-  event_type: EventType.find_by(id: 4),
-  registration: "Drop In",
-  description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-  more_info: "www.codecore.ca",
-  contact_name: "John Doe",
-  contact_email: "j.doe@fake.ca"},
-])
 
 Topic.create([
 {topic_name: 'Physical Health'},
@@ -252,7 +154,7 @@ csv.each do |row|
   end
 
   Resource.create(
-  name: row['PDF Name'],
+  resource_name: row['PDF Name'],
   feature: row['Feature?'],
   resource_location: row['Location'],
   description: row['Description'],
@@ -262,7 +164,7 @@ csv.each do |row|
   )
 
   ResourceTopic.create(
-  resource: Resource.find_by(name: row['PDF Name']),
+  resource: Resource.find_by(resource_name: row['PDF Name']),
   topic: Topic.find_by(topic_name: row['Topic']),
   )
 
@@ -270,13 +172,13 @@ csv.each do |row|
   resource_tag.each do |r|
 
   ResourceTagging.create(
-  resource: Resource.find_by(name: row['PDF Name']),
+  resource: Resource.find_by(resource_name: row['PDF Name']),
   tag: Tag.find_by(name: r),
   )
 end
 
   ResourceAgeGroup.create(
-  resource: Resource.find_by(name: row['PDF Name']),
+  resource: Resource.find_by(resource_name: row['PDF Name']),
   age_group: AgeGroup.find_by(age: row['Age']),
   )
 

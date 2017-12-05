@@ -44,6 +44,7 @@ gem 'carrierwave', '~> 1.0'
 gem 'has_scope'
 gem 'social-share-button'
 gem 'holidays'
+gem 'recurring_select', github:"RundownApp/recurring_select"
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
