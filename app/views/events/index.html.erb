@@ -61,8 +61,8 @@
                 <div class="row">
                   <div class="col-xs-12 col-sm-12 col-md-12">
                     <%= image_tag(event.image_url.to_s,class:"popup-pic", style:"object-fit:cover;") %>
-                    <p class='font-16'><strong style="color:#3fa3da;margin-top:25px;">Description: </strong><%= event.description %></p>
-                    <p class='font-16'><strong style="color:#3fa3da">Address:<br> </strong><%= event.address %></p>
+                    <p class='font-16'><strong style="color:yellow;margin-top:35px;">Description: </strong><%= event.description %></p>
+                    <p class='font-16'><strong style="color:yellow">Address: </strong><%= event.address %></p>
                   <br>
                     <p><%= link_to 'Learn More', event_learn_more_path(event), class: "event-info-bold2 pull-right", style:"color:yellow" %></p>
                   </div>
