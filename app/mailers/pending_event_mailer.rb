@@ -1,5 +1,5 @@
 class PendingEventMailer < ApplicationMailer
-  default from: 'chrispbehcon@gmail.com'
+  default from: 'coordinator@deltakids.ca'
 
   def decline_email(event,event_email,message)
     @event = event

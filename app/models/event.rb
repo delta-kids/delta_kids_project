@@ -26,7 +26,7 @@ def calendar_events(start)
       [self]
   else
       schedule(start_time).occurrences(end_time).map do |date|
-          Event.new(id: id, title: title, start_time: date)
+          Event.new(id: id, title: title, start_time: date, end_time: date, description: description, address: address, image: image)
       end
   end
 end
