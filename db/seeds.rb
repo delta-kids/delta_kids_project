@@ -89,7 +89,7 @@ csv.each do |row|
   address: row['Address'],
   phone: row['Phone Number'],
   website: row['Website'],
-  image: File.open(File.join(Rails.root,"app/assets/images/logos/#{row['Logo']}")),
+  image: File.open(File.join(Rails.root,"public/assets/logos/#{row['Logo']}")),
   )
 
   program_img_file  = File.open(File.join(Rails.root,"app/assets/images/DeltaKids#{rand(4)}.jpg"))
@@ -121,7 +121,7 @@ csv.each do |row|
    address: row['Address'],
    phone: row['Phone Number'],
    website: row['Website'],
-   image: File.open(File.join(Rails.root,"app/assets/images/logos/#{row['Logo']}")),
+   image: File.open(File.join(Rails.root,"public/assets/logos/#{row['Logo']}")),
   )
 
   service_img_file  = File.open(File.join(Rails.root,"app/assets/images/DeltaKids#{rand(4)}.jpg"))
