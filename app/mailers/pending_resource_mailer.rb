@@ -1,5 +1,5 @@
 class PendingResourceMailer < ApplicationMailer
-  default from: 'coordinator@deltakids.ca'
+  default from: 'chrispbehcon@gmail.com'
 
   def decline_email(resource,resource_email,message)
     @resource = resource

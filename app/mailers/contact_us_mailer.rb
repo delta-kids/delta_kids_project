@@ -1,5 +1,5 @@
 class ContactUsMailer < ApplicationMailer
-  default to: 'coordinator@deltakids.ca'
+  default to: 'chrispbehcon@gmail.com'
 
   def contact_email(name, email, message)
     @name = name

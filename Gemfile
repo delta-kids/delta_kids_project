@@ -46,6 +46,7 @@ gem 'holidays'
 gem 'recurring_select', github:"RundownApp/recurring_select"
 gem "fog"
 
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
