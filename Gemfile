@@ -46,6 +46,7 @@ gem 'social-share-button'
 gem 'holidays'
 gem 'recurring_select', github:"RundownApp/recurring_select"
 gem "fog"
+gem 'aws-sdk', '~> 3'
 
 
 # Use Capistrano for deployment

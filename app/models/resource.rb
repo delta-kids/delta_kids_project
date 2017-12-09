@@ -1,5 +1,6 @@
 class Resource < ApplicationRecord
 
+
   scope :resource_location, -> resource_location { where(:resource_location => resource_location) }
   scope :resource_type, -> resource_type { where(:resource_type => resource_type) }
   scope :approved, -> approved { where(:approved => true) }
