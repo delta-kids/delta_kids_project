@@ -92,7 +92,7 @@ class EventsController < ApplicationController
 
   private
   def event_params
-    params.require(:event).permit([:title, :term, :start_date, :end_date, :start_time, :end_time, :event_repeat, :event_location, :address, :cost, :registration, :more_info, :contact_name, :contact_email, :approved, :age_group_id, :event_type_id, :description, :image, :user_id, :recurring, { age_group_ids: [] },
+    params.require(:event).permit([:title, :term, :start_date, :end_date, :start_time, :end_time, :event_repeat, :event_location, :address, :cost, :registration, :more_info, :contact_name, :contact_email, :approved, :featured, :age_group_id, :event_type_id, :description, :image, :user_id, :recurring, { age_group_ids: [] },
     { tag_ids: [] }
     ])
   end

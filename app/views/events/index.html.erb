@@ -1,31 +1,31 @@
 <!-- ACTIVITIES CALENDAR PAGE -->
 <div class="wholePage">
-    <div class="row">
-      <div class="col-xs-12 col-sm-12 hidden-md hidden-lg" style="padding-left:5%;padding-right:5%">
-        <button type="button" class="btn btn-primary" id="map_filter-btn" data-toggle="modal" data-target="#calenderFilterModal" style="width:100%;  margin:20px auto 0px auto">
-          Filter
-        </button>
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 hidden-md hidden-lg" style="padding-left:5%;padding-right:5%">
+      <button type="button" class="btn btn-primary" id="map_filter-btn" data-toggle="modal" data-target="#calenderFilterModal" style="width:100%;  margin:20px auto 0px auto">
+        Filter
+      </button>
 
-        <!-- Modal -->
-        <div class="modal fade" id="calenderFilterModal" tabindex="-1" role="dialog" aria-labelledby="calenderFilterModalTitle" aria-hidden="true">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header" style="background-color:#144c81">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color:white">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body background-color" >
-                <%= render "partials/mobile_events_filter_bar" %>
-              </div>
-              <div class="modal-footer" style="background-color:#144c81">
-                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-              </div>
+      <!-- Modal -->
+      <div class="modal fade" id="calenderFilterModal" tabindex="-1" role="dialog" aria-labelledby="calenderFilterModalTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header" style="background-color:#144c81">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color:white">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body background-color" >
+              <%= render "partials/mobile_events_filter_bar" %>
+            </div>
+            <div class="modal-footer" style="background-color:#144c81">
+              <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
             </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
   <div class="calendar-section1 calendar-section1-container" id="calendar-section1">
     <div class="row calendar-row">
@@ -60,11 +60,23 @@
                 <p class="bree-font"><%= link_to event.title, event_learn_more_path(event), class:"", style:"text-decoration:none; color:yellow"  %></p>
                 <div class="row">
                   <div class="col-xs-12 col-sm-12 col-md-12">
-                    <%= image_tag(event.image_url.to_s,class:"popup-pic", style:"object-fit:cover;") %>
-                    <p class='font-16'><strong style="color:yellow;margin-top:35px;">Description: </strong><%= event.description %></p>
-                    <p class='font-16'><strong style="color:yellow">Address: </strong><%= event.address %></p>
-                  <br>
+                    <%= image_tag(Event.find(event.id).image_url.to_s,class:"popup-pic", style:"object-fit:cover;") %>
+                    <div class="col-xs-12 col-sm-12 col-md-12">
+                      <p class='font-16'><strong style="color:yellow;margin-top:35px;">Description: </strong><%= event.description %></p>
+                      <p class='font-16'><strong style="color:yellow">Address: </strong><%= event.address %></p>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6" style="padding:0">
+                      <p class='font-16'><strong style="color:yellow">Start Time: </strong><%= Event.find(event.id).start_time.strftime("%I:%M %p") %></p>
+                      <p class='font-16'><strong style="color:yellow">End Time: </strong><%= Event.find(event.id).end_time.strftime("%I:%M %p") %></p>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6" style="padding:0">
+                      <p class='font-16'><strong style="color:yellow">Start Date: </strong><%= Event.find(event.id).start_time.strftime("%m/%d/%Y") %></p>
+                      <p class='font-16'><strong style="color:yellow">End Date: </strong><%= Event.find(event.id).end_time.strftime("%m/%d/%Y") %></p>
+                    </div>
+                    <br>
+                    <div class="col-xs-12 col-sm-12 col-md-12">
                     <p><%= link_to 'Learn More', event_learn_more_path(event), class: "event-info-bold2 pull-right", style:"color:yellow" %></p>
+                  </div>
                   </div>
                 </div>
               </div>
