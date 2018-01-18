@@ -112,7 +112,7 @@ class HomeController < ApplicationController
 private
 
   def event_params
-    params.slice(:search, :by_start_date, :by_end_date,:approved, :event_location, :registration,:cost,:age_group,:event_type)
+    params.slice(:search, :by_start_date, :by_end_date,:approved, :event_location, :registration,:cost,:age_group, :event_type)
   end
 
   def program_params

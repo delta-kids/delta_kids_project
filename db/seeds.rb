@@ -80,6 +80,8 @@ AgeGroup.create([
 
 require 'csv'
 
+organization_img_file  = File.open(File.join(Rails.root,"app/assets/images/Logo - Delta City.png"))
+
 csv_text = File.read(Rails.root.join('db', 'programs_with_agencies_sheet2.csv'))
 csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')
 csv.each do |row|
@@ -89,6 +91,7 @@ csv.each do |row|
   address: row['Address'],
   phone: row['Phone Number'],
   website: row['Website'],
+  image: organization_img_file,
   # image: File.open(File.join(Rails.root,"public/assets/logos/#{row['Logo']}")),
   )
 
@@ -121,6 +124,7 @@ csv.each do |row|
    address: row['Address'],
    phone: row['Phone Number'],
    website: row['Website'],
+   image: organization_img_file,
   #  image: File.open(File.join(Rails.root,"public/assets/logos/#{row['Logo']}")),
   )
 
@@ -160,7 +164,8 @@ csv.each do |row|
   description: row['Description'],
   approved: true,
   resource_type: row['Type'],
-  resource_file: open("https://s3-us-west-2.amazonaws.com/delta-kids-bucket/uploads/resource/resource_file/#{row['PDF Name'].gsub(/\s+/, '+')}.pdf"),
+  remote_resource_file_url: "https://s3-us-west-2.amazonaws.com/delta-kids-bucket/uploads/resource/resource_file/#{row['PDF Name'].gsub(/\s+/, '+')}.pdf",
+  # resource_file: File.open(File.join(Rails.root,"public/#{row['PDF Name']}.pdf")),
   )
 
   ResourceTopic.create(
