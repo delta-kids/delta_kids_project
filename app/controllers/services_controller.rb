@@ -116,7 +116,7 @@ class ServicesController < ApplicationController
 
 private
   def service_params
-    params.require(:service).permit([:description, :category_id, :service_type_id, :organization_id])
+    params.require(:service).permit([:description, :category_id, :service_type_id, :organization_id, :image])
   end
 
   def find_service

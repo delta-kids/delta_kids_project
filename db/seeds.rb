@@ -160,7 +160,7 @@ csv.each do |row|
   description: row['Description'],
   approved: true,
   resource_type: row['Type'],
-  # resource_file: File.open(File.join(Rails.root,"public/#{row['PDF Name']}.pdf")),
+  resource_file: Rails.root,"https://s3.console.aws.amazon.com/s3/buckets/delta-kids-bucket/uploads/resource/resource_file/#{row['PDF Name'].firstname.gsub(/\s+/, '+')}.pdf",
   )
 
   ResourceTopic.create(
