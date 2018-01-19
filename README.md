@@ -2,7 +2,7 @@
 
 ## What it is
 
-A website created for Delta Kids, a non-profit organization. Created over a three day period, the Delta Kids resource provides information for new parents, and children aged 0-12 in Delta, BC.
+A website created for Delta Kids, a non-profit organization that provides information for new parents, and children aged 0-12 in Delta, BC.
 
 ## Technologies
 
