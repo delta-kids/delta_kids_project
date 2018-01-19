@@ -15,7 +15,7 @@ User.create([
   {first_name: 'Andrea',
    last_name: 'Lemire',
    email: 'coordinator@deltakids.ca',
-   password: "Deltakids2017",
+   password: "DeltaKids2017",
    is_admin: true,
    phone: ''},
   {first_name: 'Chris',
@@ -23,7 +23,13 @@ User.create([
    email: 'chrisryan@hotmail.ca',
    password: PASSWORD,
    is_admin: true,
-   phone: '4u'},
+   phone: ''},
+  {first_name: 'Elaine',
+   last_name: 'White',
+   email: 'ewhite@bgcbc.ca',
+   password: "BGCSC6554",
+   is_admin: true,
+   phone: ''},
   ])
 
   EventType.create([
