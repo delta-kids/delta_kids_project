@@ -4,7 +4,7 @@
     <h2 class="dashboard-headers2">Dashboard</h2>
     <% if user_signed_in? %>
     <% if is_admin? %>
-    <p class="font-16" style="color:#00A3DA">Welcome to the Admin Dashboard,
+    <p class="font-16" style="color:#00A3DA">Welcome to the Admin Dashboard <%= current_user.first_name  %>,
       <br>what would you like to do today?</p>
       <br>
 
