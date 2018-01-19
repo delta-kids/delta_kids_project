@@ -1,121 +1,156 @@
 
-          <%= image_tag "filter-header.svg", class: " filter-header-img"  %>
-          <br>
-          <br>
-          <div class="">
-            <%= form_tag("/resources#results", method: :get) do %>
-            <%= text_field_tag :term, params[:term] %>
-            <%= submit_tag "Search", :name => nil, class:'btn-primary' %>
-          </div>
-          <hr>
+<%= image_tag "filter-header.svg", class: " filter-header-img"  %>
+<br>
+<br>
+<div class="">
+  <%= form_tag("/resources#results", method: :get) do %>
+  <%= text_field_tag :term, params[:term] %>
+  <%= submit_tag "Search", :name => nil, class:'btn-primary' %>
+</div>
+<hr>
 
-          <div class="filterCard">
-            <div class="filter-header-container">
-              <p class="filterCard-header1">Topic</p>
-              <a data-toggle="collapse" data-target=".collapse-for"><%= image_tag "icon-chevron-up.svg", class: "filter-header-chevron a-chevron"  %></a>
-            </div>
-            <div class="collapse-for collapse in checkbox-container">
-              <%= hidden_field_tag "resource_topic[]", '0' %>
-              <%= check_box_tag("resource_topic[]","1", "checked", id:"topic1") %>
-              <%= label_tag("topic1", "Physical Health", class:'radio-spacing font-16') %>
-              <br>
-              <%= check_box_tag("resource_topic[]","2", "checked", id:"topic2") %>
-              <%= label_tag("topic2", "Mental Health", class:'radio-spacing font-16') %>
-              <br>
-              <%= check_box_tag("resource_topic[]","3", "checked", id:"topic3") %>
-              <%= label_tag("topic3", "Child Development", class:'radio-spacing font-16') %>
-              <br>
-              <%= check_box_tag("resource_topic[]","4", "checked", id:"topic4") %>
-              <%= label_tag("topic4", "Policy", class:'radio-spacing font-16') %>
-              <br>
-              <%= check_box_tag("resource_topic[]","5", "checked", id:"topic5") %>
-              <%= label_tag("topic5", "Child Safety", class:'radio-spacing font-16') %>
-              <br>
-              <hr/ class="filterCard-line">
-            </div>
-          </div>
+<div class="filterCard">
+  <div class="filter-header-container">
+    <p class="filterCard-header1">Topic</p>
+    <a data-toggle="collapse" data-target=".collapse-for"><%= image_tag "icon-chevron-up.svg", class: "filter-header-chevron a-chevron"  %></a>
+  </div>
+  <div class="collapse-for collapse in checkbox-container">
+    <%= hidden_field_tag "resource_topic[]", '0' %>
+    <label class="category-select font-16">
+      <%= check_box_tag 'resource_topic[]', '1', "checked" %>
+      &nbsp&nbspPhysical Health
+    </label>
+    <br>
+    <label class="category-select font-16">
+      <%= check_box_tag 'resource_topic[]', '2', "checked" %>
+      &nbsp&nbspMental Health
+    </label>
+    <br>
+    <label class="category-select font-16">
+      <%= check_box_tag 'resource_topic[]', '3', "checked" %>
+      &nbsp&nbspChild Development
+    </label>
+    <br>
+    <label class="category-select font-16">
+      <%= check_box_tag 'resource_topic[]', '4', "checked" %>
+      &nbsp&nbspPolicy
+    </label>
+    <br>
+    <label class="category-select font-16">
+      <%= check_box_tag 'resource_topic[]', '5', "checked" %>
+      &nbsp&nbspChild Safety
+    </label>
+    <br>
+    <hr/ class="filterCard-line">
+  </div>
+</div>
 
-          <div class="filterCard">
-            <div class="filter-header-container">
-              <p class="filterCard-header1">Resource Covers</p>
-              <a data-toggle="collapse" data-target=".collapse-for"><%= image_tag "icon-chevron-up.svg", class: "filter-header-chevron a-chevron"  %></a>
-            </div>
-            <div class="collapse-for collapse in checkbox-container">
-              <%= hidden_field_tag "resource_location[]", '' %>
-              <%= check_box_tag("resource_location[]","Delta","checked", id:"resourcelocation1") %>
-              <%= label_tag('resourcelocation1', "Delta", class:'radio-spacing font-16') %>
-              <br>
-              <%= check_box_tag("resource_location[]","BC","checked", id:"resourcelocation2") %>
-              <%= label_tag("resourcelocation2", "BC", class:'radio-spacing font-16') %>
-              <br>
-              <%= check_box_tag("resource_location[]","Canada","checked", id:"resourcelocation3") %>
-              <%= label_tag("resourcelocation3", "Canada", class:'radio-spacing font-16') %>
-              <br>
-              <%= check_box_tag("resource_location[]","N/A","checked", id:"resourcelocation4") %>
-              <%= label_tag("resourcelocation4", "N/A", class:'radio-spacing font-16') %>
-              <br>
-              <hr/ class="filterCard-line">
-            </div>
-          </div>
+<div class="filterCard">
+  <div class="filter-header-container">
+    <p class="filterCard-header1">Resource Covers</p>
+    <a data-toggle="collapse" data-target=".collapse-for"><%= image_tag "icon-chevron-up.svg", class: "filter-header-chevron a-chevron"  %></a>
+  </div>
+  <div class="collapse-for collapse in checkbox-container">
+    <%= hidden_field_tag "resource_location[]", '' %>
+    <label class="category-select font-16">
+      <%= check_box_tag 'resource_location[]', 'Delta', "checked" %>
+      &nbsp&nbspDelta
+    </label>
+    <br>
+    <label class="category-select font-16">
+      <%= check_box_tag 'resource_location[]', 'BC', "checked" %>
+      &nbsp&nbspBC
+    </label>
+    <br>
+    <label class="category-select font-16">
+      <%= check_box_tag 'resource_location[]', 'Canada', "checked" %>
+      &nbsp&nbspCanada
+    </label>
+    <br>
+    <label class="category-select font-16">
+      <%= check_box_tag 'resource_location[]', 'N/A', "checked" %>
+      &nbsp&nbspN/A
+    </label>
+    <br>
+    <hr/ class="filterCard-line">
+  </div>
+</div>
 
 
-          <div class="filterCard">
-            <div class="filter-header-container">
-              <p class="filterCard-header1">Age Group</p>
-              <a data-toggle="collapse" data-target=".collapse-for"><%= image_tag "icon-chevron-up.svg", class: "filter-header-chevron a-chevron"  %></a>
-            </div>
-            <div class="collapse-for collapse in checkbox-container">
-              <%= hidden_field_tag "resource_age_group[]", '0' %>
-              <%= check_box_tag("resource_age_group[]","1","checked", id:"resourceage1") %>
-              <%= label_tag("resourceage1", "0-5 years", class:'radio-spacing font-16') %>
-              <br>
-              <%= check_box_tag("resource_age_group[]","2","checked", id:"resourceage2") %>
-              <%= label_tag("resourceage2", "6-12 years", class:'radio-spacing font-16') %>
-              <br>
-              <%= check_box_tag("resource_age_group[]","3","checked", id:"resourceage3") %>
-              <%= label_tag("resourceage3", "All Ages", class:'radio-spacing font-16') %>
-              <br>
-              <%= check_box_tag("resource_age_group[]","4","checked", id:"resourceage4") %>
-              <%= label_tag("resourceage4", "N/A", class:'radio-spacing font-16') %>
-              <hr/ class="filterCard-line">
-            </div>
-          </div>
+<div class="filterCard">
+  <div class="filter-header-container">
+    <p class="filterCard-header1">Age Group</p>
+    <a data-toggle="collapse" data-target=".collapse-for"><%= image_tag "icon-chevron-up.svg", class: "filter-header-chevron a-chevron"  %></a>
+  </div>
+  <div class="collapse-for collapse in checkbox-container">
+    <%= hidden_field_tag "resource_age_group[]", '0' %>
+    <label class="category-select font-16">
+      <%= check_box_tag 'resource_age_group[]', '1', "checked" %>
+      &nbsp&nbsp0-5 years
+    </label>
+    <br>
+    <label class="category-select font-16">
+      <%= check_box_tag 'resource_age_group[]', '2', "checked" %>
+      &nbsp&nbsp6-12 years
+    </label>
+    <br>
+    <label class="category-select font-16">
+      <%= check_box_tag 'resource_age_group[]', '3', "checked" %>
+      &nbsp&nbspAll Ages
+    </label>
+    <br>
+    <label class="category-select font-16">
+      <%= check_box_tag 'resource_age_group[]', '4', "checked" %>
+      &nbsp&nbspN/A
+    </label>
+    <br>
+    <hr/ class="filterCard-line">
+  </div>
+</div>
 
-          <div class="filterCard">
-            <div class="filter-header-container">
-              <p class="filterCard-header1">Type of Resource</p>
-              <a data-toggle="collapse" data-target=".collapse-for"><%= image_tag "icon-chevron-up.svg", class: "filter-header-chevron a-chevron"  %></a>
-            </div>
-            <div class="collapse-for collapse in checkbox-container">
-              <%= hidden_field_tag "resource_type[]", '' %>
-              <%= check_box_tag("resource_type[]", "Tips & Guidelines", "checked", id:"resourcetype1") %>
-              <%= label_tag("resourcetype1", "Tips & Guidelines", class:'radio-spacing font-16') %>
-              <br>
-              <%= check_box_tag("resource_type[]", "Report", "checked", id:"resourcetype2") %>
-              <%= label_tag("resourcetype2", "Report", class:'radio-spacing font-16') %>
-              <br>
-              <%= check_box_tag("resource_type[]","Research", "checked", id:"resourcetype3") %>
-              <%= label_tag("resourcetype3", "Research", class:'radio-spacing font-16') %>
-              <br>
-              <%= check_box_tag("resource_type[]","Poster", "checked", id:"resourcetype4") %>
-              <%= label_tag("resourcetype4", "Poster", class:'radio-spacing font-16') %>
-
-              <hr/ class="filterCard-line">
-            </div>
-          </div>
-          <div class="center-flex-content">
-            <%= submit_tag 'Filter', class:"btn-primary btn-lg filter-btn" %>
-          </div>
-          <% end %>
-          <div class="center-flex-content">
-            <%= button_to "Add New Resource", new_resource_path, :method => "get", class:"btn-primary btn-lg filter-btn" %>
-          </div>
-          <% if @resources_search.total_count == 0 %>
-          <%= image_tag("girl-search-not-found-with-rainbow.svg",style:"width:100%;height:350px;") %>
-          <%= image_tag("cloud1.png",style:"width:100%;height:75px; transform: scaleY(-1); position:relative; bottom:45px") %>
-          <%= image_tag("cloud1.png",style:"width:100%;height:75px; position:relative; bottom:45px") %>
-          <% else %>
-          <%= image_tag("girl-search-with-rainbow.svg",style:"width:100%;height:350px;") %>
-          <%= image_tag("cloud1.png",style:"width:100%;height:75px; transform: scaleY(-1); position:relative; bottom:45px") %>
-          <%= image_tag("cloud1.png",style:"width:100%;height:75px; position:relative; bottom:45px") %>
-          <% end %>
+<div class="filterCard">
+  <div class="filter-header-container">
+    <p class="filterCard-header1">Type of Resource</p>
+    <a data-toggle="collapse" data-target=".collapse-for"><%= image_tag "icon-chevron-up.svg", class: "filter-header-chevron a-chevron"  %></a>
+  </div>
+  <div class="collapse-for collapse in checkbox-container">
+    <%= hidden_field_tag "resource_type[]", '' %>
+    <label class="category-select font-16">
+      <%= check_box_tag 'resource_type[]', 'Tips & Guidelines', "checked" %>
+      &nbsp&nbspTips & Guidelines
+    </label>
+    <br>
+    <label class="category-select font-16">
+      <%= check_box_tag 'resource_type[]', 'Report', "checked" %>
+      &nbsp&nbspReport
+    </label>
+    <br>
+    <label class="category-select font-16">
+      <%= check_box_tag 'resource_type[]', 'Research', "checked" %>
+      &nbsp&nbspResearch
+    </label>
+    <br>
+    <label class="category-select font-16">
+      <%= check_box_tag 'resource_type[]', 'Poster', "checked" %>
+      &nbsp&nbspPoster
+    </label>
+    <br>
+    <hr/ class="filterCard-line">
+  </div>
+</div>
+<div class="center-flex-content">
+  <%= submit_tag 'Filter', class:"btn-primary btn-lg filter-btn" %>
+</div>
+<% end %>
+<div class="center-flex-content">
+  <%= button_to "Add New Resource", new_resource_path, :method => "get", class:"btn-primary btn-lg filter-btn" %>
+</div>
+<% if @resources_search.total_count == 0 %>
+<%= image_tag("girl-search-not-found-with-rainbow.svg",style:"width:100%;height:350px;") %>
+<%= image_tag("cloud1.png",style:"width:100%;height:75px; transform: scaleY(-1); position:relative; bottom:45px") %>
+<%= image_tag("cloud1.png",style:"width:100%;height:75px; position:relative; bottom:45px") %>
+<% else %>
+<%= image_tag("girl-search-with-rainbow.svg",style:"width:100%;height:350px;") %>
+<%= image_tag("cloud1.png",style:"width:100%;height:75px; transform: scaleY(-1); position:relative; bottom:45px") %>
+<%= image_tag("cloud1.png",style:"width:100%;height:75px; position:relative; bottom:45px") %>
+<% end %>
