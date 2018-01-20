@@ -73,7 +73,8 @@ ProgramType.create([
 {name: 'Childcare & Preschools'},
 {name: 'Sports'},
 {name: 'Community Clubs'},
-{name: 'Education'}
+{name: 'Education'},
+{name: 'School Break Camps'}
 ])
 
 AgeGroup.create([
@@ -106,14 +107,14 @@ csv.each do |row|
   Program.create(
   program_type: ProgramType.find_by(name:row['Programs']),
   organization: Organization.find_by(name:row['Agencies']),
-  description: row['Short Description that relate to program'],
+  program_description: row['Short Description that relate to program'],
   registration: row['Registration'],
   cost: row['Cost'],
   image: program_img_file,
   )
 
   ProgramAgeGroup.create(
-  program: Program.find_by(description: row['Short Description that relate to program']),
+  program: Program.find_by(program_description: row['Short Description that relate to program']),
   age_group: AgeGroup.find_by(age: row['Age Group']),
   )
 
@@ -140,7 +141,7 @@ csv.each do |row|
   service_type: ServiceType.find_by(name: row['Service']),
   organization: Organization.find_by(name: row['Agency']),
   category: Category.find_by(name: row['Category']),
-  description: row['Description that relate to service'],
+  service_description: row['Description that relate to service'],
   image: service_img_file,
   )
 

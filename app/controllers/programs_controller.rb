@@ -39,7 +39,7 @@ class ProgramsController < ApplicationController
     @sports6_12 = @programs.where("program_type_id = '4'").order(program_description: :asc).page(params[:page]).per(8)
     @education6_12 = @programs.where("program_type_id = '6'").order(program_description: :asc).page(params[:page]).per(8)
     @communityclubs = @programs.where("program_type_id = '5'").order(program_description: :asc).page(params[:page]).per(8)
-    @childandpreschool6_12 = @programs.where("program_type_id = '3'").order(program_description: :asc).page(params[:page]).per(8)
+    @school_break_camps = @programs.where("program_type_id = '7'").order(program_description: :asc).page(params[:page]).per(8)
     @load_program = @programs.order(program_description: :asc).page(params[:page]).per(8)
 
     url = request.path_info
@@ -51,8 +51,8 @@ class ProgramsController < ApplicationController
       @load_program = @education6_12
     elsif url.include?('6_12/community_clubs')
       @load_program = @communityclubs
-    elsif url.include?('6_12/childcare')
-      @load_program = @childandpreschool6_12
+    elsif url.include?('6_12/school_break_camps')
+      @load_program = @school_break_camps
     end
   end
 
