@@ -11,7 +11,7 @@
           <% @services.each do |service| %>
           <p class="font-16"><strong><%= service.organization.name  %></strong>
             <br>
-            <%= link_to service.description, service_path(service) %></p>
+            <%= link_to service.service_description, service_path(service) %></p>
           <hr>
           <% end %>
           <div class="container-fluid center-flex-content bree-font" style="align-items:center;">

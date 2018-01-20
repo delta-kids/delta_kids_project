@@ -10,7 +10,7 @@
         <% @programs.each do |program| %>
         <p class="font-16"><strong><%= program.organization.name  %></strong>
           <br>
-          <%= link_to program.description, program_path(program) %></p>
+          <%= link_to program.program_description, program_path(program) %></p>
           <hr>
           <% end %>
         <div class="container-fluid center-flex-content bree-font" style="align-items:center;">

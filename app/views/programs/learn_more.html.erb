@@ -14,7 +14,7 @@
           <!-- text body below image -->
           <div class="container-fluid" style="padding-left:30px">
             <p class="bree-font"><%= @program.organization.name %></p>
-            <p class="font-16"><%= @program.description %></p>
+            <p class="font-16"><%= @program.program_description %></p>
           </div>
 
           <!-- contact information -->
@@ -56,7 +56,7 @@
             <h2>Share</h2>
             <br>
             <!-- share buttons -->
-            <%= social_share_button_tag(@program.description, :url => "#{request.protocol}#{request.host_with_port}#{request.fullpath}", :image => @program.image_url.to_s) %>
+            <%= social_share_button_tag(@program.program_description, :url => "#{request.protocol}#{request.host_with_port}#{request.fullpath}", :image => @program.image_url.to_s) %>
           </div>
         </div>
         <br>
@@ -75,7 +75,7 @@
           <div class="info-tag">
             <p class="ellipsis-1 bree-font" style="font-size:24px;margin-bottom:2px;"><%= program.organization.name %>
 
-              <p class="font-16 ellipsis-4"><%= program.description %>
+              <p class="font-16 ellipsis-4"><%= program.program_description %>
                 <br>
               </p>
 

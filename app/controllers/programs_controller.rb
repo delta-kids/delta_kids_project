@@ -10,12 +10,12 @@ class ProgramsController < ApplicationController
     @whats_new_items_random = WhatsNewItem.all.limit(3).order("RANDOM()")
     @age_group = "0-5"
     @programs = Program.all.joins(:age_groups).where(:age_groups => {:id => '1'})
-    @artsandculture0_5 = @programs.where("program_type_id = '1'").order(description: :asc).page(params[:page]).per(8)
-    @sports0_5 = @programs.where("program_type_id = '4'").order(description: :asc).page(params[:page]).per(8)
-    @education0_5 = @programs.where("program_type_id = '6'").order(description: :asc).page(params[:page]).per(8)
-    @parentandchild0_5 = @programs.where("program_type_id = '2'").order(description: :asc).page(params[:page]).per(8)
-    @childandpreschool0_5 = @programs.where("program_type_id = '3'").order(description: :asc).page(params[:page]).per(8)
-    @load_program = @programs.order(description: :asc).page(params[:page]).per(8)
+    @artsandculture0_5 = @programs.where("program_type_id = '1'").order(program_description: :asc).page(params[:page]).per(8)
+    @sports0_5 = @programs.where("program_type_id = '4'").order(program_description: :asc).page(params[:page]).per(8)
+    @education0_5 = @programs.where("program_type_id = '6'").order(program_description: :asc).page(params[:page]).per(8)
+    @parentandchild0_5 = @programs.where("program_type_id = '2'").order(program_description: :asc).page(params[:page]).per(8)
+    @childandpreschool0_5 = @programs.where("program_type_id = '3'").order(program_description: :asc).page(params[:page]).per(8)
+    @load_program = @programs.order(program_description: :asc).page(params[:page]).per(8)
 
     url = request.path_info
     if url.include?('0_5/arts_culture')
@@ -35,12 +35,12 @@ class ProgramsController < ApplicationController
     @whats_new_items_random = WhatsNewItem.all.limit(3).order("RANDOM()")
     @age_group = "6-12"
     @programs = Program.all.joins(:age_groups).where(:age_groups => {:id => '2'})
-    @artsandculture6_12 = @programs.where("program_type_id = '1'").order(description: :asc).page(params[:page]).per(8)
-    @sports6_12 = @programs.where("program_type_id = '4'").order(description: :asc).page(params[:page]).per(8)
-    @education6_12 = @programs.where("program_type_id = '6'").order(description: :asc).page(params[:page]).per(8)
-    @communityclubs = @programs.where("program_type_id = '5'").order(description: :asc).page(params[:page]).per(8)
-    @childandpreschool6_12 = @programs.where("program_type_id = '3'").order(description: :asc).page(params[:page]).per(8)
-    @load_program = @programs.order(description: :asc).page(params[:page]).per(8)
+    @artsandculture6_12 = @programs.where("program_type_id = '1'").order(program_description: :asc).page(params[:page]).per(8)
+    @sports6_12 = @programs.where("program_type_id = '4'").order(program_description: :asc).page(params[:page]).per(8)
+    @education6_12 = @programs.where("program_type_id = '6'").order(program_description: :asc).page(params[:page]).per(8)
+    @communityclubs = @programs.where("program_type_id = '5'").order(program_description: :asc).page(params[:page]).per(8)
+    @childandpreschool6_12 = @programs.where("program_type_id = '3'").order(program_description: :asc).page(params[:page]).per(8)
+    @load_program = @programs.order(program_description: :asc).page(params[:page]).per(8)
 
     url = request.path_info
     if url.include?('6_12/arts_culture')
@@ -102,7 +102,7 @@ class ProgramsController < ApplicationController
 
   private
   def program_params
-    params.require(:program).permit([:description, :registration, :cost, :program_type_id, :organization_id, :image ])
+    params.require(:program).permit([:program_description, :registration, :cost, :program_type_id, :organization_id, :image ])
   end
 
   def find_program

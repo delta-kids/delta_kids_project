@@ -10,9 +10,9 @@ class Program < ApplicationRecord
     if self.has_attribute?(:event_type_id)
       where('title ILIKE (?) OR description ILIKE (?)', "%#{term}%", "%#{term}%").order('title ASC')
     elsif self.has_attribute?(:program_type_id)
-      where('description ILIKE (?)', "%#{term}%").order('description ASC')
+      where('program_description ILIKE (?)', "%#{term}%").order('description ASC')
     elsif self.has_attribute?(:service_type_id)
-      where('description ILIKE (?)', "%#{term}%").order('description ASC')
+      where('service_description ILIKE (?)', "%#{term}%").order('description ASC')
   end
 
 }
@@ -23,7 +23,7 @@ class Program < ApplicationRecord
   has_many :ProgramAgeGroups, dependent: :destroy
   has_many :age_groups, through: :ProgramAgeGroups
 
-  validates :description, { presence: {message: "must be provided"}}
+  validates :program_description, { presence: {message: "must be provided"}}
   validates :registration, inclusion: { in: ['Registered', 'Drop In'] }
   validates :cost, inclusion: { in: ['Free', 'Paid'] }
 

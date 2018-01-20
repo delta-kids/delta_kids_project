@@ -57,7 +57,7 @@ class HomeController < ApplicationController
     @events.order(title: :asc) +
      @programs.includes(:organization).order("organizations.name asc") +
       @services.includes(:organization).order("organizations.name asc")
-       
+
     @map_search_results = Kaminari.paginate_array(@all_results).page(params[:page]).per(5)
 
 
@@ -81,7 +81,7 @@ class HomeController < ApplicationController
       <br>
       <img src='#{event.image_url.to_s}' class='img-responsive' style='width:100%;height:250px;object-fit: cover'></img>
       <br>
-      <p class='font-16'>#{event.description}</p>
+      <p class='font-16'>#{event.program_description}</p>
       <p class='font-16'>#{event.organization.address}</p>
       <a class='event-info-bold2 font-16' href='programs/learn_more/#{event.id}'>Learn More</a>"
 
@@ -94,7 +94,7 @@ class HomeController < ApplicationController
       <br>
       <img src='#{event.image_url.to_s}' class='img-responsive' style='width:100%;height:250px;object-fit: cover'></img>
       <br>
-      <p class='font-16'>#{event.description}</p>
+      <p class='font-16'>#{event.service_description}</p>
       <p class='font-16'>#{event.organization.address}</p>
       <a class='event-info-bold2 font-16' href='services/learn_more/#{event.id}'>Learn More</a>"
       marker.lat event.organization.latitude
