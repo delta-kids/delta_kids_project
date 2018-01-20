@@ -9,7 +9,9 @@
           <h1 class="bree-font">Services</h1>
           <br>
           <% @services.each do |service| %>
-          <p class="font-16"><strong>Description: </strong><%= link_to service.description, service_path(service) %></p>
+          <p class="font-16"><strong><%= service.organization.name  %></strong>
+            <br>
+            <%= link_to service.description, service_path(service) %></p>
           <hr>
           <% end %>
           <div class="container-fluid center-flex-content bree-font" style="align-items:center;">

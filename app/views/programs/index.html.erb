@@ -8,9 +8,11 @@
         <h1 class="bree-font">Programs</h1>
         <br>
         <% @programs.each do |program| %>
-        <p class="font-16"><strong>Description: </strong><%= link_to program.description, program_path(program) %></p>
-        <hr>
-        <% end %>
+        <p class="font-16"><strong><%= program.organization.name  %></strong>
+          <br>
+          <%= link_to program.description, program_path(program) %></p>
+          <hr>
+          <% end %>
         <div class="container-fluid center-flex-content bree-font" style="align-items:center;">
           <%= paginate @programs, window: 2 %>
         </div>
