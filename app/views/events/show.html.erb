@@ -57,7 +57,7 @@
                         <%= link_to 'Edit', edit_event_path(@event),
                         class: 'btn btn-success form-padding edit-delete-btn-width',style:"margin-right:5%;"  %>
 
-                        <%= link_to 'Delete', edit_event_path(@event),
+                        <%= link_to 'Delete', event_path(@event),
                         method: :delete,
                         data: {confirm: 'Are you sure?'},
                         class: 'btn btn-danger edit-delete-btn-width', style:'color:white !important;' %>
