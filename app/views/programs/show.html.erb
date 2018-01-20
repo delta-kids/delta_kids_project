@@ -15,7 +15,7 @@
             <p class="font-20"><strong>Registration: </strong><%= @program.registration %></p>
             <p class="font-20"><strong>Cost: </strong><%= @program.cost %></p>
             <p class="font-20"><strong>Organization: </strong><%= @program.organization.name %></p>
-            <div class="">
+            <div class="" style="max-height:300px; max-width:500px;">
               <%= image_tag(@program.image_url.to_s, style:"width:100%;height:100%;") %>
             </div>
             <br>
