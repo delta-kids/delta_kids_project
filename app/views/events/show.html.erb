@@ -37,27 +37,32 @@
                   <% if is_admin? %>
                   <br>
                   <br>
-                      <%= link_to 'Edit', edit_event_path(@event),
-                      class: 'btn btn-success form-padding edit-delete-btn-width'  %>
+                  <div class="center-flex-content">
 
-                      <%= link_to 'Delete', event_path(@event),
-                                            method: :delete,
-                                            data: {confirm: 'Are you sure?'},
-                                            class: 'btn btn-danger edit-delete-btn-width', style:'color:white !important;' %>
+                    <%= link_to 'Edit', edit_event_path(@event),
+                    class: 'btn btn-success form-padding edit-delete-btn-width',style:"margin-right:5%;"  %>
+
+                    <%= link_to 'Delete', edit_event_path(@event),
+                    method: :delete,
+                    data: {confirm: 'Are you sure?'},
+                    class: 'btn btn-danger edit-delete-btn-width', style:'color:white !important;' %>
+                  </div>
 
                       <% elsif @event.approved? %>
                       <% else  %>
                       <br>
                       <br>
-                      <%= link_to 'Edit', edit_event_path(@event),
-                      class: 'btn btn-success form-padding edit-delete-btn-width'  %>
+                      <div class="center-flex-content">
 
-                      <%= link_to 'Delete', event_path(@event),
-                                            method: :delete,
-                                            data: {confirm: 'Are you sure?'},
-                                            class: 'btn btn-danger edit-delete-btn-width', style:'color:white !important;' %>
+                        <%= link_to 'Edit', edit_event_path(@event),
+                        class: 'btn btn-success form-padding edit-delete-btn-width',style:"margin-right:5%;"  %>
+
+                        <%= link_to 'Delete', edit_event_path(@event),
+                        method: :delete,
+                        data: {confirm: 'Are you sure?'},
+                        class: 'btn btn-danger edit-delete-btn-width', style:'color:white !important;' %>
+                      </div>
                       <% end %>
-                      <br>
                       <br>
 
                       <% if is_admin? %><% else %>

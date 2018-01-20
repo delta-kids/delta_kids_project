@@ -74,7 +74,7 @@ class ResourcesController < ApplicationController
     def destroy
       if is_admin?
         @resource.destroy
-        redirect_to resources_path, notice: "Resource Deleted!"
+        redirect_to dashboard_manage_resources_path, notice: "Resource Deleted!"
       else
         flash[:alert] = "Access Denied"
         redirect_to @resource
@@ -82,7 +82,7 @@ class ResourcesController < ApplicationController
     end
 
     private
-    
+
     def resource_params
       params.require(:resource).permit([:resource_name, :feature, :feature_start_date, :feature_end_date, :feature_start_time, :feature_end_time, :resource_location, :description, :contact_name, :contact_email, :created_at, :updated_at, :approved, :published_date, :term, :user_id, :resource_file, { topic_ids: [] }, { tag_ids: [] }, { age_group_ids: [] } ])
     end

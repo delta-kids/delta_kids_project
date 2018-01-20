@@ -29,23 +29,29 @@
                 <br>
                 <% if is_admin? %>
 
-                    <%= link_to 'Edit', edit_resource_path(@resource),
-                    class: 'btn btn-success form-padding edit-delete-btn-width'  %>
+                <div class="center-flex-content">
 
-                    <%= link_to 'Delete', resource_path(@resource),
-                                          method: :delete,
-                                          data: {confirm: 'Are you sure?'},
-                                          class: 'btn btn-danger edit-delete-btn-width', style:'color:white !important;' %>
+                  <%= link_to 'Edit', edit_resource_path(@resource),
+                  class: 'btn btn-success form-padding edit-delete-btn-width',style:"margin-right:5%;"  %>
+
+                  <%= link_to 'Delete', edit_resource_path(@resource),
+                  method: :delete,
+                  data: {confirm: 'Are you sure?'},
+                  class: 'btn btn-danger edit-delete-btn-width', style:'color:white !important;' %>
+                </div>
                     <% elsif @resource.approved? %>
                     <% else  %>
 
-                    <%= link_to 'Edit', edit_resource_path(@resource),
-                    class: 'btn btn-success form-padding edit-delete-btn-width'  %>
+                    <div class="center-flex-content">
 
-                    <%= link_to 'Delete', resource_path(@resource),
-                                          method: :delete,
-                                          data: {confirm: 'Are you sure?'},
-                                          class: 'btn btn-danger edit-delete-btn-width', style:'color:white !important;' %>
+                      <%= link_to 'Edit', edit_resource_path(@resource),
+                      class: 'btn btn-success form-padding edit-delete-btn-width',style:"margin-right:5%;"  %>
+
+                      <%= link_to 'Delete', edit_resource_path(@resource),
+                      method: :delete,
+                      data: {confirm: 'Are you sure?'},
+                      class: 'btn btn-danger edit-delete-btn-width', style:'color:white !important;' %>
+                    </div>
                     <% end %>
                     <br>
                     <br>
