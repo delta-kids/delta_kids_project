@@ -67,10 +67,10 @@
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-6" style="padding:0">
                       <p class='font-16'><strong style="color:yellow">Start Time: </strong><%= Event.find(event.id).start_time.strftime("%I:%M %p") %></p>
-                      <p class='font-16'><strong style="color:yellow">End Time: </strong><%= Event.find(event.id).end_time.strftime("%I:%M %p") %></p>
+                      <p class='font-16'><strong style="color:yellow">Start Date: </strong><%= Event.find(event.id).start_time.strftime("%m/%d/%Y") %></p>
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-6" style="padding:0">
-                      <p class='font-16'><strong style="color:yellow">Start Date: </strong><%= Event.find(event.id).start_time.strftime("%m/%d/%Y") %></p>
+                      <p class='font-16'><strong style="color:yellow">End Time: </strong><%= Event.find(event.id).end_time.strftime("%I:%M %p") %></p>
                       <p class='font-16'><strong style="color:yellow">End Date: </strong><%= Event.find(event.id).end_time.strftime("%m/%d/%Y") %></p>
                     </div>
                     <br>

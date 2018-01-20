@@ -3,7 +3,7 @@ class ProgramsController < ApplicationController
 
   # ONLY ADMIN
   def index
-    @programs = Program.order(description: :asc).page(params[:page]).per(25)
+    @programs = Program.includes(:organization).order("organizations.name asc").page(params[:page]).per(25)
   end
 
   def index0_5

@@ -9,10 +9,12 @@
           <h1 class="bree-font">Events</h1>
           <br>
           <% @events.each do |event| %>
-          <p class="font-16"><%= link_to event.title, event_path(event) %></p>
-          <% if event.featured === true %>
-           <p class="font-16">(Featured)</p>
-          <% end %>
+          <p class="font-16">
+            <% if event.featured === true %>
+             (Featured)
+            <% end %>
+            <%= link_to event.title, event_path(event) %>
+          </p>
           <hr>
           <% end %><div class="container-fluid center-flex-content bree-font" style="align-items:center;">
             <%= paginate @events, window: 2 %>

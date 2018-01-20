@@ -4,7 +4,7 @@ class ServicesController < ApplicationController
 
   # ONLY ADMIN
   def index
-    @services = Service.order(description: :asc).page(params[:page]).per(25)
+    @services = Service.includes(:organization).order("organizations.name asc").page(params[:page]).per(25)
   end
 
   def show

@@ -53,7 +53,11 @@ class HomeController < ApplicationController
     @programs = apply_scopes(Program, program_params).all
     @services = apply_scopes(Service, service_params).all
 
-    @all_results = @events + @programs + @services
+    @all_results =
+    @events.order(title: :asc) +
+     @programs.includes(:organization).order("organizations.name asc") +
+      @services.includes(:organization).order("organizations.name asc")
+       
     @map_search_results = Kaminari.paginate_array(@all_results).page(params[:page]).per(5)
 
 
