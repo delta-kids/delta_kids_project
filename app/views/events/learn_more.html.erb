@@ -57,12 +57,6 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="col-xs-12 col-sm-6 col-md-6">
               <p class="font-20"><strong>Address:</strong> <%= @event.address %></p>
-              <p class="font-20"><strong>PDF File: </strong>
-                <% if @event.pdf_file.present? == false %>
-                No File Selected
-                <% else %>
-                <% end %>
-                <%= link_to "View File", asset_path(@event.pdf_file) %></p>
             </div>
             <div class="col-xs-12 col-sm-6 col-md-6">
               <p class="font-20">
@@ -79,6 +73,13 @@
             </div>
           </div>
           </div>
+          <p class="font-20" style="margin-left:2%"><strong>PDF with additional information: </strong>
+            <% if @event.pdf_file.present? == false %>
+            <% else %>
+            <br>
+            <%= link_to "View File", asset_path(@event.pdf_file) %>
+            <%= link_to 'Download PDF', asset_path(@event.pdf_file), download: "", style:"margin-left:10%" %></p>
+            <% end %>
         </div>
 
         <!-- Share Links -->
