@@ -30,10 +30,17 @@
                   <p class='font-20'><strong>More Info: </strong><%= @event.more_info %></p>
                   <p class='font-20'><strong>Contact Name: </strong><%= @event.contact_name %></p>
                   <p class='font-20'><strong>Contact Email: </strong><%= @event.contact_email %></p>
+                  <p class="font-20"><strong>PDF File: </strong>
+                    <% if @event.pdf_file.present? == false %>
+                        No File Selected
+                    <% else %>
+                    <% end %>
+                    <%= link_to "View File", asset_path(@event.pdf_file) %></p>
                   <p class='font-20'><strong>Image: </strong></p>
                   <div class="" style="max-height:300px; max-width:500px; margin:5% auto 7% auto;">
                     <%= image_tag(@event.image_url.to_s, style:"max-height:300px; max-width:500px") %>
                   </div>
+                  <br>
                   <% if is_admin? %>
                   <br>
                   <br>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180120204022) do
+ActiveRecord::Schema.define(version: 20180125082005) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -86,6 +86,7 @@ ActiveRecord::Schema.define(version: 20180120204022) do
     t.integer "event_type_id"
     t.integer "user_id"
     t.text "recurring"
+    t.string "pdf_file"
     t.index ["organization_id"], name: "index_events_on_organization_id"
   end
 

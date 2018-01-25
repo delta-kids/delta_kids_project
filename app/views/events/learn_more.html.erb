@@ -57,6 +57,12 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="col-xs-12 col-sm-6 col-md-6">
               <p class="font-20"><strong>Address:</strong> <%= @event.address %></p>
+              <p class="font-20"><strong>PDF File: </strong>
+                <% if @event.pdf_file.present? == false %>
+                No File Selected
+                <% else %>
+                <% end %>
+                <%= link_to "View File", asset_path(@event.pdf_file) %></p>
             </div>
             <div class="col-xs-12 col-sm-6 col-md-6">
               <p class="font-20">

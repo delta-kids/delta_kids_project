@@ -52,6 +52,7 @@ end
 
 
   mount_uploader :image, ImageUploader
+  mount_uploader :pdf_file, ImageUploader
 
   has_many :EventTaggings, dependent: :destroy
   has_many :tags, through: :EventTaggings
