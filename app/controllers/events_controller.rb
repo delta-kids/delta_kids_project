@@ -72,6 +72,9 @@ class EventsController < ApplicationController
 
   def update
     @event_update = find_event
+    if @event_update.image.present? == false
+      @event_update.image  = File.open(File.join(Rails.root,"app/assets/images/DeltaKids#{rand(4)}.jpg"))
+    end
     @event_update.start_date = @event_update.start_time.strftime("%Y/%m/%d")
     @event_update.end_date = @event_update.end_time.strftime("%Y/%m/%d")
     @event_update.update(event_params)
