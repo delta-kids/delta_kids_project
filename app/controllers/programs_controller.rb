@@ -9,7 +9,7 @@ class ProgramsController < ApplicationController
   def index0_5
     @whats_new_items_random = WhatsNewItem.all.limit(3).order("RANDOM()")
     @age_group = "0-5"
-    @programs = Program.all.joins(:age_groups).where(:age_groups => {:id => '1'})
+    @programs = Program.includes(:organization).order("organizations.name asc").all.joins(:age_groups).where(:age_groups => {:id => '1'})
     @artsandculture0_5 = @programs.where("program_type_id = '1'").order(program_description: :asc).page(params[:page]).per(8)
     @sports0_5 = @programs.where("program_type_id = '4'").order(program_description: :asc).page(params[:page]).per(8)
     @education0_5 = @programs.where("program_type_id = '6'").order(program_description: :asc).page(params[:page]).per(8)
@@ -34,7 +34,7 @@ class ProgramsController < ApplicationController
   def index6_12
     @whats_new_items_random = WhatsNewItem.all.limit(3).order("RANDOM()")
     @age_group = "6-12"
-    @programs = Program.all.joins(:age_groups).where(:age_groups => {:id => '2'})
+    @programs = Program.includes(:organization).order("organizations.name asc").all.joins(:age_groups).where(:age_groups => {:id => '2'})
     @artsandculture6_12 = @programs.where("program_type_id = '1'").order(program_description: :asc).page(params[:page]).per(8)
     @sports6_12 = @programs.where("program_type_id = '4'").order(program_description: :asc).page(params[:page]).per(8)
     @education6_12 = @programs.where("program_type_id = '6'").order(program_description: :asc).page(params[:page]).per(8)

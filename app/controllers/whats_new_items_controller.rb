@@ -21,6 +21,9 @@ class WhatsNewItemsController < ApplicationController
 
   def create
       @whats_new_item = WhatsNewItem.new whats_new_params
+      if @whats_new_item.image.present? == false
+        @whats_new_item.image  = File.open(File.join(Rails.root,"app/assets/images/DeltaKids#{rand(4)}.jpg"))
+      end
       if @whats_new_item.save
         flash[:notice] = "What's New Item Created"
         redirect_to whats_new_item_path(@whats_new_item)
@@ -31,6 +34,9 @@ class WhatsNewItemsController < ApplicationController
   end
 
   def update
+    if @whats_new_item.image.present? == false
+      @whats_new_item.image  = File.open(File.join(Rails.root,"app/assets/images/DeltaKids#{rand(4)}.jpg"))
+    end
     @whats_new_item.update(whats_new_params)
     redirect_to @whats_new_item, notice: "Successfully Updated"
   end
