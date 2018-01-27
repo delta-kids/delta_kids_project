@@ -96,7 +96,7 @@ class ProgramsController < ApplicationController
 
   def learn_more
     @program = Program.find(params[:id])
-    @similar_programs =  Program.limit(3).order("RANDOM()")
+    @similar_programs = Program.where(program_type_id: @program.program_type_id).limit(3).order("RANDOM()")
   end
 
 

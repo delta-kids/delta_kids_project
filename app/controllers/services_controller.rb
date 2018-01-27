@@ -101,7 +101,7 @@ class ServicesController < ApplicationController
 
   def learn_more
     @service = Service.find(params[:id])
-    @similar_services =  Service.limit(3).order("RANDOM()")
+    @similar_services =  Service.where(service_type_id: @service.service_type_id).limit(3).order("RANDOM()")
   end
 
   def destroy
