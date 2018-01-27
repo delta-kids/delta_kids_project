@@ -60,7 +60,7 @@
                 <p class="bree-font"><%= link_to event.title, event_learn_more_path(event), class:"", style:"text-decoration:none; color:yellow"  %></p>
                 <div class="row">
                   <div class="col-xs-12 col-sm-12 col-md-12">
-                    <%= image_tag(Event.find(event.id).image_url.to_s,class:"popup-pic", style:"object-fit:cover;") %>
+                    <%= image_tag(Event.find(event.id).image_url.to_s,class:"popup-pic", style:"width:100%; height:auto") %>
                     <div class="col-xs-12 col-sm-12 col-md-12">
                       <p class='font-16'><strong style="color:yellow;margin-top:35px;">Description: </strong><%= event.description %></p>
                       <p class='font-16'><strong style="color:yellow">Address: </strong><%= event.address %></p>
