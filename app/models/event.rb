@@ -32,8 +32,14 @@ def calendar_events(start)
 end
 
 
-  scope :by_start_date, -> start_date { where(['start_date >= (?)', start_date ]).or(where.not(recurring: nil))  }
-  scope :by_end_date, -> end_date { where(['start_date <= (?)', end_date ]).or(where.not(recurring: nil)) }
+  scope :by_start_date, -> start_date {
+    where(['start_date >= (?)', start_date ])
+    .or(where(['start_date <= (?) AND end_date >= (?)', start_date, start_date ]))}
+
+  scope :by_end_date, -> end_date {
+    where(['end_date <= (?)', end_date ])
+    .or(where(['start_date <= (?) AND end_date >= (?)', end_date, end_date ])) }
+
   scope :search, -> term {
     if self.has_attribute?(:event_type_id)
       joins(:tags).where('tags.name ILIKE (?) OR title ILIKE (?) OR description ILIKE (?)', "%#{term}%", "%#{term}%", "%#{term}%").order('title ASC')
