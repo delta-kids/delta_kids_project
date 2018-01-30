@@ -28,12 +28,9 @@
 	min-height: 50px;
 	max-height: 100px;
 	max-width: 130px;
-	overflow-x: auto;
-	overflow-y: auto;
+	overflow: -moz-scrollbars-vertical;
+  overflow: scroll;
 }
-
-html { overflow-y: scroll; }
-
 
 .cal-links {
 	color:#3ea3da;
