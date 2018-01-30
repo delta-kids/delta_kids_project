@@ -28,8 +28,8 @@
 	min-height: 50px;
 	max-height: 100px;
 	max-width: 130px;
-	overflow: -moz-scrollbars-vertical;
-  overflow: scroll;
+	overflow-x: auto;
+	overflow-y: auto;
 }
 
 .cal-links {
