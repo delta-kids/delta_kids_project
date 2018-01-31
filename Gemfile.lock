@@ -55,7 +55,6 @@ GEM
     arel (8.0.0)
     autoprefixer-rails (7.1.2.6)
       execjs
-    awesome_print (1.8.0)
     aws-partitions (1.45.0)
     aws-sdk (3.0.1)
       aws-sdk-resources (~> 3)
@@ -916,7 +915,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  awesome_print
   aws-sdk (~> 3)
   bcrypt (~> 3.1.7)
   bootstrap-sass
