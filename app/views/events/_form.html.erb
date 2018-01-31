@@ -120,7 +120,7 @@
             <%= f.label :Tags, class:' caps' %>
             <div class="form-group  dropbox-container">
               <%= f.collection_select :tag_ids,
-              Tag.all,
+              Tag.all.order(name: :asc),
               :id,
               :name,
               {},
