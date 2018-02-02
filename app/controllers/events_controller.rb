@@ -18,7 +18,7 @@ class EventsController < ApplicationController
     @events_by_start_date = @events.group_by(&:start_date)
     @calendar_events = @events.flat_map{ |e| e.calendar_events(
       params.fetch(:by_start_date, Time.zone.now).to_date,
-      params.fetch(:by_end_date, Time.zone.now + 30.days).to_date
+      params.fetch(:by_end_date, Time.zone.now + 6.months).to_date
        ) }
   end
 
