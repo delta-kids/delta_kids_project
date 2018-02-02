@@ -21,7 +21,7 @@ class ResourcesController < ApplicationController
       end
       @resource.user_id = current_user.id
       if @resource.save
-        flash[:notice] = 'Resource create'
+        flash[:notice] = 'Resource Created'
         redirect_to resource_path(@resource)
       else
         flash.now[:alert] = @resource.pretty_errors
