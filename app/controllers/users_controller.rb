@@ -9,7 +9,7 @@ class UsersController < ApplicationController
     if @user.save
       session[:user_id] = @user.id
       UserMailer.welcome_email(@user).deliver!
-      redirect_to dashboard_path, notice: "Thank you for signing up"
+      redirect_to login_path, notice: "Thank you for signing up"
     else
       render :new
     end
