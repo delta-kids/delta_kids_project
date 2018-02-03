@@ -73,8 +73,8 @@
             </div>
           </div>
           </div>
-          <p class="font-20" style="margin-left:2%"><strong>PDF with additional information: </strong>
             <% if @event.pdf_file.present? == false %>
+            <p class="font-20" style="margin-left:2%"><strong>PDF with additional information: </strong>
             <% else %>
             <br>
             <%= link_to "View File", asset_path(@event.pdf_file) %>
