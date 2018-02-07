@@ -36,6 +36,7 @@
       <div class="col-xs-12 col-sm-12 col-md-9 calendar-subsection2">
         <div class="calendar-subsection2-text">
           <p class="calendar-subsection2-header"><span class="bree-font mobile-font-16">ACTIVITIES CALENDAR</span></p>
+          <a id="results"></a>
         </div>
         <div class="calendar-subsection2-card" style="margin-top:0px;">
           <%= month_calendar events: @calendar_events do |date, events| %>
@@ -91,7 +92,6 @@
 
 
         <div class="container-fluid">
-          <a id="results"></a>
           <p class="bree-font">Results (<%= @events_search.total_count %>)</p>
 
           <% for event in @events_search %>
