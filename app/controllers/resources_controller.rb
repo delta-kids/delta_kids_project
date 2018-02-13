@@ -21,8 +21,14 @@ class ResourcesController < ApplicationController
       end
       @resource.user_id = current_user.id
       if @resource.save
+        if is_admin?
+          flash[:notice] = 'Resource Created'
+          redirect_to resource_path(@resource)
+        else
         flash[:notice] = 'Resource Created'
         redirect_to resource_path(@resource)
+        PendingResourceMailer.pending_resource_notice_email(@resource).deliver!
+        end
       else
         flash.now[:alert] = @resource.pretty_errors
         render :new

@@ -1,5 +1,9 @@
 class Resource < ApplicationRecord
+  after_update :send_approved_resource_email, :if => :approved_changed?
 
+  def send_approved_resource_email
+    PendingResourceMailer.approved_resource_email(self).deliver!
+  end
 
   scope :resource_location, -> resource_location { where(:resource_location => resource_location) }
   scope :resource_type, -> resource_type { where(:resource_type => resource_type) }

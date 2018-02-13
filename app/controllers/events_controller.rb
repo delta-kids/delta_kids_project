@@ -56,17 +56,23 @@ class EventsController < ApplicationController
   def create
     @event = Event.new event_params
     @event.user_id = current_user.id
+    @event.start_date = @event.start_time.strftime("%Y/%m/%d")
+    @event.end_date = @event.end_time.strftime("%Y/%m/%d")
     if is_admin?
       @event.approved = true
     end
-    @event.start_date = @event.start_time.strftime("%Y/%m/%d")
-    @event.end_date = @event.end_time.strftime("%Y/%m/%d")
     if @event.image.present? == false
       @event.image  = File.open(File.join(Rails.root,"app/assets/images/DeltaKids#{rand(4)}.jpg"))
     end
     if @event.save
+      if is_admin?
+        flash[:notice] = 'Event Created'
+        redirect_to event_path(@event)
+      else
       flash[:notice] = 'Event Created'
       redirect_to event_path(@event)
+      PendingEventMailer.pending_event_notice_email(@event).deliver!
+      end
     else
       flash.now[:alert] = @event.pretty_errors
       render :new

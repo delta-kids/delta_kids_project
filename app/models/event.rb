@@ -1,5 +1,10 @@
 class Event < ApplicationRecord
   serialize :recurring, Hash
+  after_update :send_approved_event_email, :if => :approved_changed?
+
+  def send_approved_event_email
+    PendingEventMailer.approved_event_email(self).deliver!
+  end
 
   def recurring=(value)
     if value == "null"

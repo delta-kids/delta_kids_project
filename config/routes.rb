@@ -88,9 +88,11 @@ Rails.application.routes.draw do
   match '/contact_mail', to: 'home#contact_mail', via: 'post'
 
   get 'dashboard/pending_and_approved_events/decline/:id', to: 'events#decline', as: 'decline_event'
-  get 'dashboard/pending_and_approved_resources/decline/:id', to: 'resources#decline', as: 'decline_resource'
   match '/decline_event_mail', to: 'events#decline_mail', via: 'post'
+
+  get 'dashboard/pending_and_approved_resources/decline/:id', to: 'resources#decline', as: 'decline_resource'
   match '/decline_resource_mail', to: 'resources#decline_mail', via: 'post'
+
 
 
   resources :resources
