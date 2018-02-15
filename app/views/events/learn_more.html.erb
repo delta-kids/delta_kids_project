@@ -62,7 +62,7 @@
               <p class="font-20">
                 <i class="fa fa-globe" aria-hidden="true">
                 </i>&nbsp&nbsp&nbsp
-                <%= link_to @event.more_info, "http://#{@event.more_info}", class:"wb-all"%>
+                <%= link_to @event.more_info, "http://#{@event.more_info.sub(/^https?\:\/\//, '').sub(/^www./,'')}", :target => "_blank", class:"wb-all" %>
               </p>
               <p class="font-20">
                 <i class="fa fa-envelope align-self" aria-hidden="true"></i>

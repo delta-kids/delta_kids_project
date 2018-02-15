@@ -42,7 +42,7 @@
               <p class="font-20">
                 <i class="fa fa-globe" aria-hidden="true">
                 </i>&nbsp&nbsp&nbsp&nbsp
-                <%= link_to @whats_new_item.website_url, "http://#{@whats_new_item.website_url}", class:"wb-all"%>
+                <%= link_to @whats_new_item.website_url, "http://#{@whats_new_item.website_url.sub(/^https?\:\/\//, '').sub(/^www./,'')}", :target => "_blank", class:"wb-all" %>
               </p>
               <% end %>
               <% if @whats_new_item.email.present? %>
