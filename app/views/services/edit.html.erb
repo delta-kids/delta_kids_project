@@ -15,10 +15,10 @@
           <%= form_for @service do |f| %>
           <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2  col-md-offset-3 form-field">
             <%= f.label :service_description, class:'' %>
-            <%= f.text_area :service_description, class: 'form form-control   caps', :required => true %>
+            <%= f.text_area :service_description, class: 'form form-control', :required => true %>
           </div>
           <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2  col-md-offset-3 form-field">
-            <%= f.label :Organization, class:' caps' %>
+            <%= f.label :Organization %>
             <div class="form-group  dropbox-container" >
               <%= f.collection_select :organization_id,
               Organization.all,
@@ -30,7 +30,7 @@
             </div>
           </div>
           <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2  col-md-offset-3 form-field">
-            <%= f.label :service_type, class:' caps' %>
+            <%= f.label :service_type, "Service Type" %>
             <div class="form-group  dropbox-container" >
               <%= f.collection_select :service_type_id,
               ServiceType.all,
@@ -42,7 +42,7 @@
             </div>
           </div>
           <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2  col-md-offset-3 form-field">
-            <%= f.label :category, class:' caps' %>
+            <%= f.label :category %>
             <div class="form-group  dropbox-container" >
               <%= f.collection_select :category_id,
               Category.all,

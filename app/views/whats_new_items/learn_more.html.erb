@@ -40,9 +40,12 @@
               <% end %>
               <% if @whats_new_item.website_url.present? %>
               <p class="font-20">
+                <% @whats_new_item.website_url.split(/\s*,\s*/).each do |mI| %>
                 <i class="fa fa-globe" aria-hidden="true">
-                </i>&nbsp&nbsp&nbsp&nbsp
-                <%= link_to @whats_new_item.website_url, "http://#{@whats_new_item.website_url.sub(/^https?\:\/\//, '').sub(/^www./,'')}", :target => "_blank", class:"wb-all" %>
+                </i>&nbsp&nbsp&nbsp
+                <%= link_to mI, "http://#{mI.sub(/^https?\:\/\//, '').sub(/^www./,'')}", :target => "_blank", class:"wb-all" %>
+                <br>
+                <% end %>
               </p>
               <% end %>
               <% if @whats_new_item.email.present? %>

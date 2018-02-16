@@ -21,7 +21,7 @@
           <% if is_admin? %>
           <!-- EVENT FEATURED? -->
           <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2  col-md-offset-3 form-field">
-            <%= f.label "Feature Event?", class:' caps' %>
+            <%= f.label "Feature Event?", "Feature Event?" %>
             <div class="">
               <%= f.radio_button(:featured, true) %>
               <%= label_tag(:featured, "Yes", class:'radio-spacing') %>
@@ -78,7 +78,7 @@
 
           <!-- AGE GROUP -->
           <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2  col-md-offset-3 form-field">
-            <%= f.label :age_group, class:' caps' %>
+            <%= f.label :age_group, "Age Group" %>
             <div class="form-group  dropbox-container">
               <%= f.collection_select :age_group_ids,
               AgeGroup.all,
@@ -92,7 +92,7 @@
 
           <!-- COST -->
           <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2  col-md-offset-3 form-field">
-            <%= f.label :cost, class:' caps' %>
+            <%= f.label :cost %>
             <div class="">
               <%= f.radio_button(:cost, "Paid") %>
               <%= label_tag(:cost, "Paid", class:'radio-spacing') %>
@@ -103,7 +103,7 @@
 
           <!-- ACTIVITY TYPE -->
           <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2  col-md-offset-3 form-field">
-            <%= f.label :activity_type, class:' caps' %>
+            <%= f.label :activity_type, "Activity Type" %>
             <div class="form-group  dropbox-container">
               <%= f.collection_select :event_type_id,
               EventType.all,
@@ -117,7 +117,7 @@
 
           <!-- TAGS -->
           <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2  col-md-offset-3 form-field">
-            <%= f.label :Tags, class:' caps' %>
+            <%= f.label :Tags %>
             <div class="form-group  dropbox-container">
               <%= f.collection_select :tag_ids,
               Tag.all.order(name: :asc),
@@ -162,30 +162,30 @@
 
           <!-- MORE INFO, URLs -->
           <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2  col-md-offset-3 form-field">
-            <%= f.label :more_info, class:' caps' %>
-            <%= f.text_field :more_info, class: 'form-control  ', placeholder: "Provide web links here" %>
+            <%= f.label :more_info, "More Info (separate by comma)" %>
+            <%= f.text_field :more_info, class: 'form-control  ', placeholder: "Provide link(s) here 'www.example.ca, www.example2.ca'" %>
           </div>
 
           <!-- CONTACT NAME/EMAIL -->
 
           <% if is_admin? %>
           <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2  col-md-offset-3 form-field">
-            <%= f.label :"Contact name", class:' caps' %>
+            <%= f.label :contact_name, "Contact Name" %>
             <%= f.text_field :contact_name, class: 'form-control ' %>
           </div>
           <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2  col-md-offset-3 form-field">
-            <%= f.label :"Contact email", class:' caps' %>
+            <%= f.label :contact_email, "Contact Email" %>
             <%= f.email_field :contact_email, class: 'form-control ' %>
           </div>
           <br>
           <% else %>
 
           <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2  col-md-offset-3 form-field">
-            <%= f.label :"Contact name", class:' caps' %>
+            <%= f.label :contact_name, "Contact Name" %>
             <%= f.text_field :contact_name, class: 'form-control  ', :required => true %>
           </div>
           <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2  col-md-offset-3 form-field">
-            <%= f.label :"Contact email", class:' caps' %>
+            <%= f.label :contact_email, "Contact email" %>
             <%= f.email_field :contact_email, class: 'form-control  ', :required => true %>
           </div>
           <br>

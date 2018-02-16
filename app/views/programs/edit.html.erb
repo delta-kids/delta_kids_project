@@ -10,15 +10,15 @@
       <div class="col-xs-12 col-sm-8 col-md-9 dash-main-content" style="background-color:white;">
         <div class="">
           <br>
-          <p class="dashboard-headers mobile-font-24">Create Program</p>
+          <p class="dashboard-headers mobile-font-24">Edit Program</p>
 
           <%= form_for @program do |f| %>
           <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2  col-md-offset-3 form-field">
-            <%= f.label :program_description, class:'' %>
-            <%= f.text_area :program_description, class: 'form form-control   caps', :required => true %>
+            <%= f.label :program_description, "Program Description" %>
+            <%= f.text_area :program_description, class: 'form form-control', :required => true %>
           </div>
           <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2  col-md-offset-3 form-field">
-            <%= f.label :registration, class:' caps' %>
+            <%= f.label :registration, "Registration" %>
             <div class="">
               <%= f.radio_button(:registration, "Drop In") %>
               <%= label_tag(:registration, "Drop In", class:'radio-spacing') %>
@@ -27,7 +27,7 @@
             </div>
           </div>
           <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2  col-md-offset-3 form-field">
-            <%= f.label :cost, class:' caps' %>
+            <%= f.label :cost, "Cost" %>
             <div class="">
               <%= f.radio_button(:cost, "Free") %>
               <%= label_tag(:cost, "Free", class:'radio-spacing') %>
@@ -36,7 +36,7 @@
             </div>
           </div>
           <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2  col-md-offset-3 form-field">
-            <%= f.label :program_type, class:' caps' %>
+            <%= f.label :program_type, "Program Type" %>
             <div class="form-group  dropbox-container">
               <%= f.collection_select :program_type_id,
               ProgramType.all,
@@ -48,7 +48,7 @@
             </div>
           </div>
           <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2  col-md-offset-3 form-field">
-            <%= f.label :Organization, class:' caps' %>
+            <%= f.label :Organization, "Organization" %>
             <div class="form-group  dropbox-container" >
               <%= f.collection_select :organization_id,
               Organization.all,
