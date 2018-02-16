@@ -24,7 +24,7 @@
       <%= image_tag(item.image_url.to_s, class:"whats-new-image fit-img") %>
       <h2 class="new-events font-20 ellipsis-1"><%= item.title.upcase %></h2>
 
-      <p class="ellipsis-3 font-16" style="margin-top:10px; min-height:70px"><%= item.description %></p>
+      <p class="ellipsis-3 font-16" style="margin-top:10px; min-height:70px; white-space: pre-line;"><%= item.description %></p>
 
       <i><%= image_tag("cursor.svg", class:"img-responsive cursor") %></i>
       <p><%= link_to 'Learn More', whats_new_item_learn_more_path(item), class: " font-16 learn-more" %></p>

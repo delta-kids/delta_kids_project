@@ -18,7 +18,7 @@
                     No</p>
                 <% end %>
                 <p class="font-20"><strong>Resource Location: </strong><%= @resource.resource_location %></p>
-                <p class="font-20"><strong>Description: </strong><%= @resource.description %></p>
+                <p class="font-20" style="white-space: pre-line;"><strong>Description: </strong><%= @resource.description %></p>
                 <p class='font-20'><strong>Topics: </strong><%= @resource.topics.map(&:topic_name).join(', ') %></p>
                 <p class='font-20'><strong>Age Groups: </strong><%= @resource.age_groups.map(&:age).join(', ') %></p>
                 <p class='font-20'><strong>Tags: </strong><%= @resource.tags.map(&:name).join(', ') %></p>

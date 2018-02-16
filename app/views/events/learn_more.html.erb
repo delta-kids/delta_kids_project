@@ -12,7 +12,7 @@
         <!-- text body below image -->
         <div class="container-fluid" style="padding-left:30px">
           <p class="bree-font"><%= @event.title %></p>
-          <p class="font-20"><%= @event.description %></p>
+          <p class="font-20" style="white-space: pre-line;"><%= @event.description %></p>
         </div>
         <div class="container-fluid">
           <br>
@@ -109,7 +109,7 @@
         <%= image_tag(event.image_url.to_s, class:"similar-events-image fit-img") %>
         <div class="info-tag">
           <p class="ellipsis-1 bree-font" style="font-size:24px;margin-bottom:2px;"><%= event.title %></p>
-          <p class="ellipsis-4 font-16"><%= event.description %>
+          <p class="ellipsis-4 font-16" style="white-space: pre-line;"><%= event.description %>
           <br>
           </p>
           <p class="font-16"><%= link_to 'Learn More', event_learn_more_path(event), class: "learn-more-link" %></p>
