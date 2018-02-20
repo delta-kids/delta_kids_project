@@ -29,7 +29,7 @@
                   <p class='font-20'><strong>Tags: </strong><%= @event.tags.map(&:name).join(', ') %></p>
                   <p class='font-20'><strong>More Info: </strong><%= @event.more_info %></p>
                   <p class='font-20'><strong>Contact Name: </strong><%= @event.contact_name %></p>
-                  <p class='font-20'><strong>Contact Email: </strong><%= @event.contact_email %></p>
+                  <p class='font-20 wb-all'><strong>Contact Email: </strong><%= @event.contact_email %></p>
                   <p class="font-20"><strong>PDF File: </strong>
                     <% if @event.pdf_file.present? == false %>
                         No File Selected
@@ -38,14 +38,23 @@
                     <%= link_to "View File", asset_path(@event.pdf_file) %></p>
                   <p class='font-20'><strong>Image: </strong></p>
                   <div class="" style="max-height:300px; max-width:500px; margin:5% auto 7% auto;">
-                    <%= image_tag(@event.image_url.to_s, style:"max-height:300px; max-width:500px") %>
+                    <%= image_tag(@event.image_url.to_s, class:"fit-img", style:"max-height:300px; max-width:500px") %>
                   </div>
                   <br>
                   <% if is_admin? %>
                   <br>
                   <br>
                   <div class="center-flex-content">
-
+                    <% if @event.approved != true %>
+                    <%= form_for @event do |f| %>
+                      <%= f.hidden_field :approved, value: true %>
+                      <%= f.submit 'Approve', class: 'btn btn-success edit-delete-btn-width form-padding' %>
+                      <% end %>
+                      <%= link_to "Decline", decline_event_path(@event), class: 'btn btn-danger edit-delete-btn-width',style:"margin-left:5%;"  %>
+                    <% end %>
+                  </div>
+                  <br>
+                  <div class="center-flex-content">
                     <%= link_to 'Edit', edit_event_path(@event),
                     class: 'btn btn-success form-padding edit-delete-btn-width',style:"margin-right:5%;"  %>
 
@@ -60,7 +69,6 @@
                       <br>
                       <br>
                       <div class="center-flex-content">
-
                         <%= link_to 'Edit', edit_event_path(@event),
                         class: 'btn btn-success form-padding edit-delete-btn-width',style:"margin-right:5%;"  %>
                       </div>

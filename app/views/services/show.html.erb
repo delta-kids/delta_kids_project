@@ -16,7 +16,7 @@
             <p class="font-20"><strong>Category: </strong><%= @service.category.name %></p>
             <p class="font-20"><strong>Service Type: </strong><%= @service.service_type.name %></p>
             <div class="" style="max-height:300px; max-width:500px; margin:5% auto 7% auto;">
-              <%= image_tag(@service.image_url.to_s, style:"max-height:300px; max-width:500px") %>
+              <%= image_tag(@service.image_url.to_s, class:"fit-img", style:"max-height:300px; max-width:500px") %>
             </div>
             <br>
             <% if is_admin? %>

@@ -7,12 +7,8 @@ class Program < ApplicationRecord
   scope :age_group, -> age_id { Program.includes(:age_groups).where(:age_groups => {:id => age_id}) }
   scope :cost, -> cost { where(:cost => cost) }
   scope :search, -> term {
-    if self.has_attribute?(:event_type_id)
-      where('title ILIKE (?) OR description ILIKE (?)', "%#{term}%", "%#{term}%").order('title ASC')
-    elsif self.has_attribute?(:program_type_id)
-      where('program_description ILIKE (?)', "%#{term}%").order('description ASC')
-    elsif self.has_attribute?(:service_type_id)
-      where('service_description ILIKE (?)', "%#{term}%").order('description ASC')
+    if self.has_attribute?(:program_type_id)
+      joins(:organization).where('organizations.name ILIKE (?) OR program_description ILIKE (?)', "%#{term}%", "%#{term}%").order('description ASC')
   end
 
 }

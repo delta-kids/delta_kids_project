@@ -48,11 +48,7 @@ end
 
   scope :search, -> term {
     if self.has_attribute?(:event_type_id)
-      joins(:tags).where('tags.name ILIKE (?) OR title ILIKE (?) OR description ILIKE (?)', "%#{term}%", "%#{term}%", "%#{term}%").order('title ASC')
-    elsif self.has_attribute?(:program_type_id)
-      where('program_description ILIKE (?)', "%#{term}%").order('description ASC')
-    elsif self.has_attribute?(:service_type_id)
-      where('service_description ILIKE (?)', "%#{term}%").order('description ASC')
+      includes(:tags).where('tags.name ILIKE (?) OR title ILIKE (?) OR description ILIKE (?)', "%#{term}%", "%#{term}%", "%#{term}%").order('title ASC')
   end
 }
   scope :event_location, -> event_location { where(:event_location => event_location) }

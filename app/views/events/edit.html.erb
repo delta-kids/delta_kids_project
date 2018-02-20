@@ -151,13 +151,16 @@
           <!-- IMAGE UPLOADER -->
           <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2  col-md-offset-3 form-field">
             <%= f.label :image, "Image (jpg/png/jpeg)", class: "" %>
-            <%= f.file_field :image, accept: 'image/png,image/jpeg,image/jpg'  %>
+            <%= f.file_field :image, accept: 'image/png,image/jpeg,image/jpg', style:"color:transparent;"  %>
+            <p style="margin-top:2%"><%= File.basename(@event.image.to_s)  %></p>
           </div>
 
           <!-- PDF UPLOADER -->
           <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2  col-md-offset-3 form-field">
             <%= f.label :pdf_file, "PDF File (optional)" ,class: "" %>
-            <%= f.file_field :pdf_file, accept: 'application/pdf'  %>
+            <%= f.file_field :pdf_file, accept: 'application/pdf',
+            style:"color:transparent;"  %>
+            <p style="margin-top:2%"><%= File.basename(@event.pdf_file.to_s)  %></p>
           </div>
 
           <!-- MORE INFO, URLs -->

@@ -28,7 +28,16 @@
 
                 <br>
                 <% if is_admin? %>
-
+                <div class="center-flex-content">
+                  <% if @resource.approved != true %>
+                    <%= form_for @resource do |f| %>
+                      <%= f.hidden_field :approved, value: true %>
+                      <%= f.submit 'Approve', class: 'btn btn-success edit-delete-btn-width form-padding' %>
+                      <% end %>
+                      <%= link_to "Decline", decline_resource_path(@resource), class: 'btn btn-danger edit-delete-btn-width' ,style:"margin-left:5%;" %>
+                  <% end %>
+                </div>
+                <br>
                 <div class="center-flex-content">
 
                   <%= link_to 'Edit', edit_resource_path(@resource),
