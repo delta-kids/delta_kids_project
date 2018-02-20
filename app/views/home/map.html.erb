@@ -104,13 +104,13 @@
                 <div class="calendar-subsection2-details">
                   <p class="calendar-subsection2-header2 bree-font26"><%= event.title %></p>
                   <div class="event-info">
-                    <div class="event-info1">
+                    <div class="">
                       <%= image_tag "icon-calendar.svg", class: "event-info-icon" %>
                       <p class="event-info-txt-bold">Date:</p>
                       <p class="event-info-txt"><%= event.start_time.strftime("%m/%d/%Y") %></p>
                       <p class="event-info-txt"> - <%= event.end_time.strftime("%m/%d/%Y") %></p>
                     </div>
-                    <div class="event-info1">
+                    <div class="">
                       <%= image_tag "icon-clock.svg", class: "event-info-icon" %>
                       <% if event.start_time %>
                       <p class="event-info-txt"><%= event.start_time.strftime("%I:%M %p") %></p>
@@ -119,17 +119,17 @@
                       <p class="event-info-txt"> - <%= event.end_time.strftime("%I:%M %p") %></p>
                       <% end %>
                     </div>
-                    <div class="event-info1">
+                    <div class="">
                       <%= image_tag "icon-baby.svg", class: "event-info-icon" %>
                       <% event.age_groups.each do |age| %>
                       <p class="event-info-txt"><%= age.age %></p>
                       <% end %>
                     </div>
-                    <div class="event-info1">
+                    <div class="">
                       <%= image_tag "icon-tag.svg", class: "event-info-icon" %>
                       <p class="event-info-txt"><%= event.cost %></p>
                     </div>
-                    <div class="event-info1">
+                    <div class="">
                       <%= image_tag "icon-location-pin.svg", class: "event-info-icon" %>
                       <p class="event-info-txt"><%= event.event_location %></p>
                     </div>
