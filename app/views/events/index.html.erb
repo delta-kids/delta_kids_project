@@ -64,9 +64,6 @@
                   <div class="col-xs-12 col-sm-12 col-md-12">
                     <%= image_tag(Event.find(event.id).image_url.to_s,class:"popup-pic", style:"width:100%; height:auto") %>
                     <div class="col-xs-12 col-sm-12 col-md-12">
-                      <p class='font-16'><strong style="color:yellow; margin-top:35px;">Age Group: </strong><% event.age_groups.each do |age| %>
-                        <%= age.age %>
-                        <% end %></p>
                       <p class='font-16' style="white-space: pre-line;"><strong style="color:yellow;">Description: </strong><%= event.description %></p>
                       <p class='font-16'><strong style="color:yellow">Address: </strong><%= event.address %></p>
                     </div>
