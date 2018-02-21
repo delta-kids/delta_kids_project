@@ -149,16 +149,16 @@
                 <div class="calendar-subsection2-details">
                   <p class="calendar-subsection2-header2 bree-font26"><%= event.organization.name %></p>
                   <div class="flex" style="">
+                    <div class="" style="">
+                      <i class="fa fa-info-circle event-info-icon" style="color:#00A3DE; font-size:1.3em"></i>
+                      <p class="event-info-txt"><%= event.program_type.name %></p>
+                    </div>
+                    &nbsp&nbsp
                     <div class="">
                       <%= image_tag "icon-baby.svg", class: "event-info-icon" %>
                       <% event.age_groups.each do |age| %>
                       <p class="event-info-txt"><%= age.age %></p>
                       <% end %>
-                    </div>
-                    &nbsp&nbsp
-                    <div class="" style="">
-                      <%= image_tag "icon-tag.svg", class: "event-info-icon" %>
-                      <p class="event-info-txt"><%= event.cost %></p>
                     </div>
                   </div>
                   <div class="">
@@ -183,8 +183,8 @@
                   <p class="calendar-subsection2-header2 bree-font26"><%= event.organization.name %></p>
                   <div class="flex" style="">
                     <div class="">
-                      <%= image_tag "icon-baby.svg", class: "event-info-icon" %>
-                      <p class="event-info-txt"><%= event.category.name %></p>
+                      <i class="fa fa-info-circle event-info-icon" style="color:#00A3DE;font-size:1.3em"></i>
+                      <p class="event-info-txt"><%= event.service_type.name %></p>
                     </div>
                   </div>
                   <p class="ellipsis-3 font-16"><%= event.service_description %></p>
