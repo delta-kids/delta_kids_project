@@ -13,6 +13,9 @@
             <% if event.featured === true %>
              (Featured)
             <% end %>
+            <% if event.end_date < Time.now.to_date === true %>
+             <span style="color:red">(OLD)</span>
+            <% end %>
             <%= link_to event.title, event_path(event) %>
           </p>
           <hr>
