@@ -13,14 +13,15 @@ class EventsController < ApplicationController
   has_scope :age_group, :type => :array
 
   def index
-    @events = apply_scopes(Event).all.order("start_time::time")
+    @events = apply_scopes(Event).all
     @events_search = @events.page(params[:page]).per(5)
-    @events_by_start_date = @events.group_by(&:start_date)
-    @calendar_events = @events.flat_map{ |e| e.calendar_events(
+    @events_by_start_date = @events.group_by(&:start_time)
+    @calendar_events = @events.sort_by{|ev| ev.start_time.strftime('%H:%M')}.flat_map{ |e| e.calendar_events(
       params.fetch(:by_start_date, Time.zone.now - 3.months ).to_date,
       params.fetch(:by_end_date, Time.zone.now + 3.months).to_date
        ) }
   end
+
 
   def index2
     @events = Event.where(:approved => true).order(title: :asc).page(params[:page]).per(25)
