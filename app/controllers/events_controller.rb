@@ -16,9 +16,9 @@ class EventsController < ApplicationController
     @events = apply_scopes(Event).all
     @events_search = @events.page(params[:page]).per(5)
     @events_by_start_date = @events.group_by(&:start_time)
-    @calendar_events = @events.flat_map{ |e| e.calendar_events(
-      params.fetch(:start_date, Time.zone.now - 3.months ).to_date,
-      params.fetch(:end_date, Time.zone.now + 3.months).to_date
+    @calendar_events = @events.sort_by{|ev| ev.start_time.strftime('%H:%M')}.flat_map{ |e| e.calendar_events(
+      params.fetch(:by_start_date, Time.zone.now - 3.months ).to_date,
+      params.fetch(:by_end_date, Time.zone.now + 3.months).to_date
        ) }
   end
 

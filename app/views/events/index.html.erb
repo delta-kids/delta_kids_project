@@ -47,7 +47,7 @@
             <% holiday = Holidays.on(date, :ca_bc, :observed) %>
             <p class="cal-links mobile-font-10" style="color:#144d81"><strong><%= holiday[0][:name] %></strong></p>
             <% end %>
-            <% events.sort_by{|ev| ev.start_time.strftime("%I:%M %p")}.each do |event|  %>
+            <% events.sort_by{|ev| ev.start_time.strftime('%H:%M')}.each do |event|  %>
             <% if Holidays.on(date, :ca, :observed) != [] %>
             <% else %>
             <% if event.approved === false %>
