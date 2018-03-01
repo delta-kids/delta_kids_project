@@ -26,11 +26,11 @@ def schedule(start)
   schedule
 end
 
-def calendar_events(start_d, end_d)
+def calendar_events()
   if recurring.empty?
       [self]
   else
-      schedule(start_d).occurrences(end_d).map do |date|
+      schedule(self.start_time).occurrences(self.end_time).map do |date|
           Event.new(id: id, title: title, start_time: date, end_time: date, description: description, address: address)
       end
   end

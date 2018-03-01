@@ -90,7 +90,7 @@ class ResourcesController < ApplicationController
     private
 
     def resource_params
-      params.require(:resource).permit([:resource_name, :feature, :feature_start_date, :feature_end_date, :feature_start_time, :feature_end_time, :resource_location, :description, :contact_name, :contact_email, :created_at, :updated_at, :approved, :published_date, :term, :user_id, :resource_file, { topic_ids: [] }, { tag_ids: [] }, { age_group_ids: [] } ])
+      params.require(:resource).permit([:resource_name, :feature, :feature_start_date, :feature_end_date, :feature_start_time, :feature_end_time, :resource_location, :description, :resource_type, :contact_name, :contact_email, :created_at, :updated_at, :approved, :published_date, :term, :user_id, :resource_file, { topic_ids: [] }, { tag_ids: [] }, { age_group_ids: [] } ])
     end
 
     def find_resource
