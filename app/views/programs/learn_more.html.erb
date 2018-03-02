@@ -54,7 +54,7 @@
             <h2>Share</h2>
             <br>
             <!-- share buttons -->
-            <%= social_share_button_tag(@program.program_description, :url => "#{request.protocol}#{request.host_with_port}#{request.fullpath}", :image => @program.image_url.to_s, desc: @program.program_description) %>
+            <%= social_share_button_tag(@program.program_description, :url => "#{request.protocol}#{request.host_with_port}#{request.fullpath}", :image => @program.image_url.to_s) %>
           </div>
         </div>
         <br>
