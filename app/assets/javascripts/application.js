@@ -46,6 +46,7 @@ $(document).ready(function() {
 $(document).ready(function() {
 $('.cal-hl').click(
 function(){
+    $(this).removeClass('cal-highlight-blue');
     $('.cal-highlight-yellow').addClass('cal-highlight-blue')
     $('.cal-highlight-yellow').removeClass('cal-highlight-yellow');
     $(this).addClass('cal-highlight-yellow')
