@@ -47,6 +47,7 @@ $(document).ready(function() {
 $(document).ready(function() {
 $('.cal-hl').click(
 function(){
+    $('.cal-highlight').addClass('cal-highlight2')
     $('.cal-highlight').removeClass('cal-highlight');
     $(this).addClass('cal-highlight')
 });
