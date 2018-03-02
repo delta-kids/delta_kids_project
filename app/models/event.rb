@@ -20,10 +20,9 @@ def rule
   IceCube::Rule.from_hash recurring
 end
 
-def schedule(start,end_d)
+def schedule(start)
   schedule = IceCube::Schedule.new(start)
   schedule.add_recurrence_rule(rule)
-  schedule.occurs_between?(start, end_d)
   schedule
 end
 
@@ -31,7 +30,7 @@ def calendar_events(start_d, end_d)
   if recurring.empty?
       [self]
   else
-      schedule(start_d, end_d).occurrences(end_d).map do |date|
+      schedule(self.start_date).occurrences_between(start_d,end_d).map do |date|
           Event.new(id: id, title: title, start_time: date, end_time: date, description: description, address: address)
       end
   end
