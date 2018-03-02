@@ -92,6 +92,7 @@
 
 
         <div class="container-fluid">
+          <a id="results2"></a>
           <p class="bree-font">Results (<%= @events_search.total_count %>)</p>
 
           <% for event in @events_search %>
@@ -145,7 +146,7 @@
           <% end %>
         </div>
         <div class="container-fluid center-flex-content bree-font" style="align-items:center;">
-          <%= paginate @events_search, window: 2, :params => {:anchor => "results"} %>
+          <%= paginate @events_search, window: 2, :params => {:anchor => "results2"} %>
         </div>
 
       </div>
