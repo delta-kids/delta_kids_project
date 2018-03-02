@@ -2,6 +2,15 @@
 // Place all the styles related to the events controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.cal-highlight-yellow {
+	color:#fff250 !important;
+	font-weight: bold !important;
+}
+
+.cal-highlight-blue {
+	color:#144c80 !important;
+	font-weight: 400 !important;
+}
 
 .fit-img {
 	height:100%;
