@@ -8779,84 +8779,97 @@ button.close {
     display: none !important;
   }
 }
-/* line 6, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 5, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+.cal-highlight-yellow {
+  color: #fff250 !important;
+  font-weight: bold !important;
+}
+
+/* line 10, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+.cal-highlight-blue {
+  color: #144c80 !important;
+  font-weight: 400 !important;
+}
+
+/* line 15, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .fit-img {
   height: 100%;
   width: 100%;
   object-fit: cover;
 }
 
-/* line 12, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 21, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .wholePage {
   background-color: #d1f0f4;
   padding-top: 15px;
 }
 
-/* line 21, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 31, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .event-image-container {
   height: 325px;
   width: 100%;
 }
 
-/* line 26, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 36, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .day-scroller {
+  min-height: 50px;
   max-height: 100px;
   max-width: 130px;
   overflow-x: auto;
   overflow-y: auto;
 }
 
-/* line 33, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 44, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .cal-links {
   color: #3ea3da;
   margin-bottom: 0px;
 }
 
-/* line 42, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 53, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .testClass a {
   margin: 2px;
 }
 
-/* line 46, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 57, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .calendar-row {
   padding: 10px 3% 5% 3%;
 }
 
-/* line 50, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 61, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .font-16 {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
 }
 
-/* line 55, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 66, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .font-20 {
   font-family: 'Open Sans', sans-serif;
   font-size: 20px;
 }
 
-/* line 60, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 71, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .collapse-menu {
   margin-top: 10px;
 }
 
-/* line 64, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 75, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 #calendar-subsection1 {
   background-color: #F0FFFF !important;
   border-radius: 10px;
 }
 
-/* line 69, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 80, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 #calendar-subsection1 img {
   margin: 0;
 }
 
-/* line 73, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 84, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .icon-img {
   height: 35px;
   width: 35px;
 }
 
-/* line 78, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 89, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 #filter-header {
   display: flex;
   flex-direction: row;
@@ -8864,21 +8877,21 @@ button.close {
   justify-content: space-between;
 }
 
-/* line 85, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 96, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 #filterText {
   font-family: BreeSerif-Regular;
   font-size: 30px;
   color: #004C81;
 }
 
-/* line 91, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 102, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .filter-btn {
   width: 200px;
   height: 50px;
   margin-bottom: 50px;
 }
 
-/* line 97, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 108, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .filter-header-img {
   width: 100%;
   margin: 0;
@@ -8886,30 +8899,30 @@ button.close {
   padding-top: 15px;
 }
 
-/* line 104, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 115, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .filter-header-chevron {
   width: 100%;
   height: 100%;
 }
 
-/* line 110, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 121, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .rotate-chevron {
   transform: rotate(180deg);
 }
 
-/* line 114, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 125, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .rotate-chevron {
   transform: rotate(180deg);
 }
 
-/* line 118, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 129, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .filter-header2 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-/* line 125, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 136, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .filterCard-header1 {
   /* For: */
   font-family: 'Open Sans', sans-serif;
@@ -8919,7 +8932,7 @@ button.close {
   margin: 0px;
 }
 
-/* line 134, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 145, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .filter-header-container {
   margin-bottom: 5px;
   display: flex;
@@ -8927,7 +8940,7 @@ button.close {
   align-items: center;
 }
 
-/* line 141, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 152, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .filterCard-header2 {
   /* All locations: */
   font-family: OpenSans-Bold;
@@ -8935,39 +8948,38 @@ button.close {
   color: #000000;
 }
 
-/* line 148, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 159, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .filterCard-list {
   font-family: OpenSans;
   font-size: 16px;
   color: #000000;
 }
 
-/* line 154, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 165, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .calendar-subsection2-image {
   background-color: #D1F0F4;
   width: 100%;
   height: 300px;
 }
 
-/* line 160, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 171, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .calendar-subsection2-card {
   margin-right: 0px;
   margin-bottom: 20px;
   background-color: #fff;
 }
 
-/* line 166, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 177, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .calendar-row .calendar-subsection2 {
-  padding-left: 40px;
   top: 0;
 }
 
-/* line 171, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 181, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .calendar-subsection2-text {
   background: #fff;
 }
 
-/* line 175, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 185, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .calendar-subsection2-header {
   font-family: 'Bree Serif', serif;
   font-size: 36px;
@@ -8978,7 +8990,7 @@ button.close {
   padding-bottom: 5px;
 }
 
-/* line 185, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 195, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .calendar-header {
   font-family: BreeSerif-Regular;
   font-size: 30px;
@@ -8986,25 +8998,25 @@ button.close {
   padding-bottom: 30px;
 }
 
-/* line 192, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 202, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .calendar-subsection2-header2 {
   font-family: 'Open Sans', sans-serif;
   font-size: 20px;
   color: #004C81;
 }
 
-/* line 198, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 208, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .calendar-subsection2-details {
   padding: 8px;
   background-color: #fff;
 }
 
-/* line 203, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 213, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .calendar-subsection2-text {
   background-color: #fff;
 }
 
-/* line 207, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 217, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .event-info-txt-bold {
   /* Event - 04/01/17: */
   font-family: OpenSans-Extrabold;
@@ -9014,7 +9026,7 @@ button.close {
   padding-left: 5px;
 }
 
-/* line 216, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 226, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .event-info-txt {
   /* 4:30pm: */
   font-family: OpenSans;
@@ -9024,14 +9036,14 @@ button.close {
   padding-left: 5px;
 }
 
-/* line 225, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 235, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .event-info-icon {
   width: 20px;
   height: 20px;
   float: left;
 }
 
-/* line 231, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 241, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .event-info-icon2 {
   display: inline;
   width: 20px;
@@ -9039,40 +9051,39 @@ button.close {
   float: left;
 }
 
-/* line 238, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 248, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .event-info1 {
   padding-left: 10px;
-  margin-left: 20px;
 }
 
-/* line 243, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 252, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .event-info2 {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
 }
 
-/* line 249, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 258, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .event-info {
   display: flex;
   justify-content: space-between;
 }
 
-/* line 254, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 263, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .event-paragraph {
   font-family: OpenSans;
   font-size: 16px;
   color: #000000;
 }
 
-/* line 260, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 269, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .event-info-bold2 {
   font-family: OpenSans-Bold;
   font-size: 16px;
   color: #00A3DA;
 }
 
-/* line 266, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 275, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 #button-seemore {
   background: #00A3DA;
   border-radius: 10px;
@@ -9088,7 +9099,7 @@ button.close {
   text-align: center;
 }
 
-/* line 280, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 289, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 #button-add-resource {
   background: #00A3DA;
   border-radius: 10px;
@@ -9105,27 +9116,26 @@ button.close {
   margin-top: 30px;
 }
 
-/* line 296, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 305, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .caps {
   text-transform: capitalize;
 }
 
-/* line 300, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 309, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .create-new-container {
-  width: 60%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-/* line 308, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 316, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .label-radio-space {
   margin-right: 10%;
   font-size: 16px;
 }
 
-/* line 313, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 321, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .create-new-container .form-group {
   display: flex;
   align-items: center;
@@ -9133,80 +9143,80 @@ button.close {
   font-size: 16px;
 }
 
-/* line 320, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 328, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .margin-right {
   margin-right: auto;
 }
 
-/* line 324, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 332, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .margin-left {
   margin-right: auto;
 }
 
-/* line 328, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 336, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .margin-left-10px {
   margin-left: 10px;
 }
 
-/* line 333, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 341, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .label-baseline {
   margin-right: auto;
   width: 25%;
 }
 
-/* line 338, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 346, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .center-flex-content {
   display: flex;
   justify-content: center;
   font-size: 16px;
 }
 
-/* line 344, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 352, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .form-padding {
   margin-left: 10px;
 }
 
-/* line 348, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 356, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .center-flex-content {
   display: flex;
   justify-content: center;
 }
 
-/* line 354, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 362, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .new-admin-form {
   padding: 20px;
   width: 100vw !important;
   background-color: #D1F0F4;
 }
 
-/* line 360, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 368, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .table-hover {
   color: white;
   border-radius: 10px;
   background-color: #00A3DA !important;
 }
 
-/* line 366, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 374, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .table-hover tbody > tr:hover {
   background-color: #004C81 !important;
 }
 
-/* line 370, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 378, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .table-hover button {
   background-color: #F0FFFF !important;
 }
 
-/* line 374, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 382, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .table-hover button:hover {
   background-color: yellow !important;
 }
 
-/* line 378, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 386, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .disable-scrolling {
   overflow: hidden;
 }
 
-/* line 382, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 390, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .popup {
   position: relative;
   display: inline-block;
@@ -9217,11 +9227,11 @@ button.close {
   user-select: none;
 }
 
-/* line 392, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 400, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .popup .popuptext {
   visibility: hidden;
-  width: 700px;
-  height: 600px;
+  width: 50%;
+  height: 80%;
   overflow-y: auto;
   background-color: #144D7D;
   color: #fff;
@@ -9229,35 +9239,35 @@ button.close {
   border-radius: 6px;
   position: fixed;
   z-index: 1;
-  bottom: 10%;
-  right: 13%;
+  bottom: 8%;
+  right: 10%;
 }
 
-/* line 406, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 415, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .fa-times:hover {
   color: #3ea3da !important;
 }
 
-/* line 409, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 418, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .calendar-heading a {
   font-family: 'Open Sans', sans-serif;
   font-size: 20px !important;
 }
 
-/* line 414, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 423, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .calendar-title {
   font-family: 'Bree Serif', serif;
   font-size: 35px !important;
 }
 
-/* line 419, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 428, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .popup-pic {
-  height: 225px;
+  height: 275px;
   width: 100%;
 }
 
 /* Toggle this class - hide and show the popup */
-/* line 426, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 435, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .popup .show {
   visibility: visible;
   -webkit-animation: fadeIn 1s;
@@ -12939,6 +12949,338 @@ a.ui-button:active,
   overflow: visible;
   clip: auto;
 }
+/* -------- resets ---------------*/
+/* line 5, /Users/chrisryan/.rvm/gems/ruby-2.4.1/bundler/gems/recurring_select-b934e8d1fb20/app/assets/stylesheets/recurring_select.scss */
+.rs_dialog_holder {
+  font-size: 14px;
+  color: black;
+}
+/* line 6, /Users/chrisryan/.rvm/gems/ruby-2.4.1/bundler/gems/recurring_select-b934e8d1fb20/app/assets/stylesheets/recurring_select.scss */
+.rs_dialog_holder a {
+  color: black;
+}
+/* line 7, /Users/chrisryan/.rvm/gems/ruby-2.4.1/bundler/gems/recurring_select-b934e8d1fb20/app/assets/stylesheets/recurring_select.scss */
+.rs_dialog_holder input[type=button] {
+  font: small/normal Arial,sans-serif;
+  background: #F5F5F5;
+  color: #444;
+  border: 1px solid #ccc;
+  font-size: 11px;
+  font-weight: bold;
+  height: 27px;
+  line-height: 27px;
+  outline: none;
+  padding: 0 8px;
+  text-align: center;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  position: relative;
+  background-image: -webkit-linear-gradient(top, #f5f5f5, #f1f1f1);
+  /* Chrome 10+, Saf5.1+ */
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f5f5f5), to(#f1f1f1));
+  /* Saf4+, Chrome */
+  background-image: -moz-linear-gradient(top, #f5f5f5, #f1f1f1);
+  /* FF3.6 */
+  background-image: -ms-linear-gradient(top, #f5f5f5, #f1f1f1);
+  /* IE10 */
+  background-image: -o-linear-gradient(top, #f5f5f5, #f1f1f1);
+  /* Opera 11.10+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#f5f5f5',EndColorStr='#f1f1f1');
+}
+/* line 16, /Users/chrisryan/.rvm/gems/ruby-2.4.1/bundler/gems/recurring_select-b934e8d1fb20/app/assets/stylesheets/recurring_select.scss */
+.rs_dialog_holder input[type=button]:hover {
+  border-color: #aaa;
+  color: #222;
+  background-color: #f9f9f9;
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+  -ms-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+}
+/* line 17, /Users/chrisryan/.rvm/gems/ruby-2.4.1/bundler/gems/recurring_select-b934e8d1fb20/app/assets/stylesheets/recurring_select.scss */
+.rs_dialog_holder input[type=button]:focus {
+  border-color: #1E90FF;
+}
+/* line 18, /Users/chrisryan/.rvm/gems/ruby-2.4.1/bundler/gems/recurring_select-b934e8d1fb20/app/assets/stylesheets/recurring_select.scss */
+.rs_dialog_holder input[type=button]:active {
+  border-color: #1E90FF;
+}
+
+/*------- defaults ------------ */
+/* line 23, /Users/chrisryan/.rvm/gems/ruby-2.4.1/bundler/gems/recurring_select-b934e8d1fb20/app/assets/stylesheets/recurring_select.scss */
+.rs_dialog_holder {
+  font-family: helvetica, arial, 'san-serif';
+  color: #222;
+  font-size: 12px;
+}
+
+/*------- specifics ------------ */
+/* line 28, /Users/chrisryan/.rvm/gems/ruby-2.4.1/bundler/gems/recurring_select-b934e8d1fb20/app/assets/stylesheets/recurring_select.scss */
+select option.bold {
+  font-weight: bold;
+  color: red;
+}
+
+/* line 31, /Users/chrisryan/.rvm/gems/ruby-2.4.1/bundler/gems/recurring_select-b934e8d1fb20/app/assets/stylesheets/recurring_select.scss */
+.rs_dialog_holder {
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  padding-left: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+  z-index: 50;
+}
+/* line 32, /Users/chrisryan/.rvm/gems/ruby-2.4.1/bundler/gems/recurring_select-b934e8d1fb20/app/assets/stylesheets/recurring_select.scss */
+.rs_dialog_holder .rs_dialog {
+  background-color: #f6f6f6;
+  border: 1px solid #acacac;
+  -webkit-box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.25);
+  -ms-box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.25);
+  -o-box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.25);
+  box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.25);
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+  border-radius: 7px;
+  display: inline-block;
+  min-width: 200px;
+  margin-left: -125px;
+  overflow: hidden;
+  position: relative;
+}
+/* line 34, /Users/chrisryan/.rvm/gems/ruby-2.4.1/bundler/gems/recurring_select-b934e8d1fb20/app/assets/stylesheets/recurring_select.scss */
+.rs_dialog_holder .rs_dialog .rs_dialog_content {
+  padding: 10px;
+}
+/* line 35, /Users/chrisryan/.rvm/gems/ruby-2.4.1/bundler/gems/recurring_select-b934e8d1fb20/app/assets/stylesheets/recurring_select.scss */
+.rs_dialog_holder .rs_dialog .rs_dialog_content h1 {
+  font-size: 16px;
+  padding: 0px;
+  margin: 0 0 10px 0;
+}
+/* line 36, /Users/chrisryan/.rvm/gems/ruby-2.4.1/bundler/gems/recurring_select-b934e8d1fb20/app/assets/stylesheets/recurring_select.scss */
+.rs_dialog_holder .rs_dialog .rs_dialog_content h1 a {
+  float: right;
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  background-image: url(/assets/recurring_select/cancel-9bd65bf935897e779ac39efbecc48e16546b64316d60eccded14782a95451637.png);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+/* line 39, /Users/chrisryan/.rvm/gems/ruby-2.4.1/bundler/gems/recurring_select-b934e8d1fb20/app/assets/stylesheets/recurring_select.scss */
+.rs_dialog_holder .rs_dialog .rs_dialog_content p {
+  padding: 5px 0;
+  margin: 0;
+  line-height: 14px;
+}
+/* line 40, /Users/chrisryan/.rvm/gems/ruby-2.4.1/bundler/gems/recurring_select-b934e8d1fb20/app/assets/stylesheets/recurring_select.scss */
+.rs_dialog_holder .rs_dialog .rs_dialog_content p label {
+  margin-right: 10px;
+}
+/* line 43, /Users/chrisryan/.rvm/gems/ruby-2.4.1/bundler/gems/recurring_select-b934e8d1fb20/app/assets/stylesheets/recurring_select.scss */
+.rs_dialog_holder .rs_dialog .rs_dialog_content a {
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+/* line 45, /Users/chrisryan/.rvm/gems/ruby-2.4.1/bundler/gems/recurring_select-b934e8d1fb20/app/assets/stylesheets/recurring_select.scss */
+.rs_dialog_holder .rs_dialog .rs_dialog_content .freq_option_section {
+  display: none;
+}
+/* line 46, /Users/chrisryan/.rvm/gems/ruby-2.4.1/bundler/gems/recurring_select-b934e8d1fb20/app/assets/stylesheets/recurring_select.scss */
+.rs_dialog_holder .rs_dialog .rs_dialog_content .freq_option_section label {
+  font-weight: bold;
+}
+/* line 47, /Users/chrisryan/.rvm/gems/ruby-2.4.1/bundler/gems/recurring_select-b934e8d1fb20/app/assets/stylesheets/recurring_select.scss */
+.rs_dialog_holder .rs_dialog .rs_dialog_content .freq_option_section .rs_interval {
+  width: 30px;
+  text-align: center;
+  display: inline-block;
+}
+/* line 49, /Users/chrisryan/.rvm/gems/ruby-2.4.1/bundler/gems/recurring_select-b934e8d1fb20/app/assets/stylesheets/recurring_select.scss */
+.rs_dialog_holder .rs_dialog .rs_dialog_content .freq_option_section .day_holder {
+  border-left: 1px solid #ccc;
+  position: relative;
+  margin-top: 5px;
+  height: 26px;
+}
+/* line 50, /Users/chrisryan/.rvm/gems/ruby-2.4.1/bundler/gems/recurring_select-b934e8d1fb20/app/assets/stylesheets/recurring_select.scss */
+.rs_dialog_holder .rs_dialog .rs_dialog_content .freq_option_section .day_holder a {
+  display: block;
+  padding: 5px 7px;
+  font-size: 14px;
+  border-style: solid;
+  border-color: #ccc;
+  border-width: 1px 1px 1px 0px;
+  float: left;
+  text-decoration: none;
+  font-weight: bold;
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1) inset;
+  -moz-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1) inset;
+  -ms-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1) inset;
+  -o-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1) inset;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1) inset;
+  background-color: #fff;
+}
+/* line 51, /Users/chrisryan/.rvm/gems/ruby-2.4.1/bundler/gems/recurring_select-b934e8d1fb20/app/assets/stylesheets/recurring_select.scss */
+.rs_dialog_holder .rs_dialog .rs_dialog_content .freq_option_section .day_holder a.selected {
+  background-color: #89a;
+  color: #fff;
+  -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2) inset;
+  -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2) inset;
+  -ms-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2) inset;
+  -o-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2) inset;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2) inset;
+  position: relative;
+  background-image: -webkit-linear-gradient(top, #9ab, #789);
+  /* Chrome 10+, Saf5.1+ */
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#9ab), to(#789));
+  /* Saf4+, Chrome */
+  background-image: -moz-linear-gradient(top, #9ab, #789);
+  /* FF3.6 */
+  background-image: -ms-linear-gradient(top, #9ab, #789);
+  /* IE10 */
+  background-image: -o-linear-gradient(top, #9ab, #789);
+  /* Opera 11.10+ */
+}
+/* line 52, /Users/chrisryan/.rvm/gems/ruby-2.4.1/bundler/gems/recurring_select-b934e8d1fb20/app/assets/stylesheets/recurring_select.scss */
+.rs_dialog_holder .rs_dialog .rs_dialog_content .freq_option_section .day_holder a:hover {
+  cursor: pointer;
+  background-color: #dde;
+}
+/* line 56, /Users/chrisryan/.rvm/gems/ruby-2.4.1/bundler/gems/recurring_select-b934e8d1fb20/app/assets/stylesheets/recurring_select.scss */
+.rs_dialog_holder .rs_dialog .rs_dialog_content .freq_option_section .rs_calendar_day, .rs_dialog_holder .rs_dialog .rs_dialog_content .freq_option_section .rs_calendar_week {
+  width: 155px;
+}
+/* line 58, /Users/chrisryan/.rvm/gems/ruby-2.4.1/bundler/gems/recurring_select-b934e8d1fb20/app/assets/stylesheets/recurring_select.scss */
+.rs_dialog_holder .rs_dialog .rs_dialog_content .freq_option_section .rs_calendar_day a, .rs_dialog_holder .rs_dialog .rs_dialog_content .freq_option_section .rs_calendar_week a {
+  display: inline-block;
+  text-align: center;
+  width: 15px;
+  padding: 5px 3px;
+  font-size: 12px;
+  border-style: solid;
+  border-color: #ccc;
+  border-width: 1px 1px 1px 1px;
+  margin: -1px 0 0 -1px;
+  line-height: 10px;
+  background-color: #fff;
+  font-weight: bold;
+}
+/* line 59, /Users/chrisryan/.rvm/gems/ruby-2.4.1/bundler/gems/recurring_select-b934e8d1fb20/app/assets/stylesheets/recurring_select.scss */
+.rs_dialog_holder .rs_dialog .rs_dialog_content .freq_option_section .rs_calendar_day a.selected, .rs_dialog_holder .rs_dialog .rs_dialog_content .freq_option_section .rs_calendar_week a.selected {
+  background-color: #89a;
+  color: #fff;
+  position: relative;
+  background-image: -webkit-linear-gradient(top, #9ab, #789);
+  /* Chrome 10+, Saf5.1+ */
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#9ab), to(#789));
+  /* Saf4+, Chrome */
+  background-image: -moz-linear-gradient(top, #9ab, #789);
+  /* FF3.6 */
+  background-image: -ms-linear-gradient(top, #9ab, #789);
+  /* IE10 */
+  background-image: -o-linear-gradient(top, #9ab, #789);
+  /* Opera 11.10+ */
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2) inset;
+  -moz-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2) inset;
+  -ms-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2) inset;
+  -o-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2) inset;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2) inset;
+  text-shadow: 0 1px 1px #333;
+}
+/* line 60, /Users/chrisryan/.rvm/gems/ruby-2.4.1/bundler/gems/recurring_select-b934e8d1fb20/app/assets/stylesheets/recurring_select.scss */
+.rs_dialog_holder .rs_dialog .rs_dialog_content .freq_option_section .rs_calendar_day a:hover, .rs_dialog_holder .rs_dialog .rs_dialog_content .freq_option_section .rs_calendar_week a:hover {
+  cursor: pointer;
+  background-color: #dde;
+}
+/* line 62, /Users/chrisryan/.rvm/gems/ruby-2.4.1/bundler/gems/recurring_select-b934e8d1fb20/app/assets/stylesheets/recurring_select.scss */
+.rs_dialog_holder .rs_dialog .rs_dialog_content .freq_option_section .rs_calendar_day a.end_of_month, .rs_dialog_holder .rs_dialog .rs_dialog_content .freq_option_section .rs_calendar_week a.end_of_month {
+  width: 81px;
+}
+/* line 64, /Users/chrisryan/.rvm/gems/ruby-2.4.1/bundler/gems/recurring_select-b934e8d1fb20/app/assets/stylesheets/recurring_select.scss */
+.rs_dialog_holder .rs_dialog .rs_dialog_content .freq_option_section .rs_calendar_week {
+  width: 191px;
+}
+/* line 66, /Users/chrisryan/.rvm/gems/ruby-2.4.1/bundler/gems/recurring_select-b934e8d1fb20/app/assets/stylesheets/recurring_select.scss */
+.rs_dialog_holder .rs_dialog .rs_dialog_content .freq_option_section .rs_calendar_week span {
+  display: inline-block;
+  width: 35px;
+}
+/* line 73, /Users/chrisryan/.rvm/gems/ruby-2.4.1/bundler/gems/recurring_select-b934e8d1fb20/app/assets/stylesheets/recurring_select.scss */
+.rs_dialog_holder .rs_dialog .rs_dialog_content .freq_option_section .monthly_rule_type span {
+  margin-right: 15px;
+}
+/* line 80, /Users/chrisryan/.rvm/gems/ruby-2.4.1/bundler/gems/recurring_select-b934e8d1fb20/app/assets/stylesheets/recurring_select.scss */
+.rs_dialog_holder .rs_dialog .rs_dialog_content .rs_summary {
+  padding: 0px;
+  margin-top: 15px;
+  border-top: 1px solid #ccc;
+}
+/* line 81, /Users/chrisryan/.rvm/gems/ruby-2.4.1/bundler/gems/recurring_select-b934e8d1fb20/app/assets/stylesheets/recurring_select.scss */
+.rs_dialog_holder .rs_dialog .rs_dialog_content .rs_summary span {
+  font-weight: bold;
+  border-top: 1px solid #fff;
+  display: block;
+  padding: 10px 0 5px 0;
+}
+/* line 82, /Users/chrisryan/.rvm/gems/ruby-2.4.1/bundler/gems/recurring_select-b934e8d1fb20/app/assets/stylesheets/recurring_select.scss */
+.rs_dialog_holder .rs_dialog .rs_dialog_content .rs_summary.fetching {
+  color: #999;
+}
+/* line 83, /Users/chrisryan/.rvm/gems/ruby-2.4.1/bundler/gems/recurring_select-b934e8d1fb20/app/assets/stylesheets/recurring_select.scss */
+.rs_dialog_holder .rs_dialog .rs_dialog_content .rs_summary.fetching span {
+  background-image: url(/assets/recurring_select/throbber_13x13-49e4e220162277d5957d78bc2e4bd858c3fec383e91e14fee3453147c129453c.gif);
+  background-position: center;
+  background-repeat: no-repeat;
+  display: inline-block;
+  height: 13px;
+  width: 13px;
+  margin-top: -4px;
+  padding-right: 5px;
+}
+/* line 85, /Users/chrisryan/.rvm/gems/ruby-2.4.1/bundler/gems/recurring_select-b934e8d1fb20/app/assets/stylesheets/recurring_select.scss */
+.rs_dialog_holder .rs_dialog .rs_dialog_content .rs_summary label {
+  font-weight: normal;
+}
+/* line 88, /Users/chrisryan/.rvm/gems/ruby-2.4.1/bundler/gems/recurring_select-b934e8d1fb20/app/assets/stylesheets/recurring_select.scss */
+.rs_dialog_holder .rs_dialog .rs_dialog_content .controls {
+  padding: 10px 0px 5px 0px;
+  min-width: 170px;
+  text-align: center;
+}
+/* line 89, /Users/chrisryan/.rvm/gems/ruby-2.4.1/bundler/gems/recurring_select-b934e8d1fb20/app/assets/stylesheets/recurring_select.scss */
+.rs_dialog_holder .rs_dialog .rs_dialog_content .controls input[type=button] {
+  margin: 0px 5px;
+  width: 70px;
+}
+/* line 90, /Users/chrisryan/.rvm/gems/ruby-2.4.1/bundler/gems/recurring_select-b934e8d1fb20/app/assets/stylesheets/recurring_select.scss */
+.rs_dialog_holder .rs_dialog .rs_dialog_content .controls input[type=button].rs_save {
+  color: #333;
+}
+/* line 91, /Users/chrisryan/.rvm/gems/ruby-2.4.1/bundler/gems/recurring_select-b934e8d1fb20/app/assets/stylesheets/recurring_select.scss */
+.rs_dialog_holder .rs_dialog .rs_dialog_content .controls input[type=button].rs_cancel {
+  color: #666;
+}
+/* line 92, /Users/chrisryan/.rvm/gems/ruby-2.4.1/bundler/gems/recurring_select-b934e8d1fb20/app/assets/stylesheets/recurring_select.scss */
+.rs_dialog_holder .rs_dialog .rs_dialog_content .controls input[type=button].disabled {
+  color: #aaa;
+}
+/* line 98, /Users/chrisryan/.rvm/gems/ruby-2.4.1/bundler/gems/recurring_select-b934e8d1fb20/app/assets/stylesheets/recurring_select.scss */
+.rs_dialog_holder .rs_dialog.animated .controls {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+/* line 99, /Users/chrisryan/.rvm/gems/ruby-2.4.1/bundler/gems/recurring_select-b934e8d1fb20/app/assets/stylesheets/recurring_select.scss */
+.rs_dialog_holder .rs_dialog.animated .rs_summary, .rs_dialog_holder .rs_dialog.animated .freq_option_section {
+  display: none;
+}
 /* line 1, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/about.scss */
 .white-background {
   background-color: white;
@@ -12969,7 +13311,7 @@ a.ui-button:active,
 #about-us-container {
   margin-left: auto;
   margin-right: auto;
-  width: 93%;
+  width: 95%;
   background-color: white;
   padding: 0px;
 }
@@ -13062,49 +13404,50 @@ a.ui-button:active,
 /* line 92, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/about.scss */
 .sponsors-padding {
   margin: 2%;
+  min-height: 140px !important;
 }
 
-/* line 95, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/about.scss */
+/* line 96, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/about.scss */
 #filler {
   height: 80%;
 }
 
-/* line 98, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/about.scss */
+/* line 99, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/about.scss */
 .page-font {
   font-family: 'Open Sans', sans-serif;
   font-size: 20px;
 }
 
-/* line 102, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/about.scss */
+/* line 103, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/about.scss */
 .page-font2 {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
 }
 
-/* line 106, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/about.scss */
+/* line 107, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/about.scss */
 .website {
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   color: #00A3DA;
 }
 
-/* line 111, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/about.scss */
+/* line 112, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/about.scss */
 .partner-logo {
   margin: auto;
 }
 
-/* line 115, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/about.scss */
+/* line 116, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/about.scss */
 .partner-logo-img {
   height: 100px;
   width: 100px;
 }
 
-/* line 119, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/about.scss */
+/* line 120, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/about.scss */
 .sponsors-img {
   padding: 5px;
 }
 
-/* line 122, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/about.scss */
+/* line 123, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/about.scss */
 #flex-enabler {
   display: flex;
   flex-direction: row;
@@ -13147,29 +13490,28 @@ footer ul li {
   color: #FFFFFF;
   padding-left: 2em;
 }
-/* line 1, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/contact_us.css.scss */
+/* line 1, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/contact_us.scss */
 .contact-us-body {
   background-color: #D1F0F4;
   padding-bottom: 5%;
   padding-top: 2%;
 }
 
-/* line 7, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/contact_us.css.scss */
+/* line 7, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/contact_us.scss */
 #boyrunning {
   display: block;
-  position: relative;
-  margin: auto;
   width: 100%;
   padding-bottom: 100px;
   background-color: white;
 }
 
-/* line 16, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/contact_us.css.scss */
+/* line 14, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/contact_us.scss */
 #boyrunning-container {
-  height: auto;
+  max-height: 575px;
+  margin-bottom: 7%;
 }
 
-/* line 20, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/contact_us.css.scss */
+/* line 19, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/contact_us.scss */
 #contact-us-text {
   color: #00A3DA;
   position: relative;
@@ -13179,12 +13521,12 @@ footer ul li {
   vertical-align: text-bottom;
 }
 
-/* line 29, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/contact_us.css.scss */
+/* line 28, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/contact_us.scss */
 .contact-form {
   border-color: #00A3DA;
 }
 
-/* line 33, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/contact_us.css.scss */
+/* line 32, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/contact_us.scss */
 #jumbo-about-us {
   padding: 10px 0 10px 0;
   display: block;
@@ -13193,31 +13535,30 @@ footer ul li {
   height: 45%;
 }
 
-/* line 41, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/contact_us.css.scss */
+/* line 40, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/contact_us.scss */
 #contact-box {
-  width: 60%;
+  width: auto;
+  margin-bottom: 20px;
   border-radius: 10px;
   background-color: white;
-  float: left;
   padding: 15px;
 }
 
-/* line 49, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/contact_us.css.scss */
+/* line 48, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/contact_us.scss */
 #about-us-box {
-  display: inline;
-  width: 38%;
+  padding: 15px;
+  width: 100%;
+  margin-bottom: 20px;
   border-radius: 10px;
   background-color: white;
-  padding-top: 15px;
-  padding-bottom: 10px;
 }
 
-/* line 58, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/contact_us.css.scss */
+/* line 56, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/contact_us.scss */
 #btn-padding {
   margin-top: 15px;
 }
 
-/* line 62, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/contact_us.css.scss */
+/* line 60, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/contact_us.scss */
 .caret-right {
   border-left: 4px solid;
   border-bottom: 4px solid transparent;
@@ -13225,42 +13566,42 @@ footer ul li {
 }
 
 /*...............................................................*/
-/* line 71, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/contact_us.css.scss */
+/* line 69, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/contact_us.scss */
 #feature-box {
   width: 100%;
   background-color: white;
   padding: 0px;
 }
 
-/* line 77, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/contact_us.css.scss */
+/* line 75, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/contact_us.scss */
 .see-more-button {
   padding-top: 30px;
 }
 
-/* line 81, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/contact_us.css.scss */
+/* line 79, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/contact_us.scss */
 .learn-more-image {
   width: 100%;
 }
 
-/* line 85, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/contact_us.css.scss */
+/* line 83, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/contact_us.scss */
 .info-tag {
   background-color: white;
 }
 
-/* line 89, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/contact_us.css.scss */
+/* line 87, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/contact_us.scss */
 .similar-events-box {
   display: inline;
   background-color: white;
 }
 
-/* line 94, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/contact_us.css.scss */
+/* line 92, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/contact_us.scss */
 .similar-events-image {
   display: block;
   width: 100%;
   height: 160px;
 }
 
-/* line 100, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/contact_us.css.scss */
+/* line 98, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/contact_us.scss */
 .share-section {
   padding-bottom: 50px;
 }
@@ -13270,34 +13611,47 @@ footer ul li {
 }
 
 /* line 5, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/dashboard.scss */
+.table {
+  table-layout: fixed;
+  width: 100%;
+}
+
+/* line 10, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/dashboard.scss */
 .dropbox-container {
   display: flex;
   margin-left: auto;
 }
 
-/* line 10, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/dashboard.scss */
+/* line 15, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/dashboard.scss */
+.mobile-filter-btn {
+  width: 100%;
+  margin-bottom: 5% !important;
+  margin-top: 5% !important;
+}
+
+/* line 22, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/dashboard.scss */
 .edit-delete-btn-width {
   width: 150px;
 }
 
-/* line 14, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/dashboard.scss */
+/* line 26, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/dashboard.scss */
 .show-inline {
   display: inline;
 }
 
-/* line 18, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/dashboard.scss */
+/* line 30, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/dashboard.scss */
 .dropbox-container .chosen-choices {
   display: flex;
   justify-content: center;
   margin-left: auto;
   margin-top: 5px;
-  width: 93%;
+  width: auto;
   border-radius: 4px;
   padding-top: 2px;
   padding-bottom: 2px;
 }
 
-/* line 29, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/dashboard.scss */
+/* line 41, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/dashboard.scss */
 .dropbox-container .chosen-drop {
   display: flex;
   justify-content: center;
@@ -13309,28 +13663,28 @@ footer ul li {
   padding-bottom: 2px;
 }
 
-/* line 40, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/dashboard.scss */
+/* line 52, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/dashboard.scss */
 .event-form-width {
-  width: 400px !important;
+  width: 300px !important;
 }
 
-/* line 44, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/dashboard.scss */
+/* line 56, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/dashboard.scss */
 .date-time-width {
   width: 110px;
 }
 
-/* line 49, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/dashboard.scss */
+/* line 61, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/dashboard.scss */
 .background-wrap {
   background-color: #d1f0f4;
 }
 
-/* line 52, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/dashboard.scss */
+/* line 64, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/dashboard.scss */
 .dashboard-row {
   display: flex;
   flex-direction: column !important;
 }
 
-/* line 57, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/dashboard.scss */
+/* line 69, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/dashboard.scss */
 .dashboard-headers {
   display: flex;
   justify-content: center;
@@ -13341,7 +13695,7 @@ footer ul li {
   font-family: 'Bree Serif', serif;
 }
 
-/* line 67, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/dashboard.scss */
+/* line 79, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/dashboard.scss */
 .dashboard-headers2 {
   display: flex;
   justify-content: center;
@@ -13351,29 +13705,29 @@ footer ul li {
   font-family: 'Bree Serif', serif;
 }
 
-/* line 76, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/dashboard.scss */
+/* line 88, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/dashboard.scss */
 .dashboard-text {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
 }
 
-/* line 81, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/dashboard.scss */
+/* line 93, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/dashboard.scss */
 .dashboard-text2 {
   font-family: 'Open Sans', sans-serif;
   font-size: 20px;
 }
 
-/* line 86, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/dashboard.scss */
+/* line 98, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/dashboard.scss */
 .container-background {
   background-color: #d1f0f4;
 }
 
-/* line 90, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/dashboard.scss */
+/* line 102, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/dashboard.scss */
 .calendar-subsection2-card {
   margin-top: -40px;
 }
 
-/* line 94, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/dashboard.scss */
+/* line 106, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/dashboard.scss */
 .user-sign-in-container {
   display: flex;
   justify-content: center;
@@ -13381,7 +13735,7 @@ footer ul li {
   font-size: 16px;
 }
 
-/* line 101, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/dashboard.scss */
+/* line 113, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/dashboard.scss */
 .filterCard-header2 {
   /* All locations: */
   font-family: 'Open Sans Bold', sans-serif;
@@ -13389,14 +13743,14 @@ footer ul li {
   color: #000000;
 }
 
-/* line 109, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/dashboard.scss */
+/* line 121, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/dashboard.scss */
 .filterCard-list {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   color: #000000;
 }
 
-/* line 116, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/dashboard.scss */
+/* line 128, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/dashboard.scss */
 #dashboard-btns-container {
   display: flex;
   flex-direction: column;
@@ -13404,17 +13758,22 @@ footer ul li {
   justify-content: center;
 }
 
-/* line 123, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/dashboard.scss */
+/* line 135, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/dashboard.scss */
 .dashboard-btns {
   display: block;
 }
 
-/* line 127, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/dashboard.scss */
+/* line 139, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/dashboard.scss */
+.in-block {
+  display: inline-block;
+}
+
+/* line 144, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/dashboard.scss */
 .dashboard-btns a button {
   margin-top: 5px;
 }
 
-/* line 132, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/dashboard.scss */
+/* line 149, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/dashboard.scss */
 .button-seemore {
   background: #00A3DA;
   border-radius: 10px;
@@ -13431,120 +13790,133 @@ footer ul li {
   margin-top: 30px;
 }
 
-/* line 148, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/dashboard.scss */
+/* line 165, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/dashboard.scss */
 .dash-sidebar {
   height: 100%;
   min-height: 600px !important;
   background-color: #004C81;
 }
 
-/* line 154, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/dashboard.scss */
+/* line 171, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/dashboard.scss */
 .dash-main-content {
   height: 100%;
   background-color: white;
 }
 
-/* line 158, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/dashboard.scss */
+/* line 175, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/dashboard.scss */
 .button-cluster {
   display: flex;
   justify-content: space-around;
 }
 
-/* line 163, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/dashboard.scss */
+/* line 180, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/dashboard.scss */
 .queue-header {
   color: #004C81;
 }
 
-/* line 167, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/dashboard.scss */
+/* line 184, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/dashboard.scss */
 .new-admin-form {
   padding: 20px;
   width: 100%;
   background-color: #D1F0F4;
 }
 
-/* line 173, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/dashboard.scss */
+/* line 190, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/dashboard.scss */
 .button-seemore:hover {
   color: #004C81;
   background-color: yellow !important;
 }
-/* line 6, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 5, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+.cal-highlight-yellow {
+  color: #fff250 !important;
+  font-weight: bold !important;
+}
+
+/* line 10, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+.cal-highlight-blue {
+  color: #144c80 !important;
+  font-weight: 400 !important;
+}
+
+/* line 15, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .fit-img {
   height: 100%;
   width: 100%;
   object-fit: cover;
 }
 
-/* line 12, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 21, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .wholePage {
   background-color: #d1f0f4;
   padding-top: 15px;
 }
 
-/* line 21, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 31, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .event-image-container {
   height: 325px;
   width: 100%;
 }
 
-/* line 26, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 36, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .day-scroller {
+  min-height: 50px;
   max-height: 100px;
   max-width: 130px;
   overflow-x: auto;
   overflow-y: auto;
 }
 
-/* line 33, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 44, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .cal-links {
   color: #3ea3da;
   margin-bottom: 0px;
 }
 
-/* line 42, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 53, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .testClass a {
   margin: 2px;
 }
 
-/* line 46, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 57, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .calendar-row {
   padding: 10px 3% 5% 3%;
 }
 
-/* line 50, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 61, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .font-16 {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
 }
 
-/* line 55, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 66, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .font-20 {
   font-family: 'Open Sans', sans-serif;
   font-size: 20px;
 }
 
-/* line 60, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 71, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .collapse-menu {
   margin-top: 10px;
 }
 
-/* line 64, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 75, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 #calendar-subsection1 {
   background-color: #F0FFFF !important;
   border-radius: 10px;
 }
 
-/* line 69, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 80, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 #calendar-subsection1 img {
   margin: 0;
 }
 
-/* line 73, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 84, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .icon-img {
   height: 35px;
   width: 35px;
 }
 
-/* line 78, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 89, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 #filter-header {
   display: flex;
   flex-direction: row;
@@ -13552,21 +13924,21 @@ footer ul li {
   justify-content: space-between;
 }
 
-/* line 85, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 96, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 #filterText {
   font-family: BreeSerif-Regular;
   font-size: 30px;
   color: #004C81;
 }
 
-/* line 91, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 102, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .filter-btn {
   width: 200px;
   height: 50px;
   margin-bottom: 50px;
 }
 
-/* line 97, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 108, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .filter-header-img {
   width: 100%;
   margin: 0;
@@ -13574,30 +13946,30 @@ footer ul li {
   padding-top: 15px;
 }
 
-/* line 104, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 115, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .filter-header-chevron {
   width: 100%;
   height: 100%;
 }
 
-/* line 110, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 121, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .rotate-chevron {
   transform: rotate(180deg);
 }
 
-/* line 114, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 125, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .rotate-chevron {
   transform: rotate(180deg);
 }
 
-/* line 118, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 129, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .filter-header2 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-/* line 125, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 136, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .filterCard-header1 {
   /* For: */
   font-family: 'Open Sans', sans-serif;
@@ -13607,7 +13979,7 @@ footer ul li {
   margin: 0px;
 }
 
-/* line 134, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 145, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .filter-header-container {
   margin-bottom: 5px;
   display: flex;
@@ -13615,7 +13987,7 @@ footer ul li {
   align-items: center;
 }
 
-/* line 141, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 152, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .filterCard-header2 {
   /* All locations: */
   font-family: OpenSans-Bold;
@@ -13623,39 +13995,38 @@ footer ul li {
   color: #000000;
 }
 
-/* line 148, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 159, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .filterCard-list {
   font-family: OpenSans;
   font-size: 16px;
   color: #000000;
 }
 
-/* line 154, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 165, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .calendar-subsection2-image {
   background-color: #D1F0F4;
   width: 100%;
   height: 300px;
 }
 
-/* line 160, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 171, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .calendar-subsection2-card {
   margin-right: 0px;
   margin-bottom: 20px;
   background-color: #fff;
 }
 
-/* line 166, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 177, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .calendar-row .calendar-subsection2 {
-  padding-left: 40px;
   top: 0;
 }
 
-/* line 171, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 181, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .calendar-subsection2-text {
   background: #fff;
 }
 
-/* line 175, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 185, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .calendar-subsection2-header {
   font-family: 'Bree Serif', serif;
   font-size: 36px;
@@ -13666,7 +14037,7 @@ footer ul li {
   padding-bottom: 5px;
 }
 
-/* line 185, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 195, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .calendar-header {
   font-family: BreeSerif-Regular;
   font-size: 30px;
@@ -13674,25 +14045,25 @@ footer ul li {
   padding-bottom: 30px;
 }
 
-/* line 192, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 202, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .calendar-subsection2-header2 {
   font-family: 'Open Sans', sans-serif;
   font-size: 20px;
   color: #004C81;
 }
 
-/* line 198, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 208, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .calendar-subsection2-details {
   padding: 8px;
   background-color: #fff;
 }
 
-/* line 203, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 213, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .calendar-subsection2-text {
   background-color: #fff;
 }
 
-/* line 207, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 217, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .event-info-txt-bold {
   /* Event - 04/01/17: */
   font-family: OpenSans-Extrabold;
@@ -13702,7 +14073,7 @@ footer ul li {
   padding-left: 5px;
 }
 
-/* line 216, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 226, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .event-info-txt {
   /* 4:30pm: */
   font-family: OpenSans;
@@ -13712,14 +14083,14 @@ footer ul li {
   padding-left: 5px;
 }
 
-/* line 225, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 235, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .event-info-icon {
   width: 20px;
   height: 20px;
   float: left;
 }
 
-/* line 231, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 241, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .event-info-icon2 {
   display: inline;
   width: 20px;
@@ -13727,40 +14098,39 @@ footer ul li {
   float: left;
 }
 
-/* line 238, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 248, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .event-info1 {
   padding-left: 10px;
-  margin-left: 20px;
 }
 
-/* line 243, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 252, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .event-info2 {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
 }
 
-/* line 249, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 258, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .event-info {
   display: flex;
   justify-content: space-between;
 }
 
-/* line 254, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 263, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .event-paragraph {
   font-family: OpenSans;
   font-size: 16px;
   color: #000000;
 }
 
-/* line 260, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 269, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .event-info-bold2 {
   font-family: OpenSans-Bold;
   font-size: 16px;
   color: #00A3DA;
 }
 
-/* line 266, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 275, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 #button-seemore {
   background: #00A3DA;
   border-radius: 10px;
@@ -13776,7 +14146,7 @@ footer ul li {
   text-align: center;
 }
 
-/* line 280, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 289, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 #button-add-resource {
   background: #00A3DA;
   border-radius: 10px;
@@ -13793,27 +14163,26 @@ footer ul li {
   margin-top: 30px;
 }
 
-/* line 296, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 305, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .caps {
   text-transform: capitalize;
 }
 
-/* line 300, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 309, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .create-new-container {
-  width: 60%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-/* line 308, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 316, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .label-radio-space {
   margin-right: 10%;
   font-size: 16px;
 }
 
-/* line 313, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 321, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .create-new-container .form-group {
   display: flex;
   align-items: center;
@@ -13821,80 +14190,80 @@ footer ul li {
   font-size: 16px;
 }
 
-/* line 320, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 328, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .margin-right {
   margin-right: auto;
 }
 
-/* line 324, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 332, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .margin-left {
   margin-right: auto;
 }
 
-/* line 328, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 336, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .margin-left-10px {
   margin-left: 10px;
 }
 
-/* line 333, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 341, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .label-baseline {
   margin-right: auto;
   width: 25%;
 }
 
-/* line 338, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 346, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .center-flex-content {
   display: flex;
   justify-content: center;
   font-size: 16px;
 }
 
-/* line 344, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 352, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .form-padding {
   margin-left: 10px;
 }
 
-/* line 348, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 356, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .center-flex-content {
   display: flex;
   justify-content: center;
 }
 
-/* line 354, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 362, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .new-admin-form {
   padding: 20px;
   width: 100vw !important;
   background-color: #D1F0F4;
 }
 
-/* line 360, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 368, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .table-hover {
   color: white;
   border-radius: 10px;
   background-color: #00A3DA !important;
 }
 
-/* line 366, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 374, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .table-hover tbody > tr:hover {
   background-color: #004C81 !important;
 }
 
-/* line 370, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 378, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .table-hover button {
   background-color: #F0FFFF !important;
 }
 
-/* line 374, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 382, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .table-hover button:hover {
   background-color: yellow !important;
 }
 
-/* line 378, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 386, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .disable-scrolling {
   overflow: hidden;
 }
 
-/* line 382, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 390, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .popup {
   position: relative;
   display: inline-block;
@@ -13905,11 +14274,11 @@ footer ul li {
   user-select: none;
 }
 
-/* line 392, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 400, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .popup .popuptext {
   visibility: hidden;
-  width: 700px;
-  height: 600px;
+  width: 50%;
+  height: 80%;
   overflow-y: auto;
   background-color: #144D7D;
   color: #fff;
@@ -13917,35 +14286,35 @@ footer ul li {
   border-radius: 6px;
   position: fixed;
   z-index: 1;
-  bottom: 10%;
-  right: 13%;
+  bottom: 8%;
+  right: 10%;
 }
 
-/* line 406, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 415, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .fa-times:hover {
   color: #3ea3da !important;
 }
 
-/* line 409, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 418, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .calendar-heading a {
   font-family: 'Open Sans', sans-serif;
   font-size: 20px !important;
 }
 
-/* line 414, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 423, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .calendar-title {
   font-family: 'Bree Serif', serif;
   font-size: 35px !important;
 }
 
-/* line 419, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 428, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .popup-pic {
-  height: 225px;
+  height: 275px;
   width: 100%;
 }
 
 /* Toggle this class - hide and show the popup */
-/* line 426, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
+/* line 435, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/events.scss */
 .popup .show {
   visibility: visible;
   -webkit-animation: fadeIn 1s;
@@ -13973,11 +14342,21 @@ footer ul li {
   font-size: 1.5em
 }
 
-.margin-t10 {
-  margin-top: 10px;
+.margin-t-1p {
+  margin-top: 5%;
 }
 
-#header-nav-cloud {
+.ddm-scroll {
+  max-height:300px;
+  overflow-y: scroll;
+}
+
+#mobile-header-logo {
+  height:55px;
+  margin:3% 0 0 5% ;
+}
+
+.header-nav-cloud {
   z-index: 1;
   background-image: url("cloud1.png");
   background-size: cover;
@@ -13986,17 +14365,34 @@ footer ul li {
   top: 80px;
 }
 
+#mobile-header {
+  border:none;
+  width: 100vw;
+  background-color: white !important;
+  z-index: 3;
+  position: fixed;
+  margin-bottom:10px;
+  height:45px !important;
+}
+
+#mobile-header .navbar-collapse{
+  background-color: white !important;
+  width: 100vw;
+  position: relative;
+  top:-2px;
+}
+
 #header-nav-cloud-mobile {
-  z-index: 1;
+  z-index: 3;
   background-image: url("cloud1.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position:bottom;
   margin-bottom: 0;
   position: relative;
-  top:15px;
+  top:-2px;
   width: 100%;
-  height: 20px;
+  height: 35px;
 }
 
 .nav-font {
@@ -14178,6 +14574,8 @@ footer ul li {
 
 .head-btn {
     background-color: white !important;
+    padding-left: 8px !important;
+    padding-right: 8px !important;
 }
 
 .head-btn:focus {
@@ -14229,33 +14627,28 @@ li a {
   height: 240px;
 }
 
-/* line 19, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/home.scss */
-.clouds-background {
-  min-height: 400px !important;
-}
-
-/* line 23, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/home.scss */
+/* line 18, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/home.scss */
 .flex {
   display: flex;
 }
 
-/* line 27, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/home.scss */
+/* line 22, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/home.scss */
 .align-self {
   align-self: center;
 }
 
-/* line 31, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/home.scss */
+/* line 26, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/home.scss */
 .wb-all {
   word-break: break-all;
 }
 
-/* line 36, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/home.scss */
+/* line 31, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/home.scss */
 #link-to-cal {
   padding-top: 0px;
   padding-bottom: 10px;
 }
 
-/* line 41, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/home.scss */
+/* line 36, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/home.scss */
 #welcome-line1 {
   font-family: 'Bree Serif', serif;
   font-size: 55px;
@@ -14266,7 +14659,7 @@ li a {
   text-align: center;
 }
 
-/* line 50, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/home.scss */
+/* line 45, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/home.scss */
 #welcome-line2 {
   font-family: 'Bree Serif', serif;
   font-size: 80px;
@@ -14277,7 +14670,7 @@ li a {
   text-align: center;
 }
 
-/* line 59, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/home.scss */
+/* line 54, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/home.scss */
 #welcome-line3 {
   /* We are your One-Stop: */
   padding-top: 20px;
@@ -14289,7 +14682,7 @@ li a {
   text-align: center;
 }
 
-/* line 70, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/home.scss */
+/* line 65, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/home.scss */
 #welcome-line4 {
   /* We are your One-Stop: */
   font-family: 'Open Sans', sans-serif;
@@ -14300,7 +14693,7 @@ li a {
   text-align: center;
 }
 
-/* line 80, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/home.scss */
+/* line 75, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/home.scss */
 #button-learnmore {
   background: #FFF200;
   border-radius: 10px;
@@ -14321,62 +14714,54 @@ li a {
   outline: none;
 }
 
-/* line 100, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/home.scss */
+/* line 95, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/home.scss */
 #button-learnmore:focus {
   border: medium #004c81 solid;
 }
 
-/* line 104, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/home.scss */
+/* line 99, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/home.scss */
 .clouds-background {
   background-image: url("clouds.png");
-  background-size: 100% auto;
-  background-repeat: no-repeat;
-  height: 365px;
-  display: block;
-  margin: auto;
-  margin-top: -50px;
-  width: 100%;
-  align-self: center;
 }
 
-/* line 115, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/home.scss */
+/* line 102, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/home.scss */
 .section1-container {
   padding-top: 55px;
 }
 
-/* line 118, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/home.scss */
+/* line 105, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/home.scss */
 .section1 {
   height: auto;
   background-color: #D1F0F4;
 }
 
-/* line 122, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/home.scss */
+/* line 109, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/home.scss */
 .section1-text {
   padding-top: 60px;
   padding-bottom: 80px;
 }
 
 /* ------------- Section2 elements ------------- */
-/* line 128, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/home.scss */
+/* line 115, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/home.scss */
 .section2-container {
   background-image: url("kids-green-background.png");
   background-size: 100% 100%;
 }
 
-/* line 133, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/home.scss */
+/* line 120, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/home.scss */
 .section2 {
   background-color: #D1F0F4 !important;
 }
 
-/* line 137, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/home.scss */
+/* line 124, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/home.scss */
 .kids-image {
   width: 100%;
   height: auto;
-  padding: 50px 50px 120px 50px;
+  padding: 5% 5% 12% 5%;
 }
 
 /* ------------- Section3 elements ------------- */
-/* line 145, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/home.scss */
+/* line 132, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/home.scss */
 #section3-line1,
 #section3-line2,
 #section3-line3 {
@@ -14388,7 +14773,7 @@ li a {
   text-align: center;
 }
 
-/* line 156, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/home.scss */
+/* line 143, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/home.scss */
 #button-activities-cal {
   background: #00A3DA;
   border-radius: 10px;
@@ -14406,46 +14791,46 @@ li a {
   outline: none;
 }
 
-/* line 173, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/home.scss */
+/* line 160, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/home.scss */
 #button-activities-cal:focus {
   border: medium #004c81 solid;
 }
 
-/* line 179, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/home.scss */
+/* line 166, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/home.scss */
 .section3 {
   background-color: #FFF;
 }
 
 /* ------------- Section4 elements ------------- */
-/* line 187, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/home.scss */
+/* line 174, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/home.scss */
 .col-md-12 {
   padding-left: 0 !important;
   padding-right: 0 !important;
 }
 
-/* line 192, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/home.scss */
+/* line 179, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/home.scss */
 .whats-new {
   width: 100%;
 }
 
-/* line 199, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/home.scss */
+/* line 186, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/home.scss */
 #whats-new-board {
   background-color: #D1F0F4;
 }
 
-/* line 203, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/home.scss */
+/* line 190, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/home.scss */
 #whats-new {
   color: #00A3DA;
   font-family: 'Bree Serif', serif;
   margin-left: 8px;
 }
 
-/* line 209, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/home.scss */
+/* line 196, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/home.scss */
 .whats-new {
   background-color: #D1F0F4;
 }
 
-/* line 214, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/home.scss */
+/* line 201, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/home.scss */
 #btn-view-all {
   float: right;
   margin-top: -54px;
@@ -14460,37 +14845,37 @@ li a {
   margin-right: 20px;
 }
 
-/* line 228, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/home.scss */
+/* line 215, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/home.scss */
 #btn-view-all:focus {
   border: medium #004c81 solid;
 }
 
-/* line 232, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/home.scss */
+/* line 219, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/home.scss */
 .btn-primary:focus {
   border: medium #004c81 solid;
 }
 
-/* line 236, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/home.scss */
+/* line 223, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/home.scss */
 .outer-blue-container {
   background-color: #D1F0F4;
   padding-top: 30px;
 }
 
-/* line 242, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/home.scss */
+/* line 229, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/home.scss */
 .new-events {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   color: #00A3DA;
 }
 
-/* line 248, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/home.scss */
+/* line 235, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/home.scss */
 .posted-on {
   font-family: 'Open Sans', sans-serif;
   font-size: 12px;
   color: #00A3DA;
 }
 
-/* line 254, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/home.scss */
+/* line 241, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/home.scss */
 .learn-more {
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
@@ -14499,7 +14884,7 @@ li a {
   margin-top: -3px;
 }
 
-/* line 262, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/home.scss */
+/* line 249, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/home.scss */
 .cursor {
   width: 7px;
   margin-left: 10px;
@@ -14507,14 +14892,14 @@ li a {
 }
 
 /* fifth section elements */
-/* line 270, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/home.scss */
+/* line 257, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/home.scss */
 .background-color {
   background-color: #D1F0F4;
 }
 
 /* ============================================================ */
 /* Whats-new page */
-/* line 279, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/home.scss */
+/* line 266, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/home.scss */
 #second-col {
   padding-top: 8px;
 }
@@ -14644,12 +15029,12 @@ li.ui-timepicker-selected .ui-timepicker-duration,
 }
 
 /* line 9, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/live.scss */
-.new-resources-heading {
+#new-resources-heading {
   padding: 40px 0 40px 0;
 }
 
 /* line 13, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/live.scss */
-.plan-for-living-heading {
+#plan-for-living-heading {
   padding: 10px 0 10px 0;
 }
 
@@ -14677,63 +15062,58 @@ li.ui-timepicker-selected .ui-timepicker-duration,
 }
 
 /* line 36, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/live.scss */
+.center-heading {
+  margin-left: inherit;
+}
+
+/* line 40, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/live.scss */
 #live5210-img {
-  height: 103%;
-  width: 85%;
+  margin-top: 10px;
 }
 
-/* line 41, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/live.scss */
-#carrot-image {
+/* line 45, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/live.scss */
+.live-btm-imgs {
   position: relative;
   left: -5%;
   height: 100%;
   width: 100%;
 }
 
-/* line 48, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/live.scss */
-#lets-go-image {
-  position: relative;
-  left: -5%;
-  height: 100%;
-  width: 100%;
-}
-
-/* line 55, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/live.scss */
+/* line 52, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/live.scss */
 .live52102-background {
   height: 365px;
   margin: auto;
   width: 100%;
 }
 
-/* line 62, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/live.scss */
+/* line 59, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/live.scss */
 .live-page-container {
   background-color: #D1F0F4;
   padding: 5px 40px 20px 40px;
 }
 
-/* line 67, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/live.scss */
+/* line 64, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/live.scss */
 .section2 {
   background-color: white;
 }
 
-/* line 71, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/live.scss */
+/* line 68, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/live.scss */
 p {
   font-family: 'Open Sans Semi-Bold', sans-serif;
 }
 .login-container {
   text-align: center;
   padding-top: 20px;
-  padding-bottom: 100px;
-  margin-bottom: 30px;
 }
 .login-header {
   font-family: 'Bree Serif', sans-serif;
 }
 .login-image {
+  height: 66vh;
   background-image: url('kids-green-background.png');
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 100% 100%;
+  background-size: cover;
   position: relative;
   bottom: -2px;
   background-color: #D1F0F4;
@@ -14742,9 +15122,8 @@ p {
   background-image: url('clouds.png');
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 100% 50%;
+  background-size: fill;
   background-color: #D1F0F4;
-  position: relative;
   bottom: -2px;
 }
 .form-field {
@@ -14925,23 +15304,22 @@ p {
 /* line 154, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/map.scss */
 .event-info1 {
   padding-left: 10px;
-  margin-left: 20px;
 }
 
-/* line 159, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/map.scss */
+/* line 158, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/map.scss */
 .event-info2 {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
 }
 
-/* line 165, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/map.scss */
+/* line 164, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/map.scss */
 .event-info {
   display: flex;
   justify-content: space-between;
 }
 
-/* line 170, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/map.scss */
+/* line 169, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/map.scss */
 .event-paragraph {
   /* Lorem ipsum dolor si: */
   font-family: OpenSans;
@@ -14949,7 +15327,7 @@ p {
   color: #000000;
 }
 
-/* line 177, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/map.scss */
+/* line 176, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/map.scss */
 .event-info-bold2 {
   /* Learn More: */
   font-family: OpenSans-Bold;
@@ -14957,7 +15335,7 @@ p {
   color: #00A3DA;
 }
 
-/* line 184, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/map.scss */
+/* line 183, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/map.scss */
 #map {
   width: 100%;
   height: 600px;
@@ -15016,56 +15394,57 @@ p {
   height: 150px;
   width: 200px;
   margin-left: 10px;
+  margin-right: 50px;
 }
 
-/* line 29, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/programs.scss */
+/* line 30, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/programs.scss */
 .organization-info {
   display: flex;
   padding-left: 0 !important;
 }
 
-/* line 33, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/programs.scss */
+/* line 34, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/programs.scss */
 .organization-details {
   padding-bottom: 20px;
 }
 
-/* line 36, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/programs.scss */
+/* line 37, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/programs.scss */
 .organization-content {
   background-color: #FFFFFF;
   padding-bottom: 20px;
   height: 100%;
 }
 
-/* line 41, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/programs.scss */
+/* line 42, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/programs.scss */
 .divider {
   border-width: 1px;
   border-color: #004C81;
 }
 
-/* line 45, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/programs.scss */
+/* line 46, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/programs.scss */
 .sidebar hr {
   border-color: #00A3DA;
   margin: 10px;
 }
 
-/* line 49, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/programs.scss */
+/* line 50, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/programs.scss */
 .sidebar a {
   color: #FFFFFF;
 }
 
-/* line 52, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/programs.scss */
+/* line 53, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/programs.scss */
 .sidebar h2 {
   color: #FFFFFF;
   text-align: center;
   margin: 30px;
 }
 
-/* line 57, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/programs.scss */
+/* line 58, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/programs.scss */
 .sidebar p {
   padding: 10px 15px;
 }
 
-/* line 60, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/programs.scss */
+/* line 61, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/programs.scss */
 .program-details-link {
   margin-top: 40px !important;
   margin-bottom: 40px !important;
@@ -15076,14 +15455,14 @@ p {
   justify-content: center;
 }
 
-/* line 69, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/programs.scss */
+/* line 70, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/programs.scss */
 .program-details-link h4 {
   color: #00A3DA !important;
   font-size: 30px !important;
   text-align: center;
 }
 
-/* line 74, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/programs.scss */
+/* line 75, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/programs.scss */
 #organization-button {
   background: #00A3DA;
   border-radius: 10px;
@@ -15099,43 +15478,43 @@ p {
   text-align: center;
 }
 
-/* line 89, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/programs.scss */
+/* line 90, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/programs.scss */
 .nav > li > a:hover {
   text-decoration: none;
   background-color: #00A3DA !important;
 }
 
-/* line 93, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/programs.scss */
+/* line 94, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/programs.scss */
 .nav > li > a:focus {
   text-decoration: none;
   background-color: #00A3DA !important;
 }
 
-/* line 98, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/programs.scss */
+/* line 99, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/programs.scss */
 .sector {
   padding-left: 0 !important;
   padding-right: 0 !important;
 }
 
-/* line 102, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/programs.scss */
+/* line 103, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/programs.scss */
 #whats-new-board {
   background-color: #D1F0F4;
 }
 
-/* line 105, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/programs.scss */
+/* line 106, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/programs.scss */
 #whats-new {
   color: #00A3DA;
   font-family: BreeSerif-Regular;
   margin-left: 8px;
 }
 
-/* line 111, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/programs.scss */
+/* line 112, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/programs.scss */
 .whats-new {
   background-color: #D1F0F4;
   width: 100%;
 }
 
-/* line 115, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/programs.scss */
+/* line 116, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/programs.scss */
 #view-all {
   float: right;
   margin-top: -54px;
@@ -15149,27 +15528,27 @@ p {
   margin-right: 8px;
 }
 
-/* line 127, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/programs.scss */
+/* line 128, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/programs.scss */
 .outer-blue-container {
   background-color: #D1F0F4;
   padding-top: 30px;
 }
 
-/* line 131, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/programs.scss */
+/* line 132, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/programs.scss */
 .new-events {
   font-family: OpenSans-Semibold;
   font-size: 16px;
   color: #00A3DA;
 }
 
-/* line 136, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/programs.scss */
+/* line 137, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/programs.scss */
 .posted-on {
   font-family: OpenSans-Semibold;
   font-size: 12px;
   color: #00A3DA;
 }
 
-/* line 141, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/programs.scss */
+/* line 142, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/programs.scss */
 .learn-more {
   font-family: OpenSans-Semibold;
   font-size: 14px;
@@ -15178,7 +15557,7 @@ p {
   margin-top: -3px;
 }
 
-/* line 148, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/programs.scss */
+/* line 149, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/programs.scss */
 .cursor {
   width: 7px;
   margin-left: 10px;
@@ -15198,29 +15577,29 @@ p {
   width: 110%;
   height: 110%;
 }
-/* line 4, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/resources.scss */
+/* line 5, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/resources.scss */
 .event-row {
-  padding: 20px 50px 50px 50px;
+  padding: 2% 2% 2% 0%;
 }
 
-/* line 8, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/resources.scss */
+/* line 9, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/resources.scss */
 #event-subsection1 {
   background-color: #F0FFFF;
   border-radius: 10px;
 }
 
-/* line 13, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/resources.scss */
+/* line 14, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/resources.scss */
 #event-subsection1 img {
   margin: 0;
 }
 
-/* line 17, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/resources.scss */
+/* line 18, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/resources.scss */
 .icon-img {
   height: 35px;
   width: 35px;
 }
 
-/* line 22, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/resources.scss */
+/* line 23, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/resources.scss */
 #filter-header {
   display: flex;
   flex-direction: row;
@@ -15228,14 +15607,14 @@ p {
   justify-content: space-between;
 }
 
-/* line 29, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/resources.scss */
+/* line 30, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/resources.scss */
 #filterText {
   font-family: BreeSerif-Regular;
   font-size: 30px;
   color: #004C81;
 }
 
-/* line 35, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/resources.scss */
+/* line 36, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/resources.scss */
 .filter-header-img {
   width: 100%;
   margin: 0;
@@ -15243,21 +15622,21 @@ p {
   padding-top: 15px;
 }
 
-/* line 42, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/resources.scss */
+/* line 43, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/resources.scss */
 .filter-header-chevron {
   width: 18px;
   height: 9px;
   display: inline;
 }
 
-/* line 48, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/resources.scss */
+/* line 49, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/resources.scss */
 .filter-header2 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-/* line 55, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/resources.scss */
+/* line 56, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/resources.scss */
 .filterCard-header2 {
   /* All locations: */
   font-family: OpenSans-Bold;
@@ -15265,43 +15644,43 @@ p {
   color: #000000;
 }
 
-/* line 62, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/resources.scss */
+/* line 63, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/resources.scss */
 .filterCard-list {
   font-family: OpenSans;
   font-size: 16px;
   color: #000000;
 }
 
-/* line 68, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/resources.scss */
+/* line 69, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/resources.scss */
 .event-subsection2-image {
   width: 100%;
   height: auto;
 }
 
-/* line 72, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/resources.scss */
+/* line 73, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/resources.scss */
 .event-subsection2-card-resource {
   margin-right: 0px;
   /* 	    	margin-left: 20px;	 */
 }
 
-/* line 77, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/resources.scss */
+/* line 78, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/resources.scss */
 .event-row .event-subsection2 {
-  padding-left: 40px;
+  padding-left: 4%;
 }
 
-/* line 80, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/resources.scss */
+/* line 81, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/resources.scss */
 .event-subsection2-details {
   padding: 10px;
 }
 
-/* line 87, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/resources.scss */
+/* line 88, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/resources.scss */
 .event-subsection2-text-resource {
   background: #fff;
   border-radius: 10px;
   margin-bottom: 35px;
 }
 
-/* line 92, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/resources.scss */
+/* line 93, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/resources.scss */
 .event-subsection2-header {
   font-family: BreeSerif-Regular;
   font-size: 36px;
@@ -15312,7 +15691,7 @@ p {
   padding-bottom: 5px;
 }
 
-/* line 101, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/resources.scss */
+/* line 102, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/resources.scss */
 .event-header {
   /* Featured: */
   font-family: BreeSerif-Regular;
@@ -15321,7 +15700,7 @@ p {
   padding-top: 10px;
 }
 
-/* line 109, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/resources.scss */
+/* line 110, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/resources.scss */
 .event-subsection2-header2 {
   /* Family Empowerment P: */
   font-family: 'Open Sans', sans-serif;
@@ -15329,12 +15708,12 @@ p {
   color: #004C81;
 }
 
-/* line 116, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/resources.scss */
+/* line 117, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/resources.scss */
 .event-subsection2-card {
   background-color: #fff;
 }
 
-/* line 119, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/resources.scss */
+/* line 120, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/resources.scss */
 .event-info-txt-bold {
   /* Event - 04/01/17: */
   font-family: OpenSans-Extrabold;
@@ -15344,7 +15723,7 @@ p {
   padding-left: 5px;
 }
 
-/* line 128, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/resources.scss */
+/* line 129, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/resources.scss */
 .resource-info-txt {
   font-family: OpenSans-Semibold;
   font-size: 16px;
@@ -15353,14 +15732,14 @@ p {
   padding-left: 5px;
 }
 
-/* line 137, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/resources.scss */
+/* line 138, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/resources.scss */
 .event-info-icon {
   width: 20px;
   height: 20px;
   float: left;
 }
 
-/* line 142, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/resources.scss */
+/* line 143, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/resources.scss */
 .event-info-icon2 {
   display: inline;
   width: 20px;
@@ -15368,10 +15747,9 @@ p {
   float: left;
 }
 
-/* line 148, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/resources.scss */
+/* line 149, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/resources.scss */
 .event-info1 {
   padding-left: 10px;
-  margin-left: 20px;
 }
 
 /* line 152, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/resources.scss */
@@ -15643,49 +16021,50 @@ p {
   height: 150px;
   width: 200px;
   margin-left: 10px;
+  margin-right: 35;
 }
 
-/* line 22, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/services.scss */
+/* line 23, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/services.scss */
 .organization-info {
   display: flex;
   padding-left: 0 !important;
 }
 
-/* line 27, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/services.scss */
+/* line 28, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/services.scss */
 .organization-details {
   padding-bottom: 20px;
 }
 
-/* line 31, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/services.scss */
+/* line 32, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/services.scss */
 .divider {
   border-width: 1px;
   border-color: #004C81;
 }
 
-/* line 36, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/services.scss */
+/* line 37, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/services.scss */
 .sidebar hr {
   border-color: #00A3DA;
   margin: 10px;
 }
 
-/* line 41, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/services.scss */
+/* line 42, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/services.scss */
 .sidebar a {
   color: #FFFFFF;
 }
 
-/* line 45, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/services.scss */
+/* line 46, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/services.scss */
 .sidebar h2 {
   color: #FFFFFF;
   text-align: center;
   margin: 30px;
 }
 
-/* line 51, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/services.scss */
+/* line 52, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/services.scss */
 .sidebar p {
   padding: 10px 15px;
 }
 
-/* line 55, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/services.scss */
+/* line 56, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/services.scss */
 .program-details-link {
   margin-top: 40px !important;
   margin-bottom: 40px !important;
@@ -15696,14 +16075,14 @@ p {
   justify-content: center;
 }
 
-/* line 66, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/services.scss */
+/* line 67, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/services.scss */
 .program-details-link h4 {
   color: #00A3DA !important;
   font-size: 30px !important;
   text-align: center;
 }
 
-/* line 72, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/services.scss */
+/* line 73, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/services.scss */
 #organization-button {
   background: #00A3DA;
   border-radius: 10px;
@@ -15719,37 +16098,37 @@ p {
   text-align: center;
 }
 
-/* line 87, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/services.scss */
+/* line 88, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/services.scss */
 .nav > li > a:hover {
   text-decoration: none;
   background-color: #00A3DA !important;
 }
 
-/* line 93, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/services.scss */
+/* line 94, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/services.scss */
 .sector {
   padding-left: 0 !important;
   padding-right: 0 !important;
 }
 
-/* line 99, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/services.scss */
+/* line 100, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/services.scss */
 #whats-new-board {
   background-color: #D1F0F4;
 }
 
-/* line 103, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/services.scss */
+/* line 104, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/services.scss */
 #whats-new {
   color: #00A3DA;
   font-family: BreeSerif-Regular;
   margin-left: 8px;
 }
 
-/* line 109, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/services.scss */
+/* line 110, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/services.scss */
 .whats-new {
   background-color: #D1F0F4;
   width: 100%;
 }
 
-/* line 114, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/services.scss */
+/* line 115, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/services.scss */
 #view-all {
   float: right;
   margin-top: -54px;
@@ -15763,27 +16142,27 @@ p {
   margin-right: 8px;
 }
 
-/* line 127, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/services.scss */
+/* line 128, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/services.scss */
 .outer-blue-container {
   background-color: #D1F0F4;
   padding-top: 30px;
 }
 
-/* line 133, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/services.scss */
+/* line 134, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/services.scss */
 .new-events {
   font-family: OpenSans-Semibold;
   font-size: 16px;
   color: #00A3DA;
 }
 
-/* line 139, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/services.scss */
+/* line 140, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/services.scss */
 .posted-on {
   font-family: OpenSans-Semibold;
   font-size: 12px;
   color: #00A3DA;
 }
 
-/* line 145, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/services.scss */
+/* line 146, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/services.scss */
 .learn-more {
   font-family: OpenSans-Semibold;
   font-size: 14px;
@@ -15792,7 +16171,7 @@ p {
   margin-top: -3px;
 }
 
-/* line 153, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/services.scss */
+/* line 154, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/services.scss */
 .cursor {
   width: 7px;
   margin-left: 10px;
@@ -15846,7 +16225,6 @@ p {
   padding:10px;
   background-color: white;
   color:#00A3DA;
-  width: auto;
   border-radius: 10px;
   text-align: center;
   font-size: 20px;
@@ -15862,14 +16240,13 @@ p {
   background-color: white;
   border-radius: 10px;
   padding:10px;
-  width:100%;
-  height:auto;
+  width:auto;
   font-size: 16px;
 }
 
 #latest-news ul {
-  padding-right: 20px;
-  padding-left: 20px;
+  padding-right: 2%;
+  padding-left: 2%;
 }
 
 #fatherandkids {
@@ -15880,8 +16257,7 @@ p {
   height: 400px;
   object-fit: cover;
   background-color: #D1F0F4;
-  margin-bottom:2%;
-  margin-top:1%;
+  margin: 1% auto 2% auto;
 }
 
 .light-blue-bg-color {
@@ -16000,7 +16376,6 @@ p {
 .paper-clip-container {
   position: relative;
 }
-
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -16020,21 +16395,187 @@ p {
 
 
 
+
  */
+@media only screen and (min-width: 765px) {
+  /* line 26, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/application.css.scss */
+  #reg-header {
+    display: "";
+  }
 
+  /* line 29, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/application.css.scss */
+  .page-padding {
+    height: 60px;
+  }
 
+  /* line 32, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/application.css.scss */
+  #mobile-header {
+    display: none;
+  }
 
- @import "bootstrap-sprockets";
- @import "bootstrap";
+  /* line 35, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/application.css.scss */
+  #live5210-img-container {
+    height: 350px;
+  }
 
+  /* line 38, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/application.css.scss */
+  .mobile-block {
+    display: inline;
+  }
+}
+@media only screen and (max-width: 764px) {
+  /* line 45, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/application.css.scss */
+  .happy-rainbow {
+    padding-top: 0px;
+  }
 
- @media only screen and (max-width: 730px) {
-    /* styles for low res screens go here */
-    /* hide our medium and large divs)  */
-    .font-16, .font-20, .bree-font, .bree-font26  {
-        font-size: 1.5em !important;
-   }
-   #delta-image {
-     display: none;
-   }
+  /* line 48, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/application.css.scss */
+  #mobile-header {
+    display: "";
+  }
+
+  /* line 51, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/application.css.scss */
+  #mobile-scroll-pad {
+    height: 120px;
+  }
+
+  /* line 54, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/application.css.scss */
+  #reg-header {
+    display: none;
+  }
+
+  /* line 57, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/application.css.scss */
+  .page-padding {
+    height: 30px;
+  }
+
+  /* line 60, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/application.css.scss */
+  #live5210-img-container {
+    height: 200px;
+  }
+
+  /* line 63, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/application.css.scss */
+  .mobile-block {
+    display: block;
+  }
+
+  /* line 66, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/application.css.scss */
+  #section1-heading {
+    margin-left: 25%;
+  }
+
+  /* line 69, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/application.css.scss */
+  #plan-for-living-heading,
+  #new-resources-heading {
+    text-align: center;
+  }
+
+  /* line 73, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/application.css.scss */
+  .mobile-font-10 {
+    font-size: 10px !important;
+  }
+
+  /* line 76, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/application.css.scss */
+  .mobile-font-16 {
+    font-size: 16px !important;
+  }
+
+  /* line 79, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/application.css.scss */
+  .mobile-font-24 {
+    font-size: 24px !important;
+  }
+
+  /* line 82, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/application.css.scss */
+  .live-btm-imgs {
+    left: 0;
+  }
+
+  /* line 85, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/application.css.scss */
+  #latest-news,
+  #survey-results {
+    width: 100%;
+    margin: 10px 0px 10px 0px;
+  }
+
+  /* line 90, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/application.css.scss */
+  .page-padding {
+    height: 75px;
+    margin-bottom: 10px;
+  }
+
+  /* line 94, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/application.css.scss */
+  .content {
+    padding: 15px !important;
+  }
+
+  /* line 97, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/application.css.scss */
+  #pad-200 {
+    padding-top: 200px;
+  }
+
+  /* line 100, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/application.css.scss */
+  #contact-us-text {
+    font-size: 20px;
+    bottom: 60px;
+  }
+
+  /* line 104, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/application.css.scss */
+  #boyrunning {
+    margin-top: 20px;
+    padding-bottom: 50px;
+  }
+
+  /* line 108, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/application.css.scss */
+  #boyrunning-container {
+    height: 200px;
+    margin-bottom: none !important;
+  }
+
+  /* line 112, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/application.css.scss */
+  .bree-font {
+    font-size: 30px;
+  }
+
+  /* line 115, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/application.css.scss */
+  .event-row {
+    padding: 0;
+  }
+
+  /* line 118, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/application.css.scss */
+  .event-row .event-subsection2 {
+    padding: 10px;
+  }
+
+  /* line 121, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/application.css.scss */
+  .div-tags {
+    flex-direction: column;
+  }
+
+  /* line 124, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/application.css.scss */
+  .report-button {
+    margin: 3px;
+  }
+
+  /* line 127, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/application.css.scss */
+  .calendar-subsection2 {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  /* line 131, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/application.css.scss */
+  .calendar-title {
+    text-align: center !important;
+  }
+
+  /* line 134, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/application.css.scss */
+  .event-info {
+    flex-direction: column;
+  }
+
+  /* line 137, /Users/chrisryan/Documents/BootCamp/GroupProject/delta_kids_integration_branch/delta_kids_project/app/assets/stylesheets/application.css.scss */
+  .popup .popuptext {
+    width: 80%;
+    height: 70%;
+    padding-right: 10%;
+  }
 }
