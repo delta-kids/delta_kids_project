@@ -145,7 +145,7 @@
           <% end %>
         </div>
         <div class="container-fluid center-flex-content bree-font" style="align-items:center;">
-          <%= paginate @events_search, window: 2 %>
+          <%= paginate @events_search, window: 2, :params => {:anchor => "results"} %>
         </div>
 
       </div>

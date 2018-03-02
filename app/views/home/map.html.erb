@@ -202,7 +202,7 @@
             <% end %>
           </div>
           <div class="container-fluid center-flex-content bree-font" style="align-items:center;">
-            <%= paginate @map_search_results, window: 2 %>
+            <%= paginate @map_search_results, window: 2, :params => {:anchor => "results"} %>
           </div>
 
         </div>

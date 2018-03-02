@@ -104,7 +104,7 @@
         </div>
         <% end %>
         <div class="container-fluid center-flex-content bree-font" style="align-items:center;">
-          <%= paginate @resources_search, window: 2 %>
+          <%= paginate @resources_search, window: 2, :params => {:anchor => "results"} %>
         </div>
       </div>
     </div>
