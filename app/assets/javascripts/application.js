@@ -16,12 +16,10 @@
 //= require chosen-jquery
 //= require rails-ujs
 //= require underscore
+//= require social-share-button		
 //= require gmaps/google
 //= require recurring_select
 //= require_tree .
-
-
-
 
 
 $(document).ready(function() {
