@@ -44,6 +44,13 @@ $(document).ready(function() {
 });
 });
 
+$(document).ready(function() {
+$('.cal-hl').click(
+function(){
+    $('.cal-highlight').removeClass('cal-highlight');
+    $(this).addClass('cal-highlight')
+});
+});
 
 $(document).ready(function(){
   $('.dateselect-time').timepicker({ 'scrollDefault': 'now' });
