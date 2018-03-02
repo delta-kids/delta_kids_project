@@ -54,7 +54,7 @@
             <% else %>
 
             <div class="popup" onclick="calendarPopup(<%= event.id %>)">
-              <p class="cal-links mobile-font-10"><%= Event.find(event.id).start_time.strftime("%I:%M %p") %>
+              <p class="cal-links mobile-font-10 cal-hl"><%= Event.find(event.id).start_time.strftime("%I:%M %p") %>
                 <br> <%= event.title %></p>
               <br>
               <div class="popuptext" id="cal-popup-window-<%=event.id%>">
