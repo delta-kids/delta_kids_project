@@ -23,6 +23,7 @@
   background-repeat: no-repeat;
   background-position:bottom;
   top: 80px;
+  margin-bottom: none;
 }
 
 #mobile-header {
@@ -271,7 +272,7 @@ li a {
 .page-padding {
   position: relative;
   top:10px;
-  height: 60px;
+  height: 75px;
   width: 100%;
   background-color: #D1F0F4
 }
