@@ -16,7 +16,7 @@
 //= require chosen-jquery
 //= require rails-ujs
 //= require underscore
-//= require social-share-button		
+//= require social-share-button
 //= require gmaps/google
 //= require recurring_select
 //= require_tree .
@@ -44,10 +44,7 @@ $(document).ready(function() {
 $(document).ready(function() {
 $('.cal-hl').click(
 function(){
-    $('.cal-highlight-yellow').addClass('cal-highlight-blue')
-    $('.cal-highlight-yellow').removeClass('cal-highlight-yellow');
-    $(this).addClass('cal-highlight-yellow')
-    $(this).removeClass('cal-highlight-blue');
+    $(this).addClass('cal-highlight-blue')
 });
 });
 
