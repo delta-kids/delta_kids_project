@@ -46,10 +46,7 @@
                   <br>
                   <div class="center-flex-content">
                     <% if @event.approved != true %>
-                    <%= form_for @event do |f| %>
-                      <%= f.hidden_field :approved, value: true %>
-                      <%= f.submit 'Approve', class: 'btn btn-success edit-delete-btn-width form-padding' %>
-                      <% end %>
+                    <%= link_to("Approve", admin_event_approve_path(@event), :confirm => "Approve Event?", :method => :post, class:"btn btn-success edit-delete-btn-width form-padding")%>
                       <%= link_to "Decline", decline_event_path(@event), class: 'btn btn-danger edit-delete-btn-width',style:"margin-left:5%;"  %>
                     <% end %>
                   </div>

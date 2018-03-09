@@ -91,6 +91,12 @@ class EventsController < ApplicationController
     redirect_to @event_update, notice: "Successfully Updated"
   end
 
+  def admin_approve_event
+    @event = find_event
+    @event.update_attribute(:approved,true)
+    redirect_to dashboard_pending_and_approved_events_path, notice: "Event Approved!"
+  end
+
   def pending_and_approved_events
     @events = Event.where(:approved => false || nil).order(title: :asc).page(params[:page]).per(25)
   end

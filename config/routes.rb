@@ -93,6 +93,12 @@ Rails.application.routes.draw do
   get 'dashboard/pending_and_approved_resources/decline/:id', to: 'resources#decline', as: 'decline_resource'
   match '/decline_resource_mail', to: 'resources#decline_mail', via: 'post'
 
+  match '/events/:id/admin_approve_resource', to: 'resources#admin_approve_resource', as: 'admin_resource_approve', via: 'post'
+
+  match '/events/:id/admin_approve_event', to: 'events#admin_approve_event', as: 'admin_event_approve', via: 'post'
+
+
+
 
 
   resources :resources

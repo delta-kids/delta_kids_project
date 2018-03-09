@@ -21,10 +21,7 @@
                 <p class="font-16"><%= link_to event.title, event_path(event) %></p>
                 <div class="flex">
 
-                <%= form_for event do |f| %>
-                  <%= f.hidden_field :approved, value: true %>
-                  <%= f.submit 'Approve', class: 'btn btn-success edit-delete-btn-width' %>
-                  <% end %>&nbsp
+                <%= link_to("Approve", admin_event_approve_path(event), :confirm => "Approve Event?", :method => :post, class:"btn btn-success edit-delete-btn-width form-padding")%>&nbsp
                   <%= link_to "Decline", decline_event_path(event), class: 'btn btn-danger edit-delete-btn-width'  %>
                 </div>
                 <hr>

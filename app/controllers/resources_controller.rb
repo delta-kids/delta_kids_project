@@ -52,6 +52,11 @@ class ResourcesController < ApplicationController
       redirect_to dashboard_pending_and_approved_resources_path, notice: "Decline Email Sent"
     end
 
+    def admin_approve_resource
+      @resource = find_resource
+      @resource.update_attribute(:approved,true)
+      redirect_to dashboard_pending_and_approved_resources_path, notice: "Resource Approved!"
+    end
 
     def index
       @featured = Resource.where(:feature => true)
