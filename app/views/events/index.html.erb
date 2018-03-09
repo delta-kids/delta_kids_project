@@ -50,7 +50,7 @@
             <% events.each do |event|  %>
             <% if Holidays.on(date, :ca, :observed) != [] %>
             <% else %>
-            <% if event.approved === false %>
+            <% if event.approved === false || nil %>
             <% else %>
 
             <div class="popup" onclick="calendarPopup(<%= event.id %>)">
