@@ -18,13 +18,13 @@
                 <br>
                 <% if @organization.programs.count > 0 %>
                   <% @organization.programs.each do |program| %>
-                    program.program_description
+                    <%= program.program_description %>
                     <br>
                   <% end %>
                 <% end %>
                 <% if @organization.services.count > 0 %>
                   <% @organization.services.each do |service| %>
-                    service.service_description
+                    <%= service.service_description %>
                     <br>
                   <% end %>
                 <% end %>
