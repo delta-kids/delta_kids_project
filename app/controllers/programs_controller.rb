@@ -102,7 +102,7 @@ class ProgramsController < ApplicationController
 
   private
   def program_params
-    params.require(:program).permit([:program_description, :registration, :cost, :program_type_id, :age_group_id, :organization_id, :image ])
+    params.require(:program).permit([:program_description, :registration, :cost, :program_type_id, :age_group_id, :organization_id, :image, { age_group_ids: [] } ])
   end
 
   def find_program
