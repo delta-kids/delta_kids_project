@@ -47,6 +47,19 @@
               %>
             </div>
           </div>
+            <!-- AGE GROUP -->
+            <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2  col-md-offset-3 form-field">
+              <%= f.label :age_group, "Age Group" %>
+              <div class="form-group  dropbox-container">
+                <%= f.collection_select :age_group_ids,
+                                        AgeGroup.all,
+                                        :id,
+                                        :age,
+                                        {},
+                                        { multiple: true, class: 'chosen-select form-control '}
+                %>
+              </div>
+            </div>
           <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2  col-md-offset-3 form-field">
             <%= f.label :Organization, "Organization" %>
             <div class="form-group  dropbox-container" >

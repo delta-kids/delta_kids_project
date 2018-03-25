@@ -6,49 +6,65 @@
 
       <div class="col-xs-12 col-sm-8 col-md-9 dash-main-content" style="background-color:white;">
         <% if user_signed_in? %>
-        <div class="col-xs-12">
-          <div class="container-fluid">
-            <br>
-            <p class="bree-font"><%= @organization.name %></p>
-            <p class="font-20"><strong>Description: </strong><%= @organization.description %></p>
-            <p class="font-20"><strong>Address: </strong><%= @organization.address %></p>
-            <p class="font-20"><strong>Phone_number: </strong><%= @organization.phone %></p>
-            <p class="font-20"><strong>Website: </strong><%= @organization.website %></p>
-            <p class="font-20"><strong>Image: </strong></p>
-            <div class="" style="max-height:300px; max-width:500px; margin:5% auto 7% auto;">
-              <%= image_tag(@organization.image_url.to_s, class:"fit-img", style:"max-height:300px; max-width:500px;") %>
-            </div>
-            <br>
-            <% if is_admin? %>
-            <div class="center-flex-content">
+          <div class="col-xs-12">
+            <div class="container-fluid">
+              <br>
+              <p class="bree-font"><%= @organization.name %></p>
+              <p class="font-20"><strong>Description: </strong><%= @organization.description %></p>
+              <p class="font-20"><strong>Address: </strong><%= @organization.address %></p>
+              <p class="font-20"><strong>Phone_number: </strong><%= @organization.phone %></p>
+              <p class="font-20"><strong>Website: </strong><%= @organization.website %></p>
+              <p class="font-20"><strong>Programs/Services Provided: </strong>
+                <br>
+                <% if @organization.programs.count > 0 %>
+                  <% @organization.programs.each do |program| %>
+                    program.program_description
+                    <br>
+                  <% end %>
+                <% end %>
+                <% if @organization.services.count > 0 %>
+                  <% @organization.services.each do |service| %>
+                    service.service_description
+                    <br>
+                  <% end %>
+                <% end %>
+              </p>
+              <p class="font-20"><strong>Image: </strong></p>
+              <div class="" style="max-height:300px; max-width:500px; margin:5% auto 7% auto;">
+                <%= image_tag(@organization.image_url.to_s, class: "fit-img", style: "max-height:300px; max-width:500px;") %>
+              </div>
+              <br>
+              <% if is_admin? %>
+                <div class="center-flex-content">
 
-              <%= link_to 'Edit', edit_organization_path(@organization),
-              class: 'btn btn-success form-padding edit-delete-btn-width',style:"margin-right:5%;"  %>
+                  <%= link_to 'Edit', edit_organization_path(@organization),
+                              class: 'btn btn-success form-padding edit-delete-btn-width', style: "margin-right:5%;" %>
 
-              <%= link_to 'Delete', organization_path(@organization),
-              method: :delete,
-              data: {confirm: 'Are you sure?'},
-              class: 'btn btn-danger edit-delete-btn-width', style:'color:white !important;' %>
+                  <%= link_to 'Delete', organization_path(@organization),
+                              method: :delete,
+                              data: { confirm: 'Are you sure?' },
+                              class: 'btn btn-danger edit-delete-btn-width', style: 'color:white !important;' %>
+                </div>
+                <br>
+              <% end %>
             </div>
-            <br>
-            <% end %>
           </div>
-        </div>
         <% else %>
-        <div>
-          <p>
-            Dashboard section is meant to publish a Resource and/or Event. In order to proceed you must have an account with us. Please Log In or create a New User.
+          <div>
+            <p>
+              Dashboard section is meant to publish a Resource and/or Event. In order to proceed you must have an
+              account with us. Please Log In or create a New User.
+              <br>
+            </p>
             <br>
-        </p>
-        <br>
-        <p>
-          If you don't want to proceed, please feel free to go elsewhere in our site.
-        </p>
-      </div>
-    </div>
-    <% end %>
+            <p>
+              If you don't want to proceed, please feel free to go elsewhere in our site.
+            </p>
+          </div>
+          </div>
+        <% end %>
+        </div>
   </div>
-</div>
 </div>
 
 <!-- Rainbow Footer-->
