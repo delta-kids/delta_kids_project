@@ -24,7 +24,7 @@ class EventsController < ApplicationController
 
 
   def index2
-    @events = Event.where(:approved => true).order(end_date: :asc, title: :asc).page(params[:page]).per(25)
+    @events = Event.where(:approved => true).order(title: :asc).order(end_date: :asc).page(params[:page]).per(25)
     @events_by_start_date = @events.group_by(&:start_date)
     @events_public = Event.where(:user_id => current_user.id ).order(title: :asc).page(params[:page]).per(25)
   end
