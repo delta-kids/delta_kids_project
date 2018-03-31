@@ -10,12 +10,12 @@ class ProgramsController < ApplicationController
     @whats_new_items_random = WhatsNewItem.all.limit(3).order("RANDOM()")
     @age_group = "0-5"
     @programs = Program.includes(:organization).order("organizations.name asc").all.joins(:age_groups).where(:age_groups => {:id => '1'})
-    @artsandculture0_5 = @programs.where("program_type_id = '1'").order(program_description: :asc).page(params[:page]).per(8)
-    @sports0_5 = @programs.where("program_type_id = '4'").order(program_description: :asc).page(params[:page]).per(8)
-    @education0_5 = @programs.where("program_type_id = '6'").order(program_description: :asc).page(params[:page]).per(8)
-    @parentandchild0_5 = @programs.where("program_type_id = '2'").order(program_description: :asc).page(params[:page]).per(8)
-    @childandpreschool0_5 = @programs.where("program_type_id = '3'").order(program_description: :asc).page(params[:page]).per(8)
-    @load_program = @programs.order(program_description: :asc).page(params[:page]).per(8)
+    @artsandculture0_5 = @programs.where("program_type_id = '1'").page(params[:page]).per(8)
+    @sports0_5 = @programs.where("program_type_id = '4'").page(params[:page]).per(8)
+    @education0_5 = @programs.where("program_type_id = '6'").page(params[:page]).per(8)
+    @parentandchild0_5 = @programs.where("program_type_id = '2'").page(params[:page]).per(8)
+    @childandpreschool0_5 = @programs.where("program_type_id = '3'").page(params[:page]).per(8)
+    @load_program = Kaminari.paginate_array(@programs).page(params[:page]).per(8)
 
     url = request.path_info
     if url.include?('0_5/arts_culture')
@@ -35,12 +35,12 @@ class ProgramsController < ApplicationController
     @whats_new_items_random = WhatsNewItem.all.limit(3).order("RANDOM()")
     @age_group = "6-12"
     @programs = Program.includes(:organization).order("organizations.name asc").all.joins(:age_groups).where(:age_groups => {:id => '2'})
-    @artsandculture6_12 = @programs.where("program_type_id = '1'").order(program_description: :asc).page(params[:page]).per(8)
-    @sports6_12 = @programs.where("program_type_id = '4'").order(program_description: :asc).page(params[:page]).per(8)
-    @education6_12 = @programs.where("program_type_id = '6'").order(program_description: :asc).page(params[:page]).per(8)
-    @communityclubs = @programs.where("program_type_id = '5'").order(program_description: :asc).page(params[:page]).per(8)
-    @school_break_camps = @programs.where("program_type_id = '7'").order(program_description: :asc).page(params[:page]).per(8)
-    @load_program = @programs.order(program_description: :asc).page(params[:page]).per(8)
+    @artsandculture6_12 = @programs.where("program_type_id = '1'").page(params[:page]).per(8)
+    @sports6_12 = @programs.where("program_type_id = '4'").page(params[:page]).per(8)
+    @education6_12 = @programs.where("program_type_id = '6'").page(params[:page]).per(8)
+    @communityclubs = @programs.where("program_type_id = '5'").page(params[:page]).per(8)
+    @school_break_camps = @programs.where("program_type_id = '7'").page(params[:page]).per(8)
+    @load_program = Kaminari.paginate_array(@programs).page(params[:page]).per(8)
 
     url = request.path_info
     if url.include?('6_12/arts_culture')

@@ -14,10 +14,10 @@ class ServicesController < ApplicationController
   def pregnancy_babies
     @whats_new_items_random = WhatsNewItem.all.limit(3).order("RANDOM()")
     @services = Service.includes(:organization).order("organizations.name asc").all.where(:category_id => '3')
-    @help_crisis = @services.where("service_type_id = '8'").order(service_description: :asc).page(params[:page]).per(8)
-    @baby_health = @services.where("service_type_id = '3'").order(service_description: :asc).page(params[:page]).per(8)
-    @support = @services.where("service_type_id = '8'").order(service_description: :asc).page(params[:page]).per(8)
-    @load_service = @services.order(service_description: :asc).page(params[:page]).per(8)
+    @help_crisis = @services.where("service_type_id = '8'").page(params[:page]).per(8)
+    @baby_health = @services.where("service_type_id = '3'").page(params[:page]).per(8)
+    @support = @services.where("service_type_id = '8'").page(params[:page]).per(8)
+    @load_service = Kaminari.paginate_array(@services).page(params[:page]).per(8)
 
     url = request.path_info
     if url.include?('pregnancy_babies/help_crisis')
@@ -33,11 +33,11 @@ class ServicesController < ApplicationController
   def children
     @whats_new_items_random = WhatsNewItem.all.limit(3).order("RANDOM()")
     @services = Service.includes(:organization).order("organizations.name asc").all.where(:category_id => '1')
-    @help_crisis = @services.where("service_type_id = '4'").order(service_description: :asc).page(params[:page]).per(8)
-    @child_advocacy = @services.where("service_type_id = '1'").order(service_description: :asc).page(params[:page]).per(8)
-    @health_development = @services.where("service_type_id = '3'").order(service_description: :asc).page(params[:page]).per(8)
-    @support = @services.where("service_type_id = '5'").order(service_description: :asc).page(params[:page]).per(8)
-    @load_service = @services.order(service_description: :asc).page(params[:page]).per(8)
+    @help_crisis = @services.where("service_type_id = '4'").page(params[:page]).per(8)
+    @child_advocacy = @services.where("service_type_id = '1'").page(params[:page]).per(8)
+    @health_development = @services.where("service_type_id = '3'").page(params[:page]).per(8)
+    @support = @services.where("service_type_id = '5'").page(params[:page]).per(8)
+    @load_service = Kaminari.paginate_array(@services).page(params[:page]).per(8)
 
     url = request.path_info
     if url.include?('children/help_crisis')
@@ -53,13 +53,13 @@ class ServicesController < ApplicationController
 
   def families
     @whats_new_items_random = WhatsNewItem.all.limit(3).order("RANDOM()")
-    @services = Service.includes(:organization).order("organizations.name asc").all.where(:category_id => '2').order(service_description: :asc).page(params[:page]).per(8)
-    @help_crisis = @services.where("service_type_id = '4'").order(service_description: :asc).page(params[:page]).per(8)
-    @child_preschool = @services.where("service_type_id = '7'").order(service_description: :asc).page(params[:page]).per(8)
-    @assistance = @services.where("service_type_id = '6'").order(service_description: :asc).page(params[:page]).per(8)
-    @support = @services.where("service_type_id = '8'").order(service_description: :asc).page(params[:page]).per(8)
-    @meals = @services.where("service_type_id = '9'").order(service_description: :asc).page(params[:page]).per(8)
-    @load_service = @services.order(service_description: :asc).page(params[:page]).per(8)
+    @services = Service.includes(:organization).order("organizations.name asc").all.where(:category_id => '2')
+    @help_crisis = @services.where("service_type_id = '4'").page(params[:page]).per(8)
+    @child_preschool = @services.where("service_type_id = '7'").page(params[:page]).per(8)
+    @assistance = @services.where("service_type_id = '6'").page(params[:page]).per(8)
+    @support = @services.where("service_type_id = '8'").page(params[:page]).per(8)
+    @meals = @services.where("service_type_id = '9'").page(params[:page]).per(8)
+    @load_service = Kaminari.paginate_array(@services).page(params[:page]).per(8)
 
     url = request.path_info
     if url.include?('families/help_crisis')
