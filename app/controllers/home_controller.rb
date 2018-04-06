@@ -1,6 +1,4 @@
 class HomeController < ApplicationController
-  # before_action :authenticate_user!, only: [:dashboard]
-
   has_scope :by_start_date
   has_scope :by_end_date
   has_scope :search
@@ -54,16 +52,16 @@ class HomeController < ApplicationController
     @services = apply_scopes(Service, service_params).all
 
     @all_results =
-    @events.order(title: :asc) +
-     @programs.includes(:organization).order("organizations.name asc") +
-      @services.includes(:organization).order("organizations.name asc")
+      @events.order(title: :asc) +
+        @programs.includes(:organization).order("organizations.name asc") +
+        @services.includes(:organization).order("organizations.name asc")
 
     @map_search_results = Kaminari.paginate_array(@all_results).page(params[:page]).per(5)
 
 
     @hash1 = Gmaps4rails.build_markers(@all_results) do |event, marker|
       if event.has_attribute?(:event_type_id)
-      concat_event_info = "
+        concat_event_info = "
       <p class='bree-font26'>#{event.title}</p>
       <br>
       <img src='#{event.image_url.to_s}' class='img-responsive' style='width:100%;height:250px;object-fit: cover'></img>
@@ -71,12 +69,12 @@ class HomeController < ApplicationController
       <p class='font-16'>#{event.description}</p>
       <p class='font-16'>#{event.address}</p>
       <a class='event-info-bold2 font-16' href='events/learn_more/#{event.id}'>Learn More</a>"
-      marker.lat event.latitude
-      marker.lng event.longitude
-      marker.infowindow concat_event_info
+        marker.lat event.latitude
+        marker.lng event.longitude
+        marker.infowindow concat_event_info
 
-    elsif event.has_attribute?(:program_type_id)
-      concat_program_info = "
+      elsif event.has_attribute?(:program_type_id)
+        concat_program_info = "
       <p class='bree-font26'>#{event.organization.name}</p>
       <br>
       <img src='#{event.image_url.to_s}' class='img-responsive' style='width:100%;height:250px;object-fit: cover'></img>
@@ -85,11 +83,11 @@ class HomeController < ApplicationController
       <p class='font-16'>#{event.organization.address}</p>
       <a class='event-info-bold2 font-16' href='programs/learn_more/#{event.id}'>Learn More</a>"
 
-      marker.lat event.organization.latitude
-      marker.lng event.organization.longitude
-      marker.infowindow concat_program_info
-    elsif event.has_attribute?(:service_type_id)
-      concat_service_info = "
+        marker.lat event.organization.latitude
+        marker.lng event.organization.longitude
+        marker.infowindow concat_program_info
+      elsif event.has_attribute?(:service_type_id)
+        concat_service_info = "
       <p class='bree-font26'>#{event.organization.name}</p>
       <br>
       <img src='#{event.image_url.to_s}' class='img-responsive' style='width:100%;height:250px;object-fit: cover'></img>
@@ -97,11 +95,11 @@ class HomeController < ApplicationController
       <p class='font-16'>#{event.service_description}</p>
       <p class='font-16'>#{event.organization.address}</p>
       <a class='event-info-bold2 font-16' href='services/learn_more/#{event.id}'>Learn More</a>"
-      marker.lat event.organization.latitude
-      marker.lng event.organization.longitude
-      marker.infowindow concat_service_info
+        marker.lat event.organization.latitude
+        marker.lng event.organization.longitude
+        marker.infowindow concat_service_info
+      end
     end
-  end
 
   end
 
@@ -113,10 +111,10 @@ class HomeController < ApplicationController
 
   end
 
-private
+  private
 
   def event_params
-    params.slice(:search, :by_start_date, :by_end_date,:approved, :event_location, :registration,:cost,:age_group, :event_type)
+    params.slice(:search, :by_start_date, :by_end_date, :approved, :event_location, :registration, :cost, :age_group, :event_type)
   end
 
   def program_params
