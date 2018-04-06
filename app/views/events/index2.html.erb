@@ -17,6 +17,9 @@
                 </p>
                 <hr>
               <% end %>
+              <div class="container-fluid center-flex-content bree-font" style="align-items:center;">
+                <%= paginate @old_events, window: 2 %>
+              </div>
               <br>
               <% @featured_events.each do |event| %>
                 <p class="font-16">
@@ -27,6 +30,9 @@
                 </p>
                 <hr>
               <% end %>
+              <div class="container-fluid center-flex-content bree-font" style="align-items:center;">
+                <%= paginate @featured_events, window: 2 %>
+              </div>
               <br>
               <% @events.each do |event| %>
                 <p class="font-16">
