@@ -8,6 +8,11 @@
             <div class="container-fluid">
               <h1 class="bree-font">Events</h1>
               <br>
+              <div class="filter-header-container">
+                <p class="filterCard-header1">Featured</p>
+                <a data-toggle="collapse" data-toggle="chevron-anchor" data-target=".collapse-featured" class="chevron-anchor"><%= image_tag "icon-chevron-up.svg", class: "filter-header-chevron a-chevron"  %></a>
+              </div>
+              <div class="collapse-featured collapse">
               <% @featured_events.each do |event| %>
                 <p class="font-16">
                   <% if event.end_date < Time.now.to_date === true %>
@@ -20,7 +25,13 @@
                 </p>
                 <hr>
               <% end %>
+              </div>
               <br>
+              <div class="filter-header-container">
+                <p class="filterCard-header1">Old</p>
+                <a data-toggle="collapse" data-toggle="chevron-anchor" data-target=".collapse-old" class="chevron-anchor"><%= image_tag "icon-chevron-up.svg", class: "filter-header-chevron a-chevron"  %></a>
+              </div>
+              <div class="collapse-old collapse">
               <% @old_events.each do |event| %>
                 <p class="font-16">
                   <% if event.end_date < Time.now.to_date === true %>
@@ -33,6 +44,7 @@
                 </p>
                 <hr>
               <% end %>
+              </div>
               <br>
               <% @events.each do |event| %>
                 <p class="font-16">
