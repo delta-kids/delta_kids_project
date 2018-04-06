@@ -4,43 +4,68 @@
       <%= render 'partials/dash_sidebar' %>
       <div class="col-xs-12 col-sm-8 col-md-9 dash-main-content">
         <% if user_signed_in? %>
-        <% if is_admin? %>
-        <div class="container-fluid">
-          <h1 class="bree-font">Events</h1>
-          <br>
-          <% @events.each do |event| %>
-          <p class="font-16">
-            <% if event.featured === true %>
-             (Featured)
-            <% end %>
-            <% if event.end_date < Time.now.to_date === true %>
-             <span style="color:red">(OLD)</span>
-            <% end %>
-            <%= link_to event.title, event_path(event) %>
-          </p>
-          <hr>
-          <% end %><div class="container-fluid center-flex-content bree-font" style="align-items:center;">
-            <%= paginate @events, window: 2 %>
-          </div>
-        </div>
-        <% else %>
-        <div class="container-fluid">
-          <h1 class="bree-font">Events</h1>
-          <br>
-          <% @events_public.each do |event| %>
-          <p class="font-16"><%= link_to event.title, event_path(event) %></p>
-          <hr>
-          <% end %><div class="container-fluid center-flex-content bree-font" style="align-items:center;">
-            <%= paginate @events_public, window: 2 %>
-          </div>
-        </div>
-        <% end %>
+          <% if is_admin? %>
+            <div class="container-fluid">
+              <h1 class="bree-font">Events</h1>
+              <br>
+              <% @old_events.each do |event| %>
+                <p class="font-16">
+                  <% if event.end_date < Time.now.to_date === true %>
+                    <span style="color:red">(OLD)</span>
+                  <% end %>
+                  <%= link_to event.title, event_path(event) %>
+                </p>
+                <hr>
+              <% end %>
+              <div class="container-fluid center-flex-content bree-font" style="align-items:center;">
+                <%= paginate @old_events, window: 2 %>
+              </div>
+              <br>
+              <% @featured_events.each do |event| %>
+                <p class="font-16">
+                  <% if event.end_date < Time.now.to_date === true %>
+                    <span style="color:red">(OLD)</span>
+                  <% end %>
+                  <%= link_to event.title, event_path(event) %>
+                </p>
+                <hr>
+              <% end %>
+              <div class="container-fluid center-flex-content bree-font" style="align-items:center;">
+                <%= paginate @featured_events, window: 2 %>
+              </div>
+              <br>
+              <% @events.each do |event| %>
+                <p class="font-16">
+                  <% if event.end_date < Time.now.to_date === true %>
+                    <span style="color:red">(OLD)</span>
+                  <% end %>
+                  <%= link_to event.title, event_path(event) %>
+                </p>
+                <hr>
+              <% end %>
+              <div class="container-fluid center-flex-content bree-font" style="align-items:center;">
+                <%= paginate @events, window: 2 %>
+              </div>
+            </div>
+          <% else %>
+            <div class="container-fluid">
+              <h1 class="bree-font">Events</h1>
+              <br>
+              <% @events_public.each do |event| %>
+                <p class="font-16"><%= link_to event.title, event_path(event) %></p>
+                <hr>
+              <% end %>
+              <div class="container-fluid center-flex-content bree-font" style="align-items:center;">
+                <%= paginate @events_public, window: 2 %>
+              </div>
+            </div>
+          <% end %>
 
         <% else %>
-        <%= render 'partials/login_msg' %>
-      </div>
-      <% end %>
-    </div>
+          <%= render 'partials/login_msg' %>
+          </div>
+        <% end %>
+        </div>
   </div>
 </div>
 

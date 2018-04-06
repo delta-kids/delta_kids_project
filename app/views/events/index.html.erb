@@ -15,7 +15,7 @@
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
-            <div class="modal-body background-color" >
+            <div class="modal-body background-color">
               <%= render "partials/mobile_events_filter" %>
             </div>
             <div class="modal-footer" style="background-color:#144c81">
@@ -40,53 +40,58 @@
         </div>
         <div class="calendar-subsection2-card" style="margin-top:0px;">
           <%= month_calendar events: @calendar_events do |date, events| %>
-          <%= date.day %>
+            <%= date.day %>
 
-          <div class="day-scroller">
-            <% if Holidays.on(date, :ca_bc, :observed) != [] %>
-            <% holiday = Holidays.on(date, :ca_bc, :observed) %>
-            <p class="cal-links mobile-font-10" style="color:#144d81"><strong><%= holiday[0][:name] %></strong></p>
-            <% end %>
-            <% events.each do |event|  %>
-            <% if Holidays.on(date, :ca, :observed) != [] %>
-            <% else %>
-            <% if event.approved === false || nil %>
-            <% else %>
+            <div class="day-scroller">
+              <% if Holidays.on(date, :ca_bc, :observed) != [] %>
+                <% holiday = Holidays.on(date, :ca_bc, :observed) %>
+                <p class="cal-links mobile-font-10" style="color:#144d81"><strong><%= holiday[0][:name] %></strong></p>
+              <% end %>
+              <% events.each do |event| %>
+                <% if Holidays.on(date, :ca, :observed) != [] %>
+                <% else %>
+                  <% if event.approved === false || nil %>
+                  <% else %>
 
-            <div class="popup" onclick="calendarPopup(<%= event.id %>)">
-              <p class="cal-links mobile-font-10 cal-hl"><%= Event.find(event.id).start_time.strftime("%I:%M %p") %>
-                <br> <%= event.title %></p>
-              <br>
-              <div class="popuptext" id="cal-popup-window-<%=event.id%>">
-                <i class="fa fa-times pull-right" aria-hidden="true" style="color:yellow; font-size:30px;"></i>
-                <p class="bree-font"><%= link_to event.title, event_learn_more_path(event), class:"", style:"text-decoration:none; color:yellow"  %></p>
-                <div class="row">
-                  <div class="col-xs-12 col-sm-12 col-md-12">
-                    <%= image_tag(Event.find(event.id).image_url.to_s,class:"popup-pic", style:"width:100%; height:auto") %>
-                    <div class="col-xs-12 col-sm-12 col-md-12">
-                      <p class='font-16' style="white-space: pre-line;"><strong style="color:yellow;">Description: </strong><%= event.description %></p>
-                      <p class='font-16'><strong style="color:yellow">Address: </strong><%= event.address %></p>
+                    <div class="popup" onclick="calendarPopup(<%= event.id %>)">
+                      <p class="cal-links mobile-font-10 cal-hl"><%= Event.find(event.id).start_time.strftime("%I:%M %p") %>
+                        <br> <%= event.title %></p>
+                      <br>
+                      <div class="popuptext" id="cal-popup-window-<%= event.id %>">
+                        <i class="fa fa-times pull-right" aria-hidden="true" style="color:yellow; font-size:30px;"></i>
+                        <p class="bree-font"><%= link_to event.title, event_learn_more_path(event), class: "", style: "text-decoration:none; color:yellow" %></p>
+                        <div class="row">
+                          <div class="col-xs-12 col-sm-12 col-md-12">
+                            <%= image_tag(Event.find(event.id).image_url.to_s, class: "popup-pic", style: "width:100%; height:auto") %>
+                            <div class="col-xs-12 col-sm-12 col-md-12">
+                              <p class='font-16' style="white-space: pre-line;">
+                                <strong style="color:yellow;">Description: </strong><%= event.description %></p>
+                              <p class='font-16'><strong style="color:yellow">Address: </strong><%= event.address %></p>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-6" style="padding:0">
+                              <p class='font-16'><strong style="color:yellow">Start
+                                Time: </strong><%= Event.find(event.id).start_time.strftime("%I:%M %p") %></p>
+                              <p class='font-16'><strong style="color:yellow">Start
+                                Date: </strong><%= Event.find(event.id).start_time.strftime("%m/%d/%Y") %></p>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-6" style="padding:0">
+                              <p class='font-16'><strong style="color:yellow">End
+                                Time: </strong><%= Event.find(event.id).end_time.strftime("%I:%M %p") %></p>
+                              <p class='font-16'><strong style="color:yellow">End
+                                Date: </strong><%= Event.find(event.id).end_time.strftime("%m/%d/%Y") %></p>
+                            </div>
+                            <br>
+                            <div class="col-xs-12 col-sm-12 col-md-12">
+                              <p><%= link_to 'Learn More', event_learn_more_path(event), class: "event-info-bold2 pull-right", style: "color:yellow" %></p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                    <div class="col-xs-12 col-sm-6 col-md-6" style="padding:0">
-                      <p class='font-16'><strong style="color:yellow">Start Time: </strong><%= Event.find(event.id).start_time.strftime("%I:%M %p") %></p>
-                      <p class='font-16'><strong style="color:yellow">Start Date: </strong><%= Event.find(event.id).start_time.strftime("%m/%d/%Y") %></p>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-6" style="padding:0">
-                      <p class='font-16'><strong style="color:yellow">End Time: </strong><%= Event.find(event.id).end_time.strftime("%I:%M %p") %></p>
-                      <p class='font-16'><strong style="color:yellow">End Date: </strong><%= Event.find(event.id).end_time.strftime("%m/%d/%Y") %></p>
-                    </div>
-                    <br>
-                    <div class="col-xs-12 col-sm-12 col-md-12">
-                    <p><%= link_to 'Learn More', event_learn_more_path(event), class: "event-info-bold2 pull-right", style:"color:yellow" %></p>
-                  </div>
-                  </div>
-                </div>
-              </div>
+                  <% end %>
+                <% end %>
+              <% end %>
             </div>
-            <% end %>
-            <% end %>
-            <% end %>
-          </div>
           <% end %>
         </div>
 
@@ -96,57 +101,57 @@
           <p class="bree-font">Results (<%= @events_search.total_count %>)</p>
 
           <% for event in @events_search %>
-          <div class="calendar-subsection2-card light-blue-bg-color" style="margin-top:30px">
-            <div class="event-image-container">
-              <%= image_tag(event.image_url.to_s, class:"img-responsive", style:"height:100%; width:100%; object-fit: cover") %>
-            </div>
-            <div class="calendar-subsection2-text" style="background-color: #fff">
-              <div class="calendar-subsection2-details">
-                <p class="calendar-subsection2-header2 bree-font26"><%= event.title %></p>
-                <div class="event-info">
-                  <div class="">
-                    <%= image_tag "icon-calendar.svg", class: "event-info-icon" %>
-                    <p class="event-info-txt-bold">Date:</p>
-                    <p class="event-info-txt"><%= event.start_time.strftime("%m/%d/%Y") %></p>
-                    <p class="event-info-txt"> - <%= event.end_time.strftime("%m/%d/%Y") %></p>
+            <div class="calendar-subsection2-card light-blue-bg-color" style="margin-top:30px">
+              <div class="event-image-container">
+                <%= image_tag(event.image_url.to_s, class: "img-responsive", style: "height:100%; width:100%; object-fit: cover") %>
+              </div>
+              <div class="calendar-subsection2-text" style="background-color: #fff">
+                <div class="calendar-subsection2-details">
+                  <p class="calendar-subsection2-header2 bree-font26"><%= event.title %></p>
+                  <div class="event-info">
+                    <div class="">
+                      <%= image_tag "icon-calendar.svg", class: "event-info-icon" %>
+                      <p class="event-info-txt-bold">Date:</p>
+                      <p class="event-info-txt"><%= event.start_time.strftime("%m/%d/%Y") %></p>
+                      <p class="event-info-txt"> - <%= event.end_time.strftime("%m/%d/%Y") %></p>
+                    </div>
+                    <div class="">
+                      <%= image_tag "icon-clock.svg", class: "event-info-icon" %>
+                      <% if event.start_time %>
+                        <p class="event-info-txt"><%= event.start_time.strftime("%I:%M %p") %></p>
+                      <% end %>
+                      <% if event.end_time %>
+                        <p class="event-info-txt"> - <%= event.end_time.strftime("%I:%M %p") %></p>
+                      <% end %>
+                    </div>
+                    <div class="">
+                      <%= image_tag "icon-baby.svg", class: "event-info-icon" %>
+                      <% event.age_groups.each do |age| %>
+                        <p class="event-info-txt"><%= age.age %></p>
+                      <% end %>
+                    </div>
+                    <div class="">
+                      <%= image_tag "icon-tag.svg", class: "event-info-icon" %>
+                      <p class="event-info-txt"><%= event.cost %></p>
+                    </div>
+                    <div class="">
+                      <%= image_tag "icon-location-pin.svg", class: "event-info-icon" %>
+                      <p class="event-info-txt"><%= event.event_location %></p>
+                    </div>
                   </div>
-                  <div class="">
-                    <%= image_tag "icon-clock.svg", class: "event-info-icon" %>
-                    <% if event.start_time %>
-                    <p class="event-info-txt"><%= event.start_time.strftime("%I:%M %p") %></p>
-                    <% end %>
-                    <% if event.end_time %>
-                    <p class="event-info-txt"> - <%= event.end_time.strftime("%I:%M %p") %></p>
-                    <% end %>
+                  <p class="ellipsis-3 font-16"><%= event.description %></p>
+                  <div class="event-info2">
+                    <!-- <p  class="event-info-bold2">Learn More</p> -->
+                    <p><%= link_to 'Learn More', event_learn_more_path(event), class: "event-info-bold2 font-16" %></p>
+                    <%= image_tag "cursor.svg", class: "event-info-icon2" %>
                   </div>
-                  <div class="">
-                    <%= image_tag "icon-baby.svg", class: "event-info-icon" %>
-                    <% event.age_groups.each do |age| %>
-                    <p class="event-info-txt"><%= age.age %></p>
-                    <% end %>
-                  </div>
-                  <div class="">
-                    <%= image_tag "icon-tag.svg", class: "event-info-icon" %>
-                    <p class="event-info-txt"><%= event.cost %></p>
-                  </div>
-                  <div class="">
-                    <%= image_tag "icon-location-pin.svg", class: "event-info-icon" %>
-                    <p class="event-info-txt"><%= event.event_location %></p>
-                  </div>
-                </div>
-                <p class="ellipsis-3 font-16"><%= event.description %></p>
-                <div class="event-info2">
-                  <!-- <p  class="event-info-bold2">Learn More</p> -->
-                  <p><%= link_to 'Learn More', event_learn_more_path(event), class: "event-info-bold2 font-16" %></p>
-                  <%= image_tag "cursor.svg", class: "event-info-icon2" %>
                 </div>
               </div>
             </div>
-          </div>
           <% end %>
         </div>
         <div class="container-fluid center-flex-content bree-font" style="align-items:center;">
-          <%= paginate @events_search, window: 2, :params => {:anchor => "results2"} %>
+          <%= paginate @events_search, window: 2, :params => { :anchor => "results2" } %>
         </div>
 
       </div>
@@ -157,25 +162,26 @@
 
 
   <script>
-  // When the user clicks on <div>, open the popup
-  function calendarPopup(id) {
-    let popup = document.getElementById(`cal-popup-window-${id}`);
-    popup.classList.toggle("show");
-  }
-  //Save checkbox values
-  let checkboxValues = JSON.parse(localStorage.getItem('checkboxValues')) || {},
-  $checkboxes = $(".checkbox-container :checkbox");
+      // When the user clicks on <div>, open the popup
+      function calendarPopup(id) {
+          let popup = document.getElementById(`cal-popup-window-${id}`);
+          popup.classList.toggle("show");
+      }
 
-  $checkboxes.on("change", function(){
-    $checkboxes.each(function(){
-      checkboxValues[this.id] = this.checked;
-    });
+      //Save checkbox values
+      let checkboxValues = JSON.parse(localStorage.getItem('checkboxValues')) || {},
+          $checkboxes = $(".checkbox-container :checkbox");
 
-    localStorage.setItem("checkboxValues", JSON.stringify(checkboxValues));
-  });
+      $checkboxes.on("change", function () {
+          $checkboxes.each(function () {
+              checkboxValues[this.id] = this.checked;
+          });
 
-  // On page load
-  $.each(checkboxValues, function(key, value) {
-    $("#" + key).prop('checked', value);
-  });
+          localStorage.setItem("checkboxValues", JSON.stringify(checkboxValues));
+      });
+
+      // On page load
+      $.each(checkboxValues, function (key, value) {
+          $("#" + key).prop('checked', value);
+      });
   </script>
