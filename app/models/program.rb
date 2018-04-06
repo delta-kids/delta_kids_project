@@ -8,7 +8,7 @@ class Program < ApplicationRecord
   scope :cost, -> cost { where(:cost => cost) }
   scope :search, -> term {
     if self.has_attribute?(:program_type_id)
-      joins(:organization).where('organizations.name ILIKE (?) OR program_description ILIKE (?)', "%#{term}%", "%#{term}%").order('description ASC')
+      joins(:organization).where('organizations.name ILIKE (?) OR program_description ILIKE (?) OR organizations.address ILIKE (?)', "%#{term}%", "%#{term}%", "%#{term}%").order('description ASC')
   end
 
 }

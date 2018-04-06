@@ -6,7 +6,7 @@ class Service < ApplicationRecord
   scope :category, -> category_id { self.includes(:category).where(:category => {:id => category_id}) if self.present? }
   scope :search, -> term {
     if self.has_attribute?(:service_type_id)
-      joins(:organization).where('organizations.name ILIKE (?) OR service_description ILIKE (?)', "%#{term}%", "%#{term}%").order('description ASC')
+      joins(:organization).where('organizations.name ILIKE (?) OR service_description ILIKE (?) OR organizations.address ILIKE (?)', "%#{term}%", "%#{term}%", "%#{term}%").order('description ASC')
   end
 }
 
