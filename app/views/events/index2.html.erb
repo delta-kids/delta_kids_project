@@ -9,61 +9,73 @@
               <h1 class="bree-font">Events</h1>
               <br>
               <div class="filter-header-container">
-                <p class="filterCard-header1">Featured (<% @featured_events.count%>)</p>
-                <a data-toggle="collapse" data-toggle="chevron-anchor" data-target=".collapse-featured" class="chevron-anchor"><%= image_tag "icon-chevron-up.svg", class: "filter-header-chevron a-chevron"  %></a>
+                <p class="filterCard-header1">Featured (<%= @featured_events.count %>)</p>
+                <a data-toggle="collapse" data-toggle="chevron-anchor" data-target=".collapse-featured" class="chevron-anchor"><%= image_tag "icon-chevron-up.svg", class: "filter-header-chevron a-chevron" %></a>
               </div>
               <div class="collapse-featured collapse">
-              <% @featured_events.each do |event| %>
-                <p class="font-16">
-                  <% if event.end_date < Time.now.to_date === true %>
-                    <span style="color:red">(OLD)</span>
-                  <% end %>
-                  <% if event.featured === true %>
-                    (Featured)
-                  <% end %>
-                  <%= link_to event.title, event_path(event) %>
-                </p>
-                <hr>
-              <% end %>
+                <br>
+                <% @featured_events.each do |event| %>
+                  <p class="font-16">
+                    <% if event.end_date < Time.now.to_date === true %>
+                      <span style="color:red">(OLD)</span>
+                    <% end %>
+                    <% if event.featured === true %>
+                      (Featured)
+                    <% end %>
+                    <%= link_to event.title, event_path(event) %>
+                  </p>
+                  <hr>
+                <% end %>
               </div>
               <hr class="nav-hr">
               <br>
               <div class="filter-header-container">
-                <p class="filterCard-header1">Old (<% @old_events.count%>)</p>
-                <a data-toggle="collapse" data-toggle="chevron-anchor" data-target=".collapse-old" class="chevron-anchor"><%= image_tag "icon-chevron-up.svg", class: "filter-header-chevron a-chevron"  %></a>
+                <p class="filterCard-header1">Old (<%= @old_events.count %>)</p>
+                <a data-toggle="collapse" data-toggle="chevron-anchor" data-target=".collapse-old" class="chevron-anchor"><%= image_tag "icon-chevron-up.svg", class: "filter-header-chevron a-chevron" %></a>
               </div>
               <div class="collapse-old collapse">
-              <% @old_events.each do |event| %>
-                <p class="font-16">
-                  <% if event.end_date < Time.now.to_date === true %>
-                    <span style="color:red">(OLD)</span>
-                  <% end %>
-                  <% if event.featured === true %>
-                    (Featured)
-                  <% end %>
-                  <%= link_to event.title, event_path(event) %>
-                </p>
-                <hr>
-              <% end %>
+                <br>
+                <% @old_events.each do |event| %>
+                  <p class="font-16">
+                    <% if event.end_date < Time.now.to_date === true %>
+                      <span style="color:red">(OLD)</span>
+                    <% end %>
+                    <% if event.featured === true %>
+                      (Featured)
+                    <% end %>
+                    <%= link_to event.title, event_path(event) %>
+                  </p>
+                  <hr>
+                <% end %>
               </div>
               <hr class="nav-hr">
               <br>
-              <% @events.each do |event| %>
-                <p class="font-16">
-                  <% if event.end_date < Time.now.to_date === true %>
-                    <span style="color:red">(OLD)</span>
-                  <% end %>
-                  <%= link_to event.title, event_path(event) %>
-                </p>
-                <hr>
-              <% end %>
-              <div class="container-fluid center-flex-content bree-font" style="align-items:center;">
-                <%= paginate @events, window: 2 %>
+              <div class="filter-header-container">
+                <p class="filterCard-header1">Current Events (<%= @old_events.count %>)</p>
+                <a data-toggle="collapse" data-toggle="chevron-anchor" data-target=".collapse-current-events" class="chevron-anchor"><%= image_tag "icon-chevron-up.svg", class: "filter-header-chevron a-chevron" %></a>
               </div>
+              <div class="collapse-current-events collapse in">
+                <br>
+                <% @events.each do |event| %>
+                  <p class="font-16">
+                    <% if event.end_date < Time.now.to_date === true %>
+                      <span style="color:red">(OLD)</span>
+                    <% end %>
+                    <%= link_to event.title, event_path(event) %>
+                  </p>
+                  <hr>
+                <% end %>
+                <div class="container-fluid center-flex-content bree-font" style="align-items:center;">
+                  <%= paginate @events, window: 2 %>
+                </div>
+              </div>
+              <br>
+              <hr class="nav-hr">
             </div>
           <% else %>
             <div class="container-fluid">
-              <h1 class="bree-font">Events</h1>
+              <h1 class="bree-font">Events (
+                <% @events_public.count %>)</h1>
               <br>
               <% @events_public.each do |event| %>
                 <p class="font-16"><%= link_to event.title, event_path(event) %></p>
