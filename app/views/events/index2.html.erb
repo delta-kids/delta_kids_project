@@ -51,7 +51,7 @@
               <hr class="nav-hr">
               <br>
               <div class="filter-header-container">
-                <p class="filterCard-header1">Current Events (<%= @events.count %>)</p>
+                <p class="filterCard-header1">Current Events (<%= @events.all.count %>)</p>
                 <a data-toggle="collapse" data-toggle="chevron-anchor" data-target=".collapse-current-events" class="chevron-anchor"><%= image_tag "icon-chevron-up.svg", class: "filter-header-chevron a-chevron" %></a>
               </div>
               <div class="collapse-current-events collapse in">
