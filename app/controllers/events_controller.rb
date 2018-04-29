@@ -24,8 +24,8 @@ class EventsController < ApplicationController
 
 
   def index2
-    @events = Event.where(:approved => true).where("end_date > ?", DateTime.now - 2.days).where(:featured => false).order(title: :asc, end_date: :asc).page(params[:page]).per(10)
-    @old_events = Event.where("end_date < ?", DateTime.now - 2.days).order(title: :asc)
+    @events = Event.where(:approved => true).where("end_date > ?", Time.zone.now - 2.days).where(:featured => false).order(title: :asc, end_date: :asc).page(params[:page]).per(10)
+    @old_events = Event.where("end_date < ?", Time.zone.now - 2.days).order(title: :asc)
     @featured_events = Event.where(:featured => true).order(title: :asc)
     @events_public = Event.where(:user_id => current_user.id).order(title: :asc).page(params[:page]).per(10)
   end
