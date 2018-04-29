@@ -51,12 +51,12 @@
               <hr class="nav-hr">
               <br>
               <div class="filter-header-container">
-                <p class="filterCard-header1">Current Events (<%= @events.all.count %>)</p>
+                <p class="filterCard-header1">Current Events (<%= @events.count %>)</p>
                 <a data-toggle="collapse" data-toggle="chevron-anchor" data-target=".collapse-current-events" class="chevron-anchor"><%= image_tag "icon-chevron-up.svg", class: "filter-header-chevron a-chevron" %></a>
               </div>
               <div class="collapse-current-events collapse in">
                 <br>
-                <% @events.each do |event| %>
+                <% @events_results.each do |event| %>
                   <p class="font-16">
                     <% if event.end_date < Time.now.to_date === true %>
                       <span style="color:red">(OLD)</span>
