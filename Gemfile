@@ -47,6 +47,7 @@ gem 'holidays'
 gem 'recurring_select', github:"RundownApp/recurring_select"
 gem "fog"
 gem 'aws-sdk', '~> 3'
+gem "recaptcha", require: "recaptcha/rails"
 
 
 # Use Capistrano for deployment

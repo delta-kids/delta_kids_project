@@ -20,11 +20,24 @@ class HomeController < ApplicationController
   end
 
   def contact_mail
-    name = params[:name]
-    email = params[:email]
-    message = params[:message]
-    ContactUsMailer.contact_email(name, email, message).deliver
-    redirect_to contact_submit_path, notice: 'Message sent'
+    if verify_recaptcha
+      name = params[:name]
+      email = params[:email]
+      message = params[:message]
+      ContactUsMailer.contact_email(name, email, message).deliver
+      redirect_to contact_submit_path, notice: 'Message sent'
+    end
+  end
+
+  def bootstrap_class_for(flash_type)
+    map = {
+      "success"         => "alert-success",
+      "error"           => "alert-danger",
+      "alert"           => "alert-warning",
+      "notice"          => "alert-info",
+      "recaptcha_error" => "alert-danger"
+    }
+    map.fetch(flash_type)
   end
 
 
