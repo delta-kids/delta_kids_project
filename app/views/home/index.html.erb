@@ -3,65 +3,72 @@
 <div class="row">
   <div class="col-xs-12 col-sm-12 col-md-12">
     <div class="section1 section1-container clouds-background" style="background-size: contain;
-    background-position: center; background-repeat:no-repeat">
-        <div class="row section1-text">
-          <div class="col-xs-12 col-sm-12 col-md-12">
+        background-position: center; background-repeat:no-repeat">
+      <div class="row section1-text">
+        <div class="col-xs-12 col-sm-12 col-md-12">
 
-            <div class="hidden-xs col-sm-1 col-md-1"></div>
-            <div class="col-xs-12 col-sm-5 col-md-5">
-              <p id='welcome-line1'>Welcome to<p>
-                <p id='welcome-line2'>Delta Kids<p>
-                </div>
-                <div class="col-xs-12 col-sm-5 col-md-5 subsection">
-                  <p id='welcome-line3'>We are your One-Stop-Info-Shop</p>
-                  <p id='welcome-line4'> for children 0-12 years in Delta, BC.<p>
-                    <%= button_to "LEARN MORE", about_path, :method => "get", id:'button-learnmore' %>
-                  </div>
-                  <div class="hidden-xs col-sm-1 col-md-1"></div>
-                </div>
-              </div>
+          <div class="hidden-xs col-sm-1 col-md-1"></div>
+          <div class="col-xs-12 col-sm-5 col-md-5">
+            <p id='welcome-line1'>Welcome to
+            <p>
+            <p id='welcome-line2'>Delta Kids
+            <p>
           </div>
-
-
-          <!-- Second section div -->
-          <div class="section2" id="pad-200">
-            <div class="container-fluid section2-container">
-              <div class="col-xs-12 col-sm-12 col-md-12">
-                <%= image_tag  "kids.png", class: "kids-image" %>
-              </div>
-            </div>
+          <div class="col-xs-12 col-sm-5 col-md-5 subsection">
+            <p id='welcome-line3'>We are your One-Stop-Info-Shop</p>
+            <p id='welcome-line4'> for children 0-12 years in Delta, BC.
+            <p>
+              <%= button_to "LEARN MORE", about_path, :method => "get", id: 'button-learnmore' %>
           </div>
+          <div class="hidden-xs col-sm-1 col-md-1"></div>
+        </div>
+      </div>
+    </div>
 
 
+    <!-- Second section div -->
+    <div class="section2" id="pad-200">
+      <div class="container-fluid section2-container">
+        <div class="col-xs-12 col-sm-12 col-md-12">
+          <%= image_tag "kids.png", class: "kids-image" %>
+        </div>
+      </div>
+    </div>
 
-          <!-- Third section div -->
-          <div class="section3 section1-container" id="link-to-cal">
-            <div class="container-fluid section3-background">
-              <div class="section1-text">
-                <div class="hidden-xs col-sm-1 col-md-1"></div>
-                <div class="col-xs-12 col-sm-5 col-md-5">
-                  <%= image_tag "calendar.svg", class: "calendar-image" %>
-                </div>
-                <div class="col-xs-12 col-sm-5 col-md-5 subsection">
-                  <p id='section3-line1'>Be "in the know" </p>
-                  <p id='section3-line2'> for events and activities <p>
-                    <p id='section3-line3'> in your community. <p>
-                      <%= button_to "GO TO ACTIVITIES CALENDAR", events_path, :method => "get", id:'button-activities-cal' %>
-                      <!-- <div id='button-activities-cal'><a href="<%= events_path %>" class="about-us" style="color: white;">GO TO ACTIVITIES CALENDAR</a></div> -->
-                    </div>
-                    <div class="hidden-xs col-sm-1 col-md-1"></div>
-                  </div>
-                </div>
-              </div>
 
-              <!-- Fourth section div -->
-              <%= render 'partials/whatsnew' %>
-
-              <!-- Fifth section div -->
-
-              <div class="col-xs-12 col-sm-12 col-md-12 background-color center-flex-content">
-                <br>
-                <a href="<%= map_path %>"><%= image_tag('bus.png', style:"width:100%; padding-left:10%; padding-right:10%") %></a>
-              </div>
-            </div>
+    <!-- Third section div -->
+    <div class="section3 section1-container" id="link-to-cal">
+      <div class="container-fluid section3-background">
+        <div class="section1-text">
+          <div class="hidden-xs col-sm-1 col-md-1"></div>
+          <div class="col-xs-12 col-sm-5 col-md-5">
+            <%= image_tag "calendar.svg", class: "calendar-image" %>
           </div>
+          <div class="col-xs-12 col-sm-5 col-md-5 subsection">
+            <p id='section3-line1'>Be "in the know" </p>
+            <p id='section3-line2'> for events and activities
+            <p>
+            <p id='section3-line3'> in your community.
+            <p>
+              <%= button_to "GO TO ACTIVITIES CALENDAR", events_path, :method => "get", id: 'button-activities-cal' %>
+              <!-- <div id='button-activities-cal'><a href="<%= events_path %>" class="about-us" style="color: white;">GO TO ACTIVITIES CALENDAR</a></div> -->
+          </div>
+          <div class="hidden-xs col-sm-1 col-md-1"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="background-color center-flex-content">
+      <h1 style = "color:#004b80">To take part in our Parent Workshop Survey, please click <a href="https://goo.gl/forms/laPzrmZrAfJMoEvy2" target="_blank" style ="color:#00A3DA">here</a></h1>
+    </div>
+    <!-- Fourth section div -->
+    <%= render 'partials/whatsnew' %>
+
+    <!-- Fifth section div -->
+
+    <div class="col-xs-12 col-sm-12 col-md-12 background-color center-flex-content">
+      <br>
+      <a href="<%= map_path %>"><%= image_tag('bus.png', style: "width:100%; padding-left:10%; padding-right:10%") %></a>
+    </div>
+  </div>
+</div>
