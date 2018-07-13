@@ -39,8 +39,7 @@ class HomeController < ApplicationController
     }
     map.fetch(flash_type)
   end
-
-
+  
   def live
   end
 
