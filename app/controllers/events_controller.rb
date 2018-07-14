@@ -90,6 +90,8 @@ class EventsController < ApplicationController
     @event_update.start_date = @event_update.start_time.strftime("%Y/%m/%d")
     @event_update.end_date = @event_update.end_time.strftime("%Y/%m/%d")
     @event_update.update(event_params)
+    @event_update.reload.start_date
+    @event_update.reload.end_date
     redirect_to @event_update, notice: "Successfully Updated"
   end
 
