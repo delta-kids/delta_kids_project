@@ -13,7 +13,7 @@ class EventsController < ApplicationController
   has_scope :age_group, :type => :array
 
   def index
-    @events = apply_scopes(Event).all.order('start_time ASC')
+    @events = apply_scopes(Event).all
     @events_search = @events.where(:approved => true).page(params[:page]).per(5)
     @events_by_start_date = @events.group_by(&:start_time)
     @calendar_events = @events.sort_by { |ev| ev.start_time }.flat_map { |e| e.calendar_events(
