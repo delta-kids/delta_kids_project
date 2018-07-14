@@ -30,7 +30,7 @@ def calendar_events(start_d, end_d)
   if recurring.empty?
       [self]
   else
-      schedule(self.start_date).occurrences_between(start_d, self.end_date).map do |date|
+      schedule(self.start_time).occurrences_between(start_d, self.end_date).map do |date|
           Event.new(id: id, title: title, start_time: date, end_time: date, description: description, address: address)
       end
   end
