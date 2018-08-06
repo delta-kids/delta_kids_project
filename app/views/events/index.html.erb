@@ -49,9 +49,9 @@
               <% end %>
               <% events.each do |event| %>
                 <% if Holidays.on(date, :ca, :observed) != [] %>
-                <% else %>
-                  <% if event.approved === false || nil %>
-                  <% else %>
+                <% elsif event.approved === false || nil  %>
+                  <% elsif Event.find(event.id).end_time < date %>
+                      <% else %>
 
                     <div class="popup" onclick="calendarPopup(<%= event.id %>)">
                       <p class="cal-links mobile-font-10 cal-hl"><%= Event.find(event.id).start_time.strftime("%I:%M %p") %>
@@ -90,7 +90,6 @@
                     </div>
                   <% end %>
                 <% end %>
-              <% end %>
             </div>
           <% end %>
         </div>

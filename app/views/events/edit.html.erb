@@ -60,7 +60,7 @@
                 <%= label_tag(:event_location, "Ladner", class:'radio-spacing') %>
               </div>
               <div class="in-block" >
-                <%= f.radio_button(:event_location, "North Delta",:checked => true) %>
+                <%= f.radio_button(:event_location, "North Delta") %>
                 <%= label_tag(:event_location, "North Delta", class:'radio-spacing') %>
               </div>
               <div class="in-block" >
@@ -96,7 +96,7 @@
             <div class="">
               <%= f.radio_button(:cost, "Paid") %>
               <%= label_tag(:cost, "Paid", class:'radio-spacing') %>
-              <%= f.radio_button(:cost, "Free",:checked => true) %>
+              <%= f.radio_button(:cost, "Free") %>
               <%= label_tag(:cost, "Free", class:'radio-spacing') %>
             </div>
           </div>
@@ -137,7 +137,7 @@
               <%= label_tag(:registration, "Drop In", class:'radio-spacing') %>
             </div>
             <div class="in-block">
-              <%= f.radio_button(:registration, "Registered",:checked => true) %>
+              <%= f.radio_button(:registration, "Registered") %>
               <%= label_tag(:registration, "Registration Required", class:'radio-spacing in-block') %>
             </div>
             </div>

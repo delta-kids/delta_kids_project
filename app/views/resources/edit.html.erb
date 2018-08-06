@@ -22,7 +22,7 @@
               <div class="">
                 <%= f.radio_button(:feature, true) %>
                 <%= label_tag(:feature, "Yes", class:'radio-spacing') %>
-                <%= f.radio_button(:feature, false, :checked => true) %>
+                <%= f.radio_button(:feature, false) %>
                 <%= label_tag(:feature, "No", class:'radio-spacing') %>
               </div>
             </div>
@@ -32,7 +32,7 @@
             <div class="">
               <div class="in-block">
 
-                <%= f.radio_button(:resource_location, "Delta",:checked => true) %>
+                <%= f.radio_button(:resource_location, "Delta") %>
                 <%= label_tag(:resource_location, "Delta", class:'radio-spacing') %>
               </div>
               <div class="in-block">
@@ -55,7 +55,7 @@
             </div>
             <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2  col-md-offset-3 form-field">
               <div class="in-block">
-                <%= f.radio_button(:resource_type, "Research",:checked => true) %>
+                <%= f.radio_button(:resource_type, "Research") %>
                 <%= label_tag(:resource_type, "Research", class:'radio-spacing') %>
               </div>
               <div class="in-block">
