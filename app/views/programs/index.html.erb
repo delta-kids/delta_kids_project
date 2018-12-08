@@ -9,6 +9,7 @@
         <br>
         <% @programs.each do |program| %>
         <p class="font-16"><strong><%= program.organization.name  %></strong>
+          <span class="pull-right">ID: <%=program.id %></span>
           <br>
           <%= link_to program.program_description, program_path(program) %></p>
           <hr>

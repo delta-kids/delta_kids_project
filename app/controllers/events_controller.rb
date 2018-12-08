@@ -12,14 +12,16 @@ class EventsController < ApplicationController
   has_scope :event_type, :type => :array
   has_scope :age_group, :type => :array
 
+
   def index
     @events = apply_scopes(Event).all
     @events_search = @events.where(:approved => true).page(params[:page]).per(5)
-    @events_by_start_date = @events.group_by(&:start_time)
     @calendar_events = @events.sort_by { |ev| ev.start_time }.flat_map { |e| e.calendar_events(
       params.fetch(:by_start_date, Time.zone.now - 3.months).to_date,
       params.fetch(:by_end_date, Time.zone.now + 3.months).to_date
     ) }
+
+    params[:start_date] = params.fetch(:by_start_date, Time.zone.now).to_date # used to set the current month the calendar is on
   end
 
 
@@ -59,8 +61,6 @@ class EventsController < ApplicationController
   def create
     @event = Event.new event_params
     @event.user_id = current_user.id
-    @event.start_date = @event.start_time.strftime("%Y/%m/%d")
-    @event.end_date = @event.end_time.strftime("%Y/%m/%d")
     if is_admin?
       @event.approved = true
     end
@@ -87,11 +87,7 @@ class EventsController < ApplicationController
     if @event_update.image.present? == false
       @event_update.image = File.open(File.join(Rails.root, "app/assets/images/DeltaKids#{rand(4)}.jpg"))
     end
-    @event_update.start_date = @event_update.start_time.strftime("%Y/%m/%d")
-    @event_update.end_date = @event_update.end_time.strftime("%Y/%m/%d")
     @event_update.update(event_params)
-    @event_update.reload.start_date
-    @event_update.reload.end_date
     redirect_to @event_update, notice: "Successfully Updated"
   end
 

@@ -10,6 +10,7 @@
           <br>
           <% @services.each do |service| %>
           <p class="font-16"><strong><%= service.organization.name  %></strong>
+            <span class="pull-right">ID: <%=service.id %></span>
             <br>
             <%= link_to service.service_description, service_path(service) %></p>
           <hr>

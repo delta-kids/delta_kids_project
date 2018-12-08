@@ -1,6 +1,12 @@
 class Event < ApplicationRecord
   serialize :recurring, Hash
+  before_save :save_dates
   after_update :send_approved_event_email, :if => :approved_changed?
+
+  def save_dates
+    self.start_date = self.start_time.strftime("%Y/%m/%d")
+    self.end_date = self.end_time.strftime("%Y/%m/%d")
+  end
 
   def send_approved_event_email
     PendingEventMailer.approved_event_email(self).deliver!

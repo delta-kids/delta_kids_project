@@ -22,6 +22,7 @@
                       (Featured)
                     <% end %>
                     <%= link_to event.title, event_path(event) %>
+                    <span class="pull-right">ID: <%=event.id %></span>
                   </p>
                   <hr>
                 <% end %>
@@ -42,6 +43,7 @@
                       (Featured)
                     <% end %>
                     <%= link_to event.title, event_path(event) %>
+                    <span class="pull-right">ID: <%=event.id %></span>
                   </p>
                   <hr>
                 <% end %>
@@ -59,6 +61,7 @@
                       <span style="color:red">(OLD)</span>
                     <% end %>
                     <%= link_to event.title, event_path(event) %>
+                    <span class="pull-right">ID: <%=event.id %></span>
                   </p>
                   <hr>
                 <% end %>
