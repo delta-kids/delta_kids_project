@@ -21,7 +21,7 @@ class EventsController < ApplicationController
       params.fetch(:by_end_date, Time.zone.now + 3.months).to_date
     ) }
 
-    # params[:start_date] = params.fetch(:by_start_date, Time.zone.now).to_date # used to set the current month the calendar is on
+    params[:start_date] ||= params.fetch(:by_start_date, Time.zone.now).to_date # used to set the current month the calendar is on
   end
 
 
