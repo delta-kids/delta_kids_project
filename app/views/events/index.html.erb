@@ -48,10 +48,11 @@
                 <p class="cal-links mobile-font-10" style="color:#144d81"><strong><%= holiday[0][:name] %></strong></p>
               <% end %>
               <% events.each do |event| %>
-                <% if Holidays.on(date, :ca, :observed) != [] %>
-                <% elsif event.approved === false || nil  %>
+                <% cache event do %>
+                  <% if Holidays.on(date, :ca, :observed) != [] %>
+                  <% elsif event.approved === false || nil %>
                   <% elsif Event.find(event.id).end_time < date %>
-                      <% else %>
+                  <% else %>
 
                     <div class="popup" onclick="calendarPopup(<%= event.id %>)">
                       <p class="cal-links mobile-font-10 cal-hl"><%= Event.find(event.id).start_time.strftime("%I:%M %p") %>
@@ -90,6 +91,7 @@
                     </div>
                   <% end %>
                 <% end %>
+              <% end %>
             </div>
           <% end %>
         </div>
@@ -100,53 +102,55 @@
           <p class="bree-font">Results (<%= @events_search.total_count %>)</p>
 
           <% for event in @events_search %>
-            <div class="calendar-subsection2-card light-blue-bg-color" style="margin-top:30px">
-              <div class="event-image-container">
-                <%= image_tag(event.image_url.to_s, class: "img-responsive", style: "height:100%; width:100%; object-fit: cover") %>
-              </div>
-              <div class="calendar-subsection2-text" style="background-color: #fff">
-                <div class="calendar-subsection2-details">
-                  <p class="calendar-subsection2-header2 bree-font26"><%= event.title %></p>
-                  <div class="event-info">
-                    <div class="">
-                      <%= image_tag "icon-calendar.svg", class: "event-info-icon" %>
-                      <p class="event-info-txt-bold">Date:</p>
-                      <p class="event-info-txt"><%= event.start_time.strftime("%m/%d/%Y") %></p>
-                      <p class="event-info-txt"> - <%= event.end_time.strftime("%m/%d/%Y") %></p>
+            <% cache event do %>
+              <div class="calendar-subsection2-card light-blue-bg-color" style="margin-top:30px">
+                <div class="event-image-container">
+                  <%= image_tag(event.image_url.to_s, class: "img-responsive", style: "height:100%; width:100%; object-fit: cover") %>
+                </div>
+                <div class="calendar-subsection2-text" style="background-color: #fff">
+                  <div class="calendar-subsection2-details">
+                    <p class="calendar-subsection2-header2 bree-font26"><%= event.title %></p>
+                    <div class="event-info">
+                      <div class="">
+                        <%= image_tag "icon-calendar.svg", class: "event-info-icon" %>
+                        <p class="event-info-txt-bold">Date:</p>
+                        <p class="event-info-txt"><%= event.start_time.strftime("%m/%d/%Y") %></p>
+                        <p class="event-info-txt"> - <%= event.end_time.strftime("%m/%d/%Y") %></p>
+                      </div>
+                      <div class="">
+                        <%= image_tag "icon-clock.svg", class: "event-info-icon" %>
+                        <% if event.start_time %>
+                          <p class="event-info-txt"><%= event.start_time.strftime("%I:%M %p") %></p>
+                        <% end %>
+                        <% if event.end_time %>
+                          <p class="event-info-txt"> - <%= event.end_time.strftime("%I:%M %p") %></p>
+                        <% end %>
+                      </div>
+                      <div class="">
+                        <%= image_tag "icon-baby.svg", class: "event-info-icon" %>
+                        <% event.age_groups.each do |age| %>
+                          <p class="event-info-txt"><%= age.age %></p>
+                        <% end %>
+                      </div>
+                      <div class="">
+                        <%= image_tag "icon-tag.svg", class: "event-info-icon" %>
+                        <p class="event-info-txt"><%= event.cost %></p>
+                      </div>
+                      <div class="">
+                        <%= image_tag "icon-location-pin.svg", class: "event-info-icon" %>
+                        <p class="event-info-txt"><%= event.event_location %></p>
+                      </div>
                     </div>
-                    <div class="">
-                      <%= image_tag "icon-clock.svg", class: "event-info-icon" %>
-                      <% if event.start_time %>
-                        <p class="event-info-txt"><%= event.start_time.strftime("%I:%M %p") %></p>
-                      <% end %>
-                      <% if event.end_time %>
-                        <p class="event-info-txt"> - <%= event.end_time.strftime("%I:%M %p") %></p>
-                      <% end %>
+                    <p class="ellipsis-3 font-16"><%= event.description %></p>
+                    <div class="event-info2">
+                      <!-- <p  class="event-info-bold2">Learn More</p> -->
+                      <p><%= link_to 'Learn More', event_learn_more_path(event), class: "event-info-bold2 font-16" %></p>
+                      <%= image_tag "cursor.svg", class: "event-info-icon2" %>
                     </div>
-                    <div class="">
-                      <%= image_tag "icon-baby.svg", class: "event-info-icon" %>
-                      <% event.age_groups.each do |age| %>
-                        <p class="event-info-txt"><%= age.age %></p>
-                      <% end %>
-                    </div>
-                    <div class="">
-                      <%= image_tag "icon-tag.svg", class: "event-info-icon" %>
-                      <p class="event-info-txt"><%= event.cost %></p>
-                    </div>
-                    <div class="">
-                      <%= image_tag "icon-location-pin.svg", class: "event-info-icon" %>
-                      <p class="event-info-txt"><%= event.event_location %></p>
-                    </div>
-                  </div>
-                  <p class="ellipsis-3 font-16"><%= event.description %></p>
-                  <div class="event-info2">
-                    <!-- <p  class="event-info-bold2">Learn More</p> -->
-                    <p><%= link_to 'Learn More', event_learn_more_path(event), class: "event-info-bold2 font-16" %></p>
-                    <%= image_tag "cursor.svg", class: "event-info-icon2" %>
                   </div>
                 </div>
               </div>
-            </div>
+            <% end %>
           <% end %>
         </div>
         <div class="container-fluid center-flex-content bree-font" style="align-items:center;">
