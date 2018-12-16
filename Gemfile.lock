@@ -607,7 +607,6 @@ GEM
     coffee-script-source (1.12.2)
     concurrent-ruby (1.0.5)
     crass (1.0.3)
-    dalli (2.7.9)
     erubi (1.7.1)
     excon (0.57.0)
     execjs (2.7.0)
@@ -931,7 +930,6 @@ DEPENDENCIES
   carrierwave (~> 1.0)
   chosen-rails
   coffee-rails (~> 4.2)
-  dalli
   fog
   font-awesome-rails
   geocoder
@@ -968,4 +966,4 @@ RUBY VERSION
    ruby 2.5.0p0
 
 BUNDLED WITH
-   1.16.1
+   1.17.2
