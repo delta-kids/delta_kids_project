@@ -38,8 +38,10 @@
             <%= f.password_field :password_confirmation, class: 'form-control' %>
           </div>
         <div class="col-xs-12 col-sm-6 col-md-4 col-sm-offset-3  col-md-offset-4 form-field">
+          <div class="center-flex-content" style="margin-bottom: 15px"><%= recaptcha_tags %></div>
           <%= f.submit "Sign Up", class: 'btn btn-primary' %>
         </div>
+
       <% end %>
     </div>
   </div>

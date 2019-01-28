@@ -26,27 +26,19 @@ class HomeController < ApplicationController
       message = params[:message]
       ContactUsMailer.contact_email(name, email, message).deliver
       redirect_to contact_submit_path, notice: 'Message sent'
+    else
+      flash.now[:alert] = "Please complete the Captacha to send a message."
+      render :contact
     end
   end
 
-  def bootstrap_class_for(flash_type)
-    map = {
-      "success"         => "alert-success",
-      "error"           => "alert-danger",
-      "alert"           => "alert-warning",
-      "notice"          => "alert-info",
-      "recaptcha_error" => "alert-danger"
-    }
-    map.fetch(flash_type)
-  end
-  
   def live
+
   end
 
   def submit
 
   end
-
 
   def dashboard
     @pending_and_approved_events = Event.where(:approved => false || nil)
@@ -58,7 +50,6 @@ class HomeController < ApplicationController
   end
 
   def map
-
     @events = apply_scopes(Event, event_params).all
     @programs = apply_scopes(Program, program_params).all
     @services = apply_scopes(Service, service_params).all
