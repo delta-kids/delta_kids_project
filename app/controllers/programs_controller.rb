@@ -9,7 +9,7 @@ class ProgramsController < ApplicationController
   def index0_5
     @whats_new_items_random = WhatsNewItem.all.limit(3).order("RANDOM()")
     @age_group = "0-5"
-    @programs = Program.includes(:organization).order("organizations.name asc").all.joins(:age_groups).where(:age_groups => {:id => '1'})
+    @programs = Program.includes(:organization).order("organizations.name asc").all.joins(:age_groups).where(:age_groups => { :id => '1' })
     @artsandculture0_5 = @programs.where("program_type_id = '1'").page(params[:page]).per(8)
     @sports0_5 = @programs.where("program_type_id = '4'").page(params[:page]).per(8)
     @education0_5 = @programs.where("program_type_id = '6'").page(params[:page]).per(8)
@@ -34,7 +34,7 @@ class ProgramsController < ApplicationController
   def index6_12
     @whats_new_items_random = WhatsNewItem.all.limit(3).order("RANDOM()")
     @age_group = "6-12"
-    @programs = Program.includes(:organization).order("organizations.name asc").all.joins(:age_groups).where(:age_groups => {:id => '2'})
+    @programs = Program.includes(:organization).order("organizations.name asc").all.joins(:age_groups).where(:age_groups => { :id => '2' })
     @artsandculture6_12 = @programs.where("program_type_id = '1'").page(params[:page]).per(8)
     @sports6_12 = @programs.where("program_type_id = '4'").page(params[:page]).per(8)
     @education6_12 = @programs.where("program_type_id = '6'").page(params[:page]).per(8)
@@ -99,14 +99,21 @@ class ProgramsController < ApplicationController
     @similar_programs = Program.where(program_type_id: @program.program_type_id).limit(3).order("RANDOM()")
   end
 
+  helper_method :construct_url
+
+  def construct_url(url)
+    url.include? "https" ? protocol = "https://" : protocol = "http://"
+    constructed_url ="#{protocol + url.sub(/^https?\:\/\//, '').sub(/^www./, '')}"
+    return constructed_url
+  end
 
   private
+
   def program_params
-    params.require(:program).permit([:program_description, :registration, :cost, :program_type_id, :age_group_id, :organization_id, :image, { age_group_ids: [] } ])
+    params.require(:program).permit([:program_description, :registration, :cost, :program_type_id, :age_group_id, :organization_id, :image, { age_group_ids: [] }])
   end
 
   def find_program
     @program = Program.find params[:id]
   end
-
 end
