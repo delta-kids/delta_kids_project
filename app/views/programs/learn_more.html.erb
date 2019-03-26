@@ -40,7 +40,7 @@
                   <% if @program.organization.website.present?%>
                   <i class="fa fa-globe" aria-hidden="true">
                   </i>&nbsp&nbsp&nbsp
-                  <%= link_to @program.organization.website, "http://#{@program.organization.website.sub(/^https?\:\/\//, '').sub(/^www./,'')}", :target => "_blank", class:"wb-all" %>
+                  <%= link_to @program.organization.website, "#{@program.organization.website.sub(/^https?\:\/\//, '').sub(/^www./,'')}", :target => "_blank", class:"wb-all" %>
                 </p>
                 <% end %>
               </div>
