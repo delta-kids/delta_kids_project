@@ -99,14 +99,6 @@ class ProgramsController < ApplicationController
     @similar_programs = Program.where(program_type_id: @program.program_type_id).limit(3).order("RANDOM()")
   end
 
-  helper_method :construct_url
-
-  def construct_url(url)
-    url.include? "https" ? protocol = "https://" : protocol = "http://"
-    constructed_url ="#{protocol + url.sub(/^https?\:\/\//, '').sub(/^www./, '')}"
-    return constructed_url
-  end
-
   private
 
   def program_params

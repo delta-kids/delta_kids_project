@@ -40,7 +40,7 @@
                   <% if @program.organization.website.present?%>
                   <i class="fa fa-globe" aria-hidden="true">
                   </i>&nbsp&nbsp&nbsp
-                  <%= link_to @program.organization.website, construct_url(@program.organization.website), :target => "_blank", class:"wb-all" %>
+                  <%= link_to @program.organization.website, @program.organization.website.to_s, :target => "_blank", class:"wb-all" %>
                 </p>
                 <% end %>
               </div>
