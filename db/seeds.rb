@@ -9,8 +9,6 @@ Topic.destroy_all
 Service.destroy_all
 User.destroy_all
 
-PASSWORD = 'Skuzz123'
-
 User.create([
   {first_name: 'Andrea',
    last_name: 'Lemire',
@@ -21,7 +19,7 @@ User.create([
   {first_name: 'Chris',
    last_name: 'R',
    email: 'chrisryan@hotmail.ca',
-   password: PASSWORD,
+   password: ENV["base_password"],
    is_admin: true,
    phone: ''},
   {first_name: 'Elaine',
