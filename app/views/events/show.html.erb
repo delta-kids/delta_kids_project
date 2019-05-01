@@ -12,14 +12,10 @@
                   <h4 class='bree-font'><%= @event.title %></h4>
                     <p class='font-20'><strong>Event ID: </strong><%= @event.id %></p>
                   <p class='font-20'><strong>Featured: </strong>
-                    <% if @event.featured === true %>
-                    Yes
-                    <% else %>
-                    No
-                    <% end %>
+                    <%= @event.featured? ? 'Yes' : 'No' %>
                   </p>
-                  <p class='font-20'><strong>Start Time: </strong><%= @event.start_time.strftime("%I:%M %p") %></p>
-                  <p class='font-20'><strong>End Time: </strong><%= @event.end_time.strftime("%I:%M %p") %></p>
+                  <p class='font-20'><strong>Start Date/Time: </strong><%= @event.start_time.strftime("%B %d, %Y") %> @ <%= @event.start_time.strftime("%I:%M %p") %></p>
+                  <p class='font-20'><strong>End Date/Time: </strong><%= @event.end_time.strftime("%B %d, %Y") %> @ <%= @event.end_time.strftime("%I:%M %p") %></p>
                   <p class='font-20'><strong>Location: </strong><%= @event.event_location %></p>
                   <p class='font-20'><strong>Address: </strong><%= @event.address %></p>
                   <p class='font-20'><strong>Age Group: </strong><%= @event.age_groups.map(&:age).join(', ') %></p>
