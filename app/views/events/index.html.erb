@@ -48,13 +48,14 @@
                 <p class="cal-links mobile-font-10" style="color:#144d81"><strong><%= holiday[0][:name] %></strong></p>
               <% end %>
               <% events.each do |event| %>
+                <% current_event = find_calender_event(event)  %>
                 <% if Holidays.on(date, :ca, :observed) != [] %>
                 <% elsif event.approved === false || nil  %>
-                  <% elsif Event.find(event.id).end_time < date %>
+                  <% elsif current_event.end_time < date %>
                       <% else %>
 
                     <div class="popup" onclick="calendarPopup(<%= event.id %>)">
-                      <p class="cal-links mobile-font-10 cal-hl"><%= Event.find(event.id).start_time.strftime("%I:%M %p") %>
+                      <p class="cal-links mobile-font-10 cal-hl"><%= current_event.start_time.strftime("%I:%M %p") %>
                         <br> <%= event.title %></p>
                       <br>
                       <div class="popuptext" id="cal-popup-window-<%= event.id %>">
@@ -62,7 +63,7 @@
                         <p class="bree-font"><%= link_to event.title, event_learn_more_path(event), class: "", style: "text-decoration:none; color:yellow" %></p>
                         <div class="row">
                           <div class="col-xs-12 col-sm-12 col-md-12">
-                            <%= image_tag(Event.find(event.id).image_url.to_s, class: "popup-pic", style: "width:100%; height:auto") %>
+                            <%= image_tag(current_event.image_url.to_s, class: "popup-pic", style: "width:100%; height:auto") %>
                             <div class="col-xs-12 col-sm-12 col-md-12">
                               <p class='font-16' style="white-space: pre-line;">
                                 <strong style="color:yellow;">Description: </strong><%= event.description %></p>
@@ -70,15 +71,15 @@
                             </div>
                             <div class="col-xs-12 col-sm-6 col-md-6" style="padding:0">
                               <p class='font-16'><strong style="color:yellow">Start
-                                Time: </strong><%= Event.find(event.id).start_time.strftime("%I:%M %p") %></p>
+                                Time: </strong><%= current_event.start_time.strftime("%I:%M %p") %></p>
                               <p class='font-16'><strong style="color:yellow">Start
-                                Date: </strong><%= Event.find(event.id).start_time.strftime("%m/%d/%Y") %></p>
+                                Date: </strong><%= current_event.start_time.strftime("%m/%d/%Y") %></p>
                             </div>
                             <div class="col-xs-12 col-sm-6 col-md-6" style="padding:0">
                               <p class='font-16'><strong style="color:yellow">End
-                                Time: </strong><%= Event.find(event.id).end_time.strftime("%I:%M %p") %></p>
+                                Time: </strong><%= current_event.end_time.strftime("%I:%M %p") %></p>
                               <p class='font-16'><strong style="color:yellow">End
-                                Date: </strong><%= Event.find(event.id).end_time.strftime("%m/%d/%Y") %></p>
+                                Date: </strong><%= current_event.end_time.strftime("%m/%d/%Y") %></p>
                             </div>
                             <br>
                             <div class="col-xs-12 col-sm-12 col-md-12">

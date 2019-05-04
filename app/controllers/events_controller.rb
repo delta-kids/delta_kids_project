@@ -111,8 +111,14 @@ class EventsController < ApplicationController
     end
   end
 
+  helper_method :find_calender_event
+
+  def find_calender_event(event)
+    @calendar_event = Event.find(event.id)
+  end
 
   private
+
   def event_params
     params.require(:event).permit([:title, :term, :start_date, :end_date, :start_time, :end_time, :event_repeat, :event_location, :address, :cost, :registration, :more_info, :contact_name, :contact_email, :approved, :featured, :age_group_id, :event_type_id, :description, :image, :pdf_file, :user_id, :recurring, { age_group_ids: [] },
                                    { tag_ids: [] }
@@ -122,5 +128,4 @@ class EventsController < ApplicationController
   def find_event
     @event = Event.find params[:id]
   end
-
 end
