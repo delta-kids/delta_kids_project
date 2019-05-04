@@ -15,10 +15,10 @@ class EventsController < ApplicationController
 
   def index
     @events = apply_scopes(Event).all
-    @events_search = @events.where(:approved => true).page(params[:page]).per(5)
+    @events_search = @events.page(params[:page]).per(5)
     @calendar_events = @events.flat_map { |e| e.calendar_events(
-      params.fetch(:by_start_date, Time.zone.now - 3.months).to_date,
-      params.fetch(:by_end_date, Time.zone.now + 3.months).to_date
+      params.fetch(:by_start_date, Time.zone.now - 1.month).to_date,
+      params.fetch(:by_end_date, Time.zone.now + 2.month).to_date
     ) }.sort_by { |e| e.start_time.strftime('%H:%M') }
 
     params[:start_date] ||= params.fetch(:by_start_date, Time.zone.now).to_date # used to set the current month the calendar is on
