@@ -72,6 +72,7 @@ Rails.application.routes.draw do
   get '/dashboard/pending_and_approved_resources', to: 'resources#pending_and_approved_resources'
   get '/dashboard/manage_programs', to: 'programs#index'
   get '/dashboard/manage_services', to: 'services#index'
+  get '/dashboard/manage_tags', to: 'tags#index'
   get '/dashboard/manage_organizations', to: 'organizations#index'
   get '/dashboard/manage_events', to: 'events#index2'
   get '/dashboard/manage_whats_new_items', to: 'whats_new_items#index'
@@ -100,7 +101,7 @@ Rails.application.routes.draw do
 
 
 
-
+  resources :tags
   resources :resources
   resources :whats_new_items
   resources :services

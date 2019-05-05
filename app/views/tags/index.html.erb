@@ -1,2 +1,31 @@
-<h1>Tags#index</h1>
-<p>Find me in app/views/tags/index.html.erb</p>
+<div class="wholePage">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 content">
+      <%= render 'partials/dash_sidebar' %>
+      <div class="col-xs-12 col-sm-8 col-md-9 dash-main-content" style="background-color:white;">
+        <% if user_signed_in? %>
+          <% if is_admin? %>
+            <div class="container-fluid">
+              <h1 class="bree-font">Tags</h1>
+              <br>
+              <% @tags.each do |tag| %>
+                <%= link_to tag.name, tag_path(tag), class: "font-16" %>
+                <span class="pull-right">ID: <%= tag.id %></span>
+                <hr>
+              <% end %>
+              <div class="container-fluid center-flex-content bree-font" style="align-items:center;">
+                <%= paginate @tags, window: 2 %>
+              </div>
+            </div>
+          <% end %>
+        <% else %>
+          <%= render 'partials/login_msg' %>
+          </div>
+        <% end %>
+        </div>
+  </div>
+</div>
+
+<!-- Rainbow Footer-->
+
+<%= render 'partials/footer' %>

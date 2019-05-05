@@ -82,7 +82,7 @@ class ServicesController < ApplicationController
   def create
     @service = Service.new service_params
     if @service.save
-      flash[:notice] = 'Organization create'
+      flash[:notice] = 'Organization Created'
       redirect_to service_path(@service)
     else
       flash.now[:alert] = @service.pretty_errors
@@ -122,5 +122,4 @@ private
   def find_service
     @service = Service.find params[:id]
   end
-
 end

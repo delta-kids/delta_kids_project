@@ -1,2 +1,36 @@
-<h1>Tags#edit</h1>
-<p>Find me in app/views/tags/edit.html.erb</p>
+<div class="wholePage">
+  <!-- First section div -->
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 content">
+      <%= render 'partials/dash_sidebar' %>
+      <div class="col-xs-12 col-sm-8 col-md-9 dash-main-content" style="background-color:white;">
+        <% if user_signed_in? %>
+          <% if is_admin? %>
+            <div class="">
+              <br>
+              <p class="dashboard-headers mobile-font-24">Edit Tag</p>
+              <%= form_for @tag do |f| %>
+                <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2  col-md-offset-3 form-field">
+                  <%= f.text_field :name, class: 'form form-control', :required => true %>
+                </div>
+                <br>
+                <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2  col-md-offset-3 form-field" style="padding-bottom:10%;">
+                  <%= f.submit class: 'btn btn-primary form-control  ' %>
+                </div>
+                <br>
+              <% end %>
+          <% else %>
+            <%= render 'partials/login_msg' %>
+          <% end %>
+        <% else %>
+          <%= render 'partials/login_msg' %>
+        <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Rainbow Footer-->
+
+<%= render 'partials/footer' %>

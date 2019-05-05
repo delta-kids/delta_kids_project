@@ -32,7 +32,7 @@
 .day-scroller {
 	min-height: 50px;
 	max-height: 100px;
-	max-width: 130px;
+	max-width: 100%;
 	overflow-x: auto;
 	overflow-y: auto;
 }
@@ -384,6 +384,7 @@
 }
 
 .popup {
+    width: 100%;
     position: relative;
     display: inline-block;
     cursor: pointer;
