@@ -138,8 +138,26 @@
       height: 70%;
       padding-right: 10%;
     }
-
-
-
+   thead {
+     display: none !important;
+   }
+   tr {
+     display: flex;
+     flex-direction: column;
+   }
+   td {
+     width: 100% !important;
+     height: 100px;
+     overflow-y: auto;
+   }
+   .cal-links {
+     font-size: 1.2em !important;
+   }
+   .cal-mobile-date {
+     display: initial;
+   }
+   .cal-reg-date {
+     display: none;
+   }
 
 }

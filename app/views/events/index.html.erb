@@ -40,7 +40,8 @@
         </div>
         <div class="calendar-subsection2-card" style="margin-top:0px;">
           <%= month_calendar events: @calendar_events do |date, events| %>
-            <%= date.day %>
+            <span class="cal-reg-date"><%= date.day %></span>
+            <span class="cal-mobile-date"><%= date.strftime("%B #{date.day.ordinalize}, %Y") %></span>
 
             <div class="day-scroller">
               <% if Holidays.on(date, :ca_bc, :observed) != [] %>
