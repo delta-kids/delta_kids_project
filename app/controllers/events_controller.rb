@@ -2,6 +2,8 @@ class EventsController < ApplicationController
   # ALL USERS, including ADMIN
   before_action :find_event, only: [:show, :edit, :update, :destroy]
 
+  helper_method :recurring_to_words
+
   has_scope :by_start_date
   has_scope :by_end_date
   has_scope :search
@@ -52,6 +54,14 @@ class EventsController < ApplicationController
   def learn_more
     @event = Event.find(params[:id])
     @featured_events = Event.where(:featured => true).limit(3).order("RANDOM()")
+  end
+
+  def recurring_to_words
+    find_event
+    if @event.recurring != {}
+      rule = IceCube::Rule.from_hash @event.recurring
+      return rule.to_s
+    end
   end
 
   def new
