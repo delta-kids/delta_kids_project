@@ -1,6 +1,6 @@
 class PendingEventMailer < ApplicationMailer
   default from: ENV['EmailDefaultFrom']
-  default to: 'denises@reachchild.org'
+  default to: ENV['EmailDefaultTo']
 
   def approved_event_email(event)
     @event = event

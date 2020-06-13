@@ -1,5 +1,5 @@
 class ContactUsMailer < ApplicationMailer
-  default to: 'denises@reachchild.org'
+  default to: ENV['EmailDefaultTo']
 
   def contact_email(name, email, message)
     @name = name
