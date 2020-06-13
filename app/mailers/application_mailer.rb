@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'coordinator@deltakids.ca'
+  default from: ENV['EmailDefaultFrom']
   layout 'mailer'
 end

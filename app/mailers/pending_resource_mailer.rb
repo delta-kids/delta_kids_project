@@ -1,5 +1,5 @@
 class PendingResourceMailer < ApplicationMailer
-  default from: 'coordinator@deltakids.ca'
+  default from: ENV['EmailDefaultFrom']
   default to: 'denises@reachchild.org'
 
   def approved_resource_email(resource)

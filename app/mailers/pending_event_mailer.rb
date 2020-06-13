@@ -1,5 +1,5 @@
 class PendingEventMailer < ApplicationMailer
-  default from: 'coordinator@deltakids.ca'
+  default from: ENV['EmailDefaultFrom']
   default to: 'denises@reachchild.org'
 
   def approved_event_email(event)
