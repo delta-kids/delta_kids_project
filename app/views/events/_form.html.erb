@@ -49,24 +49,17 @@
             <%= f.datetime_select :end_time, :default => { :hour => 12, :minute => 00 }, :minute_step => 05, class: '' %>
           </div>
 
-
-
           <!-- EVENT LOCATION -->
           <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2  col-md-offset-3 form-field">
-            <%= f.label :location , class:'' %>
-            <div class="">
-              <div class="in-block">
-                <%= f.radio_button(:event_location, "Ladner") %>
-                <%= label_tag(:event_location, "Ladner", class:'radio-spacing') %>
-              </div>
-              <div class="in-block" >
-                <%= f.radio_button(:event_location, "North Delta",:checked => true) %>
-                <%= label_tag(:event_location, "North Delta", class:'radio-spacing') %>
-              </div>
-              <div class="in-block" >
-                <%= f.radio_button(:event_location, "Tsawwassen") %>
-                <%= label_tag(:event_location, "Tsawwassen", class:'radio-spacing') %>
-              </div>
+            <%= f.label :event_location, "Event Location" %>
+            <div class="form-group  dropbox-container">
+              <%= f.collection_select :event_location_ids,
+                                      Location.all,
+                                      :id,
+                                      :name,
+                                      {},
+                                      { multiple: true, class: 'chosen-select form-control '}
+              %>
             </div>
           </div>
 

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180125082005) do
+ActiveRecord::Schema.define(version: 20200702054551) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,6 +34,13 @@ ActiveRecord::Schema.define(version: 20180125082005) do
     t.datetime "updated_at", null: false
     t.index ["age_group_id"], name: "index_event_age_groups_on_age_group_id"
     t.index ["event_id"], name: "index_event_age_groups_on_event_id"
+  end
+
+  create_table "event_locations", force: :cascade do |t|
+    t.integer "location_id"
+    t.integer "event_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "event_program_types", force: :cascade do |t|
@@ -88,6 +95,12 @@ ActiveRecord::Schema.define(version: 20180125082005) do
     t.text "recurring"
     t.string "pdf_file"
     t.index ["organization_id"], name: "index_events_on_organization_id"
+  end
+
+  create_table "locations", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "organization_age_groups", force: :cascade do |t|

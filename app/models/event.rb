@@ -22,26 +22,25 @@ class Event < ApplicationRecord
     end
   end
 
-def rule
-  IceCube::Rule.from_hash recurring
-end
-
-def schedule(start)
-  schedule = IceCube::Schedule.new(start)
-  schedule.add_recurrence_rule(rule)
-  schedule
-end
-
-def calendar_events(start_d, end_d)
-  if recurring.empty?
-      [self]
-  else
-      schedule(self.start_time).occurrences_between(start_d, end_d + 1.day).map do |date|
-          Event.new(id: id, title: title, start_time: date, end_time: date, description: description, address: address)
-      end
+  def rule
+    IceCube::Rule.from_hash recurring
   end
-end
 
+  def schedule(start)
+    schedule = IceCube::Schedule.new(start)
+    schedule.add_recurrence_rule(rule)
+    schedule
+  end
+
+  def calendar_events(start_d, end_d)
+    if recurring.empty?
+        [self]
+    else
+        schedule(self.start_time).occurrences_between(start_d, end_d + 1.day).map do |date|
+            Event.new(id: id, title: title, start_time: date, end_time: date, description: description, address: address)
+        end
+    end
+  end
 
   scope :by_start_date, -> start_date {
     where(['start_date >= (?)', start_date ])
@@ -54,10 +53,11 @@ end
   scope :search, -> term {
     if self.has_attribute?(:event_type_id)
       includes(:tags).where('tags.name ILIKE (?) OR title ILIKE (?) OR description ILIKE (?) OR address ILIKE (?)', "%#{term}%", "%#{term}%", "%#{term}%", "%#{term}%").order('title ASC')
-  end
-}
-  scope :event_location, -> event_location { where(:event_location => event_location) }
-  scope :approved, -> approved { where(:approved => true) }
+    end
+  }
+
+  scope :event_location, -> location_id { Event.includes(:locations).where(:locations => {:id => location_id}) }
+  scope :approved, -> { where(approved: true) }
   scope :registration, -> registration { where(:registration => registration) }
   scope :cost, -> cost { where(:cost => cost) }
   scope :event_type, -> event_type { where(:event_type_id => event_type) }
@@ -72,11 +72,17 @@ end
 
   has_many :EventAgeGroups, dependent: :destroy
   has_many :age_groups, through: :EventAgeGroups
+  has_many :event_locations, dependent: :destroy
+  has_many :locations, through: :event_locations
 
   belongs_to :user, optional: true
   belongs_to :event_type
 
   geocoded_by :address
   after_validation :geocode
+
+  def location_names
+    locations.collect(&:name).join(', ')
+  end
 
 end

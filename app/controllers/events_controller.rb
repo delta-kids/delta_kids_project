@@ -16,7 +16,7 @@ class EventsController < ApplicationController
 
 
   def index
-    @events = apply_scopes(Event).all
+    @events = apply_scopes(Event.approved).all
     @events_search = @events.page(params[:page]).per(5)
     @calendar_events = @events.flat_map { |e| e.calendar_events(
       params.fetch(:by_start_date, Time.zone.now - 1.month).to_date,
@@ -28,7 +28,7 @@ class EventsController < ApplicationController
 
 
   def index2
-    @events = Event.where(:approved => true).where("end_date > ?", Time.zone.now - 2.days).where(featured: [false, nil]).order(title: :asc, end_date: :asc)
+    @events = Event.approved.where("end_date > ?", Time.zone.now - 2.days).where(featured: [false, nil]).order(title: :asc, end_date: :asc)
     @events_results = @events.page(params[:page]).per(10)
     @old_events = Event.where("end_date < ?", Time.zone.now - 2.days).order(title: :asc)
     @featured_events = Event.where(:featured => true).order(title: :asc)
@@ -130,9 +130,37 @@ class EventsController < ApplicationController
   private
 
   def event_params
-    params.require(:event).permit([:title, :term, :start_date, :end_date, :start_time, :end_time, :event_repeat, :event_location, :address, :cost, :registration, :more_info, :contact_name, :contact_email, :approved, :featured, :age_group_id, :event_type_id, :description, :image, :pdf_file, :user_id, :recurring, { age_group_ids: [] },
-                                   { tag_ids: [] }
-                                  ])
+    params
+      .require(:event)
+      .permit(
+        [
+          :title,
+          :term,
+          :start_date,
+          :end_date,
+          :start_time,
+          :end_time,
+          :event_repeat,
+          :address,
+          :cost,
+          :registration,
+          :more_info,
+          :contact_name,
+          :contact_email,
+          :approved,
+          :featured,
+          :age_group_id,
+          :event_type_id,
+          :description,
+          :image,
+          :pdf_file,
+          :user_id,
+          :recurring,
+          { age_group_ids: [] },
+          { tag_ids: [] },
+          { location_ids: [] }
+        ]
+      )
   end
 
   def find_event

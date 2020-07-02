@@ -50,7 +50,7 @@ class HomeController < ApplicationController
   end
 
   def map
-    @events = apply_scopes(Event, event_params).all
+    @events = apply_scopes(Event.approved, event_params).all
     @programs = apply_scopes(Program, program_params).all
     @services = apply_scopes(Service, service_params).all
 
