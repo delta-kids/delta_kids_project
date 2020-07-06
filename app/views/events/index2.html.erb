@@ -74,11 +74,10 @@
             </div>
           <% else %>
             <div class="container-fluid">
-              <h1 class="bree-font">Events (
-                <% @events_public.count %>)</h1>
+              <h1 class="bree-font">Events (<%= @events_public.count %>)</h1>
               <br>
               <% @events_public.each do |event| %>
-                <p class="font-16"><%= link_to event.title, event_path(event) %></p>
+                <p class="font-16"><%= link_to event.title, event_path(event) %><span class=<%= event.status %>> - <%= event.status.capitalize %></span></p>
                 <hr>
               <% end %>
               <div class="container-fluid center-flex-content bree-font" style="align-items:center;">

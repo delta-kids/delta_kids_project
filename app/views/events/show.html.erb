@@ -14,6 +14,7 @@
                   <p class='font-20'><strong>Featured: </strong>
                     <%= @event.featured? ? 'Yes' : 'No' %>
                   </p>
+                  <p class='font-20'><strong>Status: </strong><span class=<%= @event.status %>> <%= @event.status.capitalize %></span></p>
                   <p class='font-20'><strong>Start Date/Time: </strong><%= @event.start_time.strftime("%B %d, %Y") %> @ <%= @event.start_time.strftime("%I:%M %p") %></p>
                   <p class='font-20'><strong>End Date/Time: </strong><%= @event.end_time.strftime("%B %d, %Y") %> @ <%= @event.end_time.strftime("%I:%M %p") %></p>
                   <p class='font-20'><strong>Location: </strong><%= @event.location_names  %></p>
@@ -58,7 +59,6 @@
                     class: 'btn btn-danger edit-delete-btn-width', style:'color:white !important;' %>
                   </div>
 
-                      <% elsif @event.approved? %>
                       <% else  %>
                       <br>
                       <br>

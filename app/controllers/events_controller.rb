@@ -98,6 +98,7 @@ class EventsController < ApplicationController
       @event_update.image = File.open(File.join(Rails.root, "app/assets/images/DeltaKids#{rand(4)}.jpg"))
     end
     @event_update.update(event_params)
+    set_status
     redirect_to @event_update, notice: "Successfully Updated"
   end
 
@@ -165,5 +166,12 @@ class EventsController < ApplicationController
 
   def find_event
     @event = Event.find params[:id]
+  end
+
+  def set_status
+    if !is_admin? && @event&.approved == true
+      @event.approved = nil
+      @event.save
+    end
   end
 end

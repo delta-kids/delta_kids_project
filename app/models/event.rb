@@ -85,4 +85,15 @@ class Event < ApplicationRecord
     locations.collect(&:name).join(', ')
   end
 
+  def status
+    case approved
+    when true
+      "approved"
+    when false
+      "declined"
+    else
+      "pending"
+    end
+  end
+
 end
