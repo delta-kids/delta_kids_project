@@ -45,7 +45,7 @@ gem 'cancancan', '~> 2.0'
 gem 'social-share-button'
 gem 'holidays'
 gem 'recurring_select'
-gem 'fog-aws'
+gem "fog"
 gem "recaptcha", require: "recaptcha/rails"
 
 
