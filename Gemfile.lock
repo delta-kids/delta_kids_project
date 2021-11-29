@@ -394,6 +394,8 @@ GEM
     nio4r (2.5.8)
     nokogiri (1.12.5-x86_64-darwin)
       racc (~> 1.4)
+    nokogiri (1.12.5-x86_64-linux)
+      racc (~> 1.4)
     optimist (3.0.1)
     os (1.1.4)
     ovirt-engine-sdk (4.4.1)
@@ -544,6 +546,7 @@ GEM
 
 PLATFORMS
   x86_64-darwin-19
+  x86_64-linux
 
 DEPENDENCIES
   bcrypt (~> 3.1.7)
