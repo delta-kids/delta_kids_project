@@ -5,7 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-ruby '3.0.1'
+ruby '3.0.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.1', '>= 6.1.4.1'
@@ -47,7 +47,6 @@ gem 'holidays'
 gem 'recurring_select'
 gem "fog"
 gem "recaptcha", require: "recaptcha/rails"
-
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
