@@ -35,7 +35,7 @@ gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'bootstrap-timepicker-rails'
 gem 'chosen-rails'
-gem "simple_calendar", "~> 2.0"
+gem "simple_calendar", "2.2.6"
 gem 'geocoder'
 gem 'gmaps4rails'
 gem 'underscore-rails'
@@ -45,7 +45,6 @@ gem 'cancancan', '~> 2.0'
 gem 'social-share-button'
 gem 'holidays'
 gem 'recurring_select'
-gem "fog"
 gem 'fog-aws'
 gem "recaptcha", require: "recaptcha/rails"
 
