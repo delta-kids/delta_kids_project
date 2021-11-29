@@ -46,7 +46,7 @@ gem 'social-share-button'
 gem 'holidays'
 gem 'recurring_select'
 gem "fog"
-gem 'aws-sdk', '~> 3'
+gem 'fog-aws'
 gem "recaptcha", require: "recaptcha/rails"
 
 
