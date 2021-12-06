@@ -43,12 +43,12 @@ class Event < ApplicationRecord
   end
 
   scope :by_start_date, -> start_date {
-    where(['start_date >= (?)', start_date ])
-    .or(where(['start_date <= (?) AND end_date >= (?)', start_date, start_date ]))}
+    where('start_date >= (?)', start_date)
+    .or(where('start_date <= (?) AND end_date >= (?)', start_date, start_date))}
 
   scope :by_end_date, -> end_date {
-    where(['end_date <= (?)', end_date ])
-    .or(where(['start_date <= (?) AND end_date >= (?)', end_date, end_date ])) }
+    where('end_date <= (?)', end_date)
+    .or(where('start_date <= (?) AND end_date >= (?)', end_date, end_date)) }
 
   scope :search, -> term {
     if self.has_attribute?(:event_type_id)
