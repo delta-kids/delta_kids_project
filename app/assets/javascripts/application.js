@@ -11,7 +11,6 @@
 // about supported directives.
 //
 //= require jquery
-//= require jquery_ujs
 //= require jquery-ui/widgets/datepicker
 //= require chosen-jquery
 //= require rails-ujs
