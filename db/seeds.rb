@@ -13,7 +13,7 @@ User.create([
   {first_name: 'Andrea',
    last_name: 'Lemire',
    email: 'coordinator@deltakids.ca',
-   password: "DeltaKids2017",
+   password: ENV['coordinator_pwd'],
    is_admin: true,
    phone: ''},
   {first_name: 'Chris',
