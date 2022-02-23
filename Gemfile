@@ -35,7 +35,7 @@ gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'bootstrap-timepicker-rails'
 gem 'chosen-rails'
-gem "simple_calendar", "~> 2.4"
+gem "simple_calendar", "2.2.6"
 gem 'geocoder'
 gem 'gmaps4rails'
 gem 'underscore-rails'
