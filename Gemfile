@@ -35,11 +35,11 @@ gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'bootstrap-timepicker-rails'
 gem 'chosen-rails'
-gem "simple_calendar", "2.2.6"
+gem "simple_calendar", "~> 2.4"
 gem 'geocoder'
 gem 'gmaps4rails'
 gem 'underscore-rails'
-gem 'carrierwave', '~> 1.0'
+gem 'carrierwave', '~> 2.0'
 gem 'has_scope'
 gem 'cancancan', '~> 2.0'
 gem 'social-share-button'
