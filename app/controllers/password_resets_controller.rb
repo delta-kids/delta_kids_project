@@ -3,7 +3,7 @@ class PasswordResetsController < ApplicationController
   def create
     user = User.find_by_email(params[:email])
     unless user.present?
-      redirect_to password_resets_path, :alert => "Sorry, no user exists with that email."
+      redirect_to new_password_reset_path, :alert => "Sorry, no user exists with that email."
     else
       user.send_password_reset
       redirect_to home_path, :notice => "Email sent with password reset instructions."
